@@ -274,6 +274,7 @@ function hide(){tip.style.opacity='0';}
 document.addEventListener('mousemove',function(e){if(tip.style.opacity==='1'){tip.style.left=e.clientX+'px';tip.style.top=e.clientY+'px';}});
 function bind(){document.querySelectorAll('[data-t]').forEach(function(el){if(el._b)return;el._b=1;el.addEventListener('mouseenter',function(e){show(e,el.getAttribute('data-t'));});el.addEventListener('mouseleave',hide);});}
 function spark(d,col){var w=118,h=28,mn=Math.min.apply(0,d),mx=Math.max.apply(0,d),r=(mx-mn)||1;var p=d.map(function(v,i){return (i/(d.length-1)*w)+','+(h-((v-mn)/r)*(h-4)-2);});return '<svg class="spark" width="'+w+'" height="'+h+'"><polyline fill="none" stroke="'+col+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="'+p.join(' ')+'"/></svg>';}
+function animPoly(poly){var len;try{len=poly.getTotalLength();}catch(e){return;}poly.style.strokeDasharray=len;poly.style.transition='none';poly.style.strokeDashoffset=len;poly.getBoundingClientRect();poly.style.transition='stroke-dashoffset .8s ease';setTimeout(function(){poly.style.strokeDashoffset=0;},20);}
 
 // ---- per-week data model ----
 var KSER=[[640,690,710,740,760,780,790,820],[210,225,240,258,270,266,282,294],[700,720,735,760,770,785,800,813],[300,320,340,355,368,382,396,411],[4,6,7,9,10,11,12,14]];
@@ -307,6 +308,7 @@ function render(k){
  document.getElementById('propRange').textContent=d.range;
  // KPI tiles
  document.getElementById('kpis').innerHTML=KCAP.map(function(c,i){var val=d.kpi[i];var dd=d.kd[i];var up=(''+dd).charAt(0)!=='-';var disp=(typeof val==='number')?val.toLocaleString():val;return '<div class="kpi" data-t="'+KTIP[i]+'"><div class="bar" style="background:'+KCOL[i]+'"></div><div class="cap">'+c+'</div><div class="n">'+disp+'</div><div class="d '+(up?'up':'down')+'">'+(up?'▲':'▼')+' '+dd+'</div>'+spark(KSER[i].slice(0,d.cut),KCOL[i])+'</div>';}).join('');
+ document.querySelectorAll('#kpis .kpi').forEach(function(tile){var poly=tile.querySelector('polyline');if(poly){animPoly(poly);tile.addEventListener('mouseenter',function(){animPoly(poly);});}});
  // score gauge
  document.getElementById('vsnum').textContent=d.score;
  document.getElementById('vsring').style.strokeDashoffset=CIRC*(1-d.score/100);
@@ -351,23 +353,28 @@ bar.innerHTML=bh2;bar.querySelectorAll('rect').forEach(function(rc){rc.style.cur
 
 // ---- forecast mini (reviews: Montage rising past a flat rival) ----
 (function(){
- var me=[28,30,31,32,36,40,44],riv=[42,42,42,43,43,43,43],lb=['−3w','−2w','−1w','Now','+1w','+2w','+3w'];
- var FW=560,FH=140,fpl=8,fpr=8,fpb=22,fpt=8,fmn=25,fmx=48,fr=fmx-fmn;
+ var me=[28,30,31,32,36,40,45],riv=[43,43,43,43,43,43,43],lb=['−3w','−2w','−1w','Now','+1w','+2w','+3w'];
+ var FW=560,FH=140,fpl=10,fpr=12,fpb=22,fpt=18,fmn=25,fmx=50,fr=fmx-fmn;
  var fx=function(i){return fpl+i/(me.length-1)*(FW-fpl-fpr);},fy=function(v){return fpt+(1-(v-fmn)/fr)*(FH-fpt-fpb);};
  var histP='M'+me.slice(0,4).map(function(v,i){return fx(i)+' '+fy(v);}).join(' L ');
  var projP='M'+me.slice(3).map(function(v,i){return fx(i+3)+' '+fy(v);}).join(' L ');
  var rivP='M'+riv.map(function(v,i){return fx(i)+' '+fy(v);}).join(' L ');
+ var t=(43-me[5])/(me[6]-me[5]),cx=fx(5)+t*(fx(6)-fx(5)),cy=fy(43);
  var s='';
- s+='<path d="'+rivP+'" fill="none" stroke="var(--ter)" stroke-width="2.5" stroke-dasharray="5 5" opacity=".8"/>';
- s+='<path d="'+histP+'" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round"/>';
- s+='<path d="'+projP+'" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 5" opacity=".9"/>';
- // crossover marker near +2w
- var cxI=5;s+='<circle cx="'+fx(cxI)+'" cy="'+fy(me[cxI])+'" r="6" fill="#16A34A" stroke="#fff" stroke-width="2.5" data-t="Projected crossover — Montage passes the rival\'s review count here."/>';
- s+='<text x="'+fx(cxI)+'" y="'+(fy(me[cxI])-12)+'" text-anchor="middle" font-size="10.5" font-weight="800" fill="#16A34A">you pass them ≈ Aug 14</text>';
+ s+='<path id="fcRiv" d="'+rivP+'" fill="none" stroke="var(--ter)" stroke-width="2.5" stroke-dasharray="5 5" opacity=".8"/>';
+ s+='<path id="fcHist" d="'+histP+'" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round"/>';
+ s+='<path id="fcProj" d="'+projP+'" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 5" opacity=".95"/>';
+ s+='<circle cx="'+cx+'" cy="'+cy+'" r="6" fill="#16A34A" stroke="#fff" stroke-width="2.5" data-t="Projected crossover — Montage passes the rival&#39;s review count here, about Aug 14."/>';
+ // rival label on the LEFT, crossover callout pinned TOP-RIGHT, Montage bottom-left — no overlap
+ s+='<text x="'+fx(1)+'" y="'+(fy(43)-9)+'" font-size="10.5" font-weight="700" fill="var(--ter)">Established rival</text>';
+ s+='<text x="'+(FW-fpr)+'" y="12" text-anchor="end" font-size="10.5" font-weight="800" fill="#16A34A">▲ You pass them ≈ Aug 14</text>';
+ s+='<text x="'+fx(0)+'" y="'+(fy(me[0])+15)+'" font-size="10.5" font-weight="700" fill="#16A34A">Montage</text>';
  for(var i=0;i<me.length;i++){s+='<text x="'+fx(i)+'" y="'+(FH-6)+'" text-anchor="middle" class="xlab">'+lb[i]+'</text>';}
- s+='<text x="'+fx(6)+'" y="'+(fy(riv[6])+16)+'" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--ter)">established rival</text>';
- s+='<text x="'+fx(0)+'" y="'+(fy(me[0])-10)+'" font-size="10.5" font-weight="700" fill="#16A34A">Montage</text>';
  document.getElementById('fc').innerHTML=s;
+ function drawFc(){var h=document.getElementById('fcHist');if(h){var len=h.getTotalLength();h.style.strokeDasharray=len;h.style.transition='none';h.style.strokeDashoffset=len;h.getBoundingClientRect();h.style.transition='stroke-dashoffset .9s ease';setTimeout(function(){h.style.strokeDashoffset=0;},30);}
+  var p=document.getElementById('fcProj');if(p){p.style.transition='none';p.style.opacity='0';p.getBoundingClientRect();p.style.transition='opacity .55s ease .45s';setTimeout(function(){p.style.opacity='.95';},30);}
+  var r=document.getElementById('fcRiv');if(r){r.style.transition='none';r.style.opacity='0';r.getBoundingClientRect();r.style.transition='opacity .5s ease';setTimeout(function(){r.style.opacity='.8';},30);}}
+ document.getElementById('fc').addEventListener('mouseenter',drawFc);setTimeout(drawFc,200);
 })();
 
 // ---- rank map ----
@@ -395,6 +402,12 @@ window.shareWin=function(){
  var a=document.createElement('a');a.download='Montage_Monday_Win.png';a.href=c.toDataURL('image/png');a.click();
 };
 
+// ---- hover-to-replay on every chart ----
+document.getElementById('line').addEventListener('mouseenter',function(){var p=document.querySelector('#line .lpath');if(p){p.style.animation='none';p.getBoundingClientRect();p.style.animation='draw 1.4s ease forwards';}var a=document.querySelector('#line .larea');if(a){a.style.animation='none';a.getBoundingClientRect();a.style.animation='fade 1s ease forwards .2s';}});
+document.getElementById('donut').addEventListener('mouseenter',function(){var o=0;ds.querySelectorAll('circle[data-nm]').forEach(function(c,i){var len=seg[i][1]/100*C;c.style.transition='none';c.style.strokeDashoffset=C;c.getBoundingClientRect();c.style.transition='stroke-dashoffset 1.1s cubic-bezier(.3,.8,.3,1)';(function(off){setTimeout(function(){c.style.strokeDashoffset=(-off);},20);})(o);o+=len;});});
+document.getElementById('bars').addEventListener('mouseenter',function(){bar.querySelectorAll('animate').forEach(function(a){try{a.beginElement();}catch(e){}});});
+(function(){var v=document.getElementById('vsring').closest('svg');if(v)v.addEventListener('mouseenter',function(){var el=document.getElementById('vsring');var cur=el.style.strokeDashoffset||'0';el.style.transition='none';el.style.strokeDashoffset=CIRC;el.getBoundingClientRect();el.style.transition='stroke-dashoffset 1.2s cubic-bezier(.3,.8,.3,1)';setTimeout(function(){el.style.strokeDashoffset=cur;},20);});})();
+(function(){var g=document.getElementById('gring').closest('svg');if(g)g.addEventListener('mouseenter',function(){var el=document.getElementById('gring');el.style.transition='none';el.style.strokeDashoffset=339.3;el.getBoundingClientRect();el.style.transition='stroke-dashoffset 1.3s cubic-bezier(.3,.8,.3,1)';setTimeout(function(){el.style.strokeDashoffset=339.3*(1-0.14);},20);});})();
 // ---- wire toggle + init ----
 document.querySelectorAll('#seg button').forEach(function(btn){btn.addEventListener('click',function(){render(btn.dataset.k);});});
 setTimeout(function(){document.getElementById('gring').style.strokeDashoffset=339.3*(1-0.14);},250);
