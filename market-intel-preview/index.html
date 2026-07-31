@@ -48,6 +48,13 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .out .noibar{height:10px;background:rgba(255,255,255,.15);border-radius:999px;margin-top:6px;overflow:hidden;position:relative}
 .out .noifill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--gold),#e6c968);border-radius:999px;transition:width .35s cubic-bezier(.3,.8,.3,1)}
 .tagmodel{font-size:10.5px;color:var(--sec);margin-top:12px;font-style:italic}
+.opt{font-size:9px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);background:rgba(201,162,39,.16);padding:2px 6px;border-radius:6px;margin-left:6px;vertical-align:middle}
+.est{font-size:9px;font-weight:800;color:#cdd6e6;background:rgba(255,255,255,.14);padding:1px 5px;border-radius:5px;margin-left:4px;vertical-align:middle}
+.parkblk{margin-top:2px}
+.trustbar{display:flex;gap:13px;align-items:flex-start;background:linear-gradient(135deg,#f4f8f4,#eef4ff);border:1px solid #dbe6f5;border-left:4px solid var(--green);border-radius:14px;padding:13px 16px;margin-top:12px}
+.trustbar .tbicon{font-size:18px;line-height:1.2}
+.trustbar .tbtxt{font-size:12px;line-height:1.5;color:var(--ink)}
+.trustbar .tbtxt b{color:var(--navy)}
 .ner{margin-top:6px}
 .nerrow{display:flex;align-items:center;gap:11px;margin-top:9px}
 .nerrow .nm{width:150px;font-size:12px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -204,13 +211,20 @@ th.term{text-decoration:underline dotted rgba(255,255,255,.55);text-underline-of
 </section>
 <div class="hoverhint">&#128161; <span><b>Tip:</b> hover any underlined column term (NER, DOM, concession&hellip;) for what it means for you — and hover the gauges or headline to replay the animation.</span></div>
 
+<section class="trustbar">
+  <div class="tbicon">&#9989;</div>
+  <div class="tbtxt"><b>How this report is built.</b> Every rent, offer, occupancy and fee figure is pulled from <b>live public-listing data across your submarket</b> — the same information a renter shopping today sees — and refreshed weekly. Fees are <b>verified against each property's own website</b>. We separate what's <b>measured</b> (rents, concessions, occupancy, fees) from what's <b>projected</b> (the annual run-rate and the recovery model), and label every projection. The in-place rent roll is a market estimate, not your internal ledger — if any figure ever looks off against your own system, flag it and we'll reconcile it the same week.</div>
+</section>
+
 <h2>Recovery model <span class="hb">INTERACTIVE</span></h2>
-<div class="hsub">Drag the slider to see what walking the concession back recovers in <b>effective rent</b> — the real rent residents pay after free weeks. Straight from your listing data; no expense estimates, no assumptions about your operating costs.</div>
+<div class="hsub">Drag the <b>concession</b> slider to see what walking the offer back recovers in <b>effective rent</b> — straight from your listing data, no expense estimates. The <b>parking</b> slider is a separate, optional ancillary lever, anchored on your real $15 rate.</div>
 <section class="card"><div class="model">
   <div>
     <div class="sliderrow"><div class="lab"><span>Concession offered</span><span class="v" id="wkv">10 weeks free</span></div>
       <input type="range" id="wk" min="0" max="10" value="10" step="1"><div class="hint">Today you offer up to 10 weeks free (19.2%). The comp average is ~11% (≈6 weeks); the 97–99%-leased comps run 2–6%.</div></div>
-    <div class="tagmodel">187 units · blended asking $2,022 · new-lease NER $1,632 · comp-average NER $1,802 · 30-day window. One week free = 1/52 of annual rent ≈ $467/unit/yr. Recovered rent = the free weeks you trim, projected across the book as an annual run-rate — nothing here touches your expenses or your ledger.</div>
+    <div class="sliderrow"><div class="lab"><span>Surface parking rate <span class="opt">optional ancillary</span></span><span class="v" id="pkv">$15 / mo</span></div>
+      <input type="range" id="pk" min="15" max="50" value="15" step="1"><div class="hint">Verified at <b>$15/mo</b> today — below the market surface rate (~$25) and the covered/garage tiers ($53&ndash;$132). This lever is separate from rent: it doesn't touch the effective-rent recovery above.</div></div>
+    <div class="tagmodel">187 units · blended asking $2,022 · new-lease NER $1,632 · comp-average NER $1,802 · 30-day window. One week free = 1/52 of annual rent ≈ $467/unit/yr. Recovered rent = the free weeks you trim, projected across the book as an annual run-rate — nothing here touches your expenses or your ledger. Parking figures assume ≈112 paid spaces (~60% of homes) — adjust to your actual count.</div>
   </div>
   <div class="out"><div class="moneywrap" id="moneywrap"></div><div class="fullbadge" id="fullbadge">&#127919; At market NER</div><div class="cap">Recovered effective rent / year</div><div class="big" id="recbig">$0</div>
     <div class="recbar" style="height:10px;background:rgba(255,255,255,.15);border-radius:999px;margin-top:6px;overflow:hidden;position:relative"><div class="noifill" id="recfill" style="width:0%"></div></div>
@@ -218,6 +232,8 @@ th.term{text-decoration:underline dotted rgba(255,255,255,.55);text-underline-of
     <div class="row" data-t="Recovered rent per occupied home per month at this offer level."><span class="k">Per home / month</span><span class="val" id="perU" style="color:#7ee0a6">+$0/unit/mo</span></div>
     <div class="row" data-t="Your blended net effective rent at this offer level — the real rent after free weeks."><span class="k">New effective NER</span><span class="val" id="ner">$1,632</span></div>
     <div class="row" data-t="How your effective rent compares to the comp-set average of $1,802. Reach $0 and you're at market."><span class="k">vs comp-average NER</span><span class="val" id="vsmkt">-$170</span></div>
+    <div class="parkblk"><div class="row" style="border-top:1.5px solid rgba(201,162,39,.5)" data-t="Extra parking income per rented space per month if you raise the $15 rate toward market."><span class="k">+ Parking / space / mo</span><span class="val" id="pkPer" style="color:#e6c968">+$0</span></div>
+    <div class="row" data-t="Annual parking upside, estimated across ~112 paid spaces (≈60% of 187 homes). Adjust to your real space count."><span class="k">Parking upside / yr <span class="est">est.</span></span><span class="val" id="pkYr" style="color:#e6c968">+$0</span></div></div>
   </div>
 </div></section>
 
@@ -304,6 +320,7 @@ function spawnMoney(n){var w=document.getElementById('moneywrap');if(!w)return;f
 function fmtK(x){return x>=1e6?('$'+(x/1e6).toFixed(2)+'M'):('$'+Math.round(x/1000)+'K');}
 function fmt$(x){return '$'+Math.round(x).toLocaleString();}
 function sgn$(x){return (x<0?'-$':'+$')+Math.abs(Math.round(x)).toLocaleString();}
+var PARK0=15,SPACES=112;               // current surface rate $15; ~60% of 187 homes park
 function calc(){var wk=+document.getElementById('wk').value;
   document.getElementById('wkv').textContent=wk+(wk===1?' week free':' weeks free')+' ('+((wk/52*100)).toFixed(1)+'%)';
   var curC=CUR/52*ASK,newC=wk/52*ASK;
@@ -315,6 +332,11 @@ function calc(){var wk=+document.getElementById('wk').value;
   document.getElementById('recbig').textContent=(rec>=1e6?('$'+(rec/1e6).toFixed(2)+'M'):(rec>=1000?('$'+Math.round(rec/1000)+'K'):('$'+Math.round(rec))));
   document.getElementById('vsmkt').textContent=sgn$(newNER-COMP_NER);
   document.getElementById('vsmkt').style.color=(newNER>=COMP_NER?'#7ee0a6':'#f0b6b6');
+  // parking — separate optional ancillary lever, anchored on real $15 rate
+  var pkRate=+document.getElementById('pk').value,pkPer=pkRate-PARK0,pkYr=pkPer*SPACES*12;
+  document.getElementById('pkv').textContent='$'+pkRate+' / mo';
+  document.getElementById('pkPer').textContent=sgn$(pkPer);
+  document.getElementById('pkYr').textContent=(pkYr>0?'+$'+Math.round(pkYr).toLocaleString():'$0');
   // fill bar = share of the market NER gap now closed
   var closed=Math.max(0,Math.min(1,(newNER-NER0)/(COMP_NER-NER0)));
   document.getElementById('recfill').style.width=(closed*100)+'%';
@@ -350,6 +372,6 @@ function drawPace(){var el=document.getElementById('pace');if(!el)return;
   s+='<text x="'+X(3)+'" y="'+(Y(70)-9)+'" text-anchor="middle" font-size="10" font-weight="800" fill="#a5851f">Market total</text>';
   s+='<text x="'+X(4)+'" y="'+(Y(3)+16)+'" text-anchor="end" font-size="10" font-weight="800" fill="#14284B">You</text>';
   el.innerHTML=s;bindT();}
-function init(){document.getElementById('wk').addEventListener('input',calc);calc();nerChart();drawTable();drawPace();drawGauges();foundCount();termify();
+function init(){document.getElementById('wk').addEventListener('input',calc);document.getElementById('pk').addEventListener('input',calc);calc();nerChart();drawTable();drawPace();drawGauges();foundCount();termify();
   var fb=document.querySelector('.foundband');if(fb)fb.addEventListener('mouseenter',foundCount);bindT();}
 </script></body></html>
