@@ -134,14 +134,21 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 .tile .tc{font-size:10.5px;font-weight:800;margin-top:2px}
 .up{color:#0a8a3f}.down{color:#c81e45}
 /* ai share */
-.aibars{margin-top:6px}
-.airow{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line)}
-.airow:first-child{border-top:none}.airow .an{width:140px;font-size:13px;font-weight:700}.airow.you .an{color:var(--purple)}
-.airow .abar{flex:1;height:16px;background:#EDEDF0;border-radius:999px;overflow:hidden}.airow .af{height:100%;border-radius:999px;width:0;transition:width 1s cubic-bezier(.3,.8,.3,1)}
-.airow .av{width:44px;text-align:right;font-size:14px;font-weight:800}
-.aibanner{display:flex;gap:10px;align-items:center;background:#F4F1FF;border:1px solid #E4DBFF;border-radius:14px;padding:12px 16px;margin-top:12px;font-size:13px;line-height:1.45}.aibanner b{color:var(--purple)}
-.aiengines{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--sec)}
-.aiengines b{color:var(--ink)}
+.aibars{margin-top:14px}
+.airow{display:flex;align-items:center;gap:14px;padding:10px 0;border-top:1px solid var(--line)}
+.airow:first-child{border-top:none}.airow .an{width:150px;font-size:13px;font-weight:700;flex-shrink:0}.airow.you .an{color:var(--purple)}
+.airow .abar{flex:1;height:20px;background:#EEEEF2;border-radius:999px;overflow:hidden;position:relative}
+.airow .af{height:100%;border-radius:999px;width:0;transition:width 1.1s cubic-bezier(.3,.8,.3,1);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.airow.you .abar{background:repeating-linear-gradient(45deg,#F4EFFF,#F4EFFF 8px,#EADFFF 8px,#EADFFF 16px);border:1.5px dashed #CDB8F2}
+.airow .lane{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:11px;font-weight:800;color:var(--purple);letter-spacing:.01em;white-space:nowrap}
+.airow .av{width:46px;text-align:right;font-size:15px;font-weight:800}.airow.you .av{color:var(--purple)}
+.aimetrics{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.aimt{flex:1;min-width:104px;background:linear-gradient(135deg,#F6F1FF,#FCFAFF);border:1px solid #E9DEFF;border-radius:16px;padding:13px 15px}
+.aimt .n{font-size:24px;font-weight:800;color:var(--purple);letter-spacing:-.02em;line-height:1}
+.aimt .l{font-size:10.5px;color:var(--sec);font-weight:700;margin-top:4px;text-transform:uppercase;letter-spacing:.03em}
+.aichips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.aichip{font-size:11.5px;font-weight:700;color:var(--ink);background:#F5F5F7;border:1px solid var(--line);border-radius:999px;padding:5px 12px}.aichip b{color:var(--purple)}
+.aibanner{display:flex;gap:11px;align-items:flex-start;background:linear-gradient(135deg,#F4F1FF,#FAF8FF);border:1px solid #E4DBFF;border-radius:16px;padding:14px 16px;margin-top:14px;font-size:13px;line-height:1.5}.aibanner b{color:var(--purple)}
 /* donut + race */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:680px){.two{grid-template-columns:1fr}}
 .donutwrap{display:flex;align-items:center;gap:18px}
@@ -257,8 +264,13 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
   <div style="font-size:15px;font-weight:800;margin-bottom:2px">Share of voice — "apartments in Las Vegas"</div>
   <div style="font-size:12px;color:var(--sec);margin-bottom:10px">How often each brand is named when renters ask AI. You vs the national operators.</div>
   <div class="aibars" id="aibars"></div>
-  <div class="aibanner">&#129504; <div><b>You're invisible where renters are starting to look.</b> 0% AI share of voice against Greystar's 14%. But you're not starting from nothing — Coya already earns <b>28 AI-visibility points, 8 mentions, 11 cited pages</b> (ChatGPT 5, Gemini 2). We build that into real share.</div></div>
-  <div class="aiengines"><span>ChatGPT: <b>5 mentions</b></span><span>Gemini: <b>2</b></span><span>Google AI Mode: <b>1</b></span><span>AI Overview: <b>0</b></span><span>Cited pages: <b>11</b></span></div>
+  <div class="aimetrics">
+    <div class="aimt"><div class="n">28</div><div class="l">AI-visibility pts</div></div>
+    <div class="aimt"><div class="n">8</div><div class="l">brand mentions</div></div>
+    <div class="aimt"><div class="n">11</div><div class="l">cited pages</div></div>
+  </div>
+  <div class="aichips"><span class="aichip">ChatGPT&nbsp;5 &middot; <b>5</b></span><span class="aichip">Gemini&nbsp;2 &middot; <b>2</b></span><span class="aichip">Google&nbsp;AI&nbsp;Mode &middot; <b>1</b></span><span class="aichip">AI&nbsp;Overview &middot; <b>0</b></span><span class="aichip">Cited&nbsp;pages &middot; <b>11</b></span></div>
+  <div class="aibanner">&#129504; <div><b>You're invisible where renters are starting to look.</b> 0% share of voice against Greystar's 14% — but you're not starting from zero. Coya already earns the mentions and citations above, so there's a foundation to build on. <b>We turn that into real share</b> with quotable, AI-readable pages renters' assistants can cite.</div></div>
 </section>
 
 <h2>How renters found you &amp; the field</h2>
@@ -345,7 +357,7 @@ function renderIndex(w){var ring=document.getElementById('ring'),C=490;ring.styl
   setTimeout(function(){ring.style.transition='stroke-dashoffset 1.2s cubic-bezier(.3,.8,.3,1)';ring.style.strokeDashoffset=C*(1-w.idx/100);},30);
   var el=document.getElementById('viz'),t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);el.textContent=Math.round(p*w.idx);if(p<1)requestAnimationFrame(step);else el.textContent=w.idx;}requestAnimationFrame(step);
   document.getElementById('vwow').innerHTML='&#9650; '+w.wow;document.getElementById('vhead').textContent=w.head;
-  document.getElementById('subs').innerHTML=SUBS.map(function(s){return '<div class="sub1"><div class="nm">'+s[0]+'</div><div class="track"><div class="fill sheen" data-w="'+s[1]+'" style="background:'+s[3]+'"></div></div><div class="v">'+s[1]+' <span class="tag">'+s[2]+'</span></div></div>';}).join('');
+  document.getElementById('subs').innerHTML=SUBS.map(function(s){return '<div class="sub1"><div class="nm">'+s[0]+'</div><div class="track"><div class="fill" data-w="'+s[1]+'" style="background:'+s[3]+'"></div></div><div class="v">'+s[1]+' <span class="tag">'+s[2]+'</span></div></div>';}).join('');
   setTimeout(function(){document.querySelectorAll('#subs .fill').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%';});},250);
   document.querySelectorAll('#subs .sub1').forEach(function(row){row.addEventListener('mouseenter',function(){var f=row.querySelector('.fill');f.style.transition='none';f.style.width='0';f.getBoundingClientRect();f.style.transition='width 1s cubic-bezier(.3,.8,.3,1)';f.style.width=f.getAttribute('data-w')+'%';});});}
 var CUR='this';
@@ -365,9 +377,11 @@ var REVWK=[0,1,0,2,1,1];
  setTimeout(function(){box.querySelectorAll('.rb').forEach(function(b){b.style.height=b.getAttribute('data-h')+'px';});},250);})();
 // AI share of voice
 var AISOV=[['Coya',0,'#BF5AF2',1],['Greystar',14,'#30D158',0],['Avalonbay',10,'#0A84FF',0],['Equity Residential',7,'#FF9F0A',0]];
-(function(){var mx=16;document.getElementById('aibars').innerHTML=AISOV.map(function(a){return '<div class="airow '+(a[3]?'you':'')+'"><div class="an">'+a[0]+(a[3]?' (you)':'')+'</div><div class="abar"><div class="af sheen" data-w="'+(a[1]/mx*100)+'" style="background:'+a[2]+'"></div></div><div class="av">'+a[1]+'%</div></div>';}).join('');
+(function(){var mx=16;document.getElementById('aibars').innerHTML=AISOV.map(function(a){var you=a[3];
+  var inner=you?'<span class="lane">your open lane &rarr;</span>':'<div class="af" data-w="'+(a[1]/mx*100)+'" style="background:'+a[2]+'"></div>';
+  return '<div class="airow '+(you?'you':'')+'"><div class="an">'+a[0]+(you?' (you)':'')+'</div><div class="abar">'+inner+'</div><div class="av">'+a[1]+'%</div></div>';}).join('');
  setTimeout(function(){document.querySelectorAll('#aibars .af').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%';});},300);
- document.querySelectorAll('#aibars .airow').forEach(function(row){row.addEventListener('mouseenter',function(){var f=row.querySelector('.af');f.style.transition='none';f.style.width='0';f.getBoundingClientRect();f.style.transition='width 1s cubic-bezier(.3,.8,.3,1)';f.style.width=f.getAttribute('data-w')+'%';});});})();
+ document.querySelectorAll('#aibars .airow').forEach(function(row){var f=row.querySelector('.af');if(!f)return;row.addEventListener('mouseenter',function(){f.style.transition='none';f.style.width='0';f.getBoundingClientRect();f.style.transition='width 1s cubic-bezier(.3,.8,.3,1)';f.style.width=f.getAttribute('data-w')+'%';});});})();
 // discovery donut
 var DISC=[['Paid Search',71,'#FF375F'],['Direct',11,'#0A84FF'],['Organic Search',10,'#30D158'],['Referral',3,'#BF5AF2'],['Other',5,'#FF9F0A']];
 (function(){var sv=document.getElementById('donut'),cx=75,cy=75,r=55,w=22,C=2*Math.PI*r,off=0,s='';
@@ -382,7 +396,7 @@ var DISC=[['Paid Search',71,'#FF375F'],['Direct',11,'#0A84FF'],['Organic Search'
  grow();})();
 // map field scoreboard (avg map rank; lower better)
 var FIELD=[['Vista Del Valle',5.0,'4.2★'],['Jade Apartments',5.1,'4.3★'],['Hidden Cove',5.6,'4.2★'],['Coya',7.8,'4.7★'],['Elysian at The Palms',11.8,'4.1★'],['Asher on Valley View',12.1,'3.8★']];
-(function(){var mx=13;document.getElementById('score').innerHTML=FIELD.map(function(s,i){var you=s[0]==='Coya';return '<div class="scorerow '+(you?'you':'')+'"><div class="rk">'+(i+1)+'</div><div class="nm">'+s[0]+(you?' (you)':'')+' <span style="color:var(--sec);font-weight:600">'+s[2]+'</span></div><div class="bar"><div class="bf sheen" data-w="'+((13-s[1])/mx*100)+'" style="background:'+(you?'var(--blue)':'#9aa0aa')+'"></div></div><div class="sc">'+s[1].toFixed(1)+'</div></div>';}).join('');
+(function(){var mx=13;document.getElementById('score').innerHTML=FIELD.map(function(s,i){var you=s[0]==='Coya';return '<div class="scorerow '+(you?'you':'')+'"><div class="rk">'+(i+1)+'</div><div class="nm">'+s[0]+(you?' (you)':'')+' <span style="color:var(--sec);font-weight:600">'+s[2]+'</span></div><div class="bar"><div class="bf" data-w="'+((13-s[1])/mx*100)+'" style="background:'+(you?'var(--blue)':'#9aa0aa')+'"></div></div><div class="sc">'+s[1].toFixed(1)+'</div></div>';}).join('');
  setTimeout(function(){document.querySelectorAll('#score .bf').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%';});},350);
  document.querySelectorAll('#score .scorerow').forEach(function(row){row.addEventListener('mouseenter',function(){var f=row.querySelector('.bf');f.style.transition='none';f.style.width='0';f.getBoundingClientRect();f.style.transition='width 1s cubic-bezier(.3,.8,.3,1)';f.style.width=f.getAttribute('data-w')+'%';});});})();
 buildBlocks();render('this');
