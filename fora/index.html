@@ -189,6 +189,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 
 <div class="changed">
   <div class="ch"><span class="ci up">&#9650;</span><div><b>Organic traffic climbing.</b> Site traffic is up <b>12.5%</b> month over month — your owned base is growing on its own.</div></div>
+  <div class="ch"><span class="ci up">&#9650;</span><div><b>Reviews growing.</b> +2 new reviews this period (62 &rarr; 64) — review volume moves your map rank, so keep the asks going.</div></div>
   <div class="ch"><span class="ci fl">&rarr;</span><div><b>The map is the focus.</b> Fora sits <b>6th of 61</b> nearby (avg rank 11) — this week we push reviews and local signals to climb it.</div></div>
 </div>
 
@@ -248,9 +249,9 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
   <div class="rev">
     <div class="score">&#11088;<span>4.1</span></div>
     <div><div class="rt">out of 5 · <b>64</b> total reviews · Las Vegas, NV</div><div class="rc">New reviews by week</div><div class="revbars" id="revbars"></div></div>
-    <div class="newbox"><div class="nn" style="color:var(--gold)"><span id="rnew">64</span></div><div class="nl">reviews · Week 1 baseline</div></div>
+    <div class="newbox" style="background:#F1FBF3;border-color:#CDEBD6"><div class="nn" style="color:#0a8a3f">&#9650; <span id="rnew">+2</span></div><div class="nl">new this week · 62 &rarr; 64</div></div>
   </div>
-  <div class="revtip">&#128161; <div><b>Reviews are your map lever:</b> on the grid, review volume moves rank — and at 64 reviews you trail nearby communities like Evolve (524). Ask every happy resident at move-in and renewal; steady reviews lift your 4.1★, your map rank, and your Index. <span style="color:#B25E00;font-weight:700">Send your weekly new-review count and we'll track it here.</span></div></div>
+  <div class="revtip">&#128161; <div><b>Nice momentum — +2 this period (62 → 64).</b> On the map, review volume moves rank, and at 64 you still trail nearby communities like Evolve (524), so every review compounds. Ask every happy resident at move-in and renewal; 2–3 a week lifts your 4.1★, your map rank, and your Index.</div></div>
 </section>
 
 <h2>Search presence <span style="text-transform:none;font-weight:600;color:var(--sec)">(verified with Google + SEMrush)</span></h2>
@@ -381,7 +382,7 @@ function mcolor(r){if(r<=3)return'var(--g1)';if(r<=6)return'var(--g2)';if(r<=10)
   var d=document.createElement('div');d.className='pt';d.style.background=mcolor(r);d.textContent=r;d.title='Rank '+r;mg.appendChild(d);
   setTimeout(function(){d.classList.add('show');},200+i*38);});})();
 // reviews bars (weekly history — baseline; awaiting weekly counts)
-var REVWK=[0,0,0,0,0,0];
+var REVWK=[0,0,0,0,0,2];
 (function(){var box=document.getElementById('revbars'),mx=Math.max.apply(0,REVWK)||1;box.innerHTML=REVWK.map(function(v,i){return '<div class="rb '+(i===REVWK.length-1?'cur':'')+'" data-h="'+(6+v/mx*30)+'"></div>';}).join('');
  setTimeout(function(){box.querySelectorAll('.rb').forEach(function(b){b.style.height=b.getAttribute('data-h')+'px';});},250);})();
 // AI share of voice (real SEMrush)
