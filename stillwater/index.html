@@ -181,8 +181,8 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
   <div class="r"><div class="revpill">&#11088; 4.7 &middot; 9 reviews</div><div class="live"><span class="d"></span> LIVE</div><button class="printbtn" onclick="window.print()">&#9143; Print / Save PDF</button></div>
 </div>
 <div class="togbar">
-  <div class="toggle" id="toggle"><button data-w="this" class="on">This week</button></div>
-  <div class="wk" id="wklabel">Sat Jul 25 – Fri Jul 31, 2026 · reporting week · Week 1 baseline</div>
+  <div class="toggle" id="toggle"><button data-w="last">Last week</button><button data-w="this" class="on">This week</button></div>
+  <div class="wk" id="wklabel">Sat Jul 25 – Fri Jul 31, 2026 · reporting week</div>
 </div>
 
 <div class="movebar"><span class="dot"></span><div><b>This week's move:</b> Stillwater is brand new and already loved — <b>4.7★</b> and <b>100% favorable</b> in AI — with organic traffic surging <b>+138%</b>. Now we get you seen: on the map and in AI answers, where a new community has the most runway.</div></div>
@@ -190,7 +190,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 <div class="changed">
   <div class="ch"><span class="ci up">&#9650;</span><div><b>Organic surging.</b> Traffic up <b>138%</b> and keywords up 30% month over month — a fast-ramping new base.</div></div>
   <div class="ch"><span class="ci up">&#9650;</span><div><b>Perfect AI sentiment.</b> 100% favorable when AI does mention you — a spotless reputation to build on.</div></div>
-  <div class="ch"><span class="ci fl">&rarr;</span><div><b>Getting seen is the focus.</b> New on the map (#3 at your door) and 0% AI share — the widest runway you have.</div></div>
+  <div class="ch"><span class="ci up">&#9650;</span><div><b>Google actions jumped.</b> Directions +57% and website +31% week over week — the ramp is showing up in Maps.</div></div>
 </div>
 
 <h2>Status at a glance</h2>
@@ -212,7 +212,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
     </svg><div class="mid"><div class="big" id="viz">0</div><div class="of">/ 100</div><div class="wow" id="vwow">baseline</div></div></div>
     <div class="hx"><div class="tt">One number for your whole digital presence</div><h1 id="vhead">Starting at 52 — a beloved new community, building to be seen.</h1>
       <div class="sub">Blends where renters find you — Maps, search, reviews, and AI — into one weekly score only LocalLift produces. As a brand-new community you start lower by design; a perfect reputation and surging organic are the launchpad, visibility is the build.</div>
-      <div class="streak" id="streak"><span class="sdot"></span>Week&nbsp;1 &middot; first tracked week</div>
+      <div class="streak" id="streak"><span class="sdot"></span>Week&nbsp;2 &middot; week-over-week live</div>
       <div class="subs" id="subs"></div></div>
   </div>
   <div class="move"><div class="ic">&#127919;</div><div><div class="mt">The one move this week</div><div class="mb"><b>You're loved, not seen.</b> 100% favorable AI sentiment and 4.7★ — but 0% AI share and a brand-new map presence. For a new community that's the norm; the move is <b>discoverable, citable content</b> — lakefront lifestyle, floor plans, local guides — so AI and Maps start naming Stillwater.</div></div></div>
@@ -241,7 +241,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </div></section>
 
 <h2>Google actions · day by day <span style="text-transform:none;font-weight:600;color:var(--sec)">(through Wed, Jul 29)</span></h2>
-<div class="ginfo">&#8505;&#65039; <div><b>About this window:</b> Your reporting week is the full <b>Saturday–Friday (Jul 25–31)</b>. Google withholds the most recent ~3 days of live Business Profile metrics (directions, calls, website clicks), so the day-by-day below reads through <b>Wednesday, July 29</b> — the last day Google has posted. As Stillwater's first tracked week this is the baseline; week-over-week comparisons begin next Friday.</div></div>
+<div class="ginfo">&#8505;&#65039; <div><b>About this window:</b> Your reporting week is the full <b>Saturday–Friday (Jul 25–31)</b>. Google withholds the most recent ~3 days of live Business Profile metrics (directions, calls, website clicks), so the day-by-day below reads through <b>Wednesday, July 29</b> — the last day Google has posted — compared to the <b>same days</b> the week before for an even, apples-to-apples read. Wed–Fri fill in on next Friday's run.</div></div>
 <div class="grid" id="grid"></div>
 
 <h2>Google reviews</h2>
@@ -330,8 +330,10 @@ document.addEventListener('mousemove',function(e){if(tip.style.opacity==='1'){ti
 var DAYS=['Sat','Sun','Mon','Tue','Wed'];
 var SUBS=[['Reputation',70,'4.7★ · 9','#FF375F'],['Google & Maps',35,'new listing','#0A84FF'],['Search',55,'+138% traffic','#30D158'],['Website',60,'ramping','#FF9F0A'],['AI answers',42,'100% loved','#BF5AF2']];
 var WEEKS={
- this:{label:'Sat Jul 25 – Fri Jul 31, 2026 · reporting week · Week 1 baseline',idx:52,wow:'baseline',head:'Starting at 52 — a beloved new community, building to be seen.',
-   blocks:{dir:[4,5,5,2,5],call:[0,0,4,1,0],web:[18,14,17,25,23]},wowb:{dir:'',call:'',web:'',ovw:''}}
+ last:{label:'Sat Jul 18 – Fri Jul 24, 2026 · reporting week',idx:50,wow:'baseline',head:'50 last week — the baseline we built on.',
+   blocks:{dir:[4,5,5,2,5],call:[0,0,2,0,1],web:[18,10,14,16,16]},wowb:{dir:'',call:'',web:'',ovw:''}},
+ this:{label:'Sat Jul 25 – Fri Jul 31, 2026 · reporting week',idx:52,wow:'+2',head:'Up to 52 — Google actions and organic both climbing.',
+   blocks:{dir:[12,5,1,11,4],call:[0,0,4,1,0],web:[18,14,17,25,23]},wowb:{dir:'+57%',call:'+67%',web:'+31%',ovw:'+38%'}}
 };
 var BLOCKMETA=[
  {key:'dir',title:'Directions',sub:"Renters asking Maps how to get there.",color:'#0A84FF',react:['📍','🗺️']},
