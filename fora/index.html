@@ -181,8 +181,8 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
   <div class="r"><div class="revpill">&#11088; 4.1 &middot; 64 reviews</div><div class="live"><span class="d"></span> LIVE</div><button class="printbtn" onclick="window.print()">&#9143; Print / Save PDF</button></div>
 </div>
 <div class="togbar">
-  <div class="toggle" id="toggle"><button data-w="this" class="on">This week</button></div>
-  <div class="wk" id="wklabel">Sat Jul 25 – Fri Jul 31, 2026 · reporting week · Week 1 baseline</div>
+  <div class="toggle" id="toggle"><button data-w="last">Last week</button><button data-w="this" class="on">This week</button></div>
+  <div class="wk" id="wklabel">Sat Jul 25 – Fri Jul 31, 2026 · reporting week</div>
 </div>
 
 <div class="movebar"><span class="dot"></span><div><b>This week's move:</b> Fora's organic engine is humming — traffic up <b>12.5%</b> and #1 for every brand search. Now we close the gap where renters browse locally: your <b>map rank (6th of 61)</b> and <b>AI answers (1%)</b>.</div></div>
@@ -212,7 +212,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
     </svg><div class="mid"><div class="big" id="viz">0</div><div class="of">/ 100</div><div class="wow" id="vwow">baseline</div></div></div>
     <div class="hx"><div class="tt">One number for your whole digital presence</div><h1 id="vhead">Building at 66 — strong organic base, the map is the climb.</h1>
       <div class="sub">Blends where renters find you — Maps, search, reviews, and AI — into one weekly score only LocalLift produces. Your organic engine and brand search hold it up; the map and AI are where we climb.</div>
-      <div class="streak" id="streak"><span class="sdot"></span>Week&nbsp;1 &middot; first tracked week</div>
+      <div class="streak" id="streak"><span class="sdot"></span>Week&nbsp;2 &middot; week-over-week live</div>
       <div class="subs" id="subs"></div></div>
   </div>
   <div class="move"><div class="ic">&#127919;</div><div><div class="mt">The one move this week</div><div class="mb"><b>The map is your climb.</b> Fora sits 6th of 61 on the map (avg rank 11) while your website demand is up 12.5%. <b>We're pushing reviews and local signals</b> so your map rank catches up to the demand you're already earning.</div></div></div>
@@ -241,7 +241,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </div></section>
 
 <h2>Google actions · day by day <span style="text-transform:none;font-weight:600;color:var(--sec)">(through Wed, Jul 29)</span></h2>
-<div class="ginfo">&#8505;&#65039; <div><b>About this window:</b> Your reporting week is the full <b>Saturday–Friday (Jul 25–31)</b>. Google withholds the most recent ~3 days of live Business Profile metrics (directions, calls, website clicks), so the day-by-day below reads through <b>Wednesday, July 29</b> — the last day Google has posted. As Fora's first tracked week, this is the baseline; week-over-week comparisons begin next Friday.</div></div>
+<div class="ginfo">&#8505;&#65039; <div><b>About this window:</b> Your reporting week is the full <b>Saturday–Friday (Jul 25–31)</b>. Google withholds the most recent ~3 days of live Business Profile metrics (directions, calls, website clicks), so the day-by-day below reads through <b>Wednesday, July 29</b> — the last day Google has posted — compared to the <b>same days</b> the week before for an even, apples-to-apples read. Wed–Fri fill in on next Friday's run.</div></div>
 <div class="grid" id="grid"></div>
 
 <h2>Google reviews</h2>
@@ -330,8 +330,10 @@ document.addEventListener('mousemove',function(e){if(tip.style.opacity==='1'){ti
 var DAYS=['Sat','Sun','Mon','Tue','Wed'];
 var SUBS=[['Reputation',76,'4.1★ · 64','#FF375F'],['Google & Maps',62,'6th of 61','#0A84FF'],['Search',74,'brand #1','#30D158'],['Website',78,'+12.5% traffic','#FF9F0A'],['AI answers',28,'1% share','#BF5AF2']];
 var WEEKS={
- this:{label:'Sat Jul 25 – Fri Jul 31, 2026 · reporting week · Week 1 baseline',idx:66,wow:'baseline',head:'Building at 66 — strong organic base, the map is the climb.',
-   blocks:{dir:[15,19,8,7,23],call:[0,2,1,4,0],web:[20,41,30,26,23]},wowb:{dir:'',call:'',web:''}}
+ last:{label:'Sat Jul 18 – Fri Jul 24, 2026 · reporting week',idx:65,wow:'baseline',head:'65 last week — the baseline we built on.',
+   blocks:{dir:[26,14,11,16,11],call:[0,0,2,2,2],web:[28,27,52,41,31]},wowb:{dir:'',call:'',web:'',ovw:''}},
+ this:{label:'Sat Jul 25 – Fri Jul 31, 2026 · reporting week',idx:66,wow:'+1',head:'Up to 66 — reviews and organic climbing.',
+   blocks:{dir:[15,19,8,7,23],call:[0,2,1,4,0],web:[20,41,30,26,23]},wowb:{dir:'−8%',call:'+17%',web:'−22%',ovw:'−17%'}}
 };
 var BLOCKMETA=[
  {key:'dir',title:'Directions',sub:"Renters asking Maps how to get there.",color:'#0A84FF',react:['📍','🗺️']},
@@ -360,8 +362,8 @@ function buildBlocks(){var g=document.getElementById('grid');g.innerHTML='';BLOC
   el.addEventListener('mouseenter',function(){var w=WEEKS[CUR];var vals=b.key==='ovw'?w.blocks.dir.map(function(v,i){return v+w.blocks.call[i]+w.blocks.web[i];}):w.blocks[b.key];drawSpark(el.querySelector('svg.spark'),vals,b.color,b.key);spawnReact(el,b.react);});});}
 function renderBlocks(w){BLOCKMETA.forEach(function(b){var el=document.getElementById('blk_'+b.key);var vals=b.key==='ovw'?w.blocks.dir.map(function(v,i){return v+w.blocks.call[i]+w.blocks.web[i];}):w.blocks[b.key];
   var total=vals.reduce(function(a,c){return a+c;},0);drawSpark(el.querySelector('svg.spark'),vals,b.color,b.key);countUp(el.querySelector('.tot'),total);
-  var wm=el.querySelector('.wowmini');var wb=b.key==='ovw'?(w.wowb.dir?'−28%':''):w.wowb[b.key];
-  if(wb){wm.innerHTML='&#9660; '+wb+' vs last';wm.style.color='#c81e45';}else{wm.innerHTML='baseline';wm.style.color='var(--sec)';}});}
+  var wm=el.querySelector('.wowmini');var wb=b.key==='ovw'?w.wowb.ovw:w.wowb[b.key];
+  if(wb){var up=wb.charAt(0)==='+';wm.innerHTML=(up?'&#9650; ':'&#9660; ')+wb+' vs last';wm.style.color=up?'#0a8a3f':'#c81e45';}else{wm.innerHTML='baseline';wm.style.color='var(--sec)';}});}
 function renderIndex(w){var ring=document.getElementById('ring'),C=490;ring.style.transition='none';ring.style.strokeDashoffset=C;ring.getBoundingClientRect();
   setTimeout(function(){ring.style.transition='stroke-dashoffset 1.2s cubic-bezier(.3,.8,.3,1)';ring.style.strokeDashoffset=C*(1-w.idx/100);},30);
   var el=document.getElementById('viz'),t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);el.textContent=Math.round(p*w.idx);if(p<1)requestAnimationFrame(step);else el.textContent=w.idx;}requestAnimationFrame(step);
