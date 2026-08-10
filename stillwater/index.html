@@ -173,6 +173,9 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 #tip{position:fixed;pointer-events:none;opacity:0;transform:translate(-50%,-120%);background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:7px 11px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:60;transition:opacity .12s;white-space:nowrap}#tip .d{font-weight:600;color:#c7c7cc;font-size:10.5px}
 .wm{position:fixed;bottom:10px;right:14px;font-size:10px;color:#c3c3c9;font-weight:700;letter-spacing:.04em;pointer-events:none;z-index:5}
 @media print{.mast,.togbar{position:static}.printbtn,.toggle{display:none}body{background:#fff}.card,.block,.stat{box-shadow:none}}
+
+.tog-inline{margin:0 0 10px 2px;display:inline-flex}
+.tog-note{font-size:12px;color:var(--sec);margin:0 0 10px 10px;display:inline-block;vertical-align:middle}
 </style></head><body>
 <div class="wrap">
 <div class="mast">
@@ -181,9 +184,11 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
   <div class="r"><div class="revpill">&#11088; 4.7 &middot; 9 reviews</div><div class="live"><span class="d"></span> LIVE</div><button class="printbtn" onclick="window.print()">&#9143; Print / Save PDF</button></div>
 </div>
 <div class="togbar">
-  <div class="toggle" id="toggle"><button data-w="last">Last week</button><button data-w="this" class="on">This week</button></div>
+  
   <div class="wk" id="wklabel">Sat Jul 25 – Fri Jul 31, 2026 · reporting week</div>
 </div>
+<div class="ginfo">&#8505;&#65039; <div><b>Comparing with last week:</b> two parts of this report are counted week by week, so each one carries its own <b>Last week</b> button: your <b>Visibility Index</b> and the <b>day by day chart</b>. Press either and it redraws against the week before. Everything else on this page is a monthly figure or where you stand right now, so there is no earlier week to compare it against and no button on it. If a block does not move, that is correct, not a fault.</div></div>
+
 
 <div class="movebar"><span class="dot"></span><div><b>This week's move:</b> Stillwater is brand new and already loved — <b>4.7★</b> and <b>100% favorable</b> in AI — with organic traffic surging <b>+138%</b>. Now we get you seen: on the map and in AI answers, where a new community has the most runway.</div></div>
 
@@ -194,6 +199,8 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </div>
 
 <h2>Status at a glance</h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What you are looking at:</b> five one word verdicts, one for each part of how renters find you online. Think of it as a dashboard warning light: a green word means that area is working and needs nothing from you, while words like "Thinning", "Emerging" or "New listing" mark the part we are actively building. Everything here is early by design. Your listing is new, so the honest read is direction of travel rather than absolute position. <b>Last week button:</b> there is none on this block, because it is a monthly figure or where you stand right now, so there is no earlier week to compare it against.</div></div>
+
 <div class="statgrid">
   <div class="stat" style="border-top-color:var(--gold)"><div class="sl">Reputation</div><div class="sv" style="color:#a05a00">Strong start</div><div class="sd">4.7★ · early reviews</div></div>
   <div class="stat" style="border-top-color:var(--purple)"><div class="sl">AI Sentiment</div><div class="sv" style="color:var(--purple)">Perfect</div><div class="sd">100% favorable</div></div>
@@ -203,6 +210,10 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </div>
 
 <h2>Your LocalLift Visibility Index&trade;</h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What this number is:</b> one score out of 100 that blends everywhere a renter can find you, the map, search, your reviews and AI answers, into a single figure. It is deliberately slow moving. A point or two a week is normal and is what steady progress actually looks like; a jump of ten would mean something unusual happened, good or bad. <b>This week: 52, up 2</b>, the largest weekly rise of any property we run. Google actions and organic traffic are both climbing together, which is what early traction looks like. <b>Last week button:</b> this block carries one. Press it and it redraws against the week before.</div></div>
+<div class="toggle tog-inline"><button data-w="last">Last week</button><button data-w="this" class="on">This week</button></div><span class="tog-note">compare this score with the week before</span>
+
+
 <section class="card">
   <div class="hero">
     <div class="gauge"><svg width="180" height="180" viewBox="0 0 180 180">
@@ -219,6 +230,8 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </section>
 
 <h2>Map grid · where you rank on Google Maps</h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What this is:</b> we run a renter search from dozens of separate points spread around your property and record where you appear from each one. A renter standing at your front door and a renter searching from across town see different results, and this shows you both. <b>This week:</b> your listing is still new, so the map is the least developed part of your profile. It is also the part that responds fastest to reviews. <b>Last week button:</b> there is none on this block, because it is a monthly figure or where you stand right now, so there is no earlier week to compare it against.</div></div>
+
 <section class="card">
   <div class="mapstats">
     <div class="mst"><div class="n green">#3</div><div class="l">at your front door</div></div>
@@ -234,6 +247,8 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </section>
 
 <h2>The story this week</h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What this section is for:</b> the plain English version of everything below it. If you read nothing else on this page, read this. It says what we found, why it matters to your leasing, and what we are doing about it.  <b>Last week button:</b> there is none on this block, because it is a monthly figure or where you stand right now, so there is no earlier week to compare it against.</div></div>
+
 <section class="card"><div class="story3">
   <div><div class="sh" style="color:var(--green)">What we found</div><p>Stillwater is brand new and already beloved — 4.7★ and a perfect 100% favorable AI sentiment. Your organic base is ramping fast: traffic up 138% and keywords up 30% month over month.</p></div>
   <div><div class="sh" style="color:var(--orange)">Why it matters</div><p>New means not-yet-seen: 0% AI share, a nascent map presence (you rank well only at your front door), and small absolute traffic. Renters who'd love Stillwater mostly can't find it yet.</p></div>
@@ -241,10 +256,16 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </div></section>
 
 <h2>Google actions · day by day <span style="text-transform:none;font-weight:600;color:var(--sec)">(through Wed, Jul 29)</span></h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What these numbers mean:</b> <b>Directions</b> is someone tapping for driving directions to you, the strongest free signal you get because it means they intend to visit. <b>Calls</b> is someone tapping the call button on your listing. <b>Website</b> is someone clicking through to your site. <b>How to read a single week:</b> call volume runs at a handful a week, so one or two calls either way will show as a large percentage without meaning much. Watch the shape across four weeks rather than any single week, and treat direction requests as the number that matters most. <b>This week:</b> directions up 57%, calls up 67% and website clicks up 31%. Every line moved the right way. The absolute numbers are small because the listing is young, so treat these as a trend forming rather than a result. <b>Last week button:</b> this block carries one. Press it and it redraws against the week before.</div></div>
+<div class="toggle tog-inline"><button data-w="last">Last week</button><button data-w="this" class="on">This week</button></div><span class="tog-note">compare these days with the same days last week</span>
+
+
 <div class="ginfo">&#8505;&#65039; <div><b>About this window:</b> Your reporting week is the full <b>Saturday–Friday (Jul 25–31)</b>. Google withholds the most recent ~3 days of live Business Profile metrics (directions, calls, website clicks), so the day-by-day below reads through <b>Wednesday, July 29</b> — the last day Google has posted — compared to the <b>same days</b> the week before for an even, apples-to-apples read. Wed–Fri fill in on next Friday's run.</div></div>
 <div class="grid" id="grid"></div>
 
 <h2>Google reviews</h2>
+<div class="ginfo">&#8505;&#65039; <div><b>Why this matters more than almost anything else on the page:</b> Google decides who to show on the map using how many reviews you have and how recently they arrived, not only your star rating. That is why a community can hold the best rating in its market and still be found below competitors with far more reviews. You are rated <b>4.7</b>, level with the best in your market, on <b>9 reviews</b> against competitors holding 223, 232, 268 and 547. You are not outrated, you are outnumbered. Nothing on this page would move faster than getting to 30 reviews. <b>Last week button:</b> there is none here. The small chart already shows six weeks side by side, so it does not need one.</div></div>
+
 <section class="card glowcard">
   <div class="rev">
     <div class="score">&#11088;<span>4.7</span></div>
@@ -255,9 +276,11 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </section>
 
 <h2>Search presence <span style="text-transform:none;font-weight:600;color:var(--sec)">(verified search data)</span></h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What these numbers mean in plain terms:</b> <b>Impressions</b> is how many times you appeared in a search result. <b>Clicks</b> is how many times someone actually chose you. <b>Click through rate</b> is the share who chose you once they saw you, so it measures how appealing your listing looks. <b>Keywords</b> is how many different searches you show up for at all, which is the size of your net. <b>This week:</b> organic traffic up 138% and 168 keywords, from a standing start. Small numbers, right direction. <b>Last week button:</b> there is none on this block, because it is a monthly figure or where you stand right now, so there is no earlier week to compare it against.</div></div>
+
 <section class="card">
   <div class="tiles">
-    <div class="tile"><div class="tn">193</div><div class="tl">Search clicks (GSC)</div><div class="tc" style="color:var(--sec)">past 7 days</div></div>
+    <div class="tile"><div class="tn">193</div><div class="tl">Search clicks</div><div class="tc" style="color:var(--sec)">past 7 days</div></div>
     <div class="tile"><div class="tn">1,192</div><div class="tl">Impressions</div><div class="tc" style="color:var(--sec)">past 7 days</div></div>
     <div class="tile"><div class="tn">93</div><div class="tl">Organic visits / mo</div><div class="tc up">&#9650; +138%</div></div>
     <div class="tile"><div class="tn">168</div><div class="tl">Organic keywords</div><div class="tc up">&#9650; +30%</div></div>
@@ -268,6 +291,8 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </section>
 
 <h2>AI visibility · what AI tells renters <span style="text-transform:none;font-weight:600;color:var(--sec)">(multi-engine test)</span></h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What this measures and why it is new:</b> renters increasingly ask an AI assistant to shortlist apartments rather than scrolling a listings site. We ask five different assistants the same renter questions and count how often each community gets named. Share of voice is your slice of those mentions. <b>This week: 0%.</b> You are not yet being named when renters ask an assistant. That is expected for a new listing and it is the next thing we build, because the ground is largely unclaimed in your market. <b>Last week button:</b> there is none on this block, because it is a monthly figure or where you stand right now, so there is no earlier week to compare it against.</div></div>
+
 <section class="card">
   <div style="font-size:15px;font-weight:800;margin-bottom:2px">Share of voice — "apartments in Kissimmee"</div>
   <div style="font-size:12px;color:var(--sec);margin-bottom:10px">How often each brand is named when renters ask AI. You vs the local field.</div>
@@ -282,6 +307,8 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </section>
 
 <h2>How renters found you &amp; the field</h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What the two halves show:</b> on the left, where your new visitors came from. <b>Paid</b> means you bought that visit through advertising and it stops the moment the budget stops. <b>Organic</b> means they found you for free and it keeps working. On the right, how you sit against nearby communities. <b>This week:</b> discovery is ramping across every channel at once, which is the pattern you want to see from a new listing. <b>Last week button:</b> there is none on this block, because it is a monthly figure or where you stand right now, so there is no earlier week to compare it against.</div></div>
+
 <div class="two">
   <section class="card"><div style="font-size:15px;font-weight:800;margin-bottom:4px">Discovery mix <span style="font-weight:600;font-size:11px;color:var(--sec)">· new visitors, past 7 days</span></div>
     <div style="font-size:11.5px;color:var(--sec);margin-bottom:12px">474 new visitors · hover a slice.</div>
@@ -295,6 +322,8 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </div>
 
 <h2>The Monday decision · one recommendation</h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What this box is:</b> the one thing we would do first if we could only do one. Everything above is evidence; this is the conclusion. It is written so you can forward it to ownership without needing the rest of the page.  <b>Last week button:</b> there is none on this block, because it is a monthly figure or where you stand right now, so there is no earlier week to compare it against.</div></div>
+
 <section class="decision">
   <div class="dt">Recommended this week</div>
   <h3>Build discoverability — get a beloved new community seen.</h3>
@@ -307,6 +336,8 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 </section>
 
 <h2>LocalLift delivered &middot; this week</h2>
+<div class="ginfo">&#8505;&#65039; <div><b>What this list is:</b> the work we completed for you this week. None of it needs anything from you. It is here so you can see exactly where the retainer went and connect it to the numbers above.  <b>Last week button:</b> there is none on this block, because it is a monthly figure or where you stand right now, so there is no earlier week to compare it against.</div></div>
+
 <section class="card"><div class="delivered">
   <div class="dv"><span class="ck">✓</span> Schema AI can read</div>
   <div class="dv"><span class="ck">✓</span> AI visibility testing · 5 engines</div>
@@ -374,8 +405,8 @@ function renderIndex(w){var ring=document.getElementById('ring'),C=490;ring.styl
   document.querySelectorAll('#subs .sub1').forEach(function(row){row.addEventListener('mouseenter',function(){var f=row.querySelector('.fill');f.style.transition='none';f.style.width='0';f.getBoundingClientRect();f.style.transition='width 1s cubic-bezier(.3,.8,.3,1)';f.style.width=f.getAttribute('data-w')+'%';});});}
 var CUR='this';
 function render(week){CUR=week;var w=WEEKS[week];document.getElementById('wklabel').textContent=w.label;renderIndex(w);renderBlocks(w);
-  document.querySelectorAll('#toggle button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-w')===week);});}
-document.getElementById('toggle').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;render(b.getAttribute('data-w'));});
+  document.querySelectorAll('.toggle button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-w')===week);});}
+document.addEventListener('click',function(e){var b=e.target.closest('.toggle button');if(!b)return;render(b.getAttribute('data-w'));});
 // map grid (Stillwater apartments-near-me · new listing; avg rank 20.3, #3 at door)
 var RANKS=[21,21,21,21,21, 21,21,21,21,21, 21,21,3,21,21, 21,21,21,21,21, 21,21,21,21,21];
 function mcolor(r){if(r<=3)return'var(--g1)';if(r<=6)return'var(--g2)';if(r<=10)return'var(--y)';if(r<=20)return'var(--o)';return'var(--r)';}
