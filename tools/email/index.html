@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Client email, ready to paste</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;background:#f4f5f7;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.bar{max-width:680px;margin:20px auto 0;padding:0 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button{font:600 14px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+border:0;border-radius:9px;padding:12px 18px;cursor:pointer;transition:background .15s,transform .05s}
+button:active{transform:translateY(1px)}
+.primary{background:#14284B;color:#fff}
+.primary:hover{background:#1d3563}
+.ghost{background:#fff;color:#14284B;border:1px solid #cfd6e4}
+.ghost:hover{background:#f7f9fc}
+.ok{background:#2E7D4F !important;color:#fff !important;border-color:#2E7D4F !important}
+.hint{max-width:680px;margin:10px auto 0;padding:0 16px;font-size:13px;color:#6b7280;line-height:1.5}
+.sheet{max-width:680px;box-sizing:border-box;margin:14px 16px 40px;background:#fff;border:1px solid #e3e6ec;border-radius:12px;
+padding:28px 24px 32px;box-shadow:0 1px 3px rgba(20,40,75,.06)}
+.body{font-size:15px;line-height:1.62;color:#111827}
+.body p{margin:0 0 16px}
+a.cta{color:#1a56c4;font-weight:600}
+.fallback{font-size:13.5px;color:#6b7280}
+</style></head>
+<body>
+
+<div class="bar">
+  <button class="primary" id="bEmail">Copy email</button>
+  <button class="ghost" id="bSubj">Copy subject line</button>
+</div>
+<div class="hint">Click <b>Copy email</b>, then paste straight into a new Mail message. No highlighting needed.
+The hyperlink comes across live. <b>Copy subject line</b> puts the subject on your clipboard on its own.</div>
+
+<div class="sheet">
+<div class="body" id="email">
+<p>Hi [first name],</p>
+
+<p>First, a correction. The application and cancellation figures in our last note came from modeled
+listing activity, not your leasing records, and were wrongly described as a 30-day count. Please
+disregard that paragraph and the recommendation that followed it. You were right to flag it.</p>
+
+<p>Here is the corrected report, now a live link that refreshes each week:</p>
+
+<p><a class="cta" href="https://thesocialdm.github.io/locallift-pulses/market-intel/village/">Open your
+live comp intelligence report</a></p>
+
+<p>It updates automatically each week, so the link always shows current data rather than a snapshot,
+and the comp table and recovery model are interactive, so you can sort the set and model the offer
+yourself. Worth bookmarking; the address will not change.</p>
+
+<p>The short version: your pricing is strong, your offer is too deep. Per square foot you net $1.96
+against a market average of $1.70, about 15% ahead. But you run a 16.0% concession against a 10.2%
+market, while your one and two bedrooms sit at 97.8% and 94.6% leased, so the offer is not buying
+occupancy there. Villas at Chandler Heights runs four weeks free three miles away and nets $161 more
+than you at higher occupancy.</p>
+
+<p>Your offer lapsed August 8. Cut those two plans to four weeks, hold eight weeks on the three
+bedroom, and that is roughly $104,000 a year without raising a single rent.</p>
+
+<p>Happy to walk through it live.</p>
+
+<p>Best regards,<br>Greyson</p>
+</div>
+</div>
+
+<script>
+var SUBJECT = 'Village of Chandler comp intelligence, corrected and now live';
+
+function flash(btn, msg){
+  var old = btn.textContent;
+  btn.textContent = msg;
+  btn.classList.add('ok');
+  setTimeout(function(){ btn.textContent = old; btn.classList.remove('ok'); }, 1600);
+}
+
+// Rich copy that survives file:// in Safari: select the node, execCommand, restore.
+function copyRich(node, btn){
+  var html = node.innerHTML, text = node.innerText;
+
+  // Preferred on https, including iOS Safari. Must run inside the click handler.
+  if (navigator.clipboard && window.ClipboardItem) {
+    try {
+      navigator.clipboard.write([new ClipboardItem({
+        'text/html': new Blob([html], {type:'text/html'}),
+        'text/plain': new Blob([text], {type:'text/plain'})
+      })]).then(function(){ flash(btn, 'Copied, now paste into Mail'); },
+                function(){ legacyCopy(node, btn); });
+      return;
+    } catch(e) { /* fall through */ }
+  }
+  legacyCopy(node, btn);
+}
+
+function legacyCopy(node, btn){
+  var sel = window.getSelection();
+  var saved = sel.rangeCount ? sel.getRangeAt(0).cloneRange() : null;
+  var r = document.createRange();
+  r.selectNodeContents(node);
+  sel.removeAllRanges();
+  sel.addRange(r);
+  var done = false;
+  try { done = document.execCommand('copy'); } catch(e) { done = false; }
+  sel.removeAllRanges();
+  if (saved) sel.addRange(saved);
+  flash(btn, done ? 'Copied, now paste into Mail' : 'Could not copy, select it manually');
+}
+
+function copyPlain(str, btn){
+  var ta = document.createElement('textarea');
+  ta.value = str;
+  ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  var done = false;
+  try { done = document.execCommand('copy'); } catch(e) { done = false; }
+  document.body.removeChild(ta);
+  if (done) { flash(btn, 'Subject copied'); return; }
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(str).then(function(){ flash(btn, 'Subject copied'); },
+                                           function(){ flash(btn, 'Could not copy'); });
+  } else { flash(btn, 'Could not copy'); }
+}
+
+document.getElementById('bEmail').addEventListener('click', function(){
+  copyRich(document.getElementById('email'), this);
+});
+document.getElementById('bSubj').addEventListener('click', function(){
+  copyPlain(SUBJECT, this);
+});
+</script>
+</body></html>
