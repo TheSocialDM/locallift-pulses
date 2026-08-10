@@ -254,7 +254,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
   <div class="revtip">&#128161; <div><b>Nice momentum — +2 this period (62 → 64).</b> On the map, review volume moves rank, and at 64 you still trail nearby communities like Evolve (524), so every review compounds. Ask every happy resident at move-in and renewal; 2–3 a week lifts your 4.1★, your map rank, and your Index.</div></div>
 </section>
 
-<h2>Search presence <span style="text-transform:none;font-weight:600;color:var(--sec)">(verified with Google + SEMrush)</span></h2>
+<h2>Search presence <span style="text-transform:none;font-weight:600;color:var(--sec)">(verified search data)</span></h2>
 <section class="card">
   <div class="tiles">
     <div class="tile"><div class="tn">234</div><div class="tl">Search clicks (GSC)</div><div class="tc" style="color:var(--sec)">past 7 days</div></div>
@@ -387,7 +387,7 @@ function mcolor(r){if(r<=3)return'var(--g1)';if(r<=6)return'var(--g2)';if(r<=10)
 var REVWK=[0,0,0,0,0,2];
 (function(){var box=document.getElementById('revbars'),mx=Math.max.apply(0,REVWK)||1;box.innerHTML=REVWK.map(function(v,i){return '<div class="rb '+(i===REVWK.length-1?'cur':'')+'" data-h="'+(6+v/mx*30)+'"></div>';}).join('');
  setTimeout(function(){box.querySelectorAll('.rb').forEach(function(b){b.style.height=b.getAttribute('data-h')+'px';});},250);})();
-// AI share of voice (real SEMrush)
+// AI share of voice
 var AISOV=[['Fora',1,'#BF5AF2',1],['Elysian',7,'#30D158',0],['Lvb apartments',1,'#0A84FF',0],['Ariva',0,'#FF9F0A',0]];
 (function(){var mx=8;document.getElementById('aibars').innerHTML=AISOV.map(function(a){var you=a[3];
   var w=(a[1]/mx*100);var bg=you?'linear-gradient(135deg,#BF5AF2,#8E3FE0)':a[2];
@@ -395,7 +395,7 @@ var AISOV=[['Fora',1,'#BF5AF2',1],['Elysian',7,'#30D158',0],['Lvb apartments',1,
   return '<div class="airow '+(you?'you':'')+'"><div class="an">'+name+'</div><div class="abar"><div class="af" data-w="'+w+'" style="background:'+bg+'"></div></div><div class="av">'+a[1]+'%</div></div>';}).join('');
  setTimeout(function(){document.querySelectorAll('#aibars .af').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%';});},300);
  document.querySelectorAll('#aibars .airow').forEach(function(row){var f=row.querySelector('.af');if(!f)return;row.addEventListener('mouseenter',function(){f.style.transition='none';f.style.width='0';f.getBoundingClientRect();f.style.transition='width 1s cubic-bezier(.3,.8,.3,1)';f.style.width=f.getAttribute('data-w')+'%';});});})();
-// discovery donut (GA4 new users by channel)
+// discovery donut (new users by channel)
 var DISC=[['Organic Search',34,'#30D158'],['Paid Search',28,'#FF375F'],['Direct',20,'#0A84FF'],['Cross-network',8,'#BF5AF2'],['Referral',3,'#FFC53D'],['Other',7,'#FF9F0A']];
 (function(){var sv=document.getElementById('donut'),cx=75,cy=75,r=55,w=22,C=2*Math.PI*r,off=0,s='';
  DISC.forEach(function(d,i){var len=d[1]/100*C;s+='<circle class="dslice" data-i="'+i+'" cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+d[2]+'" stroke-width="'+w+'" stroke-dasharray="0 '+C+'" stroke-dashoffset="'+(-off)+'" transform="rotate(-90 '+cx+' '+cy+')" data-len="'+len+' '+(C-len)+'" style="cursor:pointer;transition:stroke-dasharray .9s cubic-bezier(.3,.8,.3,1),stroke-width .15s,opacity .15s"/>';off+=len;});

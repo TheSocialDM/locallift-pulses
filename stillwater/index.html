@@ -254,7 +254,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
   <div class="revtip">&#128161; <div><b>Reviews are rocket fuel for a new lease-up.</b> You're at a strong 4.7★ on 9 reviews — every new one lifts your map rank, your AI trust, and renter confidence fast at this stage. Let's make a review request part of every move-in; we'll track weekly from here.</div></div>
 </section>
 
-<h2>Search presence <span style="text-transform:none;font-weight:600;color:var(--sec)">(verified with Google + SEMrush)</span></h2>
+<h2>Search presence <span style="text-transform:none;font-weight:600;color:var(--sec)">(verified search data)</span></h2>
 <section class="card">
   <div class="tiles">
     <div class="tile"><div class="tn">193</div><div class="tl">Search clicks (GSC)</div><div class="tc" style="color:var(--sec)">past 7 days</div></div>
@@ -387,7 +387,7 @@ function mcolor(r){if(r<=3)return'var(--g1)';if(r<=6)return'var(--g2)';if(r<=10)
 var REVWK=[0,0,0,0,0,0];
 (function(){var box=document.getElementById('revbars'),mx=Math.max.apply(0,REVWK)||1;box.innerHTML=REVWK.map(function(v,i){return '<div class="rb '+(i===REVWK.length-1?'cur':'')+'" data-h="'+(6+v/mx*30)+'"></div>';}).join('');
  setTimeout(function(){box.querySelectorAll('.rb').forEach(function(b){b.style.height=b.getAttribute('data-h')+'px';});},250);})();
-// AI share of voice (real SEMrush)
+// AI share of voice
 var AISOV=[['Stillwater Lakes',0,'#BF5AF2',1],['IMT Lake House',6,'#30D158',0],['Maa',3,'#0A84FF',0],['Mallory Square',0,'#FF9F0A',0]];
 (function(){var mx=8;document.getElementById('aibars').innerHTML=AISOV.map(function(a){var you=a[3];
   var w=Math.max(a[1]/mx*100, you?2:0);var bg=you?'linear-gradient(135deg,#BF5AF2,#8E3FE0)':a[2];
@@ -395,8 +395,8 @@ var AISOV=[['Stillwater Lakes',0,'#BF5AF2',1],['IMT Lake House',6,'#30D158',0],[
   return '<div class="airow '+(you?'you':'')+'"><div class="an">'+name+'</div><div class="abar"><div class="af" data-w="'+w+'" style="background:'+bg+'"></div></div><div class="av">'+a[1]+'%</div></div>';}).join('');
  setTimeout(function(){document.querySelectorAll('#aibars .af').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%';});},300);
  document.querySelectorAll('#aibars .airow').forEach(function(row){var f=row.querySelector('.af');if(!f)return;row.addEventListener('mouseenter',function(){f.style.transition='none';f.style.width='0';f.getBoundingClientRect();f.style.transition='width 1s cubic-bezier(.3,.8,.3,1)';f.style.width=f.getAttribute('data-w')+'%';});});})();
-// discovery donut (GA4 new users by channel)
-var DISC=[['Paid Search',44,'#FF375F'],['Google Business',23,'#0A84FF'],['Direct',15,'#8E8E93'],['Organic Search',10,'#30D158'],['Referral',5,'#BF5AF2'],['Other',3,'#FFC53D']];
+// discovery donut (new users by channel)
+var DISC=[['Paid Search',44,'#FF375F'],['Business profile',23,'#0A84FF'],['Direct',15,'#8E8E93'],['Organic Search',10,'#30D158'],['Referral',5,'#BF5AF2'],['Other',3,'#FFC53D']];
 (function(){var sv=document.getElementById('donut'),cx=75,cy=75,r=55,w=22,C=2*Math.PI*r,off=0,s='';
  DISC.forEach(function(d,i){var len=d[1]/100*C;s+='<circle class="dslice" data-i="'+i+'" cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+d[2]+'" stroke-width="'+w+'" stroke-dasharray="0 '+C+'" stroke-dashoffset="'+(-off)+'" transform="rotate(-90 '+cx+' '+cy+')" data-len="'+len+' '+(C-len)+'" style="cursor:pointer;transition:stroke-dasharray .9s cubic-bezier(.3,.8,.3,1),stroke-width .15s,opacity .15s"/>';off+=len;});
  s+='<text x="75" y="72" text-anchor="middle" font-size="21" font-weight="800" fill="#1D1D1F" id="dcen">44%</text><text x="75" y="90" text-anchor="middle" font-size="9.5" font-weight="600" fill="#86868B" id="dcap">paid</text>';sv.innerHTML=s;
@@ -407,7 +407,7 @@ var DISC=[['Paid Search',44,'#FF375F'],['Google Business',23,'#0A84FF'],['Direct
  sl.forEach(function(c){c.addEventListener('mouseenter',function(){hi(+c.getAttribute('data-i'));});c.addEventListener('mouseleave',function(){hi(-1);});});
  document.querySelectorAll('#dleg .legrow').forEach(function(rw){rw.addEventListener('mouseenter',function(){hi(+rw.getAttribute('data-i'));});rw.addEventListener('mouseleave',function(){hi(-1);});});
  grow();})();
-// field scoreboard (Google rating; higher better)
+// field scoreboard (rating; higher better)
 var FIELD=[['Verano Apartments',4.7,'547'],['Stillwater Lakes',4.7,'9'],['Walden Park',4.6,'223'],['Heritage Key Villas',4.4,'268'],['The Jamison',4.2,'232'],['Cobblestone',3.8,'79']];
 (function(){var mx=5;document.getElementById('score').innerHTML=FIELD.map(function(s,i){var you=s[0]==='Stillwater Lakes';return '<div class="scorerow '+(you?'you':'')+'"><div class="rk">'+(i+1)+'</div><div class="nm">'+s[0]+(you?' (you)':'')+(s[2]?' <span style="color:var(--sec);font-weight:600">'+s[2]+' rev</span>':'')+'</div><div class="bar"><div class="bf" data-w="'+(s[1]/mx*100)+'" style="background:'+(you?'var(--blue)':'#9aa0aa')+'"></div></div><div class="sc">'+s[1].toFixed(1)+'★</div></div>';}).join('');
  setTimeout(function(){document.querySelectorAll('#score .bf').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%';});},350);

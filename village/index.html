@@ -254,7 +254,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
   <div class="revtip">&#128161; <div><b>Solid at 4.6★ on 28 reviews.</b> More reviews compound your already-dominant map position and build AI trust — keep the asks going at move-in and renewal; we'll track your weekly new reviews from here.</div></div>
 </section>
 
-<h2>Search presence <span style="text-transform:none;font-weight:600;color:var(--sec)">(verified with Google + SEMrush)</span></h2>
+<h2>Search presence <span style="text-transform:none;font-weight:600;color:var(--sec)">(verified search data)</span></h2>
 <section class="card">
   <div class="tiles">
     <div class="tile"><div class="tn">180</div><div class="tl">Search clicks (GSC)</div><div class="tc" style="color:var(--sec)">past 7 days</div></div>
@@ -285,7 +285,7 @@ svg.spark{width:100%;height:104px;display:block;overflow:visible;margin-top:10px
 <section class="card"><div style="font-size:15px;font-weight:800;margin-bottom:4px">The map field <span style="font-weight:600;font-size:11px;color:var(--sec)">· map share of voice</span></div>
   <div style="font-size:11.5px;color:var(--sec);margin-bottom:10px">Nearby communities by map share of voice. Higher is better — you own the map at 27%.</div>
   <div id="score"></div>
-  <div style="font-size:11.5px;color:var(--sec);margin-top:12px"><b style="color:var(--ink)">Your discovery mix</b> (paid vs organic vs direct) arrives with the monthly GA4 view.</div>
+  <div style="font-size:11.5px;color:var(--sec);margin-top:12px"><b style="color:var(--ink)">Your discovery mix</b> (paid vs organic vs direct) arrives with the monthly view.</div>
 </section>
 
 <h2>The Monday decision · one recommendation</h2>
@@ -381,7 +381,7 @@ function mcolor(r){if(r<=3)return'var(--g1)';if(r<=6)return'var(--g2)';if(r<=10)
 var REVWK=[0,0,0,0,0,0];
 (function(){var box=document.getElementById('revbars'),mx=Math.max.apply(0,REVWK)||1;box.innerHTML=REVWK.map(function(v,i){return '<div class="rb '+(i===REVWK.length-1?'cur':'')+'" data-h="'+(6+v/mx*30)+'"></div>';}).join('');
  setTimeout(function(){box.querySelectorAll('.rb').forEach(function(b){b.style.height=b.getAttribute('data-h')+'px';});},250);})();
-// AI share of voice (real SEMrush)
+// AI share of voice
 var AISOV=[['Town Chandler',5,'#30D158',0],['Village of Chandler',2,'#BF5AF2',1],['Alta Uptown',2,'#0A84FF',0],['Villas at Chandler Heights',1,'#FF9F0A',0]];
 (function(){var mx=10;document.getElementById('aibars').innerHTML=AISOV.map(function(a){var you=a[3];
   var w=(a[1]/mx*100);var bg=you?'linear-gradient(135deg,#BF5AF2,#8E3FE0)':a[2];
@@ -389,7 +389,7 @@ var AISOV=[['Town Chandler',5,'#30D158',0],['Village of Chandler',2,'#BF5AF2',1]
   return '<div class="airow '+(you?'you':'')+'"><div class="an">'+name+'</div><div class="abar"><div class="af" data-w="'+w+'" style="background:'+bg+'"></div></div><div class="av">'+a[1]+'%</div></div>';}).join('');
  setTimeout(function(){document.querySelectorAll('#aibars .af').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%';});},300);
  document.querySelectorAll('#aibars .airow').forEach(function(row){var f=row.querySelector('.af');if(!f)return;row.addEventListener('mouseenter',function(){f.style.transition='none';f.style.width='0';f.getBoundingClientRect();f.style.transition='width 1s cubic-bezier(.3,.8,.3,1)';f.style.width=f.getAttribute('data-w')+'%';});});})();
-// (discovery donut omitted for Lura — GA4 monthly)
+// discovery donut omitted this week
 // field scoreboard (map share of voice; higher better)
 var FIELD=[['Village of Chandler',27,''],['Villas at Chandler Heights',14,''],['The Core Chandler',8.56,''],['Clarendale of Chandler',8.38,''],['Waterside at Ocotillo',5.18,''],['Santana Ridge',4.35,'']];
 (function(){var mx=27;document.getElementById('score').innerHTML=FIELD.map(function(s,i){var you=s[0]==='Village of Chandler';return '<div class="scorerow '+(you?'you':'')+'"><div class="rk">'+(i+1)+'</div><div class="nm">'+s[0]+(you?' (you)':'')+'</div><div class="bar"><div class="bf" data-w="'+(s[1]/mx*100)+'" style="background:'+(you?'var(--blue)':'#9aa0aa')+'"></div></div><div class="sc">'+s[1].toFixed(1)+'%</div></div>';}).join('');
