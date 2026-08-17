@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuvee Week 18 client email</title>
+<style>
+:root{--navy:#14284B;--gold:#C9A227;--line:#e2e6ee;--sec:#6b7280;--ink:#1f2937}
+*{box-sizing:border-box}
+body{margin:0;padding:16px;background:#f4f6fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink)}
+.sheet{max-width:720px;margin:0 auto}
+.strip{background:#fff8dc;border:1px solid var(--gold);border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5;margin-bottom:14px}
+.strip b{color:var(--navy)}
+.bar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}
+button{font:inherit;font-weight:700;font-size:13.5px;border:0;border-radius:10px;padding:11px 16px;cursor:pointer;background:var(--navy);color:#fff}
+button.alt{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+button:active{transform:translateY(1px)}
+.ok{background:#2E7D4F!important;color:#fff!important;border-color:#2E7D4F!important}
+.subjhead{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-size:13px;margin-bottom:14px}
+.subjhead .lab{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--sec);margin-bottom:3px}
+.subjhead .val{font-weight:700;color:var(--navy);font-size:14px}
+#body{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;font-size:14.5px;line-height:1.62;color:#1f2937}
+#body p{margin:0 0 13px}
+#body ol{margin:0 0 13px;padding-left:20px}
+#body li{margin-bottom:9px}
+#body a{color:#14284B;font-weight:700}
+@media(max-width:430px){body{padding:10px}#body{padding:16px}button{flex:1}}
+</style></head><body>
+<div class="sheet">
+
+<div class="strip"><b>Upload the report page first.</b> The link below points at the live Cuvee report path, which serves last week's edition until the new file is in place at <b>market-intel/cuvee/index.html</b>. Once it is up, hit Copy email and paste into Mail. Formatting and the link come across intact. This strip is not included in the copy.</div>
+
+<div class="bar">
+  <button id="cE">Copy email</button>
+  <button id="cS" class="alt">Copy subject line</button>
+</div>
+
+<div class="subjhead"><div class="lab">Subject line</div><div class="val" id="subj">Cuvee: the gap this week is speed, not price</div></div>
+
+<div id="body">
+<p>Hi [first name],</p>
+
+<p>This week's Cuvee report is ready.</p>
+
+<p>The short version: your pricing is working and your speed is not. Cuvee nets $1.55 per square foot after concessions against a comp set average of $1.43, second only to Broadstone Westgate, and new leases are signing $64 above your in place book. Nothing in this week's data supports discounting further.</p>
+
+<p>What is costing you is time. Homes at Cuvee take 124 days to lease against 92 for the set, and you signed one home last week against a market that signed 46 between them. Across the roughly 188 homes that turn in a year at your blended renewal rate, those 32 extra days are worth about $314,000.</p>
+
+<p>Three of the fixes cost nothing:</p>
+
+<ol>
+<li><b>Declare your air conditioning.</b> Only three of the eleven properties in this market list it, so a renter filtering for air conditioning in a Phoenix August sees almost nothing. Your listing is not one of the three.</li>
+<li><b>Advertise the offer in weeks free.</b> You run 50% off rent for five months, which lands at a competitive 16.7%. The rest of the set advertises 8 to 12 weeks free. Side by side on a listing page, yours needs arithmetic and theirs does not.</li>
+<li><b>Sell your move in cost.</b> At $75 with no admin fee you have the cheapest standing front door in the set, $189 below the market average, and it appears nowhere in your marketing.</li>
+</ol>
+
+<p>One thing to watch: 26 homes come back the week of October 5, the largest single block on the board. Worth having the above in place before it lands.</p>
+
+<p>Full detail, including the floor plan level breakdown and an interactive model of the days to lease gap, is here: <a href="https://thesocialdm.github.io/locallift-pulses/market-intel/cuvee/">Open your live comp intelligence report</a></p>
+
+<p>Best regards,<br>Greyson</p>
+</div>
+
+</div>
+<script>
+function flash(b,t){var o=b.textContent;b.textContent=t;b.classList.add('ok');setTimeout(function(){b.textContent=o;b.classList.remove('ok');},1600);}
+function legacy(node){var r=document.createRange();r.selectNodeContents(node);var s=getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){}s.removeAllRanges();return ok;}
+document.getElementById('cE').addEventListener('click',function(){
+  var b=this,node=document.getElementById('body');
+  var html=node.innerHTML,text=node.innerText;
+  if(navigator.clipboard&&window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})])
+    .then(function(){flash(b,'Copied');},function(){flash(b,legacy(node)?'Copied':'Copy failed');});
+  } else { flash(b,legacy(node)?'Copied':'Copy failed'); }
+});
+document.getElementById('cS').addEventListener('click',function(){
+  var b=this,t=document.getElementById('subj').textContent;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){flash(b,'Copied');},function(){flash(b,legacy(document.getElementById('subj'))?'Copied':'Copy failed');});
+  } else { flash(b,legacy(document.getElementById('subj'))?'Copied':'Copy failed'); }
+});
+</script></body></html>
