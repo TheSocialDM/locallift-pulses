@@ -1,0 +1,864 @@
+<!doctype html>
+<script type="application/json" id="cowork-artifact-meta">
+{
+  "schemaVersion": 1,
+  "description": "Village of Chandler, LocalLift live visibility command center, July to August 2026. Google profile metrics compared like for like across Aug 1 to 13 vs Jul 1 to 13: interactions 364 (+2%), calls 14 (+75%), directions 68 (+24%), profile clicks 282 (-4%). New earned versus bought section separating 1,894 paid listing visitors (46% of traffic, concentrated in a four day surge Aug 15 to 18) from 1,032 earned profile visitors, 87 ChatGPT arrivals and 653 direct. New page two analysis: 74% of search visibility sits past position 10, nine core Chandler searches strand 8,315 views at positions 13 to 19, against a 47.1% click rate where the site already ranks top three. Fixes two defects carried from the July build: direct visits was showing the profile interactions figure, and total search clicks were labelled branded. Map, AI share of voice and review sections carry explicit July measurement dates pending the August scan. Profile views awaiting client export."
+}
+</script>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LocalLift Live, Village of Chandler · August 2026</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#eef0f4; --card:#ffffff; --bord:#e2e4ea; --ink:#15161c; --sub:#5a5f6b; --mut:#8b90a0;
+  --blue:#0A84FF; --teal:#0a93b8; --grn:#1e9e4a; --org:#e08300; --pur:#8a44d6; --pink:#e0425a;
+  --navy:#101a30; --grnbg:#e9f7ee; --orgbg:#fdf1e2; --shadow:0 1px 3px rgba(20,25,40,.06),0 8px 24px rgba(20,25,40,.06);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 80px}
+#stick{position:sticky;top:0;z-index:40}
+section{scroll-margin-top:124px}
+html{scroll-behavior:smooth}
+.topbar{position:relative;z-index:40;background:rgba(238,240,244,.9);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--bord)}
+.topin{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.3px;font-size:15px}
+.brand .pin{color:var(--pink)}
+.selchip{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--bord);border-radius:12px;padding:6px 12px;box-shadow:var(--shadow)}
+.ava{width:26px;height:26px;border-radius:7px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.selchip .nm{font-weight:700;font-size:13px;line-height:1.1}
+.selchip .cr{font-size:10px;color:var(--mut)}
+.spacer{flex:1}
+.live{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:800;color:var(--grn);background:var(--grnbg);border:1px solid #cdeccf;border-radius:20px;padding:5px 11px;letter-spacing:.4px}
+.live .dot{width:8px;height:8px;border-radius:50%;background:var(--grn);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(30,158,74,.5)}70%{box-shadow:0 0 0 8px rgba(30,158,74,0)}100%{box-shadow:0 0 0 0 rgba(30,158,74,0)}}
+.mpill{font-size:12px;font-weight:700;color:var(--sub);background:var(--card);border:1px solid var(--bord);border-radius:20px;padding:5px 12px}
+.pbtn{font-size:12px;font-weight:700;color:#fff;background:var(--navy);border:none;border-radius:20px;padding:7px 14px;cursor:pointer}
+.pbtn:hover{opacity:.9}
+html,body{overflow-x:clip}
+.bub{text-transform:none;letter-spacing:normal;font-weight:400}
+.info.wide .bub{width:460px;bottom:auto;top:150%;left:0;transform:translateX(-8px) translateY(-6px)}
+.info.wide:hover .bub{transform:translateX(-8px) translateY(0)}
+.info.wide.wr .bub{left:auto;right:0;transform:translateX(8px) translateY(-6px)}
+.info.wide.wr:hover .bub{transform:translateX(8px) translateY(0)}
+@media (max-width:1120px){.bub{width:min(300px,68vw)!important}.info.wide .bub{width:min(420px,80vw)!important}}
+.nav{position:relative;z-index:30;background:rgba(238,240,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--bord)}
+.navin{max-width:1080px;margin:0 auto;padding:4px 20px;display:flex;gap:2px 14px;flex-wrap:wrap;justify-content:center;row-gap:0}
+.nav a{padding:8px 2px;font-size:12px;font-weight:700;color:var(--sub);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--blue);border-bottom-color:var(--blue)}
+.hero{margin:26px 0 8px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:1.2px;color:var(--teal);text-transform:uppercase}
+h1.big{font-size:30px;font-weight:800;margin:6px 0 4px;letter-spacing:-.5px}
+.lede{color:var(--sub);font-size:14px;max-width:660px}
+section{margin-top:34px;scroll-margin-top:118px}
+.sechead{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.sechead h2{font-size:20px;font-weight:800;margin:0;letter-spacing:-.3px}
+.sechead .k{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--teal);text-transform:uppercase}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:16px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:1.3fr 1fr}
+@media(max-width:820px){.g4{grid-template-columns:repeat(2,1fr)}.g3,.g2{grid-template-columns:1fr}}
+.kpi{position:relative;padding:18px 18px 16px;overflow:visible}
+.kpi .top{height:5px;border-radius:5px 5px 0 0;position:absolute;left:0;right:0;top:0}
+.kpi .big{font-size:30px;font-weight:800;letter-spacing:-.5px;margin-top:4px}
+.kpi .lab{font-weight:700;font-size:13px;margin-top:2px}
+.kpi .sub{font-size:11.5px;color:var(--mut);margin-top:2px}
+.kpi .row{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.chip{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.4px;padding:3px 8px;border-radius:20px;background:var(--grnbg);color:var(--grn)}
+.toggle{font-size:10.5px;font-weight:800;color:var(--sub);background:#f1f2f6;border:1px solid var(--bord);border-radius:20px;padding:4px 9px;cursor:pointer;user-select:none}
+.toggle:hover{background:#e7e9f0}
+.delta{font-size:12px;font-weight:800}
+.up{color:var(--grn)} .down{color:var(--pink)} .flat{color:var(--mut)}
+.info{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#e6e8ef;color:var(--sub);font-size:11px;font-weight:800;cursor:help;position:relative;margin-left:6px;vertical-align:middle}
+.info:hover{background:var(--blue);color:#fff}
+.bub{position:absolute;bottom:130%;left:50%;transform:translateX(-50%) translateY(6px);width:300px;background:#f6f7f9;border:1px solid var(--bord);border-radius:14px;box-shadow:0 10px 34px rgba(20,25,40,.16);padding:13px 14px;opacity:0;visibility:hidden;transition:.16s;z-index:60;text-align:left;pointer-events:none}
+.info:hover .bub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.bub:after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:7px solid transparent;border-top-color:#f6f7f9}
+.bub .bl{font-size:9.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:2px}
+.bub .bl.w{color:var(--mut)} .bub .bl.y{color:var(--teal)} .bub .bl.h{color:var(--grn)}
+.bub p{margin:0 0 9px;font-size:11.5px;color:var(--sub);line-height:1.45}
+.bub p.hv{color:var(--ink);font-weight:600}
+.bub p:last-child{margin-bottom:0}
+@media(max-width:600px){.bub{width:240px}}
+.read{background:var(--grnbg);border:1px solid #cdeccf;border-radius:12px;padding:12px 14px;margin-top:14px}
+.read .rl{font-size:10px;font-weight:800;letter-spacing:.6px;color:var(--grn);text-transform:uppercase;margin-bottom:3px}
+.read p{margin:0;font-size:12.5px;color:var(--ink)}
+.pad{padding:18px}
+.ct{font-weight:800;font-size:14px;margin:0 0 12px;display:flex;align-items:center}
+.barrow{display:flex;align-items:center;gap:12px;margin:9px 0}
+.barrow .bn{width:180px;font-size:12.5px;font-weight:600;flex:none}
+.barrow .bn.you{font-weight:800;color:var(--grn)}
+.track{flex:1;height:16px;background:#eef0f5;border-radius:8px;overflow:hidden}
+.fill{height:100%;border-radius:8px}
+.barrow .bv{width:70px;text-align:right;font-weight:800;font-size:12.5px}
+.wedge{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:16px;overflow:hidden;border:1px solid var(--bord)}
+@media(max-width:700px){.wedge{grid-template-columns:1fr}}
+.wcol{padding:20px}
+.wl{background:#f4f5f8}
+.wr{background:var(--navy);color:#fff}
+.wcap{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:10px}
+.wl .wcap{color:var(--mut)} .wr .wcap{color:#8fb4ff}
+.wli{display:flex;gap:9px;font-size:12.5px;margin:8px 0;align-items:flex-start}
+.wli .ic{flex:none;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;margin-top:1px}
+.wl .ic{background:#e2e4ea;color:var(--mut)} .wr .ic{background:#20365e;color:#7fe0a0}
+.wr .wli{color:#dfe6f2}
+.wkick{grid-column:1/-1;background:#0b1526;color:#fff;padding:16px 20px;font-size:13px;font-weight:600;text-align:center;border-top:1px solid #22314f}
+.wkick b{color:#7fe0a0}
+.ctab{width:100%;border-collapse:collapse}
+.ctab th{font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--mut);text-align:left;padding:8px 10px;border-bottom:1px solid var(--bord)}
+.ctab td{padding:10px;border-bottom:1px solid #f0f1f5;font-size:13px}
+.ctab tr.you td{background:var(--grnbg);font-weight:700}
+.ctab .rk{font-weight:800}
+.rk.g{color:var(--grn)} .rk.o{color:var(--org)} .rk.r{color:var(--pink)}
+.revbar{display:inline-block;height:9px;background:var(--blue);border-radius:5px;vertical-align:middle;margin-right:8px}
+.you .revbar{background:var(--pink)}
+.grow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f0f1f5}
+.grow:last-child{border:none}
+.gkw{flex:1;font-weight:700;font-size:13px}
+.grank{width:60px;text-align:center;font-weight:800}
+.gsov{width:70px;text-align:right;color:var(--sub);font-size:12.5px}
+.gtop{width:120px}
+.pill{display:inline-block;position:relative;background:#f1f2f6;border:1px solid var(--bord);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:600;margin:4px 6px 0 0;cursor:help}
+.pill:hover{background:#e7e9f0}
+.pill:hover .bub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.pill .bub{width:270px}
+.tile{border-radius:12px;padding:14px;color:#fff;font-weight:700;font-size:12.5px}
+.orbox{border-radius:14px;padding:16px}
+.orbox.op{background:var(--grnbg);border:1px solid #cdeccf}
+.orbox.rk{background:var(--orgbg);border:1px solid #f3ddb8}
+.orbox .ol{font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+.op .ol{color:var(--grn)} .rk .ol{color:var(--org)}
+.orbox h3{font-size:15px;margin:5px 0 8px}
+.orbox p{margin:0;font-size:12.5px;color:var(--sub);line-height:1.5}
+.hd-hook{margin:14px 0 0;font-size:18px;line-height:1.35;font-weight:800;color:var(--pur);max-width:700px;text-shadow:0 0 10px rgba(138,68,214,.30);animation:hookglow 2.4s ease-in-out infinite}
+@keyframes hookglow{0%,100%{text-shadow:0 0 8px rgba(138,68,214,.22)}50%{text-shadow:0 0 20px rgba(138,68,214,.60)}}
+.hd{position:relative;border:1.5px dashed #c7b8e6;background:linear-gradient(180deg,#faf7ff,#f4eefc);border-radius:16px;padding:22px;overflow:hidden}
+.hdlock{display:inline-flex;align-items:center;gap:7px;background:#efe4ff;color:var(--pur);font-size:11px;font-weight:800;border-radius:20px;padding:5px 12px;letter-spacing:.4px}
+.hdblur{filter:blur(5px);opacity:.55;user-select:none;pointer-events:none;margin-top:14px}
+.hdcta{position:absolute;right:22px;bottom:22px;background:var(--pur);color:#fff;font-weight:800;font-size:12px;border:none;border-radius:20px;padding:9px 16px;cursor:pointer}
+.footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--bord);display:flex;justify-content:space-between;font-size:11px;color:var(--mut);flex-wrap:wrap;gap:8px}
+
+.flow{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
+.step{flex:1;min-width:150px;background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+.step .sn{width:24px;height:24px;border-radius:50%;color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin-bottom:9px}
+.step .st{font-weight:800;font-size:12.5px;letter-spacing:.3px}
+.step .sd{font-size:11.5px;color:var(--sub);margin-top:4px;line-height:1.4}
+.step .sm{font-size:11px;color:var(--grn);font-weight:800;margin-top:8px}
+.how{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
+.how .hs{flex:1;min-width:200px;display:flex;gap:10px;align-items:flex-start}
+.how .hn{flex:none;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center}
+.how .ht{font-size:12.5px;color:var(--ink)}
+.how .ht b{color:var(--ink)}
+@media print{.hd-hook{text-shadow:none;animation:none}#stick{display:none!important}.pbtn,.toggle,.hdcta{display:none!important}body{background:#fff}section{break-inside:avoid;margin-top:22px}.card,.wedge,.hd{box-shadow:none}.bub{display:none!important}a{text-decoration:none}}
+</style>
+</head>
+<body>
+
+<div id="stick"><div class="topbar"><div class="topin">
+  <div class="brand">SOCIALDM <span class="pin">|</span> L<span class="pin">•</span>calLift™</div>
+  <div class="selchip"><div class="ava">VC</div><div><div class="nm">Village of Chandler</div><div class="cr">Chandler, AZ · Live data</div></div></div>
+  <div class="spacer"></div>
+  <div class="live"><span class="dot"></span>LIVE</div>
+  <div class="mpill">July → August 2026</div>
+  <button class="pbtn" onclick="window.print()">Print / PDF</button>
+</div></div>
+
+<div class="nav"><div class="navin">
+  <a href="#pulse" class="on">Overview</a>
+  <a href="#proof">Scoreboard</a>
+  <a href="#terms">Key Terms</a>
+  <a href="#maps">Maps</a>
+  <a href="#rivals">Competitors</a>
+  <a href="#sister">Portfolio</a>
+  <a href="#ai">AI</a>
+  <a href="#asked">Renter Questions</a>
+  <a href="#plan">Plan</a>
+  <a href="#why">Momentum</a>
+  <a href="#gbp">Profile</a>
+  <a href="#health">Website</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#ship">Our Work</a>
+</div></div></div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Executive Pulse · Live Visibility Command Center</div>
+    <h1 class="big">Your month, in 30 seconds.</h1>
+    <div class="lede">Hover any <span class="info">i<span class="bub"><div class="bl w">What this is</div><p>A grey bubble like this. Hover any circle to see what a number means, why it matters to you, and how you're doing right now.</p></span></span> to see what it means and why it matters. Toggle any card between <b>this month (August)</b> and <b>last month (July)</b> to watch it move.</div>
+    <div style="margin-top:14px;display:inline-flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:10px 16px;box-shadow:var(--shadow)"><div style="font-size:26px;font-weight:800;color:var(--teal)">81<span style="font-size:14px;color:var(--mut)">/100</span></div><div style="font-size:12px;line-height:1.3"><b>LocalLift Visibility Index™</b><br><span style="color:var(--sub)">held this cycle · the highest of any property we run</span></div></div>
+  </div>
+
+  <section id="pulse">
+    <div class="grid g4" id="pulseCards"></div>
+    <div class="read"><div class="rl">The story<span class="info wide" data-tip="story" style="margin-left:6px">i</span></div><p>Two different things happened this cycle and they should not be read as one. <b>The profile you own kept climbing:</b> calls up 75%, direction requests up 24%, interactions up 2% across the same thirteen days. <b>Site traffic separately quadrupled for four days</b> through a listing platform's paid placement, which is rented reach rather than earned visibility. The section below separates the two so next month's comparison still means something.</p></div>
+  </section>
+
+  <section id="proof">
+    <div class="sechead"><span class="k">The scoreboard</span><h2>The most-found apartment community in Chandler</h2></div>
+    <div class="card pad" style="border-left:4px solid var(--grn);margin-bottom:14px">
+      <p style="margin:0;font-size:13.5px"><b>First at every point on the Chandler map, across 37 communities.</b> The widest search footprint in the market, and the two actions closest to a tour both climbing. On AI answers, the newest surface of the three, Village is <b>the only community in Chandler gaining ground</b> while every tracked competitor sits at zero change. <b>87 renters arrived from AI this cycle.</b></p>
+    </div>
+    <div class="grid g4">
+      <div class="card kpi"><div class="top" style="background:var(--grn)"></div><div class="big" style="color:var(--grn)">+76%</div><div class="lab">searches you now appear for</div><div class="sub">689 in April to 1,213 in July, the widest net in the market</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--grn)"></div><div class="big" style="color:var(--grn)">#1</div><div class="lab">on the map, every core term</div><div class="sub">rank 1.0 of 37, every grid point, scanned Aug 19</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--grn)"></div><div class="big" style="color:var(--grn)">+75%</div><div class="lab">phone calls to the office</div><div class="sub">and direction requests up 24%, the two closest to a tour</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--grn)"></div><div class="big" style="color:var(--grn)">Only</div><div class="lab">rising AI share in Chandler</div><div class="sub">August: Village up to 4%, every competitor at zero change</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card pad" style="border-left:3px solid var(--grn)">
+        <div class="ct" style="color:var(--grn)">Winning</div>
+        <div class="wli"><span class="ic">★</span><div><b>Average map rank 1.0 out of 37 communities</b>, first at every point on the city grid, scanned Aug 19.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Doing it on <b>28 reviews</b> while rivals carry 88, 140, 229, 249 and 277. That is relevance, not volume.</div></div>
+        <div class="wli"><span class="ic">★</span><div><b>27% map share of voice</b>, nearly double Villas at Chandler Heights at 14.2%.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Search visits climbing every month: <b>22.8 a day in June, 24.8 in July, 26.7 in August.</b></div></div>
+        <div class="wli"><span class="ic">★</span><div>Your profile is the <b>best-converting entry point you own</b>, 23.3% click-through against a 1.2% site average.</div></div>
+      </div>
+      <div class="card pad" style="border-left:3px solid var(--org)">
+        <div class="ct" style="color:var(--org)">Next to win</div>
+        <div class="wli"><span class="ic">★</span><div><b>AI answers, and Village is the only one moving.</b> Share rose to <b>4%</b> while every tracked competitor sat at zero change. <b>84% of Chandler answers still name nobody in this set</b>, so the category is unclaimed. AI already sent <b>87 renters</b> this cycle at <b>89% favourable</b> sentiment.</div></div>
+        <div class="wli"><span class="ic">→</span><div><b>Page two.</b> Nine core searches sit at positions 13 to 19 and strand 8,315 views a month. Where you already rank top three, 47% of people click.</div></div>
+        <div class="wli"><span class="ic">→</span><div><b>Citations.</b> 205 sources name Village. The most-cited source in the market has 495. Every page we publish closes that gap.</div></div>
+        <div style="margin-top:10px;font-size:12px;color:var(--sub);background:var(--bg2,#f6f7f9);padding:10px;border-radius:10px">These three are the roadmap, and they are the reason the map win matters: <b>the same method that took Village to #1 on the map is what we are now pointing at AI.</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flow">
+    <div class="sechead"><span class="k">How it works</span><h2>How your visibility becomes renters</h2></div>
+    <div class="flow"><div class="step"><div class="sn" style="background:var(--pur)">1</div><div class="st">SEEN</div><div class="sd">Renters find you on Maps, Google and AI before they ever type your name.</div><div class="sm">#1 at every point on the city grid, scanned Aug 19</div></div><div class="step"><div class="sn" style="background:var(--blue)">2</div><div class="st">CHOSEN</div><div class="sd">You rank first on the map across the whole city, so you are the option, not one of thirty-seven.</div><div class="sm">#1 of 37 · 27% map share<span class="info wide" data-tip="mapshare" style="margin-left:5px">i</span> · scanned Aug 19</div></div><div class="step"><div class="sn" style="background:var(--teal)">3</div><div class="st">ENGAGED</div><div class="sd">They act on your profile: click, call, ask for directions.</div><div class="sm">364 interactions, Aug 1 to 13</div></div><div class="step"><div class="sn" style="background:var(--grn)">4</div><div class="st">VISITED</div><div class="sd">They browse your site, floor plans and photos.</div><div class="sm">282 profile clicks · 4,116 site visitors, Jul 1 to Aug 20</div></div><div class="step"><div class="sn" style="background:var(--org)">5</div><div class="st">TOUR</div><div class="sd">The visit becomes a lead your leasing team can close.</div><div class="sm">14 calls, Aug 1 to 13 · tour forms tracked</div></div></div>
+    <div class="read"><div class="rl">Why this matters</div><p>Every dashboard shows you the last step. <b>We build the first two, where the renter is won or lost.</b> If you're not seen and chosen at the top, nothing reaches your leasing team at the bottom. This is the funnel most vendors never touch.</p></div>
+  </section>
+
+
+  <section id="wedge">
+    <div class="sechead"><span class="k">The difference</span><h2>The discovery layer standard tools cannot see</h2></div>
+    <div class="wedge">
+      <div class="wcol wl">
+        <div class="wcap">GA4 · Search Console · Standard Dashboards</div>
+        <div class="wli"><span class="ic">✓</span><div>“AI sent you <b>10 mentions</b>.” A number, and nothing else.</div></div>
+        <div class="wli"><span class="ic">✓</span><div>Clicks, calls, organic traffic. <b>What already happened.</b></div></div>
+        <div class="wli"><span class="ic">✓</span><div>People who <b>already found you</b> and landed on the site.</div></div>
+        <div class="wli"><span class="ic">·</span><div>No queries. No sentiment. No engine. No competitors. No share of voice.</div></div>
+      </div>
+      <div class="wcol wr">
+        <div class="wcap">LocalLift IQ · the discovery layer</div>
+        <div class="wli"><span class="ic">★</span><div><b>What renters asked AI</b>, which engine answered, and whether it named you or a rival.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Your <b>share of voice</b> vs every competitor, and your rank at every point on the map.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Renters who've <b>never heard your name</b>, caught at the top of the funnel.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Then we <b>build the content</b>: AI-readable pages, FAQs, schema and captions written to get you chosen.</div></div>
+      </div>
+      <div class="wkick">Anyone can open a dashboard and say “calls are up.” We show you <b>who your competition is</b>, <b>where renters are looking</b>, and <b>whether AI recommends you</b>, then we do something about it. That's the discovery layer standard reporting can't reach.</div>
+    </div>
+  </section>
+
+  <section id="terms">
+    <div class="sechead"><span class="k">Plain English</span><h2>Three words this report uses, and what each one means</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <p style="margin:0;font-size:13px">These three measures come up throughout. Here is what each one actually is, how it works, and what we are doing about it for Village.</p>
+    </div>
+
+    <div class="grid g3">
+
+      <div class="card pad" style="border-top:4px solid var(--pur)">
+        <div style="font-size:15px;font-weight:800;margin-bottom:8px">Share of voice</div>
+        <div style="font-size:11px;font-weight:800;color:var(--pur);letter-spacing:.04em;margin-bottom:4px">WHAT IT MEANS</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:10px">Out of all the times a renter is shown apartment options, the slice that is you. Picture 100 renters looking: share of voice is how many of those 100 see your name.</div>
+        <div style="font-size:11px;font-weight:800;color:var(--pur);letter-spacing:.04em;margin-bottom:4px">HOW IT WORKS</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:10px">We measure it on <b>two separate surfaces</b>, and they are different numbers. <b>Map share</b> is your slice of the Google map across the whole city. <b>AI share of voice</b> is how often an AI assistant names you when asked where to rent in Chandler.</div>
+        <div style="font-size:11px;font-weight:800;color:var(--pur);letter-spacing:.04em;margin-bottom:4px">WHAT WE DO ABOUT IT</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:10px">Keep the profile active and readable so Google keeps showing you, and publish content AI can quote so it names you more often.</div>
+        <div style="background:#f4f1fb;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.55"><b>Where Village stands:</b> <b>27% of the Chandler map</b>, nearly double the next community. <b>4% of AI answers</b>, and the only community in the city that rose this cycle.</div>
+      </div>
+
+      <div class="card pad" style="border-top:4px solid var(--blue)">
+        <div style="font-size:15px;font-weight:800;margin-bottom:8px">Citations</div>
+        <div style="font-size:11px;font-weight:800;color:var(--blue);letter-spacing:.04em;margin-bottom:4px">WHAT IT MEANS</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:10px">Any page on the internet an AI reads about you and treats as a <b>source</b>. A listing page, a review, a forum thread, a news mention, or a page on your own site. <b>It is not a link anyone clicks.</b></div>
+        <div style="font-size:11px;font-weight:800;color:var(--blue);letter-spacing:.04em;margin-bottom:4px">HOW IT WORKS</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:10px">AI does not invent recommendations, it repeats what it has read. <b>If your own pages are not among the sources, AI describes you in a listing site's words</b>, and that site lists your competitors on the same page.</div>
+        <div style="font-size:11px;font-weight:800;color:var(--blue);letter-spacing:.04em;margin-bottom:4px">WHAT WE DO ABOUT IT</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:10px">Publish answers to the questions renters actually ask, on your pages, labelled so machines can read them. Every one becomes another source in your voice.</div>
+        <div style="background:#eef4ff;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.55"><b>Where Village stands:</b> <b>205 sources</b> name Village. The most-cited source in the Chandler market has 495. <b>This is the most directly buildable number in the report.</b></div>
+      </div>
+
+      <div class="card pad" style="border-top:4px solid var(--grn)">
+        <div style="font-size:15px;font-weight:800;margin-bottom:8px">Impressions</div>
+        <div style="font-size:11px;font-weight:800;color:var(--grn);letter-spacing:.04em;margin-bottom:4px">WHAT IT MEANS</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:10px">One time your website appeared in Google's search results, <b>whether or not anyone clicked it.</b> A click is when someone actually chose you.</div>
+        <div style="font-size:11px;font-weight:800;color:var(--grn);letter-spacing:.04em;margin-bottom:4px">HOW IT WORKS</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:10px">Impressions show how often Google is willing to put you in front of a renter. Clicks show whether they picked you. <b>A wide gap between the two means one thing: you are appearing, but too far down the page to be reached.</b></div>
+        <div style="font-size:11px;font-weight:800;color:var(--grn);letter-spacing:.04em;margin-bottom:4px">WHAT WE DO ABOUT IT</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:10px">Rewrite and structure the pages that already appear, so the searches sitting on page two move up to page one where renters actually click.</div>
+        <div style="background:#f0f7f2;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.55"><b>Where Village stands:</b> appeared <b>42,573 times</b>, clicked <b>1,360 times</b>. In the top three positions <b>47% of people click</b>. At positions 11 to 20, under <b>2%</b> do. The visibility already exists, the position is what is missing.</div>
+      </div>
+
+    </div>
+    <div class="read"><div class="rl">The one sentence version</div><p><b>Share of voice</b> is how often renters see you. <b>Citations</b> are what AI has read about you. <b>Impressions</b> are how often Google offered you up. Village is strong on the first, building the second, and sitting on a large amount of the third that is not yet converting because of position.</p></div>
+  </section>
+
+  <section id="maps">
+    <div class="sechead"><span class="k">Local maps</span><h2>Maps grid &amp; the competition</h2></div>
+    <div class="card pad" style="margin-bottom:14px;border-left:3px solid var(--grn)"><p style="margin:0;font-size:12.5px;color:var(--sub)"><b>Scanned August 19, 2026.</b> This section is current. The grid is re-scanned every week, and Village has held the top position on every tracked term across all of them.</p></div>
+    <div class="card pad">
+      <div class="ct">Google Maps grid scan, your rank across the whole city<span class="info" data-tip="grid">i</span></div>
+      <div style="background:#eef4ff;border-left:3px solid var(--blue);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:12.5px;line-height:1.55">
+        <b>What a map grid scan is, plainly:</b> we do not check your rank once. We check it from dozens of separate points spread across the city, because a renter searching three streets away sees a different result than one standing at your gate. <b>Average rank 1.0 means Village came up first from every single point we checked.</b> That is the best score the scan can return.
+      </div>
+      <div id="gridRows"></div>
+      <div class="read"><div class="rl">The read</div><p><span style="color:var(--mut)">The full street-by-street heatmap is in your weekly pulse.</span> #1 across the <b>entire grid</b> on every core term, 100% of grid points, zero out of the top 20. Share of voice runs 23 to 27% per term, more than double the nearest challenger.</p></div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">Who you're up against, and why 28 reviews still wins<span class="info" data-tip="competitors">i</span></div>
+      <div style="background:#eef4ff;border-left:3px solid var(--blue);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:12.5px;line-height:1.55">
+        <b>How to read this table:</b> lower map rank is better and 1.0 is perfect. <b>Map share</b> is how much of the total map visibility in Chandler each community holds. Village holds <b>27%</b>, nearly double the next community, across <b>37 tracked competitors</b>. Now look at the review counts: every community below Village carries 88, 140, 229, 249 or 277 reviews. <b>Village outranks all of them on 28.</b>
+      </div>
+      <table class="ctab"><thead><tr><th>Community</th><th>Rating</th><th>Reviews</th><th>Map share</th><th style="text-align:right">Map rank</th></tr></thead><tbody id="compBody"></tbody></table>
+      <div class="read"><div class="rl">The read</div><p>Village holds <b>#1 with 28 reviews</b>, while communities carrying 88, 140, 229, 249, even 277 reviews rank below it. On this grid, dominance is built on <b>relevance and profile quality</b>. Reviews are room to grow, not the reason Village leads.</p></div>
+    </div>
+
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">The competitor who is not on this table, and why that matters</div>
+      <table class="ctab"><thead><tr><th>Community</th><th>Search terms they rank for</th><th>Monthly search visitors</th><th style="text-align:right">AI share of voice</th></tr></thead><tbody>
+        <tr class="you"><td>Village of Chandler &nbsp;&larr; you</td><td><b>1,213</b>, the widest in the market</td><td>578</td><td style="text-align:right" class="rk g">4% &uarr;</td></tr>
+        <tr><td>Town Chandler</td><td>865</td><td><b>2,830</b></td><td style="text-align:right" class="rk o">7% flat</td></tr>
+        <tr><td>Village at Chandler</td><td>361</td><td>3,046</td><td style="text-align:right" class="rk r">not ranked</td></tr>
+        <tr><td>Alta Uptown</td><td>521</td><td>2,407</td><td style="text-align:right" class="rk o">2%</td></tr>
+        <tr><td>The Core Chandler</td><td>696</td><td>1,323</td><td style="text-align:right" class="rk r">not ranked</td></tr>
+        <tr><td>Chandler Ridge</td><td>768</td><td>717</td><td style="text-align:right" class="rk r">not ranked</td></tr>
+      </tbody></table>
+      <div class="read"><div class="rl">The read</div><p><b>You win the map. The search results are where the gap still sits, and it is the same gap as AI.</b> Town Chandler ranks for <b>fewer</b> search terms than you and still takes roughly <b>five times the search visitors</b>, because its terms sit higher on the page. AI reads what ranks, which is why it names them more often. But notice the direction of travel: <b>Village rose to 4% and Town Chandler sat flat at 7%.</b> Also notice they do not appear in the map table above: <b>the competitor beating you in discovery is not the one you watch on the map.</b> Closing the ranking gap is what closes the AI gap, and that is exactly what the next 30 days are aimed at.</p></div>
+    </div>
+    <div class="card pad" style="margin-top:14px;border-left:4px solid var(--grn)">
+      <div class="ct" style="color:var(--grn)">What the map position actually produced</div>
+      <p style="margin:0;font-size:13px">Ranking first is not the point. What it produces is. <b>A direction request is a Maps action</b>: a renter tapping "Directions" on your profile to find out how to drive to your door. Those rose <b>55 to 68, up 24%</b>, across the same thirteen days.<br><br><b>That is the map win converting into renter behaviour.</b> Nobody asks for driving directions to a community they are not seriously considering, which makes this the closest thing to a tour that we can measure before your leasing team ever hears from them. Phone calls, the other Maps-driven action, rose <b>75%</b> over the same days.</p>
+    </div>
+  </section>
+
+  <section id="rivals">
+    <div class="sechead"><span class="k">The three that matter</span><h2>Your closest competition, and where each one is beatable</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <p style="margin:0;font-size:13px">Thirty seven communities compete with Village in Chandler. <b>Three of them actually matter</b>, and they threaten you in three completely different ways. One out-rates you, one has the review volume, and one is winning the surface nobody watches. Each needs a different answer.</p>
+    </div>
+
+    <div class="card pad" style="margin-bottom:14px;border-left:4px solid var(--grn)">
+      <div class="ct">1. Clarendale of Chandler <span style="font-weight:600;color:var(--sub)">· the reputation threat</span></div>
+      <div class="grid g2" style="margin-top:10px">
+        <div style="background:#f0f7f2;border-radius:10px;padding:12px 14px">
+          <div style="font-weight:800;font-size:12.5px;color:var(--grn);margin-bottom:6px">Where you beat them</div>
+          <div style="font-size:12px;line-height:1.6;color:var(--sub)">Map share <b>27% to their 8.24%</b>, more than three times. Map rank <b>1.0 to 5.1</b>. You appear for <b>1,213 searches to their 653</b>, nearly double the footprint. And AI names you at 4% while <b>it does not name them at all.</b></div>
+        </div>
+        <div style="background:#fdf4ef;border-radius:10px;padding:12px 14px">
+          <div style="font-weight:800;font-size:12.5px;color:var(--org);margin-bottom:6px">Where they beat you</div>
+          <div style="font-size:12px;line-height:1.6;color:var(--sub)"><b>4.8 stars to your 4.6</b>, the only community in Chandler rated above you, on <b>140 reviews to your 28</b>. Their website is roughly <b>two and a half times stronger</b> than yours, pulling <b>2,375 monthly search visitors to your 578</b>. Their map share is also <b>rising.</b></div>
+        </div>
+      </div>
+      <p style="margin:10px 0 0;font-size:12.5px"><b>What to do:</b> this is the one competitor with a genuinely better reputation score, and they are gaining on the map. <b>Reviews are the direct answer</b>, and the gap is narrower than it looks: they needed five times the volume to get two tenths of a star ahead of you.</p>
+    </div>
+
+    <div class="card pad" style="margin-bottom:14px;border-left:4px solid var(--blue)">
+      <div class="ct">2. The Core Chandler <span style="font-weight:600;color:var(--sub)">· the review-volume play</span></div>
+      <div class="grid g2" style="margin-top:10px">
+        <div style="background:#f0f7f2;border-radius:10px;padding:12px 14px">
+          <div style="font-weight:800;font-size:12.5px;color:var(--grn);margin-bottom:6px">Where you beat them</div>
+          <div style="font-size:12px;line-height:1.6;color:var(--sub)">Map share <b>27% to 8.58%</b>, more than three times. Rating <b>4.6 to 4.2</b>. Map rank <b>1.0 to 4.8</b>. You appear for <b>1,213 searches to their 696</b>. AI names you; <b>it does not name them at all.</b></div>
+        </div>
+        <div style="background:#fdf4ef;border-radius:10px;padding:12px 14px">
+          <div style="font-weight:800;font-size:12.5px;color:var(--org);margin-bottom:6px">Where they beat you</div>
+          <div style="font-size:12px;line-height:1.6;color:var(--sub)"><b>249 reviews, nearly nine times yours.</b> And roughly <b>twice your monthly search visitors</b>, 1,323 to 578, because their pages sit higher in results than yours do.</div>
+        </div>
+      </div>
+      <p style="margin:10px 0 0;font-size:12.5px"><b>What to do:</b> they are the proof that review volume alone does not win the map, because they carry nine times yours and still rank fifth. Their real edge is <b>ranking depth</b>, and that is the same page-two problem in the section above. <b>Fix it once and you take this matchup outright.</b></p>
+    </div>
+
+    <div class="card pad" style="border-left:4px solid var(--org)">
+      <div class="ct">3. Town Chandler <span style="font-weight:600;color:var(--sub)">· the one actually worth watching</span></div>
+      <div class="grid g2" style="margin-top:10px">
+        <div style="background:#f0f7f2;border-radius:10px;padding:12px 14px">
+          <div style="font-weight:800;font-size:12.5px;color:var(--grn);margin-bottom:6px">Where you beat them</div>
+          <div style="font-size:12px;line-height:1.6;color:var(--sub)"><b>The entire map. They do not even appear on the Chandler grid.</b> You appear for <b>1,213 searches to their 865</b>, a wider footprint than theirs. And on AI, <b>you moved this cycle and they did not</b>: 4% rising against 7% flat.</div>
+        </div>
+        <div style="background:#fdf4ef;border-radius:10px;padding:12px 14px">
+          <div style="font-weight:800;font-size:12.5px;color:var(--org);margin-bottom:6px">Where they beat you</div>
+          <div style="font-size:12px;line-height:1.6;color:var(--sub)"><b>AI names them 7% to your 4%</b>, the highest in Chandler. They pull roughly <b>five times your monthly search visitors</b>, 2,830 to 578, from fewer keywords. Their website is around <b>three times stronger</b> than yours in authority, and <b>they buy paid search on top of it.</b></div>
+        </div>
+      </div>
+      <p style="margin:10px 0 0;font-size:12.5px"><b>What to do:</b> this is the benchmark, and the gap has one cause. Their pages rank higher, so they earn more visits and get read more often by AI. <b>Authority and ranking depth are the lever</b>, which is exactly what the next 30 days are pointed at. They are also standing still while you move.</p>
+    </div>
+
+    <div class="read" style="border-left:4px solid var(--grn)"><div class="rl" style="color:var(--grn)">How the momentum continues</div><p>Three different problems, but only <b>two actual fixes</b>. <b>Reviews</b> answer Clarendale and narrow The Core Chandler, and they are the cheapest win on this page: you hold rank 1.0 on 28 reviews against communities carrying 140 and 249. <b>Ranking depth and off-site authority</b> close the gap to Town Chandler and Clarendale, and the same work lifts the AI number every one of these comparisons turns on.<br><br>Nothing here asks you to defend the map. <b>That is won, against a field of 37, and none of the three is close.</b> The work from here is converting a position you already hold into the two surfaces that still pay out.</p></div>
+  </section>
+
+  <section id="sister">
+    <div class="sechead"><span class="k">The closest thing to a control</span><h2>Two Pillar properties, one running the program</h2></div>
+    <div class="card pad" style="border-left:4px solid var(--grn);margin-bottom:14px">
+      <p style="margin:0;font-size:13.5px">The hardest question in marketing is what would have happened anyway. <b>Village and Villas at Chandler Heights are both Pillar communities, in the same city, competing for the same renters.</b> Village runs the visibility program. Villas does not. That makes this the closest thing to a like-for-like read either of us will get.</p>
+    </div>
+
+    <div class="card pad">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <tr style="border-bottom:2px solid var(--bord)">
+          <th style="text-align:left;padding:10px 8px;font-size:11px;letter-spacing:.04em;color:var(--mut)">MEASURE</th>
+          <th style="text-align:right;padding:10px 8px;font-size:11px;letter-spacing:.04em;color:var(--grn)">VILLAGE OF CHANDLER</th>
+          <th style="text-align:right;padding:10px 8px;font-size:11px;letter-spacing:.04em;color:var(--mut)">VILLAS AT CHANDLER HEIGHTS</th>
+        </tr>
+        <tr style="border-bottom:1px solid var(--bord)"><td style="padding:10px 8px">Map rank, lower is better</td><td style="text-align:right;padding:10px 8px;font-weight:800;color:var(--grn)">1.0</td><td style="text-align:right;padding:10px 8px">2.4</td></tr>
+        <tr style="border-bottom:1px solid var(--bord)"><td style="padding:10px 8px">Share of the Chandler map</td><td style="text-align:right;padding:10px 8px;font-weight:800;color:var(--grn)">27.0%</td><td style="text-align:right;padding:10px 8px">14.2%</td></tr>
+        <tr style="border-bottom:1px solid var(--bord)"><td style="padding:10px 8px">Searches the site appears for</td><td style="text-align:right;padding:10px 8px;font-weight:800;color:var(--grn)">1,213</td><td style="text-align:right;padding:10px 8px">367</td></tr>
+        <tr style="border-bottom:1px solid var(--bord)"><td style="padding:10px 8px">Monthly search visitors</td><td style="text-align:right;padding:10px 8px;font-weight:800;color:var(--grn)">578</td><td style="text-align:right;padding:10px 8px">518</td></tr>
+        <tr style="border-bottom:1px solid var(--bord)"><td style="padding:10px 8px">Named by AI assistants</td><td style="text-align:right;padding:10px 8px;font-weight:800;color:var(--grn)">4%, rising</td><td style="text-align:right;padding:10px 8px">2%, flat</td></tr>
+        <tr style="border-bottom:1px solid var(--bord)"><td style="padding:10px 8px">Website authority, lower is better</td><td style="text-align:right;padding:10px 8px;font-weight:800;color:var(--grn)">1,534,635</td><td style="text-align:right;padding:10px 8px">1,677,297</td></tr>
+        <tr><td style="padding:10px 8px">Google reviews</td><td style="text-align:right;padding:10px 8px">28</td><td style="text-align:right;padding:10px 8px;font-weight:800">88</td></tr>
+      </table>
+    </div>
+
+    <div class="card pad" style="margin-top:14px;background:#f0f7f2">
+      <p style="margin:0;font-size:13px"><b>Village appears for 3.3 times as many searches and holds double the map share, while carrying under a third of the reviews.</b> On the surface where reputation volume should decide it, the property with 88 reviews ranks second and the property with 28 ranks first. And on AI, the one running the program moved this cycle while the one that is not stayed flat.</p>
+    </div>
+
+    <div class="read"><div class="rl">Read this honestly</div><p>These are not identical buildings, and some of this gap is product, location and timing rather than marketing. <b>We are not claiming a controlled experiment.</b> What we are saying is narrower and harder to argue with: two communities from the same operator, in the same market, and <b>every discovery measure separates them in the same direction</b>, including the two that respond fastest to this work. The one place Villas leads is the one place we have not been asked to work.</p></div>
+  </section>
+
+  <section id="ai">
+    <div class="sechead"><span class="k">AI market position</span><h2>AI answers, the next surface to win</h2></div>
+    <div class="card pad" style="margin-bottom:14px;border-left:3px solid var(--grn)"><p style="margin:0;font-size:12.5px;color:var(--sub)"><b>August reading, current.</b> Share of voice, sentiment and the question analysis below all come from this month's query audit, run against live AI assistants. This is not a carried-forward figure.</p></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <div class="ct">How AI discovery actually works</div>
+      <div class="how">
+        <div class="hs"><div class="hn">1</div><div class="ht"><b>Renters ask AI</b> what to rent in Chandler, instead of scrolling ten listing sites.</div></div>
+        <div class="hs"><div class="hn">2</div><div class="ht"><b>AI answers from sources it trusts</b>: listing platforms, reviews, forums, and your own pages.</div></div>
+        <div class="hs"><div class="hn">3</div><div class="ht"><b>Communities that are cited and AI-readable get recommended.</b> The rest are invisible.</div></div>
+      </div>
+      <p style="margin:12px 0 0;font-size:12px;color:var(--sub)">That is why share of voice and citations matter, and why we build pages, captions and schema that AI can actually read. Win here and you're chosen before the search even begins.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">AI share of voice: when AI answers a Chandler renter, who does it name?<span class="info" data-tip="sov">i</span></div>
+        <div style="background:#eef4ff;border-left:3px solid var(--blue);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:12.5px;line-height:1.55">
+        <b>What "share of voice" means, plainly:</b> picture 100 renters asking an AI assistant "where should I rent in Chandler?". Share of voice is <b>how many of those 100 answers say your name.</b> At 4%, Village is named four times. Here is the part that matters: <b>84 of those 100 answers name no community in this set at all.</b> Nobody owns this category yet. You do not have to be the best community to win it, you have to be the one the AI has read the most about, and that is something we build.
+      </div>
+        <div id="sovBars"></div>
+        <div class="read" style="border-left:4px solid var(--grn)"><div class="rl" style="color:var(--grn)">The read, and this is the headline</div><p><b>This is an August measurement, and Village is the only community in the set that moved.</b> Share of voice rose to <b>4%</b>. Town Chandler, Villas at Chandler Heights, Alta Uptown and Gila Springs all recorded <b>zero change</b>. The market leader is not pulling away, it is <b>static at 7%</b>, and Village is the only one closing.</p><p style="margin-top:8px">Meanwhile <b>84% of Chandler answers name nobody in this set</b>, which is the whole opportunity: this category is unclaimed, and the only community currently gaining ground in it is yours. When Village is named the tone is <b>89% favourable</b>, so there is no reputation problem to fix first.</p></div>
+      </div>
+      <div class="card pad">
+        <div class="ct">Where AI pulls its information<span class="info" data-tip="citations">i</span></div>
+        <div style="background:#eef4ff;border-left:3px solid var(--blue);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:12.5px;line-height:1.55">
+        <b>What a "citation" is, plainly:</b> any page on the internet an AI reads about you and treats as a <b>source</b>. A listing page, a review, a forum thread, a news mention, or a page on your own site. It is not a link anyone clicks. AI does not invent recommendations, it repeats what it has read, so <b>if your own pages are not among the sources, the AI describes you in a listing site's words</b>, and that site lists your competitors too.
+      </div>
+        <div id="citeBars"></div>
+        <div class="read"><div class="rl">The read</div><p>Village holds <b>205 sources</b>. The most-cited source in the market fell from 618 to <b>495</b>, so <b>the gap to the leader narrowed this cycle without Village losing ground.</b> Every FAQ, page and post we publish adds another source in your voice, and this is the most directly buildable number in the whole report.</p></div>
+      </div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">Engine by engine, ChatGPT is your strongest, Gemini &amp; Perplexity are the fix</div>
+      <p style="margin:0 0 8px;font-size:12.5px;color:var(--sub)">Village earns <b>5% share of voice on ChatGPT</b> against 2% on Gemini, ChatGPT is where the brand competes best. Sentiment is polarised: <b>100% favourable on Gemini, 68% on Perplexity</b>, that Perplexity gap is the single fastest perception fix available.</p>
+    </div>
+  </section>
+
+  <section id="asked">
+    <div class="sechead"><span class="k">What renters actually ask</span><h2>The questions renters are putting to AI about Chandler</h2></div>
+    <div class="card pad" style="border-left:4px solid var(--pur);margin-bottom:14px">
+      <p style="margin:0;font-size:13.5px">These are real questions renters are asking AI assistants about apartments in Chandler, pulled from this month's audit. <b>Some of them name Village directly.</b> This is the layer no standard dashboard can show you: not what people did after they found you, but <b>what they were asking before they had ever heard of you.</b></p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card pad" style="border-top:4px solid var(--blue)">
+        <div style="font-size:11px;font-weight:800;color:var(--blue);letter-spacing:.04em">CLUSTER 1 · 200+ QUERIES</div>
+        <div style="font-size:15px;font-weight:800;margin:6px 0 10px">House-like living</div>
+        <div style="font-size:12.5px;line-height:1.65;color:var(--sub);font-style:italic;border-left:2px solid var(--bord);padding-left:10px;margin-bottom:8px">"Which apartment complexes in Chandler offer townhome-style rentals instead of traditional stacked apartments?"</div>
+        <div style="font-size:12.5px;line-height:1.65;color:var(--sub);font-style:italic;border-left:2px solid var(--bord);padding-left:10px;margin-bottom:10px">"What are the best apartment communities in Chandler for people who hate elevator buildings and prefer ground-level entrances?"</div>
+        <div style="background:#eef4ff;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.55"><b>Village is literally the answer to this.</b> Townhome-style, private entrances, no elevator buildings. The product already matches the question.</div>
+      </div>
+
+      <div class="card pad" style="border-top:4px solid var(--grn)">
+        <div style="font-size:11px;font-weight:800;color:var(--grn);letter-spacing:.04em">CLUSTER 2 · HUNDREDS OF QUERIES</div>
+        <div style="font-size:15px;font-weight:800;margin:6px 0 10px">Pet-friendly living</div>
+        <div style="font-size:12.5px;line-height:1.65;color:var(--sub);font-style:italic;border-left:2px solid var(--bord);padding-left:10px;margin-bottom:8px">"What are the top pet-friendly apartment communities in Chandler that don't have breed or weight restrictions?"</div>
+        <div style="font-size:12.5px;line-height:1.65;color:var(--sub);font-style:italic;border-left:2px solid var(--bord);padding-left:10px;margin-bottom:10px">"Which Chandler apartment complexes have on-site dog parks or pet play areas?"</div>
+        <div style="background:#f0f7f2;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.55">Renters are asking for <b>specifics</b>: breed rules, weight limits, fenced yards, real fee totals. Being pet-tolerant is common. Saying plainly that you are <b>pet-forward</b> is an opening nobody in Chandler has taken.</div>
+      </div>
+
+      <div class="card pad" style="border-top:4px solid var(--org)">
+        <div style="font-size:11px;font-weight:800;color:var(--org);letter-spacing:.04em">CLUSTER 3 · 100+ QUERIES</div>
+        <div style="font-size:15px;font-weight:800;margin:6px 0 10px">Value and fees</div>
+        <div style="font-size:12.5px;line-height:1.65;color:var(--sub);font-style:italic;border-left:2px solid var(--bord);padding-left:10px;margin-bottom:8px">"Is Village of Chandler actually worth the premium rent, or do similar properties give better value for the same budget?"</div>
+        <div style="font-size:12.5px;line-height:1.65;color:var(--sub);font-style:italic;border-left:2px solid var(--bord);padding-left:10px;margin-bottom:10px">"What are the most common hidden fees to watch out for when leasing luxury apartments in Chandler?"</div>
+        <div style="background:#fdf4ef;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.55"><b>Renters are asking AI about Village by name.</b> Right now the answer is assembled from listing sites. A published, plain-English cost guide makes it your answer instead.</div>
+      </div>
+    </div>
+
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">What the shape of these questions tells us</div>
+      <div class="grid g3" style="margin-top:10px">
+        <div style="text-align:center"><div style="font-size:30px;font-weight:800;color:var(--blue)">78%</div><div style="font-size:11.5px;color:var(--sub);font-weight:700">are research questions, not head-to-head comparisons</div></div>
+        <div style="text-align:center"><div style="font-size:30px;font-weight:800;color:var(--grn)">3</div><div style="font-size:11.5px;color:var(--sub);font-weight:700">of the biggest clusters match a real Village strength</div></div>
+        <div style="text-align:center"><div style="font-size:30px;font-weight:800;color:var(--pur)">By name</div><div style="font-size:11.5px;color:var(--sub);font-weight:700">renters are already asking AI about Village specifically</div></div>
+      </div>
+      <p style="margin:12px 0 0;font-size:12.5px;color:var(--sub)"><b>Why the 78% matters:</b> renters are mostly asking what a place is like to live in, not "Village or Town Chandler." Research questions are won with descriptive content on your own pages, which is buildable. Head-to-head comparisons are much harder to influence. <b>The questions being asked are the winnable kind.</b></p>
+    </div>
+
+    <div class="read" style="border-left:4px solid var(--pur)"><div class="rl" style="color:var(--pur)">Why this is the most useful page in the report</div><p>Most marketing guesses at what renters want and writes accordingly. <b>This is the actual list.</b> Every question above is one a renter typed this month, and each one is a page we can publish an answer to, in your voice, on your site. <b>The gap is not that Village lacks the answer. It is that the answer is not written down anywhere AI can read it.</b></p></div>
+  </section>
+
+  <section id="plan">
+    <div class="sechead"><span class="k">The plan</span><h2>How we win AI answers, and why now</h2></div>
+    <div class="card pad" style="border-left:4px solid var(--blue);margin-bottom:14px">
+      <p style="margin:0;font-size:13.5px"><b>AI search is the fastest growing way renters find apartments, and it is still early enough to win.</b> Village already has the hardest part: a 4.6 rating, the #1 map position and 89% favourable sentiment whenever AI mentions it. What is missing is not reputation, it is <b>material for the AI to read.</b> That is a content problem, and content is exactly what we build.</p>
+    </div>
+
+    <div class="card pad" style="margin-bottom:14px">
+      <div class="ct">Why this is fixable, and how the audit drives it</div>
+      <div style="font-size:12.5px;line-height:1.6;color:var(--sub);margin-bottom:12px">An AI assistant can only recommend what it has read. Right now, when it reads about Chandler apartments, it mostly reads listing sites. Our audit finds <b>the exact questions renters are asking</b>, checks which engine answers them and whether Village is named, then we publish the answers on pages the AI can quote. Each piece below turns a question a renter is already asking into a source in your voice.</div>
+      <div class="how">
+        <div class="hs"><div class="hn">1</div><div class="ht"><b>Audit the questions.</b> We run the renter questions AI is actually being asked about Chandler and record which communities get named, on which engine, in what tone.</div></div>
+        <div class="hs"><div class="hn">2</div><div class="ht"><b>Publish the answers.</b> An updated FAQ set and rewritten page copy, written so the answer to each question lives on your site rather than a listing site.</div></div>
+        <div class="hs"><div class="hn">3</div><div class="ht"><b>Label it for machines.</b> Schema and structured data so AI can read, understand and quote your pages accurately instead of guessing.</div></div>
+        <div class="hs"><div class="hn">4</div><div class="ht"><b>Re-measure.</b> Same questions, next cycle, so the movement is visible rather than claimed.</div></div>
+      </div>
+      <p style="margin:12px 0 0;font-size:12.5px"><b>In progress:</b> a full site review is underway to scope the FAQ set and page copy against what is actually published today. We will bring the specific list of pages and fixes to the next review rather than a general recommendation.</p>
+    </div>
+
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">Video is a search channel now, not just social</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub)">YouTube is the second largest search engine, and video results appear directly in Google. A tour video answering <b>"what do 2 bedroom apartments in Chandler look like"</b> can rank where a text page cannot, and AI reads the title, description and transcript as a source. Every video we publish is written for that, not just for views.</div>
+      </div>
+      <div class="card pad">
+        <div class="ct">Social posts now surface in Google, and AI reads them</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub)">Google now surfaces social content directly in search results, and AI assistants treat active, consistent profiles as evidence a community is real and current. This is why every caption we write is built for the crawler as well as the renter. <b>Most vendors write captions for humans only and leave that value on the table.</b></div>
+      </div>
+    </div>
+    <div class="read"><div class="rl">The bottom line</div><p>The map position Village holds today was built with this exact method: find what renters search, publish the answer, label it so machines can read it, then measure it. <b>Nothing about the AI gap is a different problem.</b> It is the same work aimed at a newer surface, and we are pointing it there while the field is still open.</p></div>
+  </section>
+
+  <section id="why">
+    <div class="sechead"><span class="k">Momentum</span><h2>The only community in Chandler gaining ground</h2></div>
+    <div class="card pad" style="border-left:4px solid var(--grn);margin-bottom:14px">
+      <p style="margin:0;font-size:13.5px">Across a field of 37 communities, <b>Village is the only one gaining ground in AI answers this cycle.</b> Every tracked competitor recorded zero movement. The category is <b>84% unclaimed</b>, the map is already won outright, and the surface that takes longest has started to move. <b>Being the only one moving is what a lead looks like before it becomes obvious.</b></p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card kpi"><div class="top" style="background:var(--grn)"></div><div class="big" style="color:var(--grn)">4%</div><div class="lab">Village share of voice, rising</div><div class="sub">August reading, the only community in the set that moved</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--mut)"></div><div class="big" style="color:var(--mut)">0</div><div class="lab">movement from every competitor</div><div class="sub">Town Chandler, Villas, Alta Uptown, Gila Springs</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--blue)"></div><div class="big" style="color:var(--blue)">84%</div><div class="lab">of answers name nobody here</div><div class="sub">the category is still open to be taken</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+    </div>
+
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card pad">
+        <div class="ct">Why the map moved faster than AI</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub)">These two surfaces run on different clocks. <b>Map rank responds in weeks</b>, because Google reads your profile activity almost immediately: a post, a photo, a review, and the grid shifts. <b>AI answers respond over months</b>, because an assistant has to find your pages, read them, and then keep choosing them as a source ahead of the listing sites it has trusted for years. The map was always going to move first. It did. <b>AI is the same work on a longer clock, and it has now started to move.</b></div>
+      </div>
+      <div class="card pad">
+        <div class="ct">What renters actually ask AI about Chandler</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--sub)"><b>78% of the questions are research, not comparison.</b> Renters are not asking "Village or Town Chandler," they are asking what a place is like to live in. That matters: research questions are won with descriptive content on your own pages, which is buildable. The heaviest clusters are <b>apartment features and living experience</b>, <b>location and community fit</b>, and <b>pet policies</b>, and all three are places Village has a genuine product advantage.</div>
+      </div>
+    </div>
+
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">The three question clusters we are aiming at next, straight from the audit</div>
+      <div class="grid g3" style="margin-top:10px">
+        <div style="background:#f0f7f2;border-left:3px solid var(--grn);border-radius:10px;padding:12px 14px">
+          <div style="font-weight:800;font-size:13px;margin-bottom:6px">Own house-like living</div>
+          <div style="font-size:12px;line-height:1.55;color:var(--sub)"><b>200+ "house-feel" queries.</b> Renters are searching for townhome-style rentals, private entrances, enclosed yards and single-storey layouts. Village genuinely is this. Packaging it as a named collection turns a product truth into an answer AI can quote.</div>
+        </div>
+        <div style="background:#f0f7f2;border-left:3px solid var(--grn);border-radius:10px;padding:12px 14px">
+          <div style="font-weight:800;font-size:13px;margin-bottom:6px">Lead the pet-forward market</div>
+          <div style="font-size:12px;line-height:1.55;color:var(--sub)"><b>Hundreds of pet-specific searches.</b> Renters ask about breed and weight restrictions, fenced yards, dog parks and real fee totals. Being pet-tolerant is common. Being <b>pet-forward</b>, and saying so plainly, is an opening nobody in Chandler has taken.</div>
+        </div>
+        <div style="background:#f0f7f2;border-left:3px solid var(--grn);border-radius:10px;padding:12px 14px">
+          <div style="font-weight:800;font-size:13px;margin-bottom:6px">Win on transparency</div>
+          <div style="font-size:12px;line-height:1.55;color:var(--sub)"><b>100+ fee-anxiety queries.</b> Value and pricing is the one cluster that runs comparison-heavy, and it is where AI sentiment softens. A published, plain-English cost guide answers the question directly and turns the softest topic into a differentiator.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card pad" style="margin-top:14px;border-left:4px solid var(--org)">
+      <div class="ct" style="color:var(--org)">Why AI names Town Chandler more often, and what closes it</div>
+      <div style="background:#eef4ff;border-left:3px solid var(--blue);border-radius:10px;padding:12px 14px;margin:10px 0;font-size:12.5px;line-height:1.55">
+        <b>The mechanism, in one sentence:</b> an AI assistant mostly reads pages that already rank near the top of Google. So <b>where your pages rank decides whether AI ever reads them.</b> This is why the search work and the AI work are the same project, not two.
+      </div>
+      <div class="grid g2">
+        <div>
+          <div style="font-weight:800;font-size:13px;margin-bottom:6px">What the numbers show</div>
+          <div style="font-size:12.5px;line-height:1.6;color:var(--sub)">Village ranks for <b>1,213 searches, more than Town Chandler's 865.</b> You have the wider net. But Town Chandler takes roughly <b>five times the search visitors</b>, because its pages sit at the top of page one while <b>74% of your visibility sits past position 10.</b><br><br>Nine core searches, including <b>chandler apartments</b> and <b>apartments in chandler az</b>, sit at positions 13 to 19. AI rarely reads that far down. So when an assistant researches Chandler apartments, it reads listing sites and Town Chandler, and repeats what it found. <b>That is the entire gap.</b></div>
+        </div>
+        <div>
+          <div style="font-weight:800;font-size:13px;margin-bottom:6px">What has to happen, specifically</div>
+          <div class="wli"><span class="ic">1</span><div><b>Website copy and page-level SEO.</b> Rewrite the nine core pages so they rank on page one instead of page two. This is the single biggest lever and it feeds every other one.</div></div>
+          <div class="wli"><span class="ic">2</span><div><b>Written answer content.</b> An FAQ set and page copy that answers the questions renters actually ask AI, in your words, on your domain. Built and ready to send.</div></div>
+          <div class="wli"><span class="ic">3</span><div><b>Schema and structured data.</b> Machine-readable labels so AI can quote your pages accurately instead of paraphrasing a listing site.</div></div>
+          <div class="wli"><span class="ic">4</span><div><b>Consistent name, address and phone everywhere.</b> Every listing, directory and profile matching exactly. Mismatches make AI less confident naming you, and Village is currently split between two versions of its own name.</div></div>
+        </div>
+      </div>
+      <div style="margin-top:12px;background:#f0f7f2;border-left:3px solid var(--grn);border-radius:10px;padding:12px 14px;font-size:12.5px;line-height:1.55">
+        <b>Where the needle has moved.</b> On the map, decisively: rank <b>1.0 of 37</b>, first at every point on the grid, held every week. On AI, Village is the <b>only community in Chandler that gained share this cycle</b> while every competitor stood still, and AI delivered <b>87 renters</b>. The fastest surface is won and the slowest surface has started to turn. <b>What accelerates it now is the website work, because that is the input AI reads.</b>
+      </div>
+    </div>
+    <div class="card pad" style="margin-top:14px;border-left:4px solid var(--grn)">
+      <div class="ct">Search visits before and since the program started</div>
+      <div style="font-size:12px;color:var(--mut);margin-bottom:12px">Measured per day, so the two windows are comparable despite being different lengths. Program start: late June.</div>
+      <div class="grid g2" style="align-items:center">
+        <div>
+          <svg viewBox="0 0 400 190" style="width:100%;height:200px">
+            <line x1="46" y1="150" x2="390" y2="150" stroke="#d7dae2" stroke-width="1"/>
+            <text x="88" y="168" font-size="11" fill="#8b90a0" text-anchor="middle">Before</text>
+            <text x="88" y="180" font-size="9" fill="#b0b4c0" text-anchor="middle">5/19 to 6/24</text>
+            <rect x="60" y="76" width="56" height="74" rx="4" fill="#b9bfcc"/>
+            <text x="88" y="68" font-size="15" font-weight="800" fill="#8b90a0" text-anchor="middle">21.8</text>
+            <text x="196" y="168" font-size="11" fill="#8b90a0" text-anchor="middle">June</text>
+            <rect x="168" y="72" width="56" height="78" rx="4" fill="#8fd3a8"/>
+            <text x="196" y="64" font-size="15" font-weight="800" fill="#2e9e5b" text-anchor="middle">22.8</text>
+            <text x="272" y="168" font-size="11" fill="#8b90a0" text-anchor="middle">July</text>
+            <rect x="244" y="55" width="56" height="95" rx="4" fill="#5cc182"/>
+            <text x="272" y="47" font-size="15" font-weight="800" fill="#2e9e5b" text-anchor="middle">24.8</text>
+            <text x="348" y="168" font-size="11" fill="#8b90a0" text-anchor="middle">August</text>
+            <rect x="320" y="38" width="56" height="112" rx="4" fill="#2e9e5b"/>
+            <text x="348" y="30" font-size="15" font-weight="800" fill="#2e9e5b" text-anchor="middle">26.7</text>
+            <text x="24" y="154" font-size="9" fill="#b0b4c0">0</text>
+          </svg>
+          <div style="text-align:center;font-size:11.5px;color:var(--mut);margin-top:4px">Search visits per day</div>
+        </div>
+        <div>
+          <div style="background:#f0f7f2;border-radius:12px;padding:16px 18px;margin-bottom:10px">
+            <div style="font-size:34px;font-weight:800;color:var(--grn);line-height:1">+16%</div>
+            <div style="font-size:12.5px;color:var(--sub);font-weight:700;margin-top:4px">search visits per day, before against since</div>
+            <div style="font-size:12px;color:var(--mut);margin-top:6px">21.8 a day across the five weeks before, 25.3 a day across the eight weeks since, and rising in each of the three months inside that window.</div>
+          </div>
+          <div style="font-size:12.5px;line-height:1.6;color:var(--sub)">Over the same period, <b>phone calls rose 75%</b> and <b>direction requests 24%</b> against the matching days of the previous month, and Village became <b>the only community in Chandler gaining AI share of voice.</b></div>
+        </div>
+      </div>
+      <div class="read"><div class="rl">How to read this fairly</div><p>A rising line over a period is not by itself proof of what caused it, and summer moves apartment demand on its own. <b>That is exactly why the sister property comparison is in this report.</b> Villas at Chandler Heights is the same operator, the same city and the same season, without the program, and it sits at half the map share on a third of the search footprint. <b>The season is the same for both. The programme is not.</b></p></div>
+    </div>
+    <div class="read" style="border-left:4px solid var(--grn)"><div class="rl" style="color:var(--grn)">The bottom line for this meeting</div><p>Where Village stands today: <b>average map rank 1.0 out of 37 communities</b>, first at every single point on the city grid as of the August 19 scan, the widest search footprint in the market, calls up 75%, directions up 24%, <b>87 renters delivered by AI</b>, and the <b>only rising AI share of voice in Chandler</b>. The fastest surface is won. The slowest has started to turn. <b>The website and content work is what accelerates it, because that is the material AI reads.</b></p></div>
+  </section>
+
+  <section id="attribution">
+    <div class="sechead"><span class="k">AI attribution</span><h2>Does AI actually bring you renters?</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <p style="margin:0;font-size:12.5px;color:var(--sub)">Renters increasingly decide inside ChatGPT and Google AI Mode, then Google your name and convert. Standard analytics credits the search and the AI moment disappears. Here is how we close that gap, with signals Google itself verifies.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card kpi"><div class="top" style="background:var(--pur)"></div><div class="big" style="color:var(--pur)">87</div><div class="lab">renters arrived from ChatGPT<span class="info" data-tip="airef">i</span></div><div class="sub">104 sessions, tagged as an AI assistant · Jul 1 to Aug 20</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--teal)"></div><div class="big" style="color:var(--teal)">653</div><div class="lab">direct visits<span class="info" data-tip="direct">i</span></div><div class="sub">795 sessions with no referrer · Jul 1 to Aug 20</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--blue)"></div><div class="big" style="color:var(--blue)">54%</div><div class="lab">of search clicks are branded<span class="info" data-tip="branded">i</span></div><div class="sub">but only 4.7% of impressions<span class="info wide wr" data-tip="impressions" style="margin-left:4px">i</span> · the rest is discovery</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+    </div>
+    <div class="read"><div class="rl">The read</div><p>These three signals move together, and all three moved up this cycle. That is the fingerprint of AI driving real renters to your door: they hear about you in AI, then search your name or come direct. It is the attribution a dashboard cannot give you, verified by Google's own tools.</p></div>
+  </section>
+
+  <section id="paid">
+    <div class="sechead"><span class="k">Read this first</span><h2>Where your traffic actually came from</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <p style="margin:0;font-size:13px">Site traffic looks dramatic this cycle. Most of it arrived in four days, sent by a listing platform rather than by renters discovering you. Separating the two now means next month's comparison still means something if that placement changes.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">Sent by listing platforms</div>
+        <div style="font-size:34px;font-weight:800;color:var(--org)">1,894</div>
+        <div style="font-size:12px;color:var(--sub);font-weight:700">visitors delivered by a listing site</div>
+        <div style="font-size:11.5px;color:var(--mut);margin-top:8px"><b>46% of all site traffic</b> in the window. New visitors ran at 63 a day through Aug 13, then <b>249, 253, 298 and 280</b> across Aug 15 to 18. Search activity on those same days was flat, so the surge came from a placement change, not from renters searching more.</div>
+      </div>
+      <div class="card pad">
+        <div class="ct">Found you themselves</div>
+        <div style="font-size:34px;font-weight:800;color:var(--grn)">1,032</div>
+        <div style="font-size:12px;color:var(--sub);font-weight:700">visitors from your own Google profile</div>
+        <div style="font-size:11.5px;color:var(--mut);margin-top:8px">1,335 sessions, your best-converting entry point at <b>23.3% click-through</b> against a 1.2% site average. Plus <b>87 from ChatGPT</b> and 653 direct. This is the half that keeps working when spend stops.</div>
+      </div>
+    </div>
+    <div class="read"><div class="rl">Why we are showing you this</div><p>Listing-platform traffic is a good thing, it fills the top of the funnel today. But it is <b>rented, not owned</b>: it arrives while that placement runs and stops when it changes, and it does not tell you whether renters are finding you on their own. Counted as visibility, next cycle would look like a collapse the moment the placement moves. <b>The half we are accountable for is the half that compounds.</b></p></div>
+  </section>
+
+  <section id="gbp">
+    <div class="sechead"><span class="k">Google Business Profile</span><h2>Your Google profile performance</h2></div>
+    <div class="grid g4" id="gbpCards"></div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">What renters did on your profile</div>
+      <div id="gbpBars"></div>
+      <div class="read"><div class="rl">The read</div><p>Across the same thirteen days, <b>calls rose 75% and direction requests 24%</b>, the two actions closest to a tour. Your strongest search terms remain <b>non-branded</b> <span class="info" data-tip="nonbranded">i</span> (“apartments in chandler az”, “chandler apartments”), so new renters are discovering Village rather than only people who already knew the name. Those same terms sit at positions 13 to 19, which is the opportunity in the next section.</p></div>
+    </div>
+  </section>
+
+  <section id="health">
+    <div class="sechead"><span class="k">Visibility foundation</span><h2>Website + AI Search Health</h2></div>
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">Can Google &amp; AI cleanly read your site?<span class="info" data-tip="site">i</span></div>
+        <div class="grid g2" style="grid-template-columns:1fr 1fr">
+          <div style="text-align:center"><div style="font-size:34px;font-weight:800;color:var(--blue)">84%</div><div style="font-size:12px;color:var(--sub);font-weight:700">Site Health</div></div>
+          <div style="text-align:center"><div style="font-size:34px;font-weight:800;color:var(--grn)">83%</div><div style="font-size:12px;color:var(--sub);font-weight:700">AI Search Health</div></div>
+        </div>
+        <div style="text-align:center;font-size:11.5px;color:var(--mut);margin-top:8px">Top-10% of all sites scores 92. You're better optimised for AI than most.</div>
+      </div>
+      <div class="card pad">
+        <div class="ct">Keyword footprint, the net stays wide<span class="info" data-tip="keywords">i</span></div>
+        <div style="font-size:11px;color:var(--mut);margin-bottom:6px">Monthly measure · latest reading July · this footprint was already wide before the program began, and holding it is the baseline, not the win</div>
+        <div id="trendChart"></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;margin-top:8px"><span style="color:var(--sub)">Site visitors <b>4,116</b> · Search clicks <b>1,249</b></span><span style="color:var(--grn);font-weight:800">1,213 keywords</span></div>
+      </div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">The single biggest gap: you are visible, but on page two</div>
+      <div class="grid g4" style="margin-top:10px">
+        <div style="text-align:center"><div style="font-size:30px;font-weight:800;color:var(--grn)">47.1%</div><div style="font-size:11.5px;color:var(--sub);font-weight:700">click rate at positions 1 to 3</div></div>
+        <div style="text-align:center"><div style="font-size:30px;font-weight:800;color:var(--org)">1.7%</div><div style="font-size:11.5px;color:var(--sub);font-weight:700">click rate at positions 11 to 20</div></div>
+        <div style="text-align:center"><div style="font-size:30px;font-weight:800;color:var(--pink)">74%</div><div style="font-size:11.5px;color:var(--sub);font-weight:700">of your visibility sits past position 10</div></div>
+        <div style="text-align:center"><div style="font-size:30px;font-weight:800;color:var(--blue)">8,315</div><div style="font-size:11.5px;color:var(--sub);font-weight:700">monthly views stranded on page two</div></div>
+      </div>
+      <p style="margin:12px 0 0;font-size:12.5px;color:var(--sub)">Nine core searches, including <b>chandler apartments</b>, <b>apartments in chandler az</b> and <b>chandler apartments for rent</b>, sit at positions 13 to 19. They generate <b>8,315 views and only 186 clicks</b>. Where you already rank in the top three, nearly half of everyone who sees you clicks.</p>
+    </div>
+    <div class="read"><div class="rl">The read</div><p>The foundation is sound and the net is wide: <b>1,213 keywords, more than any competitor in the set.</b> Town Chandler ranks for fewer terms and takes roughly five times the traffic, because its terms sit higher. <b>Your problem is depth, not breadth.</b> Moving nine searches from page two to page one is worth more than a thousand new keywords.</p></div>
+  </section>
+
+  <section id="position">
+    <div class="sechead"><span class="k">Strategic read</span><h2>Opportunity &amp; brand risk</h2></div>
+    <div class="grid g2" style="grid-template-columns:1fr 1fr">
+      <div class="orbox op"><div class="ol">The opportunity</div><h3>Own the house-like, pet-forward, quiet-living niche.</h3><p>AI recognises Village for private enclosed backyards, casita-style layouts, smart-home tech and genuine pet-friendliness, with <b>45+ mentions</b> on house-like living. Renters ask for exactly this: townhome-style rentals, enclosed yards for pets, house-like living with privacy. Package it as a flagged “Village Homes” collection and export that language to every listing, page and post to turn a recognised strength into share of voice.</p></div>
+      <div class="orbox rk"><div class="ol">The brand risk</div><h3>Pricing perception &amp; a split brand name.</h3><p>Pricing, fees &amp; value is where AI sentiment softens, renters flag premium rents and mandatory tech/service add-ons (~$117 in extras). AI also splits the brand between “Village of Chandler” and “the Village of Chandler,” diluting a combined 4.83% share of voice. A “no-surprises” pricing story and one standardised name are the highest-leverage fixes this cycle.</p></div>
+    </div>
+    <div style="margin-top:14px" class="card pad"><div class="ct">What renters associate with the property<span class="info" data-tip="topics">i</span></div><div id="topics"></div></div>
+  </section>
+
+  <section id="reviews">
+    <div class="sechead"><span class="k">Reputation</span><h2>Review velocity, the fastest lever</h2></div>
+    <div class="grid g4" id="revCards"></div>
+    <div class="read"><div class="rl">The read</div><p><b>Scanned August 19.</b> Village holds the best map position in Chandler on just <b>28 reviews</b>, while rivals carrying 88, 140, 229, 249 and 277 reviews all rank below it. Camden Chandler has <b>ten times the reviews and sits at rank 7.5.</b> Reviews are the clearest <b>growth lever left</b>, not the reason Village already leads.</p></div>
+  </section>
+
+  <section id="ship">
+    <div class="sechead"><span class="k">How we work</span><h2>The work behind your numbers</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <div class="ct">This cycle's priority, and why it was that one</div>
+      <div style="font-size:13px;line-height:1.65;color:var(--sub)">There are always more things worth doing than there is time to do them. <b>What you are paying for is the order.</b><br><br>
+      Coming into this cycle the judgment was that <b>the map was the winnable surface first</b>: it responds in weeks rather than months, it is where a renter with intent actually looks, and Village had a genuine product advantage that was not being read. So the effort went there, and the map is now won at rank 1.0 across 37 communities.<br><br>
+      <b>With that held, the priority moved to making the site legible to machines</b>, because that is the input every remaining surface reads. The homepage rewrite was the first move in that sequence and it is live. The work below is the rest of it.</div>
+    </div>
+    <div class="grid g2" style="grid-template-columns:1fr 1fr">
+      <div class="card pad"><div class="ct">Where the effort went this cycle</div>
+        <div class="wli"><span class="ic">★</span><div><b>Held the map at rank 1.0</b> across every tracked term and every grid point, scanned weekly.</div></div>
+        <div class="wli"><span class="ic">★</span><div><b>Specced and shipped the homepage rewrite</b>, published in full by the site team on July 31.</div></div>
+        <div class="wli"><span class="ic">★</span><div><b>Ran the AI question audit</b> that identified which renter questions Village can realistically own.</div></div>
+        <div class="wli"><span class="ic">★</span><div><b>Kept the profile active and readable</b>, which is why it converts at 23.3% against a 1.2% site average.</div></div>
+        <p style="margin:12px 0 0;font-size:11.5px;color:var(--mut)">The tactics are not the product. The diagnosis and the order are.</p>
+      </div>
+      <div class="card pad"><div class="ct">Next 30 days, in priority order</div><div id="focusList"></div>
+        <p style="margin:12px 0 0;font-size:11.5px;color:var(--mut)">Sequenced deliberately: the first two are what AI actually reads, so they come before anything else.</p></div>
+    </div>
+    <div class="card pad" style="margin-top:14px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <div><div style="font-size:30px;font-weight:800;color:var(--pur)">217</div><div style="font-size:12px;color:var(--sub);font-weight:700">tracked link engagements, all&nbsp;time</div></div>
+      <div><div style="font-size:30px;font-weight:800;color:var(--pur)">31</div><div style="font-size:12px;color:var(--sub);font-weight:700">tracked to July 31, August pending</div></div>
+      <div style="flex:1;min-width:230px;font-size:12.5px;color:var(--ink)"><b>Every post we ship carries a tracked link</b>, so we can trace the path from an AI mention or a Google search all the way to a tour request. That is attribution standard reporting cannot give you.</div>
+    </div>
+    <p style="text-align:center;font-size:11.5px;color:var(--mut);margin-top:12px">Your LocalLift weekly pulse keeps these numbers current between monthly reviews.</p>
+    <div class="read" style="background:#eef4ff;border-color:#cfe0ff"><div class="rl" style="color:var(--blue)">The goal</div><p>Become consistently recommended across Google, Maps and AI search <b>before renters ever reach a listing platform.</b> The listing sites are where renters finally land. We're the layer that gets them there already choosing you.</p></div>
+  </section>
+
+
+  <div class="footer">
+    <span>Prepared exclusively for Village of Chandler · Confidential · © 2026 The SocialDM | LocalLift</span>
+    <span>SOCIALDM | LocalLift™ · Live Command Center</span>
+  </div>
+</div>
+
+<script>
+const TIPS={
+ mapshare:{w:"Across every point on the Chandler map, this is the slice of apartment listings that are yours. Village holds 27%, so roughly one in four times a renter sees an apartment community on the map anywhere in Chandler, it is Village.",y:"It measures presence across the whole city rather than one search from one spot. A renter three streets away sees different results to one at your door, and this counts all of it. It is the difference between ranking well somewhere and being unavoidable everywhere.",h:"27% across 37 tracked communities, nearly double Villas at Chandler Heights at 14.2%. Do not confuse this with AI share of voice, a separate measure of how often AI assistants name you in an answer, currently 4%. Two different surfaces, two different numbers."},
+ impressions:{w:"An impression is one time your website appeared in Google's results, whether or not anyone clicked. A click is when someone actually chose you.",y:"Impressions tell you how often Google is willing to show you. Clicks tell you whether renters picked you. A wide gap between the two almost always means the same thing: you are appearing, but too far down the page for anyone to reach you.",h:"Village appeared 42,573 times and was clicked 1,360 times. Where you rank in the top three, 47% of people click. Where you rank 11th to 20th, under 2% do. The visibility already exists. The position is what is missing."},
+ story:{w:"Two things moved this month and they work differently. Renters who found you through your Google profile, which you own and keep. And a four-day burst from a listing platform's paid placement, which lasts only as long as it is paid for.",y:"Added together they look like one big number, and next month that number falls for a reason that has nothing to do with your visibility. Kept apart, you can see which half keeps working on its own, and you can hold us to the half we control.",h:"What it means for the property: 68 renters asked Google how to drive to your door and 14 called the office, both up sharply. Those people chose you before they made contact, which is tour intent at no cost per enquiry. The four-day spike is a different thing: it is traffic that arrives while a listing platform is being paid and stops when it is not, so it belongs in a conversation about that platform, not in a measure of your own visibility."},
+ airef:{w:"Site visits Google Analytics tags as coming from an AI assistant like ChatGPT.",y:"The clearest proof AI is sending you renters. Most tools bucket it as 'direct' and never tell you it was AI.",h:"87 renters arrived straight from ChatGPT across 104 sessions, measured Jul 1 to Aug 20."},
+ direct:{w:"Visits with no referrer: a typed URL, a bookmark, or a source the browser hid.",y:"AI-influenced visits increasingly land here. Rising direct without more ad or email spend points to AI awareness.",h:"653 direct visitors across 795 sessions, consistent with growing AI and brand awareness."},
+ branded:{w:"Searches for your name specifically, like 'village of chandler'.",y:"Branded search is loyalty. The other half is growth: strangers finding you without knowing the name.",h:"Branded terms take 54% of your clicks from just 4.7% of impressions. The other 95.3% of impressions are renters who do not know you yet."},
+ topics:{w:"The themes AI and renters most connect with your community, sized by how often they come up in searches and AI answers.",y:"It is the story the market already believes about you. Lean into what is working, correct what is not. This is your content roadmap.",h:"Home & community type leads, so your strongest content is about layout, lifestyle and who the community is for. Pricing and pet policy are where perception needs the most help."},
+ sov:{w:"Picture a hundred renters asking an AI assistant 'where should I rent in Chandler?'. Share of voice is how many of those hundred answers say your name. At 4%, Village is named four times, and 84 of the hundred name no community in this set at all.",y:"It is the apartment-search version of being the community everyone mentions first. You do not have to be the best community to win it, you have to be the one the AI has read the most about. That is buildable, and it is the whole reason we publish the pages and captions we do.",h:"Village rose to 4 mentions in every 100 Chandler answers and is the only community in the tracked set that moved at all this cycle. Every competitor recorded zero change. 84 of those 100 answers still name nobody in the set, so the category is unclaimed. This is separate from your 27% map share, which measures the Google map, not AI answers."},
+ citations:{w:"A citation is any page on the internet an AI reads about you and treats as a source, then leans on when it answers a renter. A listing site page, a review, a forum thread, a news mention, or a page on your own website. It is not a link someone clicks, it is a source the AI trusts.",y:"AI does not invent recommendations, it repeats what it has read. Communities with more sources get described more often and more accurately. If your own pages are not among them, the AI describes you in someone else's words, usually a listing site that also lists your competitors.",h:"Village is cited 205 times. The most-cited source about Chandler apartments is a listing site at 495. Every page, FAQ and post we publish adds a source in your voice instead of theirs."},
+ grid:{w:"Your Google Maps rank measured at dozens of points across the whole city, not one search.",y:"A renter three streets over sees a different result than one at your door. #1 everywhere means you're the first option no matter where they stand.",h:"#1 across the entire grid on every core term, 100% of grid points, zero out of the top 20."},
+ competitors:{w:"Where you rank on the map against every competing community, with their public review counts.",y:"GA4 and Search Console can't show this, only a grid tracker can. Knowing the field is how you win it.",h:"Average rank 1.0 of 37 communities on just 28 reviews, ahead of communities carrying 88, 140, 229, 249 and 277. Your dominance is relevance, not volume."},
+ keywords:{w:"How many different Google searches your site shows up for.",y:"More keywords = a wider net catching more renters at more moments.",h:"1,213 keywords in July against 1,232 in June, essentially flat, while search traffic rose. The net is wide, the issue is where those terms rank."},
+ site:{w:"How healthy your website is for both Google and AI to read.",y:"If AI can't cleanly read the site, it can't confidently recommend you.",h:"84 Site Health / 83 AI Search Health vs a top-10% benchmark of 92, better optimised for AI than most sites."},
+ nonbranded:{w:"Searches like 'apartments in Chandler', renters who don't know your name yet.",y:"Branded search is loyalty; non-branded is growth. Winning it means strangers are discovering you.",h:"Your top profile search terms are all non-branded, 'apartments in chandler az', 'chandler apartments'. New renters are finding Village, not just people who knew it."}
+};
+const PULSE=[
+ {big:"364",lab:"profile interactions",sub:"Aug 1 to 13 · 357 in the same days of July",col:"var(--blue)",prior:"357",plab:"July 1 to 13: 357",pd:"+2%",up:1},
+ {big:"+75%",lab:"phone calls to the office",sub:"8 to 14 across the same 13 days",col:"var(--teal)",prior:"8",plab:"July 1 to 13: 8 calls",pd:"→ 14",up:1},
+ {big:"+24%",lab:"direction requests, a Maps action",sub:"55 to 68 renters asking Google how to drive to you",col:"var(--grn)",prior:"55",plab:"July 1 to 13: 55",pd:"→ 68",up:1},
+ {big:"-4%",lab:"website clicks from your profile",sub:"294 to 282, the one metric that eased",col:"var(--org)",prior:"294",plab:"July 1 to 13: 294",pd:"→ 282",dn:1}
+];
+const SOV=[["Town Chandler",7,0],["Village of Chandler",4,1],["Villas at Chandler Heights",2,0],["Alta Uptown",2,0],["Gila Springs Apartments",0,0]];
+const CITE=[["apartments.com",6,"495",0],["reddit.com",4,"328",0],["zillow.com",3,"268",0],["rentcafe.com",3,"236",0],["villageofchandler.com",2,"205",1]];
+const GRID=[["apartments near me",1.0,27.0,100],["pet friendly apartments chandler az",1.0,27.0,100],["apartments in chandler",1.0,27.0,100],["luxury apartments chandler az",1.16,25.48,100],["townhomes in chandler az",1.32,23.48,100]];
+const COMP=[["Village of Chandler",4.6,28,"27.0%",1.0,1],["Villas at Chandler Heights",4.4,88,"14.2%",2.4,0],["The Core Chandler",4.2,249,"8.58%",4.8,0],["Clarendale of Chandler",4.8,140,"8.24%",5.1,0],["Waterside at Ocotillo",4.3,229,"5.22%",6.4,0],["Camden Chandler Apartments",4.2,277,"3.89%",7.5,0],["Santana Ridge Luxury",3.4,73,"4.62%",9.2,0],["Liv Avenida",4.6,113,"3.00%",10.4,0]];
+const GBPC=[
+ {big:"364",lab:"Profile interactions",sub:"clicks · directions · calls, Aug 1 to 13",col:"var(--blue)",prior:"357",plab:"July 1 to 13: 357",pd:"+2%",up:1},
+ {big:"282",lab:"Website clicks",sub:"still the largest single action",col:"var(--teal)",prior:"294",plab:"July 1 to 13: 294",pd:"-4%",dn:1},
+ {big:"68",lab:"Direction requests",sub:"a Maps action, the closest signal to a tour",col:"var(--grn)",prior:"55",plab:"July 1 to 13: 55",pd:"+24%",up:1},
+ {big:"14",lab:"Phone calls",sub:"high intent, low volume",col:"var(--org)",prior:"8",plab:"July 1 to 13: 8",pd:"+75%",up:1}
+];
+const GBPBARS=[["Website clicks",282,"var(--blue)"],["Direction requests",68,"var(--grn)"],["Phone calls",14,"var(--org)"]];
+const TOPICS=[["Home &amp; community type (layout, vibe, lifestyle)",30,"var(--blue)"],["Management quality, safety &amp; operator comparisons",18,"var(--grn)"],["Amenities, outdoors, noise &amp; work-from-home",15,"var(--org)"],["Pricing, fees, value &amp; lease terms",14,"var(--pink)"],["Pet policies &amp; pet-friendly living",12,"var(--teal)"],["Interior quality, finishes &amp; in-home features",11,"var(--pur)"]];
+const REV=[["4.6","average rating","scanned Aug 19","var(--grn)"],["28","total Google reviews","rivals hold 88 to 277","var(--org)"],["1.0","average map rank, of 37","best possible score, scanned Aug 19","var(--blue)"],["27%","map share of voice","nearly double the next community","var(--pur)"]];
+const FOCUS=["Structured data on the homepage and FAQ, so AI can quote you directly","Rewrite the FAQ answers for the three question clusters you can own","Correct the homepage heading structure to a single H1","Build off-site authority: get Village cited on sources that are not yours","Unify the phone number and community name across every listing"];
+
+const el=(h)=>{const d=document.createElement('div');d.innerHTML=h;return d.firstElementChild;};
+function bub(t){const x=TIPS[t];return `<span class="bub"><div class="bl w">What it is</div><p>${x.w}</p><div class="bl y">Why it matters</div><p>${x.y}</p><div class="bl h">How you're doing</div><p class="hv">${x.h}</p></span>`;}
+document.querySelectorAll('.info[data-tip]').forEach(i=>{i.innerHTML='i'+bub(i.dataset.tip);});
+// keep any tooltip inside the viewport, whatever the screen width
+document.querySelectorAll('.info[data-tip]').forEach(i=>{
+  i.addEventListener('mouseenter',()=>{
+    const b=i.querySelector('.bub'); if(!b) return;
+    b.style.marginLeft='0px';
+    const r=b.getBoundingClientRect(), pad=12;
+    let dx=0;
+    if(r.left<pad) dx=pad-r.left;
+    else if(r.right>innerWidth-pad) dx=(innerWidth-pad)-r.right;
+    if(dx) b.style.marginLeft=Math.round(dx)+'px';
+  });
+});
+
+function mkToggle(c){const big=c.querySelector('.big'),lab=c.querySelector('.lab'),tg=c.querySelector('.toggle');let on=0;
+ tg.onclick=()=>{on=!on;big.textContent=on?big.dataset.prior:big.dataset.cur;lab.textContent=on?lab.dataset.prior:lab.dataset.cur;tg.textContent=on?'This month ▸':'◂ July';big.style.color=on?'var(--mut)':'';};}
+const pc=document.getElementById('pulseCards');
+PULSE.forEach(k=>{const c=el(`<div class="card kpi"><div class="top" style="background:${k.col}"></div>
+ <div class="big" data-cur="${k.big}" data-prior="${k.prior}">${k.big}</div>
+ <div class="lab" data-cur="${k.lab}" data-prior="${k.plab}">${k.lab}</div><div class="sub">${k.sub}</div>
+ <div class="row"><span class="chip">VERIFIED</span><span class="toggle">◂ July</span></div></div>`);mkToggle(c);pc.appendChild(c);});
+
+const smx=5;document.getElementById('sovBars').innerHTML=SOV.map(([n,v,you])=>
+ `<div class="barrow"><div class="bn ${you?'you':''}">${n}${you?' (you)':''}</div><div class="track"><div class="fill" style="width:${Math.max(v/smx*100,2)}%;background:${you?'var(--grn)':'var(--blue)'}"></div></div><div class="bv" style="width:44px">${v}%</div></div>`).join('');
+const cmx=6;document.getElementById('citeBars').innerHTML=CITE.map(([d,p,n,you])=>
+ `<div class="barrow"><div class="bn ${you?'you':''}" style="width:150px">${d}${you?' (you)':''}</div><div class="track"><div class="fill" style="width:${p/cmx*100}%;background:${you?'var(--grn)':'var(--blue)'}"></div></div><div class="bv">${p}% · ${n}</div></div>`).join('');
+document.getElementById('gridRows').innerHTML=GRID.map(([kw,r,s,t])=>
+ `<div class="grow"><div class="gkw">${kw}</div><div class="grank" style="color:var(--grn)">${r}</div><div class="gsov">${s}% SoV</div><div class="gtop"><div class="track" style="height:10px"><div class="fill" style="width:${t}%;background:var(--grn)"></div></div></div><div style="width:44px;text-align:right;font-weight:800;font-size:12px;color:var(--grn)">${t}%</div></div>`).join('');
+const rmax=277;document.getElementById('compBody').innerHTML=COMP.map(([n,rt,rv,ms,rk,you])=>{const cls=rk<=3?'g':rk<=8?'o':'r';
+ return `<tr class="${you?'you':''}"><td>${n}${you?' &nbsp;← you':''}</td><td>${rt} ★</td><td><span class="revbar" style="width:${Math.max(rv/rmax*90,6)}px"></span>${rv}</td><td>${ms}</td><td style="text-align:right" class="rk ${cls}">${rk}</td></tr>`;}).join('');
+const gc=document.getElementById('gbpCards');
+GBPC.forEach(k=>{const c=el(`<div class="card kpi"><div class="top" style="background:${k.col}"></div>
+ <div class="big" data-cur="${k.big}" data-prior="${k.prior}">${k.big}</div>
+ <div class="lab" data-cur="${k.lab}" data-prior="${k.plab}">${k.lab}</div><div class="sub">${k.sub}</div>
+ <div class="row"><span class="delta ${k.up?'up':k.dn?'down':'flat'}">${k.up?'▲ ':k.dn?'▼ ':''}${k.pd}</span><span class="toggle">◂ July</span></div></div>`);mkToggle(c);gc.appendChild(c);});
+const gmx=282;document.getElementById('gbpBars').innerHTML=GBPBARS.map(([n,v,c])=>
+ `<div class="barrow"><div class="bn">${n}</div><div class="track"><div class="fill" style="width:${v/gmx*100}%;background:${c}"></div></div><div class="bv" style="width:44px">${v}</div></div>`).join('');
+document.getElementById('topics').innerHTML='<div style="display:flex;flex-wrap:wrap;gap:8px">'+TOPICS.map(([n,w,c])=>`<div class="tile" style="background:${c};flex:1 1 ${w>18?'46%':'28%'}">${n}</div>`).join('')+'</div>';
+document.getElementById('revCards').innerHTML=REV.map(([b,l,s,c])=>
+ `<div class="card kpi"><div class="top" style="background:${c}"></div><div class="big" style="color:${c}">${b}</div><div class="lab">${l}</div><div class="sub">${s}</div><div class="row"><span class="chip">VERIFIED</span></div></div>`).join('');
+
+document.getElementById('focusList').innerHTML=FOCUS.map((f,i)=>`<div style="display:flex;gap:9px;margin:8px 0;font-size:13px"><span style="font-weight:800;color:var(--blue)">${i+1}</span><span>${f}</span></div>`).join('');
+
+(function(){const v=[736,692,689,968,1232,1213],labs=['Feb','Mar','Apr','May','Jun','Jul'];
+ const W=320,H=90,pad=6,mn=Math.min(...v),mx=Math.max(...v);
+ const x=i=>pad+i*(W-2*pad)/(v.length-1), y=n=>H-pad-(n-mn)/(mx-mn)*(H-2*pad);
+ const pts=v.map((n,i)=>`${x(i)},${y(n)}`).join(' ');
+ let dots=v.map((n,i)=>`<circle cx="${x(i)}" cy="${y(n)}" r="3" fill="${i===v.length-1?'var(--grn)':'var(--blue)'}"/>`).join('');
+ let ls=labs.map((l,i)=>`<text x="${x(i)}" y="${H+2}" font-size="9" fill="#8b90a0" text-anchor="middle">${l}</text>`).join('');
+ document.getElementById('trendChart').innerHTML=`<svg viewBox="0 0 ${W} ${H+12}" style="width:100%;height:110px"><polyline points="${pts}" fill="none" stroke="var(--blue)" stroke-width="2.5"/>${dots}${ls}<text x="${x(5)}" y="${y(1250)-8}" font-size="11" font-weight="800" fill="var(--grn)" text-anchor="end">1,213</text></svg>`;
+})();
+
+const links=[...document.querySelectorAll('.nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{let i=secs.length-1;for(let k=0;k<secs.length;k++){if(secs[k].getBoundingClientRect().top<140)i=k;}links.forEach(a=>a.classList.remove('on'));links[i].classList.add('on');});
+</script>
+</body>
+</html>
