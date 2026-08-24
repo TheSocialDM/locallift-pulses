@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helix Ellipse Week 19 client email</title>
+<style>
+:root{--navy:#14284B;--gold:#C9A227;--line:#e2e6ee;--sec:#6b7280;--ink:#1f2937}
+*{box-sizing:border-box}
+body{margin:0;padding:16px;background:#f4f6fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink)}
+.sheet{max-width:720px;margin:0 auto}
+.strip{background:#fff8dc;border:1px solid var(--gold);border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5;margin-bottom:14px}
+.strip b{color:var(--navy)}
+.bar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}
+button{font:inherit;font-weight:700;font-size:13.5px;border:0;border-radius:10px;padding:11px 16px;cursor:pointer;background:var(--navy);color:#fff}
+button.alt{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+button:active{transform:translateY(1px)}
+.ok{background:#2E7D4F!important;color:#fff!important;border-color:#2E7D4F!important}
+.subjhead{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-size:13px;margin-bottom:14px}
+.subjhead .lab{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--sec);margin-bottom:3px}
+.subjhead .val{font-weight:700;color:var(--navy);font-size:14px}
+#body{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;font-size:14.5px;line-height:1.62;color:#1f2937}
+#body p{margin:0 0 13px}
+#body ol{margin:0 0 13px;padding-left:20px}
+#body li{margin-bottom:9px}
+#body a{color:#14284B;font-weight:700}
+@media(max-width:430px){body{padding:10px}#body{padding:16px}button{flex:1}}
+</style></head><body>
+<div class="sheet">
+
+<div class="strip"><b>The report is live and verified.</b> The link below serves Week 19, window 7/25 to 8/24, confirmed against the deployed file. Hit Copy email and paste into Mail. Formatting and the link come across intact. This strip is not included in the copy.</div>
+
+<div class="bar">
+  <button id="cE">Copy email</button>
+  <button id="cS" class="alt">Copy subject line</button>
+</div>
+
+<div class="subjhead"><div class="lab">Subject line</div><div class="val" id="subj">Helix Ellipse, Weekly Comp Intelligence (Aug 24): eleven comps run no concession and net $284 above you</div></div>
+
+<div id="body">
+<p>Hi [first name],</p>
+
+<p>Helix Ellipse's comp intelligence is refreshed for this week. The link below is permanent and updates automatically each week: <a href="https://thesocialdm.github.io/locallift-pulses/market-intel/helix-ellipse/">Helix Ellipse, Weekly Comp Intelligence</a></p>
+
+<p>Two reads from last week's edition are being retired on the face of the report, and I would rather flag them here than let them sit. Last week said your asking rent was already at market and the entire net gap was the offer. That no longer holds: you ask $1,976 against a comp average of $2,037, and of the $155 net gap roughly $99 is the concession differential while roughly $61 is asking rent. Last week also called your effective rent an outperformer against a falling market. This week it is down 2.6% against a market median down 1.1%, so I am withdrawing that too.</p>
+
+<p>What has not changed is the core position. You are 99.3% leased, second of twenty one, behind only Trinity 43rd at 100%. Your exposure is 5.3% against a 9.2% set average, and you score above the set on finish with nine of the ten tracked building amenities. You also carry the deepest standing offer in the University District, one month free, now live without interruption for 115 days since May 1.</p>
+
+<p>The comparison that matters most: eleven of the twenty tracked comps realize no concession at all. Those eleven average 97.5% leased and net $2,095 against your $1,811. The only two properties discounting deeper than you are The Corydon and Campus View I, and they average 82.5% leased.</p>
+
+<p>Three moves, in this order:</p>
+
+<ol>
+<li><b>Make the offer seasonal rather than standing.</b> 58 of your 78 annual turns come available between August 31 and September 20. Run the offer for that window and let it lapse after. Walking from 8.3% to the 3.2% market is worth about $101 per home per month, roughly $94,300 a year across the 78 homes that turn, not across all 150.</li>
+<li><b>Take it off the studios first.</b> They ask a genuine premium, $3.79 a foot against $3.57, and after the discount they land at exactly the comp average per foot. The whole premium leaves in the concession. They are also the slowest line at 104 days and the only one where effective rent fell.</li>
+<li><b>Firm the one-bedroom base as homes turn.</b> 97 of your 150 homes, below market on asking and net, on homes that are smaller than the comp average rather than larger. That is the asking-rent third of the gap and it is not explained by size.</li>
+</ol>
+
+<p>One limit worth stating plainly: walking the offer to market lands you at $1,912, still about $54 under the comp set, because base rent is the other third. The offer move is still the first and easiest lever, it is just no longer the whole answer.</p>
+
+<p>Worth noting on timing: four more competitors opened or deepened offers between August 20 and 22, and The Corydon went from four weeks to six. That is an argument for sequencing your trim around the September turn, not for matching them. The deepest offers in the submarket belong to the two buildings that cannot fill.</p>
+
+<p>Happy to walk through any of it live if that is useful.</p>
+
+<p>Best regards,<br>Greyson</p>
+</div>
+
+</div>
+<script>
+function flash(b,t){var o=b.textContent;b.textContent=t;b.classList.add('ok');setTimeout(function(){b.textContent=o;b.classList.remove('ok');},1600);}
+function legacy(node){var r=document.createRange();r.selectNodeContents(node);var s=getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){}s.removeAllRanges();return ok;}
+document.getElementById('cE').addEventListener('click',function(){
+  var b=this,node=document.getElementById('body');
+  var html=node.innerHTML,text=node.innerText;
+  if(navigator.clipboard&&window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})])
+    .then(function(){flash(b,'Copied');},function(){flash(b,legacy(node)?'Copied':'Copy failed');});
+  } else { flash(b,legacy(node)?'Copied':'Copy failed'); }
+});
+document.getElementById('cS').addEventListener('click',function(){
+  var b=this,t=document.getElementById('subj').textContent;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){flash(b,'Copied');},function(){flash(b,legacy(document.getElementById('subj'))?'Copied':'Copy failed');});
+  } else { flash(b,legacy(document.getElementById('subj'))?'Copied':'Copy failed'); }
+});
+</script></body></html>
