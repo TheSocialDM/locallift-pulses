@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Village of Chandler Week 3 client email</title>
+<style>
+:root{--navy:#14284B;--gold:#C9A227;--line:#e2e6ee;--sec:#6b7280;--ink:#1f2937}
+*{box-sizing:border-box}
+body{margin:0;padding:16px;background:#f4f6fa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink)}
+.sheet{max-width:720px;margin:0 auto}
+.strip{background:#fff8dc;border:1px solid var(--gold);border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5;margin-bottom:14px}
+.strip b{color:var(--navy)}
+.bar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}
+button{font:inherit;font-weight:700;font-size:13.5px;border:0;border-radius:10px;padding:11px 16px;cursor:pointer;background:var(--navy);color:#fff}
+button.alt{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+button:active{transform:translateY(1px)}
+.ok{background:#2E7D4F!important;color:#fff!important;border-color:#2E7D4F!important}
+.subjhead{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-size:13px;margin-bottom:14px}
+.subjhead .lab{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--sec);margin-bottom:3px}
+.subjhead .val{font-weight:700;color:var(--navy);font-size:14px}
+#body{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;font-size:14.5px;line-height:1.62;color:#1f2937}
+#body p{margin:0 0 13px}
+#body ol{margin:0 0 13px;padding-left:20px}
+#body li{margin-bottom:9px}
+#body a{color:#14284B;font-weight:700}
+@media(max-width:430px){body{padding:10px}#body{padding:16px}button{flex:1}}
+</style></head><body>
+<div class="sheet">
+
+<div class="strip"><b>The report is live and verified.</b> The link below serves Week 3, window 7/24 to 8/23, confirmed against the deployed file. Hit Copy email and paste into Mail. Formatting and the link come across intact. This strip is not included in the copy.</div>
+
+<div class="bar">
+  <button id="cE">Copy email</button>
+  <button id="cS" class="alt">Copy subject line</button>
+</div>
+
+<div class="subjhead"><div class="lab">Subject line</div><div class="val" id="subj">Village of Chandler, Weekly Comp Intelligence (Aug 24): nineteen comps match your occupancy on a 4.5% offer</div></div>
+
+<div id="body">
+<p>Hi all,</p>
+
+<p>Village of Chandler's comp intelligence is refreshed for this week. The link below is permanent and updates automatically each week: <a href="https://thesocialdm.github.io/locallift-pulses/market-intel/village/">Village of Chandler, Weekly Comp Intelligence</a></p>
+
+<p>Two reads from last week's edition are being retired on the face of the report, and I would rather flag them here than let them sit. Last week placed you at the top of your comp set on leased percentage. On this week's pull you are at 97.2%, which is nineteenth of thirty one: above the set average of 96.4% and just below the median of 97.5%. Last week also had you fuller than Villas at Chandler Heights, and Villas is now at 97.4% against your 97.2%. Your realized offer moved from 15.4% to 14.0% in the same window that occupancy stepped down, and I am deliberately not drawing a line between those two. One week of movement on two figures does not establish one.</p>
+
+<p>What the recommendation rests on is the level rather than the change. Nineteen properties in your set sit at or above your occupancy, and they average a 4.5% offer while netting $1,965. You run 14.0% and net $1,791. The properties advertising deeper than you average 92.6% leased, so depth in this market is tracking with emptiness rather than with fullness.</p>
+
+<p>The offer split you put in place on the 19th is the right structural move and it should stay. The refinement is where the depth sits:</p>
+
+<ol>
+<li><b>Take Marcos and SanTan from six weeks to four.</b> Those two plans are 101 of your 109 homes, at 97.8% and 100% leased. Four weeks is the structure Villas at Chandler Heights runs three miles away under the same ownership.</li>
+<li><b>Hold the eight weeks on Ocotillo.</b> Eight homes at 87.5% leased, 137 days on market, a 25% renewal rate and the deepest trade-out in the building. This is the one plan where the discount is doing real work.</li>
+<li><b>Put a date on the advertisement.</b> Avanterra Queen Creek runs the same eight week headline you do and realizes 1.3%, because the offer is gated behind an apply by deadline. Your copy carries no expiry, and this is the cheapest move on the list.</li>
+</ol>
+
+<p>Trimming the realized offer from seven weeks to four is worth roughly $120 per home per month. Applied to the roughly 55 homes that turn in a year at your blended renewal rate, rather than to all 109, that is about $79,350 a year, without moving a single asking rent.</p>
+
+<p>One limit worth stating plainly: even at four weeks you would still sit around $45 below the comp set on effective rent, so this closes most of the gap rather than all of it.</p>
+
+<p>Happy to walk through any of it live if that is useful.</p>
+
+<p>Best regards,<br>Greyson</p>
+</div>
+
+</div>
+<script>
+function flash(b,t){var o=b.textContent;b.textContent=t;b.classList.add('ok');setTimeout(function(){b.textContent=o;b.classList.remove('ok');},1600);}
+function legacy(node){var r=document.createRange();r.selectNodeContents(node);var s=getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){}s.removeAllRanges();return ok;}
+document.getElementById('cE').addEventListener('click',function(){
+  var b=this,node=document.getElementById('body');
+  var html=node.innerHTML,text=node.innerText;
+  if(navigator.clipboard&&window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})])
+    .then(function(){flash(b,'Copied');},function(){flash(b,legacy(node)?'Copied':'Copy failed');});
+  } else { flash(b,legacy(node)?'Copied':'Copy failed'); }
+});
+document.getElementById('cS').addEventListener('click',function(){
+  var b=this,t=document.getElementById('subj').textContent;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){flash(b,'Copied');},function(){flash(b,legacy(document.getElementById('subj'))?'Copied':'Copy failed');});
+  } else { flash(b,legacy(document.getElementById('subj'))?'Copied':'Copy failed'); }
+});
+</script></body></html>
