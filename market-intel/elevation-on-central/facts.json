@@ -18,11 +18,27 @@
  "hold_units": 46,
  "stab_expo_pct": 9.1,
  "hold_expo_pct": 37.0,
- "stab_renew": 64.1,
- "stab_turn": 79,
- "ask_stab": 1760,
- "recovery": 128000,
- "blend_after": 9.0,
+ "recovery": {
+  "scope": [
+   "S1",
+   "S2",
+   "S3",
+   "A2",
+   "B1",
+   "B2",
+   "B3"
+  ],
+  "scope_units": 220,
+  "scope_renew": 64.1,
+  "turn": 79,
+  "trim_weeks": 4,
+  "cur_weeks": 8,
+  "target_weeks": 4,
+  "ask": 1760,
+  "turn_weighted_ask": true,
+  "recovery": 128000,
+  "blend_after": 9.0
+ },
  "comp_leased": 94.3,
  "comp_ner": 1517,
  "comp_ask": 1653,
@@ -95,7 +111,7 @@
    "name": "2BR/1.5",
    "u": 1,
    "expo": 100.0,
-   "renew": 0.0,
+   "renew": null,
    "rent": 1850
   },
   {
@@ -116,14 +132,14 @@
    "name": "3BR/2",
    "u": 1,
    "expo": 100.0,
-   "renew": 0.0,
+   "renew": null,
    "rent": 2500
   },
   {
    "name": "3BR/2.5",
    "u": 2,
    "expo": 100.0,
-   "renew": 0.0,
+   "renew": null,
    "rent": 3500
   }
  ],
@@ -260,5 +276,9 @@
    "value": "179 ",
    "marker": "Last week this report said"
   }
+ ],
+ "renew_blend": 57.3,
+ "allowed_cities": [
+  "Phoenix"
  ]
 }

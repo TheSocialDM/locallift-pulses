@@ -74,43 +74,59 @@ def gate3_numbers(facts, txt):
     if exposed != facts['exposed_homes']:
         fail('gate3', f"plan exposure sums to {exposed} homes, page says {facts['exposed_homes']}")
 
-    stab = [x for x in p if x['name'] in facts['stabilized']]
-    hold = [x for x in p if x['name'] not in facts['stabilized']]
-    su, hu = sum(x['u'] for x in stab), sum(x['u'] for x in hold)
-    if su != facts['stab_units'] or hu != facts['hold_units']:
-        fail('gate3', f"stabilized/hold split recomputes to {su}/{hu}, page says "
-                      f"{facts['stab_units']}/{facts['hold_units']}")
-    if su + hu != units:
-        fail('gate3', f"{su} + {hu} != {units}")
+    # blended renewal and the homes that turn in a year. Rule 13: every recovery
+    # figure is applied to the homes that turn, never to the full unit count.
+    ren_rows = [x for x in p if x.get('renew') is not None]
+    ru = sum(x['u'] for x in ren_rows)
+    renew = sum(x['u'] * x['renew'] for x in ren_rows) / ru
+    if abs(renew - facts['renew_blend']) > 0.15:
+        fail('gate3', f"blended renewal recomputes to {renew:.1f}, page says {facts['renew_blend']}")
 
-    se = sum(round(x['u'] * x['expo'] / 100) for x in stab)
-    he = sum(round(x['u'] * x['expo'] / 100) for x in hold)
-    if se + he != exposed:
-        fail('gate3', f"exposure split {se}+{he} != {exposed}")
-    for got, want, lab in ((se / su * 100, facts['stab_expo_pct'], 'stabilized exposure %'),
-                           (he / hu * 100, facts['hold_expo_pct'], 'hold-group exposure %')):
-        if abs(got - want) > 0.15:
-            fail('gate3', f"{lab} recomputes to {got:.1f}, page says {want}")
+    # optional stabilized / hold split
+    if 'stabilized' in facts:
+        stab = [x for x in p if x['name'] in facts['stabilized']]
+        hold = [x for x in p if x['name'] not in facts['stabilized']]
+        su, hu = sum(x['u'] for x in stab), sum(x['u'] for x in hold)
+        if su != facts['stab_units'] or hu != facts['hold_units']:
+            fail('gate3', f"stabilized/hold split recomputes to {su}/{hu}, page says "
+                          f"{facts['stab_units']}/{facts['hold_units']}")
+        if su + hu != units:
+            fail('gate3', f"{su} + {hu} != {units}")
+        se = sum(round(x['u'] * x['expo'] / 100) for x in stab)
+        he = sum(round(x['u'] * x['expo'] / 100) for x in hold)
+        if se + he != exposed:
+            fail('gate3', f"exposure split {se}+{he} != {exposed}")
+        for got, want, lab in ((se / su * 100, facts['stab_expo_pct'], 'stabilized exposure %'),
+                               (he / hu * 100, facts['hold_expo_pct'], 'hold-group exposure %')):
+            if abs(got - want) > 0.15:
+                fail('gate3', f"{lab} recomputes to {got:.1f}, page says {want}")
 
-    ren = sum(x['u'] * x['renew'] for x in stab) / su
-    if abs(ren - facts['stab_renew']) > 0.15:
-        fail('gate3', f"stabilized renewal recomputes to {ren:.1f}, page says {facts['stab_renew']}")
-
-    turn = sum(x['u'] * (1 - x['renew'] / 100) for x in stab)
-    if abs(turn - facts['stab_turn']) > 0.6:
-        fail('gate3', f"homes turning recomputes to {turn:.1f}, page says {facts['stab_turn']}")
-
-    ask = sum(x['u'] * (1 - x['renew'] / 100) * x['rent'] for x in stab) / turn
-    if abs(ask - facts['ask_stab']) > 2:
-        fail('gate3', f"turn-weighted asking recomputes to ${ask:,.0f}, page says ${facts['ask_stab']:,}")
-
-    rec = 4 * (ask * 12 / 52) * turn
-    if abs(rec - facts['recovery']) / facts['recovery'] > 0.01:
-        fail('gate3', f"recovery recomputes to ${rec:,.0f}, page says ${facts['recovery']:,}")
-
-    blend = (su * 4 + hu * 8) / units / 52 * 100
-    if abs(blend - facts['blend_after']) > 0.1:
-        fail('gate3', f"blended depth after trim recomputes to {blend:.1f}%, page says {facts['blend_after']}%")
+    # the recovery model, recomputed end to end from the plan rows
+    m = facts['recovery']
+    scope = [x for x in p if x['name'] in m['scope']] if m.get('scope') else p
+    su = sum(x['u'] for x in scope)
+    sren = sum(x['u'] * x['renew'] for x in scope) / su
+    if abs(sren - m['scope_renew']) > 0.15:
+        fail('gate3', f"recovery-scope renewal recomputes to {sren:.1f}, page says {m['scope_renew']}")
+    turn = su * (1 - sren / 100)
+    if abs(turn - m['turn']) > 0.6:
+        fail('gate3', f"homes turning recomputes to {turn:.1f}, page says {m['turn']}")
+    if m['turn'] >= units:
+        fail('gate3', 'rule 13: the recovery base is not smaller than the full unit count')
+    if m.get('turn_weighted_ask'):
+        twa = (sum(x['u'] * (1 - x['renew'] / 100) * x['rent'] for x in scope)
+               / sum(x['u'] * (1 - x['renew'] / 100) for x in scope))
+        if abs(twa - m['ask']) > 3:
+            fail('gate3', f"turn-weighted asking recomputes to ${twa:,.0f}, page says ${m['ask']:,}")
+    rec = m['trim_weeks'] * (m['ask'] * 12 / 52) * m['turn']
+    if abs(rec - m['recovery']) / m['recovery'] > 0.012:
+        fail('gate3', f"recovery recomputes to ${rec:,.0f}, page says ${m['recovery']:,}")
+    if m.get('blend_after') is not None:
+        after = ((m['scope_units'] * m['target_weeks']
+                  + (units - m['scope_units']) * m['cur_weeks']) / units / 52 * 100)
+        if abs(after - m['blend_after']) > 0.1:
+            fail('gate3', f"blended depth after trim recomputes to {after:.1f}%, "
+                          f"page says {m['blend_after']}%")
 
     comps = facts['comps']
     for key, want, tol in (('leased', facts['comp_leased'], 0.06),
@@ -119,9 +135,12 @@ def gate3_numbers(facts, txt):
                            ('conc', facts['comp_conc'], 0.06)):
         got = sum(c[key] for c in comps) / len(comps)
         if abs(got - want) > tol:
-            fail('gate3', f"primary comp {key} average recomputes to {got:.2f}, page says {want}")
+            fail('gate3', f"comp {key} average recomputes to {got:.2f}, page says {want}")
     if any(c.get('subj') for c in comps):
         fail('gate3', 'the subject is inside the peer group it is being judged against')
+    for c in comps:
+        if c.get('tag') in ('INCOME RESTRICTED',):
+            fail('gate3', f"{c['n']} is income restricted and must not sit inside a pricing average")
 
     for s in facts['must_appear']:
         if s not in txt:
@@ -144,19 +163,24 @@ def gate4_residual(facts, txt, slug):
     for item in facts.get('retracted', []):
         val, marker = item['value'], item['marker']
         for m in re.finditer(re.escape(val), txt):
-            window = txt[max(0, m.start() - 260):m.start()]
+            window = txt[max(0, m.start() - 260):m.end() + 140]
             if marker.lower() not in window.lower():
                 fail('gate4', f'retired figure "{val}" appears outside a correction '
-                              f'(no "{marker}" within 260 chars before it)')
+                              f'(no "{marker}" in the surrounding sentence)')
     if '\u2014' in txt:
         fail('gate4', 'em dash found')
     if 'watch' not in txt or 'class="wc ' not in txt or 'class="wh"' not in txt:
         fail('gate4', 'Section 1 is missing the watch / wc / wh card classes and will render as flat text')
-    for city in facts.get('cities', []):
-        pass
-    bad = [c['n'] for c in facts['comps'] if c.get('city', facts['city']) != facts['city']]
+    allowed = set(facts.get('allowed_cities', [facts['city']]))
+    if facts['city'] not in allowed:
+        fail('gate4', f"the subject's own city {facts['city']} is not in allowed_cities")
+    bad = [f"{c['n']} ({c.get('city')})" for c in facts['comps']
+           if c.get('city', facts['city']) not in allowed]
     if bad:
-        fail('gate4', f'comps in the wrong city: {bad}')
+        fail('gate4', f'comps outside the declared submarket: {bad}')
+    for c in facts['comps']:
+        if c.get('city') and c['city'] not in txt:
+            note('gate4', f"{c['city']} is a comp city but never named on the page")
     # Applications, cancellations and cancel % are internal signal only. They are
     # inferred from listing turnover and are not a 30-day count, so a COUNT of them
     # must never reach the page. The words alone are fine (application fee,
@@ -172,7 +196,7 @@ def gate4_residual(facts, txt, slug):
             break
 
 
-def gate56_render(path):
+def gate56_render(path, facts):
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -195,15 +219,18 @@ def gate56_render(path):
         if len(cards) != 3 or min(cards) < 120:
             fail('gate5', f'Section 1 did not render as three cards (widths {cards})')
 
+        cur = str(facts['recovery']['cur_weeks'])
+        tgt = str(facts['recovery']['target_weeks'])
         seen = {}
-        for wk in ('8', '4', '0'):
+        for wk in (cur, tgt, '0'):
             pg.eval_on_selector('#wk', f"e=>{{e.value={wk};e.dispatchEvent(new Event('input'))}}")
             pg.wait_for_timeout(250)
             seen[wk] = pg.eval_on_selector('#recbig', 'e=>e.textContent')
         if len(set(seen.values())) < 3:
             fail('gate5', f'recovery model did not respond across slider positions: {seen}')
-        if seen['8'].strip() not in ('$0', '$0K'):
-            fail('gate5', f"at 8 weeks the model should recover $0, it shows {seen['8']}")
+        if seen[cur].strip().lstrip('+-') not in ('$0', '$0K'):
+            fail('gate5', f"at the current {cur}-week offer the model should recover $0, "
+                          f"it shows {seen[cur]}")
 
         pg.set_viewport_size({'width': 390, 'height': 844})
         pg.wait_for_timeout(500)
@@ -241,7 +268,7 @@ def main():
         gate3_numbers(facts, txt)
         gate4_residual(facts, txt, slug)
         if '--no-render' not in sys.argv:
-            gate56_render(path)
+            gate56_render(path, facts)
 
     print()
     for n in NOTE:

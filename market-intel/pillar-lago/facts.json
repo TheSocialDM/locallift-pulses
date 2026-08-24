@@ -1,0 +1,189 @@
+{
+ "subject": "Pillar Lago",
+ "city": "Peoria",
+ "week": 19,
+ "window": "7/24 to 8/23",
+ "units": 120,
+ "exposed_homes": 7,
+ "renew_blend": 46.7,
+ "comp_leased": 95.0,
+ "comp_ner": 1518,
+ "comp_ask": 1654,
+ "comp_conc": 8.3,
+ "recovery": {
+  "scope": null,
+  "scope_units": 120,
+  "scope_renew": 46.7,
+  "turn": 64,
+  "trim_weeks": 2,
+  "cur_weeks": 6,
+  "target_weeks": 4,
+  "ask": 1899,
+  "turn_weighted_ask": false,
+  "recovery": 56000,
+  "blend_after": 7.7
+ },
+ "plans": [
+  {
+   "name": "The Alcove",
+   "u": 40,
+   "expo": 2.5,
+   "renew": 42.5,
+   "rent": 1551
+  },
+  {
+   "name": "The Retreat",
+   "u": 48,
+   "expo": 6.3,
+   "renew": 41.7,
+   "rent": 1978
+  },
+  {
+   "name": "The Haven",
+   "u": 32,
+   "expo": 9.4,
+   "renew": 59.4,
+   "rent": 2251
+  }
+ ],
+ "comps": [
+  {
+   "n": "Grandstone at Sunrise",
+   "leased": 96.4,
+   "ask": 1813,
+   "ner": 1555,
+   "conc": 14.2,
+   "city": "Peoria",
+   "tag": ""
+  },
+  {
+   "n": "Vistoria On Greenway",
+   "leased": 94.1,
+   "ask": 1510,
+   "ner": 1335,
+   "conc": 11.6,
+   "city": "Surprise",
+   "tag": ""
+  },
+  {
+   "n": "Town Surprise",
+   "leased": 96.5,
+   "ask": 1714,
+   "ner": 1714,
+   "conc": 0.0,
+   "city": "Surprise",
+   "tag": ""
+  },
+  {
+   "n": "Haven at Arrowhead",
+   "leased": 95.6,
+   "ask": 1553,
+   "ner": 1442,
+   "conc": 7.1,
+   "city": "Glendale",
+   "tag": ""
+  },
+  {
+   "n": "Christopher Todd Communities On Happy Valley",
+   "leased": 94.6,
+   "ask": 1580,
+   "ner": 1413,
+   "conc": 10.5,
+   "city": "Peoria",
+   "tag": ""
+  },
+  {
+   "n": "Eagle Ridge Apartments",
+   "leased": 96.6,
+   "ask": 1835,
+   "ner": 1763,
+   "conc": 3.9,
+   "city": "Peoria",
+   "tag": ""
+  },
+  {
+   "n": "Laguna at Arrowhead Ranch",
+   "leased": 95.6,
+   "ask": 1538,
+   "ner": 1355,
+   "conc": 12.2,
+   "city": "Glendale",
+   "tag": ""
+  },
+  {
+   "n": "Avilla Meadows",
+   "leased": 93.7,
+   "ask": 1744,
+   "ner": 1483,
+   "conc": 15.0,
+   "city": "Surprise",
+   "tag": "BUILD TO RENT"
+  },
+  {
+   "n": "La Borgata",
+   "leased": 92.3,
+   "ask": 1600,
+   "ner": 1600,
+   "conc": 0.0,
+   "city": "Surprise",
+   "tag": ""
+  }
+ ],
+ "must_appear": [
+  "95.8%",
+  "5.8%",
+  "7 homes",
+  "$1,899",
+  "$1,735",
+  "$1,518",
+  "8.3%",
+  "8.5%",
+  "46.7%",
+  "64 homes that turn",
+  "$56",
+  "$58",
+  "+$217",
+  "Week 19",
+  "7/24 to 8/23",
+  "6 weeks free",
+  "INCOME RESTRICTED",
+  "BUILD TO RENT",
+  "-3.6%",
+  "13.2%",
+  "14.5%"
+ ],
+ "must_not_appear": [
+  "$1,660",
+  "$1,548",
+  "+$112",
+  "$116K",
+  "Week 18",
+  "7.6%",
+  "$1,811"
+ ],
+ "retracted": [
+  {
+   "value": "8/10 to 8/17",
+   "marker": "Last week"
+  },
+  {
+   "value": "$1,962",
+   "marker": "last week"
+  },
+  {
+   "value": "15.4%",
+   "marker": "last week"
+  },
+  {
+   "value": "97.1%",
+   "marker": "last week"
+  }
+ ],
+ "allowed_cities": [
+  "Peoria",
+  "Surprise",
+  "Glendale",
+  "Youngtown",
+  "Litchfield Park"
+ ]
+}
