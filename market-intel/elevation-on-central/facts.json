@@ -1,0 +1,264 @@
+{
+ "subject": "Elevation On Central",
+ "city": "Phoenix",
+ "week": 19,
+ "window": "7/24 to 8/23",
+ "units": 266,
+ "exposed_homes": 37,
+ "stabilized": [
+  "S1",
+  "S2",
+  "S3",
+  "A2",
+  "B1",
+  "B2",
+  "B3"
+ ],
+ "stab_units": 220,
+ "hold_units": 46,
+ "stab_expo_pct": 9.1,
+ "hold_expo_pct": 37.0,
+ "stab_renew": 64.1,
+ "stab_turn": 79,
+ "ask_stab": 1760,
+ "recovery": 128000,
+ "blend_after": 9.0,
+ "comp_leased": 94.3,
+ "comp_ner": 1517,
+ "comp_ask": 1653,
+ "comp_conc": 8.3,
+ "plans": [
+  {
+   "name": "S1",
+   "u": 4,
+   "expo": 0.0,
+   "renew": 100.0,
+   "rent": 1400
+  },
+  {
+   "name": "S2",
+   "u": 18,
+   "expo": 0.0,
+   "renew": 83.3,
+   "rent": 1388
+  },
+  {
+   "name": "S3",
+   "u": 16,
+   "expo": 0.0,
+   "renew": 62.5,
+   "rent": 1361
+  },
+  {
+   "name": "A1",
+   "u": 6,
+   "expo": 33.3,
+   "renew": 50.0,
+   "rent": 1682
+  },
+  {
+   "name": "A2",
+   "u": 111,
+   "expo": 10.8,
+   "renew": 64.9,
+   "rent": 1598
+  },
+  {
+   "name": "Open 1BR (S1)",
+   "u": 6,
+   "expo": 66.7,
+   "renew": 16.7,
+   "rent": 1418
+  },
+  {
+   "name": "Open 1BR (S2)",
+   "u": 13,
+   "expo": 23.1,
+   "renew": 15.4,
+   "rent": 1370
+  },
+  {
+   "name": "Open 1BR (S3)",
+   "u": 17,
+   "expo": 23.5,
+   "renew": 17.6,
+   "rent": 1345
+  },
+  {
+   "name": "B1",
+   "u": 23,
+   "expo": 8.7,
+   "renew": 56.5,
+   "rent": 1966
+  },
+  {
+   "name": "2BR/1.5",
+   "u": 1,
+   "expo": 100.0,
+   "renew": 0.0,
+   "rent": 1850
+  },
+  {
+   "name": "B2",
+   "u": 5,
+   "expo": 20.0,
+   "renew": 60.0,
+   "rent": 2336
+  },
+  {
+   "name": "B3",
+   "u": 43,
+   "expo": 11.6,
+   "renew": 55.8,
+   "rent": 2107
+  },
+  {
+   "name": "3BR/2",
+   "u": 1,
+   "expo": 100.0,
+   "renew": 0.0,
+   "rent": 2500
+  },
+  {
+   "name": "3BR/2.5",
+   "u": 2,
+   "expo": 100.0,
+   "renew": 0.0,
+   "rent": 3500
+  }
+ ],
+ "comps": [
+  {
+   "n": "The Logan at Osborn",
+   "leased": 96.5,
+   "ask": 1711,
+   "ner": 1468,
+   "conc": 14.2,
+   "city": "Phoenix"
+  },
+  {
+   "n": "Parc Midtown",
+   "leased": 98.4,
+   "ask": 1537,
+   "ner": 1537,
+   "conc": 0.0,
+   "city": "Phoenix"
+  },
+  {
+   "n": "Park On Central",
+   "leased": 94.6,
+   "ask": 1586,
+   "ner": 1505,
+   "conc": 5.2,
+   "city": "Phoenix"
+  },
+  {
+   "n": "Curve at Melrose",
+   "leased": 97.1,
+   "ask": 1406,
+   "ner": 1229,
+   "conc": 12.7,
+   "city": "Phoenix"
+  },
+  {
+   "n": "Blume on Central",
+   "leased": 98.4,
+   "ask": 1637,
+   "ner": 1637,
+   "conc": 0.0,
+   "city": "Phoenix"
+  },
+  {
+   "n": "Centra Midtown",
+   "leased": 96.9,
+   "ask": 1590,
+   "ner": 1590,
+   "conc": 0.0,
+   "city": "Phoenix"
+  },
+  {
+   "n": "Callia",
+   "leased": 96.8,
+   "ask": 1703,
+   "ner": 1335,
+   "conc": 21.7,
+   "city": "Phoenix"
+  },
+  {
+   "n": "Axis Camelback",
+   "leased": 93.7,
+   "ask": 1979,
+   "ner": 1852,
+   "conc": 7.3,
+   "city": "Phoenix"
+  },
+  {
+   "n": "Aura Uptown",
+   "leased": 73.3,
+   "ask": 1733,
+   "ner": 1631,
+   "conc": 5.9,
+   "city": "Phoenix"
+  },
+  {
+   "n": "The Astor at Osborn",
+   "leased": 97.4,
+   "ask": 1653,
+   "ner": 1390,
+   "conc": 15.9,
+   "city": "Phoenix"
+  }
+ ],
+ "must_appear": [
+  "91.7%",
+  "13.9%",
+  "37 homes",
+  "$1,822",
+  "$1,541",
+  "$1,517",
+  "8.3%",
+  "15.4%",
+  "64.1%",
+  "$1,760",
+  "$128,000",
+  "9.0%",
+  "220",
+  "Week 19",
+  "7/24 to 8/23",
+  "4 vs 13",
+  "$103 below",
+  "$2.50",
+  "$2.08",
+  "76.3%",
+  "16.7%",
+  "60 homes",
+  "57.3%"
+ ],
+ "must_not_appear": [
+  "$1,816",
+  "$1,536",
+  "$1,572",
+  "$1,748",
+  "7.3% primary",
+  "Week 18",
+  "92.9%",
+  "12.4%",
+  "33 homes",
+  "$127,000",
+  "58.3%"
+ ],
+ "retracted": [
+  {
+   "value": "8/10 to 8/17",
+   "marker": "Last week"
+  },
+  {
+   "value": "179 days",
+   "marker": "Last week this report said"
+  },
+  {
+   "value": "179 ",
+   "marker": "Last week this report said"
+  }
+ ]
+}
