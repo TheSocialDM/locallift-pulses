@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Client email &#183; Reverb &#183; Week 19</title>
+<style>
+:root{--navy:#14284B;--gold:#C9A227;--ink:#1c2230;--sec:#5a6479;--line:#e6e9ef;--bg:#eef1f6;--green:#2E7D4F}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:18px 16px 60px}
+.strip{background:linear-gradient(135deg,var(--navy),#1d3563);color:#fff;border-radius:14px;padding:15px 18px;border-left:4px solid var(--gold)}
+.strip b{color:var(--gold)}
+.strip p{margin:6px 0 0;font-size:12.5px;line-height:1.5;color:#cdd6e6}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 6px}
+button{font-family:inherit;font-size:14px;font-weight:800;border:none;border-radius:11px;padding:13px 18px;cursor:pointer;flex:1;min-width:180px}
+#cE{background:var(--navy);color:#fff}
+#cS{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+button:active{transform:translateY(1px)}
+button.ok{background:var(--green)!important;color:#fff!important;border-color:var(--green)!important}
+.sub{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 15px;margin-top:12px}
+.sub .lab{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--sec)}
+.sub .txt{font-size:14px;font-weight:700;color:var(--navy);margin-top:4px;line-height:1.4}
+.sheet{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:12px;box-shadow:0 1px 3px rgba(20,40,75,.06),0 12px 34px rgba(20,40,75,.10)}
+.sheet p{font-size:14.5px;line-height:1.62;margin:0 0 14px}
+.sheet a{color:#14284B;font-weight:700}
+.note{font-size:11.5px;color:var(--sec);margin-top:14px;text-align:center;line-height:1.5}
+@media(max-width:520px){.wrap{padding:12px 11px 50px}.sheet{padding:17px 16px}button{min-width:0}}
+</style></head><body><div class="wrap">
+
+<div class="strip"><b>Reverb, Week 19 refresh, August 25 2026</b>
+<p>Tap <b>Copy email</b>, open Mail, paste. Formatting and the live link come across intact. The subject line copies separately. Nothing in this grey strip or the subject box is included in the copied text.</p></div>
+
+<div class="bar"><button id="cE">Copy email</button><button id="cS">Copy subject line</button></div>
+
+<div class="sub"><div class="lab">Subject line</div><div class="txt" id="subj">Reverb, Weekly Comp Intelligence (Aug 25): you are leasing near the top of the field, and the gap is no longer the offer</div></div>
+
+<div class="sheet" id="body">
+<p>Hi [first name],</p>
+<p>Reverb's comp intelligence is refreshed, now on a 7/26 to 8/25 window. The link is permanent and updates automatically:</p>
+<p><a href="https://thesocialdm.github.io/locallift-pulses/market-intel/decibel-reverb/">Open your live comp intelligence report</a></p>
+<p>This edition sits on a window two days later than the one I sent you yesterday. Nothing at the property moved: 91.8% leased, 10.6% exposure, nine homes advertised, asking $1,866. What moved is on the market side and it is small, so the read is unchanged and the recommendation is the same. Hold at six weeks.</p>
+<p>The reason to hold is not caution, it is that the trigger has not been met for a third consecutive reading: exposure at or below 5.7%, no more than four homes advertised, two weeks running. You are at 10.6% and nine. The six-week offer is twelve days old. Everything else points the right way, which is exactly why it is worth not guessing.</p>
+<p>The strongest thing in this window is your leasing pace. You signed nine leases in thirty days against a field average of five across the twenty tracked properties, third of twenty-one, and you did it on the second-smallest book in the set. Only Cypress at 237 homes and Saxton at 325 signed more. Your one-bedrooms clear in 41.5 days against a 55.8-day market. Demand is not your constraint.</p>
+<p>What is, is price level rather than the offer. All nine homes you are advertising ask below the modelled market rent for their own size. Three are rent-capped and cannot move; across the six that can, the shortfall totals $788 a month and averages $131 per home. That is a larger figure than the offer recovery, and it holds up at the field level too: priced at the market's 8.0% offer instead of your 13.0% you land on $2.78 per square foot against a $2.88 field average, still 3.5% short. So the offer explains about 59% of the per-foot gap and asking rent is the rest.</p>
+<p>Two things I want to flag rather than bury. First, the recoverable figure on the offer is now about $64,900 a year rather than the $70,100 I sent yesterday. That is not a deterioration: the field deepened its own offers from 7.6% to 8.0%, so the distance you have to walk got shorter. Second, twelve of your eighty-five homes are income-restricted, they run 216 days on market against 72 for the rest of your book, and they are three of the nine homes you are advertising today. No offer clears a rent-capped home. The report now judges the property on its market-rate book, which reads 94.5% leased at 8.2% exposure, and treats the restricted homes separately.</p>
+<p>One correction carried onto this page. An earlier edition said the offer was the entire rent gap. It is not, and that was already corrected in yesterday's edition; the live link now carries the corrected read rather than the old one.</p>
+<p>Happy to walk through it live whenever suits you.</p>
+<p>Best regards,<br>Greyson</p>
+</div>
+
+<div class="note">Link verified against the live page before this was prepared.</div>
+
+</div>
+<script>
+function flash(b,t){var o=b.textContent;b.textContent=t;b.classList.add('ok');setTimeout(function(){b.textContent=o;b.classList.remove('ok');},1900);}
+function legacy(el){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){ok=false;}s.removeAllRanges();return ok;}
+document.getElementById('cE').addEventListener('click',function(){
+  var b=this,el=document.getElementById('body'),html=el.innerHTML,txt=el.innerText;
+  if(navigator.clipboard&&window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([txt],{type:'text/plain'})})])
+      .then(function(){flash(b,'Copied');})
+      .catch(function(){flash(b,legacy(el)?'Copied':'Select and copy');});
+  } else { flash(b,legacy(el)?'Copied':'Select and copy'); }
+});
+document.getElementById('cS').addEventListener('click',function(){
+  var b=this,t=document.getElementById('subj').textContent;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){flash(b,'Copied');}).catch(function(){flash(b,legacy(document.getElementById('subj'))?'Copied':'Select and copy');});
+  } else { flash(b,legacy(document.getElementById('subj'))?'Copied':'Select and copy'); }
+});
+</script></body></html>
