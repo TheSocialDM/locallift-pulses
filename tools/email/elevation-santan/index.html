@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Client email &#183; Elevation SanTan &#183; Week 19</title>
+<style>
+:root{--navy:#14284B;--gold:#C9A227;--ink:#1c2230;--sec:#5a6479;--line:#e6e9ef;--bg:#eef1f6;--green:#2E7D4F}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:18px 16px 60px}
+.strip{background:linear-gradient(135deg,var(--navy),#1d3563);color:#fff;border-radius:14px;padding:15px 18px;border-left:4px solid var(--gold)}
+.strip b{color:var(--gold)}
+.strip p{margin:6px 0 0;font-size:12.5px;line-height:1.5;color:#cdd6e6}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 6px}
+button{font-family:inherit;font-size:14px;font-weight:800;border:none;border-radius:11px;padding:13px 18px;cursor:pointer;flex:1;min-width:180px}
+#cE{background:var(--navy);color:#fff}
+#cS{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+button:active{transform:translateY(1px)}
+button.ok{background:var(--green)!important;color:#fff!important;border-color:var(--green)!important}
+.sub{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 15px;margin-top:12px}
+.sub .lab{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--sec)}
+.sub .txt{font-size:14px;font-weight:700;color:var(--navy);margin-top:4px;line-height:1.4}
+.sheet{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:12px;box-shadow:0 1px 3px rgba(20,40,75,.06),0 12px 34px rgba(20,40,75,.10)}
+.sheet p{font-size:14.5px;line-height:1.62;margin:0 0 14px}
+.sheet a{color:#14284B;font-weight:700}
+.note{font-size:11.5px;color:var(--sec);margin-top:14px;text-align:center;line-height:1.5}
+@media(max-width:520px){.wrap{padding:12px 11px 50px}.sheet{padding:17px 16px}button{min-width:0}}
+</style></head><body><div class="wrap">
+
+<div class="strip"><b>Elevation SanTan, Week 19, August 25 2026</b>
+<p>Tap <b>Copy email</b>, open Mail, paste. Formatting and the live link come across intact. The subject line copies separately. Nothing in this grey strip or the subject box is included in the copied text.</p></div>
+
+<div class="bar"><button id="cE">Copy email</button><button id="cS">Copy subject line</button></div>
+
+<div class="sub"><div class="lab">Subject line</div><div class="txt" id="subj">Elevation SanTan, Weekly Comp Intelligence (Aug 25): the offer discipline landed, the asking rent did not</div></div>
+
+<div class="sheet" id="body">
+<p>Hi [first name],</p>
+<p>Elevation SanTan's comp intelligence is refreshed for this week. The link is permanent and updates automatically:</p>
+<p><a href="https://thesocialdm.github.io/locallift-pulses/market-intel/elevation-santan/">Open your live comp intelligence report</a></p>
+<p>The offer discipline worked. Your realised concession came back to 7.7%, exactly the four weeks you advertise, down from 8.2%. You are holding 99.3% leased on 2.4% exposure with seven homes available, and you signed 16 leases against a 14.4 comp average. On the offer, there is nothing to correct.</p>
+<p>The asking rent is the other story. Your blended asking moved 5.1% down across the window, the weakest of all twenty-one properties tracked, against a set that moved up 0.2%. That is a building at 99.3% leased cutting price into a market that is not. Your effective rent still sits at $1.99 per square foot against $1.54 for the primary set, so this is a premium asset giving back part of its premium without needing to.</p>
+<p>The split by bedroom is where the action is. Your two-bedrooms trade out at +3.9% and clear in 32 days. Your studios and one-bedrooms carry every negative trade-out in the book, at minus 4.0% and minus 4.1%. One blanket offer is running across all 297 homes regardless. The recommendation is to take the offer off the two-bedrooms, which is worth about $96,000 a year, hold asking on the one-bedrooms, and keep the four weeks on the studios where the marketing time genuinely is. Across the full book the offer is worth about $233,000 a year, applied to the 145 homes that actually turn at your 51.2% renewal rate rather than to all 297.</p>
+<p>One read from last week is retired on the face of the report. We said the market was trimming. It is not. SanTan by Baron has indeed dropped its advertised offer, but its realised depth went from 3.6% to 17.6%, now the deepest in the primary set, and Alta Rise is advertising ten weeks. Advertised depth and realised depth have come apart in this set, so advertised depth on its own is no longer a signal we will report against.</p>
+<p>Two honesty notes. Your marketing time reads 90 days against a 106-day set average, but weighted by listing count the set reads 133 and against the ten comps inside 1.25 miles it is 79, so you are faster than the wider set and slower than your immediate cluster. The report says both. And your new leases now sign $95 above your in-place book, up from $25, which is the healthy direction and the strongest argument against cutting asking rent further.</p>
+<p>Happy to walk through it live whenever suits you.</p>
+<p>Best regards,<br>Greyson</p>
+</div>
+
+<div class="note">Link verified against the live page before this was prepared.</div>
+
+</div>
+<script>
+function flash(b,t){var o=b.textContent;b.textContent=t;b.classList.add('ok');setTimeout(function(){b.textContent=o;b.classList.remove('ok');},1900);}
+function legacy(el){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){ok=false;}s.removeAllRanges();return ok;}
+document.getElementById('cE').addEventListener('click',function(){
+  var b=this,el=document.getElementById('body'),html=el.innerHTML,txt=el.innerText;
+  if(navigator.clipboard&&window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([txt],{type:'text/plain'})})])
+      .then(function(){flash(b,'Copied');})
+      .catch(function(){flash(b,legacy(el)?'Copied':'Select and copy');});
+  } else { flash(b,legacy(el)?'Copied':'Select and copy'); }
+});
+document.getElementById('cS').addEventListener('click',function(){
+  var b=this,t=document.getElementById('subj').textContent;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){flash(b,'Copied');}).catch(function(){flash(b,legacy(document.getElementById('subj'))?'Copied':'Select and copy');});
+  } else { flash(b,legacy(document.getElementById('subj'))?'Copied':'Select and copy'); }
+});
+</script></body></html>
