@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Client email &#183; The View at Cascade &#183; Week 19</title>
+<style>
+:root{--navy:#14284B;--gold:#C9A227;--ink:#1c2230;--sec:#5a6479;--line:#e6e9ef;--bg:#eef1f6;--green:#2E7D4F}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:18px 16px 60px}
+.strip{background:linear-gradient(135deg,var(--navy),#1d3563);color:#fff;border-radius:14px;padding:15px 18px;border-left:4px solid var(--gold)}
+.strip b{color:var(--gold)}
+.strip p{margin:6px 0 0;font-size:12.5px;line-height:1.5;color:#cdd6e6}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 6px}
+button{font-family:inherit;font-size:14px;font-weight:800;border:none;border-radius:11px;padding:13px 18px;cursor:pointer;flex:1;min-width:180px}
+#cE{background:var(--navy);color:#fff}
+#cS{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+button:active{transform:translateY(1px)}
+button.ok{background:var(--green)!important;color:#fff!important;border-color:var(--green)!important}
+.sub{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 15px;margin-top:12px}
+.sub .lab{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--sec)}
+.sub .txt{font-size:14px;font-weight:700;color:var(--navy);margin-top:4px;line-height:1.4}
+.sheet{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:12px;box-shadow:0 1px 3px rgba(20,40,75,.06),0 12px 34px rgba(20,40,75,.10)}
+.sheet p{font-size:14.5px;line-height:1.62;margin:0 0 14px}
+.sheet a{color:#14284B;font-weight:700}
+.note{font-size:11.5px;color:var(--sec);margin-top:14px;text-align:center;line-height:1.5}
+@media(max-width:520px){.wrap{padding:12px 11px 50px}.sheet{padding:17px 16px}button{min-width:0}}
+</style></head><body><div class="wrap">
+
+<div class="strip"><b>The View at Cascade, Week 19, August 25 2026</b>
+<p>Tap <b>Copy email</b>, open Mail, paste. Formatting and the live link come across intact. The subject line copies separately. Nothing in this grey strip or the subject box is included in the copied text.</p></div>
+
+<div class="bar"><button id="cE">Copy email</button><button id="cS">Copy subject line</button></div>
+
+<div class="sub"><div class="lab">Subject line</div><div class="txt" id="subj">The View at Cascade, Weekly Comp Intelligence (Aug 25): the offer is 89 days old and pointed at the wrong half of the building</div></div>
+
+<div class="sheet" id="body">
+<p>Hi [first name],</p>
+<p>The View at Cascade's comp intelligence is refreshed for this week. The link is permanent and updates automatically:</p>
+<p><a href="https://thesocialdm.github.io/locallift-pulses/market-intel/the-view-at-cascade/">Open your live comp intelligence report</a></p>
+<p>Two things changed in the read this week, and one of them is a correction to what we sent you last week.</p>
+<p>Last week's report described the up-to-10-weeks-free offer as a recent tactical move, roughly two weeks old, sitting against a much shallower standing posture. That came off a short data window. The full 30-day pull dates the offer to 5/28. It is 89 days old, it is your standing rate rather than a promotion, and realized concession reads 19.2% on the 30-day basis. We are retiring the earlier read rather than letting it sit quietly alongside this one.</p>
+<p>On that longer window the picture is harder. Leased is 92.5%, down 1.1 points and 19th of 21 in the tracked field. Exposure is 10.7% against an 8.4% field average. You signed 4 leases in 30 days against a field average of 13.8. We are not going to tell you the discount caused that, because the field refuses to sort by depth: the fullest property in the market runs an 11.4% offer, the emptiest advertises three months free, and four properties running nothing at all average 4.2 points above your occupancy. What we will say is that at the second-deepest offer of 21, you are the softest property in your own depth band.</p>
+<p>The sharper finding is where the softness actually sits. Your one-bedrooms already ask $82 under the field average, then take 19.2% off that, and they still average 122 days on market against a 76-day market. Price level is not what is holding them. Eleven of your twenty live listings have stood past 100 days, nine of those eleven are one-bedrooms, and eight homes carry a June availability date. Meanwhile your two-bedrooms ask $72 over the field and clear in half the market's time. One offer, applied flat, across two books moving in opposite directions.</p>
+<p>There is also a structural item that is new this week. Your prices refresh about once every 19 days against a field median of 3.5. Fourteen of the twenty comps run revenue management and reprice every two to four days, and only two properties in the field move slower than you. On a board where eleven listings have stood past 100 days, that cadence is doing more damage than the discount is repairing.</p>
+<p>The recommendation is not to withdraw the offer. It is to stop paying it on the 123 homes above 95% leased, hold it on the 46 one-bedroom homes carrying real exposure, take the three premium two-bedrooms off it and reprice them, and work the eleven stale listings individually rather than with another building-wide discount. Trimming the tight group to six weeks is worth roughly $80,000 a year, and completing the move to four takes it to about $119,000. Both figures apply only to the 42 homes in that group that actually turn in a year, not to the full book.</p>
+<p>Happy to walk through it live if that is useful.</p>
+<p>Best regards,<br>Greyson</p>
+</div>
+
+<div class="note">Link verified against the live page before this was prepared.</div>
+
+</div>
+<script>
+function flash(b,t){var o=b.textContent;b.textContent=t;b.classList.add('ok');setTimeout(function(){b.textContent=o;b.classList.remove('ok');},1900);}
+function legacy(el){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){ok=false;}s.removeAllRanges();return ok;}
+document.getElementById('cE').addEventListener('click',function(){
+  var b=this,el=document.getElementById('body'),html=el.innerHTML,txt=el.innerText;
+  if(navigator.clipboard&&window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([txt],{type:'text/plain'})})])
+      .then(function(){flash(b,'Copied');})
+      .catch(function(){flash(b,legacy(el)?'Copied':'Select and copy');});
+  } else { flash(b,legacy(el)?'Copied':'Select and copy'); }
+});
+document.getElementById('cS').addEventListener('click',function(){
+  var b=this,t=document.getElementById('subj').textContent;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){flash(b,'Copied');}).catch(function(){flash(b,legacy(document.getElementById('subj'))?'Copied':'Select and copy');});
+  } else { flash(b,legacy(document.getElementById('subj'))?'Copied':'Select and copy'); }
+});
+</script></body></html>
