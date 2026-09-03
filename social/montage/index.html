@@ -182,7 +182,7 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--round
 </section>
 
 <div class="two">
-  <section class="panel"><div class="hd">Impressions across August</div><div class="csub">Weekly totals by platform, hover a point. Facebook led the reach in August.</div><svg id="line" viewBox="0 0 640 250" width="100%" height="250" style="overflow:visible"></svg>
+  <section class="panel"><div class="hd">Impressions, July to August</div><div class="csub">Monthly totals by platform, hover a point. Facebook led the reach in August.</div><svg id="line" viewBox="0 0 640 250" width="100%" height="250" style="overflow:visible"></svg>
     <div class="legend"><span class="lg"><span class="d" style="background:var(--fb)"></span>Facebook</span><span class="lg"><span class="d" style="background:var(--ig)"></span>Instagram</span></div>
   </section>
   <section class="panel"><div class="hd">Where the reach came from</div><div class="csub">Share of 33,394 impressions. Hover a slice.</div><div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:6px"><svg id="donut" width="168" height="168" viewBox="0 0 176 176"></svg><div class="leg2" id="leg"></div></div></section>
@@ -258,26 +258,26 @@ function spk(d,col){var w=120,h=30,mn=Math.min.apply(0,d),mx=Math.max.apply(0,d)
 var KP=[
  {cap:'Followers',n:91,d:'+9.6%',up:1,col:'var(--fb)',fmtK:0,brk:[['ig','IG 80'],['fb','FB 10'],['yt','YT 1']],s:[83,91],t:'91 followers across all platforms, up 9.6%. Instagram grew 9.6% to 80 and Facebook 11.1% to 10.'},
  {cap:'Posts',n:89,d:'level with July',up:1,col:'var(--ig)',fmtK:0,brk:[['fb','FB 40'],['ig','IG 39'],['yt','YT 10']],s:[89,89],t:'89 posts across Facebook, Instagram and YouTube, the same output as July. Consistent daily presence all month.'},
- {cap:'Impressions',n:33394,d:'+169.9%',up:1,col:'var(--pink)',fmtK:1,brk:[['fb','FB 29.1K'],['ig','IG 4.3K'],['yt','YT 27']],s:[177, 347, 463, 744, 2068, 947, 1679, 1198, 1497, 1115, 1163, 1901, 926, 1480, 1702, 1553, 1172, 1136, 1006, 1448, 997, 1129, 643, 745, 728, 1081, 958, 1717, 1723, 0, 58],t:'33,394 impressions in August against 12,373 in July. Facebook accounted for 29,090 of it and Instagram grew 46% to 4,277.'},
+ {cap:'Impressions',n:33394,d:'+169.9%',up:1,col:'var(--pink)',fmtK:1,brk:[['fb','FB 29.1K'],['ig','IG 4.3K'],['yt','YT 27']],s:[12373,33394],t:'33,394 impressions in August against 12,373 in July. Facebook accounted for 29,090 of it and Instagram grew 46% to 4,277.'},
  {cap:'Interactions',n:98,d:'level with July',up:1,col:'var(--green)',fmtK:0,brk:[['ig','IG 87'],['fb','FB 10'],['yt','YT 1']],s:[98,98],t:'98 interactions in August, the same total as July. Instagram carried 87 of them and grew 3.6%. Instagram\'s July figure was restated from 82 to 84 after publication, which is why the platform reads slightly differently against its own base.'}];
 document.getElementById('cards').innerHTML=KP.map(function(k,i){return '<div class="card" data-t="'+k.t+'"><div class="cap">'+k.cap+'</div><div class="big" id="kp'+i+'" style="color:'+k.col+'">0</div><div class="delta '+(k.up?'up':'down')+'">'+((k.d.charAt(0)==='+'||k.d.charAt(0)==='-')?(k.up?'▲ ':'▼ '):'')+k.d+'</div><div class="brk">'+k.brk.map(function(b){return '<span class="chip '+b[0]+'">'+b[1]+'</span>';}).join('')+'</div>'+spk(k.s,k.col)+'</div>';}).join('');
 KP.forEach(function(k,i){countUp(document.getElementById('kp'+i),k.n,1200,k.fmtK?fmt:null);});
 document.querySelectorAll('#cards .card').forEach(function(c){var poly=c.querySelector('polyline');function ap(){if(!poly)return;var len=poly.getTotalLength();poly.style.strokeDasharray=len;poly.style.transition='none';poly.style.strokeDashoffset=len;poly.getBoundingClientRect();poly.style.transition='stroke-dashoffset .8s ease';setTimeout(function(){poly.style.strokeDashoffset=0;},20);}ap();c.addEventListener('mouseenter',ap);});
 
 // ---- impressions across June (weekly, smooth area) ----
-var fbW=[5620,8264,7493,6187,1526], igW=[805,1016,1521,814,121], wlab=['Aug 1','Aug 8','Aug 15','Aug 22','Aug 29'];
-(function(){var W=640,H=250,pl=44,pb=26,pt=14,pr=12,mn=0,mx=9000,base=H-pb;
+var fbW=[9400,29090], igW=[2926,4277], wlab=['July','August'];
+(function(){var W=640,H=250,pl=44,pb=26,pt=14,pr=12,mn=0,mx=30000,base=H-pb;
  var X=function(i){return pl+i/(fbW.length-1)*(W-pl-pr);},Y=function(v){return pt+(1-(v-mn)/(mx-mn))*(H-pt-pb);};
  function smooth(a){var p=a.map(function(v,i){return [X(i),Y(v)];});var d='M'+p[0][0]+' '+p[0][1];for(var i=0;i<p.length-1;i++){var p0=p[i-1]||p[i],p1=p[i],p2=p[i+1],p3=p[i+2]||p2;var c1x=p1[0]+(p2[0]-p0[0])/6,c1y=p1[1]+(p2[1]-p0[1])/6,c2x=p2[0]-(p3[0]-p1[0])/6,c2y=p2[1]-(p3[1]-p1[1])/6;d+=' C'+c1x+' '+c1y+' '+c2x+' '+c2y+' '+p2[0]+' '+p2[1];}return d;}
- var grid='';for(var gy=0;gy<=9000;gy+=1500){grid+='<line class="lgrid" x1="'+pl+'" y1="'+Y(gy)+'" x2="'+(W-pr)+'" y2="'+Y(gy)+'"/><text x="'+(pl-6)+'" y="'+(Y(gy)+3)+'" text-anchor="end" class="xlab">'+(gy>=1000?gy/1000+'K':gy)+'</text>';}
+ var grid='';for(var gy=0;gy<=30000;gy+=5000){grid+='<line class="lgrid" x1="'+pl+'" y1="'+Y(gy)+'" x2="'+(W-pr)+'" y2="'+Y(gy)+'"/><text x="'+(pl-6)+'" y="'+(Y(gy)+3)+'" text-anchor="end" class="xlab">'+(gy>=1000?gy/1000+'K':gy)+'</text>';}
  var defs='<defs><linearGradient id="gfb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4E7E92" stop-opacity=".34"/><stop offset="1" stop-color="#4E7E92" stop-opacity="0"/></linearGradient><linearGradient id="gig" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C94F7C" stop-opacity=".28"/><stop offset="1" stop-color="#C94F7C" stop-opacity="0"/></linearGradient></defs>';
  var fbP=smooth(fbW),igP=smooth(igW);
  var fbA=fbP+' L '+X(4)+' '+base+' L '+X(0)+' '+base+' Z',igA=igP+' L '+X(4)+' '+base+' L '+X(0)+' '+base+' Z';
  var s2=defs+grid+'<path d="'+fbA+'" fill="url(#gfb)"/>'+'<path d="'+igA+'" fill="url(#gig)"/>';
  s2+='<path id="lnFb" d="'+fbP+'" fill="none" stroke="var(--fb)" stroke-width="3.4" stroke-linecap="round"/>';
  s2+='<path id="lnIg" d="'+igP+'" fill="none" stroke="var(--ig)" stroke-width="3" stroke-linecap="round"/>';
- for(var i=0;i<fbW.length;i++){s2+='<circle cx="'+X(i)+'" cy="'+Y(fbW[i])+'" r="4.2" fill="#fff" stroke="var(--fb)" stroke-width="2.6" data-t="Facebook · week of '+wlab[i]+' · '+fbW[i].toLocaleString()+' impressions"/>';}
- for(var i=0;i<igW.length;i++){s2+='<circle cx="'+X(i)+'" cy="'+Y(igW[i])+'" r="3.6" fill="#fff" stroke="var(--ig)" stroke-width="2.4" data-t="Instagram · week of '+wlab[i]+' · '+igW[i].toLocaleString()+' impressions"/>';}
+ for(var i=0;i<fbW.length;i++){s2+='<circle cx="'+X(i)+'" cy="'+Y(fbW[i])+'" r="4.2" fill="#fff" stroke="var(--fb)" stroke-width="2.6" data-t="Facebook · '+wlab[i]+' · '+fbW[i].toLocaleString()+' impressions"/>';}
+ for(var i=0;i<igW.length;i++){s2+='<circle cx="'+X(i)+'" cy="'+Y(igW[i])+'" r="3.6" fill="#fff" stroke="var(--ig)" stroke-width="2.4" data-t="Instagram · '+wlab[i]+' · '+igW[i].toLocaleString()+' impressions"/>';}
  for(var j=0;j<wlab.length;j++){s2+='<text x="'+X(j)+'" y="'+(H-8)+'" text-anchor="middle" class="xlab">'+wlab[j]+'</text>';}
  var ls=document.getElementById('line');ls.innerHTML=s2;bindT();
  function draw(){['lnFb','lnIg'].forEach(function(id){var p=document.getElementById(id);var len=p.getTotalLength();p.style.strokeDasharray=len;p.style.transition='none';p.style.strokeDashoffset=len;p.getBoundingClientRect();p.style.transition='stroke-dashoffset 1.2s ease';setTimeout(function(){p.style.strokeDashoffset=0;},30);});}
