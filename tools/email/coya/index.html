@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coya Weekly Pulse · email for Robyn</title>
+<style>
+:root{--bg:#F5F5F7;--card:#fff;--ink:#1D1D1F;--sec:#86868B;--line:#E8E8ED;--blue:#0A84FF;--green:#30D158;
+--shadow:0 1px 2px rgba(0,0,0,.04),0 10px 34px rgba(0,0,0,.07)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:22px 16px 60px}
+.hdr{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.hdr h1{font-size:19px;margin:0;letter-spacing:-.02em}
+.hdr .m{font-size:12px;color:var(--sec)}
+.strip{background:#FFF9EC;border:1px solid #F1E4C4;border-radius:14px;padding:12px 15px;font-size:12.5px;line-height:1.5;margin-bottom:16px}
+.strip b{color:#a05a00}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:18px 20px;margin-bottom:16px}
+.lbl{font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--sec);margin-bottom:8px}
+.subj{font-size:15px;font-weight:700;line-height:1.45;word-break:break-word}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+button{font:inherit;font-weight:700;font-size:13.5px;border:0;border-radius:11px;padding:10px 16px;cursor:pointer;background:var(--ink);color:#fff;transition:background .15s,transform .06s}
+button:active{transform:scale(.985)}
+button.sec{background:#EFEFF3;color:var(--ink)}
+button.done{background:var(--green)}
+.hint{font-size:11.5px;color:var(--sec)}
+.body p{margin:0 0 13px}
+.body p:last-child{margin-bottom:0}
+.body a{color:var(--blue);font-weight:700}
+.body .sig{margin-top:16px}
+@media (max-width:430px){.wrap{padding:16px 12px 48px}.card{padding:15px 16px;border-radius:15px}button{width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <h1>Coya Weekly Pulse</h1>
+    <span class="m">Field Position added Sep 5, 2026 · for Robyn</span>
+  </div>
+  <div class="strip" id="strip">
+    <b>How to use this.</b> Press Copy email, then paste straight into Mail. Formatting and the report
+    link come across intact, so there is nothing to highlight and nothing to rebuild. This yellow box
+    and the subject line above the email are not included in what gets copied.
+  </div>
+  <div class="card">
+    <div class="lbl">Subject line</div>
+    <div class="subj" id="subject">Coya Weekly Pulse: you lead your field on almost everything, and the review flow has stopped</div>
+    <div class="row"><button class="sec" id="bsubj" type="button">Copy subject line</button></div>
+  </div>
+  <div class="card">
+    <div class="lbl">Email</div>
+    <div class="body" id="emailbody">
+      <p>Hi Robyn,</p>
+
+      <p>Coya's Pulse has a new section on it: <a href="https://thesocialdm.github.io/locallift-pulses/coya/">Open your live Weekly Pulse</a></p>
+
+      <p><b>This is the first week the report shows how your listing compares with the four communities you actually compete with on rent, rather than only how Coya is doing against itself.</b> Nine columns, read by hand from each public profile on September 5: year built, homes, rating, review count, new reviews in six months, how many reviews each one answers, how many categories each claims, and how often each posts.</p>
+
+      <p><b>The result is better than you might expect, with one exception.</b> You hold the highest rating in the field at 4.8 against an average of 4.2. You answer every one of your reviews, which only one of the four also does. You publish a post every 0.92 days in a field averaging 24 days between posts. And on search reach you are first at your own front door and inside the top ten at every point we tested, in every direction. On the parts of a listing you control, you lead this field outright.</p>
+
+      <p><b>The exception is the one number in red, and it is worth a conversation.</b> Zero reviews arrived in the last thirty days. Thirty one arrived in the six months before that, so this is not a slow patch, it is a process that has stopped. For comparison, one community in your set took twenty one reviews in the same thirty days. Two asks put it back: one at move in, one when a work order closes. Your rating can absorb the volume with no risk at all, because at 38 reviews and a mean of 4.84 a new five star review moves the average by four thousandths.</p>
+
+      <p><b>One correction on the report, so it does not surprise you.</b> Your rating now reads 4.8 on 38 reviews, where the last edition read 4.7 on 39. The count went down by one and the rating went up, which is what happens when Google removes a review rather than when you lose one. Both figures were read live from the profile on September 5.</p>
+
+      <p><b>And one thing we are chasing at our end.</b> The daily listing feed for this profile has delivered nothing since August 20, so the Google actions section still covers the most recent complete week it has finalised, August 8 to 14. That is stated on the face of the report. It affects no other section, and the new Field Position section was read directly from live profiles rather than from that feed.</p>
+
+      <p class="sig">Best regards,<br>Greyson</p>
+    </div>
+    <div class="row"><button id="bmail" type="button">Copy email</button>
+      <span class="hint" id="hint">Pastes into Mail with the link live.</span></div>
+  </div>
+</div>
+<script>
+function flash(b,m,ok){var t=b.getAttribute('data-t')||b.textContent;b.setAttribute('data-t',t);b.textContent=m;if(ok)b.classList.add('done');setTimeout(function(){b.textContent=t;b.classList.remove('done');},1900);}
+function legacyCopyNode(n){var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){ok=false;}s.removeAllRanges();return ok;}
+document.getElementById('bmail').addEventListener('click',function(){
+  var btn=this,node=document.getElementById('emailbody');
+  var html='<div style="font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1D1D1F">'+node.innerHTML+'</div>';
+  var text=node.innerText;
+  if(navigator.clipboard&&window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})])
+    .then(function(){flash(btn,'Copied',true);}).catch(function(){flash(btn,legacyCopyNode(node)?'Copied':'Press Cmd C',true);});
+  } else { flash(btn,legacyCopyNode(node)?'Copied':'Press Cmd C',true); }
+});
+document.getElementById('bsubj').addEventListener('click',function(){
+  var btn=this,txt=document.getElementById('subject').textContent.trim();
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){flash(btn,'Copied',true);})
+    .catch(function(){flash(btn,legacyCopyNode(document.getElementById('subject'))?'Copied':'Press Cmd C',true);});
+  } else { flash(btn,legacyCopyNode(document.getElementById('subject'))?'Copied':'Press Cmd C',true); }
+});
+</script>
+</body>
+</html>
