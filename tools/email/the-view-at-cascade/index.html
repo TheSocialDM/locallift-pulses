@@ -52,7 +52,9 @@ function plain(el){var s='',ns=el.childNodes;
  for(var i=0;i<ns.length;i++){var n=ns[i];
   if(n.nodeName==='P'){var a=n.querySelector('a');
    if(a){s+=a.textContent+'\n'+a.href+'\n\n';}
-   else{s+=n.textContent.replace(/ /g,' ').trim()+'\n\n';}}}
+   else{var c=n.cloneNode(true);
+    Array.prototype.forEach.call(c.querySelectorAll('br'),function(x){x.parentNode.replaceChild(document.createTextNode('\n'),x);});
+    s+=c.textContent.replace(/\u00a0/g,' ').split('\n').map(function(l){return l.trim();}).join('\n').trim()+'\n\n';}}}
  return s.replace(/\n{3,}/g,'\n\n').trim()+'\n';}
 document.getElementById('bs').addEventListener('click',function(){
  var t=document.getElementById('subj').textContent.trim();
