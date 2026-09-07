@@ -1,66 +1,69 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Client email &#183; The View at Cascade &#183; Week 20</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The View at Cascade · Week 21 client email</title>
 <style>
-:root{--navy:#14284B;--gold:#C9A227;--ink:#1c2230;--sec:#5a6479;--line:#e6e9ef;--bg:#eef1f6;--green:#2E7D4F}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:760px;margin:0 auto;padding:18px 16px 60px}
-.strip{background:linear-gradient(135deg,var(--navy),#1d3563);color:#fff;border-radius:14px;padding:15px 18px;border-left:4px solid var(--gold)}
-.strip b{color:var(--gold)}
-.strip p{margin:6px 0 0;font-size:12.5px;line-height:1.5;color:#cdd6e6}
-.bar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 6px}
-button{font-family:inherit;font-size:14px;font-weight:800;border:none;border-radius:11px;padding:13px 18px;cursor:pointer;flex:1;min-width:180px}
-#cE{background:var(--navy);color:#fff}
-#cS{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
-button:active{transform:translateY(1px)}
-button.ok{background:var(--green)!important;color:#fff!important;border-color:var(--green)!important}
-.sub{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 15px;margin-top:12px}
-.sub .lab{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--sec)}
-.sub .txt{font-size:14px;font-weight:700;color:var(--navy);margin-top:4px;line-height:1.4}
-.sheet{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:12px;box-shadow:0 1px 3px rgba(20,40,75,.06),0 12px 34px rgba(20,40,75,.10)}
-.sheet p{font-size:14.5px;line-height:1.62;margin:0 0 14px}
-.sheet a{color:#14284B;font-weight:700}
-.note{font-size:11.5px;color:var(--sec);margin-top:14px;text-align:center;line-height:1.5}
-@media(max-width:520px){.wrap{padding:12px 11px 50px}.sheet{padding:17px 16px}button{min-width:0}}
-</style></head><body><div class="wrap">
+:root{--navy:#14284B;--gold:#C9A227;--ink:#1c2536;--mut:#5b6780;--line:#e3e7ef;--bg:#f5f7fa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:800px;margin:0 auto;padding:22px 16px 60px}
+.hd{background:var(--navy);color:#fff;border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.hd .k{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.hd h1{margin:5px 0 0;font-size:19px;line-height:1.3}
+.hd .s{color:#aeb9cf;font-size:12.5px;margin-top:5px}
+.strip{background:#fff7db;border:1px solid #e8d68a;border-radius:10px;padding:10px 13px;font-size:13px;color:#6b5510;margin-bottom:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px;box-shadow:0 1px 2px rgba(20,40,75,.05)}
+.lab{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);font-weight:800;margin-bottom:8px}
+.subj{font-size:15.5px;font-weight:650;color:var(--navy);background:#f7f9fc;border:1px solid var(--line);border-radius:9px;padding:11px 13px}
+.btn{appearance:none;border:0;border-radius:9px;padding:11px 18px;font:inherit;font-weight:700;font-size:14px;cursor:pointer;background:var(--navy);color:#fff;transition:background .15s}
+.btn:hover{background:#1d3765}.btn.g{background:var(--gold);color:#3a2f06}.btn.g:hover{background:#d8b02e}
+.btn.ok{background:#1f7a4d}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
+.body p{margin:0 0 13px}.body a{color:var(--navy);font-weight:700}
+.foot{color:var(--mut);font-size:12px;text-align:center;margin-top:24px}
+@media(max-width:520px){.btn{width:100%}}
+</style></head><body>
+<div class="wrap">
+ <div class="hd"><div class="k">Client email · ready to send</div><h1>The View at Cascade · Weekly Comp Intelligence</h1>
+ <div class="s">Week 21 · data window 8/5 to 9/4/2026 · report deployed and verified live</div></div>
+ <div class="strip"><b>Before you send:</b> replace <b>[first name]</b> in the greeting. We do not have a confirmed contact name on file for this property.</div>
 
-<div class="strip"><b>The View at Cascade, Week 20, August 30 2026</b>
-<p>Tap <b>Copy email</b>, open Mail, paste. Formatting and the live link come across intact. The subject line copies separately. Nothing in this grey strip or the subject box is included in the copied text.</p></div>
+ <div class="card"><div class="lab">Subject line</div>
+  <div class="subj" id="subj">The View at Cascade, Weekly Comp Intelligence (Sep 6): the whole gap is now the offer</div>
+  <div class="row"><button class="btn g" id="bs">Copy subject</button></div></div>
 
-<div class="bar"><button id="cE">Copy email</button><button id="cS">Copy subject line</button></div>
-
-<div class="sub"><div class="lab">Subject line</div><div class="txt" id="subj">The View at Cascade, Weekly Comp Intelligence (Aug 30): the market discounted toward you, and none of it reached the one-bedrooms</div></div>
-
-<div class="sheet" id="body">
-<p>Hi [first name],</p>
-<p>The View at Cascade's comp intelligence is refreshed for this week. The link is permanent and updates automatically:</p>
-<p><a href="https://thesocialdm.github.io/locallift-pulses/market-intel/the-view-at-cascade/">Open your live comp intelligence report</a></p>
-<p>The headline this week is that the market moved and you did not. Your net effective rent sits $213 a home per month below the 20-property comp average, where last week the same comparison read $256. That gap closed $43, and almost all of it came from the field cutting its own rent rather than from anything that changed at the property: the comp-set effective rent fell $51 while yours fell $8. The field's average concession jumped from 7.1% to 9.7% over the same window.</p>
-<p>Two things we told you last week no longer hold, and both changed because of the field rather than because of you. We said you ran the second-deepest offer of 21. You now run the third, because Sunela's advertised three-months-free finally reached its listed rents and took it from a realized 1.8% to 23.2%. We also said you were the softest property in your own depth band. That band now averages 91.4% leased, which is 1.1 points below you. We are retiring both readings on the face of the report rather than letting them sit quietly next to this week's.</p>
-<p>None of that reached the part of the building that actually needs help. Your one-bedrooms ask $77 under the twenty-property average, then take 19.2% off that, and they now average 127 days on market against a 75-day market, up from 122 days last week. Your two-bedrooms ask $50 over the field and clear in 78 days against a 138-day market. One offer, applied flat, across two books moving in opposite directions. Eleven of your listings have now stood past 100 days and ten of them are one-bedrooms.</p>
-<p>The most actionable thing in the data this week is smaller and more specific than a pricing decision. Your one-bedroom listing board is not internally consistent. Unit 4029 asks $1,935 for 749 square feet and has stood 269 days. Unit 2017 is the same floor plan at the same 749 square feet, asks $1,630, and has stood 122 days. Both are live right now, $305 apart, against a $1,709 market rent for that plan. We are not claiming price is why either one has sat, because the cheaper of the two has also sat four months. The point is that the asking rents inside a single plan do not line up, and that is an afternoon's work to resolve.</p>
-<p>The recommendation is unchanged in direction. Do not withdraw the offer and do not deepen it. Stop paying it on the 123 homes sitting above 95% leased, hold it on the 46 one-bedroom homes carrying real exposure, take the three premium two-bedrooms off it and reprice them, and work the eleven long-standing listings individually. Trimming the tight group to six weeks is worth roughly $79,000 a year and completing the move to four takes it to about $119,000. Both figures apply only to the 42 homes in that group that actually turn in a year, not to the full book. One point on timing: because the market's own effective rent came down, you now reach the field's effective rent at 4.6 weeks free rather than the 3.5 it would have taken last week, so a trim costs you less relative to the field than it did seven days ago.</p>
-<p>Happy to walk through it live if that is useful.</p>
-<p>Best regards,<br>Greyson</p>
-</div>
-
-<div class="note">Link verified against the live page before this was prepared.</div>
-
+ <div class="card"><div class="lab">Email body</div>
+  <div class="body" id="body">
+   <p>Hi [first name],</p>
+   <p>The View at Cascade's comp intelligence is refreshed for this week. The live link updates automatically, so it is always current:</p>
+   <p><a href="https://thesocialdm.github.io/locallift-pulses/market-intel/the-view-at-cascade/">The View at Cascade, Weekly Comp Intelligence</a></p>
+   <p>Two things moved this week and they point the same direction.</p>
+   <p>First, your asking rent crossed above the field. You now ask $2,053 against a $2,040 comp-set average, where last week you sat $31 under it. Your net effective rent is $185 below the field. The practical consequence is that the entire gap is now the concession and none of it is base rent, so there is no version of this that a rent change improves.</p>
+   <p>Second, and this is the more useful finding, your one-bedroom board has separated into two groups with nothing between them. Four listings have stood 3, 5, 12 and 32 days. Nine have stood between 124 and 276 days. There is a 92-day gap in the middle and not one listing inside it. The cheapest of those nine, unit 2017, asks $118 under its own plan's market rent and has still sat 129 days, while unit 4029 is the same floor plan at the same 749 square feet, asks $305 more, and has sat 276. That is a fixed set of specific homes rather than a pricing level, which is why the report asks for a unit-by-unit audit rather than a deeper discount.</p>
+   <p>Meanwhile your two-bedroom line asks $94 over the field and clears in 84 days against a 139-day market, with no listing past 88 days. The same 10 weeks free is applied to both lines.</p>
+   <p>So the recommendation is to retarget rather than cut across the board. Hold the full offer on the 84 homes carrying real availability, take the 102 low-exposure homes to 6 weeks, and take the three B3 homes off the offer entirely and reprice them. That first step is worth roughly $64,000 a year on the homes in that group that actually turn in a year, and completing it takes that to about $97,000.</p>
+   <p>Occupancy did give ground this week, from 92.5% to 91.4%, with exposure up to 11.8%. Section 4 has the plan-level detail behind the recommendation.</p>
+   <p>Happy to walk through it live if that would help.</p>
+   <p>Best regards,<br>Greyson</p>
+  </div>
+  <div class="row"><button class="btn" id="bb">Copy email</button><span id="msg" style="color:#1f7a4d;font-weight:700;font-size:13px"></span></div></div>
+ <div class="foot">The SocialDM / LocalLift&trade; · Comp Intelligence · The View at Cascade · Week of September 6, 2026</div>
 </div>
 <script>
-function flash(b,t){var o=b.textContent;b.textContent=t;b.classList.add('ok');setTimeout(function(){b.textContent=o;b.classList.remove('ok');},1900);}
-function legacy(el){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){ok=false;}s.removeAllRanges();return ok;}
-document.getElementById('cE').addEventListener('click',function(){
-  var b=this,el=document.getElementById('body'),html=el.innerHTML,txt=el.innerText;
-  if(navigator.clipboard&&window.ClipboardItem){
-    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([txt],{type:'text/plain'})})])
-      .then(function(){flash(b,'Copied');})
-      .catch(function(){flash(b,legacy(el)?'Copied':'Select and copy');});
-  } else { flash(b,legacy(el)?'Copied':'Select and copy'); }
-});
-document.getElementById('cS').addEventListener('click',function(){
-  var b=this,t=document.getElementById('subj').textContent;
-  if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(t).then(function(){flash(b,'Copied');}).catch(function(){flash(b,legacy(document.getElementById('subj'))?'Copied':'Select and copy');});
-  } else { flash(b,legacy(document.getElementById('subj'))?'Copied':'Select and copy'); }
-});
+function flash(b,t){var o=b.textContent;b.textContent=t;b.classList.add('ok');setTimeout(function(){b.textContent=o;b.classList.remove('ok');},1600);}
+function plain(el){var s='',ns=el.childNodes;
+ for(var i=0;i<ns.length;i++){var n=ns[i];
+  if(n.nodeName==='P'){var a=n.querySelector('a');
+   if(a){s+=a.textContent+'\n'+a.href+'\n\n';}
+   else{s+=n.textContent.replace(/ /g,' ').trim()+'\n\n';}}}
+ return s.replace(/\n{3,}/g,'\n\n').trim()+'\n';}
+document.getElementById('bs').addEventListener('click',function(){
+ var t=document.getElementById('subj').textContent.trim();
+ navigator.clipboard.writeText(t).then(function(){flash(document.getElementById('bs'),'Copied');});});
+document.getElementById('bb').addEventListener('click',function(){
+ var el=document.getElementById('body'),html=el.innerHTML,txt=plain(el),b=document.getElementById('bb');
+ function ok(){flash(b,'Copied');document.getElementById('msg').textContent='Paste into your mail client. The link stays clickable.';
+  setTimeout(function(){document.getElementById('msg').textContent='';},4200);}
+ if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write){
+  navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),
+   'text/plain':new Blob([txt],{type:'text/plain'})})]).then(ok).catch(function(){
+   navigator.clipboard.writeText(txt).then(ok);});}
+ else{navigator.clipboard.writeText(txt).then(ok);}});
 </script></body></html>
