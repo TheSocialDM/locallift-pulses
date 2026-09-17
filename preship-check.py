@@ -20,8 +20,9 @@ a false alarm. That matters: raw base64 contains strings like "GA4".
 """
 import re, sys, os, glob
 
-VENDORS = (r'semrush|hello ?data|costar|metricool|yardi|google business|'
-           r'business\.google|search console|\bGA4\b')
+VENDORS = (r'semrush|hello ?data|hello-data|costar|co-star|metricool|yardi|'
+           r'google business|business\.google|search console|\bGA4\b|'
+           r'google analytics|looker studio')
 
 PROPERTIES = [
     'Pillar Lago', 'Soren', 'Circa on Central', 'Elevation SanTan', '2nd and John',
