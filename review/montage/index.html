@@ -1,0 +1,428 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Montage Tigard Command Center</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#eef0f4; --card:#ffffff; --bord:#e2e4ea; --ink:#15161c; --sub:#5a5f6b; --mut:#8b90a0;
+  --blue:#0A84FF; --teal:#0a93b8; --grn:#1e9e4a; --org:#e08300; --pur:#8a44d6; --pink:#e0425a;
+  --navy:#101a30; --grnbg:#e9f7ee; --orgbg:#fdf1e2; --shadow:0 1px 3px rgba(20,25,40,.06),0 8px 24px rgba(20,25,40,.06);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 80px}
+#stick{position:sticky;top:env(safe-area-inset-top,0px);z-index:40}
+.topbar{position:relative;z-index:40;background:rgba(238,240,244,.9);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--bord)}
+.topin{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.3px;font-size:15px}
+.brand .pin{color:var(--pink)}
+.selchip{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--bord);border-radius:12px;padding:6px 12px;box-shadow:var(--shadow)}
+.ava{width:26px;height:26px;border-radius:7px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.selchip .nm{font-weight:700;font-size:13px;line-height:1.1}
+.selchip .cr{font-size:10px;color:var(--mut)}
+.spacer{flex:1}
+.live{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:800;color:var(--grn);background:var(--grnbg);border:1px solid #cdeccf;border-radius:20px;padding:5px 11px;letter-spacing:.4px}
+.live .dot{width:8px;height:8px;border-radius:50%;background:var(--grn);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(30,158,74,.5)}70%{box-shadow:0 0 0 8px rgba(30,158,74,0)}100%{box-shadow:0 0 0 0 rgba(30,158,74,0)}}
+.mpill{font-size:12px;font-weight:700;color:var(--sub);background:var(--card);border:1px solid var(--bord);border-radius:20px;padding:5px 12px}
+.pbtn{font-size:12px;font-weight:700;color:#fff;background:var(--navy);border:none;border-radius:20px;padding:7px 14px;cursor:pointer}
+.pbtn:hover{opacity:.9}
+.nav{position:relative;z-index:30;background:rgba(238,240,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--bord);overflow-x:auto}
+.navin{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;gap:4px;white-space:nowrap;justify-content:space-between}
+.nav a{padding:11px 6px;font-size:12.5px;font-weight:700;color:var(--sub);text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--blue);border-bottom-color:var(--blue)}
+.hero{margin:26px 0 8px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:1.2px;color:var(--teal);text-transform:uppercase}
+h1.big{font-size:30px;font-weight:800;margin:6px 0 4px;letter-spacing:-.5px}
+.lede{color:var(--sub);font-size:14px;max-width:660px}
+section{margin-top:34px;scroll-margin-top:118px}
+.sechead{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.sechead h2{font-size:20px;font-weight:800;margin:0;letter-spacing:-.3px}
+.sechead .k{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--teal);text-transform:uppercase}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:16px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:1.3fr 1fr}
+@media(max-width:820px){.g4{grid-template-columns:repeat(2,1fr)}.g3,.g2{grid-template-columns:1fr}}
+.kpi{position:relative;padding:18px 18px 16px;overflow:visible}
+.kpi .top{height:5px;border-radius:5px 5px 0 0;position:absolute;left:0;right:0;top:0}
+.kpi .big{font-size:30px;font-weight:800;letter-spacing:-.5px;margin-top:4px}
+.kpi .lab{font-weight:700;font-size:13px;margin-top:2px}
+.kpi .sub{font-size:11.5px;color:var(--mut);margin-top:2px}
+.kpi .row{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.chip{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.4px;padding:3px 8px;border-radius:20px;background:var(--grnbg);color:var(--grn)}
+.toggle{font-size:10.5px;font-weight:800;color:var(--sub);background:#f1f2f6;border:1px solid var(--bord);border-radius:20px;padding:4px 9px;cursor:pointer;user-select:none}
+.toggle:hover{background:#e7e9f0}
+.delta{font-size:12px;font-weight:800}
+.up{color:var(--grn)} .down{color:var(--pink)} .flat{color:var(--mut)}
+.info{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#e6e8ef;color:var(--sub);font-size:11px;font-weight:800;cursor:help;position:relative;margin-left:6px;vertical-align:middle}
+.info:hover{background:var(--blue);color:#fff}
+.bub{position:absolute;bottom:130%;left:50%;transform:translateX(-50%) translateY(6px);width:300px;background:#f6f7f9;border:1px solid var(--bord);border-radius:14px;box-shadow:0 10px 34px rgba(20,25,40,.16);padding:13px 14px;opacity:0;visibility:hidden;transition:.16s;z-index:60;text-align:left;pointer-events:none}
+.info:hover .bub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.bub:after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:7px solid transparent;border-top-color:#f6f7f9}
+.bub .bl{font-size:9.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:2px}
+.bub .bl.w{color:var(--mut)} .bub .bl.y{color:var(--teal)} .bub .bl.h{color:var(--grn)}
+.bub p{margin:0 0 9px;font-size:11.5px;color:var(--sub);line-height:1.45}
+.bub p.hv{color:var(--ink);font-weight:600}
+.bub p:last-child{margin-bottom:0}
+@media(max-width:600px){.bub{width:240px}}
+.read{background:var(--grnbg);border:1px solid #cdeccf;border-radius:12px;padding:12px 14px;margin-top:14px}
+.read .rl{font-size:10px;font-weight:800;letter-spacing:.6px;color:var(--grn);text-transform:uppercase;margin-bottom:3px}
+.read p{margin:0;font-size:12.5px;color:var(--ink)}
+.pad{padding:18px}
+.ct{font-weight:800;font-size:14px;margin:0 0 12px;display:flex;align-items:center}
+.barrow{display:flex;align-items:center;gap:12px;margin:9px 0}
+.barrow .bn{width:180px;font-size:12.5px;font-weight:600;flex:none}
+.barrow .bn.you{font-weight:800;color:var(--grn)}
+.track{flex:1;height:16px;background:#eef0f5;border-radius:8px;overflow:hidden}
+.fill{height:100%;border-radius:8px}
+.barrow .bv{width:70px;text-align:right;font-weight:800;font-size:12.5px}
+.wedge{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:16px;overflow:hidden;border:1px solid var(--bord)}
+@media(max-width:700px){.wedge{grid-template-columns:1fr}}
+.wcol{padding:20px}
+.wl{background:#f4f5f8}
+.wr{background:var(--navy);color:#fff}
+.wcap{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:10px}
+.wl .wcap{color:var(--mut)} .wr .wcap{color:#8fb4ff}
+.wli{display:flex;gap:9px;font-size:12.5px;margin:8px 0;align-items:flex-start}
+.wli .ic{flex:none;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;margin-top:1px}
+.wl .ic{background:#e2e4ea;color:var(--mut)} .wr .ic{background:#20365e;color:#7fe0a0}
+.wr .wli{color:#dfe6f2}
+.wkick{grid-column:1/-1;background:#0b1526;color:#fff;padding:16px 20px;font-size:13px;font-weight:600;text-align:center;border-top:1px solid #22314f}
+.wkick b{color:#7fe0a0}
+.ctab{width:100%;border-collapse:collapse}
+.ctab th{font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--mut);text-align:left;padding:8px 10px;border-bottom:1px solid var(--bord)}
+.ctab td{padding:10px;border-bottom:1px solid #f0f1f5;font-size:13px}
+.ctab tr.you td{background:var(--grnbg);font-weight:700}
+.ctab .rk{font-weight:800}
+.rk.g{color:var(--grn)} .rk.o{color:var(--org)} .rk.r{color:var(--pink)}
+.revbar{display:inline-block;height:9px;background:var(--blue);border-radius:5px;vertical-align:middle;margin-right:8px}
+.you .revbar{background:var(--pink)}
+.grow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f0f1f5}
+.grow:last-child{border:none}
+.gkw{flex:1;font-weight:700;font-size:13px}
+.grank{width:60px;text-align:center;font-weight:800}
+.gsov{width:70px;text-align:right;color:var(--sub);font-size:12.5px}
+.gtop{width:120px}
+.pill{display:inline-block;position:relative;background:#f1f2f6;border:1px solid var(--bord);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:600;margin:4px 6px 0 0;cursor:help}
+.pill:hover{background:#e7e9f0}
+.pill:hover .bub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.pill .bub{width:270px}
+.tile{border-radius:12px;padding:14px;color:#fff;font-weight:700;font-size:12.5px}
+.orbox{border-radius:14px;padding:16px}
+.orbox.op{background:var(--grnbg);border:1px solid #cdeccf}
+.orbox.rk{background:var(--orgbg);border:1px solid #f3ddb8}
+.orbox .ol{font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+.op .ol{color:var(--grn)} .rk .ol{color:var(--org)}
+.orbox h3{font-size:15px;margin:5px 0 8px}
+.orbox p{margin:0;font-size:12.5px;color:var(--sub);line-height:1.5}
+.hd-hook{margin:14px 0 0;font-size:18px;line-height:1.35;font-weight:800;color:var(--pur);max-width:700px;text-shadow:0 0 10px rgba(138,68,214,.30);animation:hookglow 2.4s ease-in-out infinite}
+@keyframes hookglow{0%,100%{text-shadow:0 0 8px rgba(138,68,214,.22)}50%{text-shadow:0 0 20px rgba(138,68,214,.60)}}
+.hd{position:relative;border:1.5px dashed #c7b8e6;background:linear-gradient(180deg,#faf7ff,#f4eefc);border-radius:16px;padding:22px;overflow:hidden}
+.hdlock{display:inline-flex;align-items:center;gap:7px;background:#efe4ff;color:var(--pur);font-size:11px;font-weight:800;border-radius:20px;padding:5px 12px;letter-spacing:.4px}
+.hdblur{filter:blur(5px);opacity:.55;user-select:none;pointer-events:none;margin-top:14px}
+.hdcta{position:absolute;right:22px;bottom:22px;background:var(--pur);color:#fff;font-weight:800;font-size:12px;border:none;border-radius:20px;padding:9px 16px;cursor:pointer}
+.footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--bord);display:flex;justify-content:space-between;font-size:11px;color:var(--mut);flex-wrap:wrap;gap:8px}
+
+.flow{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
+.step{flex:1;min-width:150px;background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+.step .sn{width:24px;height:24px;border-radius:50%;color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin-bottom:9px}
+.step .st{font-weight:800;font-size:12.5px;letter-spacing:.3px}
+.step .sd{font-size:11.5px;color:var(--sub);margin-top:4px;line-height:1.4}
+.step .sm{font-size:11px;color:var(--grn);font-weight:800;margin-top:8px}
+.how{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
+.how .hs{flex:1;min-width:200px;display:flex;gap:10px;align-items:flex-start}
+.how .hn{flex:none;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center}
+.how .ht{font-size:12.5px;color:var(--ink)}
+.how .ht b{color:var(--ink)}
+@media print{.hd-hook{text-shadow:none;animation:none}#stick{display:none!important}.pbtn,.toggle,.hdcta{display:none!important}body{background:#fff}section{break-inside:avoid;margin-top:22px}.card,.wedge,.hd{box-shadow:none}.bub{display:none!important}a{text-decoration:none}}
+@media(max-width:640px){.wrap,.topin,.navin{max-width:100%}.wrap{overflow-x:clip}.ctab{display:block;overflow-x:auto}}
+</style>
+<div id="stick"><div class="topbar"><div class="topin">
+  <div class="brand">SOCIALDM <span class="pin">|</span> L<span class="pin">•</span>calLift™</div>
+  <div class="selchip"><div class="ava">MT</div><div><div class="nm">Montage</div><div class="cr">Tigard, OR · Live data</div></div></div>
+  <div class="spacer"></div>
+  <div class="live"><span class="dot"></span>LIVE</div>
+  <div class="mpill">August 2026 · vs July</div>
+  <button class="pbtn" onclick="window.print()">Print / PDF</button>
+</div></div>
+
+<div class="nav"><div class="navin">
+  <a href="#pulse" class="on">Overview</a>
+  <a href="#flow">Funnel</a>
+  <a href="#wedge">Discovery</a>
+  <a href="#ai">AI Answers</a>
+  <a href="#attribution">Attribution</a>
+  <a href="#maps">Maps</a>
+  <a href="#gbp">Profile</a>
+  <a href="#health">Site Health</a>
+  <a href="#position">Opportunity</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#ship">Our Work</a>
+  <a href="#market">Market Intel</a>
+</div></div></div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Executive Pulse · Live Visibility Command Center</div>
+    <h1 class="big">Your month, in 30 seconds.</h1>
+    <div class="lede">Hover any <span class="info">i<span class="bub"><div class="bl w">What this is</div><p>A grey bubble like this. Hover any circle to see what a number means, why it matters to you, and how you're doing right now.</p></span></span> to see what it means and why it matters. Toggle any card between <b>this month (August)</b> and <b>last month (July)</b> to watch it move.</div>
+    <div style="margin-top:14px;display:inline-flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:10px 16px;box-shadow:var(--shadow)"><div style="font-size:19px;font-weight:800;color:var(--teal)">LEADING THE AI RACE ▲</div><div style="font-size:12px;line-height:1.3"><b>LocalLift Visibility Index™</b><br><span style="color:var(--sub)">#1 in AI share of voice · profile actions up 11.7% on July · map improving answers</span></div></div>
+<div style="margin-top:10px;font-size:12px;color:var(--sub);max-width:660px"><b>What this report covers:</b> every performance figure is <b>August 1 to 31, 2026</b>. July appears only as the comparison, on the prior toggle and where a change is stated. Map and AI readings carry the date they were measured.</div>
+  </div>
+
+  <section id="pulse">
+    <div class="grid g4" id="pulseCards"></div>
+    <div class="read"><div class="rl">The story</div><p>Montage is <b>leading the AI race, and the map is catching up</b>. When AI assistants answer a Tigard renter, Montage is now named most often of any tracked community, <b>10% share of voice against The Steward's 7%</b>. Renters took <b>1,252 actions</b> on the Google profile in August, up 11.7% on July, with calls, directions and website clicks all rising. On the map Montage ranks 2nd on "apartments tigard" and improved on four of five tracked searches. The watch items: AI sentiment eased to 89%, and the site is not yet on page one for general Tigard apartment searches.</p></div>
+  </section>
+
+  <section id="flow">
+    <div class="sechead"><span class="k">How it works</span><h2>How your visibility becomes renters</h2></div>
+    <div style="font-size:11.5px;color:var(--sub);margin:0 0 10px">Profile and website figures are August 1 to 31, 2026. Map and AI figures are the latest scan and carry the date they were read.</div><div class="flow"><div class="step"><div class="sn" style="background:var(--pur)">1</div><div class="st">SEEN</div><div class="sd">Renters find you on Maps, Google and AI before they ever type your name.</div><div class="sm">August: 3,416 profile views, 704 search clicks, 6,244 times shown in Google search</div></div><div class="step"><div class="sn" style="background:var(--blue)">2</div><div class="st">CHOSEN</div><div class="sd">AI names Montage more often than any tracked Tigard rival.</div><div class="sm">AI reading Sep 12: 10% share of voice, 1st of seven</div></div><div class="step"><div class="sn" style="background:var(--teal)">3</div><div class="st">ENGAGED</div><div class="sd">They act on your profile: click, call, ask for directions.</div><div class="sm">August: 1,252 profile actions</div></div><div class="step"><div class="sn" style="background:var(--grn)">4</div><div class="st">VISITED</div><div class="sd">They browse your site, floor plans and photos.</div><div class="sm">August: 577 website clicks</div></div><div class="step"><div class="sn" style="background:var(--org)">5</div><div class="st">TOUR</div><div class="sd">The visit becomes a lead your leasing team can close.</div><div class="sm">August: 88 calls, 587 direction requests</div></div></div>
+    <div class="read"><div class="rl">Why this matters</div><p>Every dashboard shows you the last step. <b>We build the first two, where the renter is won or lost.</b> If you're not seen and chosen at the top, nothing reaches your leasing team at the bottom. This is the funnel most vendors never touch.</p></div>
+  </section>
+
+
+  <section id="wedge">
+    <div class="sechead"><span class="k">The difference</span><h2>The discovery layer standard tools cannot see</h2></div>
+    <div class="wedge">
+      <div class="wcol wl">
+        <div class="wcap">Standard analytics · search reports · dashboards</div>
+        <div class="wli"><span class="ic">✓</span><div>“AI sent you <b>11 sessions</b>.” A number, and nothing else.</div></div>
+        <div class="wli"><span class="ic">✓</span><div>Clicks, calls, organic traffic. <b>What already happened.</b></div></div>
+        <div class="wli"><span class="ic">✓</span><div>People who <b>already found you</b> and landed on the site.</div></div>
+        <div class="wli"><span class="ic">✕</span><div>No queries. No sentiment. No engine. No competitors. No share of voice.</div></div>
+      </div>
+      <div class="wcol wr">
+        <div class="wcap">LocalLift IQ · the discovery layer</div>
+        <div class="wli"><span class="ic">★</span><div><b>What renters asked AI</b>, which engine answered, and whether it named you or a rival.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Your <b>share of voice</b> vs every competitor, and your rank at every point on the map.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Renters who've <b>never heard your name</b>, caught at the top of the funnel.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Then we <b>build the content</b>: AI-readable pages, FAQs, schema and captions written to get you chosen.</div></div>
+      </div>
+      <div class="wkick">Anyone can open a dashboard and say “calls are up.” We show you <b>who your competition is</b>, <b>where renters are looking</b>, and <b>whether AI recommends you</b>, then we do something about it. That's the discovery layer standard reporting can't reach.</div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="sechead"><span class="k">AI market position</span><h2>AI Share of Voice, the visibility race</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <div class="ct">How AI discovery actually works</div>
+      <div class="how">
+        <div class="hs"><div class="hn">1</div><div class="ht"><b>Renters ask AI</b> what to rent in Tigard, instead of scrolling ten listing sites.</div></div>
+        <div class="hs"><div class="hn">2</div><div class="ht"><b>AI answers from sources it trusts</b>: listing platforms, reviews, forums, and your own pages.</div></div>
+        <div class="hs"><div class="hn">3</div><div class="ht"><b>Communities that are cited and AI-readable get recommended.</b> The rest are invisible.</div></div>
+      </div>
+      <p style="margin:12px 0 0;font-size:12px;color:var(--sub)">That is why share of voice and citations matter, and why we write the captions, answers and page labels that AI can actually read. Win here and you're chosen before the search even begins.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">When AI answers a Tigard renter, who does it name?<span class="info" data-tip="sov">i</span></div>
+        <div id="sovBars"></div>
+        <div class="read"><div class="rl">The read</div><p>Montage holds <b>10% share of voice, the highest of the seven communities tracked</b>, ahead of The Steward at 7% and Oak Street Lofts at 4%. <span style="color:var(--mut)">Last month this report said Montage was 2nd, 11% against The Steward's 12%. Montage held its level while The Steward fell, which moved Montage to first.</span> Sentiment is <b>89% favourable</b>, down 6 points, so protecting how AI describes Montage is now as important as being named.</p></div>
+      </div>
+      <div class="card pad">
+        <div class="ct">Which AI engines cite montagetigard.com<span class="info" data-tip="citations">i</span></div>
+        <div id="citeBars"></div>
+        <div class="read"><div class="rl">The read</div><p>AI engines currently cite <b>9 pages</b> from montagetigard.com, nearly all through <b>ChatGPT</b>. Google AI Mode and Gemini each cite one page, and Google AI Overviews none yet. <span style="color:var(--mut)">Last month this report counted 452 citations across all sources; this card counts pages from Montage's own site, a different measure, so the two are not compared.</span> Widening Google AI coverage is the next step.</p></div>
+      </div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">Engine by engine, ChatGPT leads, Google AI is the gap</div>
+      <p style="margin:0 0 8px;font-size:12.5px;color:var(--sub)">Montage's AI visibility score is 14 out of 100, with mentions on ChatGPT and Gemini and none yet on Google AI Overviews. AI already talks about Montage's lifestyle, design and layouts, including rare four-bedroom townhomes, so the content exists to extend into Google's AI answers.</p>
+    </div>
+  </section>
+
+  <section id="attribution">
+    <div class="sechead"><span class="k">AI attribution</span><h2>Does AI actually bring you renters?</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <p style="margin:0;font-size:12.5px;color:var(--sub)">Renters increasingly decide inside ChatGPT and Google AI Mode, then Google your name and convert. Standard analytics credits the search and the AI moment disappears. Here is how we close that gap, with signals Google itself verifies.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card kpi"><div class="top" style="background:var(--blue)"></div><div class="big" style="color:var(--blue)">92%</div><div class="lab">of named search clicks<span class="info" data-tip="branded">i</span></div><div class="sub">474 of 516 clicks on named searches · August</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--teal)"></div><div class="big" style="color:var(--teal)">881</div><div class="lab">direct visits<span class="info" data-tip="direct">i</span></div><div class="sub">AI-influenced traffic often lands with no referrer</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--pur)"></div><div class="big" style="color:var(--pur)">11</div><div class="lab">visits sent by AI assistants<span class="info" data-tip="airef">i</span></div><div class="sub">tagged as AI assistant traffic · August</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+    </div>
+    <div class="read"><div class="rl">The read</div><p>In August <b>AI assistants sent 11 visits</b> and <b>881 visits arrived direct</b>. Organic search was the largest source of site visits, 1,350 of them, and the site recorded 52 completed contact forms. Paid channels brought 55% of new visitors (2,172 of 3,934). <span style="color:var(--mut)">Last month this report said 613 direct visits and 91% branded search. Name share held at 92%; the direct figure is read here on August sessions, a different basis, so we do not compute a change.</span></p></div>
+  </section>
+
+  <section id="maps">
+    <div class="sechead"><span class="k">Local maps</span><h2>Maps grid &amp; the competition</h2></div>
+    <div class="card pad">
+      <div class="ct">Google Maps grid scan, your rank across the whole city<span class="info" data-tip="grid">i</span></div>
+      <div id="gridRows"></div>
+      <div class="read"><div class="rl">The read</div><p><span style="color:var(--mut)">Scanned Sep 13. The bar shows how much of the grid places Montage in the top 20.</span> Montage ranks <b>4.24 on "apartments tigard"</b> with an 11.17% share and good rankings across half the grid, and <b>5.04 on "best apartments tigard oregon"</b>, up 1.48 on the previous scan. Four of five tracked searches improved; "new apartments tigard" held at 9.16. Near Washington Square is the weakest at 10.92. <span style="color:var(--mut)">Last month this report quoted an average of 12.8 on a different set of searches, so we compare scan to scan here.</span></p></div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">Who you're up against, and what moves map position<span class="info" data-tip="competitors">i</span></div>
+      <div style="font-size:11px;color:var(--sub);margin:0 0 9px">Average position across the whole map scan, best position at the top. A lower number is better. Your community is the highlighted row.</div><table class="ctab"><thead><tr><th>Community</th><th>Rating</th><th style="text-align:right">Avg map position<br><span style="font-weight:600;text-transform:none;letter-spacing:0">1 is best</span></th></tr></thead><tbody id="compBody"></tbody></table>
+      <div class="read"><div class="rl">The read</div><p>On "apartments tigard", Montage ranks <b>2nd, behind only The Steward</b>, and ahead of The 72nd, Carriage House and The Overland. At <b>4.8 stars</b> it is rated above every community around it except The 72nd. The Steward is the one to catch on the map. <b>Standard analytics can't show you any of this.</b></p></div>
+    </div>
+  </section>
+
+  <section id="gbp">
+    <div class="sechead"><span class="k">Google profile</span><h2>Your Google profile performance</h2></div>
+    <div class="grid g4" id="gbpCards"></div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">What renters did on your profile</div>
+      <div id="gbpBars"></div>
+      <div class="read"><div class="rl">The read</div><p>In August <b>3,416 people viewed Montage's profile</b>, with 62% arriving from Google Search and 38% from Maps. Actions rose across the board: <b>1,252, up 11.7%</b> on July, with directions up 11.8% to 587, website clicks up 11.2% to 577, and calls at 88 against 77. Directions now edge out website clicks as the top action, the closest signal to a tour.</p></div>
+    </div>
+  </section>
+
+  <section id="health">
+    <div class="sechead"><span class="k">Visibility foundation</span><h2>Website + AI Search Health</h2></div>
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">Can Google &amp; AI cleanly read your site?<span class="info" data-tip="site">i</span></div>
+        <div class="grid g2" style="grid-template-columns:1fr 1fr">
+          <div style="text-align:center"><div style="font-size:34px;font-weight:800;color:var(--blue)">76%</div><div style="font-size:12px;color:var(--sub);font-weight:700">Site Health</div></div>
+          <div style="text-align:center"><div style="font-size:34px;font-weight:800;color:var(--grn)">80%</div><div style="font-size:12px;color:var(--sub);font-weight:700">AI Search Health</div></div>
+        </div>
+        <div style="text-align:center;font-size:11.5px;color:var(--mut);margin-top:8px">209-page crawl, Sep 14. Top 10% of all sites score 92.</div>
+      </div>
+      <div class="card pad">
+        <div class="ct">How renters find the site in search<span class="info" data-tip="keywords">i</span></div>
+        <div style="padding:6px 0"><div style="display:flex;justify-content:space-between;font-size:13px;margin:7px 0"><span style="color:var(--sub)">Search clicks, August</span><span style="font-weight:800">704</span></div><div style="display:flex;justify-content:space-between;font-size:13px;margin:7px 0"><span style="color:var(--sub)">"tigard apartments", times shown</span><span style="font-weight:800">173</span></div><div style="display:flex;justify-content:space-between;font-size:13px;margin:7px 0"><span style="color:var(--sub)">Clicks it earned, at position 28.8</span><span style="font-weight:800;color:var(--org)">2</span></div></div>
+        <div style="font-size:11.5px;color:var(--mut);margin-top:6px">Searches that do not use the name earned 42 clicks from 1,873 showings in August. Montage wins on the map for general Tigard searches but the website is on page three for them.</div>
+      </div>
+    </div>
+    <div class="read"><div class="rl">The read</div><p>No page on the site is blocked from AI crawlers. <b>Structured data errors on 59 of 203 pages</b> are the biggest technical fix, and errors fell by 11 since the last crawl. Sites linking to the domain rose 60% to 96. The foundation is sound, <b>so it is not what's holding visibility back</b>.</p></div>
+  </section>
+
+  <section id="position">
+    <div class="sechead"><span class="k">Strategic read</span><h2>Opportunity &amp; brand risk</h2></div>
+    <div class="grid g2" style="grid-template-columns:1fr 1fr">
+      <div class="orbox op"><div class="ol">The opportunity</div><h3>Own real-home luxury in Tigard.</h3><p>AI already talks about Montage's lifestyle, design and layouts, including rare four-bedroom townhomes that feel more like a home than a large complex. Renters praise the team and amenities like the golf room and sky lounge. Telling that boutique, townhome story everywhere, and reworking the copy on the pages you already have so they answer general Tigard searches, turns the AI lead into website visits.</p></div>
+      <div class="orbox rk"><div class="ol">The brand risk</div><h3>A famous name, and a closer rival.</h3><p>AI can mix Montage Tigard up with the Montage hotel brand, so "Montage Tigard" should be used the same way on the site and every listing. The Steward leads on sustainability and ranks first on the map, and AI sentiment eased 6 points to 89%. Keeping the review pace going and answering every review protects the lead.</p></div>
+    </div>
+    <div style="margin-top:14px" class="card pad"><div class="ct">What renters associate with the property<span class="info" data-tip="topics">i</span></div><div id="topics"></div></div>
+  </section>
+
+  <section id="reviews">
+    <div class="sechead"><span class="k">Reputation</span><h2>Review velocity, the fastest lever</h2></div>
+    <div class="grid g4" id="revCards"></div>
+    <div class="read"><div class="rl">The read</div><p>Reviews are a Montage strength: <b>4.8 stars on 33 reviews</b>, with every review answered. <span style="color:var(--mut)">These figures are from the September 4 reading. July's report counted 32.</span> Rivals on the map carry larger review bases, so keeping the asks going at tour, move-in and renewal protects the rating edge.</p></div>
+  </section>
+
+  <section id="ship">
+    <div class="sechead"><span class="k">How we work</span><h2>The work behind your numbers</h2></div>
+    <div class="grid g2" style="grid-template-columns:1fr 1fr">
+      <div class="card pad"><div class="ct">Signals we engineered this cycle</div><div id="shipList"></div>
+        <p style="margin:12px 0 0;font-size:11.5px;color:var(--mut)">Every one of these is engineered to be read by AI and Google. One system, not seven random posts.</p></div>
+      <div class="card pad"><div class="ct">Next 30 days: priorities</div><div id="focusList"></div></div>
+    </div>
+    <div class="card pad" style="margin-top:14px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <div style="flex:1;min-width:230px;font-size:12.5px;color:var(--ink)"><b>Every post we ship carries a tracked link</b>, so we can trace the path from an AI mention or a Google search all the way to a tour request. That is attribution standard reporting cannot give you.</div>
+    </div>
+    <div class="card pad" style="margin-top:14px"><div class="ct">Where these numbers come from</div><div class="how"><div class="hs"><div class="hn">1</div><div class="ht"><b>Profile and website figures</b> are read from your own Google profile and your website for August 1 to 31, 2026.</div></div><div class="hs"><div class="hn">2</div><div class="ht"><b>Map ranks</b> come from scanning the live map at dozens of points across the city and recording where you place at each one. Every scan carries its date.</div></div><div class="hs"><div class="hn">3</div><div class="ht"><b>AI figures</b> come from putting renter questions to the AI assistants and recording which communities they name, how they describe them, and which sources they quote. Every reading carries its date.</div></div></div><p style="margin:12px 0 0;font-size:11.5px;color:var(--mut)">All of it is our verified live data, measured the same way every month so the month to month comparison holds. Where a figure is measured on a different basis than last month, the page says so on its face rather than comparing two things that are not the same.</p></div><p style="text-align:center;font-size:11.5px;color:var(--mut);margin-top:12px">Your LocalLift weekly pulse keeps these numbers current between monthly reviews.</p>
+    <div class="read" style="background:#eef4ff;border-color:#cfe0ff"><div class="rl" style="color:var(--blue)">The goal</div><p>Become consistently recommended across Google, Maps and AI search <b>before renters ever reach a listing platform.</b> The listing sites are where renters finally land. We're the layer that gets them there already choosing you.</p></div>
+  </section>
+
+  <section id="market">
+    <div class="sechead"><span class="k">Coming next</span><h2>Lease-Up Market Intelligence</h2></div>
+    <div class="hd">
+      <div class="hdlock">🔒 LocalLift Market Intelligence · Preview</div>
+      <p class="hd-hook">See how your occupancy compares to every competitor in your submarket.</p>
+      <p style="margin:8px 0 0;font-size:12.5px;color:var(--sub);max-width:660px">Plus the concessions they are running, how their rents are moving, and the gaps you can own before they do. The one picture your own dashboards cannot show.</p>
+      <div class="hdblur">
+        <div class="grid g3" style="margin-top:6px">
+          <div class="card pad"><div style="font-size:26px;font-weight:800">XX%</div><div style="font-size:12px;color:var(--sub)">your occupancy vs the comp set</div></div>
+          <div class="card pad"><div style="font-size:26px;font-weight:800">$XX</div><div style="font-size:12px;color:var(--sub)">avg concession, comp set</div></div>
+          <div class="card pad"><div style="font-size:26px;font-weight:800">±X.X%</div><div style="font-size:12px;color:var(--sub)">rent movement, 90 days</div></div>
+        </div>
+      </div>
+      <button class="hdcta" onclick="this.textContent='Ask The SocialDM to unlock this for Montage'">Unlock preview →</button>
+    </div>
+  </section>
+
+  <div class="footer">
+    <span>Prepared exclusively for Montage · August 2026 · Confidential · © 2026 The SocialDM | LocalLift</span>
+    <span>SOCIALDM | LocalLift™ · Live Command Center</span>
+  </div>
+</div>
+
+<script>
+const TIPS={
+ topics:{w:"The themes AI connects with Montage when renters ask about Tigard apartments.",y:"It is the story the market already believes about you. Lean into what works, correct what does not.",h:"Lifestyle, design and layouts lead, including rare four-bedroom townhomes. AI flags the risk of confusion with the Montage hotel brand."},
+ airef:{w:"Site visits tagged as coming from an AI assistant.",y:"The clearest proof AI is sending renters.",h:"11 visits in August."},
+ direct:{w:"Visits with no referrer: a typed address, a bookmark, or a source the browser hid.",y:"AI-influenced visits often land here.",h:"881 direct visits in August. We do not attribute these to AI on their own."},
+ branded:{w:"Search clicks from people typing the Montage name.",y:"Name searches show awareness. Category searches show new discovery.",h:"92% of August's named search clicks came from name searches (474 of 516)."},
+ sov:{w:"How often AI assistants name each community when renters ask what to rent in Tigard.",y:"Renters increasingly start with AI.",h:"Montage 10%, The Steward 7%, Oak Street Lofts 4%, The 72nd 3%."},
+ citations:{w:"How many pages from Montage's own site each AI engine cites.",y:"If your site is cited more, AI recommends you more.",h:"9 pages cited, nearly all on ChatGPT; Google AI Overviews not yet."},
+ grid:{w:"Your Google Maps rank measured at dozens of points around the community, not one search.",y:"A renter a few streets over sees a different result than one at your door.",h:"apartments tigard 4.24, best apartments tigard oregon 5.04. Four of five searches improved on the last scan."},
+ competitors:{w:"Where you place on the map against competing communities. Three things set that position: how close the searcher is standing, how complete and active your profile is, and how well known you are. Review count and rating carry most of the weight in that last one, and they are the part you can still move.",y:"Standard analytics cannot show this.",h:"2nd on apartments tigard, behind The Steward at 2.4."},
+ keywords:{w:"How renters reach the site from Google search.",y:"Showing up is not enough; the click is what counts.",h:"'tigard apartments' showed the site 173 times in August for 2 clicks at position 28.8."},
+ site:{w:"How healthy the website is for Google and AI to read.",y:"If AI cannot cleanly read the site, it cannot confidently recommend you.",h:"76 site health and 80 AI search health. No page blocked from AI crawlers; 59 of 203 pages need structured data repair."},
+ nonbranded:{w:"Searches from renters who do not know your name yet.",y:"Name searches are loyalty; category searches are growth.",h:"1,873 non-name showings and 42 clicks in August."}
+};
+const PULSE=[
+ {big:"#1",lab:"AI share of voice",sub:"Montage 10%, next best The Steward 7%",psub:"Montage 11%, The Steward 12%",col:"var(--grn)",prior:"#2",plab:"Montage in July, behind The Steward",pd:"up"},
+ {big:"1,252",lab:"Google profile actions",sub:"August · up 11.7% on July",col:"var(--teal)",prior:"1,121",plab:"profile actions in July",pd:"up"},
+ {big:"4.24",lab:"map rank, apartments tigard",sub:"2nd · improving",col:"var(--org)",prior:"4.32",plab:"previous scan",pd:"up"},
+ {big:"89%",lab:"favourable in AI",sub:"down 6 points · the watch item",col:"var(--pur)",prior:"95%",plab:"previous reading",pd:"down"}
+];
+const SOV=[["Montage",10,1],["The Steward",7,0],["Oak Street Lofts",4,0],["The 72nd",3,0],["Attwell off Main",2,0]];
+const CITE=[["ChatGPT",6,"9 pages",0],["Google AI Mode",1,"1 page",0],["Gemini",1,"1 page",0],["Google AI Overviews",0,"0 pages",0]];
+const GRID=[["apartments tigard",4.24,11.17,100],["best apartments tigard oregon",5.04,7.08,100],["luxury apartments tigard",6.08,5.91,100],["new apartments tigard",9.16,4.23,92],["near washington square mall",10.92,3.35,88]];
+const COMP=[["The Steward",4.7,null,2.4,0],["Montage","4.8",33,4.2,1],["The 72nd Apartments","5.0",null,4.8,0],["Carriage House Apartments",4.5,52,6.8,0],["Hampton Ridge Apartments",3.9,null,7.6,0],["The Overland",4.1,null,9.2,0]];
+const GBPC=[["1,252","Profile actions","up 11.7% on July","var(--blue)"],["3,416","Profile views","62% from Google Search","var(--teal)"],["577","Website clicks","up 11.2% on July","var(--grn)"],["587","Direction requests","up 11.8% on July","var(--org)"]];
+const GBPBARS=[["Direction requests",587,"var(--grn)"],["Website clicks",577,"var(--blue)"],["Phone calls",88,"var(--org)"]];
+const TOPICS=[["Lifestyle",30,"var(--blue)"],["Design",22,"var(--grn)"],["Four-bedroom townhomes",16,"var(--teal)"],["Hotel brand confusion",14,"var(--pink)"],["Community belonging",14,"var(--org)"]];
+const REV=[["4.8","average rating","current average, as of Sep 4","var(--grn)"],["33","total reviews to date","as of Sep 4, 1 added since July's report","var(--org)"],["89%","favourable in AI answers","AI reading Sep 12, down 6 points","var(--blue)"],["100%","reviews answered","every review, as of Sep 4","var(--pur)"]];
+const SHIP=[
+ {n:"Video discovery content",w:"Short-form video (YouTube and social) published and indexed.",y:"Video is a surface both AI and Google read and rank, and it keeps your community in front of renters as they scroll."},
+ {n:"Google profile posts (tracked links)",w:"Regular posts on your Google profile, each carrying a tracked link.",y:"Google rewards a fresh, active profile with more visibility, and the tag lets us trace which post produced a lead."},
+ {n:"Profile captions written for AI &amp; SEO",w:"Every Google post caption is written for the crawlers that read it, not just people.",y:"It is how AI and Google understand, index and recommend you. Most vendors write captions for humans only and miss this entirely."},
+ {n:"Google profile photos",w:"Fresh, optimized photos added to your profile.",y:"Profiles with recent photos earn more views and calls, and photos are the first thing a renter judges."},
+ {n:"FAQ / Schema markup",w:"Structured data labels added to your pages.",y:"Schema is the format AI engines read to understand and quote your community accurately."},
+ {n:"Answer copy for your pages",w:"Wording we write for the pages you already have, so they answer the questions renters ask.",y:"It makes your own pages the source AI pulls its answers from, instead of a listing site."},
+ {n:"Social posts",w:"Cross-platform social content on a consistent cadence.",y:"More surfaces where both renters and AI encounter and reinforce your brand."}
+];
+const FOCUS=["Protect the AI lead and lift sentiment back above 90%","Catch The Steward on the map","Rework existing page copy and labels to answer general Tigard searches","Fix structured data on 59 pages; separate Montage Tigard from the hotel brand"];
+
+const el=(h)=>{const d=document.createElement('div');d.innerHTML=h;return d.firstElementChild;};
+function bub(t){const x=TIPS[t];return `<span class="bub"><div class="bl w">What it is</div><p>${x.w}</p><div class="bl y">Why it matters</div><p>${x.y}</p><div class="bl h">How you're doing</div><p class="hv">${x.h}</p></span>`;}
+document.querySelectorAll('.info[data-tip]').forEach(i=>{i.innerHTML='i'+bub(i.dataset.tip);});
+function mkToggle(c){const big=c.querySelector('.big'),lab=c.querySelector('.lab'),sb=c.querySelector('.sub'),tg=c.querySelector('.toggle');let on=0;
+ tg.onclick=()=>{on=!on;big.textContent=on?big.dataset.prior:big.dataset.cur;lab.textContent=on?lab.dataset.prior:lab.dataset.cur;sb.textContent=on?sb.dataset.prior:sb.dataset.cur;tg.textContent=on?'This month ▸':'◂ prior';big.style.color=on?'var(--mut)':'';};}
+const pc=document.getElementById('pulseCards');
+PULSE.forEach(k=>{const c=el(`<div class="card kpi"><div class="top" style="background:${k.col}"></div>
+ <div class="big" data-cur="${k.big}" data-prior="${k.prior}">${k.big}</div>
+ <div class="lab" data-cur="${k.lab}" data-prior="${k.plab}">${k.lab}</div><div class="sub" data-cur="${k.sub}" data-prior="${k.psub||k.sub}">${k.sub}</div>
+ <div class="row"><span class="chip">VERIFIED</span><span class="toggle">◂ prior</span></div></div>`);mkToggle(c);pc.appendChild(c);});
+const smx=8;document.getElementById('sovBars').innerHTML=SOV.map(([n,v,you])=>
+ `<div class="barrow"><div class="bn ${you?'you':''}">${n}${you?' (you)':''}</div><div class="track"><div class="fill" style="width:${Math.max(v/smx*100,2)}%;background:${you?'var(--grn)':'var(--blue)'}"></div></div><div class="bv" style="width:44px">${v}%</div></div>`).join('');
+const cmx=6;document.getElementById('citeBars').innerHTML=CITE.map(([d,p,n,you])=>
+ `<div class="barrow"><div class="bn ${you?'you':''}" style="width:150px">${d}${you?' (you)':''}</div><div class="track"><div class="fill" style="width:${Math.max(p/cmx*100,2)}%;background:${you?'var(--grn)':'var(--blue)'}"></div></div><div class="bv">${n}</div></div>`).join('');
+document.getElementById('gridRows').innerHTML=GRID.map(([kw,r,s,t])=>{const col=r<=8?'var(--grn)':'var(--org)';
+ return `<div class="grow"><div class="gkw">${kw}</div><div class="grank" style="color:${col}">${r}</div><div class="gsov">${s}% SoV</div><div class="gtop"><div class="track" style="height:10px"><div class="fill" style="width:${t}%;background:${col}"></div></div></div><div style="width:44px;text-align:right;font-weight:800;font-size:12px;color:${col}">${t}%</div></div>`;}).join('');
+const rmax=52;document.getElementById('compBody').innerHTML=COMP.map(([n,rt,rv,rk,you])=>{const cls=rk<=3?'g':rk<=8?'o':'r';
+ return `<tr class="${you?'you':''}"><td>${you?`<b style="color:var(--grn)">${n}</b><span style="display:inline-block;margin-left:7px;padding:2px 7px;border-radius:99px;background:var(--grn);color:#fff;font-size:10px;font-weight:800;letter-spacing:.5px;vertical-align:middle">YOU</span>`:n}</td><td>${rt} ★</td><td style="text-align:right" class="rk ${cls}">${rk}</td></tr>`;}).join('');
+document.getElementById('gbpCards').innerHTML=GBPC.map(([b,l,s,c])=>
+ `<div class="card kpi"><div class="top" style="background:${c}"></div><div class="big" style="color:${c}">${b}</div><div class="lab">${l}</div><div class="sub">${s}</div><div class="row"><span class="chip">VERIFIED · AUGUST</span></div></div>`).join('');
+const gmx=587;document.getElementById('gbpBars').innerHTML=GBPBARS.map(([n,v,c])=>
+ `<div class="barrow"><div class="bn">${n}</div><div class="track"><div class="fill" style="width:${v/gmx*100}%;background:${c}"></div></div><div class="bv" style="width:44px">${v}</div></div>`).join('');
+document.getElementById('topics').innerHTML='<div style="display:flex;flex-wrap:wrap;gap:8px">'+TOPICS.map(([n,w,c])=>`<div class="tile" style="background:${c};flex:1 1 ${w>18?'46%':'28%'}">${n}</div>`).join('')+'</div>';
+document.getElementById('revCards').innerHTML=REV.map(([b,l,s,c])=>
+ `<div class="card kpi"><div class="top" style="background:${c}"></div><div class="big" style="color:${c}">${b}</div><div class="lab">${l}</div><div class="sub">${s}</div><div class="row"><span class="chip">VERIFIED</span></div></div>`).join('');
+document.getElementById('shipList').innerHTML=SHIP.map(o=>`<span class="pill">${o.n}<span class="bub"><div class="bl w">What it is</div><p>${o.w}</p><div class="bl y">Why it matters</div><p class="hv">${o.y}</p></span></span>`).join('');
+document.getElementById('focusList').innerHTML=FOCUS.map((f,i)=>`<div style="display:flex;gap:9px;margin:8px 0;font-size:13px"><span style="font-weight:800;color:var(--blue)">${i+1}</span><span>${f}</span></div>`).join('');
+
+(function(){function clamp(el,b){var i=el.getBoundingClientRect(),w=b.offsetWidth,pad=12,
+ c=i.left+i.width/2,l=c-w/2,r=c+w/2,dx=0;
+ if(r>window.innerWidth-pad)dx=window.innerWidth-pad-r;
+ if(l+dx<pad)dx=pad-l;
+ b.style.transform=dx?'translateX(calc(-50% + '+Math.round(dx)+'px))':'';}
+ function all(){document.querySelectorAll('.info,.pill').forEach(function(el){
+  var b=el.querySelector('.bub');if(b)clamp(el,b);});}
+ document.querySelectorAll('.info,.pill').forEach(function(el){
+  el.addEventListener('mouseenter',function(){var b=el.querySelector('.bub');if(b)clamp(el,b);});});
+ all();window.addEventListener('resize',all);window.addEventListener('scroll',all,{passive:true});})();
+const links=[...document.querySelectorAll('.nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{let i=secs.length-1;for(let k=0;k<secs.length;k++){if(secs[k].getBoundingClientRect().top<140)i=k;}links.forEach(a=>a.classList.remove('on'));links[i].classList.add('on');});
+</script>
