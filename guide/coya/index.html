@@ -1,0 +1,468 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>What Is Working, Coya</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#f6f4ef; --card:#fffdfa; --ink:#1a1c22; --body:#3d414c; --soft:#767c8a;
+  --rule:#e2ddd3; --rule2:#d3ccbf;
+  --accent:#1f5f66; --accent-soft:#e6efef;
+  --we:#27508f; --we-bg:#e7edf8;
+  --you:#8a4a12; --you-bg:#f9efe3;
+  --why:#1d6b41; --why-bg:#e6f2ea;
+  --warn:#9a2020; --warn-bg:#f9e9e7;
+  --shadow:0 1px 2px rgba(26,28,34,.05),0 10px 26px rgba(26,28,34,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15171c; --card:#1c1f26; --ink:#f1efe9; --body:#c5c9d2; --soft:#8b919e;
+    --rule:#2c3038; --rule2:#3a3f49;
+    --accent:#6fc2c8; --accent-soft:#1d3336;
+    --we:#8fb2ec; --we-bg:#18243b;
+    --you:#e0a951; --you-bg:#332512;
+    --why:#6fd39b; --why-bg:#16301f;
+    --warn:#eb8b80; --warn-bg:#331816;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 26px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15171c; --card:#1c1f26; --ink:#f1efe9; --body:#c5c9d2; --soft:#8b919e;
+  --rule:#2c3038; --rule2:#3a3f49;
+  --accent:#6fc2c8; --accent-soft:#1d3336;
+  --we:#8fb2ec; --we-bg:#18243b;
+  --you:#e0a951; --you-bg:#332512;
+  --why:#6fd39b; --why-bg:#16301f;
+  --warn:#eb8b80; --warn-bg:#331816;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 26px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--body);
+  font-family:"Source Sans 3",-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-block:0 72px;padding-left:20px;padding-right:20px}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque","Source Sans 3",sans-serif;color:var(--ink);
+  text-wrap:balance;margin:0}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+
+header{padding-block:44px 22px;border-bottom:2px solid var(--ink)}
+h1{font-size:clamp(30px,5vw,44px);font-weight:800;letter-spacing:-.02em;margin-top:8px}
+.lede{max-width:64ch;margin-top:12px;font-size:16px}
+.lede b{color:var(--ink)}
+
+section{margin-top:48px}
+h2{font-size:23px;font-weight:800;letter-spacing:-.01em}
+.sub{margin-top:6px;max-width:66ch}
+
+.script{margin:16px 0 0;padding:14px 17px;border-left:3px solid var(--accent);
+  background:var(--accent-soft);border-radius:0 8px 8px 0;font-size:14.5px;color:var(--ink)}
+.script span{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+
+/* moments */
+.moments{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+@media(max-width:820px){.moments{grid-template-columns:1fr}}
+.m{background:var(--card);border:1px solid var(--rule);border-radius:13px;padding:18px 20px;
+  box-shadow:var(--shadow)}
+.m .tag{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--you);background:var(--you-bg);border-radius:5px;
+  padding:3px 8px;display:inline-block}
+.m h3{font-size:18px;font-weight:700;margin-top:10px}
+.m .p{margin:8px 0 0;font-size:14px}
+.m .p b{color:var(--ink)}
+.m .say{margin:12px 0 0;padding:11px 13px;background:var(--accent-soft);border-radius:9px;
+  font-size:14px;color:var(--ink)}
+.m .say em{display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-style:normal;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+
+/* calculator */
+.calc{margin-top:20px;background:var(--card);border:1px solid var(--rule);border-radius:14px;
+  box-shadow:var(--shadow);padding:22px 24px}
+.calcgrid{display:grid;grid-template-columns:1fr 300px;gap:26px;align-items:start}
+@media(max-width:820px){.calcgrid{grid-template-columns:1fr;gap:20px}}
+.ctrl{margin-bottom:20px}
+.ctrl:last-child{margin-bottom:0}
+.ctrl label{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  font-size:13.5px;color:var(--body)}
+.ctrl label b{font-family:"IBM Plex Mono",monospace;font-size:15px;color:var(--ink)}
+.ctrl input[type=range]{width:100%;margin-top:9px;accent-color:var(--accent);height:22px}
+.readout{background:var(--accent-soft);border-radius:12px;padding:20px;text-align:center}
+.readout .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
+.readout .big{font-family:"Bricolage Grotesque",sans-serif;font-size:46px;font-weight:800;
+  color:var(--ink);line-height:1.05;margin-top:6px;letter-spacing:-.02em}
+.readout .stars{font-size:19px;letter-spacing:3px;color:var(--you);margin-top:4px}
+.readout .delta{margin-top:10px;font-size:14px;color:var(--ink)}
+.readout .delta b{color:var(--why)}
+.readout .note{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule2);
+  font-size:13px;color:var(--body)}
+
+/* two column */
+.lang{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media(max-width:760px){.lang{grid-template-columns:1fr}}
+.lang div{border-radius:12px;padding:16px 18px;border:1px solid var(--rule);background:var(--card);
+  box-shadow:var(--shadow)}
+.lang h4{font-size:14px;margin-bottom:8px}
+.lang p{margin:0 0 8px;font-size:14px}
+.lang p:last-child{margin-bottom:0}
+.no{color:var(--soft);text-decoration:line-through;text-decoration-color:var(--rule2)}
+.yes{color:var(--ink)}
+
+.trio{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+@media(max-width:760px){.trio{grid-template-columns:1fr}}
+.box{border-radius:11px;padding:15px 17px;font-size:14px}
+.box.we{background:var(--we-bg)} .box.warn{background:var(--warn-bg)}
+.box .t{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;margin-bottom:7px;display:block}
+.we .t{color:var(--we)} .warn .t{color:var(--warn)}
+.box ul{margin:0;padding-left:17px}
+.box li{margin:5px 0}
+.box li b{color:var(--ink)}
+
+.standing{margin-top:18px;border:1px dashed var(--rule2);border-radius:12px;padding:20px 22px}
+.standing ol{margin:10px 0 0;padding-left:20px}
+.standing li{margin:8px 0}
+.standing li b{color:var(--ink)}
+
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
+  font-size:12.5px;color:var(--soft)}
+@media print{
+  body{background:#fff;font-size:13px}
+  .wrap{padding-left:0;padding-right:0}
+  .m,.lang div,.standing,.calc,.box{box-shadow:none;break-inside:avoid}
+  section{break-inside:avoid}
+  header{padding-block:0 14px}
+  footer{break-before:avoid}
+}
+.sig{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.sig .brand{font-family:"Bricolage Grotesque","Source Sans 3",sans-serif;font-weight:800;
+  letter-spacing:.3px;font-size:15px;color:var(--ink);white-space:nowrap}
+.sig .brand .pin{color:#e0425a}
+.sig .said{font-size:12.5px;color:var(--soft);max-width:52ch}
+@media print{.sig{break-inside:avoid;margin-top:26px}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Prepared for Coya · Reviews</div>
+  <h1>What Is Working Right Now</h1>
+  <p class="lede">We sit inside the reporting for a lot of lease-ups, which means we get to see the
+  same experiment run in a dozen places at once. Some review habits move a community's position
+  within a month. Others quietly do nothing. <b>This is that pattern, written down and handed to
+  you.</b></p>
+  <p class="lede" style="margin-top:10px">Nothing here is a task list. You know your community and
+  your residents better than we ever will. What we can bring you is what is working elsewhere right
+  now, the language that goes with it, and the two rules that keep a community out of trouble. If one
+  of these fits how your team already works, we will build everything around it so nobody on site has
+  to remember anything.</p>
+</header>
+
+<section>
+  <div class="eyebrow">Why we keep raising this one</div>
+  <h2>What we watch a review actually do</h2>
+  <p class="sub">Two effects, and they are different. In almost every lease-up we report on, the
+  rating is not the problem. The count is, and the only thing the communities ranked above you have
+  that you do not is time. This is the one lever we cannot pull from our side, which is the honest
+  reason it keeps showing up on your report.</p>
+  <div class="lang">
+    <div>
+      <h4>It moves where they sit on the map</h4>
+      <p>Map position comes from three things: how close the renter is, how well the listing matches
+      what they typed, and how established the community looks. Review count and rating sit inside
+      that third one. Distance cannot be changed and we handle the listing, so on a new building the
+      review base is the part that is still moving.</p>
+    </div>
+    <div>
+      <h4>It is the sentence AI repeats</h4>
+      <p>When a renter asks an assistant which community to pick, it does not read the brochure. It
+      reads what residents wrote, and it quotes them almost word for word. A community with eleven
+      reviews gives it almost nothing to say. That is why two buildings with the same rating can get
+      described completely differently.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">What is actually producing reviews right now</div>
+  <h2>Nine moments a resident is already happy</h2>
+  <p class="sub">The pattern across every community we watch is the same. Nobody writes a review
+  because they got an email. They write one because somebody asked them in a moment when they felt
+  looked after. On a lease-up almost every resident is inside their first ninety days, which is the
+  most generous window a community ever gets, and it closes. Here is each moment, what we see it do,
+  and one sentence your team is welcome to use as is.</p>
+
+  <div class="moments">
+
+    <div class="m">
+      <span class="tag">Moment 01</span>
+      <h3>The first week after move-in</h3>
+      <p class="p">The single best window in the whole resident relationship, and on a lease-up
+      nearly everyone is in it right now. They chose this place over four others last month and they
+      still feel good about the decision. Wait six months and that feeling is gone.</p>
+      <div class="say"><em>One line</em>"You picked us over a lot of options. If you would not mind
+      saying why in a couple of sentences, it genuinely helps the next person who is deciding."</div>
+    </div>
+
+    <div class="m">
+      <span class="tag">Moment 02</span>
+      <h3>The minute a work order is closed</h3>
+      <p class="p">The highest-yield ask in the business and the most underused. Somebody came into
+      their home and fixed their problem. Gratitude is at its peak for about an hour, and then it is
+      over. The tech is the one who should ask, not the office, because the tech is the one they are
+      grateful to.</p>
+      <div class="say"><em>One line</em>"Glad that is sorted. If you have thirty seconds, a quick
+      review means a lot to our team, and you can mention me by name if you want."</div>
+    </div>
+
+    <div class="m">
+      <span class="tag">Moment 03</span>
+      <h3>A package or delivery saved</h3>
+      <p class="p">Somebody's parcel went missing, or got delivered to the wrong door, or came while
+      they were away and the office kept it safe. Small problem, disproportionate relief. Renters
+      talk about package handling constantly, and almost nobody has reviews that mention it.</p>
+      <div class="say"><em>One line</em>"Found it. Honestly, if package stuff is something you care
+      about, that is worth putting in a review, people ask us about it on every tour."</div>
+    </div>
+
+    <div class="m">
+      <span class="tag">Moment 04</span>
+      <h3>Parking finally sorted</h3>
+      <p class="p">A spot reassigned closer to their door, a garage fob that stopped working, a
+      neighbor parked across two spaces, guest parking sorted for a visitor. Parking is the thing
+      residents complain about most, so a resident who is happy about parking is unusually motivated
+      to say so.</p>
+      <div class="say"><em>One line</em>"That is handled. If you have a second, mentioning the
+      parking in a review would help us, it is the first question half our tours ask."</div>
+    </div>
+
+    <div class="m">
+      <span class="tag">Moment 05</span>
+      <h3>The first time they use an amenity</h3>
+      <p class="p">On a new building the pool, the gym, the dog run and the lounge are the reason a
+      lot of them signed. Catching someone walking out of the gym at seven in the morning, or leaving
+      the dog park, is catching them at the exact moment the building is delivering what it sold.</p>
+      <div class="say"><em>One line</em>"How is the gym treating you? If you like it, that is the
+      kind of thing worth saying in a review, people cannot tell from photos."</div>
+    </div>
+
+    <div class="m">
+      <span class="tag">Moment 06</span>
+      <h3>Resident events</h3>
+      <p class="p">Coffee in the lobby, a food truck, a pool morning, a holiday thing. Everyone is in
+      one place, in a good mood, with their phone in their hand and five minutes to spare. One
+      printed card on the table beats a thousand emails. This is the only moment on this list where
+      asking ten people at once is natural.</p>
+      <div class="say"><em>One line</em>"Glad you came. There is a card on the table if you feel like
+      leaving us a review while you are standing here, it takes about a minute."</div>
+    </div>
+
+    <div class="m">
+      <span class="tag">Moment 07</span>
+      <h3>When somebody says thank you out loud</h3>
+      <p class="p">The one that costs nothing and gets skipped every single day. A resident says
+      "you guys are great" at the mailbox, in the hallway, in the elevator. Most teams say thank you
+      and move on. The whole idea here is that someone on the team is allowed to answer that with a
+      question.</p>
+      <div class="say"><em>One line</em>"That means a lot. Would you mind putting that exact thing in
+      a review? What you just said is better than anything we could write."</div>
+    </div>
+
+    <div class="m">
+      <span class="tag">Moment 08</span>
+      <h3>The tour that turned into a lease</h3>
+      <p class="p">Somebody just chose this community while it was still fresh against everywhere
+      else they saw. They know exactly what made the difference, and in two months they will not
+      remember. A lease-up gets dozens of these a month and almost nobody asks.</p>
+      <div class="say"><em>One line</em>"Welcome in. While it is fresh, what made you pick us over
+      the other places you looked at? That is exactly the thing to put in a review if you have a
+      minute."</div>
+    </div>
+
+    <div class="m">
+      <span class="tag">Moment 09</span>
+      <h3>Anybody who sends a friend</h3>
+      <p class="p">A resident who refers someone has already recommended the community out loud to a
+      person they care about. Asking them to write down what they already said is the smallest ask on
+      this page, and it is the review most likely to name a specific person or floor plan.</p>
+      <div class="say"><em>One line</em>"Thank you for sending them our way. You clearly already say
+      nice things about us, any chance you would write a couple of them down?"</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Try it with your own numbers</div>
+  <h2>What ten reviews actually does</h2>
+  <p class="sub">This is the part most teams have never been shown. It already opens on Coya's own starting point, taken from your August report: <b>39 reviews at 4.8</b>. Drag the third slider and watch what a normal month of
+  asking is worth. A small review base is not a weakness, it is leverage.
+  The fewer you have, the more every single new one is worth, and that advantage shrinks every month
+  you grow. Right now is the cheapest this will ever be for you.</p>
+
+  <div class="calc">
+    <div class="calcgrid">
+      <div>
+        <div class="ctrl">
+          <label>Reviews you have today <b id="vN">39</b></label>
+          <input id="sN" type="range" min="5" max="300" step="1" value="39">
+        </div>
+        <div class="ctrl">
+          <label>Your rating today <b id="vR">4.8</b></label>
+          <input id="sR" type="range" min="3.4" max="5" step="0.1" value="4.8">
+        </div>
+        <div class="ctrl">
+          <label>New five star reviews <b id="vA">10</b></label>
+          <input id="sA" type="range" min="0" max="60" step="1" value="10">
+        </div>
+        <p style="margin:16px 0 0;font-size:13.5px;color:var(--soft)">Assumes the new reviews come in
+        at five stars, which is what these moments produce when the ask is made in person. One
+        unhappy review inside the same batch costs roughly what four happy ones gain, which is the
+        real argument for asking in the moments below rather than at random.</p>
+      </div>
+      <div class="readout">
+        <div class="lab">Rating after</div>
+        <div class="big" id="oR">4.8</div>
+        <div class="stars" id="oS">★★★★★</div>
+        <div class="delta" id="oD">Up <b>0.02</b> from 4.8</div>
+        <div class="note" id="oN">Each new review is worth about <b>0.002</b> of a star right now.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">The difference we can see in the data</div>
+  <h2>What makes one review worth three</h2>
+  <p class="sub">A five star review with no words still lifts the average, and does nothing else. A
+  five star review with the right words gets quoted back to renters for years. Steering it costs your
+  team nothing.</p>
+  <div class="lang">
+    <div>
+      <h4>Reviews that do very little</h4>
+      <p class="no">"Great place to live."</p>
+      <p class="no">"Love it here, highly recommend!"</p>
+      <p class="no">"Five stars."</p>
+      <p style="margin-top:12px;font-size:13.5px;color:var(--soft)">Nothing in these can be quoted to
+      a renter who is deciding, and nothing in them matches what people actually type when they are
+      searching.</p>
+    </div>
+    <div>
+      <h4>Reviews that keep working</h4>
+      <p class="yes">"Marco in maintenance fixed our AC the same afternoon we called."</p>
+      <p class="yes">"We are in a two bedroom with the balcony and the natural light is the reason we
+      picked it."</p>
+      <p class="yes">"Ten minutes from work and the dog park actually gets used."</p>
+      <p style="margin-top:12px;font-size:13.5px;color:var(--soft)">A name, a floor plan, an amenity,
+      a neighborhood. These are the sentences that get repeated back to the next renter.</p>
+    </div>
+  </div>
+  <div class="script">
+    <span>How to steer it without scripting anyone</span>
+    Nobody needs to be told what to write. Just ask about the thing that actually happened. If you
+    fixed their sink, say mention the maintenance. If they are in love with the two bedroom, say
+    mention the floor plan. People write back whatever you put in their head.
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Our half of it, and one warning worth having</div>
+  <h2>What we carry, and what to stay away from</h2>
+  <p class="sub">The second list is the one we would want to be told about. We have watched
+  communities lose reviews they had already earned this way.</p>
+  <div class="trio">
+    <div class="box we">
+      <span class="t">We handle this so nobody has to remember</span>
+      <ul>
+        <li><b>A short link and a code they can scan</b>, sized for a work order card, an event
+        table, a move-in folder and an email signature. They never type anything.</li>
+        <li><b>A reply to every review, good or bad</b>, in the community's voice, so the team is not
+        writing them at nine at night.</li>
+        <li><b>The count and rating on every report</b>, against the communities ranked above you,
+        so progress is visible instead of a feeling.</li>
+        <li><b>The review language fed back into your listing</b>, so the words residents actually
+        use end up where renters are searching.</li>
+      </ul>
+    </div>
+    <div class="box warn">
+      <span class="t">Three things that can cost you the reviews you already have</span>
+      <ul>
+        <li><b>Never offer anything for a review.</b> No gift card, no raffle, no rent credit, no
+        pizza. It is against the rules on every platform, and reviews bought that way get removed in
+        batches later, usually the good ones.</li>
+        <li><b>Never screen first.</b> Asking who is happy before deciding who gets the link is
+        against the rules too. Ask everyone in the moments above and the screening takes care of
+        itself.</li>
+        <li><b>Never blast the whole community at once.</b> A pile of reviews landing in one week
+        from one building looks exactly like the thing platforms filter out. Steady and in person
+        beats a campaign every time.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">If you only take one thing off this page</div>
+  <h2>The smallest version that works</h2>
+  <p class="sub">Ignore everything above and do this. It is four lines, and it is the version that
+  survives a busy week on a lease-up.</p>
+  <div class="standing">
+    <ol>
+      <li><b>One person owns it.</b> Not the team, one named person, usually whoever runs move-ins.
+      Shared ownership means nobody does it.</li>
+      <li><b>Two moments, not nine.</b> Move-in week and closed work orders. Those two alone cover
+      most of a lease-up's residents in any given month.</li>
+      <li><b>Ask out loud, in person, once.</b> No follow up, no chasing, no second email. If they say
+      no, that is the end of it.</li>
+      <li><b>We do the rest.</b> The link, the card, the replies, and the counting. All they own is
+      the sentence.</li>
+    </ol>
+  </div>
+  <div class="script" style="border-left-color:var(--why);background:var(--why-bg)">
+    <span style="color:var(--why)">That is the whole thing</span>
+    Two moments, one person, one sentence. Do that for thirty days and we will show you exactly what
+    it did to your position on next month's report. If it works here the way it has worked elsewhere,
+    you will see it before the quarter is out.
+  </div>
+</section>
+
+<div class="sig">
+  <div class="brand">SOCIALDM <span class="pin">|</span> L<span class="pin">&bull;</span>calLift&trade;</div>
+  <div class="said">Put together for your on-site team, August 2026. Yours to keep, forward and
+  print. If you want this set up for your community, we will handle the link, the cards and the
+  replies.</div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var sN=document.getElementById('sN'),sR=document.getElementById('sR'),sA=document.getElementById('sA'),
+      vN=document.getElementById('vN'),vR=document.getElementById('vR'),vA=document.getElementById('vA'),
+      oR=document.getElementById('oR'),oS=document.getElementById('oS'),
+      oD=document.getElementById('oD'),oN=document.getElementById('oN');
+  function stars(r){
+    var out='',f=Math.round(r*2)/2;
+    for(var i=1;i<=5;i++){ out += (f>=i ? '★' : (f>=i-0.5 ? '⯨' : '☆')); }
+    return out;
+  }
+  function run(){
+    var n=+sN.value, r=+sR.value, a=+sA.value;
+    var after = (n*r + a*5) / (n+a);
+    if(after>5) after=5;
+    var per = a>0 ? (after-r)/a : (((n*r+5)/(n+1))-r);
+    vN.textContent=n; vR.textContent=r.toFixed(1); vA.textContent=a;
+    oR.textContent=after.toFixed(2);
+    oS.textContent=stars(after);
+    oD.innerHTML = a===0
+      ? 'Drag the third slider to see it move'
+      : 'Up <b>'+(after-r).toFixed(2)+'</b> from '+r.toFixed(1)+', on '+(n+a)+' total reviews';
+    oN.innerHTML = 'At '+n+' reviews, each new five star review is worth about <b>'
+      + per.toFixed(3) + '</b> of a star. At 300 reviews it would be worth about <b>'
+      + (((300*r+5)/301)-r).toFixed(3) + '</b>.';
+  }
+  [sN,sR,sA].forEach(function(el){ el.addEventListener('input',run); });
+  run();
+})();
+</script>
