@@ -36,7 +36,7 @@ button.done{background:var(--green)}
 
   <div class="hdr">
     <h1>Montage Weekly Pulse</h1>
-    <span class="m">Week of Sat Aug 29 to Fri Sep 4, 2026 · for Claudia</span>
+    <span class="m">Week of Sat Sep 12 to Fri Sep 18, 2026 · for Claudia</span>
   </div>
 
   <div class="strip" id="strip">
@@ -47,7 +47,7 @@ button.done{background:var(--green)}
 
   <div class="card">
     <div class="lbl">Subject line</div>
-    <div class="subj" id="subject">Montage Weekly Pulse: search improved, engagement did not, and you retook the AI lead</div>
+    <div class="subj" id="subject">Montage Weekly Pulse, week of Sep 12 to Sep 18</div>
     <div class="row">
       <button class="sec" id="bsubj" type="button">Copy subject line</button>
     </div>
@@ -55,47 +55,34 @@ button.done{background:var(--green)}
 
   <div class="card">
     <div class="lbl">Email</div>
+    <div class="row" style="margin-top:0;margin-bottom:14px"><button id="bmailtop" type="button">Copy email</button>
+      <span class="hint">Pastes into Mail with the link live.</span></div>
     <div class="body" id="emailbody">
       <p>Hi Claudia,</p>
 
       <p>This week's Pulse is ready: <a href="https://thesocialdm.github.io/locallift-pulses/montage/">Open your live Weekly Pulse</a></p>
 
-      <p>Four things worth your time.</p>
+      <p>Five things worth your time.</p>
 
-      <p><b>Search moved in the right direction.</b> Your average position improved to 11.7 from 12.4 across
-      the 28 days to September 2, on 660 clicks from 5,693 impressions. Underneath that the split is stark.
-      Searches for your name returned 440 clicks at a 26.8% click through rate. Category searches, the ones
-      renters run before they know your name, returned 37 clicks at 2.2%, from almost exactly the same number
-      of impressions. You own your name. The category is still the opportunity, and it is where the content
-      work is pointed.</p>
+      <p>Your search position improved for a third straight reading, to 10.71 across the 28 days to September 17, and your click through rate rose to 12.07%. But you were shown to 12.2% fewer people and clicks fell 8.4% to 610. Better rank on a smaller audience.</p>
 
-      <p><b>Your listing is converting better.</b> In the most recent complete listing week, August 22 to 28,
-      741 people viewed your profile against 736 the week before, and 39.5% of them called, asked for
-      directions or clicked through, against 36.0%. Direction requests rose 15%, calls rose 25% and website
-      clicks rose 4%, on a reach figure that barely moved. That is a conversion gain rather than a traffic
-      gain, which is the better of the two.</p>
+      <p>Your review count went down by one. A re-read of your live listing on September 19 returns 4.8 on 32 reviews, against the 33 we published last week. Your rating did not move and it is still the best in your field. A review can come off a listing for reasons nobody at the property controls, but the gap at the top of your map is wider this week rather than narrower.</p>
 
-      <p><b>You retook the lead in AI answers.</b> You now hold 13% of assistant answers about Tigard
-      apartments, against The Steward at 12%. The margin is a single point, so treat it as a lead to defend
-      rather than a settled position. Sentiment about you stays strong at 97% favorable.</p>
+      <p>The AI scan produced your strongest result yet. Across 96 renter questions put to three assistants you are named in 32% of answers, you are the first recommendation eight times, and there is not one negative mention. You are named evenly across every type of question too, which is unusual and hard to build.</p>
 
-      <p><b>Your website engagement fell while traffic edged up.</b> Engagement rate, engaged sessions and
-      average time on site were all down. The overall Visibility Index is level at 68, and that flat number
-      is covering a real shift underneath: search up, website down. The report shows both.</p>
+      <p>But you own Tigard and you are invisible around it. You are missed on all three assistants for Washington Square, Bridgeport Village, Lake Oswego and the Nike campus in Beaverton. You already have a Washington Square page on your own site and it drew 249 views in ninety days, so the asset exists and nothing is pointing at it. That is our next cycle of work.</p>
 
-      <p>One note on the report itself, so nothing on it surprises you.</p>
+      <p>The quietest number on the page is your enquiry form. Across ninety days 2,569 people began one and 151 finished. That is 2,418 renters who started and stopped, and unlike the rest of this report it sits on your own site.</p>
 
-      <p>The Visibility Index is now built from a documented formula rather than set by hand, and last week
-      has been restated on the same basis so the two compare. Two of the five components restated cleanly.
-      The other three carry last week's published figures, because the underlying inputs from that week were
-      not stored at the time, so treat the week over week on those three as indicative rather than exact.
-      From next week it is exact.</p>
+      <p>Two notes on the report itself, so nothing on it surprises you.</p>
 
-      <p><b>The recommendation has not changed.</b> Three residents, asked in person, for a Google review.
-      You are two reviews behind the only community above you on the map, and you are rated higher than they
-      are. It is still the one lever only your on site team can pull.</p>
+      <p>Your Visibility Index reads 66 against 68. About half that fall is a change of measuring instrument in the AI section rather than a change in your performance, and held on last week's basis it reads 67. The rest is the search click decline and the review count.</p>
 
-      <p class="sig">Best regards,<br>Greyson</p>
+      <p>Three blocks are carried rather than refreshed and each says so on its face: your profile actions, because Google has not finalised a complete week since August 28, the map grid, which is due a refresh, and the website engagement figure, which was not in this week's pull.</p>
+
+      <p>The one ask is three review requests this week, in person, at a moment a resident is already happy. At 32 reviews a new five star review barely moves your average, so there is no risk to your 4.8. Everything else on that page is ours to move. This one is yours.</p>
+
+      <p class="sig">Greyson</p>
     </div>
     <div class="row">
       <button id="bmail" type="button">Copy email</button>
@@ -125,7 +112,8 @@ function legacyCopyNode(node){
   return ok;
 }
 
-document.getElementById('bmail').addEventListener('click', function(){
+['bmail','bmailtop'].forEach(function(id){
+document.getElementById(id).addEventListener('click', function(){
   var btn = this, node = document.getElementById('emailbody');
   var html = '<div style="font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1D1D1F">' + node.innerHTML + '</div>';
   var text = node.innerText;
@@ -141,7 +129,7 @@ document.getElementById('bmail').addEventListener('click', function(){
   } else {
     flash(btn, legacyCopyNode(node) ? 'Copied' : 'Press Cmd C', true);
   }
-});
+});});
 
 document.getElementById('bsubj').addEventListener('click', function(){
   var btn = this, txt = document.getElementById('subject').textContent.trim();
