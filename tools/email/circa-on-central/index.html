@@ -49,6 +49,7 @@ button.done{background:var(--green)}
   </div>
   <div class="card">
     <div class="lbl">Email</div>
+    <div class="row" style="margin-top:0;margin-bottom:12px"><button id="bmailtop" type="button">Copy email</button><span class="hint">Pastes into Mail with the report link live.</span></div>
     <div class="body" id="emailbody">
       <p>Hi [first name],</p>
 
@@ -81,7 +82,7 @@ button.done{background:var(--green)}
 <script>
 function flash(b,m,ok){var t=b.getAttribute('data-t')||b.textContent;b.setAttribute('data-t',t);b.textContent=m;if(ok)b.classList.add('done');setTimeout(function(){b.textContent=t;b.classList.remove('done');},1900);}
 function legacyCopyNode(n){var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){ok=false;}s.removeAllRanges();return ok;}
-document.getElementById('bmail').addEventListener('click',function(){
+['bmail','bmailtop'].forEach(function(id){document.getElementById(id).addEventListener('click',function(){
   var btn=this,node=document.getElementById('emailbody');
   var html='<div style="font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1D1D1F">'+node.innerHTML+'</div>';
   var text=node.innerText;
@@ -89,7 +90,7 @@ document.getElementById('bmail').addEventListener('click',function(){
     navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})])
     .then(function(){flash(btn,'Copied',true);}).catch(function(){flash(btn,legacyCopyNode(node)?'Copied':'Press Cmd C',true);});
   } else { flash(btn,legacyCopyNode(node)?'Copied':'Press Cmd C',true); }
-});
+});});
 document.getElementById('bsubj').addEventListener('click',function(){
   var btn=this,txt=document.getElementById('subject').textContent.trim();
   if(navigator.clipboard&&navigator.clipboard.writeText){
