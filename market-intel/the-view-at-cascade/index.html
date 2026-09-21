@@ -505,7 +505,7 @@ function calc(){var wk=+document.getElementById('wk').value;
   var rec=perU*12*TURN;                // recovered effective rent / yr on turning homes, no expense assumption
   document.getElementById('ner').textContent=fmt$(newNER);
   document.getElementById('perU').textContent=sgn$(perU)+'/unit/mo';
-  document.getElementById('recbig').textContent=(rec>=1e6?('$'+(rec/1e6).toFixed(2)+'M'):(rec>=1000?('$'+Math.round(rec/1000)+'K'):('$'+Math.round(rec))));
+  document.getElementById('recbig').textContent=(rec<0?'-':'')+(Math.abs(rec)>=1000?('$'+Math.round(Math.abs(rec)/1000)+'K'):('$'+Math.round(Math.abs(rec))));
   document.getElementById('vsmkt').textContent=sgn$(newNER-COMP_NER);
   document.getElementById('vsmkt').style.color=(newNER>=COMP_NER?'#7ee0a6':'#f0b6b6');
   // parking: separate optional ancillary lever, no published rate on file so it starts at zero
