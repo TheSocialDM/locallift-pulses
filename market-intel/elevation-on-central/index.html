@@ -213,7 +213,15 @@ th.term{text-decoration:underline dotted rgba(255,255,255,.55);text-underline-of
   <div>
     <div class="sliderrow"><div class="lab"><span>Free weeks on the 216 stabilised homes</span><span class="v" id="wkv">9.5 weeks free</span></div>
       <input type="range" id="wk" min="0" max="11" value="9.5" step="0.5"><div class="hint">You advertise <b>50% off five months, or up to 10 weeks free</b>, live four days. Fifty per cent off five months is about <b>10.8 free weeks</b> and ten weeks free is 19.2% of a year, so the slider runs to eleven to cover both. Your listings price <b>18.3%, which is 9.5 weeks</b>, and the seven-day series prices 19.2%, which is 10. The field prices <b>7.6%</b> weighted by listings and <b>5.9%</b> as a simple property mean. <b>Seven of the fifteen tracked comps price no offer at all</b> and hold 92.6% to 98.2% leased. At two and a half weeks or less on the stabilised homes, the whole book sits at or under the field's 7.6%; at zero it sits at 3.4%.</div></div>
-
+    <div style="margin-top:16px;background:var(--cream);border:1px solid #efe6cf;border-radius:13px;padding:13px 15px">
+      <div style="font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#a5851f">In plain terms</div>
+      <div style="font-size:13px;line-height:1.5;margin-top:4px;color:var(--ink)">Every free week you give the <b>216 homes that are already leasing</b> costs about <b>$30,700 a year</b>, because 78 of them turn over each year and one week is worth about $393 on each. Today they carry 9.5 weeks. Tap a setting to compare.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+        <button type="button" class="wkpreset" data-w="9.5" style="font-family:inherit;font-size:12px;font-weight:800;color:var(--navy);background:#fff;border:1.5px solid var(--gold);border-radius:999px;padding:7px 13px;cursor:pointer">Today: 9.5 weeks</button>
+        <button type="button" class="wkpreset" data-w="2.5" style="font-family:inherit;font-size:12px;font-weight:800;color:var(--navy);background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:7px 13px;cursor:pointer">Match the field: 2.5 weeks</button>
+        <button type="button" class="wkpreset" data-w="0" style="font-family:inherit;font-size:12px;font-weight:800;color:var(--navy);background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:7px 13px;cursor:pointer">Our move: 0 weeks</button>
+      </div>
+    </div>
   </div>
   <div class="out"><div class="moneywrap" id="moneywrap"></div><div class="fullbadge" id="fullbadge">&#127919; At field offer depth</div><div class="cap">Annual cost on stabilised homes <span class="est">turning homes only</span></div><div class="big" id="recbig">$0</div>
     <div class="recbar" style="height:10px;background:rgba(255,255,255,.15);border-radius:999px;margin-top:6px;overflow:hidden;position:relative"><div class="noifill" id="recfill" style="width:0%"></div></div>
@@ -546,8 +554,8 @@ th.term{text-decoration:underline dotted rgba(255,255,255,.55);text-underline-of
 </div>
 <section class="card"><div class="ner" id="nerchart"></div></section>
 
-<h2>10b &middot; Days on market by plan &middot; against the 88-day field</h2>
-<div class="hsub">Every plan with homes on market, drawn to scale against the tracked-set benchmark of 88 days. The final row is the four homes in the one-off 2 Bed 1.5 Bath, 3 Bed 2 Bath and 3 Bed 2.5 Bath plans.</div>
+<h2>10b &middot; How long your listed homes sit, plan by plan</h2>
+<div class="hsub"><b>What this shows:</b> only <b>your own homes at Elevation On Central</b> that are listed for rent today, grouped by floor plan. Each bar is how many days that plan's listed homes have been on the market. The red dashed line is the <b>average for the fifteen competing properties</b>, 88 days. A bar left of the line fills faster than the market; a bar right of it is slower. The number under each plan name is how many of your homes in that plan are listed now.</div>
 <section class="card"><div id="pace"></div></section>
 
 <div class="foot"><b style="color:var(--navy)">The SocialDM / LocalLift&trade; · Comp Intelligence Report</b> · Prepared for Pillar Communities (Elevation On Central) &middot; Confidential &middot; Week 24 &middot; 30-day window 8/23 to 9/22/2026 &middot; Verified live-listing data. All figures are drawn from live-listing rents; nothing here models your operating expenses. Field averages exclude Elevation On Central and are simple means across the fifteen tracked comps unless a listing-weighted basis is named. <b>The source prints its own comp average twice, over two different groups of comps</b>, so neither of its printed columns is the whole field and every figure here is rebuilt across all fifteen. Annual figures apply only to homes that turn in a year at the relevant modelled renewal rate, never to the full 266-home count. <b>Fees, finish scores and building amenities were re-read from this week's export.</b> Renewal rates and the rent roll are modelled market estimates, not your internal ledger.
@@ -650,7 +658,7 @@ function drawTable(){var rows=COMPS.slice().sort(function(a,b){if(a.subj&&!b.sub
   var t=document.getElementById('ctbl');t.innerHTML=thh+body;
   t.querySelectorAll('th').forEach(function(h){h.addEventListener('click',function(){var k=h.getAttribute('data-k');if(sk===k)sd*=-1;else{sk=k;sd=1;}drawTable();});});termify();bindT();}
 function drawPace(){var el=document.getElementById('pace');if(!el)return;
-  var P=[['A2 · 1BR',10,49],['B3 · 2BR',7,52],['B1 · 2BR',2,99],['Open 1BR',13,101],['A1 · 1BR',2,173],['2BR/1.5 and 3BR',4,950]];
+  var P=[['A2 · 1 bed',10,49],['B3 · 2 bed',7,52],['B1 · 2 bed',2,99],['Open 1 Bedroom',13,101],['A1 · 1 bed',2,173],['One-off 2 and 3 beds',4,950]];
   var MKT=88,CAP=180,W=640,H=300,pl=118,pr=54,pt=16,pb=30,rh=(H-pt-pb)/P.length;
   var X=function(v){return pl+Math.min(v,CAP)/CAP*(W-pl-pr);};
   var s='<defs><linearGradient id="pgg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9A227"/><stop offset="1" stop-color="#e6c968"/></linearGradient></defs>';
@@ -660,16 +668,17 @@ function drawPace(){var el=document.getElementById('pace');if(!el)return;
     var over=dv>MKT,stale=dv>CAP;
     var fill=stale?'#B23A3A':(over?'#9fb0cc':'url(#pgg)');
     s+='<text x="'+(pl-8)+'" y="'+(y+bh*0.72)+'" text-anchor="end" font-size="10.5" font-weight="700" fill="#14284B">'+nm+'</text>';
-    s+='<text x="'+(pl-8)+'" y="'+(y+bh*0.72+11)+'" text-anchor="end" font-size="8.5" fill="#9296a0">'+hm+' homes</text>';
+    s+='<text x="'+(pl-8)+'" y="'+(y+bh*0.72+11)+'" text-anchor="end" font-size="8.5" fill="#9296a0">'+hm+' listed</text>';
     s+='<rect x="'+pl+'" y="'+y+'" width="'+(X(dv)-pl)+'" height="'+bh+'" rx="4" fill="'+fill+'" data-t="'+nm+' · '+hm+' homes · '+dv+' days on market vs the 88-day field benchmark"/>';
     s+='<text x="'+(X(dv)+7)+'" y="'+(y+bh*0.78)+'" font-size="10" font-weight="800" fill="'+(stale?'#B23A3A':'#14284B')+'">'+dv+(stale?' d':' d')+'</text>';}
   s+='<line x1="'+X(MKT)+'" y1="'+(pt-4)+'" x2="'+X(MKT)+'" y2="'+(H-pb)+'" stroke="#B23A3A" stroke-width="2" stroke-dasharray="5 4"/>';
-  s+='<text x="'+X(MKT)+'" y="'+(pt-6)+'" text-anchor="middle" font-size="9.5" font-weight="800" fill="#B23A3A">market 88 days</text>';
+  s+='<text x="'+X(MKT)+'" y="'+(pt-6)+'" text-anchor="middle" font-size="9.5" font-weight="800" fill="#B23A3A">competitors average 88 days</text>';
   el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto" role="img" aria-label="Days on market by plan versus the 88 day tracked comp set benchmark">'+s+'</svg>'+
-    '<div class="legend">Bars past the 180-day axis are capped. The final row is the four homes in the 2BR/1.5 and 3BR plans, averaging 950 days across those four homes.</div>';
+    '<div class="legend">The chart stops at 180 days so the other bars stay readable. The red bottom bar runs off the end: those four one-off homes (a single 2 Bed 1.5 Bath, a single 3 Bed 2 Bath and two 3 Bed 2.5 Baths) have been listed about 950 days on average, over two and a half years.</div>';
   bindT();}
 window.addEventListener('beforeprint',function(){document.querySelectorAll('details').forEach(function(d){d.open=true;});});
-function init(){document.getElementById('wk').addEventListener('input',calc);calc();nerChart();drawTable();drawPace();drawGauges();foundCount();termify();
+function presets(){document.querySelectorAll('.wkpreset').forEach(function(b){b.addEventListener('click',function(){var s=document.getElementById('wk');s.value=b.getAttribute('data-w');calc();document.querySelectorAll('.wkpreset').forEach(function(x){x.style.borderColor=(x===b?'#C9A227':'#e6e9ef');});});});}
+function init(){presets();document.getElementById('wk').addEventListener('input',calc);calc();nerChart();drawTable();drawPace();drawGauges();foundCount();termify();
   var fb=document.querySelector('.foundband');if(fb)fb.addEventListener('mouseenter',foundCount);bindT();}
 init();
 </script></body></html>
