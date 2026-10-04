@@ -1,0 +1,508 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Pillar Lago Market Survey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one screen per tab, sticky tab bar, tables first, one line of words per section */
+:root{
+  --bg:#f5f6f4;--panel:#ffffff;--fg:#1b2420;--muted:#5f6b66;--line:#dfe3df;
+  --accent:#1f6f5c;--accent-soft:#e3efe9;--hi:#fff3d6;--hi-edge:#d99a1c;--sub:#fffaee;
+  --good:#1f7a4d;--bad:#b4442c;--warn:#a86a00;--good-bg:#dcefe4;--bad-bg:#f6e1db;--warn-bg:#f6ead0;
+  --body:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121815;--panel:#1a221e;--fg:#e6ece9;--muted:#9aa8a1;--line:#2c3732;
+  --accent:#5cbf9f;--accent-soft:#1f3a31;--hi:#3a2f14;--hi-edge:#e5ae3c;--sub:#2a2413;
+  --good:#6fd39c;--bad:#f08a72;--warn:#e9b64e;--good-bg:#1d3a2b;--bad-bg:#3d221b;--warn-bg:#3a2e12;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121815;--panel:#1a221e;--fg:#e6ece9;--muted:#9aa8a1;--line:#2c3732;
+  --accent:#5cbf9f;--accent-soft:#1f3a31;--hi:#3a2f14;--hi-edge:#e5ae3c;--sub:#2a2413;
+  --good:#6fd39c;--bad:#f08a72;--warn:#e9b64e;--good-bg:#1d3a2b;--bad-bg:#3d221b;--warn-bg:#3a2e12;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.45}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
+header{padding-block:14px 8px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px 20px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-weight:800;font-size:clamp(26px,5vw,38px);line-height:1.05;margin:2px 0 4px;text-wrap:balance}
+.sub,.meta{color:var(--muted);margin:0;font-size:13px}
+.meta{font-family:var(--mono);text-align:right}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:2px solid var(--fg)}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:8px;align-items:center}
+nav .wrap::-webkit-scrollbar{display:none}
+nav button{flex:0 0 auto;font:600 14px var(--body);border:1px solid transparent;background:transparent;color:var(--muted);padding:7px 13px;border-radius:99px;cursor:pointer;white-space:nowrap}
+nav button:hover{color:var(--fg);background:var(--accent-soft)}
+nav button[aria-selected="true"]{background:var(--accent);color:var(--panel)}
+nav button:focus-visible,.sorts button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#custBtn{margin-left:auto;color:var(--accent);border-color:var(--accent)}
+#cust{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-block:0 10px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+#cust label{display:flex;gap:6px;align-items:center;font-size:14px;cursor:pointer}
+#cust input{accent-color:var(--accent);width:16px;height:16px}
+main{padding-block:12px 28px}
+section{display:flex;flex-direction:column;gap:10px}
+section.off{display:none!important}
+h2{font-size:18px;font-weight:800;margin:0}
+.line{margin:0;font-size:15px}.line b{font-family:var(--mono)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:3px}
+.lbl{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.big{font-family:var(--mono);font-size:24px;font-weight:600;font-variant-numeric:tabular-nums}
+.vs{font-size:13px;color:var(--muted)}.vs b{font-family:var(--mono);color:var(--fg)}
+.flag{font-size:12px;font-weight:700;padding:2px 8px;border-radius:99px;width:fit-content}
+.flag.good{background:var(--good-bg);color:var(--good)}.flag.bad{background:var(--bad-bg);color:var(--bad)}.flag.warn{background:var(--warn-bg);color:var(--warn)}
+.verdict{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--hi-edge);border-radius:0 10px 10px 0;padding:10px 12px;margin:0;font-weight:600}
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.acts li{background:var(--panel);border-top:3px solid var(--accent);border-radius:0 0 10px 10px;padding:9px 12px;font-size:14px}
+.acts b{display:block;font-size:15px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-width:0}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700;text-align:right;padding:5px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+th.l,td.l{text-align:left}
+td{padding:4px 8px;border-bottom:1px solid var(--line);text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.n{font-family:var(--body);text-align:left;font-weight:600;white-space:normal;min-width:160px}
+td.t{font-family:var(--body);text-align:left;white-space:normal}
+tr.me td{background:var(--hi)}tr.me td:first-child{box-shadow:inset 4px 0 0 var(--hi-edge)}
+tr.plan td{background:var(--sub);font-size:12px;color:var(--muted)}tr.plan td:first-child{box-shadow:inset 4px 0 0 var(--hi-edge)}
+tr.plan td.n{font-weight:400;padding-left:20px}
+tr.avg td{font-weight:600;border-top:2px solid var(--fg);color:var(--muted)}
+.rank{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:600}
+tr.me .rank{background:var(--hi-edge);color:var(--fg)}
+.neg{color:var(--bad)}.pos{color:var(--good)}
+.sorts{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.sorts button{font:600 12px var(--body);border:1px solid var(--line);background:var(--panel);color:var(--fg);padding:5px 10px;border-radius:99px;cursor:pointer}
+.sorts button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+.note{font-size:12px;color:var(--muted);margin:6px 0 0}
+.see{display:inline-block;font:600 13px var(--body);color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:3px 10px;text-decoration:none;white-space:nowrap}.see:hover{background:var(--accent-soft)}.see:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hero{display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap}.hero img{display:block;width:180px;max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+.letter{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:var(--accent);color:var(--panel);font:700 12px var(--body);margin-right:8px;vertical-align:1px}tr.me .letter{background:var(--hi-edge);color:var(--fg)}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px}
+.chk{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;border-top:4px solid var(--c)}
+.chk.good{--c:var(--good)}.chk.bad{--c:var(--bad)}.chk.warn{--c:var(--warn)}
+.chk .hd{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.chk .hd b{font-size:16px}
+.chk .rows{display:grid;grid-template-columns:auto 1fr auto;gap:2px 10px;font-size:14px;align-items:baseline}
+.chk .rows span:nth-child(3n+2){font-family:var(--mono);text-align:right}
+.chk .rows span:nth-child(3n){font-family:var(--mono);font-weight:600;text-align:right}
+.chk p{margin:0;font-size:14px}
+.pc{font:700 11px var(--body);padding:2px 7px;border-radius:99px;white-space:nowrap}
+.pc.good{background:var(--good-bg);color:var(--good)}.pc.bad{background:var(--bad-bg);color:var(--bad)}.pc.warn{background:var(--warn-bg);color:var(--warn)}
+.rk{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin-bottom:12px}
+.rk .card table{min-width:0;font-size:13px}.rk h3{margin:0 0 4px;font-size:14px}
+.howto h2{margin:0 0 4px}.how{margin:0;padding-left:20px;display:grid;gap:3px;font-size:14px}.how span{color:var(--muted)}
+.sun{display:inline-block;font:700 11px var(--body);color:var(--warn);border:1px dashed var(--warn);border-radius:4px;padding:0 5px;white-space:nowrap}
+.rv{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px}.rv .card{display:flex;flex-direction:column;gap:8px;padding:10px 12px}.rv h3{margin:0;font-size:16px}.rv .who{font-size:12px;color:var(--muted);margin-top:-6px}
+.rr{border-top:1px solid var(--line);padding-top:8px;display:flex;flex-direction:column;gap:3px}.rr .k{display:flex;justify-content:space-between;align-items:center;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700}.rr p{margin:0;font-size:14px}
+#cust[hidden],section[hidden]{display:none!important}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:10px}.vz.wide{grid-column:1/-1}
+.vz{display:flex;flex-direction:column;gap:6px;padding:12px}.vz h3{margin:0;font-size:15px}.vz svg{width:100%;height:auto;display:block}
+.vm{margin:0;font-size:14px}.vm b{color:var(--accent)}
+:root{--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500}}
+.gl{stroke:var(--line);stroke-width:1}.ax{stroke:var(--muted);stroke-width:1}.tk{font:11px var(--mono);fill:var(--muted)}.tk.b{fill:var(--fg);font-weight:600}.al{font:600 11px var(--body);fill:var(--muted)}
+.pt circle{fill:var(--muted);fill-opacity:.55;stroke:var(--panel);stroke-width:2}.pt:hover circle{fill-opacity:1}
+.pt.me circle{fill:var(--hi-edge);fill-opacity:1;stroke:var(--fg);stroke-width:2}
+.dl{font:11px var(--body);fill:var(--fg)}.dl.b{font-weight:700}
+.legend2{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted)}.legend2 i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}.legend2 i.ring{background:var(--hi-edge);border:2px solid var(--fg)}
+table.heat td{text-align:center}table.heat td.n{text-align:left}
+table.bars td{vertical-align:middle}.hb{display:inline-block;height:12px;border-radius:0 4px 4px 0;background:var(--s1);vertical-align:middle;margin-right:8px}.hb.me{background:var(--hi-edge)}
+.hv{font-family:var(--mono);font-size:13px;vertical-align:middle}.track{position:relative;display:inline-block;width:70%;height:12px;vertical-align:middle;margin-right:8px}.track .hb{position:absolute;left:0;top:0}.mk{position:absolute;top:-4px;width:2px;height:20px;background:var(--fg)}
+table.heat.big{font-size:16px}table.heat.big td{padding:9px 10px}table.heat.big td.n{font-size:15px}table.heat.big th{font-size:12px}
+tr.top td.n{font-weight:800}.star{display:inline-block;font:700 11px var(--body);color:var(--warn);background:var(--warn-bg);border-radius:99px;padding:1px 7px;margin-left:6px;vertical-align:2px}
+.div{position:relative;display:block;height:18px}.div .mid{position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--muted)}.db{position:absolute;top:3px;height:12px}.db.up{background:var(--s1);border-radius:0 4px 4px 0}.db.dn{background:var(--s2);border-radius:4px 0 0 4px}.db.me{outline:2px solid var(--fg)}
+.dv{position:absolute;top:0;font:12px var(--mono);white-space:nowrap}
+a.pl{color:inherit;text-decoration:none;border-bottom:1px dotted var(--accent)}a.pl:hover{color:var(--accent)}a.pl::after{content:" \2197";font-size:11px;color:var(--accent)}
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:4px 18px;margin:0;font-size:13.5px}.terms div{padding:3px 0;border-bottom:1px solid var(--line)}.terms b{display:inline}
+.chkflag{font:700 10.5px var(--body);color:var(--bad);background:var(--bad-bg);border-radius:99px;padding:1px 6px;margin-left:4px}
+sup.dg{color:var(--warn);font-weight:700;margin-left:1px}
+@media (max-width:600px){table.bars{min-width:0}table.bars th:not(:first-child):not(:last-child),table.bars td:not(:first-child):not(:last-child){display:none}table.bars td.n{min-width:110px}
+ nav .wrap{mask-image:linear-gradient(90deg,#000 85%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent)}}
+.srcnote{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:10px 14px;font-size:14px;line-height:1.5}.srcnote b{color:var(--accent)}
+table.beat{min-width:640px}table.beat td.win{background:var(--hi);font-weight:700}table.beat td.mecell{background:var(--accent-soft);font-weight:600}table.beat td.t{white-space:normal;font-family:var(--body);font-size:13px}
+.cne{border:2px dashed var(--hi-edge)}.cne h3{margin:0 0 4px;font-size:16px}.cne .rv{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.pick{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:12px 16px}.pick h3{margin:0 0 6px;font-size:16px;color:var(--accent)}.pick ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14.5px;line-height:1.5}
+.sm{font-size:12px;color:var(--muted)}table.amen td{text-align:center}table.amen td.l,table.amen td.n{text-align:left}table.amen tr.grp td{background:var(--accent-soft);font-weight:800}#amenL b{font-family:var(--body)}.ck{color:var(--good);font-weight:800;font-size:16px}.nd{color:var(--line);font-size:18px}table.amen td.mecell{background:var(--hi)}table.amen td.t{white-space:normal;min-width:110px;text-align:left}
+.ch2 h3{line-height:1.2}.ch2 .who{margin-top:3px!important}.ch2{display:flex;gap:10px;align-items:center}.thumb{width:88px;height:60px;object-fit:cover;border-radius:8px;border:1px solid var(--line);flex:0 0 auto}.thumb.ph{display:grid;place-items:center;text-align:center;font-size:10px;color:var(--muted);background:var(--accent-soft);padding:4px}
+footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-block:10px 28px}
+</style>
+
+<header class="wrap">
+  <div>
+    <div class="eyebrow">LocalLift Market Survey · Week of 10/4/2026</div>
+    <h1>Pillar Lago</h1>
+    <p class="sub">Peoria · 120 homes · built 2021 · Pillar Communities</p>
+  </div>
+  <div class="hero"><p class="meta">Rents 9/4/2026 to 10/3/2026<br>Leases 8/31/2026 to 10/4/2026<br>20 rivals within 11.6 mi</p></div>
+</header>
+
+<nav aria-label="Report sections"><div class="wrap"><div role="tablist" id="tabs" style="display:flex;gap:4px"></div><button type="button" id="custBtn" aria-expanded="false" aria-controls="cust">Customize</button></div>
+<div class="wrap"><div id="cust" hidden></div></div></nav>
+
+<main class="wrap">
+<section id="summary" data-tab="Property Summary">
+  <div class="tiles" id="tiles"></div>
+  <div class="srcnote"><b>Outside data vs. your in house numbers.</b> Every number in this report comes from the most current outside data available: live listings for all 21 communities, measured the same way for each so the comparison is fair. Your in house system will differ in places, often higher, because it sees leases, notices and move ins before they show up online. A difference does not mean either number is wrong; use this report to see where Pillar Lago stands against the market and which way it is moving.</div>
+  <div class="card howto"><h2 style="font-size:16px">The six numbers that matter this week</h2>
+  <ol class="how">
+   <li><b>Leasing pace.</b> Is Pillar Lago winning renters? <span>1.2 leases a week vs a 1.6 rival average, counted the same way for all. Pillar Lago is leasing slower than the market.</span></li>
+   <li><b>Leased % and exposure.</b> How big is the risk? <span>100.0% leased (95.1% rival average), 2.5% exposure (8.1% rival average). #1 of 21 on leased %.</span></li>
+   <li><b>Price check.</b> Price problem or marketing problem? <span>Size adjusted, 1 of the 1 plans listed now asks 3% or more above market, 0 are at market and 0 are below. Price is part of the question on those plans.</span></li>
+   <li><b>Floor plan comps.</b> Which homes are off? <span>The Retreat is above market. No plan listed now is below market.</span></li>
+   <li><b>Cost to move in.</b> <span id="miTxt"></span></li>
+   <li><b>Who is taking the renters.</b> <span>The 5 rivals leasing fastest: Laguna at Arrowhead Ranch, Abode At Litchfield Park, The Montgomery at Rancho Mercado, Grandstone at Sunrise and Christopher Todd Communities On Happy Valley.</span></li>
+  </ol></div>
+  <h2>Price check</h2>
+  <div class="checks" id="checks"></div>
+    <p class="verdict">Bedroom averages mix home sizes, so they can read high or low when the homes are simply bigger or smaller than the rivals&#x27;. The floor plan check below compares like for like. The plans to look at first: The Retreat.</p>
+  <h2>Floor plans vs market</h2><p class="line">Each Pillar Lago floor plan against market rent for the same size home nearby.</p><div class="card"><div class="tbl"><table id="fpS"></table></div><p class="note">Market rent is what rivals ask for the same bedroom type at this size, read from a line fitted through every rival's 30 day average rent and size. Asking rent is the average of Pillar Lago's homes listed now. Where size does not predict rent, the rival average for that bedroom type is used. Plans with nothing listed show the latest rent on record, marked °, and are not price checked.</p></div>
+  <h2>This week</h2>
+  <ul class="acts">
+    <li><b>Review The Retreat pricing</b>The Retreat asks about 9% over market rent for its size, with 3 of 48 homes listed now. Bring its asking rent closer to market so it needs less of a special to lease.</li>
+    <li><b>Confirm move in fees</b>No application or admin fee is published for Pillar Lago in the listing data. Confirm what renters see online.</li>
+    <li><b>Keep the listings fresh</b>Few homes are listed right now. Keep photos and offers current so the next openings lease fast.</li>
+  </ul>
+  <h2>Who is taking the renters: the 5 rivals leasing fastest</h2>
+  <p class="line">Picked because they are signing the most leases: each signs 2.2 to 3.0 a week, about twice Pillar Lago&#x27;s pace. Full explanation on the Rival Marketing tab.</p>
+  <div class="card"><div class="tbl"><table><thead><tr><th class="l">Rival</th><th>Leases per Week</th><th>Leased %</th><th>Asking Rent</th><th>Miles</th><th>Built</th><th class="l">Offer in listing data</th></tr></thead><tbody id="top5T"></tbody></table></div>
+  <p class="note">Ranked by leases signed per week over the last 5 weeks, any distance. Grandstone at Sunrise counts most of its leases in a single week, which can be a batch of leases reported late; watch whether that pace holds. <a class="see" href="#" data-go="rivals" style="margin-left:6px">See rival marketing</a></p></div>
+  <p class="verdict">The rivals winning renters list lower asking rents (Laguna at Arrowhead Ranch, Abode At Litchfield Park, The Montgomery at Rancho Mercado, Grandstone at Sunrise and Christopher Todd Communities On Happy Valley).</p>
+  <div class="card"><h2 style="font-size:16px;margin-bottom:6px">Terms used in this report</h2><div class="terms">
+   <div><b>Asking rent:</b> the advertised monthly rent renters see online.</div>
+   <div><b>Effective rent (NER):</b> what a resident really pays per month after the special is spread over a 12 month lease.</div>
+   <div><b>Special / concession %:</b> how much the move in deal takes off a year of rent.</div>
+   <div><b>Leased %:</b> share of homes that are leased.</div>
+   <div><b>Exposure %:</b> share of homes open to lease now or soon. Higher means more to fill.</div>
+   <div><b>Market rent:</b> what similar homes nearby are asking.</div>
+   <div><b>Days on market:</b> how long a home has been listed without leasing.</div>
+   <div><b>Leases per week:</b> new leases signed, counted from live listings.</div>
+   <div><b>Weeks to lease:</b> homes available now divided by leases per week.</div>
+   <div><b>Review rating:</b> average resident review score across the review sites in the data, out of 5.</div>
+   <div><b>Rivals:</b> the 20 nearby communities this report compares Pillar Lago to.</div>
+   <div><b>Rent per sq ft:</b> monthly rent divided by the home's size, to compare different sized homes fairly.</div>
+  </div></div>
+</section>
+<section id="visuals" data-tab="Market Visuals" hidden>
+  <h2>Market Visuals</h2>
+  <p class="line">The market at a glance. Pillar Lago is highlighted in gold in every chart.</p>
+  <div class="vgrid">
+   <div class="card vz wide"><h3>Who is winning renters</h3><p class="note" style="margin:0">Every rival ranked by leases signed per week, with its distance and current special.</p><div id="vWin"></div>
+    <p class="vm"><b>What it means:</b> The fastest leasing rivals are Laguna at Arrowhead Ranch and Abode At Litchfield Park (3.0 and 2.6 a week). The deepest specials, The Montgomery at Rancho Mercado (22.1% off), Haven at Arrowhead (17.1% off) and Avilla Meadows (17.0% off), lease 2.6, 2.0 and 1.2 a week; The Montgomery at Rancho Mercado is in the top 5.</p></div>
+   <div class="card vz wide"><h3>Asking rent vs market rent, by floor plan</h3><p class="note" style="margin:0">Each bar is a Pillar Lago floor plan's asking rent. The black line is market rent for that plan. Gold means 3% or more above market.</p><div id="vPsf"></div>
+    <p class="vm"><b>What it means:</b> The Retreat sits above market for its size. </p></div>
+   <div class="card vz wide"><h3>Leases signed each week</h3><div id="vWeeks"></div>
+    <p class="vm"><b>What it means:</b> Pillar Lago signed 1, 1, 1, 0 and 3 leases across the last 5 weeks. The busiest single week was 7 leases, at Grandstone at Sunrise. Grandstone at Sunrise counts most of its leases in a single week, which can be a batch of leases reported late; watch whether that pace holds.</p></div>
+   <div class="card vz wide"><h3>Who raised rent and who cut it</h3><div id="vGrow"></div>
+    <p class="vm"><b>What it means:</b> Pillar Lago&#x27;s 30 day asking rent per sq ft is down 2.2% against its 90 day average; the market median is +0.7%. Biggest increases: Grandstone at Sunrise (+11.6%) and La Borgata (+6.2%). Biggest cuts: Youngtown Flats (−4.4%) and Avilla Meadows (−1.7%).</p></div>
+   <div class="card vz wide"><h3>Homes coming onto the market, all 21 properties</h3><div class="legend2"><span><i style="background:var(--s1)"></i>Studio</span><span><i style="background:var(--s2)"></i>1 bed</span><span><i style="background:var(--s3)"></i>2 bed</span><span><i style="background:var(--s4)"></i>3 bed</span></div><div id="vAvail"></div>
+    <p class="vm"><b>What it means:</b> 118 homes came onto the market across all 21 properties in the last 5 weeks, mostly 2 beds. That is the supply Pillar Lago&#x27;s listings compete with.</p></div>
+  </div>
+</section>
+
+<section id="fees" data-tab="Fees" hidden>
+  <h2>Fees: what renters pay beyond rent</h2>
+  <div class="tiles" id="feeTiles"></div>
+  <div class="card vz"><h3>Cost to move in (application + admin)</h3><div id="feeBars"></div>
+   <p class="vm" id="feeMean"></p></div>
+  <h2>Every fee, every property</h2>
+  <p class="line" id="feeL"></p>
+  <div class="card"><div class="tbl"><table id="feeT"></table></div><p class="note">Fees come from the listing data for each property, current as of 10/3/2026. Blank means no fee is published there. Security deposits are not published in the listing data.</p></div>
+</section>
+<section id="amen" data-tab="Amenities" hidden>
+  <h2>Amenities: Pillar Lago vs the rivals winning renters</h2>
+  <p class="line" id="amenL"></p>
+  <div class="card"><div class="tbl"><table class="amen" id="amenT"></table></div>
+  <p class="note">✓ means the amenity is listed for that property in the listing data. A dot means it is not listed there, which does not always mean it is missing.</p></div>
+</section>
+<section id="b2" data-tab="2 Bedrooms" hidden></section>
+<section id="b3" data-tab="3 Bedrooms" hidden></section>
+<section id="fp" data-tab="Floor Plan Data" hidden>
+  <h2>Floor Plan Data</h2>
+  <div class="card"><div class="tbl"><table id="fpT"></table></div><p class="note">Highlighted plans have 19% or more listed now, or 120+ days on market. Price check compares each plan's asking rent to market rent for that plan, the same basis as the summary. 3% or more either way is flagged.</p></div>
+</section>
+<section id="units" data-tab="Unit Level Data" hidden>
+  <h2>Unit Level Data</h2>
+  <p class="line" id="unitL"></p>
+  <div class="card"><div class="tbl"><table id="ulT"></table></div><p class="note">Highlighted units have been listed 140+ days.</p></div>
+</section>
+<section id="avail" data-tab="New Listings" hidden>
+  <h2>New Listings</h2>
+  <p class="line" id="availL"></p>
+  <div class="card"><div class="tbl"><table id="faT"></table></div><p class="note">All 21 properties, homes that first appeared online each week.</p></div>
+</section>
+<section id="pace" data-tab="Velocity &amp; Market Snapshot" hidden>
+  <h2>Market Snapshot</h2>
+  <div class="tiles" id="snapTiles"></div>
+  <div class="card"><div class="tbl"><table id="snapT"></table></div><p class="note">Calculated from public listing data. Weeks to lease = available units divided by leases per week.</p></div>
+  <h2>Leasing Velocity (leases per week)</h2>
+  <p class="line" id="paceL"></p>
+  <div class="card"><div class="tbl"><table id="paceT"></table></div><p class="note">Outside data, counted the same way for every property. See the note under the Summary numbers.</p></div>
+</section>
+<section id="sp" data-tab="Specials" hidden>
+  <h2>Specials</h2><p class="line">Offers in the listing data for each property, current as of 10/3/2026.</p>
+  <div class="card"><div class="tbl"><table id="spT"></table></div></div>
+</section>
+<section id="rivals" data-tab="Rival Marketing" hidden>
+  <h2>Who is beating Pillar Lago, and how</h2>
+  <div class="pick"><h3>How we picked these rivals</h3>
+   <ol>
+    <li><b>We looked at every community Pillar Lago competes with:</b> the 20 nearby rentals in the market data.</li>
+    <li><b>We asked one question: who is signing the most leases?</b> Every community is ranked by leases signed per week, counted the same way for all of them, so the ranking is fair.</li>
+    <li><b>The top 5 are where renters are ending up.</b> Each is signing 2.2 to 3.0 leases a week, about twice Pillar Lago&#x27;s pace.</li>
+    <li><b>Everyone else is leasing slower,</b> so they are not taking the most renters right now. They are listed below so you can see we checked them. The list is rechecked every week, and any rival that speeds up moves into the top 5.</li>
+   </ol></div>
+  <p class="line">Gold cells show where a rival is beating Pillar Lago.</p>
+  <div class="card"><div class="tbl"><table class="beat" id="beatT"></table></div>
+   <p class="note">Leases and leased % come from live listings, counted the same way for every property.</p></div>
+  <h2>What they are running</h2>
+  <div class="rv">
+   <div class="card"><div class="ch2"><div class="thumb ph">Photo from its website</div><div><h3>Laguna at Arrowhead Ranch</h3><div class="who">3.0 leases a week, 95.6% leased</div></div></div>
+    <div class="rr"><div class="k">Offer in listing data</div><p>Look &amp; Lease for $2,500 off base rent on your move in costs! Credit applied upon move in. Select homes only. 12 month minimum lease term required.</p></div>
+    <div class="rr"><div class="k">What stands out</div><p>Asking rent $1,519, 23% below Pillar Lago, 95.6% leased, 3.67 mi away</p></div></div>
+   <div class="card"><div class="ch2"><div class="thumb ph">Photo from its website</div><div><h3>Abode At Litchfield Park</h3><div class="who">2.6 leases a week, 96.3% leased</div></div></div>
+    <div class="rr"><div class="k">Offer in listing data</div><p>Up to 8 Weeks Free Base Rent! RECEIVE UP TO 8 WEEKS FREE BASE RENT! SOME RESTRICTIONS APPLY. CONTACT LEASING FOR DETAILS. Min lease term applies.</p></div>
+    <div class="rr"><div class="k">What stands out</div><p>Asking rent $1,665, 15% below Pillar Lago, 96.3% leased, 11.32 mi away</p></div></div>
+   <div class="card"><div class="ch2"><div class="thumb ph">Photo from its website</div><div><h3>The Montgomery at Rancho Mercado</h3><div class="who">2.6 leases a week, 87.1% leased</div></div></div>
+    <div class="rr"><div class="k">Offer in listing data</div><p>Enjoy up to 12 weeks free on select floor plans! Restrictions apply</p></div>
+    <div class="rr"><div class="k">What stands out</div><p>Asking rent $1,711, 13% below Pillar Lago, 87.1% leased, 6.05 mi away, newer (built 2024)</p></div></div>
+   <div class="card"><div class="ch2"><div class="thumb ph">Photo from its website</div><div><h3>Grandstone at Sunrise</h3><div class="who">2.2 leases a week, 99.3% leased</div></div></div>
+    <div class="rr"><div class="k">Offer in listing data</div><p>Up to 4 weeks free on select apartment homes! Schedule your tour today!</p></div>
+    <div class="rr"><div class="k">What stands out</div><p>Asking rent $1,677, 15% below Pillar Lago, 99.3% leased, 2.86 mi away</p></div></div>
+   <div class="card"><div class="ch2"><div class="thumb ph">Photo from its website</div><div><h3>Christopher Todd Communities On Happy Valley</h3><div class="who">2.2 leases a week, 93.7% leased</div></div></div>
+    <div class="rr"><div class="k">Offer in listing data</div><p>None posted</p></div>
+    <div class="rr"><div class="k">What stands out</div><p>Asking rent $1,610, 18% below Pillar Lago, 93.7% leased, 3.76 mi away</p></div></div>
+  </div>
+  <p class="verdict">What this means for Pillar Lago: the winners all list lower asking rents. Put one ad in front of renters that leads with Pillar Lago&#x27;s special.</p>
+  <h2>Why the other rivals are not on this list</h2>
+  <div class="card"><div class="tbl"><table class="bars" id="notT"></table></div><p class="note">Rival social and search ads are not part of this week's data, so they are not shown here.</p></div>
+</section>
+<section id="ranks" data-tab="Property Metric Rankings" hidden>
+  <h2>Property Metric Rankings</h2>
+  <p class="line">Where Pillar Lago lands on each price measure, highest to lowest.</p>
+  <div id="rankBox"></div>
+</section>
+<section id="comps" data-tab="Market Survey" hidden>
+  <h2>Market Survey</h2><p class="line">Tap any property name, or its Website button, to open its own website. Review ratings are the average resident score across the review sites in the data, out of 5; Google ratings are not included.</p>
+  <div class="card"><div class="tbl"><table id="ovT"></table></div></div>
+</section>
+</main>
+<footer class="wrap">Prepared by The SocialDM · LocalLift. Rents: live listing data, 9/4/2026 to 10/3/2026. Leases: 8/31/2026 to 10/4/2026. Specials and fees: listing data as of 10/3/2026. Listings online for more than a year are left out as likely outdated (8 across the set).</footer>
+
+<script>
+const ME="__ME__";const SH="Pillar Lago";const DISP="Pillar Lago";const NP=21;
+// name, dist, leased%, exposure%, year, units, mgmt, leases35, available, DOM, rent, NER, conc%, revMgmt, repriceDays, rentChange, leases7
+const OV=[["__ME__",0.0,100.0,2.5,2021,120,"Pillar Communities",6,3,22,1969,1742,11.5,"No",14,-2.2,3],["Lake Pleasant Village",0.36,96.711,5.263,2005,152,"Highmark Residential",6,8,47,1634,1634,0.0,"No",11,-0.1,3],["Grandstone at Sunrise",2.86,99.286,2.857,2021,140,"Thompson Thrift",11,4,33,1677,1548,7.7,"No",15,11.6,0],["Laguna at Arrowhead Ranch",3.67,95.625,7.5,1998,160,"Greystar",15,12,63,1519,1359,10.6,"Yes",3,0.1,4],["Christopher Todd Communities On Happy Valley",3.76,93.694,9.459,2019,222,"Inland Real Estate",11,21,79,1610,1610,0.0,"Yes",4,1.9,3],["Haven Townhomes at P83",4.08,93.865,7.975,2006,163,"Greystar",4,13,65,1903,1816,4.6,"Yes",4,-0.1,1],["Haven at Arrowhead",4.66,93.382,11.029,1998,136,"Greystar",10,15,62,1599,1326,17.1,"Yes",4,0.4,2],["Villa Vita",4.75,97.814,6.011,2019,183,"Mark-Taylor",9,10,51,1415,1279,9.6,"No",10,5.2,1],["Youngtown Flats",4.88,94.231,5.769,2023,104,"Asset Living",4,6,112,1197,1107,7.5,"No",28,-4.4,1],["The Barton",4.9,95.513,7.051,2004,156,"Asset Multi Sako And Partners",6,11,79,1328,1304,1.8,"No",8,0.7,3],["La Borgata",4.91,93.662,9.859,2006,142,"Bryten Real Estate Partners",5,14,78,1525,1525,0.0,"No",32,6.2,1],["Town Surprise",5.19,97.368,4.386,2022,114,"Bryten Real Estate Partners",5,5,17,1828,1828,0.0,"No",7,5.6,0],["Vistoria On Greenway",5.56,95.588,10.294,2018,136,"Inland Real Estate",8,14,79,1558,1498,3.9,"Yes",2,1.1,1],["Eagle Ridge Apartments",6.01,98.558,1.923,2024,208,"The Hampton Group Inc",2,4,88,2107,1931,8.3,"No",26,2.2,0],["The Montgomery at Rancho Mercado",6.05,87.111,16.889,2024,225,"Mark-Taylor",13,32,110,1711,1333,22.1,"No",20,0.9,2],["Broadway North At Mason Ranch",6.81,95.706,7.362,2024,163,"Bh",5,12,56,2408,2220,7.8,"No",6,-0.2,2],["Vistoria At Marley Park",7.22,95.376,8.671,2019,173,"Inland Real Estate",10,15,64,1586,1354,14.6,"Yes",3,0.9,4],["Avilla Meadows",7.49,93.701,7.874,2019,127,"Bryten Real Estate Partners",6,10,94,1703,1413,17.0,"Yes",3,-1.7,1],["Abode At Litchfield Park",11.32,96.296,5.926,2020,135,"Greystar",13,8,69,1665,1469,11.8,"Yes",4,1.9,1],["Villas Litchfield Park",11.4,94.771,8.497,2025,153,"Greystar",7,12,57,1690,1543,8.7,"No",11,0.5,3],["Tavalo Cotton Lane",11.63,93.056,17.361,2024,144,"Mark-Taylor",7,25,48,1892,1892,0.0,"No",31,0.4,0]];
+const DIST=Object.fromEntries(OV.map(r=>[r[0],r[1]]));
+const LET=Object.fromEntries([...OV].sort((a,b)=>a[1]-b[1]).map((r,i)=>[r[0],r[0]===ME?"★":OV.length>27?String(i):String.fromCharCode(64+i)]));
+const WK={"__ME__":[1,1,1,0,3],"Lake Pleasant Village":[1,1,1,0,3],"Grandstone at Sunrise":[7,0,4,0,0],"Laguna at Arrowhead Ranch":[1,3,2,5,4],"Christopher Todd Communities On Happy Valley":[2,1,3,2,3],"Haven Townhomes at P83":[1,1,0,1,1],"Haven at Arrowhead":[3,1,3,1,2],"Villa Vita":[1,2,3,2,1],"Youngtown Flats":[1,1,1,0,1],"The Barton":[1,0,2,0,3],"La Borgata":[0,1,2,1,1],"Town Surprise":[4,0,1,0,0],"Vistoria On Greenway":[2,0,4,1,1],"Eagle Ridge Apartments":[1,0,1,0,0],"The Montgomery at Rancho Mercado":[3,1,6,1,2],"Broadway North At Mason Ranch":[2,0,1,0,2],"Vistoria At Marley Park":[2,0,1,3,4],"Avilla Meadows":[1,0,3,1,1],"Abode At Litchfield Park":[2,2,6,2,1],"Villas Litchfield Park":[1,2,0,1,3],"Tavalo Cotton Lane":[0,2,3,2,0]};
+const WKL=["8/31","9/7","9/14","9/21","9/28"];
+// name, available, rent, sf, NER, conc%
+const BB={"2":[["__ME__",3,1901,960,1682,11.5],["Lake Pleasant Village",1,1440,964,1440,0.0],["Grandstone at Sunrise",2,1834,1106,1693,7.7],["Laguna at Arrowhead Ranch",11,1628,1000,1465,10.0],["Christopher Todd Communities On Happy Valley",14,1745,995,1745,0.0],["Haven Townhomes at P83",9,2018,1246,1938,4.0],["Haven at Arrowhead",9,1683,991,1334,20.7],["Villa Vita",3,1591,1153,1454,8.6],["The Barton",0,1675,937,1675,0.0],["La Borgata",10,1561,941,1561,0.0],["Town Surprise",5,1828,1206,1828,0.0],["Vistoria On Greenway",8,1684,1022,1610,4.4],["Eagle Ridge Apartments",0,1850,1027,1696,8.3],["The Montgomery at Rancho Mercado",13,1943,1000,1536,20.9],["Vistoria At Marley Park",10,1700,1022,1415,16.8],["Avilla Meadows",3,1882,960,1544,18.0],["Abode At Litchfield Park",4,1730,915,1536,11.2],["Villas Litchfield Park",6,1896,1012,1733,8.6],["Tavalo Cotton Lane",12,1971,969,1971,0.0]],"3":[["__ME__",0,2175,1237,1924,11.5],["Lake Pleasant Village",5,1650,1134,1650,0.0],["Laguna at Arrowhead Ranch",1,1902,1203,1729,9.1],["Haven Townhomes at P83",1,2962,1517,2869,3.1],["Haven at Arrowhead",1,2465,1161,2174,11.8],["La Borgata",0,1925,1174,1925,0.0],["Eagle Ridge Apartments",4,2172,1221,1990,8.3],["Broadway North At Mason Ranch",1,2195,1317,2073,5.6],["Avilla Meadows",2,2115,1236,1780,15.9],["Tavalo Cotton Lane",6,2355,1276,2355,0.0]]};
+// plan, type, homes, sf, ask, ner, listed, exposure, DOM, leases35, askBasis, beds
+const FP=[["The Alcove","1 bd / 1 ba",40,637,1551,1438,0,0.0,null,0,0,1],["The Retreat","2 bd / 2 ba",48,960,1883,1666,3,6.3,22,3,1,2],["The Haven","3 bd / 2 ba",32,1237,2251,2114,0,0.0,null,3,0,3]];
+const MKT={"The Retreat":1722};
+// unit, plan, type, sf, days listed, listed since, ask, NER, market rent
+const UL=[["1019","The Retreat","2 bd / 2 ba",960,29,"9/5/2026",1855,1641,1722],["1026","The Retreat","2 bd / 2 ba",960,22,"9/12/2026",1905,1685,1722],["1099","The Retreat","2 bd / 2 ba",960,16,"9/18/2026",1890,1672,1722]];
+// week, studio, 1bd, 2bd, 3bd (new listings, all properties)
+const FA=[["8/31",0,13,17,5],["9/7",0,5,10,0],["9/14",0,10,17,2],["9/21",0,4,12,1],["9/28",1,4,14,3]];
+const SP=[["__ME__","Get up to 6 Weeks free! Select lease terms apply. Preinstalled WiFi with 1st Month Free from COX SAVINGS!"],["Grandstone at Sunrise","Up to 4 weeks free on select apartment homes! Schedule your tour today!"],["Laguna at Arrowhead Ranch","Look & Lease for $2,500 off base rent on your move in costs! Credit applied upon move in. Select homes only. 12 month minimum lease term required."],["Haven Townhomes at P83","HALF OFF BASE RENT THROUGH DECEMBER! Lease today and receive HALF OFF base rent through December! Enjoy exclusive savings through the end of the year!"],["Haven at Arrowhead","Half off base rent through January 2027! Move now & enjoy half off base rent through January 2027! Minimum lease term applies."],["Villa Vita","Up to 4 weeks free on select apartment homes! Restrictions apply"],["Youngtown Flats","1 Month FREE + waived app & admin fee when you look and lease! Casita style homes starting at $989 Call for details!"],["La Borgata","Every apartment at La Borgata, from 1 bedroom to spacious 2 and 3 bedroom layouts, includes oversized closets, private balconies or patios, ceiling fans, and pre..."],["Eagle Ridge Apartments","Get $750 Off Your Rent for up to Three Months. Limited Inventory Remaining! Waived $50 Application Fee with 48 Hour Look & Lease Special!"],["The Montgomery at Rancho Mercado","Enjoy up to 12 weeks free on select floor plans! Restrictions apply"],["Broadway North At Mason Ranch","Enjoy one month free on select units. Restrictions apply. See agent for details. Special Offer: Enjoy one month free on select units."],["Vistoria At Marley Park","TWO MONTHS FREE on select 2 bedroom homes and ONE MONTH FREE on select 1 bedroom homes! Ask our leasing team how to save big on our beautiful homes!"],["Avilla Meadows","Limited Time Only, Offering Up to 10 Weeks Free Lease your luxury home today and receive up to 10 Weeks Free on select homes! Restrictions apply."],["Abode At Litchfield Park","Up to 8 Weeks Free Base Rent! RECEIVE UP TO 8 WEEKS FREE BASE RENT! SOME RESTRICTIONS APPLY. CONTACT LEASING FOR DETAILS. Min lease term applies."],["Villas Litchfield Park","Move in by 10/31 and receive up to 4 weeks free base rent + reduced rates for a limited time only! Minimum lease term applies."]];
+// app, admin, amenity/mo, petRent, petFee, petDeposit, covered, garage, more
+const FE={"__ME__":[0,0,0,45,0,200,0,0,0],"Lake Pleasant Village":[13,0,0,25,0,250,0,0,0],"Grandstone at Sunrise":[60,200,0,30,300,250,0,0,0],"Laguna at Arrowhead Ranch":[50,200,0,65,300,275,0,125,0],"Christopher Todd Communities On Happy Valley":[50,0,0,35,300,400,0,0,0],"Haven Townhomes at P83":[50,250,0,35,300,300,0,0,0],"Haven at Arrowhead":[50,250,0,35,300,300,0,125,0],"Villa Vita":[50,0,0,35,250,400,0,0,0],"Youngtown Flats":[50,0,0,35,300,150,0,0,0],"The Barton":[50,0,0,35,200,200,0,0,0],"La Borgata":[50,250,0,30,300,100,0,0,0],"Town Surprise":[50,0,0,45,250,200,0,0,0],"Vistoria On Greenway":[50,0,0,35,300,0,0,0,0],"Eagle Ridge Apartments":[50,250,0,0,0,0,0,0,0],"The Montgomery at Rancho Mercado":[50,250,0,50,250,400,0,0,0],"Broadway North At Mason Ranch":[75,250,0,25,250,0,0,0,0],"Vistoria At Marley Park":[50,0,0,35,300,0,0,0,0],"Avilla Meadows":[55,0,0,40,325,0,0,0,0],"Abode At Litchfield Park":[55,250,0,45,250,200,10,150,0],"Villas Litchfield Park":[50,250,0,45,250,150,20,125,0],"Tavalo Cotton Lane":[50,0,0,35,300,400,0,0,0]};
+const FUNC={};
+const URL={"__ME__":"https://www.pillarlago.com/","Lake Pleasant Village":"https://www.lakepleasantvillage.com/","Grandstone at Sunrise":"https://www.grandstonesunrise.com/","Laguna at Arrowhead Ranch":"https://www.lagunaapartmentsglendale.com/","Christopher Todd Communities On Happy Valley":"https://www.christophertodd.com/community/christopher-todd-communities-on-happy-valley/","Haven Townhomes at P83":"https://www.haventownhomesatp83.com/","Haven at Arrowhead":"https://www.havenatarrowhead.com/","Villa Vita":"https://www.mark-taylor.com/apartments/az/peoria/villa-vita/neighborhood","Youngtown Flats":"https://www.youngtownflatsapts.com/","The Barton":"https://www.thebartonaz.com/","La Borgata":"https://www.laborgataapartments.com/","Town Surprise":"https://www.townsurprise.com/","Vistoria On Greenway":"https://www.vistoriaongreenway.com/","Eagle Ridge Apartments":"https://eagleridgeaz.com/","The Montgomery at Rancho Mercado":"https://www.mark-taylor.com/apartments/az/surprise/montgomery-at-rancho-mercado/","Broadway North At Mason Ranch":"https://livebh.com/apartments/broadway-north-at-mason-ranch/","Vistoria At Marley Park":"https://www.vistoriaatmarleypark.com/","Avilla Meadows":"https://www.avillameadows.com/","Abode At Litchfield Park":"https://www.abodeatlitchfieldpark.com/","Villas Litchfield Park":"https://www.VillasLitchfieldParkLiving.com/","Tavalo Cotton Lane":"https://www.mark-taylor.com/apartments/az/litchfield-park/n-cotton-lane/"};
+const GOO={"__ME__":[4.1,21],"Lake Pleasant Village":[4.4,50],"Grandstone at Sunrise":[3.6,39],"Laguna at Arrowhead Ranch":[null,null],"Christopher Todd Communities On Happy Valley":[3.0,58],"Haven Townhomes at P83":[3.2,24],"Haven at Arrowhead":[2.5,30],"Villa Vita":[4.1,34],"Youngtown Flats":[2.4,24],"The Barton":[4.1,78],"La Borgata":[3.4,14],"Town Surprise":[3.0,27],"Vistoria On Greenway":[3.1,31],"Eagle Ridge Apartments":[4.7,124],"The Montgomery at Rancho Mercado":[4.4,50],"Broadway North At Mason Ranch":[4.2,21],"Vistoria At Marley Park":[4.0,43],"Avilla Meadows":[4.5,20],"Abode At Litchfield Park":[4.5,21],"Villas Litchfield Park":[4.7,15],"Tavalo Cotton Lane":[4.9,178]};
+const DEP={};
+const STO={};
+const AMI={"__ME__":{"items":{"washer_dryer_in_unit":true,"stainless_appliances":true,"stone_countertops":true,"kitchen_island":false,"walk_in_closets":true,"balcony_patio":false,"smart_home_tech":false,"hardwood_style_flooring":true,"fireplace":false,"high_ceilings":true,"private_yard_or_townhome":true,"pool":true,"fitness_center":true,"clubhouse_lounge":true,"coworking_or_business_center":false,"ev_charging":false,"dog_park":true,"pet_wash":false,"package_lockers_or_service":false,"controlled_access":true,"garages_available":false,"rooftop_or_view_deck":false,"game_room":true,"bike_storage":false,"storage_units":false,"24hr_maintenance":true},"notable":""},"Laguna at Arrowhead Ranch":{"items":{"washer_dryer_in_unit":true,"stainless_appliances":true,"stone_countertops":true,"kitchen_island":false,"walk_in_closets":true,"balcony_patio":true,"smart_home_tech":false,"hardwood_style_flooring":true,"fireplace":false,"high_ceilings":true,"private_yard_or_townhome":false,"pool":true,"fitness_center":true,"clubhouse_lounge":true,"coworking_or_business_center":false,"ev_charging":false,"dog_park":false,"pet_wash":false,"package_lockers_or_service":true,"controlled_access":true,"garages_available":true,"rooftop_or_view_deck":false,"game_room":false,"bike_storage":false,"storage_units":true,"24hr_maintenance":true},"notable":""},"Abode At Litchfield Park":{"items":{"washer_dryer_in_unit":true,"stainless_appliances":true,"stone_countertops":true,"kitchen_island":false,"walk_in_closets":true,"balcony_patio":true,"smart_home_tech":false,"hardwood_style_flooring":true,"fireplace":false,"high_ceilings":true,"private_yard_or_townhome":true,"pool":true,"fitness_center":false,"clubhouse_lounge":false,"coworking_or_business_center":false,"ev_charging":false,"dog_park":true,"pet_wash":false,"package_lockers_or_service":false,"controlled_access":true,"garages_available":false,"rooftop_or_view_deck":false,"game_room":false,"bike_storage":false,"storage_units":true,"24hr_maintenance":true},"notable":""},"The Montgomery at Rancho Mercado":{"items":{"washer_dryer_in_unit":true,"stainless_appliances":true,"stone_countertops":true,"kitchen_island":false,"walk_in_closets":true,"balcony_patio":false,"smart_home_tech":true,"hardwood_style_flooring":true,"fireplace":true,"high_ceilings":false,"private_yard_or_townhome":true,"pool":true,"fitness_center":true,"clubhouse_lounge":false,"coworking_or_business_center":false,"ev_charging":false,"dog_park":false,"pet_wash":false,"package_lockers_or_service":false,"controlled_access":true,"garages_available":true,"rooftop_or_view_deck":false,"game_room":false,"bike_storage":false,"storage_units":false,"24hr_maintenance":false},"notable":""},"Grandstone at Sunrise":{"items":{"washer_dryer_in_unit":true,"stainless_appliances":true,"stone_countertops":true,"kitchen_island":true,"walk_in_closets":true,"balcony_patio":true,"smart_home_tech":true,"hardwood_style_flooring":true,"fireplace":false,"high_ceilings":true,"private_yard_or_townhome":true,"pool":true,"fitness_center":true,"clubhouse_lounge":true,"coworking_or_business_center":true,"ev_charging":false,"dog_park":true,"pet_wash":false,"package_lockers_or_service":true,"controlled_access":true,"garages_available":true,"rooftop_or_view_deck":true,"game_room":false,"bike_storage":true,"storage_units":true,"24hr_maintenance":true},"notable":""},"Christopher Todd Communities On Happy Valley":{"items":{"washer_dryer_in_unit":true,"stainless_appliances":true,"stone_countertops":true,"kitchen_island":false,"walk_in_closets":true,"balcony_patio":true,"smart_home_tech":true,"hardwood_style_flooring":true,"fireplace":true,"high_ceilings":false,"private_yard_or_townhome":true,"pool":true,"fitness_center":true,"clubhouse_lounge":false,"coworking_or_business_center":false,"ev_charging":false,"dog_park":true,"pet_wash":false,"package_lockers_or_service":true,"controlled_access":true,"garages_available":true,"rooftop_or_view_deck":false,"game_room":false,"bike_storage":false,"storage_units":true,"24hr_maintenance":true},"notable":""}};
+const AMC=["__ME__","Laguna at Arrowhead Ranch","Abode At Litchfield Park","The Montgomery at Rancho Mercado","Grandstone at Sunrise","Christopher Todd Communities On Happy Valley"];
+const GR=[["__ME__",-2.2],["Lake Pleasant Village",-0.1],["Grandstone at Sunrise",11.6],["Laguna at Arrowhead Ranch",0.1],["Christopher Todd Communities On Happy Valley",1.9],["Haven Townhomes at P83",-0.1],["Haven at Arrowhead",0.4],["Villa Vita",5.2],["Youngtown Flats",-4.4],["The Barton",0.7],["La Borgata",6.2],["Town Surprise",5.6],["Vistoria On Greenway",1.1],["Eagle Ridge Apartments",2.2],["The Montgomery at Rancho Mercado",0.9],["Broadway North At Mason Ranch",-0.2],["Vistoria At Marley Park",0.9],["Avilla Meadows",-1.7],["Abode At Litchfield Park",1.9],["Villas Litchfield Park",0.5],["Tavalo Cotton Lane",0.4]];const GMKT=0.7;
+const TOP5=["Laguna at Arrowhead Ranch","Abode At Litchfield Park","The Montgomery at Rancho Mercado","Grandstone at Sunrise","Christopher Todd Communities On Happy Valley"];
+{const _tf=Number.prototype.toFixed;Number.prototype.toFixed=function(d){const v=Number(this);return _tf.call(v+(v>=0?1:-1)*1e-9,d)};}
+const $=n=>"$"+Math.round(n).toLocaleString("en-US");
+const link=n=>URL[n];
+const med=a=>{const s=[...a].sort((x,y)=>x-y),m=s.length>>1;return s.length%2?s[m]:(s[m-1]+s[m])/2};
+const avg=a=>a.reduce((s,x)=>s+x,0)/a.length;
+const comps=OV.filter(r=>r[0]!==ME),me=OV[0],id=x=>document.getElementById(x);
+const nm=n=>n===ME?SH:n;
+const BT={"0":"Studio","1":"1 Bedroom","2":"2 Bedroom","3":"3 Bedroom"},BL={"0":"Studio","1":"1 bd","2":"2 bd","3":"3 bd"};
+const BKEYS=Object.keys(BB);
+
+// tabs
+const P=[...document.querySelectorAll("main section")];
+id("tabs").innerHTML=P.map((p,i)=>`<button type="button" role="tab" id="t-${p.id}" aria-controls="${p.id}" aria-selected="${i===0}">${p.dataset.tab}</button>`).join("");
+function show(x){P.forEach(p=>p.hidden=p.id!==x);document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-selected",b.getAttribute("aria-controls")===x));const n=document.querySelector("nav");const y=n.getBoundingClientRect().top+scrollY;if(scrollY>y)scrollTo({top:y});try{history.replaceState(null,"","#"+x)}catch(e){}}
+document.addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g){e.preventDefault();show(g.dataset.go)}});
+id("tabs").onclick=e=>{const b=e.target.closest("button");if(b)show(b.getAttribute("aria-controls"))};
+
+// summary tiles
+const pw=r=>avg(WK[r[0]]);const bypace=(a,b)=>pw(b)-pw(a)||b[2]-a[2];
+const mi=n=>FE[n][0]+FE[n][1],listed=comps.map(r=>mi(r[0])).filter(v=>v);
+const rl=avg(comps.map(r=>r[2])),rpw=avg(comps.map(pw)),ra=avg(comps.map(r=>r[10])),rn=avg(comps.map(r=>r[11]));
+const flag=(d,hiBad,tol)=>Math.abs(d)<=tol?["In line","good"]:(d>0)===hiBad?[hiBad?"Above market":"Below market","bad"]:[hiBad?"Below market":"Above market","warn"];
+{const t=[["Leased %",me[2].toFixed(1)+"%",rl.toFixed(1)+"%",...flag(me[2]-rl,false,2)],
+ ["Leases per week",pw(me).toFixed(1),rpw.toFixed(1),...(pw(me)<rpw*.9?["Slower than rivals","bad"]:pw(me)>rpw*1.1?["Faster than rivals","good"]:["In line","good"])],
+ ["Asking Rent",$(me[10]),$(ra),...(Math.abs(me[10]/ra-1)<=.03?["In line","good"]:me[10]>ra?["Above average","warn"]:["Below average","warn"])],
+ ["Effective Rent (NER)",$(me[11]),$(rn),...(Math.abs(me[11]/rn-1)<=.03?["In line","good"]:me[11]>rn?["Above average","warn"]:["Below average","warn"])]];
+ if(BKEYS.length){const k=BKEYS.slice(0,2);t.push(["Asking Rent / Sq Ft",k.map(b=>"$"+(BB[b][0][2]/BB[b][0][3]).toFixed(2)).join(" / "),k.map(b=>"$"+avg(BB[b].slice(1).map(x=>x[2]/x[3])).toFixed(2)).join(" / "),k.map(b=>BL[b]).join(" / "),"warn"]);}
+ const m0=mi(ME),ra2=listed.length?Math.round(avg(listed)):0;t.push(["Move in fees",m0?"$"+m0:"None listed",ra2?"$"+ra2:"None listed",...(!m0?["Not in the data","warn"]:m0>=Math.max(...listed,0)?["Highest in set","bad"]:m0>ra2*1.15?["Above average","bad"]:m0<ra2*.85?["Below average","good"]:["In line","good"])]);
+ t.forEach(t=>id("tiles").insertAdjacentHTML("beforeend",`<div class="tile"><span class="lbl">${t[0]}</span><span class="big">${t[1]}</span><span class="vs">Rivals <b>${t[2]}</b></span><span class="flag ${t[4]}">${t[3]}</span></div>`));}
+
+{const m=mi(ME),a=listed.length?Math.round(avg(listed)):0,rk=[...OV].map(r=>mi(r[0])).sort((x,y)=>y-x).indexOf(m)+1;const nl=[...OV].filter(r=>mi(r[0])).length;id("miTxt").textContent=m?`$${m} to apply and move in, #${rk} highest of the ${nl} communities that list these fees (rivals that list them average $${a}).`:`No application or admin fee is listed for ${SH} in the data (rivals that list them average $${a}).`;}
+// price check per bedroom type
+function check(data){
+  const c=data.slice(1),m=data[0],ar=avg(c.map(r=>r[2])),an=avg(c.map(r=>r[4])),apsf=avg(c.map(r=>r[2]/r[3]));
+  const da=(m[2]-ar)/ar,dn=(m[4]-an)/an,rk=(i)=>[...data].sort((a,b)=>b[i]-a[i]).indexOf(m)+1;
+  let cls,tag,tip;
+  if(da>.03&&dn<-.03){cls="warn";tag="High asking, low NER";tip="Average asking rent is above rivals; after the special it is below. Averages mix home sizes; see the floor plan check.";}
+  else if(da>.03){cls="bad";tag="Above average";tip="Average asking rent is above the rival average. Averages mix home sizes; see the floor plan check for like for like.";}
+  else if(da<-.03&&dn<-.03){cls="warn";tag="Below average";tip="Average asking rent is below the rival average. Averages mix home sizes; see the floor plan check for like for like.";}
+  else {cls="good";tag="In line";tip="Average asking rent is in line with rivals. See the floor plan check for each plan.";}
+  return {cls,tag,tip,ar,an,apsf,da,dn,m,rA:rk(2),rN:rk(4),n:data.length};
+}
+const pct=x=>Math.abs(x)<0.005?"0%":(x>0?"+":"−")+Math.abs(x*100).toFixed(Math.abs(x)>=0.025&&Math.abs(x)<0.035?1:0)+"%";
+BKEYS.forEach(b=>{const t=BT[b],d=BB[b],k=check(d);
+  id("checks").insertAdjacentHTML("beforeend",`<div class="chk ${k.cls}"><div class="hd"><b>${t}</b><span class="pc ${k.cls}">${k.tag}</span></div>
+  <div class="rows"><span>Asking Rent</span><span>${$(k.m[2])} vs ${$(k.ar)}</span><span class="${k.da>.03?"neg":""}">${pct(k.da)}</span>
+  <span>Effective Rent (NER)</span><span>${$(k.m[4])} vs ${$(k.an)}</span><span class="${k.dn<-.03?"neg":""}">${pct(k.dn)}</span>
+  <span>Rank</span><span>#${k.rA} asking · #${k.rN} NER</span><span>of ${k.n}</span></div><p>${k.tip}</p></div>`);});
+// floor plans vs market (summary)
+const gp=p=>MKT[p[0]]?(p[4]-MKT[p[0]])/MKT[p[0]]:null;
+const ptag=v=>v===null?`<span class="pc warn">Not listed now</span>`:v>=.03?`<span class="pc bad">High</span>`:v<=-.03?`<span class="pc warn">Low</span>`:`<span class="pc good">At market</span>`;
+id("fpS").innerHTML=`<thead><tr><th class="l">Floor Plan</th><th class="l">Type</th><th>Total Units</th><th>Sq Ft</th><th>Asking Rent</th><th>Market Rent</th><th>Gap</th><th>Effective Rent (NER)</th><th>Listed Now</th><th>Days on Market</th><th class="l">Price Check</th></tr></thead><tbody>${FP.map(p=>{const g=gp(p);return `<tr class="${g!==null&&g>=.03?"me":""}"><td class="n">${p[0]}</td><td class="l">${p[1]}</td><td>${p[2]}</td><td>${p[3].toLocaleString()}</td><td>${$(p[4])}${p[10]?"":"°"}</td><td>${MKT[p[0]]?$(MKT[p[0]]):"·"}</td><td class="${g!==null&&g>=.03?"neg":""}">${g===null?"·":pct(g)}</td><td>${$(p[5])}</td><td>${p[6]}</td><td>${p[8]??"·"}</td><td class="l">${ptag(g)}</td></tr>`}).join("")}</tbody>`;
+// bedroom boards
+function board(sec,title,data,b){
+  let key="rent";
+  const rows=data.map(r=>({n:r[0],av:r[1],rent:r[2],sf:r[3],ner:r[4],conc:r[5],d:DIST[r[0]]}));
+  const c=rows.filter(r=>r.n!==ME),m=rows.find(r=>r.n===ME);
+  const rk=f=>[...rows].sort(f).indexOf(m)+1,A=f=>avg(c.map(f));
+  const plans=FP.filter(p=>String(p[11])===b);
+  const el=id(sec);
+  const K=check(data);el.innerHTML=`<h2>${title} by Property <span class="pc ${K.cls}" style="vertical-align:3px">${K.tag}</span></h2><div class="tiles"><div class="tile"><span class="lbl">Lowest Rent</span><span class="big">${$(Math.min(...c.map(r=>r.rent)))}</span><span class="vs">${SH} <b>${$(m.rent)}</b></span></div><div class="tile"><span class="lbl">Lowest Sq Ft</span><span class="big">${Math.min(...c.map(r=>r.sf)).toLocaleString()}</span><span class="vs">${SH} <b>${m.sf.toLocaleString()}</b></span></div><div class="tile"><span class="lbl">Lowest Rent / Sq Ft</span><span class="big">$${Math.min(...c.map(r=>r.rent/r.sf)).toFixed(2)}</span><span class="vs">${SH} <b>$${(m.rent/m.sf).toFixed(2)}</b></span></div><div class="tile"><span class="lbl">Avg NER / Sq Ft</span><span class="big">$${avg(c.map(r=>r.ner/r.sf)).toFixed(2)}</span><span class="vs">${SH} <b>$${(m.ner/m.sf).toFixed(2)}</b></span></div></div><p class="line">${SH} is <b>#${rk((a,b)=>b.rent-a.rent)} of ${rows.length}</b> on asking rent and <b>#${rk((a,b)=>b.ner-a.ner)}</b> on effective rent (NER).</p><div class="card" id="${sec}c"></div>`;
+  const box=id(sec+"c");
+  function draw(){
+    const s=[...rows].sort({rent:(a,b)=>b.rent-a.rent,ner:(a,b)=>b.ner-a.ner,d:(a,b)=>a.d-b.d}[key]);
+    box.innerHTML=`<div class="sorts" role="group" aria-label="Sort">${[["rent","Asking Rent"],["ner","Effective Rent (NER)"],["d","Distance"]].map(([k,l])=>`<button type="button" data-k="${k}" aria-pressed="${k===key}">${l}</button>`).join("")}</div>
+    <div class="tbl"><table><thead><tr><th class="l">#</th><th class="l">Property</th><th>Miles</th><th>Available Units</th><th>Sq ft</th><th>Asking Rent</th><th>Asking Rent / Sq Ft</th><th>Effective Rent (NER)</th><th>Concession %</th></tr></thead><tbody>${s.map((r,i)=>{
+      const main=`<tr class="${r.n===ME?"me":""}"><td class="l"><span class="rank">${i+1}</span></td><td class="n">${nm(r.n)}</td><td>${r.n===ME?"·":r.d.toFixed(2)}</td><td>${r.av}</td><td>${r.sf.toLocaleString()}</td><td>${$(r.rent)}</td><td>$${(r.rent/r.sf).toFixed(2)}</td><td>${$(r.ner)}</td><td class="${r.conc>=10?"neg":""}">${r.conc?r.conc.toFixed(1)+"%":"None"}</td></tr>`;
+      if(r.n!==ME)return main;
+      return main+plans.map(p=>`<tr class="plan"><td></td><td class="n">${p[0]} · ${p[1]} · ${p[2]} ${p[2]===1?"home":"homes"}</td><td></td><td></td><td>${p[3].toLocaleString()}</td><td>${$(p[4])}</td><td>$${(p[4]/p[3]).toFixed(2)}</td><td>${$(p[5])}</td><td class="${(p[8]||0)>=100?"neg":""}">${p[8]?p[8]+(p[8]===1?" day":" days"):""}</td></tr>`).join("");
+    }).join("")}
+    <tr class="avg"><td></td><td class="n">Rival average</td><td></td><td>${A(r=>r.av).toFixed(0)}</td><td>${Math.round(A(r=>r.sf)).toLocaleString()}</td><td>${$(A(r=>r.rent))}</td><td>$${A(r=>r.rent/r.sf).toFixed(2)}</td><td>${$(A(r=>r.ner))}</td><td>${A(r=>r.conc).toFixed(1)}%</td></tr></tbody></table></div>
+    <p class="note">Rents are 30 day averages from listing data. ${SH} plan rows show days on market in the last column.</p>`;
+    box.querySelectorAll(".sorts button").forEach(b=>b.onclick=()=>{key=b.dataset.k;draw()});
+  }
+  draw();
+}
+BKEYS.forEach(b=>board("b"+b,BT[b],BB[b],b));
+
+const gr=n=>{const g=GOO[n]||[null,null];return g[0]?`${g[0].toFixed(1)} ★ <span class="sm">(${g[1]})</span>`:(g[1]?`<span class="sm">${g[1]} reviews</span>`:"")};
+// floor plan data
+id("fpT").innerHTML=`<thead><tr><th class="l">Plan</th><th class="l">Type</th><th>Total Units</th><th>Sq ft</th><th>Asking Rent</th><th>Asking Rent / Sq Ft</th><th>Effective Rent (NER)</th><th>Listed Now</th><th>Listed %</th><th>Days on Market</th><th>Leases (last 5 weeks)</th><th class="l">Price check</th></tr></thead><tbody>${FP.map(r=>`<tr class="${r[7]>=19||(r[8]||0)>=120?"me":""}"><td class="n">${r[0]}</td><td class="l">${r[1]}</td><td>${r[2]}</td><td>${r[3].toLocaleString()}</td><td>${$(r[4])}${r[10]?"":"°"}</td><td>$${(r[4]/r[3]).toFixed(2)}</td><td>${$(r[5])}</td><td>${r[6]}</td><td class="${r[7]>=12?"neg":""}">${r[7].toFixed(1)}%</td><td class="${(r[8]||0)>=100?"neg":""}">${r[8]??"·"}</td><td>${r[9]}</td><td class="l">${(()=>{const v=gp(r);return v===null?`<span class="pc warn">Not listed now</span>`:v>=.03?`<span class="pc bad">High ${pct(v)}</span>`:v<=-.03?`<span class="pc warn">Low ${pct(v)}</span>`:`<span class="pc good">At market</span>`})()}</td></tr>`).join("")}</tbody>`;
+
+// units
+const ULs=[...UL].sort((a,b)=>(b[4]||0)-(a[4]||0));
+{const k=UL.filter(u=>u[4]>=140).length;id("unitL").innerHTML=`${SH} has <b>${UL.length}</b> ${UL.length===1?"home":"homes"} listed online now. <b>${k}</b> ${k===1?"has":"have"} been listed over 140 days.`;}
+id("ulT").innerHTML=`<thead><tr><th class="l">Unit</th><th class="l">Plan</th><th class="l">Type</th><th>Sq ft</th><th>Days Listed</th><th>Listed Since</th><th>Asking Rent</th><th>Asking Rent / Sq Ft</th><th>Effective Rent (NER)</th><th>Market rent</th><th>Ask vs market</th></tr></thead><tbody>${ULs.map(r=>{const d=r[8]?r[6]-r[8]:null;return `<tr class="${r[4]>=140?"me":""}"><td class="n">${r[0]}</td><td class="l">${r[1]}</td><td class="l">${r[2]}</td><td>${r[3].toLocaleString()}</td><td class="${r[4]>=140?"neg":""}">${r[4]??"·"}</td><td>${r[5]}</td><td>${$(r[6])}</td><td>$${(r[6]/r[3]).toFixed(2)}</td><td>${$(r[7])}</td><td>${r[8]?$(r[8]):"·"}</td><td class="${d>0?"neg":"pos"}">${d===null?"·":(d>0?"+":"−")+$(Math.abs(d))}</td></tr>`}).join("")}</tbody>`;
+
+// new listings
+const tot=r=>r[1]+r[2]+r[3]+r[4],fmax=Math.max(1,...FA.map(tot));
+{const t=[1,2,3,4].map(k=>FA.reduce((s,r)=>s+r[k],0)),mk=t.indexOf(Math.max(...t));id("availL").innerHTML=`<b>${FA.reduce((s,r)=>s+tot(r),0)}</b> homes came onto the market across all ${NP} properties in the last 5 weeks, mostly ${["studios","1 beds","2 beds","3 beds"][mk]}.`;}
+id("faT").innerHTML=`<thead><tr><th class="l">Week of</th><th>Studio</th><th>1 bed</th><th>2 bed</th><th>3 bed</th><th class="l">Total</th></tr></thead><tbody>${FA.map(r=>`<tr><td class="l">${r[0]}</td><td>${r[1]||"·"}</td><td>${r[2]||"·"}</td><td>${r[3]||"·"}</td><td>${r[4]||"·"}</td><td class="l"><span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:${Math.round(tot(r)/fmax*90)}px;margin-right:6px;vertical-align:1px"></span>${tot(r)}</td></tr>`).join("")}</tbody>`;
+
+// property metric rankings
+BKEYS.forEach(b=>{const t=BT[b],d=BB[b];
+  const M=[["Asking Rent",r=>r[2],v=>$(v)],["Asking Rent / Sq Ft",r=>r[2]/r[3],v=>"$"+v.toFixed(2)],["Effective Rent (NER)",r=>r[4],v=>$(v)],["NER / Sq Ft",r=>r[4]/r[3],v=>"$"+v.toFixed(2)]];
+  id("rankBox").insertAdjacentHTML("beforeend",`<h2 style="font-size:16px;margin:4px 0 6px">${t}</h2><div class="rk">${M.map(([n,f,fmt])=>{const s=[...d].sort((a,b)=>f(b)-f(a)),pos=s.findIndex(r=>r[0]===ME)+1;return `<div class="card"><h3>${n} <span class="pc ${pos<=Math.ceil(s.length/3)?"bad":pos>Math.floor(s.length*2/3)?"warn":"good"}">#${pos} of ${s.length}</span></h3><div class="tbl"><table><tbody>${s.map((r,i)=>`<tr class="${r[0]===ME?"me":""}"><td class="l" style="width:26px">${i+1}</td><td class="n" style="min-width:0">${nm(r[0])}</td><td>${fmt(f(r))}</td></tr>`).join("")}</tbody></table></div></div>`}).join("")}</div>`);
+});
+// market snapshot
+(function(){
+  const all=OV,cA=f=>avg(comps.map(f)),sum=f=>all.reduce((t,r)=>t+f(r),0);
+  [["Avg Leased %",cA(r=>r[2]).toFixed(1)+"%",SH+" <b>"+me[2].toFixed(1)+"%</b>",...flag(me[2]-cA(r=>r[2]),false,2)],
+   ["Avg Exposure %",cA(r=>r[3]).toFixed(1)+"%",SH+" <b>"+me[3].toFixed(1)+"%</b>",...(me[3]>cA(r=>r[3])+2?["Higher than market","bad"]:me[3]<cA(r=>r[3])-2?["Lower than market","good"]:["In line","good"])],
+   ["Leases (last 7 days)",String(sum(r=>r[16])),SH+" <b>"+me[16]+"</b>","warn","All "+NP+" properties"],
+   ["Leases (last 5 weeks)",String(sum(r=>r[7])),SH+" <b>"+me[7]+"</b>","warn","All "+NP+" properties"]
+  ].map(t=>t.length===5&&["good","bad","warn"].includes(t[3])?t:[t[0],t[1],t[2],t[4],t[3]]).forEach(t=>id("snapTiles").insertAdjacentHTML("beforeend",`<div class="tile"><span class="lbl">${t[0]}</span><span class="big">${t[1]}</span><span class="vs">${t[2]}</span><span class="flag ${t[3]}">${t[4]}</span></div>`));
+  const rows=[...OV].sort((a,b)=>a[1]-b[1]);
+  id("snapT").innerHTML=`<thead><tr><th class="l">Property</th><th>Leased %</th><th>Exposure %</th><th>Available Units</th><th>Leases (Last 7 days)</th><th>Leases (last 5 weeks)</th><th>Leases per Week</th><th>Weeks to Lease</th></tr></thead><tbody>${rows.map(r=>{const w=pw(r),wt=w>0?r[8]/w:null;return `<tr class="${r[0]===ME?"me":""}"><td class="n"><span class="letter">${LET[r[0]]}</span>${nm(r[0])}</td><td class="${r[2]<93?"neg":""}">${r[2].toFixed(1)}%</td><td class="${r[3]>=12?"neg":""}">${r[3].toFixed(1)}%</td><td>${r[8]}</td><td>${r[16]}</td><td>${r[7]}</td><td>${w.toFixed(1)}</td><td class="${wt!==null&&wt>=12?"neg":""}">${wt===null?"·":wt>=99?"99+":Math.round(wt)}</td></tr>`}).join("")}<tr class="avg"><td class="n">Rival average</td><td>${cA(r=>r[2]).toFixed(1)}%</td><td>${cA(r=>r[3]).toFixed(1)}%</td><td>${cA(r=>r[8]).toFixed(0)}</td><td>${cA(r=>r[16]).toFixed(1)}</td><td>${cA(r=>r[7]).toFixed(1)}</td><td>${cA(pw).toFixed(1)}</td><td></td></tr></tbody>`;
+})();
+// pace
+const pr=[...OV].sort(bypace);
+{const w=pw(me),wt=w>0?me[8]/w:null;id("paceL").innerHTML=`${SH} <b>${w.toFixed(1)}</b> a week vs a rival average of <b>${avg(comps.map(pw)).toFixed(1)}</b>, counted the same way. `+(wt===null?`No leases were counted in the last 5 weeks, so weeks to lease cannot be estimated.`:`At that pace its <b>${me[8]}</b> listed ${me[8]===1?"home takes":"homes take"} about <b>${wt>=99?"99+":Math.round(wt)} ${Math.round(wt)===1?"week":"weeks"}</b> to lease.`);}
+id("paceT").innerHTML=`<thead><tr><th class="l">#</th><th class="l">Property</th>${WKL.map(w=>`<th>${w}</th>`).join("")}<th>Leases per Week</th><th>Available Units</th></tr></thead><tbody>${pr.map((r,i)=>`<tr class="${r[0]===ME?"me":""}"><td class="l"><span class="rank">${i+1}</span></td><td class="n">${nm(r[0])}</td>${WK[r[0]].map(v=>`<td>${v||"·"}</td>`).join("")}<td>${pw(r).toFixed(1)}</td><td>${r[8]}</td></tr>`).join("")}</tbody>`;
+
+// specials + fees
+id("spT").innerHTML=`<thead><tr><th class="l">Property</th><th class="l">Concession Details</th><th>Miles</th></tr></thead><tbody>${SP.length?SP.map(r=>`<tr class="${r[0]===ME?"me":""}"><td class="n">${nm(r[0])}</td><td class="t">${r[1]}</td><td>${r[0]===ME?"·":DIST[r[0]].toFixed(2)}</td></tr>`).join(""):`<tr><td class="t" colspan="3">No specials in the listing data this week.</td></tr>`}${SP.some(r=>r[0]===ME)?"":`<tr class="me"><td class="n">${SH}</td><td class="t">None in the listing data</td><td>·</td></tr>`}</tbody>`;
+const fr=[...OV].sort((a,b)=>mi(b[0])-mi(a[0]));
+const la=k=>{const v=comps.map(r=>FE[r[0]][k]).filter(x=>typeof x==="number"&&x>0);return v.length?$(avg(v)):""};const fvx=(n,k)=>{const v=FE[n][k];return v?("$"+v):""};
+(function(){const c=comps.map(r=>r[0]),adm=c.filter(n=>FE[n][1]>0).length,pet=c.filter(n=>FE[n][3]).length,m0=mi(ME),ra=listed.length?avg(listed):0;
+  [[SH+" move in cost",m0?$(m0):"None listed","Rivals that list it: <b>"+(ra?$(ra):"none")+"</b> average",...(!m0?["Not in the data","warn"]:m0>=Math.max(...listed,0)?["Highest in set","bad"]:m0>ra*1.15?["Above average","bad"]:m0<ra*.85?["Below average","good"]:["In line","good"])],
+   ["Rivals with an admin fee",adm+" of "+c.length,SH+(FE[ME][1]?"'s admin fee: <b>$"+FE[ME][1]+"</b>":" lists <b>none</b>"),FE[ME][1]?"Charges one too":"None listed","warn"],
+   ["Rivals with pet rent",pet+" of "+c.length,SH+": <b>"+(FE[ME][3]?"$"+FE[ME][3]+"</b> a month":"none listed</b>"),FE[ME][3]?"Listed":"Not listed",FE[ME][3]?"good":"warn"]
+  ].forEach(t=>id("feeTiles").insertAdjacentHTML("beforeend",`<div class="tile"><span class="lbl">${t[0]}</span><span class="big">${t[1]}</span><span class="vs">${t[2]}</span><span class="flag ${t[4]}">${t[3]}</span></div>`));
+  const rows=fr,mx=Math.max(1,...OV.map(r=>mi(r[0])));
+  id("feeBars").innerHTML=`<div class="tbl"><table class="bars"><thead><tr><th class="l">Property</th><th>Application</th><th>Admin</th><th class="l" style="width:46%">Total to move in</th></tr></thead><tbody>${rows.map(r=>{const f=FE[r[0]],t=mi(r[0]);return `<tr class="${r[0]===ME?"me":""}"><td class="n">${nm(r[0])}</td><td>${f[0]?"$"+f[0]:"None listed"}</td><td>${f[1]?"$"+f[1]:"None listed"}</td><td class="l">${t?`<span class="hb${r[0]===ME?" me":""}" style="width:${(t/mx*80).toFixed(0)}%"></span><span class="hv">$${t}</span>`:'<span class="hv" style="color:var(--muted)">None listed</span>'}</td></tr>`}).join("")}</tbody></table></div>`;
+  const rk=[...OV].map(r=>mi(r[0])).sort((x,y)=>y-x).indexOf(m0)+1,nlf=[...OV].filter(r=>mi(r[0])).length,onlyApp=c.filter(n=>FE[n][0]&&!FE[n][1]).length,both=c.filter(n=>FE[n][0]&&FE[n][1]).length;
+  id("feeL").innerHTML=m0?`${SH} charges <b>${$(m0)}</b> to apply and move in, #${rk} highest of the ${nlf} communities that list these fees. Rivals that list these fees average <b>${ra?$(ra):"none"}</b>.`:`No application or admin fee is listed for ${SH} in the data. Rivals that list these fees average <b>${ra?$(ra):"none"}</b>.`;
+  id("feeMean").innerHTML=`<b>What it means:</b> ${both} of ${c.length} rivals ${both===1?"charges":"charge"} both an application and an admin fee; ${onlyApp} ${onlyApp===1?"charges":"charge"} only an application fee.`;})();
+id("feeT").innerHTML=`<thead><tr><th class="l">Property</th><th>Application</th><th>Admin</th><th>Move in total</th><th>Pet rent</th><th>Pet fee</th><th>Pet deposit</th><th>Covered parking</th><th>Garage</th><th>Security deposit</th><th>Storage</th></tr></thead><tbody>${fr.map(r=>`<tr class="${r[0]===ME?"me":""}"><td class="n">${nm(r[0])}</td><td>${fvx(r[0],0)}</td><td>${fvx(r[0],1)}</td><td><b>${mi(r[0])?$(mi(r[0])):""}</b></td><td>${fvx(r[0],3)}</td><td>${fvx(r[0],4)}</td><td>${fvx(r[0],5)}</td><td>${fvx(r[0],6)}</td><td>${fvx(r[0],7)}</td><td>${DEP[r[0]]||""}</td><td>${STO[r[0]]||""}</td></tr>`).join("")}<tr class="avg"><td class="n">Rival average (where listed)</td>${[0,1].map(k=>`<td>${la(k)}</td>`).join("")}<td>${listed.length?$(avg(listed)):""}</td>${[3,4,5,6,7].map(k=>`<td>${la(k)}</td>`).join("")}<td></td><td></td></tr></tbody>`;
+
+// comp set
+id("ovT").innerHTML=`<thead><tr><th class="l">Property</th><th class="l">Website</th><th>Miles</th><th>Built</th><th>Total Units</th><th>Review rating</th><th>Leases last 7 days</th><th>Leased %</th><th>Exposure %</th><th>Leases (last 5 weeks)</th><th>Available Units</th><th>Days on Market</th><th>Asking Rent</th><th>Effective Rent (NER)</th><th>Concession %</th><th>Changes prices every</th></tr></thead><tbody>${[...OV].sort((a,b)=>a[1]-b[1]).map(r=>`<tr class="${r[0]===ME?"me":""}"><td class="n"><span class="letter">${LET[r[0]]}</span>${nm(r[0])}<br><span style="font-weight:400;margin-left:30px;font-size:12px;color:var(--muted)">${r[6]}</span></td><td class="l">${link(r[0])?`<a class="see" href="${link(r[0])}" target="_blank" rel="noopener">Website ↗</a>`:""}</td><td>${r[0]===ME?"·":r[1].toFixed(2)}</td><td>${r[4]}</td><td>${r[5]}</td><td>${gr(r[0])}</td><td>${r[16]}</td><td class="${r[2]<93?"neg":""}">${r[2].toFixed(1)}%</td><td class="${r[3]>=12?"neg":""}">${r[3].toFixed(1)}%</td><td>${r[7]}</td><td>${r[8]}</td><td>${r[9]??"·"}</td><td>${$(r[10])}</td><td>${$(r[11])}</td><td>${r[12]?r[12].toFixed(1)+"%":"None"}</td><td class="${(r[14]||0)>=10?"neg":""}">${r[14]!=null?r[14]+(r[14]===1?" day":" days"):"·"}</td></tr>`).join("")}<tr class="avg"><td class="n">Rival average</td><td></td><td></td><td></td><td>${Math.round(avg(comps.map(r=>r[5])))}</td><td></td><td>${avg(comps.map(r=>r[16])).toFixed(1)}</td><td>${avg(comps.map(r=>r[2])).toFixed(1)}%</td><td>${avg(comps.map(r=>r[3])).toFixed(1)}%</td><td>${avg(comps.map(r=>r[7])).toFixed(1)}</td><td>${avg(comps.map(r=>r[8])).toFixed(0)}</td><td>${(()=>{const v=comps.map(r=>r[9]).filter(x=>x!=null);return v.length?Math.round(avg(v)):"·"})()}</td><td>${$(avg(comps.map(r=>r[10])))}</td><td>${$(avg(comps.map(r=>r[11])))}</td><td>${avg(comps.map(r=>r[12])).toFixed(1)}%</td><td>${(()=>{const v=comps.map(r=>r[14]).filter(x=>x!=null);return v.length?med(v)+" days typical":""})()}</td></tr></tbody>`;
+
+// market visuals
+(function(){
+  const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  (function(){const rows=[...OV].sort(bypace),mx=Math.max(1,...OV.map(pw));
+    id("vWin").innerHTML=`<div class="tbl"><table class="bars"><thead><tr><th class="l">Property</th><th>Miles</th><th>Special</th><th class="l" style="width:45%">Leases per week</th></tr></thead><tbody>${rows.map(r=>`<tr class="${r[0]===ME?"me":""}"><td class="n">${nm(r[0])}</td><td>${r[0]===ME?"·":r[1].toFixed(2)}</td><td>${r[12]?r[12].toFixed(1)+"%":"None"}</td><td class="l"><span class="hb${r[0]===ME?" me":""}" style="width:${(pw(r)/mx*100).toFixed(0)}%"></span><span class="hv">${pw(r).toFixed(1)}</span></td></tr>`).join("")}</tbody></table></div><p class="note">All properties counted the same way, from live listings.</p>`;})();
+  (function(){const mx=Math.max(...FP.map(p=>Math.max(p[4],MKT[p[0]]||0)))*1.1;
+    id("vPsf").innerHTML=`<div class="tbl"><table class="bars"><thead><tr><th class="l">Plan</th><th class="l">Type</th><th>Asking</th><th>Market</th><th class="l" style="width:46%">Asking vs market</th></tr></thead><tbody>${FP.filter(p=>MKT[p[0]]).map(p=>{const m=MKT[p[0]],d=(p[4]-m)/m,hot=d>=.03;return `<tr class="${hot?"me":""}"><td class="n">${p[0]}</td><td class="l">${p[1]}</td><td>${$(p[4])}</td><td>${$(m)}</td><td class="l"><span class="track"><span class="hb${hot?" me":""}" style="width:${(p[4]/mx*100).toFixed(1)}%"></span><span class="mk" style="left:${(m/mx*100).toFixed(1)}%"></span></span><span class="hv">${pct(d)}</span></td></tr>`}).join("")}</tbody></table></div><p class="note">Plans with homes listed now. Market rent is what rivals ask for the same bedroom type at this size.</p>`;})();
+  (function(){const rows=[...OV].sort(bypace),top=TOP5,mx=Math.max(1,...OV.flatMap(r=>WK[r[0]]));
+    const sh=v=>v?`background:color-mix(in srgb,var(--s1) ${Math.round(15+v/mx*70)}%,var(--panel));${v/mx>.55?"color:#fff;":""}`:"";
+    id("vWeeks").innerHTML=`<div class="tbl"><table class="heat big"><thead><tr><th class="l">Property</th>${WKL.map(w=>`<th>Week of ${w}</th>`).join("")}<th>Per week</th></tr></thead><tbody>${rows.map(r=>{const t=top.includes(r[0]);return `<tr class="${r[0]===ME?"me":t?"top":""}"><td class="n">${nm(r[0])}${t?' <span class="star">★ Top 5</span>':""}</td>${WK[r[0]].map((v,i)=>`<td style="${sh(v)}" title="${esc(nm(r[0]))}, week of ${WKL[i]}: ${v} leases">${v||"·"}</td>`).join("")}<td><b>${pw(r).toFixed(1)}</b></td></tr>`}).join("")}</tbody></table></div><p class="note">★ Top 5 marks the five fastest leasing rivals. Every property is counted the same way from live listings.</p>`;})();
+  (function(){const rows=[...GR].sort((a,b)=>b[1]-a[1]),mx=Math.max(4,...GR.map(r=>Math.abs(r[1])))*1.15;
+    id("vGrow").innerHTML=`<div class="tbl"><table class="bars"><thead><tr><th class="l">Property</th><th class="l" style="width:62%">Change in asking rent per sq ft</th></tr></thead><tbody>${rows.map(r=>{const v=r[1],w=Math.abs(v)/mx*50;return `<tr class="${r[0]===ME?"me":""}"><td class="n">${nm(r[0])}</td><td class="l"><span class="div"><span class="mid"></span><span class="db ${v<0?"dn":"up"}${r[0]===ME?" me":""}" style="${v<0?`right:50%`:`left:50%`};width:${w}%"></span><span class="dv" style="${v<0?`right:${50+w+1}%`:`left:${50+w+1}%`}">${v>0?"+":v<0?"−":""}${Math.abs(v).toFixed(1)}%</span></span></td></tr>`}).join("")}<tr class="avg"><td class="n">Market median</td><td class="l">${GMKT>=0?"+":"−"}${Math.abs(GMKT).toFixed(1)}%</td></tr></tbody></table></div><p class="note">Last 30 day average asking rent per sq ft against the 90 day average. Blue went up, orange came down.</p>`;})();
+  (function(){const W=900,H=280,m={l:40,r:10,t:22,b:40},mx=Math.max(10,Math.ceil(Math.max(...FA.map(tot))/10)*10),bw=(W-m.l-m.r)/FA.length,ys=v=>H-m.b-v/mx*(H-m.t-m.b);
+    let s=`<svg viewBox="0 0 ${W} ${H}" role="img">`;[0,mx/2,mx].forEach(v=>s+=`<line x1="${m.l}" x2="${W-m.r}" y1="${ys(v)}" y2="${ys(v)}" class="gl"/><text x="${m.l-6}" y="${ys(v)+4}" text-anchor="end" class="tk">${v}</text>`);
+    const lab=["Studio","1 bed","2 bed","3 bed"];
+    FA.forEach((r,i)=>{let acc=0;const x=m.l+i*bw+bw*.2,w=bw*.6;[1,2,3,4].forEach(k=>{if(!r[k])return;const y=ys(acc+r[k]),h=ys(acc)-ys(acc+r[k]);s+=`<rect x="${x}" y="${y+1}" width="${w}" height="${Math.max(h-2,1)}" rx="2" style="fill:var(--s${k})"><title>Week of ${r[0]}: ${r[k]} ${lab[k-1]}</title></rect>`;acc+=r[k]});
+      if(acc)s+=`<text x="${x+w/2}" y="${ys(acc)-5}" text-anchor="middle" class="tk b">${acc}</text>`;s+=`<text x="${x+w/2}" y="${H-m.b+16}" text-anchor="middle" class="tk">${r[0]}</text>`});
+    id("vAvail").innerHTML=s+`<line x1="${m.l}" x2="${W-m.r}" y1="${H-m.b}" y2="${H-m.b}" class="ax"/><text x="${W/2}" y="${H-4}" text-anchor="middle" class="al">Week of</text></svg>`;})();
+})();
+
+// link every property name to its own website
+(function(){
+  function run(){document.querySelectorAll("td.n, .rv h3").forEach(el=>{if(el.querySelector("a.pl"))return;
+    for(const node of [...el.childNodes]){if(node.nodeType!==3)continue;const t=node.textContent.trim();const full=t===SH?ME:t;if(URL[full]){const a=document.createElement("a");a.className="pl";a.href=URL[full];a.target="_blank";a.rel="noopener";a.textContent=t;a.title="Open "+(full===ME?DISP:full)+" website";node.replaceWith(a);break}}})}
+  run();new MutationObserver(run).observe(document.querySelector("main"),{childList:true,subtree:true});})();
+// top 5 by leases per week, any distance
+(function(){const row=n=>OV.find(r=>r[0]===n),off=n=>(SP.find(s=>s[0]===n)||[,"None posted"])[1];
+  id("top5T").innerHTML=TOP5.map(n=>{const r=row(n);return `<tr><td class="n">${n}</td><td>${pw(r).toFixed(1)}</td><td>${r[2].toFixed(1)}%</td><td>${$(r[10])}</td><td>${r[1].toFixed(2)}</td><td>${r[4]}</td><td class="t">${off(n)}</td></tr>`}).join("");
+  const all=[ME,...TOP5];
+  const M=[["Leases per week",n=>pw(row(n)),v=>v.toFixed(1),1],["Leased %",n=>row(n)[2],v=>v.toFixed(1)+"%",1],["Asking rent",n=>row(n)[10],v=>$(v),-1],["Move in cost",n=>mi(n),v=>v?$(v):"None listed",-1],["Leases last 7 days",n=>row(n)[16],v=>String(v),1],["Review rating",n=>(GOO[n]||[0])[0]||0,v=>v?v.toFixed(1)+" ★":"No rating listed",1],["Miles from "+SH,n=>row(n)[1],v=>v?v.toFixed(2):"·",0],["Built",n=>row(n)[4],v=>String(v),0]];
+  id("beatT").innerHTML=`<thead><tr><th class="l">What renters compare</th>${all.map(n=>`<th class="l">${nm(n)}</th>`).join("")}</tr></thead><tbody>${M.map(([lab,f,fmt,dir])=>`<tr><td class="n">${lab}</td>${all.map(n=>{const v=f(n),c=f(ME),win=n!==ME&&dir&&(lab==="Move in cost"?(v>0&&c>0&&v<c):lab==="Review rating"?(v>0&&c>0&&v>c):(dir>0?v>c:v<c));return `<td class="l${n===ME?" mecell":""}${win?" win":""}">${fmt(v)}${win?" ✓":""}</td>`}).join("")}</tr>`).join("")}<tr><td class="n">Offer in listing data</td>${all.map(n=>`<td class="l t${n===ME?" mecell":""}">${n===ME?(SP.find(s=>s[0]===ME)||[,"None posted"])[1]:off(n)}</td>`).join("")}</tr></tbody>`;})();
+// why the others are not a threat right now
+(function(){const others=[...comps].filter(r=>!TOP5.includes(r[0])).sort(bypace),ra=avg(comps.map(pw));
+  const why=r=>{const p=pw(r),bits=[];bits.push(p>=ra*1.1?`Leasing ${p.toFixed(1)} a week, steady but below the top 5`:p>=ra*.9?`Leasing ${p.toFixed(1)} a week, about the market average of ${ra.toFixed(1)}`:p>0?`Leasing ${p.toFixed(1)} a week, below the market average of ${ra.toFixed(1)}`:`No leases counted in the last 5 weeks`);
+    if(r[12]>=14)bits.push(`even with ${r[12].toFixed(0)}% off rent`);if(r[2]<93)bits.push(`${r[2].toFixed(1)}% leased`);return bits.join(", ");};
+  id("notT").innerHTML=`<thead><tr><th class="l">Rival</th><th>Leases per week</th><th>Miles</th><th class="l">Why it is not a top threat right now</th></tr></thead><tbody>${others.map(r=>`<tr><td class="n">${r[0]}</td><td>${pw(r).toFixed(1)}</td><td>${r[1].toFixed(2)}</td><td class="l t" style="white-space:normal">${why(r)}</td></tr>`).join("")}</tbody>`;})();
+// amenities checklist
+(function(){const cols=AMC;
+  const G=[["In the home",[["washer_dryer_in_unit","Washer and dryer"],["stainless_appliances","Stainless appliances"],["stone_countertops","Stone countertops"],["kitchen_island","Kitchen island"],["walk_in_closets","Walk in closets"],["balcony_patio","Balcony or patio"],["smart_home_tech","Smart home tech"],["hardwood_style_flooring","Wood style flooring"],["fireplace","Fireplace"],["high_ceilings","High ceilings"],["private_yard_or_townhome","Townhome or private yard"]]],
+   ["Community",[["pool","Pool"],["fitness_center","Fitness center"],["clubhouse_lounge","Clubhouse or lounge"],["coworking_or_business_center","Coworking or business center"],["ev_charging","EV charging"],["dog_park","Dog park"],["pet_wash","Pet wash"],["package_lockers_or_service","Package lockers"],["controlled_access","Controlled access"],["garages_available","Private garages"],["rooftop_or_view_deck","Rooftop or view deck"],["game_room","Game room"],["bike_storage","Bike storage"],["storage_units","Storage units"],["24hr_maintenance","24 hour maintenance"]]]];
+  const has=(n,k)=>(AMI[n]&&AMI[n].items[k])===true;
+  id("amenT").innerHTML=`<thead><tr><th class="l">Amenity</th>${cols.map(n=>`<th>${nm(n)}</th>`).join("")}</tr></thead><tbody>${G.map(([g,items])=>`<tr class="grp"><td class="n" colspan="${cols.length+1}">${g}</td></tr>`+items.map(([k,l])=>`<tr><td class="l">${l}</td>${cols.map(n=>`<td class="${n===ME?"mecell":""}">${has(n,k)?'<span class="ck">✓</span>':'<span class="nd">·</span>'}</td>`).join("")}</tr>`).join("")).join("")}</tbody>`;
+  const rivals=cols.slice(1),gap=[];G.forEach(([,items])=>items.forEach(([k,l])=>{const c=rivals.filter(n=>has(n,k)).length;if(!has(ME,k)&&c>=3)gap.push(`${l} (${c} of ${rivals.length})`)}));
+  id("amenL").innerHTML=`The ${rivals.length} rivals leasing fastest. `+(gap.length?`Amenities several of them list that ${SH} does not: <b>${gap.join(", ")}</b>.`:`No amenity is listed by 3 or more of them that ${SH} does not also list.`);})();
+// customize: pick sections, remembered on this device only
+let off=[];try{off=JSON.parse(localStorage.getItem("msl-off")||"[]")}catch(e){}
+const cust=id("cust");
+cust.innerHTML=P.filter(p=>p.id!=="summary").map(p=>`<label><input type="checkbox" id="c-${p.id}" data-id="${p.id}" ${off.includes(p.id)?"":"checked"}>${p.dataset.tab}</label>`).join("");
+function apply(){P.forEach(p=>{const o=off.includes(p.id);p.classList.toggle("off",o);id("t-"+p.id).hidden=o});if(off.includes((P.find(p=>!p.hidden)||{}).id))show("summary");try{localStorage.setItem("msl-off",JSON.stringify(off))}catch(e){}}
+cust.onchange=e=>{const x=e.target.dataset.id;off=e.target.checked?off.filter(y=>y!==x):[...off,x];apply()};
+id("custBtn").onclick=()=>{cust.hidden=!cust.hidden;id("custBtn").setAttribute("aria-expanded",!cust.hidden)};
+apply();
+const h=(location.hash||"").slice(1);if(h&&id(h)&&P.includes(id(h))&&!off.includes(h))show(h);
+
+</script>
+
+
+</body></html>
