@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Village of Chandler Weekly Pulse · email</title>
+<title>Village of Chandler Weekly Pulse · email for Tonya Spikes and James Mitchell</title>
 <style>
 :root{--bg:#F5F5F7;--card:#fff;--ink:#1D1D1F;--sec:#86868B;--line:#E8E8ED;--blue:#0A84FF;--green:#30D158;
 --shadow:0 1px 2px rgba(0,0,0,.04),0 10px 34px rgba(0,0,0,.07)}
@@ -35,7 +35,7 @@ button.done{background:var(--green)}
 <div class="wrap">
   <div class="hdr">
     <h1>Village of Chandler Weekly Pulse</h1>
-    <span class="m">Field Position added Sep 5, 2026</span>
+    <span class="m">Pulse for October 16, 2026 · data read October 17 · for Tonya Spikes and James Mitchell</span>
   </div>
   <div class="strip" id="strip">
     <b>How to use this.</b> Press Copy email, then paste straight into Mail. Formatting and the report
@@ -44,29 +44,20 @@ button.done{background:var(--green)}
   </div>
   <div class="card">
     <div class="lbl">Subject line</div>
-    <div class="subj" id="subject">Village of Chandler Weekly Pulse: you are first on the map across four miles, and the review flow has stopped</div>
+    <div class="subj" id="subject">Village of Chandler Weekly Pulse: Google sent 8 of 12 website leads, search position up to 15.3</div>
     <div class="row"><button class="sec" id="bsubj" type="button">Copy subject line</button></div>
   </div>
   <div class="card">
     <div class="lbl">Email</div>
+    <div class="row" style="margin-top:0;margin-bottom:14px"><button id="bmailtop" type="button">Copy email</button>
+      <span class="hint">Pastes into Mail with the link live.</span></div>
     <div class="body" id="emailbody">
       <p>Hi all,</p>
-
-      <p>Village's Pulse has a new section on it: <a href="https://thesocialdm.github.io/locallift-pulses/village/">Open your live Weekly Pulse</a></p>
-
-      <p><b>This is the first week the report shows how your listing compares with the three communities you actually compete with on rent, rather than only how Village is doing against itself.</b> Nine columns, read by hand from each public profile on September 5: year built, homes, rating, review count, new reviews in six months, how many reviews each one answers, how many categories each claims, and how often each posts.</p>
-
-      <p><b>The search result is the best we measure anywhere in the portfolio.</b> We tested your position on the phrase a renter types when they do not know your name yet, from seven points spread from your own address out to seven and a half miles. You are first at every single point inside about four miles, in every direction. Second at 5.34 miles. You only leave the top ten at 7.65 miles, which is Queen Creek and Gilbert rather than Chandler, and the communities leading there are Gilbert properties. A renter searching anywhere in your trade area finds you first. Visibility is not the constraint here and needs no work.</p>
-
-      <p><b>On the listing itself you lead the field on almost everything.</b> Highest rating at 4.6 against a field averaging 4.07. Second on responses at 92.9%, in a field where one community answers two reviews in three and another answers one in three. Second on posting at one every 1.60 days, and you write the longest posts of any community we track.</p>
-
-      <p><b>The exception is review flow, and it is the reason this section is worth reading.</b> One review arrived in the last six months and none in the last thirty days, on a base of 28, which is the smallest on the table. The community 2.76 miles up the road took 37 in the same six months and now holds 79. The other two have effectively stopped as well, at 2 and 5, so the whole field is not running away from you. One community is.</p>
-
-      <p><b>The recommendation, and it is not about absorption.</b> You are 97.2% leased, so this is not a leasing problem. It matters because first place on the map is held partly by reputation signals, and one of the inputs behind your position has stopped being fed. Two asks put it back: one at renewal, one when a work order closes. Nothing else on this section needs attention.</p>
-
-      <p><b>One thing we are chasing at our end.</b> The daily listing feed for this profile has delivered nothing since August 21, so the Google actions section still covers the most recent complete week it has finalised, August 8 to 14. That is stated on the face of the report, it affects no other section, and the new Field Position section was read directly from live profiles rather than from that feed.</p>
-
-      <p class="sig">Best regards,<br>Greyson</p>
+      <p>This week&#x27;s Pulse is ready: <a href="https://thesocialdm.github.io/locallift-pulses/village/?v=1017">Open your Weekly Pulse</a></p>
+      <p>Your Lens now runs through October 16, with search through October 14 and your Google listing through October 11, the latest Google has published.</p>
+      <p>Three things this week:<br>1. Google produced 8 of your 12 website leads from September 19 to October 16 (the listing 5, regular search 3), against 14 leads in the four weeks before. No Google lead came from Google Ads.<br>2. Your average search position improved to #15.3 from #18.1 (September 17 to October 14), and the share of searchers who clicked rose from 3.5% to 4.7%, even though Google showed the site 30% less often.<br>3. Your Google listing was viewed 5,189 times from September 14 to October 11, up 14%, and Call button taps rose to 38 from 26. Reviews read October 17 stand at 4.6 on 28, with 26 answered.</p>
+      <p>One decision for your team: ask Zillow for the leads it logged inside Zillow, since its ads sent 676 website visits and no website leads from September 19 to October 16.</p>
+      <p class="sig">Greyson</p>
     </div>
     <div class="row"><button id="bmail" type="button">Copy email</button>
       <span class="hint" id="hint">Pastes into Mail with the link live.</span></div>
@@ -75,7 +66,7 @@ button.done{background:var(--green)}
 <script>
 function flash(b,m,ok){var t=b.getAttribute('data-t')||b.textContent;b.setAttribute('data-t',t);b.textContent=m;if(ok)b.classList.add('done');setTimeout(function(){b.textContent=t;b.classList.remove('done');},1900);}
 function legacyCopyNode(n){var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){ok=false;}s.removeAllRanges();return ok;}
-document.getElementById('bmail').addEventListener('click',function(){
+['bmail','bmailtop'].forEach(function(id){document.getElementById(id).addEventListener('click',function(){
   var btn=this,node=document.getElementById('emailbody');
   var html='<div style="font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1D1D1F">'+node.innerHTML+'</div>';
   var text=node.innerText;
@@ -83,7 +74,7 @@ document.getElementById('bmail').addEventListener('click',function(){
     navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})])
     .then(function(){flash(btn,'Copied',true);}).catch(function(){flash(btn,legacyCopyNode(node)?'Copied':'Press Cmd C',true);});
   } else { flash(btn,legacyCopyNode(node)?'Copied':'Press Cmd C',true); }
-});
+});});
 document.getElementById('bsubj').addEventListener('click',function(){
   var btn=this,txt=document.getElementById('subject').textContent.trim();
   if(navigator.clipboard&&navigator.clipboard.writeText){
