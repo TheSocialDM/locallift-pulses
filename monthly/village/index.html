@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Village of Chandler, September 2026</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#eef0f4; --card:#ffffff; --bord:#e2e4ea; --ink:#15161c; --sub:#5a5f6b; --mut:#8b90a0;
+  --blue:#0A84FF; --teal:#0a93b8; --grn:#1e9e4a; --org:#e08300; --pur:#8a44d6; --pink:#e0425a;
+  --navy:#101a30; --grnbg:#e9f7ee; --orgbg:#fdf1e2; --shadow:0 1px 3px rgba(20,25,40,.06),0 8px 24px rgba(20,25,40,.06);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 80px}
+#stick{position:sticky;top:0;z-index:40}
+.topbar{position:relative;z-index:40;background:rgba(238,240,244,.9);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--bord)}
+.topin{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.3px;font-size:15px}
+.brand .pin{color:var(--pink)}
+.selchip{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--bord);border-radius:12px;padding:6px 12px;box-shadow:var(--shadow)}
+.ava{width:26px;height:26px;border-radius:7px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.selchip .nm{font-weight:700;font-size:13px;line-height:1.1}
+.selchip .cr{font-size:10px;color:var(--mut)}
+.spacer{flex:1}
+.live{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:800;color:var(--grn);background:var(--grnbg);border:1px solid #cdeccf;border-radius:20px;padding:5px 11px;letter-spacing:.4px}
+.live .dot{width:8px;height:8px;border-radius:50%;background:var(--grn);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(30,158,74,.5)}70%{box-shadow:0 0 0 8px rgba(30,158,74,0)}100%{box-shadow:0 0 0 0 rgba(30,158,74,0)}}
+.mpill{font-size:12px;font-weight:700;color:var(--sub);background:var(--card);border:1px solid var(--bord);border-radius:20px;padding:5px 12px}
+.pbtn{font-size:12px;font-weight:700;color:#fff;background:var(--navy);border:none;border-radius:20px;padding:7px 14px;cursor:pointer}
+.pbtn:hover{opacity:.9}
+.nav{position:relative;z-index:30;background:rgba(238,240,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--bord);overflow-x:auto}
+.navin{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;gap:4px;white-space:nowrap;justify-content:space-between}
+.nav a{padding:11px 6px;font-size:12.5px;font-weight:700;color:var(--sub);text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--blue);border-bottom-color:var(--blue)}
+.hero{margin:26px 0 8px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:1.2px;color:var(--teal);text-transform:uppercase}
+h1.big{font-size:30px;font-weight:800;margin:6px 0 4px;letter-spacing:-.5px}
+.lede{color:var(--sub);font-size:14px;max-width:660px}
+section{margin-top:34px;scroll-margin-top:118px}
+.sechead{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.sechead h2{font-size:20px;font-weight:800;margin:0;letter-spacing:-.3px}
+.sechead .k{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--teal);text-transform:uppercase}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:16px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:1.3fr 1fr}
+@media(max-width:820px){.g4{grid-template-columns:repeat(2,1fr)}.g3,.g2{grid-template-columns:1fr}}
+.kpi{position:relative;padding:18px 18px 16px;overflow:visible}
+.kpi .top{height:5px;border-radius:5px 5px 0 0;position:absolute;left:0;right:0;top:0}
+.kpi .big{font-size:30px;font-weight:800;letter-spacing:-.5px;margin-top:4px}
+.kpi .lab{font-weight:700;font-size:13px;margin-top:2px}
+.kpi .sub{font-size:11.5px;color:var(--mut);margin-top:2px}
+.kpi .row{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.chip{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.4px;padding:3px 8px;border-radius:20px;background:var(--grnbg);color:var(--grn)}
+.toggle{font-size:10.5px;font-weight:800;color:var(--sub);background:#f1f2f6;border:1px solid var(--bord);border-radius:20px;padding:4px 9px;cursor:pointer;user-select:none}
+.toggle:hover{background:#e7e9f0}
+.delta{font-size:12px;font-weight:800}
+.up{color:var(--grn)} .down{color:var(--pink)} .flat{color:var(--mut)}
+.info{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#e6e8ef;color:var(--sub);font-size:11px;font-weight:800;cursor:help;position:relative;margin-left:6px;vertical-align:middle}
+.info:hover{background:var(--blue);color:#fff}
+.bub{position:absolute;bottom:130%;left:50%;transform:translateX(-50%) translateY(6px);width:300px;background:#f6f7f9;border:1px solid var(--bord);border-radius:14px;box-shadow:0 10px 34px rgba(20,25,40,.16);padding:13px 14px;opacity:0;visibility:hidden;transition:.16s;z-index:60;text-align:left;pointer-events:none}
+.info:hover .bub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.bub:after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:7px solid transparent;border-top-color:#f6f7f9}
+.bub .bl{font-size:9.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:2px}
+.bub .bl.w{color:var(--mut)} .bub .bl.y{color:var(--teal)} .bub .bl.h{color:var(--grn)}
+.bub p{margin:0 0 9px;font-size:11.5px;color:var(--sub);line-height:1.45}
+.bub p.hv{color:var(--ink);font-weight:600}
+.bub p:last-child{margin-bottom:0}
+@media(max-width:600px){.bub{width:240px}}
+.read{background:var(--grnbg);border:1px solid #cdeccf;border-radius:12px;padding:12px 14px;margin-top:14px}
+.read .rl{font-size:10px;font-weight:800;letter-spacing:.6px;color:var(--grn);text-transform:uppercase;margin-bottom:3px}
+.read p{margin:0;font-size:12.5px;color:var(--ink)}
+.pad{padding:18px}
+.ct{font-weight:800;font-size:14px;margin:0 0 12px;display:flex;align-items:center}
+.barrow{display:flex;align-items:center;gap:12px;margin:9px 0}
+.barrow .bn{width:180px;font-size:12.5px;font-weight:600;flex:none}
+.barrow .bn.you{font-weight:800;color:var(--grn)}
+.track{flex:1;height:16px;background:#eef0f5;border-radius:8px;overflow:hidden}
+.fill{height:100%;border-radius:8px}
+.barrow .bv{width:70px;text-align:right;font-weight:800;font-size:12.5px}
+.wedge{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:16px;overflow:hidden;border:1px solid var(--bord)}
+@media(max-width:700px){.wedge{grid-template-columns:1fr}}
+.wcol{padding:20px}
+.wl{background:#f4f5f8}
+.wr{background:var(--navy);color:#fff}
+.wcap{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:10px}
+.wl .wcap{color:var(--mut)} .wr .wcap{color:#8fb4ff}
+.wli{display:flex;gap:9px;font-size:12.5px;margin:8px 0;align-items:flex-start}
+.wli .ic{flex:none;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;margin-top:1px}
+.wl .ic{background:#e2e4ea;color:var(--mut)} .wr .ic{background:#20365e;color:#7fe0a0}
+.wr .wli{color:#dfe6f2}
+.wkick{grid-column:1/-1;background:#0b1526;color:#fff;padding:16px 20px;font-size:13px;font-weight:600;text-align:center;border-top:1px solid #22314f}
+.wkick b{color:#7fe0a0}
+.ctab{width:100%;border-collapse:collapse}
+.ctab th{font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--mut);text-align:left;padding:8px 10px;border-bottom:1px solid var(--bord)}
+.ctab td{padding:10px;border-bottom:1px solid #f0f1f5;font-size:13px}
+.ctab tr.you td{background:var(--grnbg);font-weight:700}
+.ctab .rk{font-weight:800}
+.rk.g{color:var(--grn)} .rk.o{color:var(--org)} .rk.r{color:var(--pink)}
+.revbar{display:inline-block;height:9px;background:var(--blue);border-radius:5px;vertical-align:middle;margin-right:8px}
+.you .revbar{background:var(--pink)}
+.grow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f0f1f5}
+.grow:last-child{border:none}
+.gkw{flex:1;font-weight:700;font-size:13px}
+.grank{width:60px;text-align:center;font-weight:800}
+.gsov{width:70px;text-align:right;color:var(--sub);font-size:12.5px}
+.gtop{width:120px}
+.pill{display:inline-block;position:relative;background:#f1f2f6;border:1px solid var(--bord);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:600;margin:4px 6px 0 0;cursor:help}
+.pill:hover{background:#e7e9f0}
+.pill:hover .bub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.pill .bub{width:270px}
+.tile{border-radius:12px;padding:14px;color:#fff;font-weight:700;font-size:12.5px}
+.orbox{border-radius:14px;padding:16px}
+.orbox.op{background:var(--grnbg);border:1px solid #cdeccf}
+.orbox.rk{background:var(--orgbg);border:1px solid #f3ddb8}
+.orbox .ol{font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+.op .ol{color:var(--grn)} .rk .ol{color:var(--org)}
+.orbox h3{font-size:15px;margin:5px 0 8px}
+.orbox p{margin:0;font-size:12.5px;color:var(--sub);line-height:1.5}
+.hd-hook{margin:14px 0 0;font-size:18px;line-height:1.35;font-weight:800;color:var(--pur);max-width:700px;text-shadow:0 0 10px rgba(138,68,214,.30);animation:hookglow 2.4s ease-in-out infinite}
+@keyframes hookglow{0%,100%{text-shadow:0 0 8px rgba(138,68,214,.22)}50%{text-shadow:0 0 20px rgba(138,68,214,.60)}}
+.hd{position:relative;border:1.5px dashed #c7b8e6;background:linear-gradient(180deg,#faf7ff,#f4eefc);border-radius:16px;padding:22px;overflow:hidden}
+.hdlock{display:inline-flex;align-items:center;gap:7px;background:#efe4ff;color:var(--pur);font-size:11px;font-weight:800;border-radius:20px;padding:5px 12px;letter-spacing:.4px}
+.hdblur{filter:blur(5px);opacity:.55;user-select:none;pointer-events:none;margin-top:14px}
+.hdcta{position:absolute;right:22px;bottom:22px;background:var(--pur);color:#fff;font-weight:800;font-size:12px;border:none;border-radius:20px;padding:9px 16px;cursor:pointer}
+.footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--bord);display:flex;justify-content:space-between;font-size:11px;color:var(--mut);flex-wrap:wrap;gap:8px}
+
+.flow{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
+.step{flex:1;min-width:150px;background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+.step .sn{width:24px;height:24px;border-radius:50%;color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin-bottom:9px}
+.step .st{font-weight:800;font-size:12.5px;letter-spacing:.3px}
+.step .sd{font-size:11.5px;color:var(--sub);margin-top:4px;line-height:1.4}
+.step .sm{font-size:11px;color:var(--grn);font-weight:800;margin-top:8px}
+.how{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
+.how .hs{flex:1;min-width:200px;display:flex;gap:10px;align-items:flex-start}
+.how .hn{flex:none;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center}
+.how .ht{font-size:12.5px;color:var(--ink)}
+.how .ht b{color:var(--ink)}
+html,body{overflow-x:clip}
+@media print{.hd-hook{text-shadow:none;animation:none}#stick{display:none!important}.pbtn,.toggle,.hdcta{display:none!important}body{background:#fff}section{break-inside:avoid;margin-top:22px}.card,.wedge,.hd{box-shadow:none}.bub{display:none!important}a{text-decoration:none}}
+</style>
+</head>
+<body>
+
+<div id="stick"><div class="topbar"><div class="topin">
+  <div class="brand">SOCIALDM <span class="pin">|</span> L<span class="pin">•</span>calLift™</div>
+  <div class="selchip"><div class="ava">VC</div><div><div class="nm">Village of Chandler</div><div class="cr">Chandler, AZ · Live data</div></div></div>
+  <div class="spacer"></div>
+  <div class="live"><span class="dot"></span>LIVE</div>
+  <div class="mpill">August to September 2026</div>
+  <button class="pbtn" onclick="window.print()">Print / PDF</button>
+</div></div>
+
+<div class="nav"><div class="navin">
+  <a href="#pulse" class="on">Overview</a>
+  <a href="#flow">Funnel</a>
+  <a href="#wedge">Discovery</a>
+  <a href="#ai">AI Answers</a>
+  <a href="#attribution">Attribution</a>
+  <a href="#maps">Maps</a>
+  <a href="#gbp">Profile</a>
+  <a href="#health">Website</a>
+  <a href="#position">Opportunity</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#ship">Our Work</a>
+  <a href="#market">Market Intel</a>
+</div></div></div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Executive Pulse · Live Visibility Command Center</div>
+    <h1 class="big">Your month, in 30 seconds.</h1>
+    <div class="lede">Hover any <span class="info">i<span class="bub"><div class="bl w">What this is</div><p>A grey bubble like this. Hover any circle to see what a number means, why it matters to you, and how you're doing right now.</p></span></span> to see what it means and why it matters. Toggle any card between <b>this month (September)</b> and <b>last month (August)</b> to watch it move. Monthly figures compare September 1 to 30 with August 1 to 31; the map, AI answers and reviews show the newest reading, dated on each block.</div>
+    <div style="margin-top:14px;display:inline-flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:10px 16px;box-shadow:var(--shadow)"><div style="font-size:26px;font-weight:800;color:var(--teal)">64<span style="font-size:14px;color:var(--mut)">/100</span></div><div style="font-size:12px;line-height:1.3"><b>LocalLift Visibility Index™</b><br><span style="color:var(--sub)">built from five weekly measures (reputation, maps, search, website, AI answers), reading of October 17</span></div></div>
+  </div>
+
+  <section id="pulse">
+    <div class="grid g4" id="pulseCards"></div>
+    <div class="read"><div class="rl">The story</div><p>September held August's pace on your Google profile: <b>854 interactions in 30 days</b>, about 28 a day, level with August's 892 over 31 days. <b>Call button taps reached 44</b>, the most of any month from June to September. On the newest map reading (October 16) Village is <b>1st at 35 of 49 points</b> across three miles, and website visitors were <b>more engaged</b> than in August.</p></div>
+  </section>
+
+  <section id="flow">
+    <div class="sechead"><span class="k">How it works</span><h2>How your visibility becomes renters</h2></div>
+    <div class="flow"><div class="step"><div class="sn" style="background:var(--pur)">1</div><div class="st">SEEN</div><div class="sd">Renters find you on Maps, Google and AI before they ever type your name.</div><div class="sm">4,979 profile views · named in 14 of 96 AI answers</div></div><div class="step"><div class="sn" style="background:var(--blue)">2</div><div class="st">CHOSEN</div><div class="sd">You show at the top of the map and in AI answers, so you're the option, not one of twenty.</div><div class="sm">Top three at 43 of 49 map points</div></div><div class="step"><div class="sn" style="background:var(--teal)">3</div><div class="st">ENGAGED</div><div class="sd">They act on your profile: click, call, ask for directions.</div><div class="sm">854 interactions this month</div></div><div class="step"><div class="sn" style="background:var(--grn)">4</div><div class="st">VISITED</div><div class="sd">They browse your site, floor plans and photos.</div><div class="sm">650 website clicks · 2,157 site visitors</div></div><div class="step"><div class="sn" style="background:var(--org)">5</div><div class="st">TOUR</div><div class="sd">The visit becomes a lead your leasing team can close.</div><div class="sm">44 Call button taps · 160 direction requests</div></div></div>
+    <div class="read"><div class="rl">Why this matters</div><p>Most dashboards show you the last step. <b>This report reads the first two, where the renter is won or lost.</b> If you're not seen and chosen at the top, nothing reaches your leasing team at the bottom.</p></div>
+  </section>
+
+
+  <section id="wedge">
+    <div class="sechead"><span class="k">The difference</span><h2>The discovery layer standard tools cannot see</h2></div>
+    <div class="wedge">
+      <div class="wcol wl">
+        <div class="wcap">Standard analytics dashboards</div>
+        <div class="wli"><span class="ic">✓</span><div>“ChatGPT sent you <b>60 visits</b>.” A number, and nothing else.</div></div>
+        <div class="wli"><span class="ic">✓</span><div>Clicks, calls, organic traffic. <b>What already happened.</b></div></div>
+        <div class="wli"><span class="ic">✓</span><div>People who <b>already found you</b> and landed on the site.</div></div>
+        <div class="wli"><span class="ic">×</span><div>No questions. No sentiment. No engine. No competitors. No share of voice.</div></div>
+      </div>
+      <div class="wcol wr">
+        <div class="wcap">LocalLift IQ · the discovery layer</div>
+        <div class="wli"><span class="ic">★</span><div><b>What renters asked AI</b>, which engine answered, and whether it named you or a rival.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Your <b>share of voice</b> against every competitor, and your rank at every point on the map.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Renters who've <b>never heard your name</b>, caught at the top of the funnel.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Then the next step is clear: <b>which pages, posts and listings</b> would help you get chosen.</div></div>
+      </div>
+      <div class="wkick">Anyone can open a dashboard and say “calls are up.” We show you <b>who your competition is</b>, <b>where renters are looking</b>, and <b>whether AI recommends you</b>. That's the discovery layer standard reporting can't reach.</div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="sechead"><span class="k">AI market position</span><h2>AI Share of Voice, the visibility race</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <div class="ct">How AI discovery actually works</div>
+      <div class="how">
+        <div class="hs"><div class="hn">1</div><div class="ht"><b>Renters ask AI</b> what to rent in Chandler, instead of scrolling ten listing sites.</div></div>
+        <div class="hs"><div class="hn">2</div><div class="ht"><b>AI answers from sources it trusts</b>: listing platforms, reviews, forums, and your own pages.</div></div>
+        <div class="hs"><div class="hn">3</div><div class="ht"><b>Communities that are cited and easy for AI to read get recommended.</b> The rest are invisible.</div></div>
+      </div>
+      <p style="margin:12px 0 0;font-size:12px;color:var(--sub)">AI answers checked October 18, 2026: 96 renter questions that do not name Village, asked on ChatGPT, Gemini and Perplexity (32 each), plus 9 questions that name Village. This is the current reading; earlier months were measured differently, so it is not compared with July.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">When AI answers a Chandler renter, who does it name?<span class="info" data-tip="sov">i</span></div>
+        <div id="sovBars"></div>
+        <div class="read"><div class="rl">The read</div><p>Village was named in <b>14 of 96 answers (14.6%)</b>, the second most named community, one answer behind Modera Chandler. When AI described Village, <b>14 of 23 descriptions were positive</b>, the rest neutral, none negative (this count includes answers to questions that name Village).</p></div>
+      </div>
+      <div class="card pad">
+        <div class="ct">Where AI pulls its information<span class="info" data-tip="citations">i</span></div>
+        <div id="citeBars"></div>
+        <div class="read"><div class="rl">The read</div><p>Your own site was cited in <b>14 of the 105 answers</b>, more than any other community's website. Listing sites lead: apartments.com in 73 and zillow.com in 72. Keeping your listings complete and current shapes what AI repeats about you.</p></div>
+      </div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">Engine by engine, Gemini is your strongest, ChatGPT and Perplexity are the opening</div>
+      <p style="margin:0 0 8px;font-size:12.5px;color:var(--sub)">Gemini named Village in <b>11 of 32 answers</b> and put it first 6 times, including “Rentals with a private backyard in Chandler AZ” and “Quiet rental communities with no shared walls in Chandler”. ChatGPT named Village in 1 of 32 and Perplexity in 2 of 32, so those two engines are where the most room is.</p>
+    </div>
+  </section>
+
+  <section id="attribution">
+    <div class="sechead"><span class="k">AI attribution</span><h2>Does AI actually bring you renters?</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <p style="margin:0;font-size:12.5px;color:var(--sub)">Renters increasingly decide inside ChatGPT, Gemini or Perplexity, then search your name or type your address and convert. Standard analytics credits the search and the AI moment disappears. These three signals, read from your own website and search data for September, show how that path is moving.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card kpi"><div class="top" style="background:var(--pur)"></div><div class="big" style="color:var(--pur)">60</div><div class="lab">website visits from ChatGPT<span class="info" data-tip="airef">i</span></div><div class="sub">September · 98 in August</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--teal)"></div><div class="big" style="color:var(--teal)">+15%</div><div class="lab">direct visits<span class="info" data-tip="direct">i</span></div><div class="sub">603 in September, 523 in August</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--blue)"></div><div class="big" style="color:var(--blue)">245</div><div class="lab">clicks from searches for your name<span class="info" data-tip="branded">i</span></div><div class="sub">September · 294 in August</div><div class="row"><span class="chip">VERIFIED</span></div></div>
+    </div>
+    <div class="read"><div class="rl">The read</div><p>Direct visits rose 15% to 603. ChatGPT visits (60) and clicks from searches for your name (245) came in below a busier August, so September reads as steady awareness rather than a jump. ChatGPT visits stay highly engaged: <b>47 of the 50 visits from the ChatGPT assistant were engaged sessions.</b></p></div>
+  </section>
+
+  <section id="maps">
+    <div class="sechead"><span class="k">Local maps</span><h2>Maps grid &amp; the competition</h2></div>
+    <div class="card pad">
+      <div class="ct">Google Maps grid, “apartments for rent chandler”, October 16<span class="info" data-tip="grid">i</span></div>
+      <div id="gridRows"></div>
+      <div class="read"><div class="rl">The read</div><p><span style="color:var(--mut)">49 points in a 7 by 7 grid, about a mile apart, out to three miles from your door. The street by street heatmap is in your weekly pulse.</span> Village is <b>1st at 35 of 49 points</b> and in the top three at 43, with an average rank of 1.88 where it appears. Every point on the east side and along the southern edge reads 1st. The gaps sit to the northwest, toward central Chandler, where you rank 2nd to 11th, and the far northwest corner is the only point outside the top 20.</p></div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">Who you're up against on the map, and where reviews come in<span class="info" data-tip="competitors">i</span></div>
+      <table class="ctab"><thead><tr><th>Community</th><th>Rating</th><th>Reviews</th><th style="text-align:right">Avg rank</th></tr></thead><tbody id="compBody"></tbody></table>
+      <p style="margin:8px 0 0;font-size:11px;color:var(--mut)">Same October 16 scan. Average rank across all 49 points; a point where a community does not appear in the top 20 counts as 21. Ratings and review counts as shown on Google that day.</p>
+      <div class="read"><div class="rl">The read</div><p>Village leads this map on <b>28 reviews</b>. The closest rival is The Core Chandler, in the top three at 42 of 49 points (Village 43) with <b>250 reviews</b>. Villas at Chandler Heights, a Pillar sister community, is next in the top three at 29. With far fewer reviews than these rivals, reviews are the room left to grow and the clearest way to widen a narrow lead.</p></div>
+    </div>
+  </section>
+
+  <section id="gbp">
+    <div class="sechead"><span class="k">Google profile</span><h2>Your Google profile performance</h2></div>
+    <div class="grid g4" id="gbpCards"></div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">What renters did on your profile in September</div>
+      <div id="gbpBars"></div>
+      <div class="read"><div class="rl">The read</div><p>Interactions were <b>854, 4.3% below August's 892</b>, and September has one day fewer; per day the two months are level (28.5 and 28.8). <b>Call button taps rose to 44 from 25</b>. Website clicks (650) and direction requests (160) make up the rest, and the three add up to the 854. The top searches that showed your profile were <b>non branded</b> <span class="info" data-tip="nonbranded">i</span> (“chandler apartments” 161, “apartments” 146, “apartments in chandler az” 139): new renters are discovering Village, not just people who already knew the name.</p></div>
+    </div>
+  </section>
+
+  <section id="health">
+    <div class="sechead"><span class="k">Visibility foundation</span><h2>Website and search footprint</h2></div>
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">How renters used your site in September<span class="info" data-tip="site">i</span></div>
+        <div class="grid g2" style="grid-template-columns:1fr 1fr">
+          <div style="text-align:center"><div style="font-size:34px;font-weight:800;color:var(--blue)">67%</div><div style="font-size:12px;color:var(--sub);font-weight:700">Engaged sessions</div></div>
+          <div style="text-align:center"><div style="font-size:34px;font-weight:800;color:var(--grn)">2,157</div><div style="font-size:12px;color:var(--sub);font-weight:700">Site visitors</div></div>
+        </div>
+        <div style="text-align:center;font-size:11.5px;color:var(--mut);margin-top:8px">August: 52% engaged, 2,667 visitors. Most of the change is Zillow paid listing visits (669 sessions, from 1,218), which were far more engaged in September (69%, from 23%).</div>
+      </div>
+      <div class="card pad">
+        <div class="ct">Keyword footprint, the net keeps widening<span class="info" data-tip="keywords">i</span></div>
+        <div id="trendChart"></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;margin-top:8px;flex-wrap:wrap;gap:6px"><span style="color:var(--sub)">Search clicks <b>721</b> · Avg position <b>16.1</b> · Click rate <b>4.05%</b></span><span style="color:var(--grn);font-weight:800">1,341 keywords</span></div>
+      </div>
+    </div>
+    <div class="read"><div class="rl">The read</div><p>Google search shows your site for <b>1,341 keywords</b> (September 15 reading), up from 736 in February. In September your average position improved to <b>16.1 from 20.1</b> and the click rate rose to 4.05% from 3.65%, while appearances eased to 17,814 from 22,094. Fewer, better placed appearances, with renters spending more time once they land.</p></div>
+  </section>
+
+  <section id="position">
+    <div class="sechead"><span class="k">Strategic read</span><h2>Opportunity &amp; brand risk</h2></div>
+    <div class="grid g2" style="grid-template-columns:1fr 1fr">
+      <div class="orbox op"><div class="ol">The opportunity</div><h3>Own the private yard, house feel niche.</h3><p>When AI described Village on October 18, private yards came up 17 times, townhomes or homes 10 and garages or parking 9. Yet Village did not come up on any of the three engines for “Pet friendly rental homes with a yard in Chandler AZ”, “Rentals with a garage in Chandler AZ” or “Best townhome rentals in Chandler AZ”. Using the same words renters use (yard, garage, townhome, no shared walls) across listings, pages and posts is a direct way to help turn a recognized strength into answers that name you.</p></div>
+      <div class="orbox rk"><div class="ol">The brand risk</div><h3>Price questions &amp; a name renters spell many ways.</h3><p>Village did not come up for value and price questions such as “Best value rental communities in Chandler AZ” or “Which Chandler rentals are offering move in specials right now?”. Renters also search the name many ways: in September “chandler village” (47) and “chandler village apartments” (38) found your Google profile, while “chandler village apartments” showed your website 152 times for 1 click. A clear value story and one consistent name everywhere are the two suggestions with the most leverage.</p></div>
+    </div>
+    <div style="margin-top:14px" class="card pad"><div class="ct">What AI associates with the property<span class="info" data-tip="topics">i</span></div><div id="topics"></div><p style="margin:10px 0 0;font-size:11px;color:var(--mut)">Themes in the October 18 AI answers that described Village, with how often each came up.</p></div>
+  </section>
+
+  <section id="reviews">
+    <div class="sechead"><span class="k">Reputation</span><h2>Review velocity, the fastest lever</h2></div>
+    <div class="grid g4" id="revCards"></div>
+    <div class="read"><div class="rl">The read</div><p>Village holds <b>4.6 stars on 28 reviews</b>, and 26 of the 28 have a reply. The newest review is from July 12, so none arrived in August or September. Rivals on the same map carry 89 to 278. A review request at move in and after each completed work order is the clearest way to widen the map lead.</p></div>
+  </section>
+
+  <section id="ship">
+    <div class="sechead"><span class="k">How we work</span><h2>The work behind your social channels</h2></div>
+    <div class="grid g2" style="grid-template-columns:1fr 1fr">
+      <div class="card pad"><div class="ct">Your social channels in September</div><div id="shipList"></div>
+        <p style="margin:12px 0 0;font-size:11.5px;color:var(--mut)">Your plan with us covers Instagram and Facebook posting. Hover each item for what it is and why it matters.</p></div>
+      <div class="card pad"><div class="ct">Next 30 days: suggestions</div><div id="focusList"></div></div>
+    </div>
+    <div class="card pad" style="margin-top:14px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <div><div style="font-size:30px;font-weight:800;color:var(--pur)">48</div><div style="font-size:12px;color:var(--sub);font-weight:700">Instagram and Facebook posts, September</div></div>
+      <div><div style="font-size:30px;font-weight:800;color:var(--pur)">+68%</div><div style="font-size:12px;color:var(--sub);font-weight:700">Instagram interactions (62, from 37)</div></div>
+      <div style="flex:1;min-width:230px;font-size:12.5px;color:var(--ink)"><b>Your Instagram was viewed 861 times and your Facebook content 555 times</b> in September, up from 714 and 436 in August, on 26 Instagram and 22 Facebook posts (17 and 16 in August). Consistent posting keeps Village in front of renters while they scroll.</div>
+    </div>
+    <p style="text-align:center;font-size:11.5px;color:var(--mut);margin-top:12px">Your LocalLift weekly pulse keeps these numbers current between monthly reviews.</p>
+    <div class="read" style="background:#eef4ff;border-color:#cfe0ff"><div class="rl" style="color:var(--blue)">The goal</div><p>Become consistently recommended across Google, Maps and AI search <b>before renters ever reach a listing platform.</b> The listing sites are where renters finally land. The aim is for them to arrive already choosing you.</p></div>
+  </section>
+
+  <section id="market">
+    <div class="sechead"><span class="k">Coming next</span><h2>Lease Up Market Intelligence</h2></div>
+    <div class="hd">
+      <div class="hdlock">🔒 LocalLift Market Intelligence · Preview</div>
+      <p class="hd-hook">See how your occupancy compares to every competitor in your submarket.</p>
+      <p style="margin:8px 0 0;font-size:12.5px;color:var(--sub);max-width:660px">Plus the concessions they are running, how their rents are moving, and the gaps you can own before they do. The one picture your own dashboards cannot show.</p>
+      <div class="hdblur">
+        <div class="grid g3" style="margin-top:6px">
+          <div class="card pad"><div style="font-size:26px;font-weight:800">XX%</div><div style="font-size:12px;color:var(--sub)">your occupancy vs the comp set</div></div>
+          <div class="card pad"><div style="font-size:26px;font-weight:800">$XX</div><div style="font-size:12px;color:var(--sub)">avg concession, comp set</div></div>
+          <div class="card pad"><div style="font-size:26px;font-weight:800">±X.X%</div><div style="font-size:12px;color:var(--sub)">rent movement, 90 days</div></div>
+        </div>
+      </div>
+      <button class="hdcta" onclick="alert('Ask The SocialDM to unlock Lease Up Market Intelligence for this community.')">Unlock preview →</button>
+    </div>
+  </section>
+
+  <div class="footer">
+    <span>Prepared exclusively for Village of Chandler · Confidential · © 2026 The SocialDM | LocalLift</span>
+    <span>SOCIALDM | LocalLift™ · Live Command Center</span>
+  </div>
+</div>
+
+<script>
+const TIPS={
+ airef:{w:"Website visits that your site analytics tags as coming from ChatGPT.",y:"The clearest proof AI sends renters to you. Most tools bucket it as 'direct' and never say it was AI.",h:"ChatGPT sent 60 visits in September (98 in August), and 47 of the 50 assistant visits were engaged sessions."},
+ direct:{w:"Visits with no referrer: a typed address, a bookmark, or a source the browser hid.",y:"Visits influenced by AI often land here. Rising direct visits point to growing awareness of your name.",h:"603 direct visits in September, up 15% from 523 in August."},
+ branded:{w:"Clicks from Google searches that include your name, like 'village of chandler'.",y:"When people hear about you, in AI or anywhere else, they search your name. It is a simple read on awareness.",h:"245 clicks in September from searches containing 'village', 294 in August."},
+ topics:{w:"The themes AI connects with your community, with how often each came up in the answers that described Village.",y:"It is the story the market already believes about you. Lean into what is working. This is your content roadmap.",h:"Private yards and location lead. Price or value comes up too, which is where a clear story helps most."},
+ sov:{w:"How often ChatGPT, Gemini and Perplexity name each community when a renter asks what to rent in Chandler, out of 96 answers checked October 18.",y:"Renters increasingly start with AI. If it doesn't say your name, you're out before the search begins, and Google's own tools can't measure this.",h:"Named in 14 of 96 answers, second only to Modera Chandler at 15. Of 23 descriptions of Village, 14 were positive and none negative."},
+ citations:{w:"The websites AI cited in its answers, counted as the number of the 105 answers that cited each one.",y:"If your site isn't cited, AI recommends from whoever is. Citations are how you earn the recommendation.",h:"Your site was cited in 14 of 105 answers, the most of any community's own website."},
+ grid:{w:"Your Google Maps rank measured at 49 points across three miles, not one search.",y:"A renter three streets over sees a different result than one at your door. Leading across the grid means you're the first option wherever they search from.",h:"1st at 35 of 49 points, top three at 43, top ten at 47, in the top 20 at 48 (October 16)."},
+ competitors:{w:"Where you rank on the map against competing communities, with their public review counts.",y:"Your website analytics can't show this. Knowing the field is how you win it.",h:"Average rank 2.27 on 28 reviews, ahead of The Core Chandler (2.41 on 250) and Camden Chandler (5.35 on 278)."},
+ keywords:{w:"How many different Google searches your site shows up for.",y:"More keywords means a wider net catching more renters at more moments.",h:"1,341 keywords on September 15, up from 1,238 on August 15 and 736 in February."},
+ site:{w:"Engaged sessions are visits that lasted, viewed more than one page or took an action. Visitors are the people who came to the site.",y:"Engaged visitors are the ones reading floor plans and photos, the step before a tour.",h:"67% of September sessions were engaged, up from 52% in August, on 2,157 visitors."},
+ nonbranded:{w:"Searches like 'apartments in Chandler', from renters who don't know your name yet.",y:"Searches for your name are loyalty; searches without it are growth. Showing up for them means strangers are discovering you.",h:"Your top profile searches in September were 'chandler apartments' (161), 'apartments' (146) and 'apartments in chandler az' (139)."}
+};
+const PULSE=[
+ {big:"854",lab:"profile interactions",sub:"892 in August · level per day",col:"var(--blue)",prior:"892",plab:"August: 892",pd:"4.3% lower"},
+ {big:"44",lab:"Call button taps on Google",sub:"25 in August · up 76%",col:"var(--teal)",prior:"25",plab:"August: 25 taps",pd:"+76%",up:1},
+ {big:"16.1",lab:"average Google search position",sub:"20.1 in August · 4 places better",col:"var(--pur)",prior:"20.1",plab:"August: 20.1",pd:"4 places better",up:1},
+ {big:"67%",lab:"engaged website sessions",sub:"52% in August",col:"var(--org)",prior:"52%",plab:"August: 52%",pd:"+15.6 pts",up:1}
+];
+const SOV=[["Modera Chandler",15.6,0],["Village of Chandler",14.6,1],["Cortland Chandler Crossing",11.5,0],["IMT Chandler",11.5,0],["Tricon Hudson Crossing",10.4,0]];
+const SOVN={"Modera Chandler":15,"Village of Chandler":14,"Cortland Chandler Crossing":11,"IMT Chandler":11,"Tricon Hudson Crossing":10};
+const CITE=[["apartments.com",73,0],["zillow.com",72,0],["trulia.com",39,0],["redfin.com",38,0],["villageofchandler.com",14,1]];
+const GRID=[["1st place",35,49],["Top three",43,49],["Top ten",47,49],["Top 20",48,49]];
+const COMP=[["Village of Chandler",4.6,28,2.27,1],["The Core Chandler",4.2,250,2.41,0],["Villas at Chandler Heights",4.4,89,5.02,0],["Camden Chandler Apartments",4.2,278,5.35,0],["Liv Avenida",4.6,129,5.63,0],["Noria Robson Luxury Apartments",4.4,219,5.76,0]];
+const GBPC=[
+ {big:"854",lab:"Profile interactions",sub:"website clicks · directions · Call button taps",col:"var(--blue)",prior:"892",plab:"August: 892",pd:"4.3%",dn:1},
+ {big:"4,979",lab:"Profile views",sub:"reach, people who saw you",col:"var(--teal)",prior:"5,367",plab:"August: 5,367",pd:"7.2%",dn:1},
+ {big:"160",lab:"Direction requests",sub:"closest signal to a tour",col:"var(--grn)",prior:"183",plab:"August: 183",pd:"12.6%",dn:1},
+ {big:"44",lab:"Call button taps",sub:"taps on the Call button",col:"var(--org)",prior:"25",plab:"August: 25",pd:"+76%",up:1}
+];
+const GBPBARS=[["Website clicks",650,"var(--blue)"],["Direction requests",160,"var(--grn)"],["Call button taps",44,"var(--org)"]];
+const TOPICS=[["Private yards · 17",17,"var(--blue)"],["Location · 16",16,"var(--grn)"],["Amenities · 14",14,"var(--org)"],["Price or value · 11",11,"var(--pink)"],["Townhomes or homes · 10",10,"var(--teal)"],["Garages or parking · 9",9,"var(--pur)"]];
+const REV=[["4.6","average rating","on Google, read October 21","var(--grn)"],["28","total Google reviews","rivals on the map hold 89 to 278","var(--org)"],["26 of 28","reviews with a reply","2 older reviews still open","var(--blue)"],["43 of 49","map points in the top three","October 16 scan","var(--pur)"]];
+const SHIP=[
+ {n:"26 Instagram posts",w:"Posts published to your Instagram in September, up from 17 in August.",y:"Instagram is where renters judge the look and feel of a community before they ever tour."},
+ {n:"22 Facebook posts",w:"Posts published to your Facebook page in September, up from 16 in August.",y:"Facebook reaches renters and their families in a conversational, local way, and keeps your page active."},
+ {n:"Monthly reporting",w:"This report, plus the weekly pulse between reviews.",y:"One place to see how renters find you, and what to do next."}
+];
+const FOCUS=["Use renter words (yard, garage, townhome, no shared walls) on listings and pages","Tell a clear value story for price and special questions","Use one consistent name everywhere: Village of Chandler","Ask for a review at every move in and completed work order"];
+
+const el=(h)=>{const d=document.createElement('div');d.innerHTML=h;return d.firstElementChild;};
+function bub(t){const x=TIPS[t];return `<span class="bub"><div class="bl w">What it is</div><p>${x.w}</p><div class="bl y">Why it matters</div><p>${x.y}</p><div class="bl h">How you're doing</div><p class="hv">${x.h}</p></span>`;}
+document.querySelectorAll('.info[data-tip]').forEach(i=>{i.innerHTML='i'+bub(i.dataset.tip);});
+
+function mkToggle(c){const big=c.querySelector('.big'),lab=c.querySelector('.lab'),tg=c.querySelector('.toggle');let on=0;
+ tg.onclick=()=>{on=!on;big.textContent=on?big.dataset.prior:big.dataset.cur;lab.textContent=on?lab.dataset.prior:lab.dataset.cur;tg.textContent=on?'This month ▸':'◂ August';big.style.color=on?'var(--mut)':'';};}
+const pc=document.getElementById('pulseCards');
+PULSE.forEach(k=>{const c=el(`<div class="card kpi"><div class="top" style="background:${k.col}"></div>
+ <div class="big" data-cur="${k.big}" data-prior="${k.prior}">${k.big}</div>
+ <div class="lab" data-cur="${k.lab}" data-prior="${k.plab}">${k.lab}</div><div class="sub">${k.sub}</div>
+ <div class="row"><span class="chip">VERIFIED</span><span class="toggle">◂ August</span></div></div>`);mkToggle(c);pc.appendChild(c);});
+
+const smx=16;document.getElementById('sovBars').innerHTML=SOV.map(([n,v,you])=>
+ `<div class="barrow"><div class="bn ${you?'you':''}">${n}${you?' (you)':''}</div><div class="track"><div class="fill" style="width:${Math.max(v/smx*100,2)}%;background:${you?'var(--grn)':'var(--blue)'}"></div></div><div class="bv" style="width:64px">${SOVN[n]} of 96</div></div>`).join('');
+const cmx=73;document.getElementById('citeBars').innerHTML=CITE.map(([d,n,you])=>
+ `<div class="barrow"><div class="bn ${you?'you':''}" style="width:150px">${d}${you?' (you)':''}</div><div class="track"><div class="fill" style="width:${n/cmx*100}%;background:${you?'var(--grn)':'var(--blue)'}"></div></div><div class="bv">${n} of 105</div></div>`).join('');
+document.getElementById('gridRows').innerHTML=GRID.map(([kw,n,t])=>{const p=Math.round(n/t*100);
+ return `<div class="grow"><div class="gkw">${kw}</div><div class="grank" style="color:var(--grn)">${n}</div><div class="gsov">of ${t} points</div><div class="gtop"><div class="track" style="height:10px"><div class="fill" style="width:${p}%;background:var(--grn)"></div></div></div><div style="width:44px;text-align:right;font-weight:800;font-size:12px;color:var(--grn)">${p}%</div></div>`;}).join('');
+const rmax=278;document.getElementById('compBody').innerHTML=COMP.map(([n,rt,rv,rk,you])=>{const cls=rk<=3?'g':rk<=8?'o':'r';
+ return `<tr class="${you?'you':''}"><td>${n}${you?' &nbsp;← you':''}</td><td>${rt.toFixed(1)} ★</td><td><span class="revbar" style="width:${Math.max(rv/rmax*90,6)}px"></span>${rv}</td><td style="text-align:right" class="rk ${cls}">${rk.toFixed(2)}</td></tr>`;}).join('');
+const gc=document.getElementById('gbpCards');
+GBPC.forEach(k=>{const c=el(`<div class="card kpi"><div class="top" style="background:${k.col}"></div>
+ <div class="big" data-cur="${k.big}" data-prior="${k.prior}">${k.big}</div>
+ <div class="lab" data-cur="${k.lab}" data-prior="${k.plab}">${k.lab}</div><div class="sub">${k.sub}</div>
+ <div class="row"><span class="delta ${k.up?'up':k.dn?'down':'flat'}">${k.up?'▲ ':k.dn?'▼ ':''}${k.pd}</span><span class="toggle">◂ August</span></div></div>`);mkToggle(c);gc.appendChild(c);});
+const gmx=650;document.getElementById('gbpBars').innerHTML=GBPBARS.map(([n,v,c])=>
+ `<div class="barrow"><div class="bn">${n}</div><div class="track"><div class="fill" style="width:${v/gmx*100}%;background:${c}"></div></div><div class="bv" style="width:44px">${v}</div></div>`).join('');
+document.getElementById('topics').innerHTML='<div style="display:flex;flex-wrap:wrap;gap:8px">'+TOPICS.map(([n,w,c])=>`<div class="tile" style="background:${c};flex:1 1 ${w>=14?'30%':'28%'}">${n}</div>`).join('')+'</div>';
+document.getElementById('revCards').innerHTML=REV.map(([b,l,s,c])=>
+ `<div class="card kpi"><div class="top" style="background:${c}"></div><div class="big" style="color:${c}">${b}</div><div class="lab">${l}</div><div class="sub">${s}</div><div class="row"><span class="chip">VERIFIED</span></div></div>`).join('');
+document.getElementById('shipList').innerHTML=SHIP.map(o=>`<span class="pill">${o.n}<span class="bub"><div class="bl w">What it is</div><p>${o.w}</p><div class="bl y">Why it matters</div><p class="hv">${o.y}</p></span></span>`).join('');
+document.getElementById('focusList').innerHTML=FOCUS.map((f,i)=>`<div style="display:flex;gap:9px;margin:8px 0;font-size:13px"><span style="font-weight:800;color:var(--blue)">${i+1}</span><span>${f}</span></div>`).join('');
+
+(function(){const v=[736,692,689,968,1232,1213,1238,1341],labs=['Feb','Mar','Apr','May','Jun','Jul','Aug','Sep'];
+ const W=320,H=90,pad=6,mn=Math.min(...v),mx=Math.max(...v);
+ const x=i=>pad+i*(W-2*pad)/(v.length-1), y=n=>H-pad-(n-mn)/(mx-mn)*(H-2*pad);
+ const pts=v.map((n,i)=>`${x(i)},${y(n)}`).join(' ');
+ let dots=v.map((n,i)=>`<circle cx="${x(i)}" cy="${y(n)}" r="3" fill="${i===v.length-1?'var(--grn)':'var(--blue)'}"/>`).join('');
+ let ls=labs.map((l,i)=>`<text x="${x(i)}" y="${H+2}" font-size="9" fill="#8b90a0" text-anchor="middle">${l}</text>`).join('');
+ const L=v.length-1;
+ document.getElementById('trendChart').innerHTML=`<svg viewBox="0 0 ${W} ${H+12}" style="width:100%;height:110px"><polyline points="${pts}" fill="none" stroke="var(--blue)" stroke-width="2.5"/>${dots}${ls}<text x="${x(L)-6}" y="${y(v[L])+4}" font-size="11" font-weight="800" fill="var(--grn)" text-anchor="end">1,341</text></svg>`;
+})();
+
+const links=[...document.querySelectorAll('.nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{let i=secs.length-1;for(let k=0;k<secs.length;k++){if(secs[k].getBoundingClientRect().top<140)i=k;}links.forEach(a=>a.classList.remove('on'));links[i].classList.add('on');});
+</script>
+</body>
+</html>

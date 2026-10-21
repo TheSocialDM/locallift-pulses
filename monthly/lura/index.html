@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lura Vegas, September 2026</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#eef0f4; --card:#ffffff; --bord:#e2e4ea; --ink:#15161c; --sub:#5a5f6b; --mut:#8b90a0;
+  --blue:#0A84FF; --teal:#0a93b8; --grn:#1e9e4a; --org:#e08300; --pur:#8a44d6; --pink:#e0425a;
+  --navy:#101a30; --grnbg:#e9f7ee; --orgbg:#fdf1e2; --shadow:0 1px 3px rgba(20,25,40,.06),0 8px 24px rgba(20,25,40,.06);
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 80px}
+#stick{position:sticky;top:0;z-index:40}
+.topbar{position:relative;z-index:40;background:rgba(238,240,244,.9);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--bord)}
+.topin{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.3px;font-size:15px}
+.brand .pin{color:var(--pink)}
+.selchip{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--bord);border-radius:12px;padding:6px 12px;box-shadow:var(--shadow)}
+.ava{width:26px;height:26px;border-radius:7px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.selchip .nm{font-weight:700;font-size:13px;line-height:1.1}
+.selchip .cr{font-size:10px;color:var(--mut)}
+.spacer{flex:1}
+.live{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:800;color:var(--grn);background:var(--grnbg);border:1px solid #cdeccf;border-radius:20px;padding:5px 11px;letter-spacing:.4px}
+.live .dot{width:8px;height:8px;border-radius:50%;background:var(--grn);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(30,158,74,.5)}70%{box-shadow:0 0 0 8px rgba(30,158,74,0)}100%{box-shadow:0 0 0 0 rgba(30,158,74,0)}}
+.mpill{font-size:12px;font-weight:700;color:var(--sub);background:var(--card);border:1px solid var(--bord);border-radius:20px;padding:5px 12px}
+.pbtn{font-size:12px;font-weight:700;color:#fff;background:var(--navy);border:none;border-radius:20px;padding:7px 14px;cursor:pointer}
+.pbtn:hover{opacity:.9}
+.nav{position:relative;z-index:30;background:rgba(238,240,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--bord);overflow-x:auto}
+.navin{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;gap:4px;white-space:nowrap;justify-content:space-between}
+.nav a{padding:11px 6px;font-size:12.5px;font-weight:700;color:var(--sub);text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--blue);border-bottom-color:var(--blue)}
+.hero{margin:26px 0 8px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:1.2px;color:var(--teal);text-transform:uppercase}
+h1.big{font-size:30px;font-weight:800;margin:6px 0 4px;letter-spacing:-.5px}
+.lede{color:var(--sub);font-size:14px;max-width:660px}
+section{margin-top:34px;scroll-margin-top:118px}
+.sechead{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.sechead h2{font-size:20px;font-weight:800;margin:0;letter-spacing:-.3px}
+.sechead .k{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--teal);text-transform:uppercase}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:16px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:1.3fr 1fr}
+@media(max-width:820px){.g4{grid-template-columns:repeat(2,1fr)}.g3,.g2{grid-template-columns:1fr}}
+.kpi{position:relative;padding:18px 18px 16px;overflow:visible}
+.kpi .top{height:5px;border-radius:5px 5px 0 0;position:absolute;left:0;right:0;top:0}
+.kpi .big{font-size:30px;font-weight:800;letter-spacing:-.5px;margin-top:4px}
+.kpi .lab{font-weight:700;font-size:13px;margin-top:2px}
+.kpi .sub{font-size:11.5px;color:var(--mut);margin-top:2px}
+.kpi .row{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.chip{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.4px;padding:3px 8px;border-radius:20px;background:var(--grnbg);color:var(--grn)}
+.toggle{font-size:10.5px;font-weight:800;color:var(--sub);background:#f1f2f6;border:1px solid var(--bord);border-radius:20px;padding:4px 9px;cursor:pointer;user-select:none}
+.toggle:hover{background:#e7e9f0}
+.delta{font-size:12px;font-weight:800}
+.up{color:var(--grn)} .down{color:var(--pink)} .flat{color:var(--mut)}
+.info{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#e6e8ef;color:var(--sub);font-size:11px;font-weight:800;cursor:help;position:relative;margin-left:6px;vertical-align:middle}
+.info:hover{background:var(--blue);color:#fff}
+.bub{position:absolute;bottom:130%;left:50%;transform:translateX(-50%) translateY(6px);width:300px;background:#f6f7f9;border:1px solid var(--bord);border-radius:14px;box-shadow:0 10px 34px rgba(20,25,40,.16);padding:13px 14px;opacity:0;visibility:hidden;transition:.16s;z-index:60;text-align:left;pointer-events:none}
+.info:hover .bub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.bub:after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:7px solid transparent;border-top-color:#f6f7f9}
+.bub .bl{font-size:9.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:2px}
+.bub .bl.w{color:var(--mut)} .bub .bl.y{color:var(--teal)} .bub .bl.h{color:var(--grn)}
+.bub p{margin:0 0 9px;font-size:11.5px;color:var(--sub);line-height:1.45}
+.bub p.hv{color:var(--ink);font-weight:600}
+.bub p:last-child{margin-bottom:0}
+@media(max-width:600px){.bub{width:240px}}
+.read{background:var(--grnbg);border:1px solid #cdeccf;border-radius:12px;padding:12px 14px;margin-top:14px}
+.read .rl{font-size:10px;font-weight:800;letter-spacing:.6px;color:var(--grn);text-transform:uppercase;margin-bottom:3px}
+.read p{margin:0;font-size:12.5px;color:var(--ink)}
+.pad{padding:18px}
+.ct{font-weight:800;font-size:14px;margin:0 0 12px;display:flex;align-items:center}
+.barrow{display:flex;align-items:center;gap:12px;margin:9px 0}
+.barrow .bn{width:180px;font-size:12.5px;font-weight:600;flex:none}
+.barrow .bn.you{font-weight:800;color:var(--grn)}
+.track{flex:1;height:16px;background:#eef0f5;border-radius:8px;overflow:hidden}
+.fill{height:100%;border-radius:8px}
+.barrow .bv{width:70px;text-align:right;font-weight:800;font-size:12.5px}
+.wedge{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:16px;overflow:hidden;border:1px solid var(--bord)}
+@media(max-width:700px){.wedge{grid-template-columns:1fr}}
+.wcol{padding:20px}
+.wl{background:#f4f5f8}
+.wr{background:var(--navy);color:#fff}
+.wcap{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:10px}
+.wl .wcap{color:var(--mut)} .wr .wcap{color:#8fb4ff}
+.wli{display:flex;gap:9px;font-size:12.5px;margin:8px 0;align-items:flex-start}
+.wli .ic{flex:none;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;margin-top:1px}
+.wl .ic{background:#e2e4ea;color:var(--mut)} .wr .ic{background:#20365e;color:#7fe0a0}
+.wr .wli{color:#dfe6f2}
+.wkick{grid-column:1/-1;background:#0b1526;color:#fff;padding:16px 20px;font-size:13px;font-weight:600;text-align:center;border-top:1px solid #22314f}
+.wkick b{color:#7fe0a0}
+.ctab{width:100%;border-collapse:collapse}
+.ctab th{font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--mut);text-align:left;padding:8px 10px;border-bottom:1px solid var(--bord)}
+.ctab td{padding:10px;border-bottom:1px solid #f0f1f5;font-size:13px}
+.ctab tr.you td{background:var(--grnbg);font-weight:700}
+.ctab .rk{font-weight:800}
+.rk.g{color:var(--grn)} .rk.o{color:var(--org)} .rk.r{color:var(--pink)}
+.revbar{display:inline-block;height:9px;background:var(--blue);border-radius:5px;vertical-align:middle;margin-right:8px}
+.you .revbar{background:var(--pink)}
+.grow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f0f1f5}
+.grow:last-child{border:none}
+.gkw{flex:1;font-weight:700;font-size:13px}
+.grank{width:60px;text-align:center;font-weight:800}
+.gsov{width:70px;text-align:right;color:var(--sub);font-size:12.5px}
+.gtop{width:120px}
+.pill{display:inline-block;position:relative;background:#f1f2f6;border:1px solid var(--bord);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:600;margin:4px 6px 0 0;cursor:help}
+.pill:hover{background:#e7e9f0}
+.pill:hover .bub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.pill .bub{width:270px}
+.tile{border-radius:12px;padding:14px;color:#fff;font-weight:700;font-size:12.5px}
+.orbox{border-radius:14px;padding:16px}
+.orbox.op{background:var(--grnbg);border:1px solid #cdeccf}
+.orbox.rk{background:var(--orgbg);border:1px solid #f3ddb8}
+.orbox .ol{font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+.op .ol{color:var(--grn)} .rk .ol{color:var(--org)}
+.orbox h3{font-size:15px;margin:5px 0 8px}
+.orbox p{margin:0;font-size:12.5px;color:var(--sub);line-height:1.5}
+.hd-hook{margin:14px 0 0;font-size:18px;line-height:1.35;font-weight:800;color:var(--pur);max-width:700px;text-shadow:0 0 10px rgba(138,68,214,.30);animation:hookglow 2.4s ease-in-out infinite}
+@keyframes hookglow{0%,100%{text-shadow:0 0 8px rgba(138,68,214,.22)}50%{text-shadow:0 0 20px rgba(138,68,214,.60)}}
+.hd{position:relative;border:1.5px dashed #c7b8e6;background:linear-gradient(180deg,#faf7ff,#f4eefc);border-radius:16px;padding:22px;overflow:hidden}
+.hdlock{display:inline-flex;align-items:center;gap:7px;background:#efe4ff;color:var(--pur);font-size:11px;font-weight:800;border-radius:20px;padding:5px 12px;letter-spacing:.4px}
+.hdblur{filter:blur(5px);opacity:.55;user-select:none;pointer-events:none;margin-top:14px}
+.hdcta{position:absolute;right:22px;bottom:22px;background:var(--pur);color:#fff;font-weight:800;font-size:12px;border:none;border-radius:20px;padding:9px 16px;cursor:pointer}
+.footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--bord);display:flex;justify-content:space-between;font-size:11px;color:var(--mut);flex-wrap:wrap;gap:8px}
+
+.flow{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
+.step{flex:1;min-width:150px;background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+.step .sn{width:24px;height:24px;border-radius:50%;color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin-bottom:9px}
+.step .st{font-weight:800;font-size:12.5px;letter-spacing:.3px}
+.step .sd{font-size:11.5px;color:var(--sub);margin-top:4px;line-height:1.4}
+.step .sm{font-size:11px;color:var(--grn);font-weight:800;margin-top:8px}
+.how{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
+.how .hs{flex:1;min-width:200px;display:flex;gap:10px;align-items:flex-start}
+.how .hn{flex:none;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center}
+.how .ht{font-size:12.5px;color:var(--ink)}
+.how .ht b{color:var(--ink)}
+@media print{.hd-hook{text-shadow:none;animation:none}#stick{display:none!important}.pbtn,.toggle,.hdcta{display:none!important}body{background:#fff}section{break-inside:avoid;margin-top:22px}.card,.wedge,.hd{box-shadow:none}.bub{display:none!important}a{text-decoration:none}}
+</style>
+</head>
+<body>
+
+<div id="stick"><div class="topbar"><div class="topin">
+  <div class="brand">SOCIALDM <span class="pin">|</span> L<span class="pin">•</span>calLift™</div>
+  <div class="selchip"><div class="ava">LU</div><div><div class="nm">Lura Vegas</div><div class="cr">Las Vegas, NV · Live data</div></div></div>
+  <div class="spacer"></div>
+  <div class="live"><span class="dot"></span>LIVE</div>
+  <div class="mpill">August to September 2026</div>
+  <button class="pbtn" onclick="window.print()">Print / PDF</button>
+</div></div>
+
+<div class="nav"><div class="navin">
+  <a href="#pulse" class="on">Overview</a>
+  <a href="#flow">Funnel</a>
+  <a href="#wedge">Discovery</a>
+  <a href="#ai">AI Answers</a>
+  <a href="#attribution">Attribution</a>
+  <a href="#maps">Maps</a>
+  <a href="#gbp">Profile</a>
+  <a href="#health">Site Health</a>
+  <a href="#position">Opportunity</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#ship">Our Work</a>
+  <a href="#market">Market Intel</a>
+</div></div></div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Executive Pulse · Live Visibility Command Center</div>
+    <h1 class="big">Your month, in 30 seconds.</h1>
+    <div class="lede">Hover any <span class="info">i<span class="bub"><div class="bl w">What this is</div><p>A grey bubble like this. Hover any circle to see what a number means, why it matters to you, and how you're doing right now.</p></span></span> to see what it means and why it matters. Toggle a card between <b>this month (September)</b> and <b>last month (August)</b> to watch it move. Google profile, website and search figures are full September against full August. Reviews, the map scan and AI answers are the newest readings available, each with its date.</div>
+    <div style="margin-top:14px;display:inline-flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:10px 16px;box-shadow:var(--shadow)"><div style="font-size:19px;font-weight:800;color:var(--teal)">61 ▲</div><div style="font-size:12px;line-height:1.3"><b>LocalLift Visibility Index™</b><br><span style="color:var(--sub)">Oct 10 to 16 weekly edition, up from 60 on Oct 2 · top rating among map rivals (4.8) · 108 AI assistant visits in September</span></div></div>
+  </div>
+
+  <section id="pulse">
+    <div class="grid g4" id="pulseCards"></div>
+    <div class="read"><div class="rl">The story</div><p>September was a month of <b>stronger quality signals</b>. AI assistants sent <b>108 visits</b> to luravegas.com, up from 64 in August, and Lura's average position in Google search improved from <b>9.1 to 6.1</b>. Reviews have surged since: <b>21 new five star reviews</b> from Oct 1 to 21, for 108 reviews at 4.8, the highest rating among the map rivals in this report. In the Oct 18 AI check, Lura was named in 11 of 96 renter questions, level with 4200 Paradise, The Martin and Spectra Paradise. The item to watch is the Google profile: 1,175 interactions in September against 1,498 in August, with fewer broad category searches, while Call button taps rose from 47 to 55.</p></div>
+  </section>
+
+  <section id="flow">
+    <div class="sechead"><span class="k">How it works</span><h2>How your visibility becomes renters</h2></div>
+    <div class="flow"><div class="step"><div class="sn" style="background:var(--pur)">1</div><div class="st">SEEN</div><div class="sd">Renters find you on Maps, Google and AI before they ever type your name.</div><div class="sm">10,361 profile views · Sep</div></div><div class="step"><div class="sn" style="background:var(--blue)">2</div><div class="st">CHOSEN</div><div class="sd">AI names you when renters ask what to rent, and often near the top of its list.</div><div class="sm">named in 11 of 96 AI answers · first in 4</div></div><div class="step"><div class="sn" style="background:var(--teal)">3</div><div class="st">ENGAGED</div><div class="sd">They act on your profile: click, call, ask for directions.</div><div class="sm">1,175 interactions · Sep</div></div><div class="step"><div class="sn" style="background:var(--grn)">4</div><div class="st">VISITED</div><div class="sd">They browse your site, floor plans and photos.</div><div class="sm">4,584 website users · Sep</div></div><div class="step"><div class="sn" style="background:var(--org)">5</div><div class="st">TOUR</div><div class="sd">The visit becomes a lead your leasing team can close.</div><div class="sm">55 Call button taps · 352 directions</div></div></div>
+    <div class="read"><div class="rl">Why this matters</div><p>Every dashboard shows you the last step. <b>We build the first two, where the renter is won or lost.</b> If you're not seen and chosen at the top, nothing reaches your leasing team at the bottom. This is the funnel most vendors never touch.</p></div>
+  </section>
+
+
+  <section id="wedge">
+    <div class="sechead"><span class="k">The difference</span><h2>The discovery layer standard tools cannot see</h2></div>
+    <div class="wedge">
+      <div class="wcol wl">
+        <div class="wcap">Website analytics · Search reports · Standard dashboards</div>
+        <div class="wli"><span class="ic">✓</span><div>“AI sent you <b>108 sessions</b>.” A number, and nothing else.</div></div>
+        <div class="wli"><span class="ic">✓</span><div>Clicks, calls, organic traffic. <b>What already happened.</b></div></div>
+        <div class="wli"><span class="ic">✓</span><div>People who <b>already found you</b> and landed on the site.</div></div>
+        <div class="wli"><span class="ic">✕</span><div>No questions. No sentiment. No engine. No competitors. No share of voice.</div></div>
+      </div>
+      <div class="wcol wr">
+        <div class="wcap">LocalLift IQ · the discovery layer</div>
+        <div class="wli"><span class="ic">★</span><div><b>What renters asked AI</b>, which engine answered, and whether it named you or a rival.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Your <b>share of voice</b> against every competitor, and your rank at every point on the map.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Renters who've <b>never heard your name</b>, caught at the top of the funnel.</div></div>
+        <div class="wli"><span class="ic">★</span><div>Then we <b>build the content</b>: pages, answers, structured data and captions written so AI can read them and choose you.</div></div>
+      </div>
+      <div class="wkick">Anyone can open a dashboard and say “calls are up.” We show you <b>who your competition is</b>, <b>where renters are looking</b>, and <b>whether AI recommends you</b>, then we do something about it. That's the discovery layer standard reporting can't reach.</div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="sechead"><span class="k">AI market position</span><h2>AI Share of Voice, the visibility race</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <div class="ct">How AI discovery actually works</div>
+      <div class="how">
+        <div class="hs"><div class="hn">1</div><div class="ht"><b>Renters ask AI</b> what to rent in Las Vegas, instead of scrolling ten listing sites.</div></div>
+        <div class="hs"><div class="hn">2</div><div class="ht"><b>AI answers from sources it trusts</b>: listing platforms, reviews, forums, and your own pages.</div></div>
+        <div class="hs"><div class="hn">3</div><div class="ht"><b>Communities that are cited and easy for AI to read get recommended.</b> The rest are invisible.</div></div>
+      </div>
+      <p style="margin:12px 0 0;font-size:12px;color:var(--sub)">This reading comes from 96 renter questions that do not use Lura's name, asked of ChatGPT, Gemini and Perplexity on Oct 18, 2026 (32 each), plus 9 questions that do use the name. It is the current reading, so it is shown on its own rather than against July.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">When AI answers a Las Vegas renter, who does it name?<span class="info" data-tip="sov">i</span></div>
+        <div id="sovBars"></div>
+        <div class="read"><div class="rl">The read</div><p>Lura was named in <b>11 of 96 answers (11.5%)</b>, level with 4200 Paradise, The Martin and Spectra Paradise, and three answers behind the most named community, Panorama Towers (14). When Lura is named it sits high on the list: <b>average place 2.6, and first in 4 answers</b>. No answer about Lura was negative: of the 20 answers that named it (with and without its name in the question), 10 were positive and 10 neutral.</p></div>
+      </div>
+      <div class="card pad">
+        <div class="ct">Where AI pulls its information<span class="info" data-tip="citations">i</span></div>
+        <div id="citeBars"></div>
+        <div class="read"><div class="rl">The read</div><p>Listing sites dominate the sources: apartments.com appeared in 89 of 105 answers. <b>luravegas.com was cited in 9</b>, the most of any single community website in this check, ahead of elysianliving.com (8). Growing that share, so AI quotes Lura's own pages instead of a listing site, is the lever.</p></div>
+      </div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">Engine by engine, Gemini and Perplexity lead, ChatGPT is the gap</div>
+      <p style="margin:0 0 8px;font-size:12.5px;color:var(--sub)"><b>Gemini named Lura in 4 of 32 answers</b> (12.5%) at an average place of 1.8, and put it first three times: for apartments near Harmon Ave and Valley View Blvd, apartments with EV charging near the Strip, and the newest communities near the Strip. <b>Perplexity also named Lura in 4 of 32</b> (12.5%) and put it first for gated garage parking. <b>ChatGPT named it in 3 of 32</b> (9.4%) at an average place of 4.7, so ChatGPT is where the most ground can be gained.</p>
+    </div>
+  </section>
+
+  <section id="attribution">
+    <div class="sechead"><span class="k">AI attribution</span><h2>Does AI actually bring you renters?</h2></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <p style="margin:0;font-size:12.5px;color:var(--sub)">Renters increasingly decide inside ChatGPT, Gemini and Perplexity, then search your name and convert. Standard analytics credits the search and the AI moment disappears. Here is how we close that gap, with signals Google itself measures. All three cards are full September 2026.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card kpi"><div class="top" style="background:var(--blue)"></div><div class="big" style="color:var(--blue)">28%</div><div class="lab">name searches on Google<span class="info" data-tip="branded">i</span></div><div class="sub">72% of profile searches did not use the name</div><div class="row"><span class="chip">VERIFIED · SEP</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--teal)"></div><div class="big" style="color:var(--teal)">1,193</div><div class="lab">direct visits<span class="info" data-tip="direct">i</span></div><div class="sub">up from 1,006 in August</div><div class="row"><span class="chip">VERIFIED · SEP</span></div></div>
+      <div class="card kpi"><div class="top" style="background:var(--pur)"></div><div class="big" style="color:var(--pur)">108</div><div class="lab">AI assistant visits<span class="info" data-tip="airef">i</span></div><div class="sub">up from 64 in August, 90 of them engaged</div><div class="row"><span class="chip">VERIFIED · SEP</span></div></div>
+    </div>
+    <div class="read"><div class="rl">The read</div><p>The clearest signal is the AI channel: <b>108 visits from AI assistants in September, 68.8% more than August's 64</b>, and 90 of the 108 were engaged visits. Direct visits rose 18.6%, from 1,006 to 1,193. On the Google profile, 72% of searches did not use the Lura or Aura name, most of them category searches such as “apartments las vegas”: renters finding Lura before they know the name.</p></div>
+  </section>
+
+  <section id="maps">
+    <div class="sechead"><span class="k">Local maps</span><h2>Maps grid &amp; the competition</h2></div>
+    <div class="card pad">
+      <div class="ct">Google Maps grid scan, your rank across the area<span class="info" data-tip="grid">i</span></div>
+      <div id="gridRows"></div>
+      <div class="read"><div class="rl">The read</div><p><span style="color:var(--mut)">Newest scan Oct 16, 2026: 49 points across 3 miles around the property, phrase “apartments for rent las vegas”. The street by street map is in your weekly report.</span> Lura ranks <b>1st at its own door</b> and 2nd at the point about a mile south. It appears in the top 10 at 5 of 49 points and in the top 20 at 14, up from 10 on Oct 9. Reach is strongest toward the Strip to the east and south; the points two or more miles west and north of the property did not show Lura in the top 20, which is the room to grow.</p></div>
+    </div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">Who you're up against on the map, and why reviews matter<span class="info" data-tip="competitors">i</span></div>
+      <table class="ctab"><thead><tr><th>Community</th><th>Rating</th><th>Reviews</th><th style="text-align:right">Avg rank · points shown</th></tr></thead><tbody id="compBody"></tbody></table>
+      <div class="read"><div class="rl">The read</div><p>From the Oct 16 scan. Lura carries <b>the highest rating in this group at 4.8</b>, ahead of The Onyx (4.7). Others show up across more of the grid: Spectra Paradise, which holds the largest share of top 3 spots, at 25 of 49 points, Rancho Mirage and Vista Del Valle at 21, Lura at 14. Hidden Cove (4.3, 221 reviews) showed up at the most points, 30 of 49. Lura had 105 reviews at the scan and 108 by Oct 21, and the October review run narrows the volume gap with communities like The Onyx (146). Elysian at The Palms, in July's table, did not appear in this scan. <b>Standard analytics can't show you any of this.</b></p></div>
+    </div>
+  </section>
+
+  <section id="gbp">
+    <div class="sechead"><span class="k">Google profile</span><h2>Your Google profile performance</h2></div>
+    <div class="grid g4" id="gbpCards"></div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="ct">What renters did on your profile in September</div>
+      <div id="gbpBars"></div>
+      <div class="read"><div class="rl">The read</div><p>In September Lura drew <b>10,361 profile views</b> and <b>1,175 interactions</b> (768 website clicks, 352 direction requests and 55 Call button taps), against 14,039 views and 1,498 interactions in August, 21.6% fewer interactions. <b>Call button taps rose from 47 to 55.</b> Searches using the community's name held up: 1,445 profile searches used Lura or its former name Aura, up from 1,410. The change came from broad category searches <span class="info" data-tip="nonbranded">i</span>, where the profile appeared less often (“apartments las vegas” 1,117 against 2,068), so widening category reach is the focus for the Google profile.</p></div>
+    </div>
+  </section>
+
+  <section id="health">
+    <div class="sechead"><span class="k">Visibility foundation</span><h2>Website + AI Search Health</h2></div>
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="ct">Can Google &amp; AI cleanly read your site?<span class="info" data-tip="site">i</span></div>
+        <div class="grid g2" style="grid-template-columns:1fr 1fr">
+          <div style="text-align:center"><div style="font-size:34px;font-weight:800;color:var(--grn)">Open</div><div style="font-size:12px;color:var(--sub);font-weight:700">to every AI crawler</div></div>
+          <div style="text-align:center"><div style="font-size:34px;font-weight:800;color:var(--blue)">50</div><div style="font-size:12px;color:var(--sub);font-weight:700">pages checked</div></div>
+        </div>
+        <div style="text-align:center;font-size:11.5px;color:var(--mut);margin-top:8px">Site check of Oct 19, 2026; robots file read Oct 21, 2026. 3 broken pages and structured data on 1 page are the fixes in view.</div>
+      </div>
+      <div class="card pad">
+        <div class="ct">Google search, September against August<span class="info" data-tip="keywords">i</span></div>
+        <div style="padding:6px 0"><div style="display:flex;justify-content:space-between;font-size:13px;margin:7px 0"><span style="color:var(--sub)">Average search position</span><span style="font-weight:800;color:var(--grn)">6.1 <span style="color:var(--mut);font-weight:600">from 9.1</span></span></div><div style="display:flex;justify-content:space-between;font-size:13px;margin:7px 0"><span style="color:var(--sub)">Click rate</span><span style="font-weight:800;color:var(--grn)">8.98% <span style="color:var(--mut);font-weight:600">from 8.54%</span></span></div><div style="display:flex;justify-content:space-between;font-size:13px;margin:7px 0"><span style="color:var(--sub)">Search clicks</span><span style="font-weight:800">864 <span style="color:var(--mut);font-weight:600">from 1,282</span></span></div><div style="display:flex;justify-content:space-between;font-size:13px;margin:7px 0"><span style="color:var(--sub)">“luxury apartments las vegas” position</span><span style="font-weight:800;color:var(--grn)">6.8 <span style="color:var(--mut);font-weight:600">from 13.4</span></span></div></div>
+        <div style="font-size:11.5px;color:var(--mut);margin-top:6px">Lura appeared in fewer searches (9,617 against 15,015), but where it appeared it ranked higher and earned a higher click rate.</div>
+      </div>
+    </div>
+    <div class="read"><div class="rl">The read</div><p>The site lets every AI assistant crawler in, and search quality improved in September: <b>average position 6.1, from 9.1</b>, with “apartments las vegas” at 2.3 (from 4.6). Three fixes would strengthen the foundation: repair the 3 broken pages, add structured data beyond the 1 page that has it today, and point the sitemap line in the site's robots file to luravegas.com (it currently points to the former auravegas.com address).</p></div>
+  </section>
+
+  <section id="position">
+    <div class="sechead"><span class="k">Strategic read</span><h2>Opportunity &amp; brand risk</h2></div>
+    <div class="grid g2" style="grid-template-columns:1fr 1fr">
+      <div class="orbox op"><div class="ol">The opportunity</div><h3>Own “new, near the Strip, easy parking”.</h3><p>When AI names Lura it talks most about location (17 answers) and amenities (16), then new construction and garage parking. Gemini already ranks Lura first for the newest communities near the Strip and for EV charging, and Perplexity for gated garage parking. Lura did not come up for questions such as luxury apartments west of the Strip, new apartments in 89103, or apartments near Allegiant Stadium, which are natural next topics for its pages and posts.</p></div>
+      <div class="orbox rk"><div class="ol">The brand risk</div><h3>AI underplays the review story, and the old name lingers.</h3><p>Asked about Lura reviews, ChatGPT quoted a listing site rating “based on only 2 reviews” and Perplexity said Lura “has few public reviews”, while Google shows 108 at 4.8. Renters also still search the former name: “aura” was the top profile search in September (1,142). Making the Google reviews and the Lura name easy for AI to find on Lura's own pages protects both.</p></div>
+    </div>
+    <div style="margin-top:14px" class="card pad"><div class="ct">What AI associates with Lura<span class="info" data-tip="topics">i</span></div><div id="topics"></div><p style="margin:10px 0 0;font-size:11.5px;color:var(--mut)">Themes in the AI answers that named Lura, Oct 18, 2026, by number of answers.</p></div>
+  </section>
+
+  <section id="reviews">
+    <div class="sechead"><span class="k">Reputation</span><h2>Review velocity, the fastest lever</h2></div>
+    <div class="grid g4" id="revCards"></div>
+    <div class="read"><div class="rl">The read</div><p>Reviews are Lura's edge, and October is proving it: <b>21 new Google reviews from Oct 1 to 21, every one five stars</b>, against 6 in all of September. That brings Lura to <b>108 reviews at 4.8</b> (read Oct 21), the highest rating among the map rivals in this report. Keeping the asks going at tour, move in and renewal turns the rating edge into map reach and AI trust.</p></div>
+  </section>
+
+  <section id="ship">
+    <div class="sechead"><span class="k">How we work</span><h2>The work behind your numbers</h2></div>
+    <div class="grid g2" style="grid-template-columns:1fr 1fr">
+      <div class="card pad"><div class="ct">What we delivered in September</div><div id="shipList"></div>
+        <p style="margin:12px 0 0;font-size:11.5px;color:var(--mut)">Hover any item for the detail.</p></div>
+      <div class="card pad"><div class="ct">Next 30 days: priorities</div><div id="focusList"></div></div>
+    </div>
+    <div class="card pad" style="margin-top:14px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <div style="flex:1;min-width:230px;font-size:12.5px;color:var(--ink)"><b>11 of September's Google posts carried a tracked tour link</b>, so we can see which Google posts send renters to the tour page. That is attribution standard reporting cannot give you.</div>
+    </div>
+    <p style="text-align:center;font-size:11.5px;color:var(--mut);margin-top:12px">Your LocalLift weekly pulse keeps these numbers current between monthly reviews.</p>
+    <div class="read" style="background:#eef4ff;border-color:#cfe0ff"><div class="rl" style="color:var(--blue)">The goal</div><p>Become consistently recommended across Google, Maps and AI search <b>before renters ever reach a listing platform.</b> The listing sites are where renters finally land. We're the layer that gets them there already choosing you.</p></div>
+  </section>
+
+  <section id="market">
+    <div class="sechead"><span class="k">Coming next</span><h2>Lease Up Market Intelligence</h2></div>
+    <div class="hd">
+      <div class="hdlock">🔒 LocalLift Market Intelligence · Preview</div>
+      <p class="hd-hook">See how your occupancy compares to every competitor in your submarket.</p>
+      <p style="margin:8px 0 0;font-size:12.5px;color:var(--sub);max-width:660px">Plus the concessions they are running, how their rents are moving, and the gaps you can own before they do. The one picture your own dashboards cannot show.</p>
+      <div class="hdblur">
+        <div class="grid g3" style="margin-top:6px">
+          <div class="card pad"><div style="font-size:26px;font-weight:800">XX%</div><div style="font-size:12px;color:var(--sub)">your occupancy vs the comp set</div></div>
+          <div class="card pad"><div style="font-size:26px;font-weight:800">$XX</div><div style="font-size:12px;color:var(--sub)">avg concession, comp set</div></div>
+          <div class="card pad"><div style="font-size:26px;font-weight:800">±X.X%</div><div style="font-size:12px;color:var(--sub)">rent movement, 90 days</div></div>
+        </div>
+      </div>
+      <button class="hdcta" onclick="alert('Ask The SocialDM to unlock Lease Up Market Intelligence for this community.')">Unlock preview →</button>
+    </div>
+  </section>
+
+  <div class="footer">
+    <span>Prepared exclusively for Lura Vegas · Confidential · © 2026 The SocialDM | LocalLift</span>
+    <span>SOCIALDM | LocalLift™ · Live Command Center</span>
+  </div>
+</div>
+
+<script>
+const TIPS={
+ topics:{w:"The themes AI brings up when it names Lura, sized by how many answers mention each one.",y:"It is the story AI already tells about you. Lean into what works, add what is missing. This is your content roadmap.",h:"Location leads (17 answers), then amenities (16), price or value (9), new construction (8), garages or parking (6) and smart home features (5). Checked Oct 18, 2026."},
+ airef:{w:"Site visits your website analytics tags as coming from an AI assistant like ChatGPT.",y:"The clearest proof AI is sending renters. Most tools bucket it as 'direct' and never tell you it was AI.",h:"108 visits came from AI assistants in September, up from 64 in August (68.8% more), and 90 of them were engaged visits."},
+ direct:{w:"Visits with no referrer: a typed address, a bookmark, or a source the browser hid.",y:"AI influenced visits often land here. Rising direct traffic is a sign of growing awareness.",h:"1,193 direct visits in September, up from 1,006 in August (18.6% more)."},
+ branded:{w:"The share of searches that found your Google profile by typing your name, like 'lura apartments' or the former name 'aura'.",y:"Name searches are loyalty; category searches are growth. A high category share means new renters are discovering you.",h:"In September 1,445 of 5,203 counted profile searches (27.8%) used the Lura or Aura name, so 72.2% did not use the name, mostly category searches such as 'apartments las vegas' and 'luxury apartments las vegas'."},
+ sov:{w:"How often ChatGPT, Gemini and Perplexity name a community when a renter asks what to rent in Las Vegas, without using any community's name.",y:"Renters increasingly start with AI. Being named means you are in the consideration set from the first question.",h:"Lura was named in 11 of 96 answers (11.5%) on Oct 18, 2026, level with 4200 Paradise, The Martin and Spectra Paradise, three behind Panorama Towers (14). Average place 2.6, first in 4 answers."},
+ citations:{w:"The websites AI cites as sources in its answers, counted as the share of 105 answers that cite each one.",y:"If your site is cited more, AI quotes you directly instead of a listing site.",h:"luravegas.com was cited in 9 of 105 answers on Oct 18, 2026, the most of any single community website in the check. apartments.com was cited in 89."},
+ grid:{w:"Your Google Maps rank measured at 49 points across 3 miles around the property, for one search phrase.",y:"A search from a mile away sees a different result than one at your door. The more points where you rank high, the more of the area you reach.",h:"Oct 16, 2026, 'apartments for rent las vegas': 1st at the door, top 10 at 5 points, top 20 at 14 of 49 (10 on Oct 9)."},
+ competitors:{w:"The communities ranking for the same phrase on the map, with their public Google rating and review count at the scan.",y:"Standard analytics cannot show this. Knowing the field is how you win it.",h:"Lura has the highest rating in this group at 4.8. Spectra Paradise holds the largest share of top 3 spots and shows at 25 of 49 points. Oct 16, 2026 scan."},
+ keywords:{w:"How luravegas.com performed in Google search: where it ranked, how often it appeared, and how often searchers clicked.",y:"A better position puts you in front of more renters who are ready to look.",h:"September average position 6.1 against 9.1 in August, click rate 8.98% against 8.54%, on fewer appearances (9,617 against 15,015)."},
+ site:{w:"Whether Google and AI assistants can reach and read your website.",y:"If AI cannot read the site, it cannot confidently recommend you.",h:"The robots file allows every AI crawler (read Oct 21, 2026). The Oct 19 site check read 50 pages and found 3 broken pages, with structured data on 1 page."},
+ nonbranded:{w:"Searches like 'apartments las vegas' from renters who do not know your name yet.",y:"Name searches are loyalty; category searches are growth.",h:"Category searches made up 72% of September profile searches. The top phrase, 'apartments las vegas', counted 1,117 against 2,068 in August."}
+};
+const PULSE=[
+ {big:"108",lab:"Google reviews",sub:"4.8 stars · read Oct 21 · 21 new since Oct 1",col:"var(--grn)",prior:"87",plab:"Google reviews, Sep 30",pl:"◂ Sep 30",cl:"Oct 21 ▸"},
+ {big:"108",lab:"AI assistant visits",sub:"September · 64 in August",col:"var(--pur)",prior:"64",plab:"AI assistant visits, Aug"},
+ {big:"6.1",lab:"Average Google search position",sub:"September · 9.1 in August",col:"var(--teal)",prior:"9.1",plab:"Average position, Aug"},
+ {big:"11 of 96",lab:"AI answers naming Lura",sub:"checked Oct 18 · ChatGPT, Gemini, Perplexity",col:"var(--org)",prior:null,plab:""}
+];
+const SOV=[["Panorama Towers",14,0],["Las Vegas Grand",12,0],["The Martin",11,0],["Spectra Paradise",11,0],["4200 Paradise",11,0],["Lura Vegas",11,1]];
+const CITE=[["apartments.com",84.8,"89",0],["zillow.com",48.6,"51",0],["homes.com",29.5,"31",0],["redfin.com",23.8,"25",0],["luravegas.com",8.6,"9",1]];
+const GRID=[["apartments for rent las vegas · Oct 16",11.7,4.08,28.6,"14 of 49"],["same phrase · Oct 9",10.2,4.08,20.4,"10 of 49"]];
+const COMP=[["Spectra Paradise",4.5,183,4.7,25,0],["Royal Palms Apartments",4.3,178,7.1,19,0],["The Onyx Apartments",4.7,146,7.7,18,0],["Meadow Ridge",4.5,483,7.7,17,0],["Rancho Mirage Apartments",4.1,329,11.2,21,0],["Lura Vegas",4.8,105,11.7,14,1],["Vista Del Valle Apartments",4.2,143,11.9,21,0]];
+const GBPC=[["1,175","Profile interactions","clicks · directions · calls · Sep · 1,498 in Aug","var(--blue)"],["10,361","Profile views","people who saw you · Sep · 14,039 in Aug","var(--teal)"],["768","Website clicks","to the site · Sep · 1,063 in Aug","var(--grn)"],["55","Call button taps","up from 47 in Aug","var(--org)"]];
+const GBPBARS=[["Website clicks",768,"var(--blue)"],["Direction requests",352,"var(--grn)"],["Call button taps",55,"var(--org)"]];
+const TOPICS=[["Location",17,"var(--blue)"],["Amenities",16,"var(--grn)"],["Price or value",9,"var(--pink)"],["New construction",8,"var(--org)"],["Garages &amp; parking",6,"var(--teal)"],["Smart home",5,"var(--pur)"]];
+const REV=[["4.8","average Google rating","read Oct 21","var(--grn)"],["108","total Google reviews","read Oct 21","var(--org)"],["21","new reviews, Oct 1 to 21","all five stars","var(--blue)"],["37 of 40","reviews answered","since Aug 1","var(--pur)"]];
+const SHIP=[
+ {n:"25 Google profile posts",w:"25 posts on Lura's Google profile in September, including 1 offer post and 2 video posts.",y:"Google rewards a fresh, active profile, and every post is another page AI and Google can read about Lura."},
+ {n:"Tracked tour links",w:"11 of the September Google posts (Sep 13 to 24) carried a tracked tour link.",y:"The link shows which posts send renters to the tour page."},
+ {n:"36 Google profile photos and videos",w:"34 photos and 2 videos added to the Google profile in September.",y:"Profiles with recent photos earn more views and clicks, and photos are the first thing a renter judges."},
+ {n:"Instagram: 8 posts, 5 reels",w:"8 feed posts and 5 reels published on Instagram in September.",y:"More surfaces where renters and AI meet the Lura brand, on a steady weekly rhythm."},
+ {n:"Weekly visibility reports",w:"A weekly LocalLift report on reviews, search, the Google profile, the map and AI answers.",y:"Problems and openings are caught in days, not at the end of the month."},
+ {n:"Map grid scan",w:"A 49 point Google Maps scan around the property on Sep 10.",y:"It shows exactly where Lura wins the map and where it does not yet."}
+];
+const FOCUS=["Keep the October review run going at tour, move in and renewal","Lift ChatGPT, where Lura was named in 3 of 32 answers","Help AI find the 108 Google reviews and the Lura name on Lura's own pages","Fix the 3 broken pages and point the sitemap line to luravegas.com","Grow map reach west and north of the property"];
+
+const el=(h)=>{const d=document.createElement('div');d.innerHTML=h;return d.firstElementChild;};
+function bub(t){const x=TIPS[t];return `<span class="bub"><div class="bl w">What it is</div><p>${x.w}</p><div class="bl y">Why it matters</div><p>${x.y}</p><div class="bl h">How you're doing</div><p class="hv">${x.h}</p></span>`;}
+document.querySelectorAll('.info[data-tip]').forEach(i=>{i.innerHTML='i'+bub(i.dataset.tip);});
+function mkToggle(c){const big=c.querySelector('.big'),lab=c.querySelector('.lab'),tg=c.querySelector('.toggle');if(!tg)return;let on=0;
+ tg.onclick=()=>{on=!on;big.textContent=on?big.dataset.prior:big.dataset.cur;lab.textContent=on?lab.dataset.prior:lab.dataset.cur;tg.textContent=on?(tg.dataset.cl||'September ▸'):(tg.dataset.pl||'◂ August');big.style.color=on?'var(--mut)':'';};}
+const pc=document.getElementById('pulseCards');
+PULSE.forEach(k=>{const c=el(`<div class="card kpi"><div class="top" style="background:${k.col}"></div>
+ <div class="big" data-cur="${k.big}" data-prior="${k.prior||''}">${k.big}</div>
+ <div class="lab" data-cur="${k.lab}" data-prior="${k.plab}">${k.lab}</div><div class="sub">${k.sub}</div>
+ <div class="row"><span class="chip">VERIFIED</span>${k.prior?`<span class="toggle" data-pl="${k.pl||'◂ August'}" data-cl="${k.cl||'September ▸'}">${k.pl||'◂ August'}</span>`:'<span class="chip" style="background:#f1f2f6;color:var(--sub)">CURRENT READING</span>'}</div></div>`);mkToggle(c);pc.appendChild(c);});
+const smx=14;document.getElementById('sovBars').innerHTML=SOV.map(([n,v,you])=>
+ `<div class="barrow"><div class="bn ${you?'you':''}">${n}${you?' (you)':''}</div><div class="track"><div class="fill" style="width:${Math.max(v/smx*100,2)}%;background:${you?'var(--grn)':'var(--blue)'}"></div></div><div class="bv" style="width:70px">${v} of 96</div></div>`).join('');
+const cmx=100;document.getElementById('citeBars').innerHTML=CITE.map(([d,p,n,you])=>
+ `<div class="barrow"><div class="bn ${you?'you':''}" style="width:150px">${d}${you?' (you)':''}</div><div class="track"><div class="fill" style="width:${Math.max(p/cmx*100,2)}%;background:${you?'var(--grn)':'var(--blue)'}"></div></div><div class="bv">${n} of 105</div></div>`).join('');
+document.getElementById('gridRows').innerHTML='<div class="grow" style="font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--mut)"><div class="gkw">Phrase · scan date</div><div class="grank">Avg rank</div><div class="gsov">Top 3 share</div><div class="gtop">Points in top 20</div><div style="width:64px"></div></div>'+GRID.map(([kw,r,s,t,lbl])=>{const col=r<=8?'var(--grn)':'var(--org)';
+ return `<div class="grow"><div class="gkw">${kw}</div><div class="grank" style="color:${col}">${r}</div><div class="gsov">${s}%</div><div class="gtop"><div class="track" style="height:10px"><div class="fill" style="width:${t}%;background:${col}"></div></div></div><div style="width:64px;text-align:right;font-weight:800;font-size:12px;color:${col}">${lbl}</div></div>`;}).join('');
+const rmax=483;document.getElementById('compBody').innerHTML=COMP.map(([n,rt,rv,rk,pts,you])=>{const cls=rk<=3?'g':rk<=8?'o':'r';
+ return `<tr class="${you?'you':''}"><td>${n}${you?' &nbsp;← you':''}</td><td>${rt} ★</td><td><span class="revbar" style="width:${Math.max(rv/rmax*90,6)}px"></span>${rv}</td><td style="text-align:right" class="rk ${cls}">${rk} · ${pts} of 49</td></tr>`;}).join('');
+document.getElementById('gbpCards').innerHTML=GBPC.map(([b,l,s,c])=>
+ `<div class="card kpi"><div class="top" style="background:${c}"></div><div class="big" style="color:${c}">${b}</div><div class="lab">${l}</div><div class="sub">${s}</div><div class="row"><span class="chip">VERIFIED · SEP 2026</span></div></div>`).join('');
+const gmx=768;document.getElementById('gbpBars').innerHTML=GBPBARS.map(([n,v,c])=>
+ `<div class="barrow"><div class="bn">${n}</div><div class="track"><div class="fill" style="width:${v/gmx*100}%;background:${c}"></div></div><div class="bv" style="width:44px">${v}</div></div>`).join('');
+document.getElementById('topics').innerHTML='<div style="display:flex;flex-wrap:wrap;gap:8px">'+TOPICS.map(([n,w,c])=>`<div class="tile" style="background:${c};flex:1 1 ${w>=15?'46%':'28%'}">${n} · ${w}</div>`).join('')+'</div>';
+document.getElementById('revCards').innerHTML=REV.map(([b,l,s,c])=>
+ `<div class="card kpi"><div class="top" style="background:${c}"></div><div class="big" style="color:${c}">${b}</div><div class="lab">${l}</div><div class="sub">${s}</div><div class="row"><span class="chip">VERIFIED</span></div></div>`).join('');
+document.getElementById('shipList').innerHTML=SHIP.map(o=>`<span class="pill">${o.n}<span class="bub"><div class="bl w">What it is</div><p>${o.w}</p><div class="bl y">Why it matters</div><p class="hv">${o.y}</p></span></span>`).join('');
+document.getElementById('focusList').innerHTML=FOCUS.map((f,i)=>`<div style="display:flex;gap:9px;margin:8px 0;font-size:13px"><span style="font-weight:800;color:var(--blue)">${i+1}</span><span>${f}</span></div>`).join('');
+
+const links=[...document.querySelectorAll('.nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{let i=secs.length-1;for(let k=0;k<secs.length;k++){if(secs[k].getBoundingClientRect().top<140)i=k;}links.forEach(a=>a.classList.remove('on'));links[i].classList.add('on');});
+</script>
+</body>
+</html>
