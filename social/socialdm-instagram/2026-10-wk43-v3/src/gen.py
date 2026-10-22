@@ -9,15 +9,15 @@ P[1]=(""".bg{background-image:url(p1.jpg);bottom:560px;background-position:cente
 .st.w{background:#fff;border-radius:24px} .st.w b{color:#0D1B2A} .st.w span{color:#33414F}""",
 "<div class=bg></div><div class=sh></div>"+top("BEHIND THE SCENES")+"""<div class=head><div class=kick>A WEEK AT THE SOCIALDM</div><h1>By the numbers. <i>The week you don't see.</i></h1></div>
 <div class=grid><div class="st w"><b>16</b><span>Google listings checked against their live websites</span></div><div class="st glass"><b>11</b><span>listings with review replies written every day</span></div><div class="st glass"><b>7</b><span>days a week of Google posts and photos</span></div><div class="st w"><b>1:1</b><span>every reply written for its own review</span></div></div>"""+foot("EDITED BEFORE IT SHIPS"))
-P[2]=(""".bg{background-image:url(p2.jpg);background-position:center 70%} .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.97) 0%,rgba(13,27,42,.9) 32%,rgba(13,27,42,.2) 58%,rgba(13,27,42,.55) 85%,#0D1B2A 100%)}
-.deg{position:absolute;right:64px;bottom:170px;font-family:'Lora';font-weight:600;font-size:170px;line-height:1;color:#C8F169;text-shadow:0 10px 40px rgba(0,0,0,.5)}
+P[2]=(""".bg{background-image:url(p2.jpg);background-position:center 60%} .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.97) 0%,rgba(13,27,42,.9) 32%,rgba(13,27,42,.2) 58%,rgba(13,27,42,.55) 85%,#0D1B2A 100%)}
+.deg small{display:block;font-family:'Inter';font-size:18px;letter-spacing:.22em;font-weight:700;color:#fff;text-shadow:none;margin-bottom:6px;text-align:right} .deg{position:absolute;right:64px;bottom:170px;text-align:right;font-family:'Lora';font-weight:600;font-size:170px;line-height:1;color:#C8F169;text-shadow:0 10px 40px rgba(0,0,0,.5)}
 .head{position:absolute;left:64px;right:64px;top:150px} h1{font-size:82px}
 .card{position:absolute;left:64px;width:560px;bottom:150px;background:#fff;color:#1B2635;border-radius:22px;padding:28px 32px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
 .card .l{font-size:16px;letter-spacing:.2em;font-weight:700;color:#4C7A12;margin-bottom:10px}
 .card .r{display:flex;align-items:center;gap:16px;font-size:26px;padding:12px 0;border-bottom:1.5px solid #E3E8EE} .card .r:last-child{border-bottom:0}
 .card .r i{width:14px;height:14px;border-radius:50%;background:#C8F169;border:2px solid #4C7A12;flex:none}""",
-"<div class=bg></div><div class=sh></div>"+top("LOCAL BEATS GENERIC")+"""<div class=deg>115°</div><div class=head><div class=kick>PHOENIX, ARIZONA</div><h1>In Phoenix, renters ask <i>“Is the parking covered?”</i></h1></div>
-<div class=card><div class=l>OFTEN ASKED BEFORE THE RENT</div><div class=r><i></i>Is the parking covered?</div><div class=r><i></i>Are the walkways shaded?</div><div class=r><i></i>What are the pool hours?</div><div class=r><i></i>Where can the dog walk at noon?</div></div>"""+foot("ASKED BY LOCALS"))
+"<div class=bg></div><div class=sh></div>"+top("LOCAL BEATS GENERIC")+"""<div class=deg><small>WHEN IT HITS</small>115°</div><div class=head><div class=kick>PHOENIX, ARIZONA</div><h1>In Phoenix, renters ask <i>“Is the parking covered?”</i></h1></div>
+<div class=card><div class=l>OFTEN ASKED BEFORE THE RENT</div><div class=r><i></i>Are the walkways shaded?</div><div class=r><i></i>What are the pool hours?</div><div class=r><i></i>Where can the dog walk at noon?</div><div class=r><i></i>How far is the walk from my car?</div></div>"""+foot("ASKED BY LOCALS"))
 P[3]=(""".bg{background-image:url(p3.jpg);top:700px;background-position:center} .sh{position:absolute;left:0;right:0;top:700px;bottom:0;background:linear-gradient(180deg,#0D1B2A 0%,rgba(13,27,42,.15) 25%,rgba(13,27,42,.2) 70%,#0D1B2A 100%)}
 .head{position:absolute;left:64px;right:64px;top:150px} h1{font-size:92px}
 .opts{position:absolute;left:64px;right:64px;top:440px;display:flex;flex-direction:column;gap:18px}
