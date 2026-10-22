@@ -1,0 +1,11 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;background:#0D1B2A;font-family:'Inter Display','Inter',sans-serif;color:#EEF1F5;position:relative;overflow:hidden}
+.pad{position:absolute;inset:96px 88px}
+.tag{display:inline-block;background:#C8F169;color:#0D1B2A;font-weight:700;font-size:26px;letter-spacing:.08em;padding:12px 22px;border-radius:6px;text-transform:uppercase}
+h1{font-weight:800;font-size:96px;line-height:1.02;letter-spacing:-.02em;margin-top:64px}
+h1 em{font-style:normal;color:#C8F169}
+.sub{font-size:38px;line-height:1.35;color:#B9C3D0;margin-top:44px;max-width:860px}
+.foot{position:absolute;left:88px;right:88px;bottom:80px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid #24364C;padding-top:30px;font-size:26px;letter-spacing:.14em;font-weight:700}
+.foot span:last-child{color:#C8F169}
+.box{margin-top:56px;background:#14273C;border-left:8px solid #C8F169;padding:34px 40px;font-size:36px;line-height:1.4}
+.box b{color:#C8F169}
