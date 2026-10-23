@@ -1,0 +1,33 @@
+import os, asyncio
+from playwright.async_api import async_playwright
+HERE=os.path.dirname(os.path.abspath(__file__))
+head='<html><head><meta charset=utf-8><link rel=stylesheet href=common.css><style>.ex{display:inline-block;font-size:15px;letter-spacing:.22em;font-weight:700;color:#7F8FA2;border:1.5px solid rgba(127,143,162,.6);padding:5px 10px;border-radius:6px}%s</style></head><body>'
+def top(r): return f'<div class=top><span>THE SOCIALDM</span><b>{r}</b></div>'
+def foot(k): return f'<div class=foot><span>THE SOCIALDM / LOCALLIFT</span><span>{k}</span></div></body></html>'
+G={}
+G['ig-2026-11-01-faq-before-after']=(""".bg{background-image:url(b1.jpg);bottom:700px;background-position:center 62%} .sh{position:absolute;left:0;right:0;top:0;height:660px;background:linear-gradient(180deg,rgba(13,27,42,.92) 0%,rgba(13,27,42,.55) 38%,rgba(13,27,42,.35) 62%,#0D1B2A 100%)}
+.head{position:absolute;left:64px;right:64px;top:150px} h1{font-size:88px}
+.q{position:absolute;left:64px;top:470px;display:flex;align-items:center;gap:16px;background:#C8F169;color:#0D1B2A;border-radius:40px;padding:16px 30px 16px 16px;font-size:30px;font-weight:600;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.q b{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#0D1B2A;color:#C8F169;font-size:22px}
+.card{position:absolute;left:64px;right:64px;border-radius:24px;padding:30px 38px}
+.lab{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.lab span{font-size:19px;letter-spacing:.24em;font-weight:700}
+.before{top:640px;background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.16)}
+.before .lab span{color:#B9C3D0} .before p{font-family:'Lora';font-style:italic;font-size:36px;line-height:1.3;color:#AEB9C6}
+.before .n{margin-top:14px;font-size:22px;color:#A3AFBD;letter-spacing:.02em}
+.after{top:880px;background:#fff;color:#1B2635;box-shadow:0 30px 80px rgba(0,0,0,.45);border-left:12px solid #C8F169}
+.after .lab span{color:#4C7A12} .after p{font-family:'Lora';font-weight:600;font-size:36px;line-height:1.3}
+.after .n{margin-top:14px;font-size:22px;color:#55626F}""",
+"<div class=bg></div><div class=sh></div>"+top("BEFORE AND AFTER")+"""<div class=head><div class=kick>ONE FAQ ANSWER</div><h1>Same question.<br><i>Better answer.</i></h1></div>
+<div class=q><b>Q</b>Which utilities are included?</div>
+<div class="card before"><div class=lab><span>BEFORE</span><em class=ex>EXAMPLE</em></div><p>&ldquo;Please contact the leasing office for details.&rdquo;</p><div class=n>The renter has to wait for the office to open.</div></div>
+<div class="card after"><div class=lab><span>AFTER</span><em class=ex>EXAMPLE</em></div><p>Water, sewer and trash are one flat monthly fee. Electric and internet go in your name. Ask us for the current amount.</p><div class=n>The renter keeps reading, and keeps comparing.</div></div>"""+foot("EXAMPLE ANSWER, NOT A REAL PROPERTY"))
+async def main():
+    async with async_playwright() as p:
+        b=await p.chromium.launch(); pg=await b.new_page(viewport={'width':1080,'height':1350})
+        for name,(css,body) in G.items():
+            src=os.path.join(HERE,name+'.html'); open(src,'w').write(head%css+body)
+            await pg.goto('file://'+src); await pg.wait_for_timeout(400)
+            await pg.screenshot(path=os.path.join(os.path.dirname(HERE),'socialdm-'+name+'.png'))
+        await b.close()
+asyncio.run(main())
