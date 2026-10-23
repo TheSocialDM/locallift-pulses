@@ -37,6 +37,10 @@ a{color:inherit}
 .nav a{padding:11px 6px;font-size:12.5px;font-weight:700;color:var(--sub);text-decoration:none;border-bottom:2px solid transparent}
 .nav a:hover{color:var(--ink)}
 .nav a.on{color:var(--blue);border-bottom-color:var(--blue)}
+.nav a.key{background:rgba(245,166,35,.12);border-radius:6px 6px 0 0;color:var(--ink)}
+.nav a.key::before{content:"\2605";color:#E8A317;font-size:10px;margin-right:4px;vertical-align:1px}
+.nav a.key.on{color:var(--blue)}
+@media print{.nav a.key{background:none}.nav a.key::before{content:none}}
 .hero{margin:26px 0 8px}
 .eyebrow{font-size:11px;font-weight:800;letter-spacing:1.2px;color:var(--teal);text-transform:uppercase}
 h1.big{font-size:30px;font-weight:800;margin:6px 0 4px;letter-spacing:-.5px}
@@ -157,18 +161,18 @@ section{margin-top:34px;scroll-margin-top:118px}
 </div></div>
 
 <div class="nav"><div class="navin">
-  <a href="#pulse" class="on">Overview</a>
+  <a href="#pulse" class="on key">Overview</a>
   <a href="#flow">Funnel</a>
-  <a href="#wedge">Discovery</a>
+  <a href="#wedge" class="key">Discovery</a>
   <a href="#ai">AI Answers</a>
   <a href="#attribution">Attribution</a>
-  <a href="#maps">Maps</a>
-  <a href="#gbp">Profile</a>
+  <a href="#maps" class="key">Maps</a>
+  <a href="#gbp" class="key">Profile</a>
   <a href="#health">Site Health</a>
   <a href="#position">Opportunity</a>
   <a href="#reviews">Reviews</a>
-  <a href="#ship">Our Work</a>
-  <a href="#market">Market Intel</a>
+  <a href="#ship" class="key">Our Work</a>
+  <a href="#market" class="key">Market Intel</a>
 </div></div></div>
 
 <div class="wrap">
