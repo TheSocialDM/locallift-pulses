@@ -46,6 +46,10 @@ h1{font-size:clamp(28px,4.6vw,40px);line-height:1.08;letter-spacing:-.025em;marg
 .seg::-webkit-scrollbar{display:none}
 .seg a{padding:7px 14px;border-radius:9px;font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
 .seg a.on{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.seg a.key{background:rgba(245,166,35,.13);color:var(--ink)}
+.seg a.key::before{content:"\2605";color:#E8A317;font-size:11px;margin-right:5px;vertical-align:1px}
+.seg a.key.on{background:var(--card)}
+@media print{.seg a.key{background:none}.seg a.key::before{content:none}}
 .seg a:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
 section{scroll-margin-top:64px;display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
 section>.sh,section>.s12{grid-column:1/-1}
@@ -212,7 +216,7 @@ td .sw{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:
   <p class="so" role="note"><b>How to read the dates.</b> Every card names its own dates, and each source runs through its own newest complete day.<br><b>Website and leads, Sep 19 to Oct 16:</b> leads, visits, sources, Google Ads, cities, phones and computers, pages and the visit to lead steps, against Aug 22 to Sep 18.<br><b>Search, Sep 17 to Oct 14:</b> search clicks, appearances, average position and who clicked, against Aug 20 to Sep 16.<br><b>Google listing, Sep 14 to Oct 11:</b> listing views, website clicks, Call button taps, direction requests and Maps views, against Aug 17 to Sep 13. Google publishes listing figures about five days late, so the listing cards run through October 11.<br><b>By month:</b> the trend charts and the Month by month table use full calendar months so months compare fairly. They add a new month once it closes, so October appears in the first Pulse of November.</p>
 
   <nav class="nav" aria-label="Sections"><div class="seg" id="seg">
-    <a href="#overview" class="on">Overview</a><a href="#monthly">Month by month</a><a href="#read">Working / watch</a><a href="#google">Google explained</a><a href="#leads">Leads</a><a href="#credit">Credit check</a><a href="#traffic">Traffic</a><a href="#site">On the website</a><a href="#search">Search</a><a href="#ai">Google AI answers</a><a href="#listing">Google listing</a><a href="#questions">Questions</a><a href="#moves">Move tracker</a>
+    <a href="#overview" class="on key">Overview</a><a href="#monthly">Month by month</a><a href="#read">Working / watch</a><a href="#google">Google explained</a><a href="#leads" class="key">Leads</a><a href="#credit">Credit check</a><a href="#traffic">Traffic</a><a href="#site">On the website</a><a href="#search" class="key">Search</a><a href="#ai" class="key">Google AI answers</a><a href="#listing" class="key">Google listing</a><a href="#questions">Questions</a><a href="#moves" class="key">Move tracker</a>
   </div></nav>
 
   <section id="overview">
