@@ -1,0 +1,47 @@
+{
+  "slug": "template",
+  "edition": {
+    "issue": "00",
+    "pub_date": "Publication date",
+    "market": "Market name",
+    "kicker": "Category of the lead finding",
+    "findings": [
+      {
+        "stat": "0.0%",
+        "stat_label": "What the number measures, in one plain line",
+        "period": "Exact period the figure covers",
+        "headline": "One sentence headline that states the finding, not a slogan",
+        "what": "What changed, in two sentences, with the comparison period named.",
+        "why": "Why it matters to owners and operators, in two sentences.",
+        "decisions": "The pricing, renewal, budget or marketing decisions this could inform.",
+        "why_short": "One sentence version of why it matters for the graphic.",
+        "compare": [
+          {"label": "Prior period", "value": "0.0%", "pct": 60},
+          {"label": "This period", "value": "0.0%", "pct": 80, "hi": true}
+        ],
+        "source": "Publisher, report name",
+        "source_date": "Mon DD, YYYY",
+        "url": "https://example.com"
+      },
+      {"short_title": "Second finding", "short": "One sentence on what changed and the number.", "source": "Publisher", "source_date": "Mon DD", "period": "Period", "headline": "", "what": "", "why": "", "decisions": "", "url": "https://example.com"},
+      {"short_title": "Third finding", "short": "One sentence on what changed and the number.", "source": "Publisher", "source_date": "Mon DD", "period": "Period", "headline": "", "what": "", "why": "", "decisions": "", "url": "https://example.com"}
+    ]
+  },
+  "monthly": {
+    "month": "Month YYYY",
+    "pub_date": "Publication date",
+    "market": "Market name",
+    "headline": "The one sentence that sums up the month for operators",
+    "summary": "Three to four sentences tying the month's verified trends together.",
+    "questions": ["Question one for the ops meeting", "Question two", "Question three"],
+    "trends": [
+      {"stat": "0.0%", "stat_label": "What it measures", "period": "Period", "headline": "Trend headline", "why": "Why it matters.", "decisions": "Decisions it informs.", "source": "Publisher", "source_date": "Mon DD"},
+      {"stat": "0.0%", "stat_label": "What it measures", "period": "Period", "headline": "Trend headline", "why": "Why it matters.", "decisions": "Decisions it informs.", "source": "Publisher", "source_date": "Mon DD"},
+      {"stat": "0.0%", "stat_label": "What it measures", "period": "Period", "headline": "Trend headline", "why": "Why it matters.", "decisions": "Decisions it informs.", "source": "Publisher", "source_date": "Mon DD"},
+      {"stat": "0.0%", "stat_label": "What it measures", "period": "Period", "headline": "Trend headline", "why": "Why it matters.", "decisions": "Decisions it informs.", "source": "Publisher", "source_date": "Mon DD"},
+      {"stat": "0.0%", "stat_label": "What it measures", "period": "Period", "headline": "Trend headline", "why": "Why it matters.", "decisions": "Decisions it informs.", "source": "Publisher", "source_date": "Mon DD"}
+    ],
+    "method": "How figures are selected and verified.",
+    "sources": ["Source one with date and URL", "Source two"]
+  }
+}

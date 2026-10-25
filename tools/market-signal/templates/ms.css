@@ -1,0 +1,33 @@
+@font-face{font-family:'MS Inter';src:local('Inter'),url('file:///usr/share/fonts/opentype/inter/Inter-Regular.otf');font-weight:400}
+@font-face{font-family:'MS Inter';src:url('file:///usr/share/fonts/opentype/inter/Inter-Medium.otf');font-weight:500}
+@font-face{font-family:'MS Inter';src:url('file:///usr/share/fonts/opentype/inter/Inter-SemiBold.otf');font-weight:600}
+@font-face{font-family:'MS Inter';src:url('file:///usr/share/fonts/opentype/inter/Inter-Bold.otf');font-weight:700}
+@font-face{font-family:'MS Lora';src:url('file:///usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf');font-weight:400 700;font-style:normal}
+@font-face{font-family:'MS Lora';src:url('file:///usr/share/fonts/truetype/google-fonts/Lora-Italic-Variable.ttf');font-weight:400 700;font-style:italic}
+/* The Market Signal, shared brand tokens. Navy, lime, paper. Lora for display, Inter for text. */
+:root{
+  --ink:#0D1B2A;      /* navy, primary text and masthead */
+  --ink-2:#1A2B4A;    /* report navy */
+  --lime:#C8F169;     /* signal accent, fills only on paper */
+  --paper:#F7F5F0;    /* publication paper */
+  --rule:#D9D5CC;     /* hairlines */
+  --mute:#5B6675;     /* secondary text, AA on paper */
+  --soft:#EDEAE2;     /* panel fill */
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--paper);color:var(--ink);font-family:'MS Inter','Inter',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.serif{font-family:'MS Lora','Lora',Georgia,serif}
+.eyebrow{font-size:9px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--mute)}
+.mast{background:var(--ink);color:#fff;display:flex;align-items:flex-end;justify-content:space-between}
+.mast .title{font-family:'MS Lora','Lora',Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1}
+.mast .title i{color:var(--lime);font-style:italic}
+.mast .meta{text-align:right;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#B9C3D0}
+.mast .meta b{color:var(--lime);font-weight:700}
+.signalbar{height:4px;background:linear-gradient(90deg,var(--lime) 0 22%,var(--ink) 22% 100%)}
+.stat{font-family:'MS Lora','Lora',Georgia,serif;font-weight:600;line-height:.95;letter-spacing:-.02em}
+.tag{display:inline-block;background:var(--lime);color:var(--ink);font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:2px 6px;border-radius:2px}
+.src{color:var(--mute)}
+.src b{color:var(--ink);font-weight:600}
+.rule{border-top:1px solid var(--rule)}
+.foot{display:flex;justify-content:space-between;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--mute)}
+.foot>div:last-child{white-space:nowrap}

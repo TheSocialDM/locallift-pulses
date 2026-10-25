@@ -1,0 +1,77 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>The Market Signal No. {{ e.issue }}</title>
+<style>{{ css|safe }}
+@page{size:8.5in 5.5in;margin:0}
+body{width:816px;height:528px;overflow:hidden;position:relative}
+.mast{height:58px;padding:0 30px 12px}
+.mast .title{font-size:28px}
+.mast .meta{font-size:8px;line-height:1.6}
+.top{display:grid;grid-template-columns:210px 1fr;gap:26px;padding:16px 30px 0}
+.lead .stat{font-size:62px;margin:6px 0 5px}
+.lead .label{font-size:11px;line-height:1.38;font-weight:600}
+.lead .period{font-size:9px;color:var(--mute);margin-top:6px;line-height:1.4}
+h1{font-family:'MS Lora','Lora',Georgia,serif;font-weight:600;font-size:21px;line-height:1.16;margin:5px 0 8px}
+.sig p{font-size:10.2px;line-height:1.5;color:#22303F}
+.sig .src{font-size:8.5px;margin-top:6px}
+.four{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:16px;padding:14px 30px 0}
+.four h3{font-size:8px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding-top:6px;border-top:2px solid var(--ink);margin-bottom:5px;display:flex;justify-content:space-between;align-items:center}
+.four p{font-size:9.4px;line-height:1.46;color:#22303F}
+.four p+p{margin-top:5px}
+.lim{color:var(--mute)!important;font-style:italic}
+.q{font-weight:700;color:var(--ink)!important}
+.st{font-size:7px;letter-spacing:.12em;padding:1px 4px;border-radius:2px;border:1px solid var(--ink)}
+.st.v{background:var(--lime);border-color:#9DBF45}
+.w{list-style:none;display:grid;gap:5px}
+.w li{font-size:8.8px;line-height:1.38;padding-left:9px;border-left:2px solid var(--lime)}
+.w li b{font-weight:600;color:var(--ink)}
+.w li span{display:block;color:var(--mute);font-size:8px}
+.also{margin:10px 30px 0;padding-top:7px;border-top:1px solid var(--rule);font-size:8.8px;line-height:1.4}
+.foot{position:absolute;left:30px;right:30px;bottom:12px;font-size:7px;align-items:flex-end}
+.foot .method{max-width:540px;text-transform:none;letter-spacing:0;font-weight:400;line-height:1.4}
+</style></head>
+<body>
+{% set f = e.findings[0] %}
+<div class="mast">
+  <div class="title">The Market <i>Signal</i></div>
+  <div class="meta">No. {{ e.issue }} · {{ e.pub_date }}<br><b>{{ e.market }}</b></div>
+</div>
+<div class="signalbar"></div>
+<div class="top">
+  <div class="lead">
+    <div class="eyebrow">The Signal</div>
+    <div class="stat">{{ f.stat }}</div>
+    <div class="label">{{ f.stat_label }}</div>
+    <div class="period">{{ f.period }}</div>
+  </div>
+  <div class="sig">
+    <div class="eyebrow">{{ f.kicker }}</div>
+    <h1>{{ f.headline }}</h1>
+    <p>{{ f.signal }}</p>
+    <p class="src"><b>Source:</b> {{ f.source }}, published {{ f.source_date }}</p>
+  </div>
+</div>
+<div class="four">
+  <div>
+    <h3>The Local Reality <span class="st {{ 'v' if f.local.status == 'verified' else '' }}">{{ 'VERIFIED' if f.local.status == 'verified' else 'PARTIAL' if f.local.status == 'partial' else 'NOT AVAILABLE' }}</span></h3>
+    {% if f.local.evidence %}<p>{{ f.local.evidence }} <span class="src">({{ f.local.source }})</span></p>{% endif %}
+    {% if f.local.limitation %}<p class="lim">Limitation: {{ f.local.limitation }}</p>{% endif %}
+  </div>
+  <div>
+    <h3>The Operator Decision</h3>
+    <p class="q">{{ f.decision.question }}</p>
+    <p>{{ f.decision.examine }}</p>
+  </div>
+  <div>
+    <h3>The Watch List</h3>
+    <ul class="w">{% for w in f.watch %}<li><b>{{ w.indicator }}</b><span>{{ w.date }} ({{ w.date_status }}) · {{ w.owner }}</span></li>{% endfor %}</ul>
+  </div>
+</div>
+<div class="also"><b>Our read:</b> {{ f.interpretation }} <b>Confidence:</b> {{ f.confidence }}</div>
+{% if e.findings|length > 1 %}
+<div class="also"><b>Also this week:</b> {% for r in e.findings[1:] %}{{ r.headline }} ({{ r.source }}, {{ r.source_date }}){% if not loop.last %} · {% endif %}{% endfor %}</div>
+{% endif %}
+<div class="foot">
+  <div class="method">Figures come from each publisher's own release and are checked against it. Local Reality, Operator Decision and interpretation are ours, logged with a confidence level in the Signal Ledger and graded at each checkpoint.</div>
+  <div>LocalLift &amp; The SocialDM</div>
+</div>
+</body></html>

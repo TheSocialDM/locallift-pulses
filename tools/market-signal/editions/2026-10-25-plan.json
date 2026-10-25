@@ -1,0 +1,52 @@
+{
+  "captions": [
+    {
+      "who": "Melanie Prock, personal LinkedIn",
+      "when": "Tuesday, Oct 27, morning",
+      "role": "The experienced operator challenging an assumption",
+      "question": "Is our pricing reacting to today's market or to last spring's?",
+      "text": "National supply is finally slowing. That doesn't mean Phoenix is done delivering.\n\nRealPage reported on Oct 22 that U.S. apartment completions are down 27% year to date. In the same report, Phoenix was among the five metros with the most new units delivered last quarter, each above 3,000.\n\nI've been through enough cycles to know how this goes. A national headline arrives, and someone in the room wants to pull concessions everywhere at once.\n\nThe better question is narrower: is each community priced for the competition it faces today, or for the pressure we felt six months ago?\n\nIn some Phoenix submarkets, concessions may still be necessary. In others, we may be giving away more than the market requires.\n\nHow is your team separating the national story from the local one?\n\n#Multifamily #PhoenixRealEstate #PropertyManagement",
+      "first_comment": "Source: RealPage Analytics, U.S. Apartment Supply Update 3rd Quarter 2026, Oct 22, 2026. https://www.realpage.com/analytics/us-apartment-supply-3rd-quarter-2026/",
+      "note": "Confirm with Melanie that this reflects her view before scheduling."
+    },
+    {
+      "who": "LocalLift / The SocialDM, company LinkedIn",
+      "when": "Wednesday, Oct 28, midday",
+      "role": "How changing conditions affect renter discovery, reputation and marketing",
+      "question": "When concessions stop doing the heavy lifting, what wins the renter?",
+      "text": "Concessions work like a marketing tool, even when they sit in the budget as a pricing line.\n\nDuring peak supply, a free month did the work of getting a community onto a renter's shortlist. As national deliveries slow (down 27% year to date, per RealPage), some operators may start pulling that lever back.\n\nWhen they do, something else has to carry the shortlist: whether the community shows up when a renter searches, whether its reviews are recent and specific, and whether Google or an AI assistant can answer the renter's questions about it.\n\nThe communities that plan that handoff early are less likely to face a choice between holding concessions and losing visibility.\n\nIf your concessions came off tomorrow, what would still be working for you?\n\n#Multifamily #ApartmentMarketing #PropTech",
+      "first_comment": "Source: RealPage Analytics, Oct 22, 2026. https://www.realpage.com/analytics/us-apartment-supply-3rd-quarter-2026/",
+      "note": "Lead is a viewpoint, not a statistic, so it does not repeat Melanie's post."
+    },
+    {
+      "who": "Pillar Communities, company LinkedIn",
+      "when": "Thursday, Oct 29, morning",
+      "role": "How property teams evaluate and respond",
+      "question": "What should a team check before changing a concession?",
+      "text": "Before a concession changes, check four numbers first.\n\nNational apartment deliveries are slowing, but a national trend is not a pricing decision. Here is what a property team can look at before adjusting a special:\n\n1. Lease ups nearby: how many competing communities are still delivering units in the next two quarters?\n2. Effective rent trend: are net rents at nearby comps rising, flat or falling?\n3. Renewal conversion: are current residents renewing at the rate the budget assumes?\n4. Comp concessions: are nearby specials shrinking, holding or growing?\n\nIf all four point the same way, the decision is easier. If they disagree, that's the conversation worth having.\n\n#Multifamily #PropertyManagement #PillarCommunities",
+      "first_comment": "Context: RealPage Analytics, U.S. Apartment Supply Update 3rd Quarter 2026, Oct 22, 2026. https://www.realpage.com/analytics/us-apartment-supply-3rd-quarter-2026/",
+      "note": "Written as a checklist any team can use. Pillar should confirm it before it posts."
+    }
+  ],
+  "test90": {
+    "window": "Edition 01 through about Edition 13 (late October 2026 to late January 2027)",
+    "quality": [
+      "Every figure passes the fact check on the first review (track first pass rate)",
+      "Published corrections: target zero; every correction logged in the Signal Ledger",
+      "Every Watch List checkpoint graded on or within a week of its date",
+      "Share of editions with verified Local Reality versus a stated limitation"
+    ],
+    "usefulness": [
+      "Comments and direct messages from owners, regional managers and asset managers, logged by role",
+      "Saves and reshares by industry accounts",
+      "Requests for the PDF or the monthly report",
+      "Any report of the brief being used in an operating or ownership meeting (asked directly in the monthly edition)"
+    ],
+    "repeat": [
+      "People who engage with two or more editions, tracked by name from post engagement",
+      "Returning visitors to the web edition, once it is hosted",
+      "Monthly report requests from the same people month over month"
+    ],
+    "reviews": "Check in at day 30, 60 and 90. Impressions are recorded for context, but they do not decide whether the series continues. At day 90, the decision to keep, adjust or stop rests on quality, usefulness and repeat readership."
+  }
+}

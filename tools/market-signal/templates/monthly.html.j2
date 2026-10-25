@@ -1,0 +1,59 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>The Market Signal Monthly, {{ m.month }}</title>
+<style>{{ css|safe }}
+@page{size:8.5in 11in;margin:0}
+body{width:816px;height:1056px;overflow:hidden;position:relative}
+.mast{height:96px;padding:0 44px 18px}
+.mast .title{font-size:40px}
+.mast .title small{display:block;font-family:'MS Inter',sans-serif;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--lime);font-style:normal;margin-bottom:9px}
+.mast .meta{font-size:9px;line-height:1.7}
+.pad{padding:0 44px}
+.intro{padding-top:22px}
+.intro h1{font-family:'MS Lora','Lora',Georgia,serif;font-weight:600;font-size:24px;line-height:1.2;margin:6px 0 9px;max-width:640px}
+.intro p{font-size:10.8px;line-height:1.58;color:#22303F;max-width:680px}
+h2{font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding-top:7px;border-top:2px solid var(--ink);margin:20px 0 8px}
+.sigs{display:grid;gap:0}
+.sig{display:grid;grid-template-columns:96px 1fr 230px;gap:16px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--rule)}
+.sig .stat{font-size:26px}
+.sig .l{font-size:10.5px;line-height:1.4;font-weight:500}
+.sig .s{font-size:8.8px;color:var(--mute);line-height:1.4}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.two p,.two li{font-size:10px;line-height:1.5;color:#22303F}
+.two li{list-style:none;padding:5px 0;border-bottom:1px solid var(--rule)}
+.two li:last-child{border-bottom:0}
+.two .q li{font-weight:600;color:var(--ink)}
+.lim{color:var(--mute)!important;font-style:italic;margin-top:6px}
+table{width:100%;border-collapse:collapse}
+th{font-size:8px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--mute);text-align:left;padding:0 10px 5px 0}
+td{font-size:9.8px;line-height:1.4;padding:6px 10px 6px 0;border-top:1px solid var(--rule);vertical-align:top}
+td:first-child{border-left:3px solid var(--lime);padding-left:8px;font-weight:600}
+.bottom{position:absolute;left:44px;right:44px;bottom:40px;display:grid;grid-template-columns:1.1fr 1fr;gap:26px;padding-top:10px;border-top:1px solid var(--rule)}
+.bottom .eyebrow{margin-bottom:5px}
+.bottom p,.bottom li{font-size:7.8px;line-height:1.5;color:var(--mute)}
+.bottom li{list-style:none}
+.foot{position:absolute;left:44px;right:44px;bottom:16px;font-size:7.5px}
+</style></head>
+<body>
+<div class="mast">
+  <div class="title"><small>Monthly report</small>The Market <i>Signal</i></div>
+  <div class="meta">{{ m.month }} · {{ m.pub_date }}<br><b>{{ m.market }}</b></div>
+</div>
+<div class="signalbar"></div>
+<div class="pad">
+  <div class="intro"><div class="eyebrow">The month in one read</div><h1>{{ m.headline }}</h1><p>{{ m.summary }}</p></div>
+  <h2>The Signal</h2>
+  <div class="sigs">{% for s in m.signals %}<div class="sig"><div class="stat">{{ s.stat }}</div><div class="l">{{ s.label }}</div><div class="s">{{ s.source }}</div></div>{% endfor %}</div>
+  <div class="two">
+    <div><h2>The Local Reality</h2><ul>{% for x in m.local.evidence %}<li>{{ x }}</li>{% endfor %}</ul><p class="lim">Limitation: {{ m.local.limitation }}</p></div>
+    <div class="q"><h2>The Operator Decision</h2><ul>{% for q in m.decisions %}<li>{{ q }}</li>{% endfor %}</ul></div>
+  </div>
+  <h2>The Watch List</h2>
+  <table><tr><th>Indicator</th><th>Expected</th><th>Date status</th><th>Owner</th></tr>
+  {% for w in m.watch %}<tr><td>{{ w.indicator }}</td><td>{{ w.date }}</td><td>{{ w.date_status }}</td><td>{{ w.owner }}</td></tr>{% endfor %}</table>
+</div>
+<div class="bottom">
+  <div><div class="eyebrow">Methodology</div><p>{{ m.method }}</p></div>
+  <div><div class="eyebrow">Sources</div><ul>{% for s in m.sources %}<li>{{ s }}</li>{% endfor %}</ul></div>
+</div>
+<div class="foot"><div>The Market Signal · Presented by LocalLift &amp; The SocialDM</div><div>thesocialdm.com</div></div>
+</body></html>

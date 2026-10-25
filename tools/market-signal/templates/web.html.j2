@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Market Signal No. {{ e.issue }}, {{ e.findings[0].short_title }}</title>
+<meta name="description" content="{{ e.findings[0].headline }}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<style>{{ webcss|safe }}
+.mast{padding:22px 16px 18px;flex-wrap:wrap;gap:8px}
+.mast .title{font-size:30px}
+.mast .meta{font-size:10px;line-height:1.7}
+main{max-width:760px;margin:0 auto;padding:28px 16px 48px}
+article{padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid var(--rule)}
+.stat{font-size:84px;margin:8px 0 4px}
+.label{font-size:16px;font-weight:600;line-height:1.4}
+.period{font-size:13px;color:var(--mute);margin-top:4px}
+h2{font-family:'MS Lora','Lora',Georgia,serif;font-size:28px;line-height:1.2;font-weight:600;margin:22px 0 18px}
+h3{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;border-top:2px solid var(--ink);padding-top:6px;margin:22px 0 8px;width:fit-content}
+p,li{font-size:16px;line-height:1.6;color:#22303F}
+.lim{color:var(--mute);font-style:italic}
+.q{font-weight:700;color:var(--ink)}
+ul{list-style:none;display:grid;gap:10px}
+li{border-left:3px solid var(--lime);padding-left:12px}
+li small{display:block;color:var(--mute);font-size:13px}
+.src{font-size:13px;color:var(--mute);margin-top:8px}
+.src a{color:var(--ink);text-underline-offset:3px}
+.conf{font-size:13px;color:var(--mute);margin-top:14px}
+.method{font-size:13px;line-height:1.6;color:var(--mute)}
+footer{background:var(--ink);color:#B9C3D0;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:20px 16px;text-align:center}
+@media(min-width:720px){.mast{padding:30px 40px 22px}.mast .title{font-size:40px}}
+</style></head>
+<body>
+<header class="mast">
+  <div class="title">The Market <i>Signal</i></div>
+  <div class="meta">No. {{ e.issue }} · {{ e.pub_date }}<br><b>{{ e.market }}</b></div>
+</header>
+<div class="signalbar"></div>
+<main>
+{% for f in e.findings %}
+<article>
+  <div class="eyebrow">The Signal · {{ f.kicker }}</div>
+  <div class="stat">{{ f.stat }}</div>
+  <div class="label">{{ f.stat_label }}</div>
+  <div class="period">{{ f.period }}</div>
+  <h2>{{ f.headline }}</h2>
+  <p>{{ f.signal }}</p>
+  <p class="src">Source: <a href="{{ f.url }}" rel="noopener">{{ f.source }}</a>, published {{ f.source_date }}</p>
+  <h3>The Local Reality</h3>
+  {% if f.local.evidence %}<p>{{ f.local.evidence }} <span class="src">({{ f.local.source }})</span></p>{% endif %}
+  {% if f.local.limitation %}<p class="lim">Limitation: {{ f.local.limitation }}</p>{% endif %}
+  <h3>The Operator Decision</h3>
+  <p class="q">{{ f.decision.question }}</p>
+  <p>{{ f.decision.examine }}</p>
+  <h3>The Watch List</h3>
+  <ul>{% for w in f.watch %}<li>{{ w.indicator }}<small>{{ w.date }} ({{ w.date_status }}) · {{ w.owner }}</small></li>{% endfor %}</ul>
+  <p class="conf">Our read: {{ f.interpretation }} Confidence: {{ f.confidence }}</p>
+</article>
+{% endfor %}
+<p class="method">Figures come from each publisher's own public release and are checked against it before publication. Licensed data is cited, never reproduced. The Local Reality, Operator Decision and our read are interpretation, logged in the Signal Ledger with a confidence level and graded when each checkpoint arrives.</p>
+</main>
+<footer>Presented by LocalLift &amp; The SocialDM</footer>
+</body></html>

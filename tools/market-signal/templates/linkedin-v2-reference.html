@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Market Signal v2</title>
+<style>
+@font-face{font-family:'MSBask';src:url('file:///mnt/skills/examples/canvas-design/canvas-fonts/LibreBaskerville-Regular.ttf')}
+@font-face{font-family:'MSSans';src:url('file:///mnt/skills/examples/canvas-design/canvas-fonts/InstrumentSans-Regular.ttf');font-weight:400}
+@font-face{font-family:'MSSans';src:url('file:///mnt/skills/examples/canvas-design/canvas-fonts/InstrumentSans-Bold.ttf');font-weight:700}
+@font-face{font-family:'MSMono';src:url('file:///mnt/skills/examples/canvas-design/canvas-fonts/DMMono-Regular.ttf')}
+:root{--navy:#0E2240;--ink:#1B2430;--grey:#6B7480;--hair:#D8DCE1;--bar:#C5CBD3;--lime:#B8E04A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{padding-top:1px;width:1080px;height:1350px;background:#fff;color:var(--ink);font-family:'MSSans',Helvetica,sans-serif;position:relative;overflow:hidden}
+.top{position:absolute;top:0;left:0;right:0;height:14px;background:var(--navy)}
+.hero{height:330px;position:relative;background:linear-gradient(180deg,rgba(14,34,64,.78) 0%,rgba(14,34,64,.25) 45%,rgba(14,34,64,0) 70%),url('desert.jpg') center 58%/cover;border-bottom:6px solid var(--lime)}
+.mast{position:absolute;top:52px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.55)}
+.mast .brand{color:#fff}.mast .vol{color:rgba(255,255,255,.85)}
+.place{position:absolute;right:80px;bottom:22px;font-size:15px;letter-spacing:.08em;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.brand{font-weight:700;font-size:26px;letter-spacing:.06em;color:var(--navy)}
+.brand span{display:inline-block;width:14px;height:14px;background:var(--lime);margin-right:12px;vertical-align:1px}
+.vol{font-size:19px;color:var(--grey)}
+.main{margin:0 80px}
+.kick{margin-top:46px;font-size:21px;font-weight:700;color:var(--navy)}
+.kick em{font-style:normal;font-weight:400;color:var(--grey)}
+h1{font-family:'MSBask',Georgia,serif;font-weight:400;font-size:58px;line-height:1.13;letter-spacing:-.01em;margin-top:14px;color:var(--navy)}
+.chart{margin-top:46px}
+.ct{font-size:21px;font-weight:700}
+.cs{font-size:18px;color:var(--grey);margin-top:4px}
+.bars{margin-top:46px;position:relative}
+.row{display:grid;grid-template-columns:210px 1fr;align-items:center;height:60px}
+.row .l{font-size:20px}
+.track{position:relative;height:40px}
+.b{position:absolute;left:0;top:0;bottom:0;background:var(--bar)}
+.b.now{background:var(--navy)}
+.v{position:absolute;top:50%;transform:translate(-100%,-50%);font-family:'MSMono',monospace;font-size:21px;padding-right:14px;white-space:nowrap;color:var(--ink)}
+.b.now+.v{color:#fff}
+.peak{position:absolute;left:210px;right:0;top:-14px;bottom:-8px;pointer-events:none}
+.peak i{position:absolute;top:0;bottom:0;border-left:2px dashed var(--grey)}
+.peak b{top:-34px;position:absolute;top:-30px;font-weight:400;font-size:16px;color:var(--grey);transform:translateX(-100%);padding-right:8px;white-space:nowrap}
+.note{margin-top:30px;display:flex;align-items:baseline;gap:14px;font-size:22px}
+.note .n{font-family:'MSMono',monospace;font-size:44px;color:var(--navy)}
+.note .n sup{font-size:16px;color:var(--grey);vertical-align:top;margin-left:2px}
+.cols{margin-top:36px;padding-top:26px;border-top:1px solid var(--hair);display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.cols h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px;padding-left:12px;border-left:4px solid var(--lime)}
+.cols p{font-size:22px;line-height:1.45}
+.next{margin-top:28px;font-size:19px;color:var(--ink)}
+.next b{color:var(--navy)}
+.next span{display:inline-block;width:10px;height:10px;background:var(--lime);margin-right:10px;vertical-align:1px}
+.foot{position:absolute;left:80px;right:80px;bottom:54px;padding-top:18px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;align-items:flex-end;font-size:15px;color:var(--grey);line-height:1.5}
+.foot b{color:var(--navy);font-weight:700;letter-spacing:.04em}
+</style></head><body>
+<div class="hero"><div class="mast"><div class="brand"><span></span>THE MARKET SIGNAL</div><div class="vol">Vol. 1, No. 01 · October 2026</div></div><div class="place">Phoenix metro</div></div>
+<div class="main">
+  <div class="kick">Supply <em>· U.S. National, Phoenix lens</em></div>
+  <h1>Supply is slowing nationally. Phoenix is still delivering.</h1>
+  <div class="chart">
+    <div class="ct">Average U.S. apartment completions per quarter</div>
+    <div class="cs">Units. Dashed line marks the cycle's peak quarter, Q3 2024.¹</div>
+    <div class="bars">
+      <div class="peak"><i style="left:91.4%"></i><b style="left:91.4%">Peak quarter ~160,000</b></div>
+      <div class="row"><div class="l">2024</div><div class="track"><div class="b" style="width:84%"></div><div class="v" style="left:84%">147,000</div></div></div>
+      <div class="row"><div class="l">2025</div><div class="track"><div class="b" style="width:57.7%"></div><div class="v" style="left:57.7%">101,000</div></div></div>
+      <div class="row"><div class="l"><b>2026</b>, Q1 to Q3</div><div class="track"><div class="b now" style="width:44%"></div><div class="v" style="left:44%"><b>77,000</b></div></div></div>
+    </div>
+  </div>
+  <div class="note"><div class="n">27%</div><div>fewer U.S. completions, January to September 2026 vs. same period 2025.<sup style="color:var(--grey)">¹</sup></div></div>
+  <div class="cols">
+    <div><h3>Phoenix</h3><p>Among the five metros RealPage named for the most new deliveries in Q3 2026, each above 3,000 units.¹</p></div>
+    <div><h3>The operator question</h3><p>Are your concessions priced for the competition you face today, or for the pressure of six months ago?</p></div>
+  </div>
+  <div class="next"><span></span><b>Next checkpoint:</b> Census national rental vacancy for Q3, due Oct 28.</div>
+</div>
+<div class="foot"><div>1. RealPage Analytics, U.S. Apartment Supply Update<br>3rd Quarter 2026, published Oct 22, 2026.</div><div><b>LOCALLIFT · THE SOCIALDM</b></div></div>
+</body></html>

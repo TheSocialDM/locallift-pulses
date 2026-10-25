@@ -1,0 +1,128 @@
+{
+  "slug": "2026-10-25-no01",
+  "edition": {
+    "issue": "01",
+    "pub_date": "Draft for approval, Oct 25, 2026",
+    "market": "U.S. National · Phoenix lens",
+    "findings": [
+      {
+        "id": "MS-001",
+        "kicker": "Supply",
+        "stat": "27%",
+        "stat_label": "Fewer U.S. apartment completions through Q3 2026 than in the same period of 2025",
+        "period": "January to September 2026 vs. same period 2025",
+        "headline": "Supply is slowing nationally. Phoenix is still delivering.",
+        "signal": "About 231,000 units were completed nationally through Q3, down 27% from a year earlier. Q3 delivered a little over 82,000 units. That was up for a second straight quarter, but still the smallest third quarter since 2019 and the fifth straight quarter under 100,000.",
+        "source": "RealPage Analytics, U.S. Apartment Supply Update 3rd Quarter 2026",
+        "source_date": "Oct 22, 2026",
+        "url": "https://www.realpage.com/analytics/us-apartment-supply-3rd-quarter-2026/",
+        "local": {
+          "status": "partial",
+          "evidence": "Phoenix was among the five metros RealPage named for the most new deliveries in Q3 2026, each above 3,000 units, alongside Dallas, Houston, Austin and Atlanta.",
+          "source": "RealPage Analytics, Oct 22, 2026",
+          "limitation": "No verified public figure on Phoenix rents, occupancy or concessions was available this week."
+        },
+        "decision": {
+          "question": "Are your concessions priced for the competition you face today, or for the pressure of six months ago?",
+          "examine": "Before changing concessions, compare nearby lease ups still delivering, the effective rent trend, renewal conversion and recent concession changes at comps. A national slowdown alone does not justify cutting concessions in a market still delivering at volume."
+        },
+        "watch": [
+          {
+            "indicator": "Census national rental vacancy rate, Q3 2026",
+            "date": "Oct 28, 2026",
+            "date_status": "Confirmed",
+            "owner": "LocalLift research desk"
+          },
+          {
+            "indicator": "Apartment List national vacancy index, October 2026 (7.0% in September)",
+            "date": "Around Oct 30 to Nov 2, 2026",
+            "date_status": "Estimated",
+            "owner": "LocalLift research desk"
+          },
+          {
+            "indicator": "RealPage Q4 2026 supply update: is Phoenix still among the 3,000+ completion metros?",
+            "date": "Late January 2027",
+            "date_status": "Estimated",
+            "owner": "LocalLift research desk; graded in the Signal Ledger"
+          }
+        ],
+        "interpretation": "National supply relief is real, but Phoenix is likely to feel it later than the national figure suggests because it was still among the highest delivery metros in Q3.",
+        "confidence": "Medium (one quarter of completion counts; no verified local rent, occupancy or concession data).",
+        "short_title": "Supply is slowing"
+      }
+    ]
+  },
+  "monthly": {
+    "month": "October 2026",
+    "pub_date": "Draft for approval, Oct 25, 2026",
+    "market": "U.S. National · Phoenix lens",
+    "headline": "New supply is far below its peak. Rents have barely moved, and Phoenix is still delivering.",
+    "summary": "Deliveries are well below their 2024 peak and the national vacancy index has eased from its February high. Asking rents range from slightly down to slightly up depending on the source, and rent inflation trails overall inflation. Locally, Phoenix remained one of the busiest delivery markets in Q3, so national relief should not be read as local relief.",
+    "signals": [
+      {
+        "stat": "27%",
+        "label": "Fewer U.S. completions, Jan to Sept 2026 vs. 2025",
+        "source": "RealPage Analytics, Oct 22, 2026"
+      },
+      {
+        "stat": "503K",
+        "label": "5+ unit permits, Sept 2026 annual rate (starts 349K)",
+        "source": "U.S. Census Bureau, Oct 20, 2026"
+      },
+      {
+        "stat": "2.8%",
+        "label": "CPI rent, 12 months to Sept 2026 (all items 3.7%)",
+        "source": "U.S. Bureau of Labor Statistics, Oct 14, 2026"
+      },
+      {
+        "stat": "7.0%",
+        "label": "National vacancy index, Sept 2026 (7.3% Feb peak)",
+        "source": "Apartment List, Sep 29, 2026"
+      },
+      {
+        "stat": "1.4%",
+        "label": "Advertised rent growth, year to date through Sept",
+        "source": "Yardi Matrix, September 2026 report"
+      }
+    ],
+    "local": {
+      "evidence": [
+        "Phoenix was among the five metros RealPage named for the most Q3 2026 deliveries, each above 3,000 units (RealPage, Oct 22)."
+      ],
+      "limitation": "No verified public Phoenix figure on rents, occupancy or concessions this month. Local comp trends will appear here only if the anonymized portfolio pilot is authorized."
+    },
+    "decisions": [
+      "Are concessions priced for current competing lease ups, or for last spring's?",
+      "Do 2027 budgets assume rents grow faster than expenses?",
+      "Which submarkets still have lease ups delivering in the next two quarters?"
+    ],
+    "watch": [
+      {
+        "indicator": "Census national rental vacancy, Q3 2026",
+        "date": "Oct 28, 2026",
+        "date_status": "Confirmed",
+        "owner": "LocalLift research desk"
+      },
+      {
+        "indicator": "Apartment List vacancy index, October",
+        "date": "Around Oct 30 to Nov 2",
+        "date_status": "Estimated",
+        "owner": "LocalLift research desk"
+      },
+      {
+        "indicator": "RealPage Q4 supply update, Phoenix volume",
+        "date": "Late Jan 2027",
+        "date_status": "Estimated",
+        "owner": "LocalLift research desk"
+      }
+    ],
+    "method": "Figures come from each publisher's own public release and are checked against it before publication. Licensed data is cited at the level the publisher made public, never reproduced. Rent measures differ by source, so figures are compared within a source. The Local Reality, Operator Decision and interpretation lines are ours. Every interpretation is logged in the Signal Ledger with a confidence level and graded at its checkpoint.",
+    "sources": [
+      "RealPage Analytics, U.S. Apartment Supply Update 3rd Quarter 2026, Oct 22, 2026",
+      "U.S. Census Bureau, New Residential Construction, September 2026, Oct 20, 2026",
+      "U.S. Bureau of Labor Statistics, Consumer Price Index, September 2026, Oct 14, 2026",
+      "Apartment List, National Rent Report, Sep 29, 2026",
+      "Yardi Matrix, Multifamily National Report, September 2026 (accessed Oct 25, 2026)"
+    ]
+  }
+}

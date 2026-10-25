@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>The Market Signal No. {{ e.issue }} LinkedIn</title>
+<style>{{ css|safe }}
+body{width:1080px;height:1350px;overflow:hidden;position:relative}
+.mast{height:160px;padding:0 72px 32px}
+.mast .title{font-size:62px}
+.mast .meta{font-size:16px;line-height:1.7}
+.body{padding:54px 72px 0}
+.eyebrow{font-size:17px}
+.stat{font-size:210px;margin:18px 0 8px;letter-spacing:-.035em}
+.label{font-size:28px;line-height:1.35;font-weight:600;max-width:900px}
+.period{font-size:19px;color:var(--mute);margin-top:10px}
+h1{font-family:'MS Lora','Lora',Georgia,serif;font-weight:600;font-size:52px;line-height:1.12;letter-spacing:-.01em;margin-top:40px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:40px}
+.pair h3{font-size:16px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding-top:12px;border-top:3px solid var(--ink);margin-bottom:12px}
+.pair p{font-size:24px;line-height:1.42;color:#22303F}
+.pair .hl{display:inline;background:linear-gradient(transparent 62%,var(--lime) 62%)}
+.next{margin-top:46px;padding:22px 26px;background:var(--soft);border-left:6px solid var(--lime);font-size:22px;line-height:1.45}
+.next b{display:block;font-size:15px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px}
+.foot{position:absolute;left:72px;right:72px;bottom:54px;padding-top:22px;border-top:1px solid var(--rule);font-size:15px;align-items:flex-end}
+.foot .s{text-transform:none;letter-spacing:0;font-weight:500;font-size:16px;line-height:1.45;max-width:660px}
+.foot .s b{color:var(--ink)}
+</style></head>
+<body>
+{% set f = e.findings[0] %}
+<div class="mast">
+  <div class="title">The Market <i>Signal</i></div>
+  <div class="meta">No. {{ e.issue }}<br><b>{{ e.market }}</b></div>
+</div>
+<div class="signalbar" style="height:8px"></div>
+<div class="body">
+  <div class="eyebrow">The Signal</div>
+  <div class="stat">{{ f.stat }}</div>
+  <div class="label">{{ f.stat_label }}</div>
+  <div class="period">{{ f.period }}</div>
+  <h1>{{ f.headline }}</h1>
+  <div class="pair">
+    <div><h3>The Local Reality</h3><p>{{ f.local.evidence or ('Limitation: ' ~ f.local.limitation) }}</p></div>
+    <div><h3>The Operator Decision</h3><p><span class="hl">{{ f.decision.question }}</span></p></div>
+  </div>
+  {% set w = f.watch[0] %}<div class="next"><b>Next checkpoint</b>{{ w.indicator }} · {{ w.date }} ({{ w.date_status|lower }})</div>
+</div>
+<div class="foot">
+  <div class="s"><b>Source:</b> {{ f.source }}, published {{ f.source_date }}. Checked against the original release.</div>
+  <div>LocalLift &amp; The SocialDM</div>
+</div>
+</body></html>
