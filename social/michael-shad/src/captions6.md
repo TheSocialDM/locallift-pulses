@@ -3,7 +3,7 @@ First comment: Let's make sure your site answers the follow ups: https://www.the
 
 The first AI answer is only the start of a renter's search.
 
-The first question is broad: best apartments in Tempe. The AI names a handful of communities. Then the renter keeps going. Which of those allow a large dog? Which have a washer and dryer in the home? Which are closest to campus?
+The opening question is broad: best apartments in Tempe. The AI names a handful of communities. Then the renter keeps going. Which of those allow a large dog? Which have a washer and dryer in the home? Which are closest to campus?
 
 Each follow up narrows the list. A community can make the first answer and drop out by the third, simply because its website never says how big a dog can be or what laundry looks like inside the homes.
 
@@ -16,7 +16,7 @@ What dealbreaker comes up most on your tours?
 ---
 
 POST 2, Mon Nov 9, Realtors, image michael-shad-2026-11-09-realtors-closing-case-notes.png (w2)
-First comment: Agents: more on turning closings into proof: https://www.thesocialdm.com
+First comment: Turn your closings into proof buyers can find: https://www.thesocialdm.com
 
 Your past sales are proof that belongs only to you.
 
@@ -54,7 +54,7 @@ First comment: For communities that want more people talking about them: https:/
 
 AI tools tend to notice what other people say about you.
 
-Your website is your side of the story. Many also look for confirmation elsewhere: local news stories, neighborhood guides, employer relocation pages, city event calendars and chamber listings.
+Your website is your side of the story. Many AI tools also look for confirmation elsewhere: local news stories, neighborhood guides, employer relocation pages, city event calendars and chamber listings.
 
 When several independent sources describe your community the same way, it becomes easier for an AI tool to repeat that description with confidence. When the only source is your own site, there's less to back it up.
 
