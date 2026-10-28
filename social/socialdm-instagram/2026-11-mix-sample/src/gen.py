@@ -46,7 +46,7 @@ T = {}
 
 # 1 PHOTO: couple at home, short line, photo carries it
 T['t1-photo-home'] = page(f"""
-<div class="photo" style="background-image:url(p-phone.jpg);background-position:22% center"></div>
+<div class="photo" style="background-image:url(p-phone.jpg);background-position:64% center"></div>
 <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,0) 45%,rgba(13,27,42,.82) 100%)"></div>
 <div style="position:absolute;left:72px;right:72px;bottom:190px;color:#fff">
  <div style="width:64px;height:4px;background:var(--lime);margin-bottom:30px"></div>
@@ -157,7 +157,7 @@ T['t9-proof-reviews'] = page(f"""
 <div style="position:absolute;left:72px;right:72px;top:1130px;font-size:19px;color:var(--mute)">183 home lease up outside Portland, OR. As of October 2026.</div>
 {foot(False,'Proof, not promises')}""")
 
-ORDER = ['t1-photo-home','t2-proof-directions','t3-insight-question','t4-proof-ai','t5-photo-desert','t6-insight-ai','t8-photo-market','t7-insight-oneteam','t9-proof-reviews']
+ORDER = ['t1-photo-home','t2-proof-directions','t3-insight-question','t4-proof-ai','t5-photo-desert','t6-insight-ai','t8-photo-market','t9-proof-reviews','t7-insight-oneteam']
 
 async def main():
     for k,v in T.items(): (HERE/f'{k}.html').write_text(v)
