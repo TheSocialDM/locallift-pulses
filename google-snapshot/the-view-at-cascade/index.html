@@ -59,6 +59,26 @@ h2{font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute
 .tl{margin:0;padding-left:20px;display:grid;gap:8px}
 .foot{font-size:12.5px;color:var(--muted);display:grid;gap:4px}
 @media (max-width:420px){.row{grid-template-columns:84px 1fr 56px}}
+.pdfbar{display:flex;justify-content:center}
+.pdfbtn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 14px/1 var(--body);padding:11px 18px;border-radius:999px;cursor:pointer;min-height:44px}
+.pdfbtn:hover{border-color:var(--accent);color:var(--accent)}
+.pdfbtn svg{width:16px;height:16px}
+.mast{justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:4px}
+h1,.lede{text-align:center;margin-inline:auto}
+@media print{
+  :root,:root[data-theme="dark"]{--bg:#fff;--card:#fff;--ink:#14171c;--muted:#5d6570;--line:#e3e6eb;--accent:#0a6cff;--accent-soft:#e6f0ff;--good:#14804a;--good-soft:#e5f4ec;--bar2:#b8cff5;color-scheme:light}
+  @page{margin:12mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;padding:0}
+  .wrap{max-width:none;padding:0;gap:12px}
+  .pdfbar{display:none!important}
+  .card{break-inside:avoid;page-break-inside:avoid}
+  .chart{overflow:visible}
+  .chart svg{max-height:190px;width:auto;margin:0 auto}
+  .card{padding:12px 14px;gap:8px}
+  h1{font-size:26px}
+  .foot{break-before:avoid}
+}
 </style>
 
 </head><body><div class="wrap">
@@ -66,6 +86,7 @@ h2{font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute
     <span class="brand">The SocialDM · Google Business &amp; Reputation Report</span>
     <span class="when">Sep 27 to Oct 27, 2026</span>
   </div>
+  <div class="pdfbar"><button class="pdfbtn" type="button" onclick="window.print()" aria-label="Save as PDF or print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7" rx="1"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></svg>Save as PDF or print</button></div>
 
   <h1>Google brought in 22 of The View at Cascade's 29 website leads in the last four weeks.</h1>
   <p class="lede">A one page look at the Google work done on your listing and what came through it, from renters seeing you on Google to sending a lead from your website. Each section uses the newest full day each Google source has, and compares it with the four weeks before.</p>
@@ -165,6 +186,7 @@ h2{font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute
     </ul>
   </section>
 
+  <div class="pdfbar"><button class="pdfbtn" type="button" onclick="window.print()" aria-label="Save as PDF or print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="7" rx="1"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/></svg>Save as PDF or print</button></div>
   <div class="foot">
     <span>Figures come from Google's own records: your listing (through Oct 24), Google Search (through Oct 26) and your website analytics (through Oct 27), each the latest full day available. A website lead is a contact form sent from your website.</span>
     <span>Call button taps count taps on the listing's call button, not answered calls. Prepared by The SocialDM | LocalLift.</span>
