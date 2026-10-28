@@ -51,9 +51,18 @@ def strip_b64(t):
     return re.sub(r'data:image/[^"\')]+', '', t)
 
 
+# Product names Michael approved that contain a guarded word (Oct 28 2026):
+# "Google Business & Reputation Report" is the name of the $300 plan's monthly report.
+ALLOWED_NAMES = r'Google Business (?:&amp;|&|and) Reputation Report'
+
+
+def strip_allowed(t):
+    return re.sub(ALLOWED_NAMES, '', t)
+
+
 def check(path):
     raw = open(path, encoding='utf-8', errors='replace').read()
-    t = strip_b64(raw)
+    t = strip_allowed(strip_b64(raw))
     rel = path.replace('./', '')
     slug = os.path.basename(os.path.dirname(path))
     problems, notes = [], []
