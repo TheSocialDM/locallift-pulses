@@ -46,7 +46,7 @@ T = {}
 
 # 1 PHOTO: couple at home, short line, photo carries it
 T['t1-photo-home'] = page(f"""
-<div class="photo" style="background-image:url(p-couple.jpg);background-position:40% center"></div>
+<div class="photo" style="background-image:url(p-phone.jpg);background-position:22% center"></div>
 <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,0) 45%,rgba(13,27,42,.82) 100%)"></div>
 <div style="position:absolute;left:72px;right:72px;bottom:190px;color:#fff">
  <div style="width:64px;height:4px;background:var(--lime);margin-bottom:30px"></div>
@@ -69,7 +69,7 @@ T['t2-proof-directions'] = page(f"""
   <div style="height:330px;background:var(--navy);margin-top:18px"></div>
   <div style="font-size:24px;margin-top:20px;color:var(--navy);font-weight:700">September</div></div>
 </div>
-<div style="position:absolute;left:72px;right:72px;top:1100px;font-size:19px;color:var(--mute)">Outside Portland, OR. Google Business Profile data, March and September 2026.</div>
+<div style="position:absolute;left:72px;right:72px;top:1100px;font-size:19px;color:var(--mute)">Outside Portland, OR. March and September 2026.</div>
 {foot(False,'Proof, not promises')}""")
 
 # 3 INSIGHT dark: one idea, big type
@@ -78,7 +78,7 @@ T['t3-insight-question'] = page(f"""
 <div style="position:absolute;top:96px;left:72px" class="eyebrow"><span style="color:var(--lime)">One idea</span></div>
 <div style="position:absolute;left:72px;right:90px;top:330px;color:#fff">
  <h1 class="lb" style="font-size:96px;line-height:1.1">Renters don't read your brochure.</h1>
- <h2 class="lb" style="font-size:96px;line-height:1.1;color:rgba(255,255,255,.55);margin-top:28px">They ask a question.</h2>
+ <h2 class="lb" style="font-size:96px;line-height:1.1;color:rgba(255,255,255,.72);margin-top:28px">They ask a question.</h2>
 </div>
 {foot(True,'thesocialdm.com')}""")
 
@@ -89,20 +89,20 @@ T['t4-proof-ai'] = page(f"""
 <div style="position:absolute;top:96px;left:72px;right:72px;color:#fff">
  <div class="eyebrow" style="color:rgba(255,255,255,.7)">Client result, anonymized</div>
  <div style="display:flex;align-items:baseline;gap:22px;margin-top:34px"><span class="mono" style="font-size:150px;line-height:1;color:var(--lime)">38</span><span class="lb" style="font-size:52px">of 96</span></div>
- <p class="lb" style="font-size:44px;line-height:1.25;margin-top:26px">renter questions to AI assistants named one lease up. The next closest: 14.</p>
+ <p class="lb" style="font-size:44px;line-height:1.25;margin-top:26px">renter questions asked to AI assistants named one lease up. Next closest: 14.</p>
 </div>
-<div style="position:absolute;left:72px;right:72px;top:720px;display:grid;grid-template-columns:repeat(16,34px);justify-content:space-between;row-gap:20px">{dots}</div>
+<div style="position:absolute;left:72px;right:72px;top:600px;display:grid;grid-template-columns:repeat(16,34px);justify-content:space-between;row-gap:20px">{dots}</div>
 <div style="position:absolute;left:72px;right:72px;top:1145px;font-size:19px;color:rgba(255,255,255,.65)">183 home lease up outside Portland, OR. Six communities tested Oct 18, 2026.</div>
 {foot(True,'Proof, not promises')}""")
 
 # 5 PHOTO: Sonoran desert, almost no text
 T['t5-photo-desert'] = page(f"""
-<div class="photo" style="background-image:url(p-desert.jpg);background-position:30% center"></div>
-<div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,27,42,.78) 0%,rgba(13,27,42,0) 40%)"></div>
+<div class="photo" style="background-image:url(p-desert.jpg);background-position:center 30%"></div>
+<div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,27,42,.92) 0%,rgba(13,27,42,.55) 30%,rgba(13,27,42,0) 55%)"></div>
 <div style="position:absolute;left:72px;right:72px;bottom:190px;color:#fff">
  <h1 class="lb" style="font-size:78px;line-height:1.1">Local isn't a keyword.<br>It's the whole game.</h1>
 </div>
-{foot(True,'Phoenix, AZ')}""")
+{foot(True,'thesocialdm.com')}""")
 
 # 6 INSIGHT light: a single line test
 T['t6-insight-ai'] = page(f"""
@@ -135,7 +135,7 @@ T['t7-insight-oneteam'] = page(f"""
 
 # 8 PHOTO: neighborhood market
 T['t8-photo-market'] = page(f"""
-<div class="photo" style="background-image:url(p-market.jpg);background-position:40% center"></div>
+<div class="photo" style="background-image:url(p-market.jpg);background-position:62% 30%"></div>
 <div style="position:absolute;left:0;right:0;bottom:0;height:420px;background:var(--paper)"></div>
 <div style="position:absolute;left:72px;right:72px;bottom:190px;color:var(--navy)">
  <h1 class="lb" style="font-size:70px;line-height:1.12">The neighborhood is an amenity. Post it like one.</h1>
@@ -152,12 +152,12 @@ T['t9-proof-reviews'] = page(f"""
  <div class="lb" style="font-size:230px;line-height:1">4.8</div>
  <div style="font-size:30px;margin-top:16px;color:var(--mute)">Google rating, 33 reviews</div>
  <div style="height:1px;background:var(--rule);margin:64px 0"></div>
- <h1 class="lb" style="font-size:70px;line-height:1.14">Every review answered. Each one written for that review.</h1>
+ <h1 class="lb" style="font-size:70px;line-height:1.14">33 reviews. 33 replies.</h1>
 </div>
 <div style="position:absolute;left:72px;right:72px;top:1130px;font-size:19px;color:var(--mute)">183 home lease up outside Portland, OR. As of October 2026.</div>
 {foot(False,'Proof, not promises')}""")
 
-ORDER = list(T)
+ORDER = ['t1-photo-home','t2-proof-directions','t3-insight-question','t4-proof-ai','t5-photo-desert','t6-insight-ai','t8-photo-market','t7-insight-oneteam','t9-proof-reviews']
 
 async def main():
     for k,v in T.items(): (HERE/f'{k}.html').write_text(v)
