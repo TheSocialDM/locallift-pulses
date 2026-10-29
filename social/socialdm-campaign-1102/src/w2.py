@@ -33,12 +33,12 @@ T['li-1109-two-jobs'] = S(f"""
 """)
 
 T['s-1109-special-nobody'] = S(f"""
-<div class="mono eye" style="color:#FAFAF8">Specials</div>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,#D2321E 0%,#D2321E 60%,#4A0E08 84%,#160403 100%)"></div>
+<div class="mono eye" style="color:#FAFAF8;font-size:30px">Specials</div>
 <div class="anton" style="position:absolute;left:72px;right:72px;top:190px;font-size:150px;line-height:.93;color:#FAFAF8">A special nobody can find</div>
 <div class="bod it" style="position:absolute;left:80px;top:830px;font-size:110px;line-height:1;color:#0E0E0E">isn’t a special.</div>
-<div class="mono" style="position:absolute;left:80px;top:1010px;font-size:24px;color:#FAFAF8">Same offer · every place renters look</div>
-<div style="position:absolute;left:0;bottom:0;width:1080px;height:220px;background:#0E0E0E"></div>
-{foot('ll', True, right='')}
+<div class="mono" style="position:absolute;left:80px;top:1004px;font-size:30px;color:#FAFAF8">Same offer · every place renters look</div>
+{foot('ll', True, right='', scale=1.15)}
 """, bg='#D2321E')
 
 # ============================================================ Tue Nov 10 (metrics)
@@ -225,9 +225,9 @@ T['s-1115-monday'] = S(f"""
 <div class="mono eye" style="color:#0E0E0E">Monday, 8 AM</div><div class="eyeR"><span class="ex">Illustrative</span></div>
 <div class="ital" style="position:absolute;left:72px;top:140px;font-size:150px;line-height:.95;color:#0E0E0E;word-spacing:-.18em">Your Monday,</div>
 <div class="bod it red" style="position:absolute;left:80px;top:300px;font-size:100px;line-height:1">previewed.</div>
-<div style="position:absolute;left:80px;width:560px;top:640px;background:#0E0E0E;padding:34px 38px">
- {''.join(f'<div style="display:flex;align-items:baseline;gap:24px;padding:12px 0;{"border-top:1px solid rgba(255,255,255,.18)" if k else ""}"><span class="bsd" style="font-size:84px;font-weight:900;line-height:.9;color:{"#D2321E" if k==1 else "#FAFAF8"};width:60px">{n}</span><span class="news" style="font-size:34px;color:#FAFAF8">{t}</span></div>' for k,(n,t) in enumerate([('1','thing changed'),('1','thing to fix'),('0','surprises')]))}
- <div class="mono" style="font-size:22px;color:#FAFAF8;border-top:1px solid rgba(255,255,255,.18);padding-top:16px;margin-top:6px">Illustrative sample, not a client result</div>
+<div style="position:absolute;left:80px;width:700px;top:560px;background:#0E0E0E;padding:36px 44px">
+ {''.join(f'<div style="display:flex;align-items:center;gap:30px;padding:14px 0;{"border-top:1px solid rgba(255,255,255,.22)" if k else ""}"><span class="bsd" style="font-size:112px;font-weight:900;line-height:.85;color:{"#D2321E" if k==1 else "#FAFAF8"};width:70px">{n}</span><span class="news" style="font-size:50px;line-height:1.05;color:#FAFAF8">{t}</span></div>' for k,(n,t) in enumerate([('1','change'),('1','fix'),('0','surprises')]))}
+ <div class="mono" style="font-size:28px;color:#FAFAF8;border-top:1px solid rgba(255,255,255,.22);padding-top:18px;margin-top:8px;letter-spacing:.12em">Illustrative sample</div>
 </div>
 
 <div style="position:absolute;left:0;bottom:0;width:1080px;height:300px;background:linear-gradient(180deg,rgba(10,10,10,0),rgba(10,10,10,.7))"></div>
