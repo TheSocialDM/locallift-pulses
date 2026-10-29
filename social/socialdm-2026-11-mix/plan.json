@@ -27,6 +27,14 @@
     "N:socialdm-li-1029-report-4.png",
     "N:socialdm-li-1029-report-5.png",
     "N:socialdm-li-1029-report-6.png"
+   ],
+   "alt_list": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    "What our weekly reports are built to answer: what changed since last week, who moved on price or specials, whether your listing is still right, and the one thing to do next."
    ]
   },
   {
@@ -71,7 +79,7 @@
    "media": [
     "N:socialdm-s-1030-five-states.png"
    ],
-   "alt": "Brick corner building under orange fall leaves, with the headline Five states. One rule. Write like you live there."
+   "alt": "Orange fall leaves over a quiet downtown street corner with brick buildings, with the headline Five states. One rule. Write like you live there."
   },
   {
    "date": "2026-10-30",
@@ -82,7 +90,7 @@
    "media": [
     "N:socialdm-s-1030-five-states.png"
    ],
-   "alt": "Brick corner building under orange fall leaves, with the headline Five states. One rule. Write like you live there."
+   "alt": "Orange fall leaves over a quiet downtown street corner with brick buildings, with the headline Five states. One rule. Write like you live there."
   },
   {
    "date": "2026-10-31",
@@ -100,11 +108,13 @@
    "time": "07:45",
    "net": "linkedin",
    "id": 403276856,
-   "action": "swap_media",
+   "action": "edit",
    "media": [
     "N:socialdm-li-1031-scary-phrases.png"
    ],
-   "alt": "Carved pumpkin on brick steps above the headline Forget ghosts. These phrases should make an owner nervous, followed by four report phrases."
+   "alt": "Carved pumpkin on stone steps above the headline Forget ghosts. These phrases should make an owner nervous, followed by four report phrases.",
+   "text": "Forget ghosts.\nThese are the phrases that should make an owner nervous:\n\n\"Engagement is up.\" Up from what, and did it lead anywhere?\n\"We're optimizing.\" What changed, and when?\n\"It's the algorithm.\" Sometimes. What did you try next?\n\"Results may vary.\" Varied how, compared to what?\n\nNone of these are wrong on their own. They just need a follow-up question every time.\n\nHappy Halloween from The SocialDM.\n\nWhich one have you heard lately?\n\n#Multifamily #PropertyManagement #Halloween",
+   "first_comment": "No scary phrases, just what changed and what to do: https://www.thesocialdm.com"
   },
   {
    "date": "2026-10-31",
@@ -122,11 +132,13 @@
    "time": "11:15",
    "net": "facebook",
    "id": 403277892,
-   "action": "swap_media",
+   "action": "edit",
    "media": [
     "N:socialdm-s-1031-trick-treat.png"
    ],
-   "alt": "Brownstone steps with pumpkins, above a card comparing listing tricks and treats."
+   "alt": "Brownstone steps with pumpkins, above a card comparing listing tricks and treats.",
+   "text": "Trick or treat, property team edition.\n\nTricks renters notice: a special that ended weeks ago, photos from three summers ago, and a review nobody answered.\n\nTreats they remember: today's special everywhere, photos from this season, and a reply that actually says something.\n\nHappy Halloween from The SocialDM.\n\nWhich treat is your listing missing right now?\n\n#PropertyManagement #ApartmentMarketing #MultifamilyMarketing #Halloween #GoogleBusinessProfile",
+   "first_comment": "Treats only, all year: https://www.thesocialdm.com"
   },
   {
    "date": "2026-11-01",
@@ -144,22 +156,30 @@
    "time": "11:15",
    "net": "instagram",
    "id": 403743963,
-   "action": "swap_media",
+   "action": "edit_move",
    "media": [
     "N:socialdm-s-1101-faq.png"
    ],
-   "alt": "Card showing the renter question Which utilities are included, a vague before answer crossed out and a plain after answer."
+   "alt": "Card showing the renter question Which utilities are included, a vague before answer crossed out and a plain after answer.",
+   "new_date": "2026-11-02",
+   "new_time": "11:15",
+   "text": "Same renter question. Two very different answers.\n\n\"Please contact the leasing office\" can send a renter straight to the next listing. A plain answer keeps them comparing tonight.\n\nSmall fix. Fewer reasons to scroll past.\n\nWhy plain answers win, link in bio.\n\nWhich answer in your FAQ is the vaguest right now?\n\n#ApartmentMarketing #PropertyManagement #MultifamilyMarketing #LeasingTips #ApartmentSEO",
+   "first_comment": ""
   },
   {
    "date": "2026-11-01",
    "time": "11:15",
    "net": "facebook",
    "id": 403743984,
-   "action": "swap_media",
+   "action": "edit_move",
    "media": [
     "N:socialdm-s-1101-faq.png"
    ],
-   "alt": "Card showing the renter question Which utilities are included, a vague before answer crossed out and a plain after answer."
+   "alt": "Card showing the renter question Which utilities are included, a vague before answer crossed out and a plain after answer.",
+   "new_date": "2026-11-02",
+   "new_time": "11:15",
+   "text": "A renter question most communities hear sooner or later: which utilities are included?\n\nBefore: \"Please contact the leasing office for details.\"\nAfter: \"Water, sewer and trash are one flat monthly fee. Electric and internet go in your name. Ask us for the current amount.\"\n\nThe after answer lets a renter keep comparing without waiting for the office to open. The before answer often means they move on to the next listing.\n\nWho on your team owns the FAQ, and how often does it get a fresh look?\n\n#ApartmentMarketing #PropertyManagement #MultifamilyMarketing #LeasingTips #ApartmentSEO",
+   "first_comment": "Answers renters can actually use: https://www.thesocialdm.com"
   },
   {
    "date": "2026-11-02",
@@ -229,11 +249,11 @@
    "new_date": "2026-11-08",
    "new_time": "07:45",
    "media": [
-    "S:socialdm-t8-photo-market.png"
+    "N:socialdm-t9-proof-reviews.png"
    ],
-   "alt": "Woman shopping at a neighborhood produce market, with the headline The neighborhood is an amenity. Post it like one.",
-   "text": "Most apartment posts show the pool.\nRenters are also choosing the neighborhood.\n\nThe coffee shop on the corner, the Saturday market, the park where the dogs meet up. Those are part of what a renter is signing up for, and they rarely show up in a listing.\n\nA few neighborhood posts a month can answer questions a floor plan can't: What is it like to walk outside on a Sunday? Where do people actually go?\n\nThe rule we use: only post places that are real, open and close by, and check them before they go out.\n\nWhat's one local spot your residents mention most?\n\n#Multifamily #ApartmentMarketing #LocalMarketing",
-   "first_comment": "How we keep local content local: https://www.thesocialdm.com"
+   "alt": "White card showing a 4.8 Google rating from 33 reviews, with the line 33 reviews. 33 replies.",
+   "text": "33 reviews. 33 replies.\nThe replies may matter as much as the stars.\n\nA 183 home lease up we work with sits at 4.8 stars, and every review has an answer, the glowing ones and the honest ones.\n\nRenters tend to read the newest reviews first, and the reply under each one. A reply that speaks to what the resident actually said shows a team that listens. A copy and paste thank you shows something too.\n\nWho on your team owns the review replies?\n\n#Multifamily #OnlineReviews #ReputationManagement",
+   "first_comment": "How we think about reviews: https://www.thesocialdm.com"
   },
   {
    "date": "2026-11-02",
@@ -244,11 +264,11 @@
     "S:socialdm-t3-insight-question.png"
    ],
    "alt": "Navy card with the headline Renters don't read your brochure. They ask a question.",
-   "text": "Renters don't read your brochure.\nThey ask a question, and they expect a straight answer.\n\nCan I bring two dogs? Is parking covered? How long is the drive downtown at 8 AM?\n\nMore of those questions now go to Google or an AI assistant before anyone calls the office. If the answer isn't written down somewhere they can find it, the renter usually moves on to a community where it is.\n\nThe brochure still matters. The answers matter more.\n\nWhich renter question does your website answer worst today?\n\n#Multifamily #ApartmentMarketing #AISearch",
+   "text": "Can I bring two dogs? Is parking covered?\nThe questions renters ask are getting more specific.\n\nAnd more of them now go to Google before anyone calls the office. If the answer isn't written down somewhere a renter can find it, they usually move on to a community where it is.\n\nThe brochure still matters. The plain answers matter more.\n\nWhich renter question does your website answer worst today?\n\n#Multifamily #ApartmentMarketing #LeasingTips",
    "first_comment": "How we help communities answer renter questions: https://www.thesocialdm.com"
   },
   {
-   "date": "2026-11-02",
+   "date": "2026-11-01",
    "time": "11:15",
    "net": "instagram",
    "action": "create",
@@ -256,10 +276,10 @@
     "S:socialdm-t7-insight-oneteam.png"
    ],
    "alt": "Navy diagram titled One team, not five vendors, with social, Google, reviews, website and AI search connected to one plan.",
-   "text": "One team. Not five vendors.\n\nWhen social, Google, reviews, the website and AI search are run by different people, the special on one says something different from the other. Renters notice.\n\nWe run them from one plan, so every channel tells the same story.\n\nHow we work, link in bio.\n\nHow many vendors touch your community's marketing right now?\n\n#MultifamilyMarketing #ApartmentMarketing #PropertyManagement #LocalSEO #GoogleBusinessProfile"
+   "text": "One team. Not five vendors.\n\nWhen social, Google, reviews, the website and AI search are run by different people, the special on one says something different from the other. Renters notice.\n\nWe run them from one plan, so every channel tells the same story.\n\nHow we work, link in bio.\n\nWho on your team catches it when two channels disagree?\n\n#MultifamilyMarketing #ApartmentMarketing #PropertyManagement #LocalSEO #GoogleBusinessProfile"
   },
   {
-   "date": "2026-11-02",
+   "date": "2026-11-01",
    "time": "11:15",
    "net": "facebook",
    "action": "create",
@@ -279,30 +299,30 @@
     "S:socialdm-t6-insight-ai.png"
    ],
    "alt": "Paper card with the headline If AI can't answer it, renters can't find it. Pets. Parking. Commute. Price.",
-   "text": "If AI can't answer it,\nrenters can't find it.\n\nA simple test for any apartment website: take four questions a renter asks every day. Pets. Parking. Commute. Price.\n\nNow look for each answer on the site, in plain words, on a page that loads without clicking through three menus.\n\nIf you had to hunt for it, an AI assistant probably won't find it either. And when an assistant can't find an answer, it tends to recommend a community where it can.\n\nWhich of the four is hardest to find on your site?\n\n#Multifamily #AISearch #ApartmentMarketing",
+   "text": "Four words decide a lot of apartment searches.\nPets. Parking. Commute. Price.\n\nA simple test for any apartment website: take those four questions a renter asks every day.\n\nNow look for each answer on the site, in plain words, on a page that loads without clicking through three menus.\n\nIf you had to hunt for it, an AI assistant probably won't find it either. And when an assistant can't find an answer, it tends to recommend a community where it can.\n\nWhich of those answers would an AI assistant find on your site today?\n\n#Multifamily #AISearch #ApartmentMarketing",
    "first_comment": "How we approach AI search for apartment communities: https://www.thesocialdm.com"
   },
   {
-   "date": "2026-11-03",
+   "date": "2026-11-04",
    "time": "11:15",
    "net": "instagram",
    "action": "create",
    "media": [
-    "S:socialdm-t9-proof-reviews.png"
+    "N:socialdm-t9-proof-reviews.png"
    ],
    "alt": "White card showing a 4.8 Google rating from 33 reviews, with the line 33 reviews. 33 replies.",
-   "text": "4.8 stars. 33 reviews. 33 replies.\n\nThat's a 183 home lease up outside Portland we work with. Every review got an answer, the glowing ones and the honest ones.\n\nThe next renter reads the replies, not just the stars.\n\nHow we handle reviews, link in bio.\n\nDoes your team answer the five star reviews too?\n\n#ReputationManagement #OnlineReviews #ApartmentMarketing #MultifamilyMarketing #PropertyManagement"
+   "text": "4.8 stars. 33 reviews. 33 replies.\n\nThat's a 183 home lease up we work with. Every review got an answer, the glowing ones and the honest ones.\n\nThe next renter reads the replies, not just the stars.\n\nHow we handle reviews, link in bio.\n\nWhat's the best review reply you've seen from a property team?\n\n#ReputationManagement #OnlineReviews #ApartmentMarketing #MultifamilyMarketing #PropertyManagement"
   },
   {
-   "date": "2026-11-03",
+   "date": "2026-11-04",
    "time": "11:15",
    "net": "facebook",
    "action": "create",
    "media": [
-    "S:socialdm-t9-proof-reviews.png"
+    "N:socialdm-t9-proof-reviews.png"
    ],
    "alt": "White card showing a 4.8 Google rating from 33 reviews, with the line 33 reviews. 33 replies.",
-   "text": "4.8 stars across 33 Google reviews, and every one answered.\n\nIt's a 183 home lease up outside Portland, one of the communities we work with. Renters tend to read the newest reviews and the replies under them before they ever book a tour.\n\nA reply that speaks to what the resident actually said does more than a star rating can.\n\nDoes your team reply to the five star reviews, or only the tough ones?\n\n#ReputationManagement #OnlineReviews #ApartmentMarketing #MultifamilyMarketing #PropertyManagement",
+   "text": "4.8 stars across 33 Google reviews, and every one answered.\n\nIt's a 183 home lease up, one of the communities we work with. Renters tend to read the newest reviews and the replies under them before they ever book a tour.\n\nA reply that speaks to what the resident actually said does more than a star rating can.\n\nWhen a resident leaves a glowing review, what does your reply usually say?\n\n#ReputationManagement #OnlineReviews #ApartmentMarketing #MultifamilyMarketing #PropertyManagement",
    "first_comment": "How we think about reviews: https://www.thesocialdm.com"
   },
   {
@@ -311,30 +331,30 @@
    "net": "linkedin",
    "action": "create",
    "media": [],
-   "text": "Renters check the date on your photos.\nMaybe not on purpose, but they notice.\n\nA pool shot taken in summer, a holiday wreath in April, a model unit with furniture the office replaced two years ago. None of it is wrong. It just quietly tells a renter nobody is paying attention.\n\nFresh photos are one of the easiest signals to control:\n\n• Add a few new ones every month, in the season you're in\n• Retire anything that no longer matches what a renter will see on a tour\n• Keep the same photos on Google, the website and the listing sites\n\nWhen did your Google listing last get a new photo?\n\n#Multifamily #GoogleBusinessProfile #ApartmentMarketing",
+   "text": "Renters check the date on your photos.\nMaybe not on purpose, but they notice.\n\nA pool shot taken in summer, a holiday wreath in April, a model unit with furniture the office replaced two years ago. Each one was fine once. Together they quietly tell a renter nobody is paying attention.\n\nFresh photos are one of the easiest signals to control:\n\n• Add a few new ones every month, in the season you're in\n• Retire anything that no longer matches what a renter will see on a tour\n• Keep the same photos on Google, the website and the listing sites\n\nWhen did your Google listing last get a new photo?\n\n#Multifamily #GoogleBusinessProfile #ApartmentMarketing",
    "first_comment": "How we keep listings current: https://www.thesocialdm.com"
   },
   {
-   "date": "2026-11-04",
+   "date": "2026-11-05",
    "time": "11:15",
    "net": "instagram",
    "action": "create",
    "media": [
     "S:socialdm-t8-photo-market.png"
    ],
-   "alt": "Woman shopping at a neighborhood produce market, with the headline The neighborhood is an amenity. Post it like one.",
+   "alt": "Woman standing at an outdoor produce market, with the headline The neighborhood is an amenity. Post it like one.",
    "text": "The neighborhood is an amenity. Post it like one.\n\nThe Saturday market, the coffee shop on the corner, the walk to the park. Renters are choosing those too, and most listings never show them.\n\nLocal posts that feel local, link in bio.\n\nWhat's the one local spot your residents always mention?\n\n#ApartmentMarketing #MultifamilyMarketing #LocalMarketing #PropertyManagement #ApartmentLiving"
   },
   {
-   "date": "2026-11-04",
+   "date": "2026-11-05",
    "time": "11:15",
    "net": "facebook",
    "action": "create",
    "media": [
     "S:socialdm-t8-photo-market.png"
    ],
-   "alt": "Woman shopping at a neighborhood produce market, with the headline The neighborhood is an amenity. Post it like one.",
-   "text": "The neighborhood is an amenity, so post it like one.\n\nA renter isn't only choosing a floor plan. They're choosing the coffee shop on the corner, the weekend market and the walk to the park. Most apartment feeds skip all of it.\n\nA few real, nearby places each month can answer what a floor plan can't: what it's actually like to live there.\n\nWhich local spot do your residents talk about most?\n\n#ApartmentMarketing #MultifamilyMarketing #LocalMarketing #PropertyManagement #ApartmentLiving",
+   "alt": "Woman standing at an outdoor produce market, with the headline The neighborhood is an amenity. Post it like one.",
+   "text": "The neighborhood is an amenity, so post it like one.\n\nA renter isn't only choosing a floor plan. They're choosing the coffee shop on the corner, the weekend market and the walk to the park. Most apartment feeds skip all of it.\n\nA few real, nearby places each month can answer what a floor plan can't: what it's actually like to live there.\n\nIf a renter had one free Saturday near your community, where would you send them?\n\n#ApartmentMarketing #MultifamilyMarketing #LocalMarketing #PropertyManagement #ApartmentLiving",
    "first_comment": "Local content for apartment communities: https://www.thesocialdm.com"
   },
   {
@@ -346,11 +366,11 @@
     "S:socialdm-t7-insight-oneteam.png"
    ],
    "alt": "Navy diagram titled One team, not five vendors, with social, Google, reviews, website and AI search connected to one plan.",
-   "text": "One team.\nNot five vendors.\n\nA typical community might have one company on social, another on the website, a third on paid search and the leasing team handling Google and reviews in between.\n\nEach one can do good work. The trouble starts in the gaps: the special that changed on the website but not on Google, the review nobody owned, the post that promotes an amenity under renovation.\n\nWe run every channel from one plan for that reason. The pieces work better when they talk to each other.\n\nWhere do the gaps show up first for your community?\n\n#Multifamily #PropertyManagement #ApartmentMarketing",
+   "text": "Five vendors can each do good work\nand still leave a renter confused.\n\nA typical community might have one company on social, another on the website, a third on paid search and the leasing team handling Google and reviews in between.\n\nEach one can do good work. The trouble starts in the gaps: the special that changed on the website but not on Google, the review nobody owned, the post that promotes an amenity under renovation.\n\nWe run every channel from one plan for that reason. The pieces work better when they talk to each other.\n\nWhere do the gaps show up first for your community?\n\n#Multifamily #PropertyManagement #ApartmentMarketing",
    "first_comment": "How one plan works across every channel: https://www.thesocialdm.com"
   },
   {
-   "date": "2026-11-05",
+   "date": "2026-11-06",
    "time": "11:15",
    "net": "instagram",
    "action": "create",
@@ -358,10 +378,10 @@
     "S:socialdm-t6-insight-ai.png"
    ],
    "alt": "Paper card with the headline If AI can't answer it, renters can't find it. Pets. Parking. Commute. Price.",
-   "text": "If AI can't answer it, renters can't find it.\n\nTry it on your own website: pets, parking, commute, price. Is each answer written in plain words, easy to find?\n\nIf you had to hunt, an AI assistant probably will too.\n\nMore on AI search, link in bio.\n\nWhich of the four is hardest to find on your site?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #ApartmentSEO #PropertyManagement"
+   "text": "If AI can't answer it, renters can't find it.\n\nTry it on your own website: pets, parking, commute, price. Is each answer written in plain words, easy to find?\n\nIf you had to hunt, an AI assistant probably will too.\n\nMore on AI search, link in bio.\n\nHow long did it take you to find the parking answer?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #ApartmentSEO #PropertyManagement"
   },
   {
-   "date": "2026-11-05",
+   "date": "2026-11-06",
    "time": "11:15",
    "net": "facebook",
    "action": "create",
@@ -369,7 +389,7 @@
     "S:socialdm-t6-insight-ai.png"
    ],
    "alt": "Paper card with the headline If AI can't answer it, renters can't find it. Pets. Parking. Commute. Price.",
-   "text": "A quick test for any apartment website.\n\nPick four questions renters ask every day: pets, parking, commute and price. Now find each answer on the site, written in plain words.\n\nIf it took you a minute, an AI assistant may not find it at all. More renters ask those assistants first, and they tend to recommend the communities whose answers are easy to read.\n\nWhich of the four was hardest to find on your site?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #ApartmentSEO #PropertyManagement",
+   "text": "Try this on your own website tonight.\n\nPick four questions renters ask every day: pets, parking, commute and price. Now find each answer on the site, written in plain words.\n\nIf it took you a minute, an AI assistant may not find it at all. More renters ask those assistants first, and they tend to recommend the communities whose answers are easy to read.\n\nWhich of the four was hardest to find on your site?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #ApartmentSEO #PropertyManagement",
    "first_comment": "How we approach AI search: https://www.thesocialdm.com"
   },
   {
@@ -381,11 +401,11 @@
     "S:socialdm-t5-photo-desert.png"
    ],
    "alt": "Saguaro cactus in the Sonoran desert, with the headline Local isn't a keyword. It's the whole game.",
-   "text": "Local isn't a keyword.\nIt's the whole game.\n\nWe work with apartment communities in Arizona, Nevada, Florida, Oregon and Washington. The first questions renters ask change from market to market, and so should the content.\n\nA page that could describe any city usually ranks like it, and it reads like it too. The pages that work mention the roads, the parks and the commutes a resident actually knows.\n\nWhat's the most local question renters ask in your market?\n\n#Multifamily #LocalSEO #ApartmentMarketing",
+   "text": "A page that could describe any city\nusually ranks like it.\n\nWe work with apartment communities in Arizona, Nevada, Florida, Oregon and Washington. The first questions renters ask change from market to market, and so should the content.\n\nIt reads like it too. The pages that work mention the roads, the parks and the commutes a resident actually knows.\n\nWhich page on your site could describe any city right now?\n\n#Multifamily #LocalSEO #ApartmentMarketing",
    "first_comment": "Local marketing for apartment communities: https://www.thesocialdm.com"
   },
   {
-   "date": "2026-11-06",
+   "date": "2026-11-03",
    "time": "11:15",
    "net": "instagram",
    "action": "create",
@@ -393,10 +413,10 @@
     "S:socialdm-t5-photo-desert.png"
    ],
    "alt": "Saguaro cactus in the Sonoran desert, with the headline Local isn't a keyword. It's the whole game.",
-   "text": "Local isn't a keyword. It's the whole game.\n\nThe roads, the parks, the commute a resident actually takes. That's what makes a community page feel written by someone who lives there.\n\nLocal, wherever you are, link in bio.\n\nWhat's the most local question your renters ask?\n\n#LocalSEO #ApartmentMarketing #MultifamilyMarketing #PropertyManagement #ArizonaLiving"
+   "text": "Local isn't a keyword. It's the whole game.\n\nThe roads, the parks, the commute a resident actually takes. That's what makes a community page feel written by someone who lives there.\n\nPages that sound local, link in bio.\n\nWhich local detail would a newcomer to your city never guess?\n\n#LocalSEO #ApartmentMarketing #MultifamilyMarketing #PropertyManagement #ArizonaLiving"
   },
   {
-   "date": "2026-11-06",
+   "date": "2026-11-03",
    "time": "11:15",
    "net": "facebook",
    "action": "create",
@@ -404,8 +424,8 @@
     "S:socialdm-t5-photo-desert.png"
    ],
    "alt": "Saguaro cactus in the Sonoran desert, with the headline Local isn't a keyword. It's the whole game.",
-   "text": "Local isn't a keyword. It's the whole game.\n\nRenters can tell when a community page could describe any city. The ones that work mention the roads, parks and commutes a resident actually knows.\n\nThat's the standard we write to in every market we work in.\n\nWhat do renters in your city ask about first?\n\n#LocalSEO #ApartmentMarketing #MultifamilyMarketing #PropertyManagement #LocalMarketing",
-   "first_comment": "Local, wherever you are: https://www.thesocialdm.com"
+   "text": "Local isn't a keyword. It's the whole game.\n\nRenters can tell when a community page could describe any city. The ones that work mention the roads, parks and commutes a resident actually knows.\n\nThat's the standard we write to in every market we work in.\n\nWhich street, park or commute would a resident in your city name first?\n\n#LocalSEO #ApartmentMarketing #MultifamilyMarketing #PropertyManagement #LocalMarketing",
+   "first_comment": "How we write for each market: https://www.thesocialdm.com"
   },
   {
    "date": "2026-11-07",
@@ -426,7 +446,7 @@
    "media": [
     "N:socialdm-gp-1107.jpg"
    ],
-   "alt": "Tree lined city street with fall leaves"
+   "alt": "Brick apartment building with iron balconies"
   },
   {
    "date": "2026-11-07",
@@ -446,7 +466,7 @@
     "S:socialdm-t4-proof-ai.png"
    ],
    "alt": "Navy card showing 38 of 96 renter questions to AI assistants named one lease up, with a dot grid of 38 lime dots out of 96.",
-   "text": "38 of 96.\n\nWe asked AI assistants 96 renter questions in October. One lease up we work with came up in 38 of them. The next closest of the six communities we track: 14.\n\nIt opened in March.\n\nHow it happened, link in bio.\n\nHave you asked an AI assistant to recommend apartments near you?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #LeaseUp #PropertyManagement"
+   "text": "38 of 96.\n\nWe asked AI assistants 96 renter questions in October. One lease up we work with came up in 38 of them. The next closest of the six communities we tested: 14.\n\nIt opened in March.\n\nHow it happened, link in bio.\n\nWhat would you want an AI assistant to say about your community?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #LeaseUp #PropertyManagement"
   },
   {
    "date": "2026-11-07",
@@ -457,7 +477,7 @@
     "S:socialdm-t4-proof-ai.png"
    ],
    "alt": "Navy card showing 38 of 96 renter questions to AI assistants named one lease up, with a dot grid of 38 lime dots out of 96.",
-   "text": "We asked AI assistants 96 renter questions in October.\n\nA 183 home lease up outside Portland, one of our clients, came up in 38 of them. The next closest of the six communities we track came up in 14. The community opened in March.\n\nAI assistants are becoming one more place renters ask where to live. It pays to know what they say about you.\n\nHave you asked one to recommend apartments in your area yet?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #LeaseUp #PropertyManagement",
+   "text": "We asked AI assistants 96 renter questions in October.\n\nA 183 home lease up outside Portland, one of our clients, came up in 38 of them. The next closest of the six communities we tested came up in 14. The community opened in March.\n\nAI assistants are becoming one more place renters ask where to live. It pays to know what they say about you.\n\nHave you asked one to recommend apartments in your area yet?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #LeaseUp #PropertyManagement",
    "first_comment": "How LocalLift works for lease ups: https://www.thesocialdm.com"
   },
   {
@@ -534,7 +554,7 @@
     "S:socialdm-t1-photo-home.png"
    ],
    "alt": "Woman on a gray sofa looking at her phone, with the headline Before the tour, there's a search.",
-   "text": "Before the tour,\nthere's a search.\n\nBy the time a renter walks into the leasing office, they've usually seen the photos, read the reviews, checked the map and compared a few communities on their phone.\n\nThat search is the first tour. The leasing team rarely sees it, and the report rarely measures it.\n\nThe communities that win it make the answers easy to find: current photos, a special that matches everywhere, plain answers to common questions, and replies under the reviews.\n\nWhat do you think renters see first when they search for your community?\n\n#Multifamily #ApartmentMarketing #LeasingTips",
+   "text": "Your first tour happens on a phone.\nThe leasing team never sees it.\n\nBy the time a renter walks into the leasing office, they've usually seen the photos, read the reviews, checked the map and compared a few communities on their phone.\n\nAnd the report rarely measures it.\n\nThe communities that win it make the answers easy to find: current photos, a special that matches everywhere, plain answers to common questions, and replies under the reviews.\n\nIf a renter searched your community tonight, what would surprise you?\n\n#Multifamily #ApartmentMarketing #LeasingTips",
    "first_comment": "How we help communities win the first tour: https://www.thesocialdm.com"
   },
   {
@@ -546,7 +566,7 @@
     "S:socialdm-t3-insight-question.png"
    ],
    "alt": "Navy card with the headline Renters don't read your brochure. They ask a question.",
-   "text": "Renters don't read your brochure. They ask a question.\n\nCan I bring two dogs? Is parking covered? How long is the drive downtown?\n\nThe community with the clearest answer usually gets the tour.\n\nAnswers renters can use, link in bio.\n\nWhat question do your renters ask most?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #LeasingTips #ApartmentSEO"
+   "text": "Renters don't read your brochure. They ask a question.\n\nCan I bring two dogs? Is parking covered? How long is the drive downtown?\n\nThe community with the clearest answer usually gets the tour.\n\nAnswers renters can use, link in bio.\n\nWhich renter question would you love to never answer by phone again?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #LeasingTips #ApartmentSEO"
   },
   {
    "date": "2026-11-09",
@@ -557,8 +577,8 @@
     "S:socialdm-t3-insight-question.png"
    ],
    "alt": "Navy card with the headline Renters don't read your brochure. They ask a question.",
-   "text": "Renters don't read your brochure. They ask a question.\n\nCan I bring two dogs? Is parking covered? How long is the drive downtown at 8 AM? More of those questions now go to Google or an AI assistant before anyone calls the office.\n\nThe community with the clearest written answer usually gets the tour.\n\nWhat's the question your leasing team hears most?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #LeasingTips #ApartmentSEO",
-   "first_comment": "Answers renters can actually use: https://www.thesocialdm.com"
+   "text": "Renters don't read your brochure. They ask a question.\n\nIs there a washer in the home? How far is the closest grocery store? How long is the drive downtown at 8 AM? More of those questions now go to Google or an AI assistant before anyone calls the office.\n\nThe community with the clearest written answer usually gets the tour.\n\nWhat's the question your leasing team hears most?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #LeasingTips #ApartmentSEO",
+   "first_comment": "How we help communities answer renters first: https://www.thesocialdm.com"
   },
   {
    "date": "2026-11-10",
@@ -599,7 +619,7 @@
     "S:socialdm-t1-photo-home.png"
    ],
    "alt": "Woman on a gray sofa looking at her phone, with the headline Before the tour, there's a search.",
-   "text": "Before the tour, there's a search.\n\nPhotos, reviews, the map, a few communities side by side. Most renters have made a short list before they ever call.\n\nWin the search first, link in bio.\n\nWhat do renters see first when they search for your community?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #ApartmentHunting #LocalSEO"
+   "text": "Before the tour, there's a search.\n\nPhotos, reviews, the map, a few communities side by side. Most renters have made a short list before they ever call.\n\nWin the search first, link in bio.\n\nHave you searched your own community on your phone this month?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #ApartmentHunting #LocalSEO"
   },
   {
    "date": "2026-11-10",
@@ -640,7 +660,7 @@
    "net": "linkedin",
    "action": "create",
    "media": [],
-   "text": "Posting more is not a strategy.\nPosting what renters ask about is.\n\nSeven posts a week of \"Happy Monday\" and stock sunsets will fill a calendar. It rarely fills a tour schedule.\n\nThe posts that pull their weight answer something: what is included, what the neighborhood is like, which homes are available, what the team is like to work with. They match the website and the Google listing, and they change with the season.\n\nFrequency still matters. It just comes second.\n\nWhat's the most useful post your community has shared this year?\n\n#Multifamily #SocialMediaMarketing #ApartmentMarketing",
+   "text": "Posting more is not a strategy.\nPosting what renters ask about is.\n\nA full calendar of \"Happy Monday\" posts and stock sunsets looks busy. It rarely fills a tour schedule.\n\nThe posts that pull their weight answer something: what is included, what the neighborhood is like, which homes are available, what the team is like to work with. They match the website and the Google listing, and they change with the season.\n\nFrequency still matters. It just comes second.\n\nWhat's the most useful post your community has shared this year?\n\n#Multifamily #SocialMediaMarketing #ApartmentMarketing",
    "first_comment": "How we plan posts for apartment communities: https://www.thesocialdm.com"
   },
   {
@@ -652,7 +672,7 @@
     "N:socialdm-s-1111-proof-search.png"
    ],
    "alt": "Navy bar chart: a new lease up appeared in Google search and maps about 970 times in March and about 2,900 times in September.",
-   "text": "About 970 to about 2,900.\n\nHow often a lease up we work with appeared in Google search and maps, March versus September.\n\nMore of the right details, kept current, gives Google more to show.\n\nProof, not promises, link in bio.\n\nDo you know how often your community shows up on Google each month?\n\n#GoogleBusinessProfile #LeaseUp #LocalSEO #ApartmentMarketing #MultifamilyMarketing"
+   "text": "About 970 to about 2,900.\n\nHow often a lease up we work with appeared in Google search and maps, March versus September.\n\nMore of the right details, kept current, gives Google more to show.\n\nThe full story, link in bio.\n\nWhich Google number do you watch most closely each month?\n\n#GoogleBusinessProfile #LeaseUp #LocalSEO #ApartmentMarketing #MultifamilyMarketing"
   },
   {
    "date": "2026-11-11",
@@ -663,8 +683,8 @@
     "N:socialdm-s-1111-proof-search.png"
    ],
    "alt": "Navy bar chart: a new lease up appeared in Google search and maps about 970 times in March and about 2,900 times in September.",
-   "text": "In March, a new 183 home community outside Portland appeared in Google search and maps about 970 times. By September, it was close to 2,900.\n\nSome of that is a lease up finding its feet. A big part, in our view, is how much more Google could find, trust and show about it: details that match everywhere, fresh photos and posts, and a reply to every review.\n\nDo you know how often your community appears on Google in a month?\n\n#GoogleBusinessProfile #LeaseUp #LocalSEO #ApartmentMarketing #MultifamilyMarketing",
-   "first_comment": "How we help lease ups get found: https://www.thesocialdm.com"
+   "text": "In March, a new 183 home community outside Portland appeared in Google search and maps about 970 times. By September, it was close to 2,900.\n\nSome of that is a lease up finding its feet. A big part, in our view, is how much more Google could find, trust and show about it: details that match everywhere, fresh photos and posts, and a reply to every review.\n\nHow often does your community show up on Google in a month, and is it climbing?\n\n#GoogleBusinessProfile #LeaseUp #LocalSEO #ApartmentMarketing #MultifamilyMarketing",
+   "first_comment": "What we do for new communities on Google: https://www.thesocialdm.com"
   }
  ]
 }

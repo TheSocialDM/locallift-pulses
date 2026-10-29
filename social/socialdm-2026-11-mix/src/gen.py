@@ -68,7 +68,7 @@ T['s-1029-review-poll'] = (S(f"""
 
 # Oct 30 five states, photo
 T['s-1030-five-states'] = (S(f"""
-<div class="photo" style="inset:0;background-image:url(ph/29420539.jpg);background-position:42% center"></div>
+<div class="photo" style="inset:0;background-image:url(ph/19544002.jpg);background-position:center 45%"></div>
 <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,27,42,.92) 0%,rgba(13,27,42,.55) 32%,rgba(13,27,42,0) 58%)"></div>
 <div style="position:absolute;left:72px;right:72px;bottom:190px;color:#fff">
  <div style="width:64px;height:4px;background:var(--lime);margin-bottom:30px"></div>
@@ -230,7 +230,7 @@ for name, kind, ph, pos, eb, head, dark in GP:
     T[name] = ((g_panel(ph,pos,eb,head,dark) if kind=='panel' else g_full(ph,pos,eb,head)), 1200, 900)
 
 # Google photo uploads (no text): 4:3 crops, 2400x1800
-GPHOTO = {'gp-1107':('19544002',0.55), 'gp-1108':('27302669',0.45), 'gp-1109':('17258245',0.4), 'gp-1110':('14617456',0.5), 'gp-1111':('18072674',0.5)}
+GPHOTO = {'gp-1107':('17411447',0.5), 'gp-1108':('27302669',0.45), 'gp-1109':('17258245',0.4), 'gp-1110':('14617456',0.5), 'gp-1111':('18072674',0.5)}
 
 def crop43(src, dst, cy):
     im = Image.open(src).convert('RGB'); w,h = im.size
