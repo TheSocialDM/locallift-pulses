@@ -1,0 +1,557 @@
+{
+ "rows": [
+  [
+   "Mon Nov 2",
+   "Google post 7:00",
+   "Real traction is measured in seasons",
+   "Update existing post: new graphic",
+   "update"
+  ],
+  [
+   "Mon Nov 2",
+   "Google photo 7:00",
+   "Fall forest road (stock)",
+   "Hold: scenery implies a place we are not",
+   "hold"
+  ],
+  [
+   "Mon Nov 2",
+   "LinkedIn 7:45",
+   "Competitor free rent post (text)",
+   "Keep as is, already scheduled",
+   "keep"
+  ],
+  [
+   "Mon Nov 2",
+   "Instagram 11:15",
+   "Slow season isn't quiet season",
+   "Create",
+   "create"
+  ],
+  [
+   "Mon Nov 2",
+   "Facebook 11:15",
+   "Slow season isn't quiet season",
+   "Create",
+   "create"
+  ],
+  [
+   "Tue Nov 3",
+   "Google post 7:00",
+   "apartments + near my office",
+   "Update existing post: new graphic",
+   "update"
+  ],
+  [
+   "Tue Nov 3",
+   "Google photo 7:00",
+   "Leafy neighborhood path (stock)",
+   "Hold: scenery implies a place we are not",
+   "hold"
+  ],
+  [
+   "Tue Nov 3",
+   "LinkedIn 7:45",
+   "One renter. Five doors. (image)",
+   "Create",
+   "create"
+  ],
+  [
+   "Tue Nov 3",
+   "Instagram 11:15",
+   "Your feed is the first tour",
+   "Create",
+   "create"
+  ],
+  [
+   "Tue Nov 3",
+   "Facebook 11:15",
+   "Your feed is the first tour",
+   "Create",
+   "create"
+  ],
+  [
+   "Tue Nov 3",
+   "Proof post 1:00 (LinkedIn + Facebook)",
+   "New verified client result, built at load time",
+   "Create after Editor and fact check",
+   "create"
+  ],
+  [
+   "Wed Nov 4",
+   "Google post 7:00",
+   "Insights masthead",
+   "Update existing post: new graphic",
+   "update"
+  ],
+  [
+   "Wed Nov 4",
+   "Google photo 7:00",
+   "Latte and notebook by a window",
+   "Keep: work setting, no location claim",
+   "keep"
+  ],
+  [
+   "Wed Nov 4",
+   "LinkedIn 7:45",
+   "Before you set the 2027 budget (6 slide swipe)",
+   "Create",
+   "create"
+  ],
+  [
+   "Wed Nov 4",
+   "Instagram 11:15",
+   "Poll: photos or video",
+   "Create",
+   "create"
+  ],
+  [
+   "Wed Nov 4",
+   "Facebook 11:15",
+   "Poll: photos or video",
+   "Create",
+   "create"
+  ],
+  [
+   "Thu Nov 5",
+   "Google post 7:00",
+   "Ask to see the work, not the deck",
+   "Update existing post: new graphic and new caption",
+   "update"
+  ],
+  [
+   "Thu Nov 5",
+   "Google photo 7:00",
+   "Fruit vendor (stock)",
+   "Hold: tied to the retired fruit metaphor",
+   "hold"
+  ],
+  [
+   "Thu Nov 5",
+   "LinkedIn 7:45",
+   "Per door pricing (text)",
+   "Create",
+   "create"
+  ],
+  [
+   "Thu Nov 5",
+   "Instagram 11:15",
+   "Renters don't search like marketers",
+   "Create",
+   "create"
+  ],
+  [
+   "Thu Nov 5",
+   "Facebook 11:15",
+   "Renters don't search like marketers",
+   "Create",
+   "create"
+  ],
+  [
+   "Fri Nov 6",
+   "Google post 7:00",
+   "Be found where renters actually look",
+   "Update existing post: new graphic",
+   "update"
+  ],
+  [
+   "Fri Nov 6",
+   "Google photo 7:00",
+   "Books and knit sweater (stock)",
+   "Hold: unrelated to the business",
+   "hold"
+  ],
+  [
+   "Fri Nov 6",
+   "LinkedIn 7:45",
+   "AI doesn't start from scratch (image)",
+   "Create",
+   "create"
+  ],
+  [
+   "Fri Nov 6",
+   "Instagram 11:15",
+   "The reply is for the next renter",
+   "Create",
+   "create"
+  ],
+  [
+   "Fri Nov 6",
+   "Facebook 11:15",
+   "The reply is for the next renter",
+   "Create",
+   "create"
+  ],
+  [
+   "Fri Nov 6",
+   "Proof post 1:00 (LinkedIn + Facebook)",
+   "Built by the weekly run (Nov 5 run covers Nov 6, 9, 12; Nov 12 run covers Nov 15)",
+   "Weekly run",
+   "keep"
+  ],
+  [
+   "Sat Nov 7",
+   "Google post 7:00",
+   "Open late. Every night.",
+   "Create",
+   "create"
+  ],
+  [
+   "Sat Nov 7",
+   "Google photo 7:00",
+   "None queued",
+   "Leave empty until a real, relevant photo exists",
+   "keep"
+  ],
+  [
+   "Sat Nov 7",
+   "LinkedIn 7:45",
+   "7:00 PM Saturday (image)",
+   "Create",
+   "create"
+  ],
+  [
+   "Sat Nov 7",
+   "Instagram 11:15",
+   "Same month. Different renter.",
+   "Create",
+   "create"
+  ],
+  [
+   "Sat Nov 7",
+   "Facebook 11:15",
+   "Same month. Different renter.",
+   "Create",
+   "create"
+  ],
+  [
+   "Sun Nov 8",
+   "Google post 7:00",
+   "Does your website say what your Google profile says?",
+   "Create",
+   "create"
+  ],
+  [
+   "Sun Nov 8",
+   "Google photo 7:00",
+   "None queued",
+   "Leave empty until a real, relevant photo exists",
+   "keep"
+  ],
+  [
+   "Sun Nov 8",
+   "LinkedIn 7:45",
+   "Pets, parking, fees (text)",
+   "Create",
+   "create"
+  ],
+  [
+   "Sun Nov 8",
+   "Instagram 11:15",
+   "Curious (magazine cover)",
+   "Create",
+   "create"
+  ],
+  [
+   "Sun Nov 8",
+   "Facebook 11:15",
+   "Curious (magazine cover)",
+   "Create",
+   "create"
+  ],
+  [
+   "Mon Nov 9",
+   "Google post 7:00",
+   "One special. The same everywhere.",
+   "Create",
+   "create"
+  ],
+  [
+   "Mon Nov 9",
+   "Google photo 7:00",
+   "None queued",
+   "Leave empty until a real, relevant photo exists",
+   "keep"
+  ],
+  [
+   "Mon Nov 9",
+   "LinkedIn 7:45",
+   "Lease up and stabilized (image)",
+   "Create",
+   "create"
+  ],
+  [
+   "Mon Nov 9",
+   "Instagram 11:15",
+   "A special nobody can find",
+   "Create",
+   "create"
+  ],
+  [
+   "Mon Nov 9",
+   "Facebook 11:15",
+   "A special nobody can find",
+   "Create",
+   "create"
+  ],
+  [
+   "Mon Nov 9",
+   "Proof post 1:00 (LinkedIn + Facebook)",
+   "Built by the weekly run (Nov 5 run covers Nov 6, 9, 12; Nov 12 run covers Nov 15)",
+   "Weekly run",
+   "keep"
+  ],
+  [
+   "Tue Nov 10",
+   "Google post 7:00",
+   "Not all numbers are equal",
+   "Create",
+   "create"
+  ],
+  [
+   "Tue Nov 10",
+   "Google photo 7:00",
+   "None queued",
+   "Leave empty until a real, relevant photo exists",
+   "keep"
+  ],
+  [
+   "Tue Nov 10",
+   "LinkedIn 7:45",
+   "Move these to the back (6 slide swipe)",
+   "Create",
+   "create"
+  ],
+  [
+   "Tue Nov 10",
+   "Instagram 11:15",
+   "Likes don't sign leases",
+   "Create",
+   "create"
+  ],
+  [
+   "Tue Nov 10",
+   "Facebook 11:15",
+   "Likes don't sign leases",
+   "Create",
+   "create"
+  ],
+  [
+   "Wed Nov 11",
+   "Google post 7:00",
+   "Three taps to floor plans",
+   "Create",
+   "create"
+  ],
+  [
+   "Wed Nov 11",
+   "Google photo 7:00",
+   "None queued",
+   "Leave empty until a real, relevant photo exists",
+   "keep"
+  ],
+  [
+   "Wed Nov 11",
+   "LinkedIn 7:45",
+   "Discoverability is maintenance (text)",
+   "Create",
+   "create"
+  ],
+  [
+   "Wed Nov 11",
+   "Instagram 11:15",
+   "Found beats fancy",
+   "Create",
+   "create"
+  ],
+  [
+   "Wed Nov 11",
+   "Facebook 11:15",
+   "Found beats fancy",
+   "Create",
+   "create"
+  ],
+  [
+   "Thu Nov 12",
+   "Google post 7:00",
+   "What makes a listing photo work",
+   "Create",
+   "create"
+  ],
+  [
+   "Thu Nov 12",
+   "Google photo 7:00",
+   "None queued",
+   "Leave empty until a real, relevant photo exists",
+   "keep"
+  ],
+  [
+   "Thu Nov 12",
+   "LinkedIn 7:45",
+   "Same photo. Better crop. (image)",
+   "Create",
+   "create"
+  ],
+  [
+   "Thu Nov 12",
+   "Instagram 11:15",
+   "A thumb moves fast",
+   "Create",
+   "create"
+  ],
+  [
+   "Thu Nov 12",
+   "Facebook 11:15",
+   "A thumb moves fast",
+   "Create",
+   "create"
+  ],
+  [
+   "Thu Nov 12",
+   "Proof post 1:00 (LinkedIn + Facebook)",
+   "Built by the weekly run (Nov 5 run covers Nov 6, 9, 12; Nov 12 run covers Nov 15)",
+   "Weekly run",
+   "keep"
+  ],
+  [
+   "Fri Nov 13",
+   "Google post 7:00",
+   "Answer the question before they ask",
+   "Create",
+   "create"
+  ],
+  [
+   "Fri Nov 13",
+   "Google photo 7:00",
+   "None queued",
+   "Leave empty until a real, relevant photo exists",
+   "keep"
+  ],
+  [
+   "Fri Nov 13",
+   "LinkedIn 7:45",
+   "Renters ask AI what they ask you (text)",
+   "Create",
+   "create"
+  ],
+  [
+   "Fri Nov 13",
+   "Instagram 11:15",
+   "Five questions, where each answer lives",
+   "Create",
+   "create"
+  ],
+  [
+   "Fri Nov 13",
+   "Facebook 11:15",
+   "Five questions, where each answer lives",
+   "Create",
+   "create"
+  ],
+  [
+   "Sat Nov 14",
+   "Google post 7:00",
+   "The neighborhood is part of the home",
+   "Create",
+   "create"
+  ],
+  [
+   "Sat Nov 14",
+   "Google photo 7:00",
+   "None queued",
+   "Leave empty until a real, relevant photo exists",
+   "keep"
+  ],
+  [
+   "Sat Nov 14",
+   "LinkedIn 7:45",
+   "Local beats generic (image)",
+   "Create",
+   "create"
+  ],
+  [
+   "Sat Nov 14",
+   "Instagram 11:15",
+   "Saturday errands",
+   "Create",
+   "create"
+  ],
+  [
+   "Sat Nov 14",
+   "Facebook 11:15",
+   "Saturday errands",
+   "Create",
+   "create"
+  ],
+  [
+   "Sun Nov 15",
+   "Google post 7:00",
+   "What changed this week, on one page",
+   "Create",
+   "create"
+  ],
+  [
+   "Sun Nov 15",
+   "Google photo 7:00",
+   "None queued",
+   "Leave empty until a real, relevant photo exists",
+   "keep"
+  ],
+  [
+   "Sun Nov 15",
+   "LinkedIn 7:45",
+   "The Monday report (text)",
+   "Create",
+   "create"
+  ],
+  [
+   "Sun Nov 15",
+   "Instagram 11:15",
+   "Your Monday, previewed",
+   "Create",
+   "create"
+  ],
+  [
+   "Sun Nov 15",
+   "Facebook 11:15",
+   "Your Monday, previewed",
+   "Create",
+   "create"
+  ],
+  [
+   "Sun Nov 15",
+   "Proof post 1:00 (LinkedIn + Facebook)",
+   "Built by the weekly run (Nov 5 run covers Nov 6, 9, 12; Nov 12 run covers Nov 15)",
+   "Weekly run",
+   "keep"
+  ]
+ ],
+ "totals": [
+  [
+   "50",
+   "new posts: 9 Google, 13 LinkedIn, 14 Instagram, 14 Facebook"
+  ],
+  [
+   "5",
+   "queued Google posts updated in place (no duplicates)"
+  ],
+  [
+   "4",
+   "queued Google photos held as drafts"
+  ],
+  [
+   "2",
+   "proof posts for Nov 3 (LinkedIn + Facebook) built at load time"
+  ]
+ ],
+ "checks": [
+  "Live Metricool pull at 5:20 AM Oct 29: Nov 2 to 15 holds exactly 11 items (5 Google posts, 5 Google photos, 1 LinkedIn). Nothing else, so no slot gets a second post.",
+  "Only The SocialDM brand is touched. No client brand in Metricool changes.",
+  "All times are Phoenix (the brand is stored in America/Phoenix).",
+  "Every new post auto publishes on optional approval, so you can still reject any single post in Metricool.",
+  "LinkedIn and Facebook links sit in the first comment; Instagram has no links.",
+  "Images are hosted in your GitHub image library and each link is checked before loading.",
+  "After loading, a re-pull confirms each day has its Google post, LinkedIn, Instagram and Facebook post once, and nothing doubled.",
+  "Tonight 6:43 PM: the weekly content task skips. From Nov 5 it builds in the new style with these rules."
+ ]
+}
