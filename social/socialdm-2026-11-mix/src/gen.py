@@ -193,29 +193,29 @@ def g_panel(photo, pos, eyebrow, head, dark=False):
     return G(f"""
 <div class="photo" style="left:0;top:0;bottom:0;width:690px;background-image:url(ph/{photo}.jpg);background-position:{pos}"></div>
 <div style="position:absolute;left:690px;right:0;top:0;bottom:0;background:{bg}"></div>
-<div style="position:absolute;left:740px;right:52px;top:70px;color:{fg}">
+<div style="position:absolute;left:740px;right:96px;top:84px;color:{fg}">
  <div class="eyebrow" style="font-size:16px;color:{mu}">{eyebrow}</div>
  <h1 class="lb" style="font-size:44px;line-height:1.16;margin-top:26px">{head}</h1>
 </div>
-{foot(dark,'',l=740,r=52,b=48)}""")
+{foot(dark,'',l=740,r=96,b=76)}""")
 
 def g_full(photo, pos, eyebrow, head):
     return G(f"""
 <div class="photo" style="inset:0;background-image:url(ph/{photo}.jpg);background-position:{pos}"></div>
 <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,27,42,.92) 0%,rgba(13,27,42,.55) 34%,rgba(13,27,42,0) 62%)"></div>
-<div style="position:absolute;left:64px;right:64px;bottom:150px;color:#fff">
+<div style="position:absolute;left:96px;right:96px;bottom:176px;color:#fff">
  <div style="width:56px;height:4px;background:var(--lime);margin-bottom:22px"></div>
  <div class="eyebrow" style="font-size:16px;color:rgba(255,255,255,.8);margin-bottom:16px">{eyebrow}</div>
  <h1 class="lb" style="font-size:54px;line-height:1.1">{head}</h1>
 </div>
-{foot(True,'thesocialdm.com',l=64,r=64,b=48)}""")
+{foot(True,'thesocialdm.com',l=96,r=96,b=76)}""")
 
 GP = [
  ('g-1029', 'panel', '4049870', 'center 30%', 'AI search', 'AI reads your website before many renters do.', False),
  ('g-1030', 'full', '31528818', 'center 55%', 'Google Maps', 'Your listing should look as fresh as the street.', None),
  ('g-1031', 'panel', '3142467', 'center 60%', 'Happy Halloween', 'The front step is now a search result.', True),
  ('g-1101', 'full', '31418279', 'center 60%', 'The 2026 report', 'Being online is not the same as being found.', None),
- ('g-1102', 'panel', '19290185', '45% center', 'Apartment SEO', 'Good SEO is a steady drive, not a teleport.', False),
+ ('g-1102', 'panel', '34490278', 'center 60%', 'Apartment SEO', 'Good SEO is a steady drive, not a teleport.', False),
  ('g-1103', 'full', '5748631', '60% 40%', 'Local search', 'Renters search neighborhoods, not apartments.', None),
  ('g-1104', 'panel', '5332214', 'center 35%', 'Research', 'The short list gets made online.', True),
  ('g-1105', 'full', '32189195', 'center 45%', 'Choosing an agency', 'See the fruit before you pay for it.', None),
@@ -223,17 +223,22 @@ GP = [
  ('g-1107', 'full', '3764173', '62% 35%', 'Reviews', 'The next renter reads your reply.', None),
  ('g-1108', 'panel', '28584802', 'center 50%', 'The weekly check', 'Special, hours, price, reviews. Every week.', True),
  ('g-1109', 'full', '7647206', 'center 30%', 'Lease ups', 'A new community starts with no search history.', None),
- ('g-1110', 'panel', '7710077', 'center 30%', 'One team', 'One plan across every channel.', False),
+ ('g-1110', 'panel', '7710077', '100% 30%', 'One team', 'One plan across every channel.', False),
  ('g-1111', 'full', '27307398', 'center 40%', 'Apartment SEO', 'Write the page a renter wishes existed.', None),
 ]
 for name, kind, ph, pos, eb, head, dark in GP:
     T[name] = ((g_panel(ph,pos,eb,head,dark) if kind=='panel' else g_full(ph,pos,eb,head)), 1200, 900)
 
 # Google photo uploads (no text): 4:3 crops, 2400x1800
-GPHOTO = {'gp-1107':('17411447',0.5), 'gp-1108':('27302669',0.45), 'gp-1109':('17258245',0.4), 'gp-1110':('14617456',0.5), 'gp-1111':('18072674',0.5)}
+GPHOTO = {'gp-1107':('17411447',0.5), 'gp-1108':('27302669',0.2), 'gp-1109':('28586739',0.35), 'gp-1110':('14617456',0.5), 'gp-1111':('18072674',0.5)}
 
-def crop43(src, dst, cy):
+def crop43(src, dst, cy, xfrac=None, bright=None):
     im = Image.open(src).convert('RGB'); w,h = im.size
+    if xfrac is not None:
+        nw=int(w*xfrac); im=im.crop((0,0,nw,h)); w=nw
+    if bright:
+        from PIL import ImageEnhance
+        im=ImageEnhance.Brightness(im).enhance(bright)
     if w/h > 4/3:
         nw = int(h*4/3); x = (w-nw)//2; im = im.crop((x,0,x+nw,h))
     else:
@@ -249,8 +254,9 @@ async def main():
             await pg.goto(f.as_uri()); await pg.wait_for_timeout(350)
             await pg.screenshot(path=str(OUT/f'socialdm-{name}.png')); await pg.close()
         await b.close()
+    EXTRA={'gp-1107':dict(xfrac=0.82),'gp-1108':dict(bright=1.35)}
     for k,(ph,cy) in GPHOTO.items():
-        crop43(HERE/'ph'/f'{ph}.jpg', OUT/f'socialdm-{k}.jpg', cy)
+        crop43(HERE/'ph'/f'{ph}.jpg', OUT/f'socialdm-{k}.jpg', cy, **EXTRA.get(k,{}))
     # contact sheets
     def sheet(names, tw, th, cols, out):
         rows = (len(names)+cols-1)//cols
