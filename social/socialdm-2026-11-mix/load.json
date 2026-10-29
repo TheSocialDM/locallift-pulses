@@ -1,0 +1,2159 @@
+[
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "398993187",
+  "uuid": "-7629443266384871108",
+  "label": "2026-10-29 07:00 gmb_post swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-29T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Sweater weather, a quiet table and a renter comparing floor plans one tab at a time. She expects the details to be there: which homes have the layout she needs, what the space looks like, what is included.\n\nAI assistants now do the same research for a growing share of renters, and many leasing websites look nearly empty to them. Floor plans, pricing context and amenities often appear only after the page finishes loading, which most AI crawlers never wait for. The SocialDM helps apartment communities add a readable layer of community facts that AI can see right away, and keep it current, because a readable layer that goes stale only gives AI a wrong answer. Those details should also match the Google Business Profile and what reviews say.\n\nRead our article on why AI cannot always read apartment websites, and what to check on yours.\n\nhttps://www.thesocialdm.com/blog/renters-are-asking-ai-about-your-property-the-problem-is-the-ai-cannot-read-your-website",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1029.png"
+   ],
+   "mediaAltText": [
+    "Woman in a gray sweater working on a laptop at a kitchen table, with the headline AI reads your website before many renters do."
+   ],
+   "saveExternalMediaFiles": false,
+   "gmbData": {
+    "type": "publication"
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403276653",
+  "uuid": "1692937124696835699",
+  "label": "2026-10-29 07:45 linkedin swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-29T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Most marketing reports answer a question nobody asked: how busy were we?\n\nThe ones worth reading answer four questions, and they answer them every week, not once a month.\n\nI put the four in a few slides. Swipe through and hold your current report up against them.\n\nIf yours can't answer all four at a glance, it's probably too long, or too late.\n\nWhich of the four does your report skip?\n\n#Multifamily #PropertyManagement #MarketingReports",
+   "firstCommentText": "See how we report: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-li-1029-report-1.png",
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-li-1029-report-2.png",
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-li-1029-report-3.png",
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-li-1029-report-4.png",
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-li-1029-report-5.png",
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-li-1029-report-6.png"
+   ],
+   "mediaAltText": [
+    "Four questions a weekly report should answer.",
+    "01 What changed since last week? Not a snapshot. The difference between this week and last is where the story is.",
+    "02 Who moved on price or specials? New concessions nearby can change a week faster than any monthly report can catch.",
+    "03 Is our listing still right? Special, hours, price and photos, checked against your own website, not assumed.",
+    "04 What is the one thing to do? A report that ends without a next step is just a longer way of saying nothing changed.",
+    "What our weekly reports are built to answer: what changed since last week, who moved on price or specials, whether your listing is still right, and the one thing to do next."
+   ],
+   "saveExternalMediaFiles": false,
+   "linkedinData": {
+    "documentTitle": "Four questions a weekly report should answer",
+    "publishImagesAsPDF": true,
+    "previewIncluded": false,
+    "type": "POST"
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403277555",
+  "uuid": "-2971314914004218661",
+  "label": "2026-10-29 11:15 instagram swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-29T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Settle this one for us.\n\nA: reply to every review, five stars included.\nB: only reply to the tough ones.\n\nVote A or B below.\n\nHow we handle replies, link in bio.\n\nDoes your team have a rule for this?\n\n#PropertyManagement #ReputationManagement #ApartmentMarketing #MultifamilyMarketing #OnlineReviews",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1029-review-poll.png"
+   ],
+   "mediaAltText": [
+    "Poll card: Reply to every review, or only the tough ones? A, every review, five stars included. B, only the tough ones."
+   ],
+   "saveExternalMediaFiles": false,
+   "instagramData": {
+    "autoPublish": true,
+    "type": "POST",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403277645",
+  "uuid": "6080509022382277218",
+  "label": "2026-10-29 11:15 facebook swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-29T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Quick one for property teams.\n\nA: reply to every review, five stars included.\nB: only reply to the tough ones.\n\nComment A or B.\n\nWhich way does your team lean, and why?\n\n#PropertyManagement #ReputationManagement #ApartmentMarketing #MultifamilyMarketing #OnlineReviews",
+   "firstCommentText": "How we handle review replies: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1029-review-poll.png"
+   ],
+   "mediaAltText": [
+    "Poll card: Reply to every review, or only the tough ones? A, every review, five stars included. B, only the tough ones."
+   ],
+   "saveExternalMediaFiles": false,
+   "facebookData": {
+    "type": "POST"
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "398993239",
+  "uuid": "4279818014130127461",
+  "label": "2026-10-30 07:00 gmb_post swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-30T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Late October in Portland, the trees along the sidewalk turn gold and the neighborhood looks different every week. A renter walking the block notices. Online, the question is whether your Google listing looks as fresh as the street does.\n\nThe SocialDM helps apartment communities in Oregon and nationwide treat Google Maps as a living channel. The fundamentals are not complicated: an optimized Google Business Profile, fresh photos on a regular schedule, review momentum, accurate information and a website that agrees with the listing. What makes the difference is routine, including consistent monthly activity and regular profile audits so nothing quietly drifts out of date.\n\nIf your listing still shows last season, our guide to how multifamily operators can win in Google Maps lays out a simple rhythm to follow.\n\nhttps://www.thesocialdm.com/blog/how-multifamily-operators-can-win-in-google-maps-in-2026",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1030.png"
+   ],
+   "mediaAltText": [
+    "Tree lined street in downtown Portland in fall, with the headline Your listing should look as fresh as the street."
+   ],
+   "saveExternalMediaFiles": false,
+   "gmbData": {
+    "type": "publication"
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403277693",
+  "uuid": "7726508322509571914",
+  "label": "2026-10-30 11:15 instagram swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-30T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Five states. One rule.\n\nWe work with apartment communities in Arizona, Nevada, Florida, Oregon and Washington. Every market asks different first questions. In Phoenix it can be covered parking. In Seattle or Portland it might be transit. In Las Vegas or central Florida, something else again.\n\nThe rule stays the same: write like you live there.\n\nLocal, wherever you are, link in bio.\n\nWhat's the most local question your renters ask?\n\n#MultifamilyMarketing #ApartmentMarketing #LocalSEO #PropertyManagement #LocalMarketing",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1030-five-states.png"
+   ],
+   "mediaAltText": [
+    "Orange fall leaves over a quiet downtown street corner with brick buildings, with the headline Five states. One rule. Write like you live there."
+   ],
+   "saveExternalMediaFiles": false,
+   "instagramData": {
+    "autoPublish": true,
+    "type": "POST",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403277731",
+  "uuid": "-4150749030777273098",
+  "label": "2026-10-30 11:15 facebook swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-30T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "We work with apartment communities in five states: Arizona, Nevada, Florida, Oregon and Washington.\n\nEach market tends to ask different first questions. In Phoenix it can be covered parking. In Seattle or Portland it might be transit. In Las Vegas or central Florida, something else again.\n\nOne rule covers all of them: write like you live there.\n\nWhat do renters in your city ask about first?\n\n#MultifamilyMarketing #ApartmentMarketing #LocalSEO #PropertyManagement #LocalMarketing",
+   "firstCommentText": "Local marketing, wherever you are: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1030-five-states.png"
+   ],
+   "mediaAltText": [
+    "Orange fall leaves over a quiet downtown street corner with brick buildings, with the headline Five states. One rule. Write like you live there."
+   ],
+   "saveExternalMediaFiles": false,
+   "facebookData": {
+    "type": "POST"
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "398993290",
+  "uuid": "4547835149483068216",
+  "label": "2026-10-31 07:00 gmb_post swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-31T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Happy Halloween. On streets like this one, the front steps tell you a lot before anyone opens the door: pumpkins lined up, flowers fresh, a door painted with care. Renters read an apartment community the same way, only now the front step is a search result.\n\nLocalLift is the private local visibility system from The SocialDM. It helps apartment communities get found on Google Search, Google Maps and AI platforms before renters turn to listing sites, through structured SEO, Google Business Profile optimization, Maps visibility and positioning for AI driven discovery. The aim is authority a community owns and builds on over time, rather than visibility it has to keep renting.\n\nEnjoy the trick or treaters tonight, and when you are ready to see how your community looks from the outside, explore LocalLift.\n\nhttps://www.thesocialdm.com/locallift",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1031.png"
+   ],
+   "mediaAltText": [
+    "Red front door with pumpkins and flowers lining the steps, with the headline The front step is now a search result."
+   ],
+   "saveExternalMediaFiles": false,
+   "gmbData": {
+    "type": "publication"
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403276856",
+  "uuid": "985896276125961861",
+  "label": "2026-10-31 07:45 linkedin edit",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-31T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Forget ghosts.\nThese are the phrases that should make an owner nervous:\n\n\"Engagement is up.\" Up from what, and did it lead anywhere?\n\"We're optimizing.\" What changed, and when?\n\"It's the algorithm.\" Sometimes. What did you try next?\n\"Results may vary.\" Varied how, compared to what?\n\nNone of these are wrong on their own. They just need a follow-up question every time.\n\nHappy Halloween from The SocialDM.\n\nWhich one have you heard lately?\n\n#Multifamily #PropertyManagement #Halloween",
+   "firstCommentText": "No scary phrases, just what changed and what to do: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-li-1031-scary-phrases.png"
+   ],
+   "mediaAltText": [
+    "Carved pumpkin on stone steps above the headline Forget ghosts. These phrases should make an owner nervous, followed by four report phrases."
+   ],
+   "saveExternalMediaFiles": false,
+   "linkedinData": {
+    "previewIncluded": false,
+    "type": "POST"
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403277801",
+  "uuid": "-140922276558323676",
+  "label": "2026-10-31 11:15 instagram swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-31T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Trick or treat, apartment edition.\n\nTricks renters notice: a special that ended weeks ago, photos from three summers ago, a review nobody answered.\n\nTreats they remember: today's special everywhere, photos from this season, and a reply that actually says something.\n\nHappy Halloween from The SocialDM. Treats only, link in bio.\n\nWhich trick would you find first on your listing?\n\n#PropertyManagement #ApartmentMarketing #MultifamilyMarketing #Halloween #GoogleBusinessProfile",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1031-trick-treat.png"
+   ],
+   "mediaAltText": [
+    "Brownstone steps with pumpkins, above a card comparing listing tricks and treats."
+   ],
+   "saveExternalMediaFiles": false,
+   "instagramData": {
+    "autoPublish": true,
+    "type": "POST",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403277892",
+  "uuid": "-1990277994189666259",
+  "label": "2026-10-31 11:15 facebook edit",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-10-31T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Trick or treat, property team edition.\n\nTricks renters notice: a special that ended weeks ago, photos from three summers ago, and a review nobody answered.\n\nTreats they remember: today's special everywhere, photos from this season, and a reply that actually says something.\n\nHappy Halloween from The SocialDM.\n\nWhich treat is your listing missing right now?\n\n#PropertyManagement #ApartmentMarketing #MultifamilyMarketing #Halloween #GoogleBusinessProfile",
+   "firstCommentText": "Treats only, all year: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1031-trick-treat.png"
+   ],
+   "mediaAltText": [
+    "Brownstone steps with pumpkins, above a card comparing listing tricks and treats."
+   ],
+   "saveExternalMediaFiles": false,
+   "facebookData": {
+    "type": "POST"
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "398993328",
+  "uuid": "1269962252317771200",
+  "label": "2026-11-01 07:00 gmb_post swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-11-01T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "A clear November sky over Arizona and a fresh month on the calendar. It is a good moment to step back and ask a simple question: where are renters actually finding apartment communities now?\n\nThe SocialDM put that question at the center of the 2026 Multifamily Visibility Report. It looks at five layers of discovery, from social and search to local, marketplace and AI, and at the gap between having a digital presence and being consistently discovered. Being online is not the same as being discoverable, and the communities that close that gap tend to send clear, consistent signals everywhere renters look. We believe the future is going to reward the playful and curious, and this report is our way of staying curious.\n\nStart the month with a fresh perspective and read the 2026 Multifamily Visibility Report from The SocialDM.\n\nhttps://www.thesocialdm.com/2026-multifamily-visibility-report",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1101.png"
+   ],
+   "mediaAltText": [
+    "Saguaro covered hills under a clear Arizona sky, with the headline Being online is not the same as being found."
+   ],
+   "saveExternalMediaFiles": false,
+   "gmbData": {
+    "type": "publication"
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403743963",
+  "uuid": "-1791165347470162085",
+  "label": "2026-11-01 11:15 instagram edit_move",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-11-02T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Same renter question. Two very different answers.\n\n\"Please contact the leasing office\" can send a renter straight to the next listing. A plain answer keeps them comparing tonight.\n\nSmall fix. Fewer reasons to scroll past.\n\nWhy plain answers win, link in bio.\n\nWhich answer in your FAQ is the vaguest right now?\n\n#ApartmentMarketing #PropertyManagement #MultifamilyMarketing #LeasingTips #ApartmentSEO",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1101-faq.png"
+   ],
+   "mediaAltText": [
+    "Card showing the renter question Which utilities are included, a vague before answer crossed out and a plain after answer."
+   ],
+   "saveExternalMediaFiles": false,
+   "instagramData": {
+    "autoPublish": true,
+    "type": "POST",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403743984",
+  "uuid": "6999852457209644398",
+  "label": "2026-11-01 11:15 facebook edit_move",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-11-02T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "A renter question most communities hear sooner or later: which utilities are included?\n\nBefore: \"Please contact the leasing office for details.\"\nAfter: \"Water, sewer and trash are one flat monthly fee. Electric and internet go in your name. Ask us for the current amount.\"\n\nThe after answer lets a renter keep comparing without waiting for the office to open. The before answer often means they move on to the next listing.\n\nWho on your team owns the FAQ, and how often does it get a fresh look?\n\n#ApartmentMarketing #PropertyManagement #MultifamilyMarketing #LeasingTips #ApartmentSEO",
+   "firstCommentText": "Answers renters can actually use: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1101-faq.png"
+   ],
+   "mediaAltText": [
+    "Card showing the renter question Which utilities are included, a vague before answer crossed out and a plain after answer."
+   ],
+   "saveExternalMediaFiles": false,
+   "facebookData": {
+    "type": "POST"
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403744076",
+  "uuid": "-3629735903015187368",
+  "label": "2026-11-02 07:00 gmb_post swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-11-02T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "How long does apartment SEO take to show results? Usually longer than a week, and that is normal. A promise of page one by next week sells the destination without the drive.\n\nThe SocialDM builds visibility for apartment communities the steady way: apartment SEO, a Google Business Profile that is complete and accurate, hyperlocal landing pages and paid media where it fits. Early traction often shows up in roughly 60 to 90 days.\n\nIf you want a realistic picture of what multifamily SEO and local search can do, our multifamily marketing page answers common questions, including how long traction usually takes.\n\nhttps://www.thesocialdm.com/multifamily-marketing-agency",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1102.png"
+   ],
+   "mediaAltText": [
+    "Quiet road covered in fallen leaves through golden autumn trees, with the headline Good SEO is a steady drive, not a teleport."
+   ],
+   "saveExternalMediaFiles": false,
+   "gmbData": {
+    "type": "publication"
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403744169",
+  "uuid": "7230638291198233980",
+  "label": "2026-11-03 07:00 gmb_post edit",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-11-03T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Renters rarely search for just \"apartments.\" They search for a commute, a school, a park or a coffee shop they already love. The neighborhood is part of the home, down to the morning walk with the dog.\n\nGeneric, one size fits all copy rarely reflects a real neighborhood, and renters tend to notice. Local detail is what makes a community page feel written for the person reading it.\n\nOur page on apartment SEO for multifamily communities explains how The SocialDM approaches search for apartment communities.\n\nhttps://www.thesocialdm.com/apartment-seo-for-multifamily-communities",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1103.png"
+   ],
+   "mediaAltText": [
+    "Man walking a dog past a brick building in morning light, with the headline Renters search neighborhoods, not apartments."
+   ],
+   "saveExternalMediaFiles": false,
+   "gmbData": {
+    "type": "publication"
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403744223",
+  "uuid": "2854605953273186993",
+  "label": "2026-11-04 07:00 gmb_post swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-11-04T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Many renters compare apartment communities on a phone or laptop long before they call. They keep a short list, look at the photos and check the neighborhood on a map.\n\nOwners and property teams can learn a lot from those patterns before they spend a dollar. The SocialDM publishes research for the multifamily industry on how apartment communities get found.\n\nOur Research and Insights page collects that work in one place. Pour a coffee and take a look.\n\nhttps://www.thesocialdm.com/research-insights",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1104.png"
+   ],
+   "mediaAltText": [
+    "Smiling woman with a coffee mug on the phone at a laptop, with the headline The short list gets made online."
+   ],
+   "saveExternalMediaFiles": false,
+   "gmbData": {
+    "type": "publication"
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403744259",
+  "uuid": "1696539404979159045",
+  "label": "2026-11-05 07:00 gmb_post swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-11-05T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Choosing a marketing agency for an apartment community should not require a leap of faith. At a good market, you can see the fruit before you pay for it.\n\nMany proposals lead with promises: more reach, more engagement, more leads. The proof is simpler and easier to check. Is the special on Google the same one on the website? Do new reviews get a real reply? Do the posts answer what renters ask?\n\nIf you would like to talk through those details for your community, start a conversation with us.\n\nhttps://www.thesocialdm.com/contact",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1105.png"
+   ],
+   "mediaAltText": [
+    "Market stall piled with apples, bananas and limes, with the headline See the fruit before you pay for it."
+   ],
+   "saveExternalMediaFiles": false,
+   "gmbData": {
+    "type": "publication"
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "403744297",
+  "uuid": "2742751796720713982",
+  "label": "2026-11-06 07:00 gmb_post swap_media",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-11-06T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "What does LocalLift do for an apartment community? It is the private local visibility system from The SocialDM.\n\nLocalLift brings structured SEO, Google Business Profile work, Maps visibility and AI discovery together, built to help a community be found where renters search. The goal is authority a community owns and keeps building, which can mean less reliance on paid listing sites over time.\n\nSee how LocalLift works and who it is built for, from lease ups to stabilized communities.\n\nhttps://www.thesocialdm.com/locallift",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1106.png"
+   ],
+   "mediaAltText": [
+    "Man at a laptop in a cafe, with the headline Visibility a community owns, not rents."
+   ],
+   "saveExternalMediaFiles": false,
+   "gmbData": {
+    "type": "publication"
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "sendScheduledPostForReview",
+  "id": "405714435",
+  "uuid": "-4597427476460125175",
+  "label": "2026-11-01 07:45 linkedin edit_move",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "publicationDate": {
+    "dateTime": "2026-11-08T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "33 reviews. 33 replies.\nThe replies may matter as much as the stars.\n\nA 183 home lease up we work with sits at 4.8 stars, and every review has an answer, the glowing ones and the honest ones.\n\nRenters tend to read the newest reviews first, and the reply under each one. A reply that speaks to what the resident actually said shows a team that listens. A copy and paste thank you shows something too.\n\nWho on your team owns the review replies?\n\n#Multifamily #OnlineReviews #ReputationManagement",
+   "firstCommentText": "How we think about reviews: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-t9-proof-reviews.png"
+   ],
+   "mediaAltText": [
+    "White card showing a 4.8 Google rating from 33 reviews, with the line 33 reviews. 33 replies."
+   ],
+   "saveExternalMediaFiles": false,
+   "linkedinData": {
+    "documentTitle": "The Sunday Check",
+    "publishImagesAsPDF": true,
+    "previewIncluded": false,
+    "type": "POST"
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "descendants": [],
+   "smartLinkData": {
+    "ids": []
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-02T07:45:00-07:00",
+  "label": "2026-11-02 07:45 linkedin",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-02T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Can I bring two dogs? Is parking covered?\nThe questions renters ask are getting more specific.\n\nAnd more of them now go to Google before anyone calls the office. If the answer isn't written down somewhere a renter can find it, they usually move on to a community where it is.\n\nThe brochure still matters. The plain answers matter more.\n\nWhich renter question does your website answer worst today?\n\n#Multifamily #ApartmentMarketing #LeasingTips",
+   "firstCommentText": "How we help communities answer renter questions: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t3-insight-question.png"
+   ],
+   "mediaAltText": [
+    "Navy card with the headline Renters don't read your brochure. They ask a question."
+   ],
+   "linkedinData": {
+    "type": "post",
+    "previewIncluded": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-01T11:15:00-07:00",
+  "label": "2026-11-01 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-01T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "One team. Not five vendors.\n\nWhen social, Google, reviews, the website and AI search are run by different people, the special on one says something different from the other. Renters notice.\n\nWe run them from one plan, so every channel tells the same story.\n\nHow we work, link in bio.\n\nWho on your team catches it when two channels disagree?\n\n#MultifamilyMarketing #ApartmentMarketing #PropertyManagement #LocalSEO #GoogleBusinessProfile",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t7-insight-oneteam.png"
+   ],
+   "mediaAltText": [
+    "Navy diagram titled One team, not five vendors, with social, Google, reviews, website and AI search connected to one plan."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-01T11:15:00-07:00",
+  "label": "2026-11-01 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-01T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "One team, not five vendors.\n\nSocial, Google, reviews, the website and AI search all send renters signals about the same community. When different vendors run each one, those signals drift apart: one special on Google, another on the website, a third on the listing sites.\n\nWe run every channel from one plan, so they all say the same thing.\n\nHow many different vendors touch your community's marketing today?\n\n#MultifamilyMarketing #ApartmentMarketing #PropertyManagement #LocalSEO #GoogleBusinessProfile",
+   "firstCommentText": "How one team works for apartment communities: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t7-insight-oneteam.png"
+   ],
+   "mediaAltText": [
+    "Navy diagram titled One team, not five vendors, with social, Google, reviews, website and AI search connected to one plan."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-03T07:45:00-07:00",
+  "label": "2026-11-03 07:45 linkedin",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-03T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Four words decide a lot of apartment searches.\nPets. Parking. Commute. Price.\n\nA simple test for any apartment website: take those four questions a renter asks every day.\n\nNow look for each answer on the site, in plain words, on a page that loads without clicking through three menus.\n\nIf you had to hunt for it, an AI assistant probably won't find it either. And when an assistant can't find an answer, it tends to recommend a community where it can.\n\nWhich of those answers would an AI assistant find on your site today?\n\n#Multifamily #AISearch #ApartmentMarketing",
+   "firstCommentText": "How we approach AI search for apartment communities: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t6-insight-ai.png"
+   ],
+   "mediaAltText": [
+    "Paper card with the headline If AI can't answer it, renters can't find it. Pets. Parking. Commute. Price."
+   ],
+   "linkedinData": {
+    "type": "post",
+    "previewIncluded": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-04T11:15:00-07:00",
+  "label": "2026-11-04 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-04T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "4.8 stars. 33 reviews. 33 replies.\n\nThat's a 183 home lease up we work with. Every review got an answer, the glowing ones and the honest ones.\n\nThe next renter reads the replies, not just the stars.\n\nHow we handle reviews, link in bio.\n\nWhat's the best review reply you've seen from a property team?\n\n#ReputationManagement #OnlineReviews #ApartmentMarketing #MultifamilyMarketing #PropertyManagement",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-t9-proof-reviews.png"
+   ],
+   "mediaAltText": [
+    "White card showing a 4.8 Google rating from 33 reviews, with the line 33 reviews. 33 replies."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-04T11:15:00-07:00",
+  "label": "2026-11-04 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-04T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "4.8 stars across 33 Google reviews, and every one answered.\n\nIt's a 183 home lease up, one of the communities we work with. Renters tend to read the newest reviews and the replies under them before they ever book a tour.\n\nA reply that speaks to what the resident actually said does more than a star rating can.\n\nWhen a resident leaves a glowing review, what does your reply usually say?\n\n#ReputationManagement #OnlineReviews #ApartmentMarketing #MultifamilyMarketing #PropertyManagement",
+   "firstCommentText": "How we think about reviews: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-t9-proof-reviews.png"
+   ],
+   "mediaAltText": [
+    "White card showing a 4.8 Google rating from 33 reviews, with the line 33 reviews. 33 replies."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-04T07:45:00-07:00",
+  "label": "2026-11-04 07:45 linkedin",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-04T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Renters check the date on your photos.\nMaybe not on purpose, but they notice.\n\nA pool shot taken in summer, a holiday wreath in April, a model unit with furniture the office replaced two years ago. Each one was fine once. Together they quietly tell a renter nobody is paying attention.\n\nFresh photos are one of the easiest signals to control:\n\n• Add a few new ones every month, in the season you're in\n• Retire anything that no longer matches what a renter will see on a tour\n• Keep the same photos on Google, the website and the listing sites\n\nWhen did your Google listing last get a new photo?\n\n#Multifamily #GoogleBusinessProfile #ApartmentMarketing",
+   "firstCommentText": "How we keep listings current: https://www.thesocialdm.com",
+   "media": [],
+   "mediaAltText": [],
+   "linkedinData": {
+    "type": "post",
+    "previewIncluded": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-05T11:15:00-07:00",
+  "label": "2026-11-05 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-05T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "The neighborhood is an amenity. Post it like one.\n\nThe Saturday market, the coffee shop on the corner, the walk to the park. Renters are choosing those too, and most listings never show them.\n\nLocal posts that feel local, link in bio.\n\nWhat's the one local spot your residents always mention?\n\n#ApartmentMarketing #MultifamilyMarketing #LocalMarketing #PropertyManagement #ApartmentLiving",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t8-photo-market.png"
+   ],
+   "mediaAltText": [
+    "Woman standing at an outdoor produce market, with the headline The neighborhood is an amenity. Post it like one."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-05T11:15:00-07:00",
+  "label": "2026-11-05 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-05T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "The neighborhood is an amenity, so post it like one.\n\nA renter isn't only choosing a floor plan. They're choosing the coffee shop on the corner, the weekend market and the walk to the park. Most apartment feeds skip all of it.\n\nA few real, nearby places each month can answer what a floor plan can't: what it's actually like to live there.\n\nIf a renter had one free Saturday near your community, where would you send them?\n\n#ApartmentMarketing #MultifamilyMarketing #LocalMarketing #PropertyManagement #ApartmentLiving",
+   "firstCommentText": "Local content for apartment communities: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t8-photo-market.png"
+   ],
+   "mediaAltText": [
+    "Woman standing at an outdoor produce market, with the headline The neighborhood is an amenity. Post it like one."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-05T07:45:00-07:00",
+  "label": "2026-11-05 07:45 linkedin",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-05T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Five vendors can each do good work\nand still leave a renter confused.\n\nA typical community might have one company on social, another on the website, a third on paid search and the leasing team handling Google and reviews in between.\n\nEach one can do good work. The trouble starts in the gaps: the special that changed on the website but not on Google, the review nobody owned, the post that promotes an amenity under renovation.\n\nWe run every channel from one plan for that reason. The pieces work better when they talk to each other.\n\nWhere do the gaps show up first for your community?\n\n#Multifamily #PropertyManagement #ApartmentMarketing",
+   "firstCommentText": "How one plan works across every channel: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t7-insight-oneteam.png"
+   ],
+   "mediaAltText": [
+    "Navy diagram titled One team, not five vendors, with social, Google, reviews, website and AI search connected to one plan."
+   ],
+   "linkedinData": {
+    "type": "post",
+    "previewIncluded": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-06T11:15:00-07:00",
+  "label": "2026-11-06 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-06T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "If AI can't answer it, renters can't find it.\n\nTry it on your own website: pets, parking, commute, price. Is each answer written in plain words, easy to find?\n\nIf you had to hunt, an AI assistant probably will too.\n\nMore on AI search, link in bio.\n\nHow long did it take you to find the parking answer?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #ApartmentSEO #PropertyManagement",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t6-insight-ai.png"
+   ],
+   "mediaAltText": [
+    "Paper card with the headline If AI can't answer it, renters can't find it. Pets. Parking. Commute. Price."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-06T11:15:00-07:00",
+  "label": "2026-11-06 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-06T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Try this on your own website tonight.\n\nPick four questions renters ask every day: pets, parking, commute and price. Now find each answer on the site, written in plain words.\n\nIf it took you a minute, an AI assistant may not find it at all. More renters ask those assistants first, and they tend to recommend the communities whose answers are easy to read.\n\nWhich of the four was hardest to find on your site?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #ApartmentSEO #PropertyManagement",
+   "firstCommentText": "How we approach AI search: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t6-insight-ai.png"
+   ],
+   "mediaAltText": [
+    "Paper card with the headline If AI can't answer it, renters can't find it. Pets. Parking. Commute. Price."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-06T07:45:00-07:00",
+  "label": "2026-11-06 07:45 linkedin",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-06T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "A page that could describe any city\nusually ranks like it.\n\nWe work with apartment communities in Arizona, Nevada, Florida, Oregon and Washington. The first questions renters ask change from market to market, and so should the content.\n\nIt reads like it too. The pages that work mention the roads, the parks and the commutes a resident actually knows.\n\nWhich page on your site could describe any city right now?\n\n#Multifamily #LocalSEO #ApartmentMarketing",
+   "firstCommentText": "Local marketing for apartment communities: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t5-photo-desert.png"
+   ],
+   "mediaAltText": [
+    "Saguaro cactus in the Sonoran desert, with the headline Local isn't a keyword. It's the whole game."
+   ],
+   "linkedinData": {
+    "type": "post",
+    "previewIncluded": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-03T11:15:00-07:00",
+  "label": "2026-11-03 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-03T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Local isn't a keyword. It's the whole game.\n\nThe roads, the parks, the commute a resident actually takes. That's what makes a community page feel written by someone who lives there.\n\nPages that sound local, link in bio.\n\nWhich local detail would a newcomer to your city never guess?\n\n#LocalSEO #ApartmentMarketing #MultifamilyMarketing #PropertyManagement #ArizonaLiving",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t5-photo-desert.png"
+   ],
+   "mediaAltText": [
+    "Saguaro cactus in the Sonoran desert, with the headline Local isn't a keyword. It's the whole game."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-03T11:15:00-07:00",
+  "label": "2026-11-03 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-03T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Local isn't a keyword. It's the whole game.\n\nRenters can tell when a community page could describe any city. The ones that work mention the roads, parks and commutes a resident actually knows.\n\nThat's the standard we write to in every market we work in.\n\nWhich street, park or commute would a resident in your city name first?\n\n#LocalSEO #ApartmentMarketing #MultifamilyMarketing #PropertyManagement #LocalMarketing",
+   "firstCommentText": "How we write for each market: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t5-photo-desert.png"
+   ],
+   "mediaAltText": [
+    "Saguaro cactus in the Sonoran desert, with the headline Local isn't a keyword. It's the whole game."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-07T07:00:00-07:00",
+  "label": "2026-11-07 07:00 gmb_post",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-07T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "A quiet Saturday on the balcony, a cup of coffee and a renter scrolling through reviews before she books a tour. She reads the newest ones first, and she reads the replies under them just as closely.\n\nA reply that speaks to what the resident actually said shows a team that listens. A copy and paste thank you, or no reply at all, says something too. Answering every review with care, the five star ones and the honest ones, is one of the clearest trust signals a community can send.\n\nSee how LocalLift strengthens the local trust signals Google and AI platforms use.\n\nhttps://www.thesocialdm.com/locallift",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1107.png"
+   ],
+   "mediaAltText": [
+    "Woman in a white sweater with a coffee cup reading her phone on a balcony above a city street, with the headline The next renter reads your reply."
+   ],
+   "gmbData": {
+    "type": "publication"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-07T07:00:00-07:00",
+  "label": "2026-11-07 07:00 gmb_photo",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-07T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-gp-1107.jpg"
+   ],
+   "mediaAltText": [
+    "Brick apartment building with iron balconies"
+   ],
+   "gmbData": {
+    "type": "photo"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-07T07:45:00-07:00",
+  "label": "2026-11-07 07:45 linkedin",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-07T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Two clocks, one community.\nGoogle says the office closes at 6. The website says 5.\n\nIt sounds minor. A renter who drives over at 5:30 doesn't think so.\n\nHours are one of four things we check every week on the listings we manage, along with the current special, the price on Google against the floor plan page, and whether the newest review has a reply.\n\nNone of it takes long. All of it costs trust when it's wrong.\n\nWhen did someone last compare your Google hours to your website?\n\n#Multifamily #GoogleBusinessProfile #PropertyManagement",
+   "firstCommentText": "The weekly check we run: https://www.thesocialdm.com",
+   "media": [],
+   "mediaAltText": [],
+   "linkedinData": {
+    "type": "post",
+    "previewIncluded": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-07T11:15:00-07:00",
+  "label": "2026-11-07 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-07T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "38 of 96.\n\nWe asked AI assistants 96 renter questions in October. One lease up we work with came up in 38 of them. The next closest of the six communities we tested: 14.\n\nIt opened in March.\n\nHow it happened, link in bio.\n\nWhat would you want an AI assistant to say about your community?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #LeaseUp #PropertyManagement",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t4-proof-ai.png"
+   ],
+   "mediaAltText": [
+    "Navy card showing 38 of 96 renter questions to AI assistants named one lease up, with a dot grid of 38 lime dots out of 96."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-07T11:15:00-07:00",
+  "label": "2026-11-07 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-07T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "We asked AI assistants 96 renter questions in October.\n\nA 183 home lease up outside Portland, one of our clients, came up in 38 of them. The next closest of the six communities we tested came up in 14. The community opened in March.\n\nAI assistants are becoming one more place renters ask where to live. It pays to know what they say about you.\n\nHave you asked one to recommend apartments in your area yet?\n\n#AISearch #ApartmentMarketing #MultifamilyMarketing #LeaseUp #PropertyManagement",
+   "firstCommentText": "How LocalLift works for lease ups: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t4-proof-ai.png"
+   ],
+   "mediaAltText": [
+    "Navy card showing 38 of 96 renter questions to AI assistants named one lease up, with a dot grid of 38 lime dots out of 96."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-08T07:00:00-07:00",
+  "label": "2026-11-08 07:00 gmb_post",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-08T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Sunday morning, a coffee by the window and five quiet minutes. It is a good time to look at an apartment community the way a renter does, from the outside.\n\nDoes the move in offer on the listing match the leasing page? Are the holiday hours right? Does the rent shown agree with the floor plans? Has the latest review been answered? Small details like these build trust, or quietly cost it, and they are easy to let drift between busy weeks.\n\nSee how LocalLift builds visibility for apartment communities across Google Search, Google Maps and AI platforms.\n\nhttps://www.thesocialdm.com/locallift",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1108.png"
+   ],
+   "mediaAltText": [
+    "Coffee cup on a sunlit windowsill, with the headline Special, hours, price, reviews. Every week."
+   ],
+   "gmbData": {
+    "type": "publication"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-08T07:00:00-07:00",
+  "label": "2026-11-08 07:00 gmb_photo",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-08T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-gp-1108.jpg"
+   ],
+   "mediaAltText": [
+    "Modern dark brick apartment building among trees"
+   ],
+   "gmbData": {
+    "type": "photo"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-08T11:15:00-07:00",
+  "label": "2026-11-08 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-08T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "145 to 573.\n\nGoogle direction requests at a lease up we work with, first month versus September. A renter who taps directions is often planning to show up.\n\nProof, not promises, link in bio.\n\nDo you know how many direction requests your community got last month?\n\n#GoogleBusinessProfile #LeaseUp #ApartmentMarketing #MultifamilyMarketing #PropertyManagement",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t2-proof-directions.png"
+   ],
+   "mediaAltText": [
+    "Bar chart: Google direction requests at a 183 home lease up, 145 in the first month and 573 in September."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-08T11:15:00-07:00",
+  "label": "2026-11-08 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-08T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "145 Google direction requests in its first month. 573 in September.\n\nThat's a 183 home lease up outside Portland we work with. Direction requests are one of the closest signals to a tour that Google gives you, because a renter who taps directions is often on the way.\n\nDetails that match everywhere, fresh photos and posts, and a reply to every review all help move that number.\n\nWhen did you last check your community's direction requests on Google?\n\n#GoogleBusinessProfile #LeaseUp #ApartmentMarketing #MultifamilyMarketing #PropertyManagement",
+   "firstCommentText": "How we help lease ups get found: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t2-proof-directions.png"
+   ],
+   "mediaAltText": [
+    "Bar chart: Google direction requests at a 183 home lease up, 145 in the first month and 573 in September."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-09T07:00:00-07:00",
+  "label": "2026-11-09 07:00 gmb_post",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-09T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Moving day. Boxes in the hallway, a plant that made the trip and the first night in a new home. For a brand new apartment community, many of those first residents found it with very little online to go on.\n\nA lease up starts with no track record and no search history, so Google and AI assistants have little to say about it at first. Building that presence early matters: a complete Google Business Profile, fresh photos, real answers to renter questions and a reply to every review, kept consistent everywhere renters look.\n\nSee how LocalLift helps a new community get found from its first weeks.\n\nhttps://www.thesocialdm.com/locallift",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1109.png"
+   ],
+   "mediaAltText": [
+    "Smiling couple carrying moving boxes into a new apartment, with the headline A new community starts with no search history."
+   ],
+   "gmbData": {
+    "type": "publication"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-09T07:00:00-07:00",
+  "label": "2026-11-09 07:00 gmb_photo",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-09T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-gp-1109.jpg"
+   ],
+   "mediaAltText": [
+    "Tall apartment buildings behind a rounded green tree under a blue sky"
+   ],
+   "gmbData": {
+    "type": "photo"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-09T07:45:00-07:00",
+  "label": "2026-11-09 07:45 linkedin",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-09T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Your first tour happens on a phone.\nThe leasing team never sees it.\n\nBy the time a renter walks into the leasing office, they've usually seen the photos, read the reviews, checked the map and compared a few communities on their phone.\n\nAnd the report rarely measures it.\n\nThe communities that win it make the answers easy to find: current photos, a special that matches everywhere, plain answers to common questions, and replies under the reviews.\n\nIf a renter searched your community tonight, what would surprise you?\n\n#Multifamily #ApartmentMarketing #LeasingTips",
+   "firstCommentText": "How we help communities win the first tour: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t1-photo-home.png"
+   ],
+   "mediaAltText": [
+    "Woman on a gray sofa looking at her phone, with the headline Before the tour, there's a search."
+   ],
+   "linkedinData": {
+    "type": "post",
+    "previewIncluded": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-09T11:15:00-07:00",
+  "label": "2026-11-09 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-09T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Renters don't read your brochure. They ask a question.\n\nCan I bring two dogs? Is parking covered? How long is the drive downtown?\n\nThe community with the clearest answer usually gets the tour.\n\nAnswers renters can use, link in bio.\n\nWhich renter question would you love to never answer by phone again?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #LeasingTips #ApartmentSEO",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t3-insight-question.png"
+   ],
+   "mediaAltText": [
+    "Navy card with the headline Renters don't read your brochure. They ask a question."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-09T11:15:00-07:00",
+  "label": "2026-11-09 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-09T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Renters don't read your brochure. They ask a question.\n\nIs there a washer in the home? How far is the closest grocery store? How long is the drive downtown at 8 AM? More of those questions now go to Google or an AI assistant before anyone calls the office.\n\nThe community with the clearest written answer usually gets the tour.\n\nWhat's the question your leasing team hears most?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #LeasingTips #ApartmentSEO",
+   "firstCommentText": "How we help communities answer renters first: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t3-insight-question.png"
+   ],
+   "mediaAltText": [
+    "Navy card with the headline Renters don't read your brochure. They ask a question."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-10T07:00:00-07:00",
+  "label": "2026-11-10 07:00 gmb_post",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-10T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "A board full of sticky notes, two people sorting them into one plan. Good marketing for an apartment community often starts the same way, with everything in one place.\n\nSocial posts, the Google Business Profile, reviews, the website and AI search all send renters signals about the same community. When different vendors run each piece, the details drift apart: one set of photos on Google, another on the website, and hours that never quite match. The SocialDM brings those pieces into one system, so a renter sees the same story wherever they look.\n\nRead how The SocialDM brings apartment SEO, Google Business Profile optimization, social media and paid media into one unified system.\n\nhttps://www.thesocialdm.com/multifamily-marketing-agency",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1110.png"
+   ],
+   "mediaAltText": [
+    "Two people planning at a board covered in sticky notes, with the headline One plan across every channel."
+   ],
+   "gmbData": {
+    "type": "publication"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-10T07:00:00-07:00",
+  "label": "2026-11-10 07:00 gmb_photo",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-10T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-gp-1110.jpg"
+   ],
+   "mediaAltText": [
+    "Sunset over a city lake with a fountain"
+   ],
+   "gmbData": {
+    "type": "photo"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-10T07:45:00-07:00",
+  "label": "2026-11-10 07:45 linkedin",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-10T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "A lease up opens with no search history.\nThat's the part most launch plans skip.\n\nNo reviews yet. Few photos. No track record for Google or an AI assistant to point to. The building is ready long before its online presence is.\n\nWhat tends to help in the first 90 days:\n\n• A complete Google listing on day one, with real photos as soon as homes are ready\n• Answers to the questions renters ask most, written on the website\n• A reply to every early review\n• The same details everywhere a renter looks\n\nThe communities that start early don't have to catch up later.\n\nWhat's the first thing you build for a new lease up?\n\n#Multifamily #LeaseUp #ApartmentMarketing",
+   "firstCommentText": "How we launch lease ups online: https://www.thesocialdm.com",
+   "media": [],
+   "mediaAltText": [],
+   "linkedinData": {
+    "type": "post",
+    "previewIncluded": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-10T11:15:00-07:00",
+  "label": "2026-11-10 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-10T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Before the tour, there's a search.\n\nPhotos, reviews, the map, a few communities side by side. Most renters have made a short list before they ever call.\n\nWin the search first, link in bio.\n\nHave you searched your own community on your phone this month?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #ApartmentHunting #LocalSEO",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t1-photo-home.png"
+   ],
+   "mediaAltText": [
+    "Woman on a gray sofa looking at her phone, with the headline Before the tour, there's a search."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-10T11:15:00-07:00",
+  "label": "2026-11-10 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-10T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Before the tour, there's a search.\n\nBy the time a renter calls, they've usually seen the photos, read the reviews and compared a few communities on their phone. That search is the first tour, and the leasing team rarely sees it.\n\nCurrent photos, one special everywhere and plain answers make it easier to win.\n\nWhat do you think renters notice first about your community online?\n\n#ApartmentMarketing #MultifamilyMarketing #PropertyManagement #ApartmentHunting #LocalSEO",
+   "firstCommentText": "How we help communities win the search: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-instagram/2026-11-mix-sample/socialdm-t1-photo-home.png"
+   ],
+   "mediaAltText": [
+    "Woman on a gray sofa looking at her phone, with the headline Before the tour, there's a search."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-11T07:00:00-07:00",
+  "label": "2026-11-11 07:00 gmb_post",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-11T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "A modern building, a clear sky and a renter wondering what life is like inside. The best apartment pages answer that before anyone has to ask.\n\nBefore a tour, renters want the practical details: which floor plans fit, what amenities are really there, whether pets are welcome and what a current concession looks like. Pages that answer those questions in plain words help a community show up when renters compare options on Google, Google Maps and AI platforms, and they keep the click from going to a listing site first.\n\nSee how structured apartment SEO helps a community appear for floor plan, amenity and pricing searches.\n\nhttps://www.thesocialdm.com/apartment-seo-for-multifamily-communities",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-g-1111.png"
+   ],
+   "mediaAltText": [
+    "Modern apartment building under a blue sky, with the headline Write the page a renter wishes existed."
+   ],
+   "gmbData": {
+    "type": "publication"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-11T07:00:00-07:00",
+  "label": "2026-11-11 07:00 gmb_photo",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "gmb"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-11T07:00:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-gp-1111.jpg"
+   ],
+   "mediaAltText": [
+    "Rooftop pool with palm trees and a city view"
+   ],
+   "gmbData": {
+    "type": "photo"
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-11T07:45:00-07:00",
+  "label": "2026-11-11 07:45 linkedin",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "linkedin"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-11T07:45:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "Posting more is not a strategy.\nPosting what renters ask about is.\n\nA full calendar of \"Happy Monday\" posts and stock sunsets looks busy. It rarely fills a tour schedule.\n\nThe posts that pull their weight answer something: what is included, what the neighborhood is like, which homes are available, what the team is like to work with. They match the website and the Google listing, and they change with the season.\n\nFrequency still matters. It just comes second.\n\nWhat's the most useful post your community has shared this year?\n\n#Multifamily #SocialMediaMarketing #ApartmentMarketing",
+   "firstCommentText": "How we plan posts for apartment communities: https://www.thesocialdm.com",
+   "media": [],
+   "mediaAltText": [],
+   "linkedinData": {
+    "type": "post",
+    "previewIncluded": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-11T11:15:00-07:00",
+  "label": "2026-11-11 11:15 instagram",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-11T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "About 970 to about 2,900.\n\nHow often a lease up we work with appeared in Google search and maps, March versus September.\n\nMore of the right details, kept current, gives Google more to show.\n\nThe full story, link in bio.\n\nWhich Google number do you watch most closely each month?\n\n#GoogleBusinessProfile #LeaseUp #LocalSEO #ApartmentMarketing #MultifamilyMarketing",
+   "firstCommentText": "",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1111-proof-search.png"
+   ],
+   "mediaAltText": [
+    "Navy bar chart: a new lease up appeared in Google search and maps about 970 times in March and about 2,900 times in September."
+   ],
+   "instagramData": {
+    "type": "POST",
+    "autoPublish": true,
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   }
+  }
+ },
+ {
+  "tool": "createScheduledPostForReview",
+  "date": "2026-11-11T11:15:00-07:00",
+  "label": "2026-11-11 11:15 facebook",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "descendants": [],
+   "hasNotReadNotes": false,
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "publicationDate": {
+    "dateTime": "2026-11-11T11:15:00",
+    "timezone": "America/Phoenix"
+   },
+   "text": "In March, a new 183 home community outside Portland appeared in Google search and maps about 970 times. By September, it was close to 2,900.\n\nSome of that is a lease up finding its feet. A big part, in our view, is how much more Google could find, trust and show about it: details that match everywhere, fresh photos and posts, and a reply to every review.\n\nHow often does your community show up on Google in a month, and is it climbing?\n\n#GoogleBusinessProfile #LeaseUp #LocalSEO #ApartmentMarketing #MultifamilyMarketing",
+   "firstCommentText": "What we do for new communities on Google: https://www.thesocialdm.com",
+   "media": [
+    "https://raw.githubusercontent.com/TheSocialDM/locallift-pulses/TEST/social/socialdm-2026-11-mix/out/socialdm-s-1111-proof-search.png"
+   ],
+   "mediaAltText": [
+    "Navy bar chart: a new lease up appeared in Google search and maps about 970 times in March and about 2,900 times in September."
+   ],
+   "facebookData": {
+    "type": "POST"
+   }
+  }
+ }
+]
