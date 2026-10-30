@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Home Finder · Village of Chandler</title>
+<meta name="description" content="Ask about floor plans, prices, specials, pets and office hours at Village of Chandler, in English or Spanish.">
+<meta name="theme-color" content="#1f3b33">
+<style>
+:root{
+  --bg:#f6f3ee;--card:#ffffff;--ink:#1d2421;--muted:#5d6763;--line:#e4dfd6;
+  --brand:#1f3b33;--brand-ink:#ffffff;--accent:#b8873b;--you:#e9efe9;--ok:#2e7d4f;--no:#a3442f;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121614;--card:#1b211e;--ink:#e9ece9;--muted:#9aa6a0;--line:#2b332f;
+    --brand:#2f5a4d;--brand-ink:#ffffff;--accent:#d4a457;--you:#23302a;--ok:#5fbf86;--no:#e08a74;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121614;--card:#1b211e;--ink:#e9ece9;--muted:#9aa6a0;--line:#2b332f;
+  --brand:#2f5a4d;--brand-ink:#ffffff;--accent:#d4a457;--you:#23302a;--ok:#5fbf86;--no:#e08a74;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  min-height:100vh;display:flex;flex-direction:column;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+a{color:inherit}
+.wrap{width:100%;max-width:640px;margin:0 auto;padding:0 16px}
+header{background:var(--brand);color:var(--brand-ink);padding:18px 0 16px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.name{font-size:20px;font-weight:700;letter-spacing:.2px;margin:0}
+.sub{font-size:13px;opacity:.85;margin:2px 0 0}
+.lang{display:flex;border:1px solid rgba(255,255,255,.4);border-radius:999px;overflow:hidden;flex:none}
+.lang button{background:none;border:0;color:inherit;font:600 13px/1 inherit;padding:8px 12px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--brand-ink);color:var(--brand)}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:14px;
+  background:rgba(255,255,255,.12);padding:6px 12px;border-radius:999px}
+.dot{width:9px;height:9px;border-radius:50%;background:#9fd8b4}
+.dot.closed{background:#f0a48f}
+main{flex:1;padding:16px 0}
+.chat{display:flex;flex-direction:column;gap:12px}
+.msg{max-width:92%;padding:12px 14px;border-radius:16px;word-wrap:break-word}
+.bot{background:var(--card);border:1px solid var(--line);align-self:flex-start;border-top-left-radius:6px}
+.you{background:var(--you);align-self:flex-end;border-top-right-radius:6px}
+.msg p{margin:0 0 8px}.msg p:last-child{margin:0}
+.msg ul{margin:4px 0 8px;padding-left:20px}
+.plan{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0}
+.plan b{font-size:16px}
+.plan .meta{color:var(--muted);font-size:14px}
+.price{font-weight:700;font-size:17px}
+.fee{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
+.tag{display:inline-block;background:var(--accent);color:#1d1606;font-weight:700;font-size:13px;padding:3px 9px;border-radius:999px;margin-bottom:6px}
+.callinline{display:inline-block;margin-top:6px;font-weight:700;text-decoration:none;color:var(--brand);border:1.5px solid var(--brand);padding:7px 12px;border-radius:10px}
+:root[data-theme="dark"] .callinline{color:var(--ink);border-color:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .callinline{color:var(--ink);border-color:var(--ink)}}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 2px;margin:12px 0 0;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:999px;
+  padding:9px 14px;font:500 14px/1 inherit;cursor:pointer}
+form{display:flex;gap:8px;margin-top:10px}
+input{flex:1;min-width:0;font:16px/1.3 inherit;padding:13px 14px;border-radius:12px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink)}
+input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.send{background:var(--brand);color:var(--brand-ink);border:0;border-radius:12px;padding:0 18px;font:700 15px/1 inherit;cursor:pointer}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);
+  padding:10px 0 calc(10px + env(safe-area-inset-bottom));z-index:5}
+.bar .wrap{display:flex;gap:10px;align-items:center}
+.call{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--brand);color:var(--brand-ink);
+  text-decoration:none;font-weight:700;font-size:17px;padding:14px;border-radius:14px}
+.call svg{width:20px;height:20px}
+.bar small{display:block;color:var(--muted);font-size:12px;text-align:center;margin-top:4px}
+footer{color:var(--muted);font-size:12.5px;padding:8px 0 16px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1 class="name">Village of Chandler</h1>
+        <p class="sub" id="sub">Home Finder · 6075 S. Gilbert Rd, Chandler, AZ</p>
+      </div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+    <div class="status" id="status" aria-live="polite"><span class="dot" id="dot"></span><span id="statusText"></span></div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="chat" id="chat" aria-live="polite"></div>
+    <div class="chips" id="chips"></div>
+    <form id="ask" autocomplete="off">
+      <label for="q" class="sr" style="position:absolute;left:-9999px" id="qlabel">Ask a question</label>
+      <input id="q" name="q" type="text" enterkeyhint="send" placeholder="Ask anything, in English or Spanish">
+      <button class="send" type="submit" id="sendBtn">Ask</button>
+    </form>
+    <footer id="foot"></footer>
+  </div>
+</main>
+
+<div class="bar">
+  <div class="wrap" style="display:block">
+    <a class="call" id="callBtn" href="tel:+18447874417">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span id="callLabel">Call (844) 787-4417</span>
+    </a>
+    <small id="callSub"></small>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var P = {
+  phone: "(844) 787-4417", tel: "+18447874417",
+  office: "(480) 366-4682",
+  address: "6075 S. Gilbert Rd, Chandler, AZ 85249",
+  plans: [
+    {name:"Marcos",   beds:1, baths:1, sqft:679,  from:1814},
+    {name:"SanTan",   beds:2, baths:2, sqft:996,  from:2249},
+    {name:"Ocotillo", beds:3, baths:3, sqft:1350, from:2639}
+  ],
+  pets: {max:2, rent:45, fee:300, deposit:200},
+  fees: {app:60, admin:250, deposit:1000, garage:175, utilityAdmin:6},
+  // Office: Monday to Friday, 9:00 to 18:00, closed 12:30 to 13:30. Closed every Saturday and Sunday.
+  open: 9*60, close: 18*60, lunchFrom: 12*60+30, lunchTo: 13*60+30,
+  closedDates: {"2026-11-26":"thanksgiving","2026-12-25":"christmas"},
+  earlyDates: {"2026-12-24":"christmasEve","2026-12-31":"newYearsEve"}
+};
+
+var T = {
+  en: {
+    sub: "Home Finder · 6075 S. Gilbert Rd, Chandler, AZ",
+    placeholder: "Ask anything, in English or Spanish",
+    ask: "Ask", qlabel: "Ask a question",
+    call: "Call " + P.phone,
+    callSub: "Leasing office: Monday to Friday, 9 AM to 6 PM",
+    foot: "Prices, availability and specials change often and are confirmed by the leasing office. Additional fees may apply.",
+    fee: "Additional fees may apply.",
+    openNow: "Office open now, until ",
+    lunch: "Office at lunch, back at 1:30 PM",
+    closedUntil: "Office closed, opens ",
+    chips: ["Floor plans and prices","Current special","Pet policy","Office hours","Book a tour","Move-in fees","Parking"],
+    welcome: "<p>Hi! I can answer questions about Village of Chandler: floor plans, prices, the current special, pets, fees and office hours.</p><p>Ask in English or Spanish. Puede preguntar en español.</p>",
+    days: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    months: ["January","February","March","April","May","June","July","August","September","October","November","December"],
+    today: "today", tomorrow: "tomorrow"
+  },
+  es: {
+    sub: "Buscador de hogar · 6075 S. Gilbert Rd, Chandler, AZ",
+    placeholder: "Pregunte lo que quiera, en español o inglés",
+    ask: "Enviar", qlabel: "Haga una pregunta",
+    call: "Llamar " + P.phone,
+    callSub: "Oficina de arrendamiento: lunes a viernes, 9 a.m. a 6 p.m.",
+    foot: "Los precios, la disponibilidad y las promociones cambian con frecuencia y los confirma la oficina de arrendamiento. Pueden aplicarse cargos adicionales.",
+    fee: "Pueden aplicarse cargos adicionales (additional fees may apply).",
+    openNow: "Oficina abierta ahora, hasta las ",
+    lunch: "Oficina en hora de comida, regresa a la 1:30 p.m.",
+    closedUntil: "Oficina cerrada, abre ",
+    chips: ["Planos y precios","Promoción actual","Mascotas","Horario de oficina","Agendar una visita","Costos de mudanza","Estacionamiento"],
+    welcome: "<p>¡Hola! Puedo responder preguntas sobre Village of Chandler: planos, precios, la promoción actual, mascotas, costos y horario de oficina.</p><p>Pregunte en español o en inglés. You can ask in English too.</p>",
+    days: ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],
+    months: ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],
+    today: "hoy", tomorrow: "mañana"
+  }
+};
+
+var lang = "en";
+
+/* ---------- time in Chandler (Arizona does not observe daylight saving) ---------- */
+function nowAZ(){
+  var d = new Date(Date.now() - 7*3600*1000);
+  return {y:d.getUTCFullYear(), m:d.getUTCMonth(), d:d.getUTCDate(), dow:d.getUTCDay(), min:d.getUTCHours()*60+d.getUTCMinutes()};
+}
+function key(y,m,d){ return y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0"); }
+function isOfficeDay(y,m,d){
+  var dow = new Date(Date.UTC(y,m,d)).getUTCDay();
+  return dow !== 0 && dow !== 6 && !P.closedDates[key(y,m,d)];
+}
+function addDays(o,n){
+  var d = new Date(Date.UTC(o.y,o.m,o.d+n));
+  return {y:d.getUTCFullYear(), m:d.getUTCMonth(), d:d.getUTCDate(), dow:d.getUTCDay()};
+}
+// Next office days (weekdays only, never Saturday or Sunday)
+function nextOfficeDays(n, includeToday){
+  var t = nowAZ(), out = [], i = includeToday ? 0 : 1;
+  while(out.length < n && i < 30){
+    var c = addDays(t,i);
+    if(isOfficeDay(c.y,c.m,c.d)){
+      if(!(i === 0 && t.min >= P.close - 30)) out.push({o:c, offset:i});
+    }
+    i++;
+  }
+  return out;
+}
+function dayLabel(x){
+  var L = T[lang];
+  var base = L.days[x.o.dow] + ", " + (lang==="en" ? L.months[x.o.m]+" "+x.o.d : x.o.d+" de "+L.months[x.o.m]);
+  if(x.offset === 0) return L.today + " (" + base + ")";
+  if(x.offset === 1) return L.tomorrow + " (" + base + ")";
+  return base;
+}
+function officeStatus(){
+  var t = nowAZ(), L = T[lang];
+  var openDay = isOfficeDay(t.y,t.m,t.d);
+  var close = P.earlyDates[key(t.y,t.m,t.d)] ? null : P.close;
+  if(openDay && t.min >= P.open && t.min < P.close){
+    if(t.min >= P.lunchFrom && t.min < P.lunchTo) return {open:false, text:L.lunch};
+    if(close === null) return {open:true, text: lang==="en" ? "Office open now, closing early today" : "Oficina abierta ahora, cierra temprano hoy"};
+    return {open:true, text:L.openNow + (lang==="en" ? "6 PM" : "6 p.m.")};
+  }
+  var next = nextOfficeDays(1, t.min < P.open)[0];
+  return {open:false, text:L.closedUntil + dayLabel(next) + (lang==="en" ? " at 9 AM" : " a las 9 a.m.")};
+}
+
+/* ---------- formatting ---------- */
+function money(n){ return "$" + n.toLocaleString("en-US"); }
+function feeLine(){ return '<span class="fee">' + T[lang].fee + '</span>'; }
+function callLink(){
+  return '<a class="callinline" href="tel:'+P.tel+'">' + (lang==="en" ? "Call " : "Llamar ") + P.phone + '</a>';
+}
+function bedWord(n){
+  if(lang==="en") return n + (n===1 ? " bedroom" : " bedrooms");
+  return n + (n===1 ? " recámara" : " recámaras");
+}
+function bathWord(n){
+  if(lang==="en") return n + (n===1 ? " bath" : " baths");
+  return n + (n===1 ? " baño" : " baños");
+}
+function planCard(p){
+  var per = lang==="en" ? "/mo" : "/mes";
+  var from = lang==="en" ? "From " : "Desde ";
+  var sq = p.sqft.toLocaleString("en-US") + (lang==="en" ? " sq ft" : " pies²");
+  return '<div class="plan"><b>'+p.name+'</b><div class="meta">'+bedWord(p.beds)+' · '+bathWord(p.baths)+' · '+sq+'</div>'+
+    '<div class="price">'+from+money(p.from)+per+feeLine()+'</div></div>';
+}
+
+/* ---------- understanding the question ---------- */
+function norm(s){
+  return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9$ ]/g," ").replace(/\s+/g," ").trim();
+}
+var ES_WORDS = /\b(hola|cuanto|cuantos|cuesta|precio|precios|renta|rentas|alquiler|mascota|mascotas|perro|perros|gato|gatos|horario|horarios|abierto|abren|abre|cierra|cerrado|recamara|recamaras|habitacion|habitaciones|dormitorio|dormitorios|cuarto|cuartos|oferta|ofertas|promocion|promociones|especial|especiales|descuento|gratis|semanas|visita|visitar|recorrido|cita|sabado|domingo|fin de semana|tienen|hay|quiero|puedo|donde|telefono|llamar|estacionamiento|cochera|garaje|lavadora|secadora|deposito|solicitud|cargos|cuota|cuotas|contrato|meses|planos|plano|tamano|disponible|disponibles|departamento|departamentos|apartamento|apartamentos|por favor|gracias|buenos|buenas|que|cual|cuales|como|para|con|los|las|una|uno|dos|tres|el|la|de|en|es|y)\b/g;
+var EN_WORDS = /\b(the|is|are|do|does|you|your|what|how|much|price|prices|rent|pet|pets|dog|dogs|cat|cats|hours|open|bedroom|bedrooms|bed|beds|special|specials|deal|tour|visit|weekend|saturday|sunday|can|have|any|when|where|fee|fees|parking|garage|lease|i|a|an|and|for|with|of|to|in|on)\b/g;
+function detectLang(raw){
+  if(/[ñ¿¡]/i.test(raw)) return "es";
+  var n = norm(raw);
+  var es = (n.match(ES_WORDS)||[]).length + (/[áéíóú]/i.test(raw) ? 2 : 0);
+  var en = (n.match(EN_WORDS)||[]).length;
+  if(es === en) return lang;
+  return es > en ? "es" : "en";
+}
+
+var INTENTS = {
+  greet:   /\b(hi|hello|hey|hola|buenas|buenos dias|buenas tardes|good morning|good afternoon)\b/,
+  thanks:  /\b(thanks|thank you|thx|gracias)\b/,
+  plans:   /\b(floor ?plans?|plans?|layouts?|bed|beds|bedrooms?|br|bd|studio|studios|estudio|size|sizes|sq|square|feet|ft|marcos|santan|san tan|ocotillo|units?|apartments?|availab\w*|planos?|recamaras?|habitacion\w*|dormitorios?|cuartos?|tamano\w*|pies|disponib\w*|departamentos?|apartamentos?|townhomes?|[123] ?(bed|br|bd|rec|hab|dorm))\b/,
+  price:   /(\$|\b(price|prices|pricing|rent|rents|cost|costs|how much|cheap\w*|cheapest|afford\w*|budget|expensive|precio\w*|renta\w*|cuesta\w*|cuanto\w*|costo\w*|alquiler\w*|barato\w*|economic\w*|presupuesto)\b)/,
+  special: /\b(special|specials|deal|deals|promo\w*|discount\w*|free|weeks? free|concession\w*|offer\w*|incentive\w*|move in special|oferta\w*|promocion\w*|descuento\w*|gratis|semanas|especial\w*)\b/,
+  pets:    /\b(pets?|dogs?|cats?|pupp\w*|kitt\w*|breed\w*|animal\w*|pit ?bulls?|rottweil\w*|weight|dog park|mascotas?|perros?|perritos?|gatos?|raza\w*|peso|parque para perros)\b/,
+  hours:   /\b(hours?|open|opens|close|closes|closed|when|time|today|now|lunch|holiday\w*|thanksgiving|christmas|new year\w*|horarios?|hora|horas|abierto|abre|abren|cierra|cierran|cerrado|hoy|ahora|almuerzo|comida|feriados?|navidad|accion de gracias)\b/,
+  tour:    /\b(tour\w*|visit\w*|see the|see it|show\w*|appointment\w*|schedule\w*|book\w*|come by|stop by|walk ?through|weekend\w*|saturday\w*|sunday\w*|sat|sun|visita\w*|recorrido\w*|cita\w*|agendar|ver el|ver los|ver un|conocer|sabado\w*|domingo\w*|fin de semana)\b/,
+  fees:    /\b(fees?|deposit\w*|application\w*|apply|admin\w*|move in cost\w*|move in|utilit\w*|electric\w*|power|water|bills?|cargos?|cuotas?|deposito\w*|solicitud\w*|aplicacion|administra\w*|servicios|luz|electricidad|agua|mudanza)\b/,
+  parking: /\b(parking|garages?|car|cars|covered|carport\w*|estacionamiento\w*|cochera\w*|garajes?|carro\w*|auto\w*|techado)\b/,
+  laundry: /\b(washer\w*|dryer\w*|laundry|w ?d|ceilings?|amenit\w*|features?|lavadora\w*|secadora\w*|lavanderia|techos?|amenidad\w*)\b/,
+  lease:   /\b(lease terms?|lease length|terms?|how many months|short term|month to month|how long|contrato\w*|plazo\w*|meses|corto plazo)\b/,
+  contact: /\b(phone|call|number|contact|address|where|location|located|directions|email|telefono|llamar|numero|contacto|direccion|donde|ubicacion|ubicad\w*)\b/,
+  compare: /\b(compare\w*|comparison|vs|versus|better than|other (apartments|properties|communities|places)|competitor\w*|nearby (apartments|complexes)|comparar|mejor que|otros? (apartamentos|departamentos|lugares|complejos))\b/
+};
+var WEEKEND = /\b(weekend\w*|saturday\w*|sunday\w*|sat|sun|fin de semana|fines de semana|sabado\w*|domingo\w*)\b/;
+
+function bedsAsked(n){
+  var m = n.match(/\b(1|one|uno|una|2|two|dos|3|three|tres|4|four|cuatro)\s*(bed|beds|bedroom|bedrooms|br|bd|bdr|rec|recamara|recamaras|habitacion|habitaciones|dormitorio|dormitorios|cuarto|cuartos)\b/);
+  if(!m) return 0;
+  return {"1":1,one:1,uno:1,una:1,"2":2,two:2,dos:2,"3":3,three:3,tres:3,"4":4,four:4,cuatro:4}[m[1]];
+}
+
+/* ---------- answers ---------- */
+var A = {
+  plans: function(n){
+    var b = bedsAsked(n), list = P.plans, out = "";
+    if(/\b(studio|studios|estudio|estudios)\b/.test(n)){
+      out += lang==="en" ? "<p>There are no studios. The smallest home is the Marcos one bedroom.</p>"
+                         : "<p>No hay estudios. El hogar más pequeño es Marcos, de una recámara.</p>";
+      list = [P.plans[0]];
+    } else if(b === 4){
+      out += lang==="en" ? "<p>The largest home is three bedrooms. There are no four bedroom homes.</p>"
+                         : "<p>El hogar más grande tiene tres recámaras. No hay hogares de cuatro recámaras.</p>";
+      list = [P.plans[2]];
+    } else if(b){
+      list = P.plans.filter(function(p){ return p.beds === b; });
+    } else {
+      out += lang==="en" ? "<p>Three floor plans, each with an in-home washer and dryer:</p>"
+                         : "<p>Tres planos, todos con lavadora y secadora dentro del hogar:</p>";
+    }
+    out += list.map(planCard).join("");
+    if(/\b(cheap\w*|lowest|least|barato\w*|economic\w*)\b/.test(n) && !b){
+      out = (lang==="en" ? "<p>The lowest starting price is the Marcos one bedroom.</p>" : "<p>El precio inicial más bajo es Marcos, de una recámara.</p>") + planCard(P.plans[0]);
+    }
+    out += lang==="en" ? "<p>Prices and availability change often. Call to hear what is open today.</p>"
+                       : "<p>Los precios y la disponibilidad cambian con frecuencia. Llame para saber qué hay disponible hoy.</p>";
+    return out;
+  },
+  special: function(){
+    return lang==="en"
+      ? '<span class="tag">Up to 9 weeks free</span><p>Limited time, on select homes, for new residents. Ask the leasing office which homes qualify and for the full details.</p>'
+      : '<span class="tag">Hasta 9 semanas gratis</span><p>Por tiempo limitado, en hogares seleccionados, para nuevos residentes. Pregunte en la oficina qué hogares califican y todos los detalles.</p>';
+  },
+  pets: function(){
+    var f = P.pets;
+    return lang==="en"
+      ? "<p>Yes, it is a pet friendly community with an on-site dog park.</p><ul>"+
+        "<li>Up to "+f.max+" pets per home</li>"+
+        "<li>Pet rent: "+money(f.rent)+" per pet, per month"+feeLine()+"</li>"+
+        "<li>One-time pet fee: "+money(f.fee)+" per pet, non-refundable"+feeLine()+"</li>"+
+        "<li>Pet deposit: "+money(f.deposit)+" per pet, refundable"+feeLine()+"</li>"+
+        "<li>No weight limits</li><li>Pit bulls and Rottweilers are not allowed</li></ul>"
+      : "<p>Sí, es una comunidad que acepta mascotas y tiene un parque para perros.</p><ul>"+
+        "<li>Hasta "+f.max+" mascotas por hogar</li>"+
+        "<li>Renta de mascota: "+money(f.rent)+" por mascota, al mes"+feeLine()+"</li>"+
+        "<li>Cargo único por mascota: "+money(f.fee)+" por mascota, no reembolsable"+feeLine()+"</li>"+
+        "<li>Depósito por mascota: "+money(f.deposit)+" por mascota, reembolsable"+feeLine()+"</li>"+
+        "<li>Sin límite de peso</li><li>No se permiten pit bulls ni rottweilers</li></ul>";
+  },
+  hours: function(n){
+    var s = officeStatus(), out;
+    out = lang==="en"
+      ? "<p><b>Leasing office hours</b><br>Monday to Friday, 9 AM to 6 PM<br>Closed for lunch 12:30 to 1:30 PM<br>Closed Saturday and Sunday</p>"
+      : "<p><b>Horario de la oficina</b><br>Lunes a viernes, 9 a.m. a 6 p.m.<br>Cerrado para comer de 12:30 a 1:30 p.m.<br>Cerrado sábado y domingo</p>";
+    out += "<p>" + s.text + ".</p>";
+    if(/\b(holiday\w*|thanksgiving|christmas|new year\w*|feriados?|navidad|accion de gracias|ano nuevo)\b/.test(n)){
+      out += lang==="en"
+        ? "<p>Holiday hours: closed Thanksgiving (November 26) and Christmas Day (December 25). Closes early on Christmas Eve and New Year's Eve.</p>"
+        : "<p>Días festivos: cerrado el Día de Acción de Gracias (26 de noviembre) y Navidad (25 de diciembre). Cierra temprano el 24 y el 31 de diciembre.</p>";
+    }
+    return out;
+  },
+  tour: function(n){
+    var days = nextOfficeDays(3, true).map(dayLabel), out = "";
+    if(WEEKEND.test(n)){
+      out += lang==="en"
+        ? "<p>The leasing office is closed on weekends, so tours are not available on Saturday or Sunday.</p>"
+        : "<p>La oficina está cerrada los fines de semana, así que no hay visitas en sábado ni domingo.</p>";
+    }
+    out += lang==="en"
+      ? "<p>Tours are Monday to Friday, 9 AM to 6 PM (the office closes for lunch 12:30 to 1:30 PM). The next open days are:</p>"
+      : "<p>Las visitas son de lunes a viernes, de 9 a.m. a 6 p.m. (la oficina cierra para comer de 12:30 a 1:30 p.m.). Los próximos días disponibles son:</p>";
+    out += "<ul><li>" + days.join("</li><li>") + "</li></ul>";
+    out += lang==="en" ? "<p>Call to book a time.</p>" : "<p>Llame para agendar su hora.</p>";
+    return out;
+  },
+  fees: function(n){
+    var f = P.fees, out;
+    out = lang==="en"
+      ? "<ul><li>Application fee: "+money(f.app)+" per applicant"+feeLine()+"</li>"+
+        "<li>Administrative fee: "+money(f.admin)+", one time"+feeLine()+"</li>"+
+        "<li>Security deposit: "+money(f.deposit)+", refundable, on approved credit"+feeLine()+"</li>"+
+        "<li>Utility billing fee: "+money(f.utilityAdmin)+" per month"+feeLine()+"</li></ul>"+
+        "<p>Utilities are not included in rent. Residents set up electric service with SRP.</p>"
+      : "<ul><li>Cargo de solicitud: "+money(f.app)+" por solicitante"+feeLine()+"</li>"+
+        "<li>Cargo administrativo: "+money(f.admin)+", un solo pago"+feeLine()+"</li>"+
+        "<li>Depósito de seguridad: "+money(f.deposit)+", reembolsable, sujeto a aprobación de crédito"+feeLine()+"</li>"+
+        "<li>Cargo de facturación de servicios: "+money(f.utilityAdmin)+" al mes"+feeLine()+"</li></ul>"+
+        "<p>Los servicios no están incluidos en la renta. Los residentes contratan la electricidad con SRP.</p>";
+    return out;
+  },
+  parking: function(){
+    var g = P.fees.garage;
+    return lang==="en"
+      ? "<p>Parking options include assigned covered spaces, open uncovered spaces and detached garages.</p><ul><li>Garage rent: "+money(g)+" per month"+feeLine()+"</li></ul>"
+      : "<p>Hay estacionamiento techado asignado, estacionamiento abierto y cocheras independientes.</p><ul><li>Renta de cochera: "+money(g)+" al mes"+feeLine()+"</li></ul>";
+  },
+  laundry: function(){
+    return lang==="en"
+      ? "<p>Every home has an in-home washer and dryer. The community has a dog park, assigned covered parking and detached garages.</p>"
+      : "<p>Todos los hogares tienen lavadora y secadora. La comunidad tiene parque para perros, estacionamiento techado asignado y cocheras independientes.</p>";
+  },
+  lease: function(){
+    return lang==="en"
+      ? "<p>Lease terms from 3 to 13 months, when available. Ask the leasing office which terms are open for the home you like.</p>"
+      : "<p>Contratos de 3 a 13 meses, según disponibilidad. Pregunte en la oficina qué plazos hay para el hogar que le interesa.</p>";
+  },
+  contact: function(){
+    return lang==="en"
+      ? "<p><b>Village of Chandler</b><br>"+P.address+"<br>Leasing: "+P.phone+"<br>Office: "+P.office+"</p><p>The office is open Monday to Friday, 9 AM to 6 PM, and closed on weekends.</p>"
+      : "<p><b>Village of Chandler</b><br>"+P.address+"<br>Arrendamiento: "+P.phone+"<br>Oficina: "+P.office+"</p><p>La oficina abre de lunes a viernes, de 9 a.m. a 6 p.m., y cierra los fines de semana.</p>";
+  },
+  compare: function(){
+    return lang==="en"
+      ? "<p>I can only speak to Village of Chandler. Ask me about floor plans, prices, the current special, pets or office hours here.</p>"
+      : "<p>Solo puedo hablar de Village of Chandler. Pregúnteme sobre planos, precios, la promoción actual, mascotas u horario de oficina.</p>";
+  },
+  greet: function(){
+    return lang==="en"
+      ? "<p>Hi! What would you like to know? Floor plans, prices, the current special, pets and office hours are all here.</p>"
+      : "<p>¡Hola! ¿Qué le gustaría saber? Tengo planos, precios, la promoción actual, mascotas y horario de oficina.</p>";
+  },
+  thanks: function(){
+    return lang==="en" ? "<p>You're welcome! Anything else?</p>" : "<p>¡Con gusto! ¿Algo más?</p>";
+  },
+  unknown: function(){
+    return lang==="en"
+      ? "<p>I don't have that detail. The leasing team can help, Monday to Friday, 9 AM to 6 PM.</p><p>You can also ask me about floor plans, prices, the current special, pets, fees, parking or office hours.</p>"
+      : "<p>No tengo ese dato. El equipo de arrendamiento le puede ayudar de lunes a viernes, de 9 a.m. a 6 p.m.</p><p>También puede preguntarme sobre planos, precios, la promoción actual, mascotas, costos, estacionamiento u horario de oficina.</p>";
+  }
+};
+
+var ORDER = ["compare","plans","special","pets","tour","hours","fees","parking","laundry","lease","contact"];
+
+function answer(raw){
+  var n = norm(raw), hits = [];
+  ORDER.forEach(function(k){ if(INTENTS[k].test(n)) hits.push(k); });
+  if(INTENTS.price.test(n) && hits.indexOf("plans") < 0 && hits.indexOf("pets") < 0 && hits.indexOf("fees") < 0 && hits.indexOf("parking") < 0) hits.unshift("plans");
+  if(bedsAsked(n) && hits.indexOf("plans") < 0) hits.unshift("plans");
+  if(WEEKEND.test(n) && hits.indexOf("tour") < 0) hits.push("tour");
+  if(hits.indexOf("tour") >= 0) hits = hits.filter(function(k){ return k !== "hours"; });
+  if(hits.indexOf("compare") >= 0) hits = ["compare"];
+  // Contact words like "where" or "call" ride along with other questions; only answer contact alone
+  if(hits.length > 1) hits = hits.filter(function(k){ return k !== "contact"; });
+  if(!hits.length){
+    if(INTENTS.thanks.test(n)) hits = ["thanks"];
+    else if(INTENTS.greet.test(n)) hits = ["greet"];
+    else hits = ["unknown"];
+  }
+  var html = hits.slice(0,3).map(function(k){ return A[k](n); }).join("");
+  return html + callLink();
+}
+
+/* ---------- UI ---------- */
+var chat = document.getElementById("chat");
+function add(html, who){
+  var d = document.createElement("div");
+  d.className = "msg " + who;
+  if(who === "you") d.textContent = html; else d.innerHTML = html;
+  chat.appendChild(d);
+  d.scrollIntoView({behavior:"smooth", block:"start"});
+}
+function setLang(l){
+  lang = l;
+  document.documentElement.lang = l;
+  var L = T[l];
+  document.querySelectorAll(".lang button").forEach(function(b){ b.setAttribute("aria-pressed", String(b.dataset.lang === l)); });
+  document.getElementById("sub").textContent = L.sub;
+  document.getElementById("q").placeholder = L.placeholder;
+  document.getElementById("qlabel").textContent = L.qlabel;
+  document.getElementById("sendBtn").textContent = L.ask;
+  document.getElementById("callLabel").textContent = L.call;
+  document.getElementById("callSub").textContent = L.callSub;
+  document.getElementById("foot").textContent = L.foot;
+  var chips = document.getElementById("chips");
+  chips.innerHTML = "";
+  L.chips.forEach(function(c){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.textContent = c;
+    b.addEventListener("click", function(){ ask(c); });
+    chips.appendChild(b);
+  });
+  renderStatus();
+}
+function renderStatus(){
+  var s = officeStatus();
+  document.getElementById("statusText").textContent = s.text;
+  document.getElementById("dot").className = "dot" + (s.open ? "" : " closed");
+}
+function ask(q){
+  q = q.trim();
+  if(!q) return;
+  var l = detectLang(q);
+  if(l !== lang) setLang(l);
+  add(q, "you");
+  add(answer(q), "bot");
+}
+document.querySelectorAll(".lang button").forEach(function(b){
+  b.addEventListener("click", function(){ setLang(b.dataset.lang); });
+});
+document.getElementById("ask").addEventListener("submit", function(e){
+  e.preventDefault();
+  var i = document.getElementById("q");
+  ask(i.value); i.value = "";
+});
+
+var start = (navigator.language || "en").toLowerCase().indexOf("es") === 0 ? "es" : "en";
+setLang(start);
+add(T[lang].welcome, "bot");
+setInterval(renderStatus, 60000);
+})();
+</script>
+</body>
+</html>
