@@ -32,7 +32,7 @@ PROPERTIES = [
 ]
 
 OWN = {
-    'village': ['Village of Chandler'], 'coya': ['Coya'], 'fora': ['Fora'], 'lura': ['Lura'],
+    'village': ['Village of Chandler'], 'home-finder-voc': ['Village of Chandler'], 'coya': ['Coya'], 'fora': ['Fora'], 'lura': ['Lura'],
     'montage': ['Montage'], 'stillwater': ['Stillwater'], 'haven': ['Haven'],
     'pillar-lago': ['Pillar Lago'], 'soren': ['Soren'], 'circa-on-central': ['Circa on Central'],
     'elevation-santan': ['Elevation SanTan'], '2nd-and-john': ['2nd and John'],
