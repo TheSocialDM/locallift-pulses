@@ -1,104 +1,173 @@
 {
-  "name": "The Market Signal, Signal Ledger",
-  "rules": "Every published or held finding gets an entry. Figures are recorded exactly as the source states them. Interpretations carry a confidence level (High, Medium, Low) and at least one checkpoint with an indicator, expected date, date status and owner. At each checkpoint the outcome is recorded as Confirmed, Partly confirmed, Not confirmed or Too early, with the evidence. Entries are never edited silently: every change is appended to the revision trail with a timestamp, author and reason.",
-  "entries": [
+ "name": "The Market Signal, Signal Ledger",
+ "rules": "Every published or held finding gets an entry. Figures are recorded exactly as the source states them. Interpretations carry a confidence level (High, Medium, Low) and at least one checkpoint with an indicator, expected date, date status and owner. At each checkpoint the outcome is recorded as Confirmed, Partly confirmed, Not confirmed or Too early, with the evidence. Entries are never edited silently: every change is appended to the revision trail with a timestamp, author and reason.",
+ "entries": [
+  {
+   "id": "MS-001",
+   "edition": "No. 01",
+   "status": "Draft, awaiting Michael's approval",
+   "logged": "2026-10-25",
+   "finding": "U.S. apartment completions through Q3 2026 were about 231,000 units, 27% fewer than the same period of 2025. Q3 delivered a little over 82,000 units, the smallest third quarter since 2019.",
+   "source": "RealPage Analytics, U.S. Apartment Supply Update 3rd Quarter 2026, Oct 22, 2026",
+   "url": "https://www.realpage.com/analytics/us-apartment-supply-3rd-quarter-2026/",
+   "verification": "Verified on the publisher's page by Q and again by an independent fact checker, Oct 25, 2026",
+   "local_evidence": "Phoenix was among the five metros RealPage named for the most new deliveries in Q3 2026, each above 3,000 units, alongside Dallas, Houston, Austin and Atlanta. Partial: no verified public Phoenix rent, occupancy or concession figure.",
+   "interpretation": "National supply relief is real, but Phoenix is likely to feel it later than the national figure suggests.",
+   "confidence": "Medium",
+   "confidence_reason": "One quarter of completion counts only; no verified local demand, rent or concession data.",
+   "checkpoints": [
     {
-      "id": "MS-001",
-      "edition": "No. 01",
-      "status": "Draft, awaiting Michael's approval",
-      "logged": "2026-10-25",
-      "finding": "U.S. apartment completions through Q3 2026 were about 231,000 units, 27% fewer than the same period of 2025. Q3 delivered a little over 82,000 units, the smallest third quarter since 2019.",
-      "source": "RealPage Analytics, U.S. Apartment Supply Update 3rd Quarter 2026, Oct 22, 2026",
-      "url": "https://www.realpage.com/analytics/us-apartment-supply-3rd-quarter-2026/",
-      "verification": "Verified on the publisher's page by Q and again by an independent fact checker, Oct 25, 2026",
-      "local_evidence": "Phoenix was among the five metros RealPage named for the most new deliveries in Q3 2026, each above 3,000 units, alongside Dallas, Houston, Austin and Atlanta. Partial: no verified public Phoenix rent, occupancy or concession figure.",
-      "interpretation": "National supply relief is real, but Phoenix is likely to feel it later than the national figure suggests.",
-      "confidence": "Medium",
-      "confidence_reason": "One quarter of completion counts only; no verified local demand, rent or concession data.",
-      "checkpoints": [
-        {
-          "indicator": "Census national rental vacancy rate, Q3 2026",
-          "date": "2026-10-28",
-          "date_status": "Confirmed on Census release schedule",
-          "owner": "Q research desk logs; Michael reviews",
-          "outcome": "Pending"
-        },
-        {
-          "indicator": "Apartment List national vacancy index, October 2026 (7.0% in September)",
-          "date": "2026-10-30 to 2026-11-02",
-          "date_status": "Estimated",
-          "owner": "Q research desk",
-          "outcome": "Pending"
-        },
-        {
-          "indicator": "RealPage Q4 2026 supply update: Phoenix still among 3,000+ completion metros?",
-          "date": "Late January 2027",
-          "date_status": "Estimated",
-          "owner": "Q research desk",
-          "outcome": "Pending"
-        }
-      ],
-      "outcome": "Pending",
-      "revisions": [
-        {
-          "at": "2026-10-25 05:40 MST",
-          "by": "Q (builder)",
-          "change": "First draft. Lead from RealPage; Census permits and BLS rent as secondary findings."
-        },
-        {
-          "at": "2026-10-25 05:47 MST",
-          "by": "Independent fact checker",
-          "change": "All figures matched sources. South share clarified as Q3 only; 2026 bar relabeled Q1 to Q3; Yardi date changed to accessed date; forecasts hedged."
-        },
-        {
-          "at": "2026-10-25 05:47 MST",
-          "by": "Independent editor",
-          "change": "Interpretations softened from statements to possibilities; caption overclaims and tense fixed; Pillar hook marked as national."
-        },
-        {
-          "at": "2026-10-25 05:55 MST",
-          "by": "Q, after Michael's question",
-          "change": "Melanie caption: South line removed (RealPage counts Arizona in the West); replaced with verified Phoenix line."
-        },
-        {
-          "at": "2026-10-25 06:20 MST",
-          "by": "Q, on Michael's direction",
-          "change": "Rebuilt on four sections. Edition reduced to one finding. Local Reality marked Partial with stated limitation. Interpretation and confidence logged. Operator Decision now warns that national slowdown alone does not justify cutting concessions."
-        },
-        {
-          "at": "2026-10-25 06:35 MST",
-          "by": "Independent editor and fact checker",
-          "change": "Phoenix wording aligned to RealPage's text (named markets, not an exhaustive list); Q3 quarter over quarter rise disclosed; monthly headline corrected from 'falling fast'; internal owner names removed from public formats; Seattle line removed; caption overclaims softened."
-        }
-      ]
+     "indicator": "Census national rental vacancy rate, Q3 2026",
+     "date": "2026-10-28",
+     "date_status": "Confirmed on Census release schedule",
+     "owner": "Q research desk logs; Michael reviews",
+     "outcome": "Not confirmed",
+     "figure": "Census U.S. rental vacancy 7.6% in Q3 2026, up from 7.3% in Q2 2026 and 7.1% in Q3 2025 (both rises significant at 90%); West 6.7% vs 6.0%.",
+     "evidence": "U.S. Census Bureau, CB26-161, Oct 28, 2026, read on census.gov press release. Slower completions had not yet shown up as lower vacancy."
     },
     {
-      "id": "MS-H01",
-      "edition": "Held, not published",
-      "status": "Held: figures not verifiable at the source",
-      "logged": "2026-10-25",
-      "finding": "NMHC Quarterly Survey of Apartment Market Conditions, October 2026 (released Oct 22, 2026). Secondary coverage reports all four indexes below 50, with Debt Financing sharply lower.",
-      "source": "NMHC (release date confirmed on NMHC's survey index page); figures only in secondary coverage",
-      "verification": "Not verified. NMHC's release page could not be reached; the historical data file could not be read. Secondary sources conflict on the refinancing figure.",
-      "interpretation": "None recorded. Nothing is interpreted until the figures are verified.",
-      "confidence": "n/a",
-      "checkpoints": [
-        {
-          "indicator": "Verify index values on NMHC's own release or data file",
-          "date": "Before Edition 02",
-          "date_status": "Internal deadline",
-          "owner": "Q research desk",
-          "outcome": "Pending"
-        }
-      ],
-      "outcome": "Pending",
-      "revisions": [
-        {
-          "at": "2026-10-25 05:50 MST",
-          "by": "Q",
-          "change": "Held from Edition 01 after two failed attempts to reach NMHC's page."
-        }
-      ]
+     "indicator": "Apartment List national vacancy index, October 2026 (7.0% in September)",
+     "date": "2026-10-30 to 2026-11-02",
+     "date_status": "Estimated",
+     "owner": "Q research desk",
+     "outcome": "Partly confirmed",
+     "figure": "Apartment List national vacancy index 7.0% in October 2026 (7.0% in September; 7.3% February peak).",
+     "evidence": "Apartment List National Rent Report, Headline Market Update November 2026, Oct 28, 2026, read on apartmentlist.com. Below peak, but no further easing in October."
+    },
+    {
+     "indicator": "RealPage Q4 2026 supply update: Phoenix still among 3,000+ completion metros?",
+     "date": "Late January 2027",
+     "date_status": "Estimated",
+     "owner": "Q research desk",
+     "outcome": "Pending"
     }
-  ]
+   ],
+   "outcome": "Pending",
+   "revisions": [
+    {
+     "at": "2026-10-25 05:40 MST",
+     "by": "Q (builder)",
+     "change": "First draft. Lead from RealPage; Census permits and BLS rent as secondary findings."
+    },
+    {
+     "at": "2026-10-25 05:47 MST",
+     "by": "Independent fact checker",
+     "change": "All figures matched sources. South share clarified as Q3 only; 2026 bar relabeled Q1 to Q3; Yardi date changed to accessed date; forecasts hedged."
+    },
+    {
+     "at": "2026-10-25 05:47 MST",
+     "by": "Independent editor",
+     "change": "Interpretations softened from statements to possibilities; caption overclaims and tense fixed; Pillar hook marked as national."
+    },
+    {
+     "at": "2026-10-25 05:55 MST",
+     "by": "Q, after Michael's question",
+     "change": "Melanie caption: South line removed (RealPage counts Arizona in the West); replaced with verified Phoenix line."
+    },
+    {
+     "at": "2026-10-25 06:20 MST",
+     "by": "Q, on Michael's direction",
+     "change": "Rebuilt on four sections. Edition reduced to one finding. Local Reality marked Partial with stated limitation. Interpretation and confidence logged. Operator Decision now warns that national slowdown alone does not justify cutting concessions."
+    },
+    {
+     "at": "2026-10-25 06:35 MST",
+     "by": "Independent editor and fact checker",
+     "change": "Phoenix wording aligned to RealPage's text (named markets, not an exhaustive list); Q3 quarter over quarter rise disclosed; monthly headline corrected from 'falling fast'; internal owner names removed from public formats; Seattle line removed; caption overclaims softened."
+    },
+    {
+     "at": "2026-11-01 07:40 MST",
+     "by": "Q (weekly build No. 02)",
+     "change": "Graded checkpoints 1 (Census Q3: Not confirmed) and 2 (Apartment List October: Partly confirmed). RealPage Q4 checkpoint still pending; overall outcome stays Pending. RealPage page re-read: Phoenix named among markets with the most Q3 deliveries."
+    }
+   ]
+  },
+  {
+   "id": "MS-H01",
+   "edition": "Held, not published",
+   "status": "Held: figures not verifiable at the source",
+   "logged": "2026-10-25",
+   "finding": "NMHC Quarterly Survey of Apartment Market Conditions, October 2026 (released Oct 22, 2026). Secondary coverage reports all four indexes below 50, with Debt Financing sharply lower.",
+   "source": "NMHC (release date confirmed on NMHC's survey index page); figures only in secondary coverage",
+   "verification": "Not verified. NMHC's release page could not be reached; the historical data file could not be read. Secondary sources conflict on the refinancing figure.",
+   "interpretation": "None recorded. Nothing is interpreted until the figures are verified.",
+   "confidence": "n/a",
+   "checkpoints": [
+    {
+     "indicator": "Verify index values on NMHC's own release or data file",
+     "date": "Before Edition 02",
+     "date_status": "Internal deadline",
+     "owner": "Q research desk",
+     "outcome": "Pending"
+    }
+   ],
+   "outcome": "Pending",
+   "revisions": [
+    {
+     "at": "2026-10-25 05:50 MST",
+     "by": "Q",
+     "change": "Held from Edition 01 after two failed attempts to reach NMHC's page."
+    },
+    {
+     "at": "2026-11-01 07:40 MST",
+     "by": "Q (weekly build No. 02)",
+     "change": "Retried. NMHC's survey index lists the October 2026 survey dated 10/22/2026, but the report page could not be fetched (permission not granted in the unattended run). Still held; retry next week."
+    }
+   ]
+  },
+  {
+   "id": "MS-002",
+   "edition": "No. 02",
+   "status": "Built Nov 1, 2026; posts queued for Michael's approval (Melanie Nov 3, LocalLift Nov 4, Pillar Nov 5; Michael's post not scheduled, every LinkedIn day through Nov 15 already taken)",
+   "logged": "2026-11-01",
+   "finding": "U.S. rental vacancy was 7.6% in Q3 2026, higher than 7.3% in Q2 2026 and 7.1% in Q3 2025. West region 6.7% vs 6.0% a year earlier (significant). This came while RealPage counted 27% fewer completions through Q3 (Q3 rose from Q2).",
+   "source": "U.S. Census Bureau, Quarterly Residential Vacancies and Homeownership, Third Quarter 2026 (CB26-161), Oct 28, 2026",
+   "url": "https://www.census.gov/housing/hvs/files/currenthvspress.pdf",
+   "verification": "Read on the Census press release by Q and by an independent fact checker, Nov 1, 2026. Apartment List national and Phoenix pages read the same day. RealPage page re-read by Q.",
+   "local_evidence": "City of Phoenix median rent $1,250, down 2.5% over 12 months and 0.4% during October (Apartment List, November 2026 report); Chandler +0.7% fastest, Surprise -4.7% slowest in the metro. Limitation: no Phoenix or Arizona vacancy figure in this Census release; Apartment List figure is the city, not the metro.",
+   "interpretation": "Slower deliveries have not yet shown up as lower vacancy nationally, and the West's year over year rise suggests Arizona operators may face more choice per renter for a while before supply relief shows up in occupancy.",
+   "confidence": "Medium",
+   "confidence_reason": "Census vacancy covers all rental housing and carries sampling error (plus or minus 0.3); one quarter; only local figure is a city level asking rent.",
+   "checkpoints": [
+    {
+     "indicator": "Apartment List national vacancy index, November 2026 data (7.0% in October)",
+     "date": "Late November 2026",
+     "date_status": "Estimated",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    },
+    {
+     "indicator": "RealPage Q4 2026 supply update: Phoenix still among the top delivery metros?",
+     "date": "Late January 2027",
+     "date_status": "Estimated",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    },
+    {
+     "indicator": "Census national and West rental vacancy, Q4 2026: does the West stay above its year earlier rate?",
+     "date": "Early February 2027",
+     "date_status": "Estimated",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    }
+   ],
+   "outcome": "Pending",
+   "revisions": [
+    {
+     "at": "2026-11-01 07:05 MST",
+     "by": "Q (builder)",
+     "change": "First draft: one finding, four sections, two LinkedIn graphics, four captions, October monthly."
+    },
+    {
+     "at": "2026-11-01 07:35 MST",
+     "by": "Independent fact checker",
+     "change": "All Census and Apartment List figures matched. Phoenix rent scoped to the city (graphic label and caption); monthly 'held at 7.0%' changed to 'stood at 7.0%'. RealPage 'most deliveries' wording confirmed by Q on RealPage's page."
+    },
+    {
+     "at": "2026-11-01 07:35 MST",
+     "by": "Independent editor",
+     "change": "LocalLift caption moved to the West statistic and a trust angle so it no longer repeats Michael's; Michael hook and lead report line hedged; Melanie caption given the Phoenix delivery fact and a hedge; Michael graphic tagline contrast raised, byline removed from footnote, footnotes enlarged."
+    }
+   ]
+  }
+ ]
 }

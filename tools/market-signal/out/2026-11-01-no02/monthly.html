@@ -1,0 +1,92 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>The Market Signal Monthly, October 2026</title>
+<style>@font-face{font-family:'MS Inter';src:local('Inter'),url('file:///usr/share/fonts/opentype/inter/Inter-Regular.otf');font-weight:400}
+@font-face{font-family:'MS Inter';src:url('file:///usr/share/fonts/opentype/inter/Inter-Medium.otf');font-weight:500}
+@font-face{font-family:'MS Inter';src:url('file:///usr/share/fonts/opentype/inter/Inter-SemiBold.otf');font-weight:600}
+@font-face{font-family:'MS Inter';src:url('file:///usr/share/fonts/opentype/inter/Inter-Bold.otf');font-weight:700}
+@font-face{font-family:'MS Lora';src:url('file:///usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf');font-weight:400 700;font-style:normal}
+@font-face{font-family:'MS Lora';src:url('file:///usr/share/fonts/truetype/google-fonts/Lora-Italic-Variable.ttf');font-weight:400 700;font-style:italic}
+/* The Market Signal, shared brand tokens. Navy, lime, paper. Lora for display, Inter for text. */
+:root{
+  --ink:#0D1B2A;      /* navy, primary text and masthead */
+  --ink-2:#1A2B4A;    /* report navy */
+  --lime:#C8F169;     /* signal accent, fills only on paper */
+  --paper:#F7F5F0;    /* publication paper */
+  --rule:#D9D5CC;     /* hairlines */
+  --mute:#5B6675;     /* secondary text, AA on paper */
+  --soft:#EDEAE2;     /* panel fill */
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--paper);color:var(--ink);font-family:'MS Inter','Inter',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.serif{font-family:'MS Lora','Lora',Georgia,serif}
+.eyebrow{font-size:9px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--mute)}
+.mast{background:var(--ink);color:#fff;display:flex;align-items:flex-end;justify-content:space-between}
+.mast .title{font-family:'MS Lora','Lora',Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1}
+.mast .title i{color:var(--lime);font-style:italic}
+.mast .meta{text-align:right;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#B9C3D0}
+.mast .meta b{color:var(--lime);font-weight:700}
+.signalbar{height:4px;background:linear-gradient(90deg,var(--lime) 0 22%,var(--ink) 22% 100%)}
+.stat{font-family:'MS Lora','Lora',Georgia,serif;font-weight:600;line-height:.95;letter-spacing:-.02em}
+.tag{display:inline-block;background:var(--lime);color:var(--ink);font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:2px 6px;border-radius:2px}
+.src{color:var(--mute)}
+.src b{color:var(--ink);font-weight:600}
+.rule{border-top:1px solid var(--rule)}
+.foot{display:flex;justify-content:space-between;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--mute)}
+.foot>div:last-child{white-space:nowrap}
+
+@page{size:8.5in 11in;margin:0}
+body{width:816px;height:1056px;overflow:hidden;position:relative}
+.mast{height:96px;padding:0 44px 18px}
+.mast .title{font-size:40px}
+.mast .title small{display:block;font-family:'MS Inter',sans-serif;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--lime);font-style:normal;margin-bottom:9px}
+.mast .meta{font-size:9px;line-height:1.7}
+.pad{padding:0 44px}
+.intro{padding-top:22px}
+.intro h1{font-family:'MS Lora','Lora',Georgia,serif;font-weight:600;font-size:24px;line-height:1.2;margin:6px 0 9px;max-width:640px}
+.intro p{font-size:10.8px;line-height:1.58;color:#22303F;max-width:680px}
+h2{font-size:9px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding-top:7px;border-top:2px solid var(--ink);margin:20px 0 8px}
+.sigs{display:grid;gap:0}
+.sig{display:grid;grid-template-columns:96px 1fr 230px;gap:16px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--rule)}
+.sig .stat{font-size:26px}
+.sig .l{font-size:10.5px;line-height:1.4;font-weight:500}
+.sig .s{font-size:8.8px;color:var(--mute);line-height:1.4}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.two p,.two li{font-size:10px;line-height:1.5;color:#22303F}
+.two li{list-style:none;padding:5px 0;border-bottom:1px solid var(--rule)}
+.two li:last-child{border-bottom:0}
+.two .q li{font-weight:600;color:var(--ink)}
+.lim{color:var(--mute)!important;font-style:italic;margin-top:6px}
+table{width:100%;border-collapse:collapse}
+th{font-size:8px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--mute);text-align:left;padding:0 10px 5px 0}
+td{font-size:9.8px;line-height:1.4;padding:6px 10px 6px 0;border-top:1px solid var(--rule);vertical-align:top}
+td:first-child{border-left:3px solid var(--lime);padding-left:8px;font-weight:600}
+.bottom{position:absolute;left:44px;right:44px;bottom:40px;display:grid;grid-template-columns:1.1fr 1fr;gap:26px;padding-top:10px;border-top:1px solid var(--rule)}
+.bottom .eyebrow{margin-bottom:5px}
+.bottom p,.bottom li{font-size:7.8px;line-height:1.5;color:var(--mute)}
+.bottom li{list-style:none}
+.foot{position:absolute;left:44px;right:44px;bottom:12px;font-size:7.5px}
+</style></head>
+<body>
+<div class="mast">
+  <div class="title"><small>Monthly report</small>The Market <i>Signal</i></div>
+  <div class="meta">October 2026 · Published Nov 1, 2026<br><b>U.S. National · West region · Phoenix lens</b></div>
+</div>
+<div class="signalbar"></div>
+<div class="pad">
+  <div class="intro"><div class="eyebrow">The month in one read</div><h1>New supply is down from last year. Vacancy has not fallen yet.</h1><p>RealPage counts 27% fewer U.S. completions through Q3 than a year earlier, yet Census rental vacancy rose to 7.6% in Q3 and Apartment List&#39;s index stood at 7.0% in October, below its 7.3% February peak. National asking rents were roughly flat. In the West, vacancy rose year over year and Phoenix&#39;s median rent is down 2.5% over 12 months, so national supply relief should not yet be read as local relief.</p></div>
+  <h2>The Signal</h2>
+  <div class="sigs"><div class="sig"><div class="stat">27%</div><div class="l">Fewer U.S. apartment completions, Jan to Sept 2026 vs. 2025 (Q3 rose from Q2)</div><div class="s">RealPage Analytics, Oct 22, 2026</div></div><div class="sig"><div class="stat">7.6%</div><div class="l">U.S. rental vacancy rate, Q3 2026 (7.3% Q2 2026, 7.1% Q3 2025)</div><div class="s">U.S. Census Bureau, Oct 28, 2026</div></div><div class="sig"><div class="stat">6.7%</div><div class="l">West region rental vacancy, Q3 2026 (6.0% a year earlier)</div><div class="s">U.S. Census Bureau, Oct 28, 2026</div></div><div class="sig"><div class="stat">7.0%</div><div class="l">National vacancy index, October 2026 (7.3% February peak)</div><div class="s">Apartment List, Oct 28, 2026</div></div><div class="sig"><div class="stat">+0.1%</div><div class="l">National median rent, 12 months to October ($1,384; down 0.3% in the month)</div><div class="s">Apartment List, Oct 28, 2026</div></div></div>
+  <div class="two">
+    <div><h2>The Local Reality</h2><ul><li>Phoenix was among the five metros RealPage named for the most Q3 2026 deliveries, each above 3,000 units.</li><li>Phoenix median rent: $1,250, down 2.5% over 12 months and 0.4% during October; Chandler had the metro&#39;s fastest annual growth (0.7%), Surprise the slowest (down 4.7%) (Apartment List).</li></ul><p class="lim">Limitation: No verified Phoenix or Arizona vacancy or concession figure; Apartment List covers the city of Phoenix, not the metro. No verified Seattle figure.</p></div>
+    <div class="q"><h2>The Operator Decision</h2><ul><li>Is your vacancy coming from fewer renters finding you, or from more choices near you?</li><li>Which floor plans carry the most days vacant, and do they have their own photos and pricing online?</li><li>Do 2027 budgets assume vacancy improves on the national supply timeline or the local one?</li></ul></div>
+  </div>
+  <h2>The Watch List</h2>
+  <table><tr><th>Indicator</th><th>Expected</th><th>Date status</th><th>Owner</th></tr>
+  <tr><td>Apartment List national vacancy, November data</td><td>Late Nov 2026</td><td>Estimated</td><td>LocalLift research desk</td></tr><tr><td>RealPage Q4 supply update, Phoenix volume</td><td>Late Jan 2027</td><td>Estimated</td><td>LocalLift research desk</td></tr><tr><td>Census rental vacancy, Q4 2026 (national and West)</td><td>Early Feb 2027</td><td>Estimated</td><td>LocalLift research desk</td></tr></table>
+</div>
+<div class="bottom">
+  <div><div class="eyebrow">Methodology</div><p>Figures come from each publisher&#39;s own public release and are checked against it before publication. Census vacancy covers all rental housing and carries sampling error; rent measures differ by source, so figures are compared within a source. Local Reality, Operator Decision and interpretation lines are ours, logged in the Signal Ledger with a confidence level. NMHC&#39;s October survey is held until its figures can be read on NMHC&#39;s own page.</p></div>
+  <div><div class="eyebrow">Sources</div><ul><li>RealPage Analytics, U.S. Apartment Supply Update 3rd Quarter 2026, Oct 22, 2026</li><li>U.S. Census Bureau, Quarterly Residential Vacancies and Homeownership, Third Quarter 2026, Oct 28, 2026</li><li>Apartment List, National Rent Report, Headline Market Update: November 2026, Oct 28, 2026</li><li>Apartment List, Phoenix Rent Report, November 2026</li></ul></div>
+</div>
+<div class="foot" style="display:flex;justify-content:space-between;align-items:center"><div>The Market Signal · Presented by LocalLift &amp; The SocialDM · thesocialdm.com</div><div style="display:flex;align-items:center;gap:12px"><img src="file:///home/claude/locallift-pulses/tools/market-signal/templates/michael/sdm-dark.png" style="height:20px"><span style="width:1px;height:16px;background:#0D1B2A;opacity:.3"></span><span style="display:inline-flex;align-items:center;gap:4px;font-weight:700;font-size:12px;color:#0D1B2A;text-transform:none;letter-spacing:0"><svg viewBox="0 0 24 32" style="height:14px"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20.8 12 32 12 32s12-11.2 12-20.1C24 5.3 18.6 0 12 0z" fill="#E0312B"/><circle cx="12" cy="12" r="4.6" fill="#fff"/></svg>LocalLift</span></div></div>
+</body></html>

@@ -31,7 +31,7 @@ td:first-child{border-left:3px solid var(--lime);padding-left:8px;font-weight:60
 .bottom .eyebrow{margin-bottom:5px}
 .bottom p,.bottom li{font-size:7.8px;line-height:1.5;color:var(--mute)}
 .bottom li{list-style:none}
-.foot{position:absolute;left:44px;right:44px;bottom:16px;font-size:7.5px}
+.foot{position:absolute;left:44px;right:44px;bottom:12px;font-size:7.5px}
 </style></head>
 <body>
 <div class="mast">
@@ -55,5 +55,5 @@ td:first-child{border-left:3px solid var(--lime);padding-left:8px;font-weight:60
   <div><div class="eyebrow">Methodology</div><p>{{ m.method }}</p></div>
   <div><div class="eyebrow">Sources</div><ul>{% for s in m.sources %}<li>{{ s }}</li>{% endfor %}</ul></div>
 </div>
-<div class="foot"><div>The Market Signal · Presented by LocalLift &amp; The SocialDM</div><div>thesocialdm.com</div></div>
+<div class="foot" style="display:flex;justify-content:space-between;align-items:center"><div>The Market Signal · Presented by LocalLift &amp; The SocialDM · thesocialdm.com</div><div style="display:flex;align-items:center;gap:12px"><img src="file://{{ logo }}" style="height:20px"><span style="width:1px;height:16px;background:#0D1B2A;opacity:.3"></span><span style="display:inline-flex;align-items:center;gap:4px;font-weight:700;font-size:12px;color:#0D1B2A;text-transform:none;letter-spacing:0"><svg viewBox="0 0 24 32" style="height:14px"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20.8 12 32 12 32s12-11.2 12-20.1C24 5.3 18.6 0 12 0z" fill="#E0312B"/><circle cx="12" cy="12" r="4.6" fill="#fff"/></svg>LocalLift</span></div></div>
 </body></html>

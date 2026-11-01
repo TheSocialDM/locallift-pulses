@@ -1,0 +1,162 @@
+{
+ "slug": "2026-11-01-no02",
+ "issue": "02",
+ "finding_id": "MS-002",
+ "finding": "U.S. rental vacancy rose to 7.6% in Q3 2026 (7.3% Q2 2026, 7.1% Q3 2025) even as apartment completions through Q3 ran 27% below 2025; West region 6.7% vs 6.0% a year earlier.",
+ "sections": {
+  "signal": "The U.S. Census Bureau reported a national rental vacancy rate of 7.6% in Q3 2026, higher than 7.3% in Q2 2026 and 7.1% in Q3 2025. This comes while RealPage counts U.S. apartment completions through Q3 2026 at 27% below the same period of 2025 (Q3 deliveries rose from Q2). Census covers all rental housing, not only apartments.",
+  "local_reality": "West region rental vacancy was 6.7% in Q3 2026, statistically higher than 6.0% a year earlier (Census). Apartment List's Phoenix Rent Report (November 2026) puts the Phoenix median rent at $1,250, down 2.5% over the past 12 months and down 0.4% during October. Limitation: this quarterly Census release gives no Phoenix or Arizona vacancy figure, and Apartment List's figure is the city of Phoenix, not the metro. No verified Seattle figure this week.",
+  "operator_decision": {
+   "question": "Is your vacancy coming from fewer renters finding you, or from more choices near you?",
+   "examine": "Compare leads per vacant unit, days vacant by floor plan, tour to lease conversion, and asking rents and specials at the comps renters actually compare you with. A national or regional vacancy rate alone does not justify a pricing move."
+  },
+  "watch": [
+   {
+    "indicator": "Apartment List national vacancy index, November 2026 data (7.0% in October)",
+    "date": "Late November 2026",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   },
+   {
+    "indicator": "Census national and West rental vacancy, Q4 2026",
+    "date": "Early February 2027",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   },
+   {
+    "indicator": "RealPage Q4 2026 supply update: is Phoenix still among the 3,000+ completion metros?",
+    "date": "Late January 2027",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "name": "U.S. Census Bureau, Quarterly Residential Vacancies and Homeownership, Third Quarter 2026 (CB26-161)",
+   "date": "Oct 28, 2026",
+   "url": "https://www.census.gov/housing/hvs/files/currenthvspress.pdf"
+  },
+  {
+   "name": "RealPage Analytics, U.S. Apartment Supply Update 3rd Quarter 2026",
+   "date": "Oct 22, 2026",
+   "url": "https://www.realpage.com/analytics/us-apartment-supply-3rd-quarter-2026/"
+  },
+  {
+   "name": "Apartment List, Phoenix Rent Report, November 2026",
+   "date": "November 2026 report",
+   "url": "https://www.apartmentlist.com/rent-report/az/phoenix"
+  },
+  {
+   "name": "Apartment List, National Rent Report (Headline Market Update: November 2026)",
+   "date": "Oct 28, 2026",
+   "url": "https://www.apartmentlist.com/research/national-rent-data"
+  }
+ ],
+ "posts": [
+  {
+   "date": "2026-11-03",
+   "account": "Melanie Prock personal LinkedIn",
+   "image": "market-signal-2026-11-01-no02-vacancy-phoenix.png",
+   "caption": "Fewer new buildings were supposed to mean fewer empty units.\nThe latest Census numbers say not yet.\n\nU.S. rental vacancy was 7.6% in the third quarter, up from 7.3% in the second quarter and 7.1% a year ago. That came even as apartment completions through September ran 27% below last year, per RealPage, though third quarter deliveries did tick up from the second.\n\nHere in the West, rental vacancy rose to 6.7% from 6.0% a year earlier. Phoenix was among the five metros RealPage named for the most third quarter deliveries, each above 3,000 units, and Apartment List shows the median rent in the city of Phoenix down 2.5% over the past 12 months.\n\nIn my experience, a construction slowdown rarely fixes leasing on its own. The units that delivered this year and last still have to fill, and renters may have more options than they did.\n\nSo before anyone decides the pressure is easing, I would want one answer at each property: is our vacancy coming from fewer renters finding us, or from more choices near us? Those call for very different responses.\n\nWhich one are you seeing in Arizona right now?\n\n#Multifamily #PropertyManagement #ArizonaRealEstate",
+   "first_comment": "Sources: U.S. Census Bureau, Quarterly Residential Vacancies and Homeownership, Q3 2026 (Oct 28, 2026) https://www.census.gov/housing/hvs/files/currenthvspress.pdf . RealPage Analytics, Oct 22, 2026 https://www.realpage.com/analytics/us-apartment-supply-3rd-quarter-2026/ . Apartment List, Phoenix Rent Report, November 2026 https://www.apartmentlist.com/rent-report/az/phoenix"
+  },
+  {
+   "date": "2026-11-04",
+   "account": "LocalLift / The SocialDM company page",
+   "image": "none",
+   "caption": "A vacancy rate is a count of empty units.\nIt is also a count of the choices a renter has.\n\nWhen more units sit open, the comparison starts earlier. Much of that comparing may happen on maps, review sites and listings, and a community can be ruled out there on trust before a renter ever reaches out.\n\nThe Census Bureau put rental vacancy in the West at 6.7% last quarter, up from 6.0% a year earlier. We read that less as a pricing story and more as a discovery story. More choice may raise the bar for being found and trusted, not only for being cheapest.\n\nThat changes where marketing effort pays off: replies to reviews that show how the team handles a problem; a map presence that looks cared for; and a clear answer to why here instead of the place down the street.\n\nWhen renters have more options, what is the first thing that gets a community ruled out?\n\n#Multifamily #ApartmentMarketing #PropTech",
+   "first_comment": "Source: U.S. Census Bureau, Quarterly Residential Vacancies and Homeownership, Q3 2026, Oct 28, 2026. https://www.census.gov/housing/hvs/files/currenthvspress.pdf"
+  },
+  {
+   "date": "2026-11-05",
+   "account": "Pillar Communities company page",
+   "image": "none",
+   "caption": "Vacancy is up nationally.\nHere is how a property team can tell whether it is showing up locally.\n\nThe Census Bureau reported U.S. rental vacancy at 7.6% in Q3 2026 and 6.7% in the West, both higher than a year earlier. A regional number is a prompt to look closer, not a reason to change pricing on its own.\n\nFive things worth reviewing before responding:\n1. Leads per vacant unit: is demand down, or is the same demand spread across more units?\n2. Days vacant by floor plan: is the pressure property wide, or in one unit type?\n3. Tour to lease conversion: are renters visiting and then choosing somewhere else?\n4. Nearby comps: are asking rents and specials moving at the communities renters compare you with?\n5. Renewals: are current residents staying at the rate the budget assumes?\n\nIf leads are steady but conversion is slipping, the answer may sit in the experience. If leads are falling, start with how the community gets found.\n\n#Multifamily #PropertyManagement #PillarCommunities",
+   "first_comment": "Source: U.S. Census Bureau, Quarterly Residential Vacancies and Homeownership, Q3 2026, Oct 28, 2026. https://www.census.gov/housing/hvs/files/currenthvspress.pdf"
+  },
+  {
+   "date": "2026-11-06",
+   "account": "Michael Shad personal LinkedIn",
+   "image": "market-signal-2026-11-01-no02-michael-comparing.png",
+   "caption": "More empty rentals means more comparing.\nAnd much of it may happen before anyone calls you.\n\nThe Census Bureau put U.S. rental vacancy at 7.6% last quarter, up from 7.1% a year earlier. In plain words, roughly 1 in 13 rental homes was empty and for rent.\n\nAs a marketer, I read that as a shift in leverage. When a renter has more options, the first cut may happen quietly on a phone, and it may never show up in your lead reports.\n\nThat is the gap between being seen and being chosen. Being seen gets you into the comparison. Being chosen depends on whether you answered the renter's questions before they had to ask.\n\nThree checks for the floor plan you most need to lease:\n1. Does it have its own photos and layout online, or only the model?\n2. Send an inquiry from your own website after 6 PM. How long until a real reply?\n3. Can a renter see a starting price for it without calling?\n\nIf one of those misses, you may be losing renters you never knew were looking.\n\nWhich of the three would surprise your team most?\n\n#Multifamily #ApartmentMarketing #AISearch",
+   "first_comment": "Source: U.S. Census Bureau, Quarterly Residential Vacancies and Homeownership, Q3 2026, Oct 28, 2026. https://www.census.gov/housing/hvs/files/currenthvspress.pdf"
+  }
+ ],
+ "interpretation": "Slower deliveries have not yet shown up as lower vacancy nationally, and the West's year over year rise suggests Arizona operators may face more choice per renter for a while before supply relief shows up in occupancy.",
+ "confidence": "Medium",
+ "confidence_reason": "Census vacancy covers all rental housing (not only apartments) and carries sampling error; one quarter; the only local figure is a city level asking rent, with no verified Phoenix vacancy.",
+ "monthly": {
+  "month": "October 2026",
+  "pub_date": "Published Nov 1, 2026",
+  "market": "U.S. National \u00b7 West region \u00b7 Phoenix lens",
+  "headline": "New supply is down from last year. Vacancy has not fallen yet.",
+  "summary": "RealPage counts 27% fewer U.S. completions through Q3 than a year earlier, yet Census rental vacancy rose to 7.6% in Q3 and Apartment List's index stood at 7.0% in October, below its 7.3% February peak. National asking rents were roughly flat. In the West, vacancy rose year over year and Phoenix's median rent is down 2.5% over 12 months, so national supply relief should not yet be read as local relief.",
+  "signals": [
+   {
+    "stat": "27%",
+    "label": "Fewer U.S. apartment completions, Jan to Sept 2026 vs. 2025 (Q3 rose from Q2)",
+    "source": "RealPage Analytics, Oct 22, 2026"
+   },
+   {
+    "stat": "7.6%",
+    "label": "U.S. rental vacancy rate, Q3 2026 (7.3% Q2 2026, 7.1% Q3 2025)",
+    "source": "U.S. Census Bureau, Oct 28, 2026"
+   },
+   {
+    "stat": "6.7%",
+    "label": "West region rental vacancy, Q3 2026 (6.0% a year earlier)",
+    "source": "U.S. Census Bureau, Oct 28, 2026"
+   },
+   {
+    "stat": "7.0%",
+    "label": "National vacancy index, October 2026 (7.3% February peak)",
+    "source": "Apartment List, Oct 28, 2026"
+   },
+   {
+    "stat": "+0.1%",
+    "label": "National median rent, 12 months to October ($1,384; down 0.3% in the month)",
+    "source": "Apartment List, Oct 28, 2026"
+   }
+  ],
+  "local": {
+   "evidence": [
+    "Phoenix was among the five metros RealPage named for the most Q3 2026 deliveries, each above 3,000 units.",
+    "Phoenix median rent: $1,250, down 2.5% over 12 months and 0.4% during October; Chandler had the metro's fastest annual growth (0.7%), Surprise the slowest (down 4.7%) (Apartment List)."
+   ],
+   "limitation": "No verified Phoenix or Arizona vacancy or concession figure; Apartment List covers the city of Phoenix, not the metro. No verified Seattle figure."
+  },
+  "decisions": [
+   "Is your vacancy coming from fewer renters finding you, or from more choices near you?",
+   "Which floor plans carry the most days vacant, and do they have their own photos and pricing online?",
+   "Do 2027 budgets assume vacancy improves on the national supply timeline or the local one?"
+  ],
+  "watch": [
+   {
+    "indicator": "Apartment List national vacancy, November data",
+    "date": "Late Nov 2026",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   },
+   {
+    "indicator": "RealPage Q4 supply update, Phoenix volume",
+    "date": "Late Jan 2027",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   },
+   {
+    "indicator": "Census rental vacancy, Q4 2026 (national and West)",
+    "date": "Early Feb 2027",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   }
+  ],
+  "method": "Figures come from each publisher's own public release and are checked against it before publication. Census vacancy covers all rental housing and carries sampling error; rent measures differ by source, so figures are compared within a source. Local Reality, Operator Decision and interpretation lines are ours, logged in the Signal Ledger with a confidence level. NMHC's October survey is held until its figures can be read on NMHC's own page.",
+  "sources": [
+   "RealPage Analytics, U.S. Apartment Supply Update 3rd Quarter 2026, Oct 22, 2026",
+   "U.S. Census Bureau, Quarterly Residential Vacancies and Homeownership, Third Quarter 2026, Oct 28, 2026",
+   "Apartment List, National Rent Report, Headline Market Update: November 2026, Oct 28, 2026",
+   "Apartment List, Phoenix Rent Report, November 2026"
+  ]
+ }
+}
