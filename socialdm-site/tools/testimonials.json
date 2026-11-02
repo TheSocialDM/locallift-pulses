@@ -1,40 +1,46 @@
 {
- "source": "Google Business Profile reviews for The SocialDM, pulled via Windsor.ai on 2026-11-02. Quotes are verbatim excerpts (first sentences only, no edits). Rating 5.0 from 5 reviews.",
+ "source": "Google Business Profile reviews for The SocialDM, pulled via Windsor.ai on 2026-11-02. Quotes are verbatim excerpts (first sentences only, no edits). Rating 5.0 from 5 reviews. Names shown as first name and last initial for privacy. Entries with source \"client\" are testimonials drafted at the client's request; they publish only after that person approves the exact wording (approved: true) and are labeled Client testimonial, never Google review.",
  "rating": 5.0,
  "count": 5,
  "reviews": [
   {
-   "name": "Katie Mitchell",
+   "name": "Katie M.",
    "role": "Multifamily client",
    "vertical": [
     "multifamily",
     "home"
    ],
    "date": "2026-02-27",
-   "quote": "Working with TheSocialDM has strengthened our brand visibility and positioning across our apartment communities. Their strategic, research-driven approach goes beyond content creation."
+   "quote": "Working with TheSocialDM has strengthened our brand visibility and positioning across our apartment communities. Their strategic, research-driven approach goes beyond content creation.",
+   "source": "google",
+   "approved": true
   },
   {
-   "name": "Jody Sayler",
+   "name": "Jody S.",
    "role": "Broker, Arizona real estate",
    "vertical": [
     "real-estate",
     "home"
    ],
    "date": "2026-03-22",
-   "quote": "Working with TheSocialDM has strengthened my professional visibility and brand consistency in the Arizona real estate market."
+   "quote": "Working with TheSocialDM has strengthened my professional visibility and brand consistency in the Arizona real estate market.",
+   "source": "google",
+   "approved": true
   },
   {
-   "name": "Shari Griffin",
+   "name": "Shari G.",
    "role": "Real estate client",
    "vertical": [
     "real-estate",
     "home"
    ],
    "date": "2026-02-28",
-   "quote": "Working with TheSocialDM has strengthened my visibility and professional presence within the real estate industry."
+   "quote": "Working with TheSocialDM has strengthened my visibility and professional presence within the real estate industry.",
+   "source": "google",
+   "approved": true
   },
   {
-   "name": "Alex Roberts",
+   "name": "Alex R.",
    "role": "Client",
    "vertical": [
     "real-estate",
@@ -42,7 +48,108 @@
     "multifamily"
    ],
    "date": "2026-03-03",
-   "quote": "Since working with Social DM, my social media has become more consistent, more professional, and much more strategic."
+   "quote": "Since working with Social DM, my social media has become more consistent, more professional, and much more strategic.",
+   "source": "google",
+   "approved": true
+  },
+  {
+   "name": "Alissa",
+   "role": "Property Manager",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "source": "client",
+   "approved": false,
+   "quote": "The SocialDM made our community look the way it feels in person. Our pages are consistent, on brand and current, and I no longer worry about what prospects see when they search for us."
+  },
+  {
+   "name": "Maria",
+   "role": "Property Manager",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "source": "client",
+   "approved": false,
+   "quote": "I finally have a partner who handles our online presence from start to finish. The weekly updates are clear, the content looks polished, and my team gets time back for residents."
+  },
+  {
+   "name": "Janelle",
+   "role": "Property Manager",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "source": "client",
+   "approved": false,
+   "quote": "Working with The SocialDM has been easy from day one. They know multifamily, they understand how renters shop, and our community shows up looking professional everywhere."
+  },
+  {
+   "name": "Sara",
+   "role": "Property Manager",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "source": "client",
+   "approved": false,
+   "quote": "Our listing, reviews and social pages finally tell the same story. The SocialDM keeps everything organized and on schedule, and the reporting is simple enough to share with ownership."
+  },
+  {
+   "name": "Lisa",
+   "role": "Property Manager",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "source": "client",
+   "approved": false,
+   "quote": "The SocialDM is responsive, creative and dependable. Our community stands out online, and prospects mention our posts when they come in for a tour."
+  },
+  {
+   "name": "Cristy",
+   "role": "Property Manager",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "source": "client",
+   "approved": false,
+   "quote": "I love how proactive this team is. They spot what needs attention before I ask and keep our online presence fresh every single week."
+  },
+  {
+   "name": "Jim",
+   "role": "Property Manager",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "source": "client",
+   "approved": false,
+   "quote": "Clear communication, great content and real follow through. The SocialDM treats our community like their own, and it shows in how we look online."
+  },
+  {
+   "name": "Claudia",
+   "role": "Property Manager",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "source": "client",
+   "approved": false,
+   "quote": "The SocialDM took a lot off my plate. Our community looks polished across Google and social, and I always know what is being done and why it matters."
+  },
+  {
+   "name": "Robyn",
+   "role": "Property Manager",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "source": "client",
+   "approved": false,
+   "quote": "From reviews to social to search, The SocialDM keeps our community front and center. They are professional, fast and a pleasure to work with."
   }
  ]
 }

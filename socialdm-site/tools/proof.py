@@ -47,10 +47,10 @@ def communities():
 
 def testimonials(group):
     d = json.load(open(os.path.join(HERE, 'testimonials.json')))
-    rs = [r for r in d['reviews'] if group in r['vertical']]
+    rs = [r for r in d['reviews'] if group in r['vertical'] and r.get('approved', True)]
     if not rs: return ''
     card = lambda r: (f'<figure class="tm-card">{STARS}<blockquote>&ldquo;{html.escape(r["quote"])}&rdquo;</blockquote>'
-                      f'<figcaption><b>{html.escape(r["name"])}</b><span>{html.escape(r["role"])} &middot; Google review</span></figcaption></figure>')
+                      f'<figcaption><b>{html.escape(r["name"])}</b><span>{html.escape(r["role"])} &middot; {"Google review" if r.get("source","google")=="google" else "Client testimonial"}</span></figcaption></figure>')
     cards = ''.join(card(r) for r in rs)
     head = (f'<div class="wrap tm-head"><div><div class="eyebrow">What clients say</div><h2 class="h2">Rated {d["rating"]:.1f} on Google.</h2></div>'
             f'<p class="tm-note">From {d["count"]} Google reviews of The SocialDM.</p></div>')
