@@ -320,3 +320,4 @@ h1,h2,h3{letter-spacing:-.035em}
 @media (max-width:480px){.signals li{grid-template-columns:minmax(0,1fr);gap:4px}}
 @media (prefers-reduced-motion:reduce){.rk circle,.rk text{opacity:1;transform:none;animation:none!important}.pulse-ring{display:none}}
 .map-col{display:grid;gap:14px;justify-items:start;min-width:0}.map-col .map-vis{width:100%}.map-col .map-key{position:static}
+.dl-brand{font:600 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--sky);margin-bottom:-6px}

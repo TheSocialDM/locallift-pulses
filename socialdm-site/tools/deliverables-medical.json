@@ -12,13 +12,13 @@
    "icon": "trend",
    "name": "Lift Score",
    "cadence": "Weekly",
-   "text": "One score for your practice across Google Search, Google Maps and AI answers, week over week."
+   "text": "One number that shows whether your practice is getting easier to find."
   },
   {
    "icon": "spark",
    "name": "AI Shortlist",
    "cadence": "Weekly",
-   "text": "Whether ChatGPT, Gemini and Perplexity name your practice when patients ask, and who they name instead."
+   "text": "Know whether AI assistants recommend your practice, and who they recommend instead."
   },
   {
    "icon": "target",
@@ -30,13 +30,13 @@
    "icon": "globe",
    "name": "Site Read",
    "cadence": "Weekly",
-   "text": "Services, providers, insurance and hours checked so Google and AI tools describe you accurately."
+   "text": "Make sure Google and AI tools describe your practice correctly."
   },
   {
    "icon": "tag",
    "name": "Market Survey",
    "cadence": "Monthly",
-   "text": "How nearby practices are showing up, so you see changes in your market early."
+   "text": "See what nearby practices are doing before it shows up in your schedule."
   },
   {
    "icon": "calendar",

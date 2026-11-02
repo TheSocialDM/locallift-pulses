@@ -35,7 +35,7 @@ def ticker(name='ticker'):
 
 def deliverables(name='deliverables'):
     d = json.load(open(os.path.join(HERE, name + '.json')))
-    tiles = ''.join(f'<div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">{ICONS.get(i["icon"], ICONS["star"])}</svg></span><span class="dl-cad">{html.escape(i["cadence"])}</span></div><h3>{html.escape(i["name"])}</h3><p>{html.escape(i["text"])}</p></div>' for i in d['items'])
+    tiles = ''.join(f'<div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">{ICONS.get(i["icon"], ICONS["star"])}</svg></span><span class="dl-cad">{html.escape(i["cadence"])}</span></div><span class="dl-brand">LocalLift&trade;</span><h3>{html.escape(i["name"])}</h3><p>{html.escape(i["text"])}</p></div>' for i in d['items'])
     return (f'<section class="block dl-sec" style="padding-top:0" aria-label="What is inside"><div class="wrap"><div class="eyebrow">{d.get("heading","What&rsquo;s inside LocalLift&trade;")}</div>'
             f'<h2 class="h2">{d.get("title","Ten reports and services. One team running them.")}</h2><div class="dl-grid">{tiles}</div></div></section>')
 

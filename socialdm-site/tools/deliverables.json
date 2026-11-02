@@ -11,13 +11,13 @@
    "icon": "trend",
    "name": "Lift Score",
    "cadence": "Weekly",
-   "text": "One score per community that tracks visibility across Google Search, Google Maps and AI answers, week over week."
+   "text": "One number that shows whether your community is getting easier to find."
   },
   {
    "icon": "spark",
    "name": "AI Shortlist",
    "cadence": "Weekly",
-   "text": "Whether ChatGPT, Gemini and Perplexity name your community when renters ask, and who they name instead."
+   "text": "Know whether AI assistants recommend your community, and who they recommend instead."
   },
   {
    "icon": "target",
@@ -29,13 +29,13 @@
    "icon": "globe",
    "name": "Site Read",
    "cadence": "Weekly",
-   "text": "Your website and specials checked the way Google and AI tools read them, so pricing and offers stay accurate."
+   "text": "Make sure Google and AI tools describe your community, pricing and specials correctly."
   },
   {
    "icon": "tag",
    "name": "Market Survey",
    "cadence": "Every Sunday",
-   "text": "Competitor rents, specials and concessions tracked, so you see the market before it shows up in traffic."
+   "text": "See what competing communities are doing before it shows up in your traffic."
   },
   {
    "icon": "calendar",
