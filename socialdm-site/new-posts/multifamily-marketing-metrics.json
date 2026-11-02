@@ -41,5 +41,6 @@
    "claim": "Business Profile CALL_CLICKS metric: number of times the business profile call button was clicked",
    "url": "https://developers.google.com/my-business/reference/performance/rest/v1/DailyMetric"
   }
- ]
+ ],
+ "approved": true
 }
