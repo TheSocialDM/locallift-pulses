@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website audit, email</title>
+<style>
+:root{--bg:#F5F5F7;--card:#fff;--ink:#1D1D1F;--sec:#86868B;--line:#E8E8ED;--blue:#0A84FF;--green:#30D158;
+--shadow:0 1px 2px rgba(0,0,0,.04),0 10px 34px rgba(0,0,0,.07)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:22px 16px 60px}
+.hdr{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.hdr h1{font-size:19px;margin:0;letter-spacing:-.02em}
+.hdr .m{font-size:12px;color:var(--sec)}
+.strip{background:#FFF9EC;border:1px solid #F1E4C4;border-radius:14px;padding:12px 15px;font-size:12.5px;line-height:1.5;margin-bottom:16px}
+.strip b{color:#a05a00}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:18px 20px;margin-bottom:16px}
+.lbl{font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--sec);margin-bottom:8px}
+.subj{font-size:15px;font-weight:700;line-height:1.45;word-break:break-word}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+button{font:inherit;font-weight:700;font-size:13.5px;border:0;border-radius:11px;padding:10px 16px;cursor:pointer;background:var(--ink);color:#fff;transition:background .15s,transform .06s}
+button:active{transform:scale(.985)}
+button.sec{background:#EFEFF3;color:var(--ink)}
+button.done{background:var(--green)}
+.hint{font-size:11.5px;color:var(--sec)}
+.body p{margin:0 0 13px}
+.body p:last-child{margin-bottom:0}
+.body a{color:var(--blue);font-weight:700}
+.body .sig{margin-top:16px}
+@media (max-width:430px){.wrap{padding:16px 12px 48px}.card{padding:15px 16px;border-radius:15px}button{width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <h1>Cuvee website audit</h1>
+    <span class="m">Read live November 2, 2026 · To bsanchez@pillarmail.com, Kmalone@pillarmail.com · CC mprock@pillarmail.com · BCC info@thesocialdm.com</span>
+  </div>
+  <div class="strip" id="strip"><b>How to use this.</b> 1. <a href="../../../audit/cuvee/Cuvee-Website-Audit-Nov-2-2026.pdf" style="color:#0A84FF;font-weight:700">Download the PDF</a>. 2. Tap <a href="mailto:bsanchez@pillarmail.com,Kmalone@pillarmail.com?cc=mprock@pillarmail.com&bcc=info@thesocialdm.com&subject=Cuvee%20website%20audit%2C%20with%20fixes%20ready%20to%20paste" target="_blank" style="color:#0A84FF;font-weight:700">Open in Mail</a>, which fills in To, CC, BCC and the subject. 3. Press Copy email below, paste it into the draft and attach the PDF. This box is not copied.</div>
+  <div class="card">
+    <div class="lbl">Subject line</div>
+    <div class="subj" id="subject">Cuvee website audit, with fixes ready to paste</div>
+    <div class="row"><button class="sec" id="bsubj" type="button">Copy subject line</button></div>
+  </div>
+  <div class="card">
+    <div class="lbl">Email</div>
+    <div class="row" style="margin-top:0;margin-bottom:14px"><button id="bmailtop" type="button">Copy email</button>
+      <span class="hint">Pastes into Mail with the link live.</span></div>
+    <div class="body" id="emailbody">
+      <p>Hi all,</p>
+      <p>We read the Cuvee website live this morning. The report is short: what is working, what to fix first, the text to paste, and a note to forward to RentCafe or your developer if your team gets stuck. The page by page detail folds out inside the online report.</p>
+      <p><a href="https://thesocialdm.github.io/locallift-pulses/audit/cuvee/?v=1102">Open the Cuvee audit</a></p>
+      <p>Three things to start with:</p>
+      <p>1. The FAQ says no pet weight limit, while the pet policy says 60 pounds.<br>2. FAQ office hours differ from the contact page.<br>3. The offer button and popup title say up to 11 weeks, while the popup body and Leasing Offers page say 11 weeks.</p>
+      <p>Any heading a fix touches is named in the report's summary. Headings that are working stay as they are.</p>
+      <p>One decision: who on your team should own these, and who is your RentCafe contact? Send me the name and we will follow the list through with them.</p>
+      <p>A short PDF of the report is attached.</p>
+      <p class="sig">Thank you,<br>Michael Shad<br>The SocialDM | LocalLift</p>
+    </div>
+    <div class="row"><button id="bmail" type="button">Copy email</button>
+      <span class="hint" id="hint">Pastes into Mail with the link live.</span></div>
+  </div>
+</div>
+<script>
+function flash(b,m,ok){var t=b.getAttribute('data-t')||b.textContent;b.setAttribute('data-t',t);b.textContent=m;if(ok)b.classList.add('done');setTimeout(function(){b.textContent=t;b.classList.remove('done');},1900);}
+function legacyCopyNode(n){var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){ok=false;}s.removeAllRanges();return ok;}
+['bmail','bmailtop'].forEach(function(id){document.getElementById(id).addEventListener('click',function(){
+  var btn=this,node=document.getElementById('emailbody');
+  var html='<div style="font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1D1D1F">'+node.innerHTML+'</div>';
+  var text=node.innerText;
+  if(navigator.clipboard&&window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})])
+    .then(function(){flash(btn,'Copied',true);}).catch(function(){flash(btn,legacyCopyNode(node)?'Copied':'Press Cmd C',true);});
+  } else { flash(btn,legacyCopyNode(node)?'Copied':'Press Cmd C',true); }
+});});
+document.getElementById('bsubj').addEventListener('click',function(){
+  var btn=this,txt=document.getElementById('subject').textContent.trim();
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){flash(btn,'Copied',true);})
+    .catch(function(){flash(btn,legacyCopyNode(document.getElementById('subject'))?'Copied':'Press Cmd C',true);});
+  } else { flash(btn,legacyCopyNode(document.getElementById('subject'))?'Copied':'Press Cmd C',true); }
+});
+</script>
+</body>
+</html>
