@@ -11,9 +11,9 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 - Carried pages: montage-tigard, pillar-communities, apartment-seo-for-multifamily-communities, apartment-seo-blog-hub/cuvee-apartments-westgate-glendale. Redirects in _redirects. Sitemap, robots, RSS, canonicals, article schema, 404.
 
 ## Still to do, in order
-1. New posts: JSON files in new-posts/ (first 5 being written). Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
+1. New posts: 5 drafts are in new-posts/, written and self checked but NOT yet through Editor or approval, and dist/ does not include them yet. Do not publish until they pass. Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
 2. Thin pages: Medical, Real Estate, Hospitality, Enterprise. About and Contact headline.
-3. Claims: 60 to 90 days, 80%, 93%, 49 point. Verify or cut (new copy only; old post URLs stay).
+3. Claims: 60 to 90 days, 80%, 93%, 49 point. Verify or cut (new copy only; old post URLs stay). The writer found newer surveys showing 5% and 11.5% that undercut the live 80% post; check those sources and tell Michael, do not rewrite the old post without him.
 4. Contact form goes live on Netlify Forms, routed through Make to Bird with BCC to info@thesocialdm.com; test end to end before launch. Glowing Ask AI box stays non submitting until the multifamily report delivers automatically.
 5. Real work photos replace Pexels stand ins when he sends reel screenshots. Older post images look AI made and show made up dashboard figures; flag replacing them.
 6. Netlify: new site from this repo, branch socialdm-site, publish directory socialdm-site/dist, no build command. Cloud cannot reach Netlify hosts, so he clicks this once (give the direct link and exact fields).
