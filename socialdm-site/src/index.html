@@ -136,5 +136,27 @@
 <script src="chrome.js"></script>
 <script src="fx.js"></script>
 
+<style>.stats.big b i{font-style:normal}.stats.big b .n{display:inline-block;text-align:right;font-variant-numeric:tabular-nums}.stats.big b .w{display:inline-block;transition:opacity .5s,transform .5s cubic-bezier(.2,.8,.2,1)}.stats.big b.hide .w{opacity:0;transform:translateY(.25em)}</style>
+<script>
+(function(){
+var bs=document.querySelectorAll('.stats.big b');if(!bs.length||!('IntersectionObserver' in window))return;
+var still=matchMedia('(prefers-reduced-motion: reduce)').matches;if(still)return;
+bs.forEach(function(b){
+  var t=b.textContent,m=t.match(/^([\d,]+)(.*)$/);
+  if(m){var n=parseInt(m[1].replace(/,/g,''),10);
+    b.innerHTML='<i class="n">'+m[1]+'</i>'+m[2];var s=b.firstChild;var fit=function(){var c=s.textContent;s.style.minWidth='';s.textContent=m[1];s.style.minWidth=s.getBoundingClientRect().width+'px';s.textContent=c};(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(fit);addEventListener('resize',fit);b._run=function(){
+      var t0=null,d=n>100?1300:900;cancelAnimationFrame(b._r);
+      (function f(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/d),e=1-Math.pow(1-p,3);s.textContent=Math.round(n*e).toLocaleString('en-US');if(p<1)b._r=requestAnimationFrame(f)})(performance.now());};
+    b._reset=function(){cancelAnimationFrame(b._r);s.textContent='0'};
+  }else{
+    b.innerHTML=t.split(' ').map(function(w,i){return '<i class="w" style="transition-delay:'+(i*.18)+'s">'+w+'</i>'}).join(' ');
+    b._run=function(){b.classList.remove('hide')};b._reset=function(){b.classList.add('hide')};
+  }
+  b._reset();
+});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){var b=e.target;if(e.isIntersecting)b._run();else b._reset()})},{threshold:.6});
+bs.forEach(function(b){io.observe(b)});
+})();
+</script>
 </body></html>
 </body></html>
