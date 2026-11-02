@@ -53,6 +53,13 @@ if(ring){var ang=0,vel=RM?0:.12,dragging=false,lx2=0,lastY=scrollY;
     o.innerHTML='<button class="reel-x" aria-label="Close">&times;</button><video controls autoplay playsinline src="'+src+'"></video>';document.body.appendChild(o);
     var v=o.querySelector('video');function close(){v.pause();o.remove();removeEventListener('keydown',k)}function k(ev){if(ev.key==='Escape')close()}
     o.addEventListener('click',function(ev){if(ev.target===o||ev.target.classList.contains('reel-x'))close()});addEventListener('keydown',k);o.querySelector('.reel-x').focus()}
+  /* subtle invitations: play badges, a hint pill and one gentle flick when the wheel first appears */
+  ring.querySelectorAll('.wc').forEach(function(c){var b=document.createElement('span');b.className='wplay';b.setAttribute('aria-hidden','true');b.innerHTML='<svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>';c.appendChild(b)});
+  var hint=document.createElement('div');hint.className='wheel-hint';hint.innerHTML='<span class="wh-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M3 12h18"/></svg></span>'+(matchMedia('(hover: none)').matches?'Swipe to spin':'Drag to spin')+'<i></i><span class="wh-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>Tap a reel to watch';
+  stage.parentNode.insertBefore(hint,stage.nextSibling);
+  var used=false;function seen(){if(used)return;used=true;hint.classList.add('done')}
+  stage.addEventListener('pointerdown',function(){setTimeout(seen,600)});
+  if('IntersectionObserver' in window&&!RM){var flicked=false;new IntersectionObserver(function(en,o){if(en[0].isIntersecting&&!flicked){flicked=true;setTimeout(function(){if(!dragging)vel=5.5},500);o.disconnect()}},{threshold:.5}).observe(stage)}
   (function spin(){if(!dragging){ang+=vel;vel+=((RM?0:.12)-vel)*.03}ring.style.transform='translateZ(calc(var(--r) * -1)) rotateX(-6deg) rotateY('+ang+'deg)';requestAnimationFrame(spin)})();}
 /* 2c. Ask AI typing demo */
 var qt=document.querySelector('.aiq-t'),ans=document.querySelector('.aians');

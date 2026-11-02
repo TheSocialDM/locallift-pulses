@@ -129,3 +129,17 @@
 @media (max-width:700px){.sm-hide{display:none}.o-logo .lg{width:46px;height:46px;border-radius:11px}.o-logo svg{width:24px;height:24px}}
 @media (prefers-reduced-motion:reduce){.like{display:none}}
 @media (max-width:700px){.play{min-height:1000px}}
+
+/* wheel invitations */
+.wplay{position:absolute;left:50%;top:50%;z-index:2;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;display:grid;place-items:center;background:rgba(12,10,28,.38);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.35);box-shadow:0 8px 24px rgba(0,0,0,.3);opacity:.8;transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .35s,background .35s;animation:wpulse 3.2s ease-in-out infinite;pointer-events:none}
+.wplay svg{width:18px;height:18px;fill:#fff;margin-left:3px}
+.wc:hover .wplay{opacity:1;transform:scale(1.12);background:rgba(255,255,255,.22)}
+@keyframes wpulse{0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 0 0 rgba(255,255,255,.28)}50%{box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 0 10px rgba(255,255,255,0)}}
+.wheel-hint{display:flex;align-items:center;justify-content:center;gap:10px;width:max-content;max-width:calc(100% - 32px);margin:6px auto 0;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);font:500 13px/1 var(--body);letter-spacing:.02em;color:var(--soft);transition:opacity .8s,transform .8s}
+.wheel-hint i{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.3);margin:0 4px}
+.wh-ic{display:inline-grid;place-items:center;color:var(--mist)}.wh-ic svg{width:16px;height:16px}
+.wheel-hint .wh-ic:first-child{animation:wnudge 2.4s ease-in-out infinite}
+@keyframes wnudge{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.wheel-hint.done{opacity:0;transform:translateY(6px);pointer-events:none}
+@media (max-width:420px){.wheel-hint{font-size:12px;gap:7px;padding:9px 14px}}
+@media (prefers-reduced-motion:reduce){.wplay,.wheel-hint .wh-ic:first-child{animation:none}}
