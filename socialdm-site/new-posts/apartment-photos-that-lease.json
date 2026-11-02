@@ -57,5 +57,6 @@
   "Give every website photo a descriptive file name and alt text, and label model units as models."
  ],
  "vertical": "multifamily",
- "imageCredit": "Pexels photo 8082559"
+ "imageCredit": "Pexels photo 8082559",
+ "approved": true
 }

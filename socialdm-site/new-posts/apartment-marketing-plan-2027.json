@@ -73,5 +73,6 @@
   "Measure leases and tours by source and cost per lease by channel every month, and move money that is not producing."
  ],
  "vertical": "multifamily",
- "imageCredit": "Pexels photo 7710074"
+ "imageCredit": "Pexels photo 7710074",
+ "approved": true
 }

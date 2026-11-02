@@ -61,5 +61,6 @@
   "OpenAI says sites that block its OAI-SearchBot crawler will not be shown in ChatGPT search answers.",
   "Nobody can promise placement in an AI answer, but accurate profiles, consistent facts and real reviews remove the reasons a tool would skip you."
  ],
- "vertical": "hospitality"
+ "vertical": "hospitality",
+ "approved": true
 }

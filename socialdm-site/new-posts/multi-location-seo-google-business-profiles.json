@@ -65,5 +65,6 @@
   "Give every location a permanent, unique store code, and never change one through a bulk upload, since Google says that creates a duplicate.",
   "Keep primary ownership of every profile in a brand account, give local staff manager access, and check every profile against a master list each month."
  ],
- "vertical": "enterprise"
+ "vertical": "enterprise",
+ "approved": true
 }

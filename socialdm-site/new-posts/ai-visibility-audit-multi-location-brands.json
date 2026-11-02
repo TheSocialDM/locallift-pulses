@@ -57,5 +57,6 @@
   "OpenAI says sites that block OAI-SearchBot will not be shown in ChatGPT search answers, so check crawler access before rewriting content.",
   "Fix wrong facts first, then blocked or unindexed pages, then missing answers, then the outside sources that shape weak markets."
  ],
- "vertical": "enterprise"
+ "vertical": "enterprise",
+ "approved": true
 }

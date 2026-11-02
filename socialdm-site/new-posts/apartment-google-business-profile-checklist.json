@@ -73,5 +73,6 @@
   "Give every profile field a named owner and check the profile weekly, because wrong hours or expired specials cost tours."
  ],
  "vertical": "multifamily",
- "imageCredit": "Pexels photo 27307397"
+ "imageCredit": "Pexels photo 27307397",
+ "approved": true
 }
