@@ -36,6 +36,10 @@ META = {
              'AI ready SEO, Google Business Profile care, careful review management and clear service pages that help medical practices become the trusted local choice.', 'service', 'Medical practice marketing and SEO'),
  'real-estate': ('Real Estate Marketing for Agents and Teams | The SocialDM',
                  'Social, Google and AI visibility for real estate agents, teams and brokerages. Individual agents start with LocalLift Signature at $199 a month, no contract.', 'service', 'Real estate agent marketing'),
+ 'med-spa': ('Med Spa Marketing and Local SEO | The SocialDM',
+              'Social, Google and AI visibility for med spas and aesthetic practices, so new clients find you, trust you and book. Client privacy first.', 'service', 'Med spa marketing and local SEO'),
+ 'hair-salon': ('Hair Salon Marketing for Salons and Stylists | The SocialDM',
+              'Social, Google and AI visibility for hair salons, suite owners and independent stylists, so new guests find your work and book.', 'service', 'Hair salon marketing and local SEO'),
  'hospitality': ('Hospitality Marketing and Local SEO | The SocialDM',
                  'Story led social, Google Maps and search visibility that helps hotels, restaurants, venues and retail brands get found and booked.', 'service', 'Hospitality marketing and local SEO'),
  'enterprise': ('Multi Location Marketing and SEO | The SocialDM',
@@ -47,7 +51,7 @@ META = {
 }
 
 LINKS = [('/', 'Home'), ('/multifamily-marketing-agency', 'Multifamily marketing'), ('/locallift', 'LocalLift'),
-         ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Enterprise'),
+         ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/med-spa', 'Med Spa'), ('/hair-salon', 'Hair Salons'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Enterprise'),
          ('/blog', 'Market Intelligence blog'), ('/research-insights', 'Research and Insights'),
          ('/2026-multifamily-visibility-report', '2026 Multifamily Visibility Report'), ('/about', 'About'), ('/contact', 'Contact')]
 
@@ -114,7 +118,7 @@ def write_llms(out):
     lines = ['# The SocialDM', '',
              '> The SocialDM is a Phoenix based multifamily marketing agency, founded in 2019 by Michael Shad. It helps apartment communities nationwide, more than 7,900 apartment homes, get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
              'Contact: info@thesocialdm.com, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
-    for stem in ['multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'hospitality', 'enterprise']:
+    for stem in ['multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]
         lines.append(f'- [{title.split(" | ")[0]}]({SITE}/{stem}): {desc}')
     lines += ['', '## Research', f'- [The 2026 Multifamily Visibility Report]({SITE}/2026-multifamily-visibility-report): {META["2026-multifamily-visibility-report"][1]}',

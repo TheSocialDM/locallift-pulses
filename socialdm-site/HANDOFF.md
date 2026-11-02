@@ -57,3 +57,9 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 ## Real estate page, second pass (Nov 2)
 - iPhone style AI chat mockup (.iph), Instagram style post cards (avery.homes, sample), sample weekly report section (.mx) with animated line chart and metric tape, deliverables grid filled to 10 tiles (Site Read, Market Survey added).
 - New photos (Pexels): p7641899 (+a avatar), p36729675, p8293700, p1669799.
+
+## Med Spa and Hair Salon pages (Nov 2)
+- New pages src/med-spa.html (rose accent) and src/hair-salon.html (lilac accent), generated from the real estate layout by scratchpad gen2/make.py (one off). Menu entries after Medical. Contact form has Med Spa and Hair Salon options (Make email switch falls to its default branch for these).
+- Tickers ticker-med-spa.json / ticker-salon.json, deliverables-med-spa.json / deliverables-salon.json. proof.py now resolves any <!--proof:ticker:X--> and <!--proof:deliverables:X--> by file name.
+- Blog verticals 'med-spa' and 'salon' registered; no posts yet.
+- Post card fans on all three pages: float gently, spread with scroll position (--s), lift on hover.

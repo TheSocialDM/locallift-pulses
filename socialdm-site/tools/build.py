@@ -37,7 +37,7 @@ POST_SLUGS = {p['fullUrl'].split('/blog/')[1] for p in d['posts']}
 PAGE_MAP = {'': 'index', '/': 'index', '/contact': 'contact', '/about': 'about', '/locallift': 'locallift', '/blog': 'blog',
   '/research-insights': 'research-insights', '/multifamily-marketing-agency': 'multifamily-marketing-agency',
   '/apartment-seo-for-multifamily-communities': 'apartment-seo-for-multifamily-communities', '/medical': 'medical',
-  '/hospitality': 'hospitality', '/enterprise': 'enterprise', '/new-page': 'real-estate', '/real-estate': 'real-estate',
+  '/hospitality': 'hospitality', '/enterprise': 'enterprise', '/new-page': 'real-estate', '/real-estate': 'real-estate', '/med-spa': 'med-spa', '/hair-salon': 'hair-salon',
   '/2026-multifamily-visibility-report': '2026-multifamily-visibility-report', '/montage-tigard': 'montage-tigard',
   '/pillar-communities': 'pillar-communities', '/home': 'index'}
 
@@ -164,6 +164,8 @@ TODAY = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours
 VERTICALS = {'multifamily': ('Multifamily', 'Multifamily marketing insights', 'How apartment communities get found on Google Search, Google Maps, social and AI answers.'),
              'real-estate': ('Real Estate', 'Real estate marketing insights', 'How agents and teams build visibility and trust on Google, social and AI answers.'),
              'medical': ('Medical', 'Medical practice marketing insights', 'How practices become the trusted local choice on Google, Maps and AI answers.'),
+             'med-spa': ('Med Spa', 'Med spa marketing insights', 'How med spas and aesthetic practices get found, trusted and booked on Google, social and AI answers.'),
+             'salon': ('Hair Salons', 'Salon marketing insights', 'How salons and stylists fill their chairs through Google, social and AI answers.'),
              'hospitality': ('Hospitality', 'Hospitality marketing insights', 'How hotels, restaurants and venues get found and booked through search, Maps and AI.'),
              'enterprise': ('Enterprise', 'Multi location marketing insights', 'How multi location brands stay consistent and visible in every market.')}
 for _p in posts:

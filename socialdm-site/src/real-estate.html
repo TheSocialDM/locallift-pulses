@@ -82,11 +82,14 @@
 .pc-tag{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font:700 10.5px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:7px 9px;border-radius:7px}
 .pc-act{display:flex;gap:13px;padding:9px 12px 2px;font-size:17px}.pc-act .bm{margin-left:auto}
 .pc-meta{padding:2px 12px 12px;font-size:12px;line-height:1.4}.pc-meta b{font-weight:700}.pc-meta p{margin:3px 0 0;color:#222}.pc-meta .cm{color:#555}
-.fan.on .c1{transform:translateX(-170px) rotate(-8deg) translateY(30px)}
-.fan.on .c3{transform:translateX(170px) rotate(8deg) translateY(30px)}
-.fan.on .c2{transform:translateY(-6px)}
-.c2{z-index:2}
-@media (max-width:620px){.fan{height:520px}.post-card{width:230px;margin-left:-115px}.fan.on .c1{transform:translateX(-62px) rotate(-7deg) translateY(26px)}.fan.on .c3{transform:translateX(62px) rotate(7deg) translateY(26px)}}
+.fan{--s:0;--dx:170px;--dy:30px;--r:8deg}
+.post-card{transition:transform .25s ease-out,scale .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;animation:bob 6s ease-in-out infinite}
+.c1{transform:translateX(calc(var(--dx)*var(--s)*-1)) translateY(calc(var(--dy)*var(--s))) rotate(calc(var(--r)*var(--s)*-1));animation-delay:-1.5s}
+.c3{transform:translateX(calc(var(--dx)*var(--s))) translateY(calc(var(--dy)*var(--s))) rotate(calc(var(--r)*var(--s)));animation-delay:-3.5s}
+.c2{z-index:2;transform:translateY(calc(-6px*var(--s)))}
+@keyframes bob{50%{translate:0 -9px}}
+.post-card:hover{scale:1.05;z-index:4;box-shadow:0 44px 90px rgba(0,0,0,.6)}
+@media (max-width:620px){.fan{height:520px;--dx:62px;--dy:26px;--r:7deg}.post-card{width:230px;margin-left:-115px}}
 /* metrics */
 .mx-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
 .mx-head p{max-width:46ch;color:var(--soft);margin:0}
@@ -120,7 +123,7 @@
 @media (max-width:760px){.mx-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.mx-chart{height:200px}.mx-card{padding:18px}}
 @media (prefers-reduced-motion:reduce){.mx .line{stroke-dashoffset:0;animation:none}.mx .area{opacity:1}.tape-in{animation:none}}
 @media (max-width:900px){.paths,.ai-split{grid-template-columns:minmax(0,1fr)}.ai-split{gap:40px}}
-@media (prefers-reduced-motion:reduce){.re-hero .bg,.glass,.typing i{animation:none}.post-card{transition:none}.bub{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.re-hero .bg,.glass,.typing i{animation:none}.post-card{transition:none;animation:none}.bub{opacity:1;transform:none}}
 .re .faq summary::after{color:var(--gold)}
 </style>
 </head><body><div class="draft">Draft</div>
@@ -288,7 +291,7 @@
 <script>(function(){var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function on(el,fn){if(!el)return;if(!('IntersectionObserver' in window)||RM){el.classList.add('on');fn&&fn(el);return}new IntersectionObserver(function(e,o){if(e[0].isIntersecting){el.classList.add('on');fn&&fn(el);o.disconnect()}},{threshold:.35}).observe(el)}
 on(document.querySelector('.iph'),function(el){var t=el.querySelector('.typ');setTimeout(function(){t.style.display='none'},2100)});
-on(document.querySelector('.fan'));
+(function(f){if(!f)return;if(RM){f.style.setProperty('--s',1);return}var q=0;function u(){q=0;var r=f.getBoundingClientRect(),h=innerHeight,k=(h-r.top)/(h*.75);k=Math.max(0,Math.min(1,k));k=1-Math.pow(1-k,2);f.style.setProperty('--s',k.toFixed(3))}addEventListener('scroll',function(){if(!q)q=requestAnimationFrame(u)},{passive:true});addEventListener('resize',u);u()})(document.querySelector('.fan'));
 on(document.querySelector('.mx'),function(sec){sec.querySelectorAll('[data-to]').forEach(function(b){var to=+b.dataset.to,st=null;function f(ts){if(!st)st=ts;var k=Math.min(1,(ts-st)/1800);b.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)}RM?b.textContent=to:requestAnimationFrame(f)});
   var path=sec.querySelector('#mxl'),dot=sec.querySelector('.dot'),L=path.getTotalLength(),st=null;function g(ts){if(!st)st=ts;var k=Math.min(1,(ts-st)/2600);k=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;var p=path.getPointAtLength(L*k);dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y);if(k<1)requestAnimationFrame(g)}
   if(RM){var p=path.getPointAtLength(L);dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y)}else requestAnimationFrame(g)});

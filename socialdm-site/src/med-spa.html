@@ -1,0 +1,302 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Med Spa Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@300;500;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+.re{--sky:#F2A9BE;--mist:#FFD6E1;--gold:#F2A9BE;--gold2:#FFD6E1}
+.re-hero{position:relative;min-height:min(92vh,860px);display:grid;align-items:end;overflow:hidden;background:#07060F}
+.re-hero .bg{position:absolute;inset:0;background:url(p19242406.jpg) center/cover no-repeat;transform:scale(1.04);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.re-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,6,15,.25) 0%,rgba(7,6,15,.35) 40%,rgba(7,6,15,.94) 88%)}
+.re-hero .wrap{position:relative;z-index:2;padding-block:140px 90px;display:grid;gap:22px}
+.re-hero h1{font:700 clamp(46px,7.6vw,112px)/.98 var(--head);letter-spacing:-.05em;max-width:12ch;margin:0}
+.re-hero h1 span{background:linear-gradient(90deg,#FFD6E1,#F2A9BE 60%,#C97690);-webkit-background-clip:text;background-clip:text;color:transparent}
+.re-hero p{max-width:54ch;color:rgba(255,255,255,.82);font-size:clamp(17px,1.5vw,20px);margin:0}
+.re-hero .ctas{justify-content:flex-start;margin-top:10px}
+.btn-gold{background:linear-gradient(180deg,#FFD6E1,#F2A9BE);color:#2A0E18}
+.btn-gold:hover{filter:brightness(1.06)}
+.glass{position:absolute;z-index:3;background:rgba(16,14,30,.55);-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:14px 16px;color:#fff;font:500 14px/1.35 var(--body);box-shadow:0 20px 50px rgba(0,0,0,.35);animation:floaty 6s ease-in-out infinite}
+.glass small{display:block;font:600 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);margin-bottom:6px}
+.glass{max-width:270px}.g1{right:4%;top:15%}.g2{right:4%;top:29%;animation-delay:-2s}.g3{right:4%;top:43%;animation-delay:-4s}
+@keyframes floaty{50%{transform:translateY(-10px)}}
+@media (max-width:1240px){.glass{display:none}}
+/* path chooser */
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:40px}
+.path{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#100E20;display:flex;flex-direction:column;min-width:0}
+.path .ph{aspect-ratio:3/2;overflow:hidden}.path .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.path:hover .ph img{transform:scale(1.04)}
+.path .pb{padding:30px 30px 32px;display:grid;gap:14px;flex:1;align-content:start}
+.path .who{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.path h3{font:700 clamp(26px,2.8vw,36px)/1.08 var(--head);letter-spacing:-.03em}
+.path .price{font:700 22px/1 var(--head)}.path .price em{font:500 14px var(--body);font-style:normal;color:var(--dim);margin-left:6px}
+.path ul{list-style:none;padding:0;margin:4px 0 6px;display:grid;gap:10px}
+.path li{position:relative;padding-left:26px;color:var(--soft);font-size:15.5px}
+.path li::before{content:"";position:absolute;left:0;top:.45em;width:12px;height:12px;border:1.5px solid var(--gold);border-radius:3px;background:rgba(242,169,190,.15)}
+.path .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.path.sig{background:linear-gradient(160deg,#C9769022,#0E0C18 60%)}
+.path.sig::before{content:"Most popular";position:absolute;top:18px;right:18px;z-index:2;font:700 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#2A0E18;background:var(--gold);padding:7px 10px;border-radius:6px}
+/* AI phone */
+.ai-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.iph{justify-self:center;width:min(330px,84vw);aspect-ratio:9/19.3;border-radius:58px;padding:5px;background:linear-gradient(145deg,#B9BCC3,#55585F 30%,#2B2D33 55%,#8E9198 85%,#C8CBD1);box-shadow:0 50px 100px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06);position:relative}
+.iph::before,.iph::after{content:"";position:absolute;width:4px;border-radius:2px;background:linear-gradient(#9DA0A7,#4A4D53)}
+.iph::before{left:-3px;top:22%;height:11%}.iph::after{right:-3px;top:28%;height:16%}
+.iph-in{height:100%;border-radius:53px;background:#000;padding:6px;position:relative;overflow:hidden}
+.iph-in>*{position:relative}
+.iph-in{display:flex;flex-direction:column}
+.iph-in::before{content:"";position:absolute;inset:6px;border-radius:47px;background:radial-gradient(120% 60% at 50% 0%,#1B1830,#0B0A14 60%)}
+.island{position:absolute!important;top:16px;left:50%;width:108px;height:31px;margin-left:-54px;border-radius:20px;background:#000;z-index:3}
+.sbar{display:flex;justify-content:space-between;align-items:center;padding:17px 28px 0 34px;color:#fff;font:600 14px/1 -apple-system,"SF Pro Text",var(--body)}
+.sbar span{display:flex;gap:6px;align-items:center}.sbar svg{width:17px;height:12px;fill:#fff}
+.batt{width:24px;height:12px;border:1.5px solid rgba(255,255,255,.5);border-radius:4px;display:inline-block;padding:1.5px}.batt i{display:block;height:100%;width:80%;background:#fff;border-radius:2px}
+.apphd{margin:22px 0 4px;text-align:center;color:#fff;font:600 14px/1 -apple-system,var(--body)}.spark{color:#F2A9BE;margin-right:6px}
+.chat{flex:1;display:flex;flex-direction:column;gap:9px;padding:10px 12px;overflow:hidden}
+.bub{max-width:86%;padding:10px 13px;border-radius:19px;font:400 13.5px/1.42 -apple-system,"SF Pro Text",var(--body);opacity:0;transform:translateY(10px) scale(.98);transition:opacity .45s,transform .45s}
+.bub.me{align-self:flex-end;background:linear-gradient(180deg,#3D8BFF,#1F6BFF);color:#fff;border-bottom-right-radius:6px}
+.bub.ai{align-self:flex-start;background:#1E1C2C;color:rgba(255,255,255,.9);border-bottom-left-radius:6px}
+.pick{display:flex;align-items:center;gap:9px;margin-top:8px;padding:7px 9px;border-radius:12px;background:linear-gradient(90deg,rgba(242,169,190,.22),rgba(242,169,190,.1));border:1px solid rgba(242,169,190,.55)}
+.pick img,.pick>i{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none;background:#2E2B40}
+.pick div{display:grid;gap:1px;flex:1}.pick b{font-size:13px;color:#fff}.pick span{font-size:11px;color:#FFD6E1}
+.pick em{font:700 11px/1 var(--body);font-style:normal;color:#2A0E18;background:#F2A9BE;border-radius:6px;padding:4px 6px}
+.pick.dim{background:none;border-color:rgba(255,255,255,.08);opacity:.7}.pick.dim span{color:rgba(255,255,255,.55)}
+.chip{display:inline-block;margin-top:6px;padding:5px 9px;border-radius:10px;background:#F2A9BE;color:#2A0E18;font-weight:600;font-size:12px}
+.ibar{margin:6px 12px 10px;height:38px;border-radius:19px;background:#1A1826;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;padding:0 6px 0 14px;color:rgba(255,255,255,.4);font:400 13px -apple-system,var(--body)}
+.ibar i{width:28px;height:28px;border-radius:50%;background:#F2A9BE}
+.homebar{width:120px;height:5px;border-radius:3px;background:rgba(255,255,255,.75);margin:0 auto 8px}
+.iph.on .b1{opacity:1;transform:none;transition-delay:.2s}
+.iph.on .b2{opacity:1;transform:none;transition-delay:.9s}
+.iph.on .b3{opacity:1;transform:none;transition-delay:2.2s}
+.iph.on .b4{opacity:1;transform:none;transition-delay:3.6s}
+.iph.on .b5{opacity:1;transform:none;transition-delay:4.6s}
+.typing{display:inline-flex;gap:4px}.typing i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);animation:dot 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{50%{opacity:.25}}
+/* fanned posts */
+.fan{position:relative;height:560px;justify-self:center;width:min(560px,100%)}
+.post-card{position:absolute;left:50%;top:20px;width:272px;margin-left:-136px;border-radius:20px;background:#fff;color:#111;box-shadow:0 34px 70px rgba(0,0,0,.5);overflow:hidden;transition:transform 1.1s cubic-bezier(.2,.8,.2,1);font-family:-apple-system,"SF Pro Text",var(--body)}
+.pc-top{display:flex;align-items:center;gap:8px;padding:10px 12px}
+.pc-top img{width:30px;height:30px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff,0 0 0 3.5px #F2A9BE}
+.pc-top span{display:grid;line-height:1.15;flex:1}.pc-top b{font-size:12.5px}.pc-top small{font-size:10.5px;color:#777}
+.pc-top em{font-style:normal;color:#555;letter-spacing:1px}
+.pc-img{aspect-ratio:1;background:center/cover no-repeat;position:relative}
+.pc-tag{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font:700 10.5px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:7px 9px;border-radius:7px}
+.pc-act{display:flex;gap:13px;padding:9px 12px 2px;font-size:17px}.pc-act .bm{margin-left:auto}
+.pc-meta{padding:2px 12px 12px;font-size:12px;line-height:1.4}.pc-meta b{font-weight:700}.pc-meta p{margin:3px 0 0;color:#222}.pc-meta .cm{color:#555}
+.fan{--s:0;--dx:170px;--dy:30px;--r:8deg}
+.post-card{transition:transform .25s ease-out,scale .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;animation:bob 6s ease-in-out infinite}
+.c1{transform:translateX(calc(var(--dx)*var(--s)*-1)) translateY(calc(var(--dy)*var(--s))) rotate(calc(var(--r)*var(--s)*-1));animation-delay:-1.5s}
+.c3{transform:translateX(calc(var(--dx)*var(--s))) translateY(calc(var(--dy)*var(--s))) rotate(calc(var(--r)*var(--s)));animation-delay:-3.5s}
+.c2{z-index:2;transform:translateY(calc(-6px*var(--s)))}
+@keyframes bob{50%{translate:0 -9px}}
+.post-card:hover{scale:1.05;z-index:4;box-shadow:0 44px 90px rgba(0,0,0,.6)}
+@media (max-width:620px){.fan{height:520px;--dx:62px;--dy:26px;--r:7deg}.post-card{width:230px;margin-left:-115px}}
+/* metrics */
+.mx-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.mx-head p{max-width:46ch;color:var(--soft);margin:0}
+.mx-card{margin-top:36px;border-radius:28px;border:1px solid var(--line);background:linear-gradient(180deg,#121022,#0B0A16);padding:28px;overflow:hidden}
+.mx-top{display:flex;justify-content:space-between;align-items:center}
+.mx-badge{font:700 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#2A0E18;background:var(--gold);padding:7px 10px;border-radius:6px}
+.mx-range{font-size:13px;color:var(--dim)}
+.mx-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:22px}
+.mx-stats div{background:#0E0C1C;padding:18px 18px 16px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px}
+.mx-stats small{width:100%;font-size:12px;color:var(--dim);margin-bottom:6px}
+.mx-stats b{font:700 clamp(30px,3.6vw,44px)/1 var(--head);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.mx-stats em{font:600 18px var(--head);font-style:normal;color:var(--soft)}
+.mx-stats .up{margin-left:auto;color:#4ADE80;font-size:13px}
+.mx-chart{position:relative;margin-top:22px;height:260px}
+.mx-chart svg{width:100%;height:100%;overflow:visible}
+.mx-chart .grid path{stroke:rgba(255,255,255,.06);stroke-width:1}
+.mx-chart .line{fill:none;stroke:#F2A9BE;stroke-width:3.5;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;filter:drop-shadow(0 0 8px rgba(242,169,190,.55))}
+.mx-chart .line2{fill:none;stroke:rgba(180,195,240,.45);stroke-width:2;stroke-dasharray:6 7}
+.mx-chart .area{opacity:0;transition:opacity 1.2s 1.6s}
+.mx-chart .dot{fill:#fff;stroke:#F2A9BE;stroke-width:4;opacity:0}
+.mx.on .line{animation:draw 2.6s cubic-bezier(.4,0,.2,1) forwards}.mx.on .area{opacity:1}.mx.on .dot{opacity:1}
+@keyframes draw{to{stroke-dashoffset:0}}
+.mx-legend{position:absolute;left:0;top:0;display:flex;gap:16px;font-size:12.5px;color:var(--soft)}
+.mx-legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}.mx-legend i.a{background:#F2A9BE}.mx-legend i.b{background:rgba(180,195,240,.6)}
+.tape{margin-top:16px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.tape-in{display:flex;width:max-content;animation:tape 40s linear infinite}
+.tape span{padding:13px 26px;font:600 12.5px/1 var(--body);letter-spacing:.12em;color:var(--soft);white-space:nowrap;border-right:1px solid var(--line)}
+.tape b{color:#4ADE80;margin-left:8px;font-weight:700}
+@keyframes tape{to{transform:translateX(-50%)}}
+.mx-note{font-size:12.5px;color:var(--dim);margin:14px 0 0}
+@media (max-width:760px){.mx-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.mx-chart{height:200px}.mx-card{padding:18px}}
+@media (prefers-reduced-motion:reduce){.mx .line{stroke-dashoffset:0;animation:none}.mx .area{opacity:1}.tape-in{animation:none}}
+@media (max-width:900px){.paths,.ai-split{grid-template-columns:minmax(0,1fr)}.ai-split{gap:40px}}
+@media (prefers-reduced-motion:reduce){.re-hero .bg,.glass,.typing i{animation:none}.post-card{transition:none;animation:none}.bub{opacity:1;transform:none}}
+.re .faq summary::after{color:var(--gold)}
+.privacy-band{border:1px solid var(--line);border-radius:28px;padding:clamp(26px,4vw,48px);background:radial-gradient(120% 140% at 0% 0%,rgba(242,169,190,.16),transparent 55%),#100E20;display:grid;gap:12px}.privacy-band h3{font:700 clamp(24px,2.6vw,34px)/1.1 var(--head);letter-spacing:-.03em;margin:0;max-width:24ch}.privacy-band p{color:var(--soft);max-width:62ch;margin:0}
+</style>
+</head><body><div class="draft">Draft</div>
+<div id="site-header"></div>
+<main class="re">
+  <section class="re-hero">
+    <div class="bg" role="img" aria-label="Aesthetician applying a skin serum during a facial"></div>
+    <div class="glass g1"><small>Asked AI</small>Best med spa near me for a facial?</div>
+    <div class="glass g2"><small>New review</small><span style="color:#FFD6E1;letter-spacing:2px">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &ldquo;My skin has never looked this good.&rdquo;</div>
+    <div class="glass g3"><small>Booked</small>Saturday 10:30 am &middot; HydraFacial</div>
+    <div class="wrap">
+      <div class="eyebrow">Med Spa</div>
+      <h1>Be the glow they <span>book first.</span></h1>
+      <p>Social, Google and AI working from one plan, so new clients find you, trust you and book before they compare. For single location med spas and growing groups.</p>
+      <div class="ctas"><a class="btn btn-gold" href="#paths">Find your plan</a><a class="btn btn-line" href="contact.html">Get your visibility plan</a></div>
+    </div>
+  </section>
+  <!--proof:ticker:med-spa-->
+
+  <section class="block" id="paths" style="scroll-margin-top:90px">
+    <div class="wrap">
+      <div class="eyebrow">Two ways to work with us</div>
+      <h2 class="h2">One system. Sized for your spa.</h2>
+      <div class="paths">
+        <article class="path sig">
+          <div class="ph"><img src="p4586741.jpg" alt="Aesthetician giving a client a skin treatment in a bright modern med spa" loading="lazy"></div>
+          <div class="pb">
+            <div class="who">For single location med spas</div>
+            <h3>A fully booked calendar, built on local trust.</h3>
+            <div class="price">Custom<em>scoped after a free visibility check</em></div>
+            <ul>
+              <li>Fresh posts every week that show your treatments, team and space.</li>
+              <li>Google profile care so you show up for &ldquo;near me&rdquo; searches.</li>
+              <li>Steady new reviews, answered in your voice.</li>
+              <li>A weekly report in plain language.</li>
+            </ul>
+            <div class="row"><a class="btn btn-gold" href="contact.html">Get your visibility plan</a></div>
+          </div>
+        </article>
+        <article class="path">
+          <div class="ph"><img src="p5069494.jpg" alt="Skin care specialist applying a facial mask" loading="lazy"></div>
+          <div class="pb">
+            <div class="who">For groups and multi location brands</div>
+            <h3>Every location booked. One brand everywhere.</h3>
+            <div class="price">Custom<em>priced by location</em></div>
+            <ul>
+              <li>Location pages and profiles that look and sound like one brand.</li>
+              <li>Social, Google and AI visibility managed together.</li>
+              <li>Provider profiles that build trust before the first visit.</li>
+              <li>Reporting by location, every week.</li>
+            </ul>
+            <div class="row"><a class="btn btn-light" href="contact.html">Get your visibility plan</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap ai-split">
+      <div>
+        <div class="eyebrow">The new first impression</div>
+        <h2 class="h2">When they ask AI where to go, are you the answer?</h2>
+        <p style="color:var(--soft);max-width:50ch">More clients now ask ChatGPT, Gemini or Google&rsquo;s AI where to get a facial, injectables or laser. The spas those tools name are the ones with consistent, local, credible proof online. That is what we build.</p>
+      </div>
+      <div class="iph" aria-hidden="true"><div class="iph-in">
+        <div class="island"></div>
+        <div class="sbar"><b>9:41</b><span><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0z"/><path d="M3.2 6.6a6.8 6.8 0 0 1 9.6 0l-1.2 1.2a5.1 5.1 0 0 0-7.2 0z"/><path d="M.8 4.2a10.2 10.2 0 0 1 14.4 0L14 5.4a8.5 8.5 0 0 0-12 0z"/></svg><i class="batt"><i></i></i></span></div>
+        <div class="apphd"><span class="spark">&#10022;</span>AI Assistant</div>
+        <div class="chat">
+          <div class="bub me b1">Best med spa in Scottsdale for a facial this weekend?</div>
+          <div class="bub ai b2 typ"><span class="typing"><i></i><i></i><i></i></span></div>
+          <div class="bub ai b3">Based on recent reviews and availability, here are three to start with:
+            <div class="pick"><img src="p4586741a.jpg" alt=""><div><b>Your spa</b><span>&#9733; 4.9 &middot; Open Saturday</span></div><em>#1</em></div>
+            <div class="pick dim"><i></i><div><b>Spa B</b><span>&#9733; 4.6</span></div></div>
+            <div class="pick dim"><i></i><div><b>Spa C</b><span>&#9733; 4.4</span></div></div>
+          </div>
+          <div class="bub me b4">Can I book with the first one?</div>
+          <div class="bub ai b5">Yes. Saturday has openings. <span class="chip">Book now &rarr;</span></div>
+        </div>
+        <div class="ibar"><span>Ask anything</span><i></i></div>
+        <div class="homebar"></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap ai-split">
+      <div class="fan" aria-hidden="true">
+        <div class="post-card c1"><div class="pc-top"><img src="p4586741a.jpg" alt=""><span><b>glow.studio.az</b><small>Scottsdale, Arizona</small></span><em>&middot;&middot;&middot;</em></div>
+          <div class="pc-img" style="background-image:url(p15866050.jpg)"><span class="pc-tag">New treatment</span></div>
+          <div class="pc-act"><span class="hrt">&#10084;&#65039;</span><span>&#128172;</span><span>&#10148;</span><span class="bm">&#9744;</span></div>
+          <div class="pc-meta"><b>946 likes</b><p><b>glow.studio.az</b> Meet our new hydrating facial. Your skin will thank you. &#10024;</p><p class="cm"><b>jess.k</b> Booking this for my birthday!</p></div></div>
+        <div class="post-card c3"><div class="pc-top"><img src="p4586741a.jpg" alt=""><span><b>glow.studio.az</b><small>Scottsdale, Arizona</small></span><em>&middot;&middot;&middot;</em></div>
+          <div class="pc-img" style="background-image:url(p5069494.jpg)"><span class="pc-tag">Meet the team</span></div>
+          <div class="pc-act"><span class="hrt">&#10084;&#65039;</span><span>&#128172;</span><span>&#10148;</span><span class="bm">&#9744;</span></div>
+          <div class="pc-meta"><b>588 likes</b><p><b>glow.studio.az</b> Say hi to our lead aesthetician, here Tuesday to Saturday.</p><p class="cm"><b>ava.r</b> Best in the valley &#128150;</p></div></div>
+        <div class="post-card c2"><div class="pc-top"><img src="p4586741a.jpg" alt=""><span><b>glow.studio.az</b><small>Scottsdale, Arizona</small></span><em>&middot;&middot;&middot;</em></div>
+          <div class="pc-img" style="background-image:url(p5069612.jpg)"><span class="pc-tag">Weekend openings</span></div>
+          <div class="pc-act"><span class="hrt">&#10084;&#65039;</span><span>&#128172;</span><span>&#10148;</span><span class="bm">&#9744;</span></div>
+          <div class="pc-meta"><b>1,732 likes</b><p><b>glow.studio.az</b> Two spots left this Saturday. Tap the link to book.</p><p class="cm"><b>maddie.l</b> Just booked! See you Saturday</p></div></div>
+      </div>
+      <div>
+        <div class="eyebrow">A week of you, everywhere</div>
+        <h2 class="h2">Your spa in front of new clients, every week.</h2>
+        <p style="color:var(--soft);max-width:50ch">Treatments, team spotlights, seasonal offers and skin care tips, written for your clients and posted where they scroll. Google sees an active, trusted local spa. So do the people choosing where to book.</p>
+      </div>
+    </div>
+  </section>
+  <section class="block" style="padding-top:0">
+    <div class="wrap"><div class="privacy-band"><div class="eyebrow">Client privacy first</div><h3>Beautiful content, never at a client&rsquo;s expense.</h3><p>No client photos, names or before and after images without written consent. Medical claims stay accurate and approved by your team. Your reputation is the whole point.</p></div></div>
+  </section>
+
+  <section class="block mx" style="padding-top:0">
+    <div class="wrap">
+      <div class="mx-head"><div><div class="eyebrow">Your numbers, every week</div><h2 class="h2">Watch your bookings climb.</h2></div><p>Every Friday you see what moved: how often you were seen, how many people clicked to book or called, and whether AI recommends you. Plain language, no guesswork.</p></div>
+      <div class="mx-card">
+        <div class="mx-top"><span class="mx-badge">Sample report</span><span class="mx-range">Last 12 weeks</span></div>
+        <div class="mx-stats">
+          <div><small>Google profile views</small><b data-to="42">0</b><em>%</em><span class="up">&#9650;</span></div>
+          <div><small>Booking clicks</small><b data-to="26">0</b><em>%</em><span class="up">&#9650;</span></div>
+          <div><small>Calls</small><b data-to="19">0</b><em>%</em><span class="up">&#9650;</span></div>
+          <div><small>AI recommendations</small><b data-to="4">0</b><em> of 5</em><span class="up">&#9650;</span></div>
+        </div>
+        <div class="mx-chart"><svg viewBox="0 0 1000 260" preserveAspectRatio="none">
+          <defs><linearGradient id="mxg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2A9BE" stop-opacity=".35"/><stop offset="1" stop-color="#F2A9BE" stop-opacity="0"/></linearGradient></defs>
+          <g class="grid"><path d="M0 65H1000M0 130H1000M0 195H1000"/></g>
+          <path class="area" d="M0 222 C60 216 100 204 150 206 S240 190 290 176 S380 184 430 158 S520 146 570 128 S660 132 710 106 S800 92 850 76 S930 56 1000 36 L1000 260 L0 260 Z" fill="url(#mxg)"/>
+          <path class="line" id="mxl" d="M0 222 C60 216 100 204 150 206 S240 190 290 176 S380 184 430 158 S520 146 570 128 S660 132 710 106 S800 92 850 76 S930 56 1000 36"/>
+          <path class="line2" d="M0 236 C80 232 140 228 200 226 S320 222 380 214 S500 210 560 200 S680 196 740 186 S860 178 1000 168"/>
+          <circle class="dot" r="7"/>
+        </svg><div class="mx-legend"><span><i class="a"></i>You</span><span><i class="b"></i>Local average</span></div></div>
+      </div>
+      <div class="tape" aria-hidden="true"><div class="tape-in"><span>PROFILE VIEWS <b>&#9650; 42%</b></span><span>BOOKING CLICKS <b>&#9650; 26%</b></span><span>CALLS <b>&#9650; 19%</b></span><span>NEW REVIEWS <b>&#9650; 11</b></span><span>DIRECTION REQUESTS <b>&#9650; 14%</b></span><span>AI RECOMMENDATIONS <b>&#9650; 4 of 5</b></span><span>POSTS PUBLISHED <b>&#9650; 12</b></span><span>MAPS TOP 3 <b>&#9650; 33%</b></span><span>PROFILE VIEWS <b>&#9650; 42%</b></span><span>BOOKING CLICKS <b>&#9650; 26%</b></span><span>CALLS <b>&#9650; 19%</b></span><span>NEW REVIEWS <b>&#9650; 11</b></span><span>DIRECTION REQUESTS <b>&#9650; 14%</b></span><span>AI RECOMMENDATIONS <b>&#9650; 4 of 5</b></span><span>POSTS PUBLISHED <b>&#9650; 12</b></span><span>MAPS TOP 3 <b>&#9650; 33%</b></span></div></div>
+      <p class="mx-note">Illustration of a sample weekly report. Your numbers depend on your market and starting point.</p>
+    </div>
+  </section>
+
+  <!--proof:deliverables:med-spa-->
+
+  <!--proof:testimonials:med-spa-->
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="eyebrow">Questions</div>
+      <h2 class="h2">Frequently asked questions.</h2>
+      <div class="faq">
+        <details><summary>Do you work with med spas and aesthetic practices?</summary><p>Yes. We work with single location med spas, multi location groups and aesthetic practices that want more local visibility and more booked appointments.</p></details>
+        <details><summary>Will you post client photos or before and after images?</summary><p>Only with written client consent and your approval. Most of our content features your team, your space, your treatments and education, so privacy is never at risk.</p></details>
+        <details><summary>How do you handle medical claims?</summary><p>Every post stays accurate and is approved by your team before it goes live. We never promise results a treatment cannot guarantee.</p></details>
+        <details><summary>Can you help with Google reviews?</summary><p>Yes. We help you ask more happy clients for reviews and answer every review in your voice, without sharing any private details.</p></details>
+        <details><summary>Do you run paid ads?</summary><p>When they fit the plan. Many spas get more from a strong Google profile, steady reviews and consistent content before spending on ads.</p></details>
+      </div>
+    </div>
+  </section>
+  <!--posts:med-spa-->
+
+  <section class="wrap">
+    <div class="cta">
+      <div class="eyebrow">Med Spa</div>
+      <h2 style="margin-top:16px">Be the spa they already trust.</h2>
+      <div class="ctas"><a class="btn btn-gold" href="contact.html">Get your visibility plan</a><a class="btn btn-line" href="locallift.html">See how LocalLift&trade; works</a></div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="chrome.js"></script>
+<script>(function(){var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function on(el,fn){if(!el)return;if(!('IntersectionObserver' in window)||RM){el.classList.add('on');fn&&fn(el);return}new IntersectionObserver(function(e,o){if(e[0].isIntersecting){el.classList.add('on');fn&&fn(el);o.disconnect()}},{threshold:.35}).observe(el)}
+on(document.querySelector('.iph'),function(el){var t=el.querySelector('.typ');setTimeout(function(){t.style.display='none'},2100)});
+(function(f){if(!f)return;if(RM){f.style.setProperty('--s',1);return}var q=0;function u(){q=0;var r=f.getBoundingClientRect(),h=innerHeight,k=(h-r.top)/(h*.75);k=Math.max(0,Math.min(1,k));k=1-Math.pow(1-k,2);f.style.setProperty('--s',k.toFixed(3))}addEventListener('scroll',function(){if(!q)q=requestAnimationFrame(u)},{passive:true});addEventListener('resize',u);u()})(document.querySelector('.fan'));
+on(document.querySelector('.mx'),function(sec){sec.querySelectorAll('[data-to]').forEach(function(b){var to=+b.dataset.to,st=null;function f(ts){if(!st)st=ts;var k=Math.min(1,(ts-st)/1800);b.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)}RM?b.textContent=to:requestAnimationFrame(f)});
+  var path=sec.querySelector('#mxl'),dot=sec.querySelector('.dot'),L=path.getTotalLength(),st=null;function g(ts){if(!st)st=ts;var k=Math.min(1,(ts-st)/2600);k=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;var p=path.getPointAtLength(L*k);dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y);if(k<1)requestAnimationFrame(g)}
+  if(RM){var p=path.getPointAtLength(L);dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y)}else requestAnimationFrame(g)});
+})();</script>
+</body></html>

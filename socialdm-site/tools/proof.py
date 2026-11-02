@@ -62,8 +62,6 @@ def testimonials(group):
 def render(t):
     t = t.replace('<!--proof:communities-->', ticker())
     t = t.replace('<!--proof:deliverables-->', deliverables())
-    t = t.replace('<!--proof:deliverables:medical-->', deliverables('deliverables-medical'))
-    t = t.replace('<!--proof:ticker:medical-->', ticker('ticker-medical'))
-    t = t.replace('<!--proof:ticker:real-estate-->', ticker('ticker-real-estate'))
-    t = t.replace('<!--proof:deliverables:real-estate-->', deliverables('deliverables-real-estate'))
+    t = re.sub(r'<!--proof:ticker:([a-z-]+)-->', lambda m: ticker('ticker-' + m.group(1)), t)
+    t = re.sub(r'<!--proof:deliverables:([a-z-]+)-->', lambda m: deliverables('deliverables-' + m.group(1)), t)
     return re.sub(r'<!--proof:testimonials:([a-z-]+)-->', lambda m: testimonials(m.group(1)), t)

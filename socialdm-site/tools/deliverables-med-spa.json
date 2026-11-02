@@ -1,0 +1,66 @@
+{
+ "heading": "What&rsquo;s inside, for med spas",
+ "title": "The same system, built for how clients choose a spa.",
+ "items": [
+  {
+   "icon": "pulse",
+   "name": "Weekly Pulse",
+   "cadence": "Every Friday",
+   "text": "A one page read on how your spa showed up this week, and the one thing to do next."
+  },
+  {
+   "icon": "trend",
+   "name": "Lift Score",
+   "cadence": "Weekly",
+   "text": "One number that shows whether your spa is getting easier to find in your area."
+  },
+  {
+   "icon": "spark",
+   "name": "AI Shortlist",
+   "cadence": "Weekly",
+   "text": "Know whether AI assistants recommend your spa when people ask where to book, and who they name instead."
+  },
+  {
+   "icon": "target",
+   "name": "Map Reach",
+   "cadence": "Weekly",
+   "text": "Where your spa appears in Google Maps across the neighborhoods your clients come from."
+  },
+  {
+   "icon": "globe",
+   "name": "Site Read",
+   "cadence": "Weekly",
+   "text": "Make sure Google and AI tools describe your treatments, providers and hours correctly."
+  },
+  {
+   "icon": "calendar",
+   "name": "Daily Presence",
+   "cadence": "Every week",
+   "text": "Fresh posts that keep your spa in front of new and returning clients, written for your brand."
+  },
+  {
+   "icon": "tag",
+   "name": "Market Survey",
+   "cadence": "Monthly",
+   "text": "See what nearby spas are doing before it costs you a booking."
+  },
+  {
+   "icon": "message",
+   "name": "Review Desk",
+   "cadence": "Ongoing",
+   "text": "Review replies in your voice that turn happy clients into proof for the next one, privately and carefully."
+  },
+  {
+   "icon": "chart",
+   "name": "Snapshot",
+   "cadence": "Monthly",
+   "text": "Calls, booking clicks and direction requests from Google, in plain language."
+  },
+  {
+   "icon": "play",
+   "name": "ClearView",
+   "cadence": "Monthly",
+   "text": "Your social report: what posted, what people engaged with and what changes next."
+  }
+ ]
+}

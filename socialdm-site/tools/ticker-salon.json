@@ -1,0 +1,65 @@
+{
+ "heading": "Built for salons and stylists",
+ "items": [
+  {
+   "icon": "star",
+   "name": "",
+   "text": "Salon Owners"
+  },
+  {
+   "icon": "spark",
+   "name": "",
+   "text": "Independent Stylists"
+  },
+  {
+   "icon": "pin",
+   "name": "",
+   "text": "Suite Owners"
+  },
+  {
+   "icon": "calendar",
+   "name": "",
+   "text": "Color Specialists"
+  },
+  {
+   "icon": "message",
+   "name": "",
+   "text": "Cuts And Styling"
+  },
+  {
+   "icon": "trend",
+   "name": "",
+   "text": "Extensions"
+  },
+  {
+   "icon": "users",
+   "name": "",
+   "text": "Bridal And Events"
+  },
+  {
+   "icon": "flag",
+   "name": "",
+   "text": "Barbers"
+  },
+  {
+   "icon": "send",
+   "name": "",
+   "text": "New Guest Bookings"
+  },
+  {
+   "icon": "building",
+   "name": "",
+   "text": "Google Reviews"
+  },
+  {
+   "icon": "key",
+   "name": "",
+   "text": "AI Visibility"
+  },
+  {
+   "icon": "star",
+   "name": "",
+   "text": "Stylist Recruiting"
+  }
+ ]
+}
