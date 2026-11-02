@@ -7,7 +7,8 @@
 @keyframes tr{12%{opacity:1;transform:translate(-50%,-50%) scale(1)}70%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-62%) scale(.92)}}
 @media (max-width:700px){.trail img{width:96px;height:122px}}
 .hint{display:inline-block;margin-top:26px;font:600 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-@media (hover:none){.hint{display:none}}
+.hint .ht{display:none}
+@media (hover:none){.hint .hm{display:none}.hint .ht{display:inline}}
 
 /* Light editorial band with images inside the words */
 .words{background:#EEECF6;color:var(--night);padding-block:110px;text-align:center}
