@@ -39,6 +39,8 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 
 - Reels: 9 reels from Dropbox /SocialDM/Website Reels (network allowlist now includes *.dropboxusercontent.com) compressed into src/reels/: <name>-loop.mp4 (432x768, 12s, silent, ~0.5MB) for the home page wheel, <name>.mp4 (720p with sound) for the tap-to-watch player, <name>.jpg poster. fx.js loads and plays loops only while the wheel is on screen and opens the full reel on tap (not on drag). Reduced motion shows posters only.
 
+- The community name banner was replaced (Michael, Nov 2) by a "Trusted nationwide" stat ticker: tools/ticker.json (his 20 lines, e.g. 7,900+ doors, 20+ communities, five states) rendered by proof.ticker() with square stroke icons; same <!--proof:communities--> marker on home, multifamily, LocalLift. communities.json is kept for a future logo strip.
+
 ## Still to do, in order
 1. New posts: 5 drafts are in new-posts/, written and self checked but NOT yet through Editor or approval, and dist/ does not include them yet. Do not publish until they pass. Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
 2. Thin pages: Medical, Real Estate, Hospitality, Enterprise. About and Contact headline.

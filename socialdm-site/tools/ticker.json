@@ -1,0 +1,86 @@
+{
+ "note": "Stat ticker supplied by Michael on 2026-11-02. Icons are keys in tools/proof.py ICONS.",
+ "heading": "Trusted nationwide",
+ "items": [
+  {
+   "icon": "building",
+   "text": "7,900+ Doors And Growing"
+  },
+  {
+   "icon": "star",
+   "text": "Trusted By 20+ Apartment Communities"
+  },
+  {
+   "icon": "pin",
+   "text": "Five States, Coast To Coast"
+  },
+  {
+   "icon": "trend",
+   "text": "Growing Nationwide"
+  },
+  {
+   "icon": "send",
+   "text": "300+ Posts Published Every Week"
+  },
+  {
+   "icon": "calendar",
+   "text": "Google Business Posts 7 Days A Week"
+  },
+  {
+   "icon": "pulse",
+   "text": "Weekly Pulse Every Friday"
+  },
+  {
+   "icon": "clipboard",
+   "text": "Market Surveys Every Sunday"
+  },
+  {
+   "icon": "chart",
+   "text": "Monthly Google Snapshot Reports"
+  },
+  {
+   "icon": "chart",
+   "text": "Monthly Social Media Reports"
+  },
+  {
+   "icon": "target",
+   "text": "Weekly Google Maps Rank Scans"
+  },
+  {
+   "icon": "spark",
+   "text": "ChatGPT, Gemini And Perplexity Tracked Weekly"
+  },
+  {
+   "icon": "tag",
+   "text": "Competitor Rents And Specials Tracked Weekly"
+  },
+  {
+   "icon": "globe",
+   "text": "Websites And Specials Checked Every Week"
+  },
+  {
+   "icon": "message",
+   "text": "Google Reviews Answered For You"
+  },
+  {
+   "icon": "play",
+   "text": "Instagram, Facebook And YouTube Managed"
+  },
+  {
+   "icon": "key",
+   "text": "Lease Up And Stabilized Campaigns"
+  },
+  {
+   "icon": "users",
+   "text": "Social, Google And AI, One Team"
+  },
+  {
+   "icon": "shield",
+   "text": "Every Report Audited Before It Ships"
+  },
+  {
+   "icon": "flag",
+   "text": "The SocialDM, Est. 2019"
+  }
+ ]
+}
