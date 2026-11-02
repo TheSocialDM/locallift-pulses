@@ -64,4 +64,6 @@ def render(t):
     t = t.replace('<!--proof:deliverables-->', deliverables())
     t = t.replace('<!--proof:deliverables:medical-->', deliverables('deliverables-medical'))
     t = t.replace('<!--proof:ticker:medical-->', ticker('ticker-medical'))
+    t = t.replace('<!--proof:ticker:real-estate-->', ticker('ticker-real-estate'))
+    t = t.replace('<!--proof:deliverables:real-estate-->', deliverables('deliverables-real-estate'))
     return re.sub(r'<!--proof:testimonials:([a-z-]+)-->', lambda m: testimonials(m.group(1)), t)

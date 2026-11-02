@@ -41,6 +41,8 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 
 - The community name banner was replaced (Michael, Nov 2) by a "Trusted nationwide" stat ticker: tools/ticker.json (his 20 lines, e.g. 7,900+ doors, 20+ communities, five states) rendered by proof.ticker() with square stroke icons; same <!--proof:communities--> marker on home, multifamily, LocalLift. communities.json is kept for a future logo strip.
 
+- Nov 2: Solutions menu order is LocalLift, Multifamily, Real Estate, Medical, LocalLift Signature, Hospitality, Enterprise. Medical page redesigned (photo hero, patient journey, animated Maps rank illustration labeled Illustration, Google ranking factors with source, KFF 29% stat, privacy band, medical ticker, LocalLift deliverables for practices, social trust section, 6 FAQs); its two posts are published. Real Estate page rebuilt in gold accents tied to LocalLift Signature: luxury home hero with glass cards, real estate ticker, two paths (individual agents = Signature $199/mo no contract, from Michael's Signature emails; teams and brokerages = custom), animated AI chat phone, fanned weekly post cards, deliverables for agents, reviews, FAQ, CTA. Deliverable tiles carry a LocalLift(TM) label; four descriptions tightened to outcomes so the method is not exposed.
+
 ## Still to do, in order
 1. New posts: 5 drafts are in new-posts/, written and self checked but NOT yet through Editor or approval, and dist/ does not include them yet. Do not publish until they pass. Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
 2. Thin pages: Medical, Real Estate, Hospitality, Enterprise. About and Contact headline.

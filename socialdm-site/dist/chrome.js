@@ -1,7 +1,7 @@
 /* Shared header, dropdown menus and footer for every page of the draft site. Edit the menu here once and every page updates. */
 (function(){
 var M=[
- {t:"Solutions",items:[["LocalLift™","locallift.html","Google, Maps and AI visibility"],["Multifamily","multifamily-marketing-agency.html","Social and search for apartments"],["Medical","medical.html","Visibility for practices"],["Real Estate","real-estate.html","Agents and title reps"],["LocalLift Signature \u2197","https://www.localliftsignature.com","Done for you posts for agents"],["Hospitality","hospitality.html","Hotels, resorts and venues"],["Enterprise","enterprise.html","Portfolios and groups"]]},
+ {t:"Solutions",items:[["LocalLift™","locallift.html","Google, Maps and AI visibility"],["Multifamily","multifamily-marketing-agency.html","Social and search for apartments"],["Real Estate","real-estate.html","Agents, teams and brokerages"],["Medical","medical.html","Visibility for practices"],["LocalLift Signature \u2197","https://www.localliftsignature.com","Done for you posts for agents"],["Hospitality","hospitality.html","Hotels, resorts and venues"],["Enterprise","enterprise.html","Portfolios and groups"]]},
  {t:"Company",items:[["About","about.html"],["Contact","contact.html"]]},
  {t:"Research",items:[["Research & Insights","research-insights.html"],["Market Intelligence","blog.html","The blog"],["How Multifamily Visibility Works","multifamily-marketing-agency.html"],["2026 Multifamily Visibility Report","2026-multifamily-visibility-report.html"]]}
 ];

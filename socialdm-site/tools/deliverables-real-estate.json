@@ -1,0 +1,54 @@
+{
+ "heading": "What&rsquo;s inside, for agents and teams",
+ "title": "The same system, built for how clients choose an agent.",
+ "items": [
+  {
+   "icon": "pulse",
+   "name": "Weekly Pulse",
+   "cadence": "Every Friday",
+   "text": "A one page read on how you showed up this week, and the one thing to do next."
+  },
+  {
+   "icon": "trend",
+   "name": "Lift Score",
+   "cadence": "Weekly",
+   "text": "One number that shows whether you are getting easier to find in your market."
+  },
+  {
+   "icon": "spark",
+   "name": "AI Shortlist",
+   "cadence": "Weekly",
+   "text": "Know whether AI assistants recommend you when people ask for an agent, and who they recommend instead."
+  },
+  {
+   "icon": "target",
+   "name": "Map Reach",
+   "cadence": "Weekly",
+   "text": "Where you appear in Google Maps across the neighborhoods you sell in."
+  },
+  {
+   "icon": "calendar",
+   "name": "Daily Presence",
+   "cadence": "Every week",
+   "text": "Fresh posts that keep your name in front of buyers and sellers, written for your market."
+  },
+  {
+   "icon": "message",
+   "name": "Review Desk",
+   "cadence": "Ongoing",
+   "text": "Review replies in your voice that turn happy clients into proof for the next one."
+  },
+  {
+   "icon": "chart",
+   "name": "Snapshot",
+   "cadence": "Monthly",
+   "text": "Calls, website clicks and direction requests from Google, in plain language."
+  },
+  {
+   "icon": "play",
+   "name": "ClearView",
+   "cadence": "Monthly",
+   "text": "Your social report: what posted, what people engaged with and what changes next."
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "heading": "Built for agents, teams and brokerages",
+ "items": [
+  {
+   "icon": "users",
+   "name": "",
+   "text": "Individual Agents"
+  },
+  {
+   "icon": "users",
+   "name": "",
+   "text": "Teams"
+  },
+  {
+   "icon": "building",
+   "name": "",
+   "text": "Brokerages"
+  },
+  {
+   "icon": "key",
+   "name": "",
+   "text": "Title Reps"
+  },
+  {
+   "icon": "star",
+   "name": "",
+   "text": "Luxury Listings"
+  },
+  {
+   "icon": "pin",
+   "name": "",
+   "text": "Relocation Buyers"
+  },
+  {
+   "icon": "trend",
+   "name": "",
+   "text": "Market Updates"
+  },
+  {
+   "icon": "send",
+   "name": "",
+   "text": "Just Listed And Just Sold"
+  },
+  {
+   "icon": "calendar",
+   "name": "",
+   "text": "Open Houses"
+  },
+  {
+   "icon": "message",
+   "name": "",
+   "text": "Google Reviews"
+  },
+  {
+   "icon": "spark",
+   "name": "",
+   "text": "AI Visibility"
+  },
+  {
+   "icon": "flag",
+   "name": "",
+   "text": "Local Expertise"
+  }
+ ]
+}

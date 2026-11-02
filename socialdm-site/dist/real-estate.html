@@ -1,86 +1,189 @@
 <!doctype html><html lang="en" data-base="/" data-prod="1"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ6LRXJV21"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-WJ6LRXJV21');</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Real Estate Agent Marketing and SEO | The SocialDM</title>
+<title>Real Estate Marketing for Agents and Teams | The SocialDM</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@300;500;700;800&display=swap">
 <link rel="stylesheet" href="/site.css"><link rel="stylesheet" href="blog.css">
 <style>
-.vs-hero h1{max-width:18ch;font-size:clamp(40px,5.8vw,78px)}
-.fw{counter-reset:fw}
-.fw>div{position:relative;padding-top:64px}
-.fw>div::before{counter-increment:fw;content:"0" counter(fw);position:absolute;top:26px;left:28px;font:600 12px/1 var(--body);letter-spacing:.22em;color:var(--sky)}
-@media (max-width:860px){.split{grid-template-columns:minmax(0,1fr);gap:40px}.shot{aspect-ratio:1/1}.block{padding-block:80px}.cta{padding:64px 24px;border-radius:28px}}
+.re{--sky:#E8B95A;--mist:#F3D79A;--gold:#E8B95A;--gold2:#F3D79A}
+.re-hero{position:relative;min-height:min(92vh,860px);display:grid;align-items:end;overflow:hidden;background:#07060F}
+.re-hero .bg{position:absolute;inset:0;background:url(p318171560.jpg) center/cover no-repeat;transform:scale(1.04);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.re-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,6,15,.25) 0%,rgba(7,6,15,.35) 40%,rgba(7,6,15,.94) 88%)}
+.re-hero .wrap{position:relative;z-index:2;padding-block:140px 90px;display:grid;gap:22px}
+.re-hero h1{font:700 clamp(46px,7.6vw,112px)/.98 var(--head);letter-spacing:-.05em;max-width:12ch;margin:0}
+.re-hero h1 span{background:linear-gradient(90deg,#F3D79A,#E8B95A 60%,#C99A3E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.re-hero p{max-width:54ch;color:rgba(255,255,255,.82);font-size:clamp(17px,1.5vw,20px);margin:0}
+.re-hero .ctas{justify-content:flex-start;margin-top:10px}
+.btn-gold{background:linear-gradient(180deg,#F3D79A,#E8B95A);color:#14100A}
+.btn-gold:hover{filter:brightness(1.06)}
+.glass{position:absolute;z-index:3;background:rgba(16,14,30,.55);-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:14px 16px;color:#fff;font:500 14px/1.35 var(--body);box-shadow:0 20px 50px rgba(0,0,0,.35);animation:floaty 6s ease-in-out infinite}
+.glass small{display:block;font:600 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);margin-bottom:6px}
+.glass{max-width:270px}.g1{right:4%;top:15%}.g2{right:4%;top:29%;animation-delay:-2s}.g3{right:4%;top:43%;animation-delay:-4s}
+@keyframes floaty{50%{transform:translateY(-10px)}}
+@media (max-width:1240px){.glass{display:none}}
+/* path chooser */
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:40px}
+.path{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#100E20;display:flex;flex-direction:column;min-width:0}
+.path .ph{aspect-ratio:3/2;overflow:hidden}.path .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.path:hover .ph img{transform:scale(1.04)}
+.path .pb{padding:30px 30px 32px;display:grid;gap:14px;flex:1;align-content:start}
+.path .who{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.path h3{font:700 clamp(26px,2.8vw,36px)/1.08 var(--head);letter-spacing:-.03em}
+.path .price{font:700 22px/1 var(--head)}.path .price em{font:500 14px var(--body);font-style:normal;color:var(--dim);margin-left:6px}
+.path ul{list-style:none;padding:0;margin:4px 0 6px;display:grid;gap:10px}
+.path li{position:relative;padding-left:26px;color:var(--soft);font-size:15.5px}
+.path li::before{content:"";position:absolute;left:0;top:.45em;width:12px;height:12px;border:1.5px solid var(--gold);border-radius:3px;background:rgba(232,185,90,.15)}
+.path .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.path.sig{background:linear-gradient(160deg,#17130A,#0E0C18 60%)}
+.path.sig::before{content:"LocalLift Signature";position:absolute;top:18px;right:18px;z-index:2;font:700 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#14100A;background:var(--gold);padding:7px 10px;border-radius:6px}
+/* AI phone */
+.ai-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.phone{justify-self:center;width:min(340px,86vw);aspect-ratio:9/15;border-radius:46px;padding:14px;background:linear-gradient(160deg,#2A2740,#0B0A16);box-shadow:0 40px 90px rgba(0,0,0,.55),inset 0 0 0 1.5px rgba(255,255,255,.12)}
+.screen{height:100%;border-radius:34px;background:#0F0E1A;overflow:hidden;display:flex;flex-direction:column;padding:46px 16px 18px;gap:12px;position:relative}
+.screen::before{content:"";position:absolute;top:12px;left:50%;width:96px;height:26px;margin-left:-48px;border-radius:14px;background:#000}
+.app{font:600 12px/1 var(--body);color:var(--dim);text-align:center;letter-spacing:.06em}
+.bub{max-width:88%;padding:11px 14px;border-radius:18px;font:400 14px/1.45 var(--body);opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.bub.me{align-self:flex-end;background:#3A3AF0;color:#fff;border-bottom-right-radius:6px}
+.bub.ai{align-self:flex-start;background:#1C1A2E;color:rgba(255,255,255,.88);border-bottom-left-radius:6px}
+.bub.ai ol{margin:6px 0 0;padding-left:18px}.bub.ai li{margin:3px 0}
+.bub.ai li.you{color:#14100A;background:linear-gradient(90deg,#F3D79A,#E8B95A);border-radius:6px;padding:2px 6px;margin-left:-6px;font-weight:600;list-style-position:inside}
+.phone.on .bub{opacity:1;transform:none}
+.phone.on .b2{transition-delay:1.1s}.phone.on .b3{transition-delay:2.3s}
+.typing{display:inline-flex;gap:4px}.typing i{width:6px;height:6px;border-radius:50%;background:var(--dim);animation:dot 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{50%{opacity:.25}}
+/* fanned posts */
+.fan{position:relative;height:440px;justify-self:center;width:min(520px,100%)}
+.post-card{position:absolute;left:50%;top:20px;width:250px;margin-left:-125px;border-radius:18px;background:#fff;color:#16132E;box-shadow:0 30px 60px rgba(0,0,0,.45);overflow:hidden;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.post-card .pc-top{display:flex;align-items:center;gap:8px;padding:10px 12px;font:600 12px/1 var(--body)}
+.post-card .pc-top i{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#F3D79A,#C99A3E)}
+.post-card .pc-img{aspect-ratio:1;display:grid;place-items:end start;padding:16px;color:#fff;font:700 22px/1.1 var(--head);letter-spacing:-.02em}
+.post-card .pc-img small{display:block;font:600 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;opacity:.85;margin-bottom:8px}
+.post-card .pc-act{display:flex;gap:12px;padding:10px 12px 12px;font-size:16px}
+.fan.on .c1{transform:translateX(-150px) rotate(-9deg)}
+.fan.on .c3{transform:translateX(150px) rotate(9deg)}
+.fan.on .c2{transform:translateY(-14px)}
+@media (max-width:620px){.fan.on .c1{transform:translateX(-70px) rotate(-8deg)}.fan.on .c3{transform:translateX(70px) rotate(8deg)}.fan{height:400px}.post-card{width:210px;margin-left:-105px}}
+@media (max-width:900px){.paths,.ai-split{grid-template-columns:minmax(0,1fr)}.ai-split{gap:40px}}
+@media (prefers-reduced-motion:reduce){.re-hero .bg,.glass,.typing i{animation:none}.post-card{transition:none}}
+.re .faq summary::after{color:var(--gold)}
 </style>
-<link rel="canonical" href="https://www.thesocialdm.com/real-estate"><link rel="icon" href="/logo.png"><meta name="description" content="Social, search and Google Business Profile work that makes real estate agents and teams the name people already trust before the first conversation."><meta property="og:type" content="website"><meta property="og:site_name" content="The SocialDM"><meta property="og:title" content="Real Estate Agent Marketing and SEO | The SocialDM"><meta property="og:description" content="Social, search and Google Business Profile work that makes real estate agents and teams the name people already trust before the first conversation."><meta property="og:url" content="https://www.thesocialdm.com/real-estate"><meta property="og:image" content="https://www.thesocialdm.com/logo.png"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Real estate agent marketing", "serviceType": "Real estate agent marketing", "url": "https://www.thesocialdm.com/real-estate", "description": "Social, search and Google Business Profile work that makes real estate agents and teams the name people already trust before the first conversation.", "provider": {"@type": "Organization", "@id": "https://www.thesocialdm.com/#organization", "name": "The SocialDM", "url": "https://www.thesocialdm.com/"}, "areaServed": {"@type": "Country", "name": "United States"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you work with individual agents or teams?", "acceptedAnswer": {"@type": "Answer", "text": "Both. A solo agent and a team need different plans, so we scope the work after the visibility check."}}, {"@type": "Question", "name": "Do you run paid ads?", "acceptedAnswer": {"@type": "Answer", "text": "When they fit the plan. Many agents get more from a strong profile, steady reviews and useful local content before spending on ads."}}, {"@type": "Question", "name": "Will you post as me?", "acceptedAnswer": {"@type": "Answer", "text": "We draft, you approve. Nothing goes out in your name without your sign off."}}]}</script></head><body>
+<link rel="canonical" href="https://www.thesocialdm.com/real-estate"><link rel="icon" href="/logo.png"><meta name="description" content="Social, Google and AI visibility for real estate agents, teams and brokerages. Individual agents start with LocalLift Signature at $199 a month, no contract."><meta property="og:type" content="website"><meta property="og:site_name" content="The SocialDM"><meta property="og:title" content="Real Estate Marketing for Agents and Teams | The SocialDM"><meta property="og:description" content="Social, Google and AI visibility for real estate agents, teams and brokerages. Individual agents start with LocalLift Signature at $199 a month, no contract."><meta property="og:url" content="https://www.thesocialdm.com/real-estate"><meta property="og:image" content="https://www.thesocialdm.com/logo.png"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Real estate agent marketing", "serviceType": "Real estate agent marketing", "url": "https://www.thesocialdm.com/real-estate", "description": "Social, Google and AI visibility for real estate agents, teams and brokerages. Individual agents start with LocalLift Signature at $199 a month, no contract.", "provider": {"@type": "Organization", "@id": "https://www.thesocialdm.com/#organization", "name": "The SocialDM", "url": "https://www.thesocialdm.com/"}, "areaServed": {"@type": "Country", "name": "United States"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between LocalLift Signature and working with The SocialDM directly?", "acceptedAnswer": {"@type": "Answer", "text": "LocalLift Signature is our done for you weekly posting plan for individual agents, at $199 a month with no contract. Teams and brokerages work with The SocialDM directly on a custom plan that covers social, Google and AI visibility across every agent."}}, {"@type": "Question", "name": "Do you work with individual agents, teams and brokerages?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Individual agents usually start with LocalLift Signature. Teams and brokerages get a plan scoped to the number of agents and markets."}}, {"@type": "Question", "name": "Do you work with title reps?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. LocalLift Signature works for title reps as well as agents."}}, {"@type": "Question", "name": "Will you post as me?", "acceptedAnswer": {"@type": "Answer", "text": "With LocalLift Signature, posts are prepared for your market and scheduled for you, and you can reply any time if something looks off. Team and brokerage plans include an approval step for every agent and the brand."}}, {"@type": "Question", "name": "Do you run paid ads?", "acceptedAnswer": {"@type": "Answer", "text": "When they fit the plan. Many agents get more from a strong profile, steady reviews and useful local content before spending on ads."}}]}</script></head><body>
 <div id="site-header"><nav class="crawl-nav" aria-label="Site links"><a href="/">Home</a><a href="/multifamily-marketing-agency">Multifamily marketing</a><a href="/locallift">LocalLift</a><a href="/medical">Medical</a><a href="/real-estate">Real Estate</a><a href="/hospitality">Hospitality</a><a href="/enterprise">Enterprise</a><a href="/blog">Market Intelligence blog</a><a href="/research-insights">Research and Insights</a><a href="/2026-multifamily-visibility-report">2026 Multifamily Visibility Report</a><a href="/about">About</a><a href="/contact">Contact</a></nav></div>
-<main>
-  <section class="hero pg-hero vs-hero">
+<main class="re">
+  <section class="re-hero">
+    <div class="bg" role="img" aria-label="Modern luxury home with an infinity pool"></div>
+    <div class="glass g1"><small>Asked AI</small>Who are the best real estate agents near me?</div>
+    <div class="glass g2"><small>New review</small><span style="color:#F3D79A;letter-spacing:2px">&#9733;&#9733;&#9733;&#9733;&#9733;</span> &ldquo;Sold over asking.&rdquo;</div>
+    <div class="glass g3"><small>Just listed</small>Posted 7:02 am &middot; 3 platforms</div>
     <div class="wrap">
-      <div class="eyebrow">Real Estate Visibility System</div>
-      <h1>Attention through social.<br>Authority through search.<br><span>Trust before the first conversation.</span></h1>
-      <p>The SocialDM builds visibility infrastructure for real estate agents and teams.</p>
-      <div class="ctas"><a class="btn btn-light" href="/contact">Get your visibility plan</a><a class="btn btn-line" href="#framework">See the framework</a></div>
+      <div class="eyebrow">Real Estate</div>
+      <h1>Be the agent they <span>already know.</span></h1>
+      <p>Social, Google and AI working from one plan, so buyers and sellers trust you before the first call. For individual agents, teams and brokerages.</p>
+      <div class="ctas"><a class="btn btn-gold" href="#paths">Find your plan</a><a class="btn btn-line" href="https://www.localliftsignature.com" target="_blank" rel="noopener">Free AI Visibility Report &#8599;</a></div>
     </div>
   </section>
+  <section class="proof-row stat-ticker" aria-label="Built for agents, teams and brokerages"><div class="wrap"><div class="eyebrow">Built for agents, teams and brokerages</div></div><div class="marquee"><ul class="mq-track"><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 15c2.4.6 4 2.6 4 6"/></svg></span>Individual Agents</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 15c2.4.6 4 2.6 4 6"/></svg></span>Teams</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-4h6v4M8 8h2M14 8h2M8 12h2M14 12h2"/></svg></span>Brokerages</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></span>Title Reps</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span>Luxury Listings</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>Relocation Buyers</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Market Updates</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg></span>Just Listed And Just Sold</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>Open Houses</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 4h16v12H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span>Google Reviews</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></span>AI Visibility</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M5 21V4M5 4h12l-2 4 2 4H5"/></svg></span>Local Expertise</li></ul><ul class="mq-track" aria-hidden="true"><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 15c2.4.6 4 2.6 4 6"/></svg></span>Individual Agents</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 15c2.4.6 4 2.6 4 6"/></svg></span>Teams</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-4h6v4M8 8h2M14 8h2M8 12h2M14 12h2"/></svg></span>Brokerages</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></span>Title Reps</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span>Luxury Listings</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>Relocation Buyers</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>Market Updates</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg></span>Just Listed And Just Sold</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>Open Houses</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 4h16v12H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span>Google Reviews</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></span>AI Visibility</li><li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M5 21V4M5 4h12l-2 4 2 4H5"/></svg></span>Local Expertise</li></ul></div></section>
 
-  <section class="block" style="padding-top:40px">
-    <div class="wrap split">
-      <div>
-        <div class="eyebrow">How it works</div>
-        <ul class="list">
-          <li>Social creates awareness and local relevance.</li>
-          <li>Structured search authority ensures you show up when buyers and sellers research, compare, and decide.</li>
-        </ul>
-        <p class="quote">We position you as the <b>trusted expert</b> before the first conversation ever happens.</p>
+  <section class="block" id="paths" style="scroll-margin-top:90px">
+    <div class="wrap">
+      <div class="eyebrow">Two ways to work with us</div>
+      <h2 class="h2">One system. Sized for you.</h2>
+      <div class="paths">
+        <article class="path sig">
+          <div class="ph"><img src="/p8482527.jpg" alt="Real estate agent on a phone call beside a home for sale sign" loading="lazy"></div>
+          <div class="pb">
+            <div class="who">For individual agents</div>
+            <h3>Fresh, local proof behind your name, every week.</h3>
+            <div class="price">$199<em>a month, month to month, no contract</em></div>
+            <ul>
+              <li>Three posts a week, built for your market and your brand.</li>
+              <li>Your free AI Visibility Report, by email within minutes.</li>
+              <li>Posts scheduled for you once your accounts are connected.</li>
+              <li>Nothing to approve. Reply any time and we make it right.</li>
+            </ul>
+            <div class="row"><a class="btn btn-gold" href="https://www.localliftsignature.com" target="_blank" rel="noopener">Start LocalLift Signature &#8599;</a></div>
+          </div>
+        </article>
+        <article class="path">
+          <div class="ph"><img src="/p8729998.jpg" alt="Real estate professionals reviewing a contract with clients in a modern office" loading="lazy"></div>
+          <div class="pb">
+            <div class="who">For teams and brokerages</div>
+            <h3>Every agent visible. One standard across the brand.</h3>
+            <div class="price">Custom<em>scoped after a visibility check</em></div>
+            <ul>
+              <li>Brand, team and agent profiles that look and sound like one company.</li>
+              <li>Social, Google and AI visibility managed together.</li>
+              <li>A presence that helps you recruit as well as sell.</li>
+              <li>Reporting by agent and by market, every week.</li>
+            </ul>
+            <div class="row"><a class="btn btn-light" href="/contact">Get your visibility plan</a></div>
+          </div>
+        </article>
       </div>
-      <div class="shot"><img src="/p106399.jpg" alt="Two story family home with lit windows at dusk"><div class="tag"><b>Buyers and sellers</b>They research, compare, and decide before they call.</div></div>
-    </div>
-  </section>
-
-  <section class="block" id="framework" style="padding-top:0">
-    <div class="wrap">
-      <div class="eyebrow">Three stages</div>
-      <h2 class="h2">The Visibility Framework for Realtors</h2>
-      <div class="cards fw">
-        <div><b>Attention</b><span>High impact social engineered to build familiarity, local relevance, and authority.</span></div>
-        <div><b>Discovery</b><span>Search authority, local positioning, and structured content that establishes trust before the listing appointment.</span></div>
-        <div><b>Performance</b><span>Lead generation intelligence, competitive visibility tracking, and measurable brand growth.</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="included" style="padding-top:0">
-    <div class="wrap">
-      <div class="eyebrow">What is included</div>
-      <h2 class="h2">The pieces that make you the name people already know.</h2>
-      <div class="cards two"><div><b>Short form social</b><span>Local, recognizable video and posts about your market and listings, built to make your name familiar before someone needs an agent.</span></div><div><b>Google Business Profile and reviews</b><span>A complete profile, a simple way to ask past clients for reviews, and replies that sound like you.</span></div><div><b>Neighborhood and market pages</b><span>Pages that answer the questions buyers and sellers search about your area, so search engines and AI assistants have something real to cite.</span></div><div><b>Visibility tracking</b><span>Regular checks of where you appear for agent searches in your market, and who appears instead.</span></div></div>
     </div>
   </section>
 
   <section class="block" style="padding-top:0">
-    <div class="wrap">
-      <div class="eyebrow">How we start</div>
-      <h2 class="h2">From first call to first report.</h2>
-      <div class="cards"><div><b>01 Visibility check</b><span>We search the way your clients do, on Google Search, Google Maps and AI assistants, and record where you show up and where competitors do instead.</span></div><div><b>02 Plan</b><span>You get a written plan that lists the gaps in order of impact, what we will do about each one, and what we will not touch.</span></div><div><b>03 Reporting</b><span>We report against the baseline from the visibility check, in plain language, so you can see what moved and what did not.</span></div></div>
-      <div class="faq">
-        <details><summary>Do you work with individual agents or teams?</summary><p>Both. A solo agent and a team need different plans, so we scope the work after the visibility check.</p></details>
-        <details><summary>Do you run paid ads?</summary><p>When they fit the plan. Many agents get more from a strong profile, steady reviews and useful local content before spending on ads.</p></details>
-        <details><summary>Will you post as me?</summary><p>We draft, you approve. Nothing goes out in your name without your sign off.</p></details>
+    <div class="wrap ai-split">
+      <div>
+        <div class="eyebrow">The new first impression</div>
+        <h2 class="h2">When they ask AI for an agent, are you the answer?</h2>
+        <p style="color:var(--soft);max-width:50ch">More buyers and sellers now ask ChatGPT, Gemini or Google&rsquo;s AI who to call. The agents those tools name are the ones with consistent, local, credible proof online. That is what we build.</p>
+      </div>
+      <div class="phone" aria-hidden="true"><div class="screen">
+        <div class="app">AI assistant</div>
+        <div class="bub me b1">Who are the best real estate agents in Scottsdale?</div>
+        <div class="bub ai b2"><span class="typing"><i></i><i></i><i></i></span></div>
+        <div class="bub ai b3">Here are agents with strong local reviews and recent activity:<ol><li class="you">You, your brokerage</li><li>Agent B</li><li>Agent C</li></ol></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap ai-split">
+      <div class="fan" aria-hidden="true">
+        <div class="post-card c1"><div class="pc-top"><i></i>yourname.realty</div><div class="pc-img" style="background:linear-gradient(160deg,#3A2F7A,#140F3A)"><div><small>Market update</small>Prices are up. Buyers can still negotiate.</div></div><div class="pc-act">&#9825; &#128172; &#10148;</div></div>
+        <div class="post-card c3"><div class="pc-top"><i></i>yourname.realty</div><div class="pc-img" style="background:linear-gradient(160deg,#C99A3E,#5A3E10)"><div><small>Local event</small>This weekend in your neighborhood.</div></div><div class="pc-act">&#9825; &#128172; &#10148;</div></div>
+        <div class="post-card c2"><div class="pc-top"><i></i>yourname.realty</div><div class="pc-img" style="background:url(p318171560.jpg) center/cover"><div style="text-shadow:0 2px 12px rgba(0,0,0,.5)"><small>Just listed</small>Modern living, minutes from everything.</div></div><div class="pc-act">&#10084;&#65039; &#128172; &#10148;</div></div>
+      </div>
+      <div>
+        <div class="eyebrow">A week of you, everywhere</div>
+        <h2 class="h2">Your name in front of buyers and sellers, every week.</h2>
+        <p style="color:var(--soft);max-width:50ch">Market updates, buyer and seller tips and local events, written for your market and posted where people scroll. Google sees an active, local expert. So do the people choosing who to call.</p>
       </div>
     </div>
   </section>
 
+  <section class="block dl-sec" style="padding-top:0" aria-label="What is inside"><div class="wrap"><div class="eyebrow">What&rsquo;s inside, for agents and teams</div><h2 class="h2">The same system, built for how clients choose an agent.</h2><div class="dl-grid"><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></span><span class="dl-cad">Every Friday</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Weekly Pulse</h3><p>A one page read on how you showed up this week, and the one thing to do next.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Lift Score</h3><p>One number that shows whether you are getting easier to find in your market.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>AI Shortlist</h3><p>Know whether AI assistants recommend you when people ask for an agent, and who they recommend instead.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Map Reach</h3><p>Where you appear in Google Maps across the neighborhoods you sell in.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span class="dl-cad">Every week</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Daily Presence</h3><p>Fresh posts that keep your name in front of buyers and sellers, written for your market.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 4h16v12H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="dl-cad">Ongoing</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Review Desk</h3><p>Review replies in your voice that turn happy clients into proof for the next one.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="7"/><rect x="11" y="7" width="3" height="11"/><rect x="17" y="3" width="3" height="15"/></svg></span><span class="dl-cad">Monthly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Snapshot</h3><p>Calls, website clicks and direction requests from Google, in plain language.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="14"/><path d="M10 9l5 3-5 3z"/></svg></span><span class="dl-cad">Monthly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>ClearView</h3><p>Your social report: what posted, what people engaged with and what changes next.</p></div></div></div></section>
+
   <section class="block proof-tm" style="padding-top:0"><div class="wrap tm-head"><div><div class="eyebrow">What clients say</div><h2 class="h2">Rated 5.0 on Google.</h2></div><p class="tm-note">From 5 Google reviews of The SocialDM.</p></div><div class="marquee tm-marquee"><div class="mq-track"><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Working with TheSocialDM has strengthened my professional visibility and brand consistency in the Arizona real estate market.&rdquo;</blockquote><figcaption><b>Jody Sayler</b><span>Broker, Arizona real estate &middot; Google review</span></figcaption></figure><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Working with TheSocialDM has strengthened my visibility and professional presence within the real estate industry.&rdquo;</blockquote><figcaption><b>Shari Griffin</b><span>Real estate client &middot; Google review</span></figcaption></figure><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Since working with Social DM, my social media has become more consistent, more professional, and much more strategic.&rdquo;</blockquote><figcaption><b>Alex Roberts</b><span>Client &middot; Google review</span></figcaption></figure></div><div class="mq-track" aria-hidden="true"><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Working with TheSocialDM has strengthened my professional visibility and brand consistency in the Arizona real estate market.&rdquo;</blockquote><figcaption><b>Jody Sayler</b><span>Broker, Arizona real estate &middot; Google review</span></figcaption></figure><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Working with TheSocialDM has strengthened my visibility and professional presence within the real estate industry.&rdquo;</blockquote><figcaption><b>Shari Griffin</b><span>Real estate client &middot; Google review</span></figcaption></figure><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Since working with Social DM, my social media has become more consistent, more professional, and much more strategic.&rdquo;</blockquote><figcaption><b>Alex Roberts</b><span>Client &middot; Google review</span></figcaption></figure></div></div></section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="eyebrow">Questions</div>
+      <h2 class="h2">Frequently asked questions.</h2>
+      <div class="faq">
+        <details><summary>What is the difference between LocalLift Signature and working with The SocialDM directly?</summary><p>LocalLift Signature is our done for you weekly posting plan for individual agents, at $199 a month with no contract. Teams and brokerages work with The SocialDM directly on a custom plan that covers social, Google and AI visibility across every agent.</p></details>
+        <details><summary>Do you work with individual agents, teams and brokerages?</summary><p>Yes. Individual agents usually start with LocalLift Signature. Teams and brokerages get a plan scoped to the number of agents and markets.</p></details>
+        <details><summary>Do you work with title reps?</summary><p>Yes. LocalLift Signature works for title reps as well as agents.</p></details>
+        <details><summary>Will you post as me?</summary><p>With LocalLift Signature, posts are prepared for your market and scheduled for you, and you can reply any time if something looks off. Team and brokerage plans include an approval step for every agent and the brand.</p></details>
+        <details><summary>Do you run paid ads?</summary><p>When they fit the plan. Many agents get more from a strong profile, steady reviews and useful local content before spending on ads.</p></details>
+      </div>
+    </div>
+  </section>
   <section class="block paper-strip" style="padding-top:0"><div class="wrap"><div class="eyebrow">Latest insights</div><h2 class="h2">Field notes for real estate teams.</h2><div class="posts"><a class="post" href="/blog/googles-new-ai-powered-reality-for-realtors-"><div class="pimg"><img src="/images/blog/40thesocialdm.com--76661.jpg" alt="" loading="lazy"></div><time datetime="2024-05-23">May 23, 2024</time><h3>Google’s New AI-Powered Reality for Realtors 🤖</h3><p>Helping you Succeed!</p><span class="more">Read the article</span></a><a class="post" href="/blog/blog-post-title-one-fez97"><div class="pimg"><img src="/images/blog/sdm-blog-socialmedai-seo-4.29.24-88362.jpg" alt="" loading="lazy"></div><time datetime="2019-03-11">Mar 11, 2019</time><h3>Social Media Search has Passed Google Search: What Real Estate Professionals Need to Know</h3><p>It all begins with an idea.</p><span class="more">Read the article</span></a></div><p style="margin-top:22px"><a class="btn btn-line" href="/blog/topics/real-estate">All real estate articles</a></p></div></section>
+
   <section class="wrap">
     <div class="cta">
-      <div class="eyebrow">Real Estate Visibility System</div>
-      <h2 style="margin-top:16px">Trust before the first conversation.</h2>
-      <a class="btn btn-light" href="/contact">Get your visibility plan</a>
+      <div class="eyebrow">Real estate</div>
+      <h2 style="margin-top:16px">Be the name they already trust.</h2>
+      <div class="ctas"><a class="btn btn-gold" href="https://www.localliftsignature.com" target="_blank" rel="noopener">Individual agents: LocalLift Signature &#8599;</a><a class="btn btn-line" href="/contact">Teams and brokerages: get a plan</a></div>
     </div>
   </section>
 </main>
 <div id="site-footer"><div class="crawl-nav"><p>The SocialDM, 3104 E Camelback Rd #2161, Phoenix AZ 85016. info@thesocialdm.com</p><a href="https://www.instagram.com/the.socialdm/">www.instagram.com</a><a href="https://www.facebook.com/thesocialdm">www.facebook.com</a><a href="https://www.tiktok.com/@thesocialdm">www.tiktok.com</a><a href="https://www.youtube.com/@thesocialdm">www.youtube.com</a></div></div>
 <script src="/chrome.js"></script>
-
+<script>(function(){var els=document.querySelectorAll('.phone,.fan');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');if(e.target.classList.contains('phone')){var t=e.target.querySelector('.b2');setTimeout(function(){t.style.display='none'},2300)}io.unobserve(e.target)}})},{threshold:.35});els.forEach(function(e){io.observe(e)})})();</script>
 </body></html>
