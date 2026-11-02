@@ -200,3 +200,24 @@ h1,h2,h3{letter-spacing:-.035em}
 
 /* Plain links for crawlers that do not run JavaScript; replaced by chrome.js for visitors */
 .crawl-nav{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Social proof: community marquee and Google review ticker */
+.proof-row{padding-block:34px 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proof-row .eyebrow{text-align:center;margin-bottom:20px}
+.marquee{display:flex;overflow:hidden;gap:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-track{flex:none;display:flex;align-items:center;gap:56px;padding:0 28px;margin:0;list-style:none;animation:mq 60s linear infinite}
+.proof-row .mq-track li{font:700 clamp(17px,1.6vw,21px)/1 var(--head);letter-spacing:.02em;color:var(--mist);white-space:nowrap;opacity:.85}
+.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-100%)}}
+.tm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.tm-note{color:var(--dim);font-size:14px;margin:0}
+.tm-marquee .mq-track{gap:18px;padding:0 9px;animation-duration:80s;align-items:stretch}
+.tm-card{flex:none;width:min(420px,82vw);margin:0;border-radius:20px;padding:26px 26px 22px;background:linear-gradient(160deg,rgba(75,79,184,.24),rgba(30,26,77,.4));border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.tm-stars{color:#F5C451;letter-spacing:2px;font-size:15px}
+.tm-card blockquote{margin:0;font-size:17px;line-height:1.55;color:var(--ink)}
+.tm-card figcaption{margin-top:auto;display:grid;gap:2px}
+.tm-card figcaption b{font-weight:600}
+.tm-card figcaption span{font-size:13px;color:var(--dim)}
+.tm-static{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:16px}
+.tm-static .tm-card{width:auto}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}.marquee{overflow-x:auto}.mq-track[aria-hidden]{display:none}}

@@ -1,0 +1,48 @@
+{
+ "source": "Google Business Profile reviews for The SocialDM, pulled via Windsor.ai on 2026-11-02. Quotes are verbatim excerpts (first sentences only, no edits). Rating 5.0 from 5 reviews.",
+ "rating": 5.0,
+ "count": 5,
+ "reviews": [
+  {
+   "name": "Katie Mitchell",
+   "role": "Multifamily client",
+   "vertical": [
+    "multifamily",
+    "home"
+   ],
+   "date": "2026-02-27",
+   "quote": "Working with TheSocialDM has strengthened our brand visibility and positioning across our apartment communities. Their strategic, research-driven approach goes beyond content creation."
+  },
+  {
+   "name": "Jody Sayler",
+   "role": "Broker, Arizona real estate",
+   "vertical": [
+    "real-estate",
+    "home"
+   ],
+   "date": "2026-03-22",
+   "quote": "Working with TheSocialDM has strengthened my professional visibility and brand consistency in the Arizona real estate market."
+  },
+  {
+   "name": "Shari Griffin",
+   "role": "Real estate client",
+   "vertical": [
+    "real-estate",
+    "home"
+   ],
+   "date": "2026-02-28",
+   "quote": "Working with TheSocialDM has strengthened my visibility and professional presence within the real estate industry."
+  },
+  {
+   "name": "Alex Roberts",
+   "role": "Client",
+   "vertical": [
+    "real-estate",
+    "home",
+    "multifamily"
+   ],
+   "date": "2026-03-03",
+   "quote": "Since working with Social DM, my social media has become more consistent, more professional, and much more strategic."
+  }
+ ]
+}

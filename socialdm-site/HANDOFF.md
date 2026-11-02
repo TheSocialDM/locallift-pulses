@@ -32,6 +32,8 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 
 - GA4: the Squarespace site used G-WJ6LRXJV21 (GA4 property "TheSocial DM", Windsor id 429000303). seo_layer.py now adds that tag to every production page, and thank-you fires generate_lead. Search Console has a URL prefix property https://www.thesocialdm.com/ with no meta verification tag in the old HTML, so it is verified by GA, DNS or file; keep GA tag and DNS TXT records. Windsor.ai has GA4, Search Console and GBP (locations/13937784954903437869 "The SocialDM") connected for reads.
 
+- Social proof (tools/proof.py, markers <!--proof:communities--> and <!--proof:testimonials:GROUP--> in src pages): scrolling community name banner (tools/communities.json, names Michael approved; add logo files to tools/logos/ later) on home, multifamily, LocalLift; Google review ticker (tools/testimonials.json, verbatim first sentences of the 4 written Google reviews, 5.0 from 5) on home, multifamily, LocalLift, real estate. Refresh reviews by pulling google_my_business reviews for locations/13937784954903437869 via Windsor and updating testimonials.json. Michael approved: naming Montage in a case study, the community list, using his Google reviews.
+
 ## Still to do, in order
 1. New posts: 5 drafts are in new-posts/, written and self checked but NOT yet through Editor or approval, and dist/ does not include them yet. Do not publish until they pass. Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
 2. Thin pages: Medical, Real Estate, Hospitality, Enterprise. About and Contact headline.

@@ -297,6 +297,8 @@ for f in glob.glob(SRC + '/*.html'):
         t = t[t.rfind('<!doctype'):]
         t = re.sub(r'</body></html>\s*</body></html>\s*$', '</body></html>\n', t)
     stem = n[:-5]
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import proof; t = proof.render(t)
     canon = '/' if stem == 'index' else '/' + stem
     if '<link rel="canonical"' not in t:
         t = t.replace('</head>', f'<link rel="canonical" href="{SITE}{canon}"><link rel="icon" href="logo.png"></head>', 1)
