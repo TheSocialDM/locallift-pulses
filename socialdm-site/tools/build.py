@@ -160,9 +160,19 @@ for p in d['posts']:
     hero = local_image(p['assetUrl']) if p.get('assetUrl') else None
     posts.append(dict(slug=slug, title=undash(html.unescape(p['title']).replace('\xa0',' ')), seoTitle=undash(sd.get('seoTitle') or ''), seoDesc=undash(sd.get('seoDescription') or ''),
         excerpt=undash(ex), body=body, iso=iso, nice=nice, year=yr, hero=hero, author=p.get('author') or 'The SocialDM', updated=fmt(p['updatedOn'])[0], new=False, faq=[], alt=undash(p['title'])))
+TODAY = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=7)).strftime('%Y-%m-%d')   # Phoenix date, no DST
+VERTICALS = {'multifamily': ('Multifamily', 'Multifamily marketing insights', 'How apartment communities get found on Google Search, Google Maps, social and AI answers.'),
+             'real-estate': ('Real Estate', 'Real estate marketing insights', 'How agents and teams build visibility and trust on Google, social and AI answers.'),
+             'medical': ('Medical', 'Medical practice marketing insights', 'How practices become the trusted local choice on Google, Maps and AI answers.'),
+             'hospitality': ('Hospitality', 'Hospitality marketing insights', 'How hotels, restaurants and venues get found and booked through search, Maps and AI.'),
+             'enterprise': ('Enterprise', 'Multi location marketing insights', 'How multi location brands stay consistent and visible in every market.')}
+for _p in posts:
+    _p['vertical'] = 'real-estate' if re.search(r'realtor|real estate', _p['title'], re.I) else 'multifamily'
 for f in sorted(glob.glob(NEW + '/*.json')):
     n = json.load(open(f))
     if PROD and not n.get('approved'):   # unapproved drafts appear only in the preview
+        continue
+    if PROD and n['date'] > TODAY:      # scheduled: goes live on its date (Netlify rebuilds daily)
         continue
     iso, nice, yr = fmt(n['date'])
     hero = None
@@ -174,7 +184,7 @@ for f in sorted(glob.glob(NEW + '/*.json')):
             _w,_h = 1400, 933
         hero = (n['image'], _w, _h)
     posts.append(dict(slug=n['slug'], title=n['title'], seoTitle=n['seoTitle'], seoDesc=n['seoDescription'], excerpt=n['excerpt'], body=n['bodyHtml'], iso=iso, nice=nice, year=yr, hero=hero,
-        author='Michael Shad', updated=iso, new=True, faq=n.get('faq', []), alt=n.get('imageAlt', n['title']), takeaways=n.get('takeaways', [])))
+        author='Michael Shad', updated=iso, new=True, faq=n.get('faq', []), alt=n.get('imageAlt', n['title']), takeaways=n.get('takeaways', []), vertical=n.get('vertical', 'multifamily')))
     POST_SLUGS.add(n['slug'])
 posts.sort(key=lambda x: x['iso'], reverse=True)
 
@@ -268,6 +278,19 @@ grp = ''.join(f'<h2 class="yr" id="y{y}">{y}</h2><div class="posts">' + ''.join(
 jump = ''.join(f'<a href="#y{y}">{y}</a>' for y in years)
 main = f'''<main class="paper"><section class="hero pg-hero bl-hero"><div class="wrap"><div class="eyebrow">Market Intelligence</div><h1>How renters find <span>apartments now.</span></h1><p>Research and field notes on how apartment communities get discovered across Google Search, Google Maps and AI answers.</p><div class="jump" aria-label="Jump to year">{jump}</div></div></section>
 <section class="wrap bl" aria-label="All articles"><div class="featwrap">{card(posts[0],0,True)}<div class="report"><div><div class="eyebrow">Research</div><h3>The 2026 Multifamily Visibility Report</h3><p>How apartment communities and lease ups are being discovered across social media, Google Search, Google Maps, and AI search.</p></div><a class="btn btn-line" href="{link('2026-multifamily-visibility-report',0)}">Read the report</a></div></div>{grp}</section>{CTA(0)}</main>'''
+topics_present = [v for v in VERTICALS if any(p.get('vertical') == v for p in posts)]
+chips = ''.join(f'<a href="{link("blog/topics/" + v, 0)}">{VERTICALS[v][0]}</a>' for v in topics_present)
+main = main.replace('<div class="jump" aria-label="Jump to year">', '<div class="jump" aria-label="Topics">' + chips + '</div><div class="jump" aria-label="Jump to year">', 1)
+os.makedirs(OUT + '/blog/topics', exist_ok=True)
+for v in topics_present:
+    name, h, sub = VERTICALS[v]
+    vp = [p for p in posts if p.get('vertical') == v]
+    others = ''.join(f'<a href="{link("blog/topics/" + o, 2)}">{VERTICALS[o][0]}</a>' for o in topics_present if o != v)
+    hub = (f'<main class="paper"><section class="hero pg-hero bl-hero"><div class="wrap"><a class="back" href="{link("blog", 2)}">All articles</a>'
+           f'<div class="eyebrow" style="margin-top:18px">{name}</div><h1>{h.rsplit(" ", 1)[0]} <span>{h.rsplit(" ", 1)[1]}.</span></h1><p>{sub}</p>'
+           f'<div class="jump" aria-label="Other topics">{others}</div></div></section>'
+           f'<section class="wrap bl"><div class="posts">{"".join(card(p, 2) for p in vp)}</div></section>{CTA(2)}</main>')
+    open(f'{OUT}/blog/topics/{v}.html', 'w').write(shell(f'{h.title()} | The SocialDM', f'{sub} Articles from The SocialDM.', f'/blog/topics/{v}', 2, hub))
 open(f'{OUT}/blog.html','w').write(shell('Market Intelligence Blog | The SocialDM','Research and field notes from The SocialDM on how renters find apartment communities across Google Search, Google Maps and AI search.','/blog',0,main))
 
 # ---------- carried over pages ----------
@@ -299,6 +322,15 @@ for f in glob.glob(SRC + '/*.html'):
     stem = n[:-5]
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import proof; t = proof.render(t)
+    def _latest(m):
+        vp = [p for p in posts if p.get('vertical') == m.group(1)][:3]
+        if not vp: return ''
+        return (f'<section class="block paper-strip" style="padding-top:0"><div class="wrap"><div class="eyebrow">Latest insights</div>'
+                f'<h2 class="h2">Field notes for {VERTICALS[m.group(1)][0].lower()} teams.</h2><div class="posts">{"".join(card(p, 0) for p in vp)}</div>'
+                f'<p style="margin-top:22px"><a class="btn btn-line" href="{link("blog/topics/" + m.group(1), 0)}">All {VERTICALS[m.group(1)][0].lower()} articles</a></p></div></section>')
+    t = re.sub(r'<!--posts:([a-z-]+)-->', _latest, t)
+    if 'class="posts"' in t and 'blog.css' not in t:
+        t = t.replace('<link rel="stylesheet" href="site.css">', '<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="blog.css">', 1)
     canon = '/' if stem == 'index' else '/' + stem
     if '<link rel="canonical"' not in t:
         t = t.replace('</head>', f'<link rel="canonical" href="{SITE}{canon}"><link rel="icon" href="logo.png"></head>', 1)
@@ -340,6 +372,7 @@ if PROD:
 /blog/category/* /blog 301
 ''')
     urls = ['/'] + ['/' + os.path.basename(f)[:-5] for f in glob.glob(OUT + '/*.html') if os.path.basename(f) not in ('index.html','404.html','thank-you.html')]
+    urls += ['/blog/topics/' + os.path.basename(x)[:-5] for x in glob.glob(OUT + '/blog/topics/*.html')]
     urls += ['/apartment-seo-blog-hub/cuvee-apartments-westgate-glendale'] + [f'/blog/{p["slug"]}' for p in posts]
     open(OUT + '/sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'<url><loc>{SITE}{u}</loc></url>\n' for u in sorted(set(urls))) + '</urlset>\n')
     open(OUT + '/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')

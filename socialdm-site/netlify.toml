@@ -1,8 +1,13 @@
 # thesocialdm.com on Netlify. Site settings: branch socialdm-site, base directory socialdm-site.
-# dist/ is prebuilt and committed (tools/build.py --prod), so there is no build command.
+# Netlify runs the site builder on every deploy, so posts with a future "date" go live on that day
+# (a daily build hook, triggered from Make, rebuilds the site each morning). dist/ is also committed
+# so the last good build is always in the repo.
 [build]
   publish = "dist"
-  command = ""
+  command = "pip install -q -r requirements.txt && cd tools && python3 build.py ../src ../export/socialdm-blog-export.json ../export/socialdm-blog-images.json ../new-posts ../dist --prod"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
 
 [[headers]]
   for = "/*"
