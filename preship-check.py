@@ -92,6 +92,31 @@ def check(path):
         if re.search(r'\b' + re.escape(name) + r'\b', t):
             (problems if strict else notes).append(f'OTHER PROPERTY "{name}"')
 
+    # ---- PRODUCT / PATH HAZARD GUARD ----------------------------------------
+    # market-intel/<slug>/ is Comp Intelligence. Root <slug>/ is the Weekly Pulse.
+    # Two different products one path segment apart. Writing one to the other's path
+    # destroys a live client report and breaks an already shared link. This check
+    # fails loudly instead of relying on someone remembering. Added Nov 2 2026 after
+    # the hazard was hand checked on twelve consecutive guard runs.
+    PULSE_SLUGS = ('coya', 'fora', 'lura', 'montage', 'stillwater', 'village')
+    first_title = re.search(r'<title>(.*?)</title>', raw, re.S)
+    first_title = first_title.group(1).strip() if first_title else ''
+    looks_pulse = 'class="srcbar"' in raw or first_title.endswith('Pulse')
+    looks_comp = 'Comp Intelligence' in first_title or ('wc u' in raw and 'class="srcbar"' not in raw)
+
+    if rel in tuple(f'{s}/index.html' for s in PULSE_SLUGS) and looks_comp:
+        problems.append(
+            f'PATH HAZARD: {rel} is the Weekly Pulse path but this file reads as a '
+            f'Comp Intelligence report (title "{first_title}"). It belongs at '
+            f'market-intel/{slug}/index.html. Deploying this destroys the live Pulse.')
+
+    if rel.startswith('market-intel/') and rel.endswith('/index.html') and looks_pulse:
+        problems.append(
+            f'PATH HAZARD: {rel} is the Comp Intelligence path but this file reads as a '
+            f'Weekly Pulse (title "{first_title}"). It belongs at {slug}/index.html. '
+            f'Deploying this destroys the live Comp Intelligence report.')
+    # -------------------------------------------------------------------------
+
     if rel.startswith('market-intel'):
         missing = [c for c in ('wc u', 'wc w', 'wc p', 'wh') if c not in raw]
         if missing:
