@@ -29,30 +29,30 @@
 <!-- Hero band -->
 <tr><td style="background:#140F3A;padding:36px 32px 38px 32px;">
   <div style="font-family:'Hanken Grotesk',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#7A8FE2;">Message received</div>
-  <div style="font-family:'Hanken Grotesk',Helvetica,Arial,sans-serif;font-size:32px;line-height:38px;font-weight:700;color:#FFFFFF;margin-top:12px;">Thanks, {{FIRST_NAME}}. <span style="color:#B4C3F0;">We&rsquo;re on it.</span></div>
+  <div style="font-family:'Hanken Grotesk',Helvetica,Arial,sans-serif;font-size:32px;line-height:38px;font-weight:700;color:#FFFFFF;margin-top:12px;">Thanks, {{escapeHTML(trim(1.first_name))}}. <span style="color:#B4C3F0;">We&rsquo;re on it.</span></div>
 </td></tr>
 
 <!-- Body -->
 <tr><td style="background:#FFFFFF;padding:36px 32px 8px 32px;font-family:'Hanken Grotesk',Helvetica,Arial,sans-serif;font-size:16px;line-height:26px;color:#2A2742;">
-  <p style="margin:0 0 18px 0;">Hi {{FIRST_NAME}},</p>
+  <p style="margin:0 0 18px 0;">Hi {{escapeHTML(trim(1.first_name))}},</p>
   <p style="margin:0 0 18px 0;">Thanks for reaching out to The SocialDM. Your message reached us, and a real person will reply within one business day.</p>
-  <div style="font-size:22px;line-height:28px;font-weight:700;color:#16132E;margin:30px 0 12px 0;">What happens next</div>
+  <div style="font-size:22px;line-height:28px;font-weight:700;color:#16132E;margin:30px 0 14px 0;">What happens next</div>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-    <tr><td valign="top" style="width:28px;font-weight:700;color:#4B4FB8;padding:0 0 12px 0;">1</td><td style="padding:0 0 12px 0;">We read your note and look up your community, practice or business.</td></tr>
-    <tr><td valign="top" style="width:28px;font-weight:700;color:#4B4FB8;padding:0 0 12px 0;">2</td><td style="padding:0 0 12px 0;">We check how you show up on Google Search, Google Maps and AI answers, so the first conversation is about real gaps.</td></tr>
-    <tr><td valign="top" style="width:28px;font-weight:700;color:#4B4FB8;padding:0 0 12px 0;">3</td><td style="padding:0 0 12px 0;">We reply with next steps. If it is urgent, just reply to this email. It comes straight to us.</td></tr>
+    <tr><td valign="top" style="width:44px;font-size:13px;font-weight:700;letter-spacing:1px;color:#4B4FB8;padding:3px 0 16px 0;">01</td><td style="padding:0 0 16px 0;"><span style="font-weight:700;color:#16132E;">Strategist review</span><br>Your message goes straight to a senior strategist, not a ticket queue.</td></tr>
+    <tr><td valign="top" style="width:44px;font-size:13px;font-weight:700;letter-spacing:1px;color:#4B4FB8;padding:3px 0 16px 0;">02</td><td style="padding:0 0 16px 0;"><span style="font-weight:700;color:#16132E;">Private visibility snapshot</span><br>We prepare a confidential snapshot of where {{switch(1.interest; "Multifamily"; "your community"; "LocalLift™"; "your community"; "Medical"; "your practice"; "Real Estate"; "your business"; "Hospitality"; "your property"; "Enterprise"; "your brand across markets"; "your business")}} stands today, and where the openings are.</td></tr>
+    <tr><td valign="top" style="width:44px;font-size:13px;font-weight:700;letter-spacing:1px;color:#4B4FB8;padding:3px 0 16px 0;">03</td><td style="padding:0 0 16px 0;"><span style="font-weight:700;color:#16132E;">Strategy call</span><br>We reply within one business day to set a short call and walk you through what we found.</td></tr>
   </table>
 
   <div style="font-size:22px;line-height:28px;font-weight:700;color:#16132E;margin:26px 0 12px 0;">What you sent</div>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#F6F5FA;border:1px solid #E2E0EE;">
     <tr><td style="padding:18px 20px;font-size:15px;line-height:23px;color:#2A2742;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Name</td><td style="padding:0 0 8px 0;">{{FIRST_NAME}} {{LAST_NAME}}</td></tr>
-        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Email</td><td style="padding:0 0 8px 0;">{{EMAIL}}</td></tr>
-        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Phone</td><td style="padding:0 0 8px 0;">{{PHONE}}</td></tr>
-        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Company</td><td style="padding:0 0 8px 0;">{{COMPANY}}</td></tr>
-        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Interested in</td><td style="padding:0 0 8px 0;">{{INTEREST}}</td></tr>
-        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0;">Message</td><td style="padding:0;">{{MESSAGE}}</td></tr>
+        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Name</td><td style="padding:0 0 8px 0;">{{escapeHTML(trim(1.first_name))}} {{escapeHTML(trim(1.last_name))}}</td></tr>
+        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Email</td><td style="padding:0 0 8px 0;">{{escapeHTML(trim(1.email))}}</td></tr>
+        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Phone</td><td style="padding:0 0 8px 0;">{{ifempty(escapeHTML(trim(1.phone)); "Not given")}}</td></tr>
+        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Company</td><td style="padding:0 0 8px 0;">{{ifempty(escapeHTML(trim(1.company)); "Not given")}}</td></tr>
+        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0 0 8px 0;">Interested in</td><td style="padding:0 0 8px 0;">{{ifempty(escapeHTML(1.interest); "Not given")}}</td></tr>
+        <tr><td valign="top" style="width:130px;color:#6E6A84;padding:0;">Message</td><td style="padding:0;">{{replace(escapeHTML(trim(1.message)); newline; "<br>")}}</td></tr>
       </table>
     </td></tr>
   </table>
@@ -64,10 +64,10 @@
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1E1A4D;">
     <tr><td style="padding:30px 28px;font-family:'Hanken Grotesk',Helvetica,Arial,sans-serif;">
       <div style="font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#7A8FE2;">While you wait</div>
-      <div style="font-size:24px;line-height:30px;font-weight:700;color:#FFFFFF;margin-top:10px;">How renters find apartments now.</div>
-      <div style="font-size:15px;line-height:23px;color:#C9C6E0;margin-top:10px;">Research and field notes on how communities get discovered across Google Search, Google Maps and AI answers.</div>
+      <div style="font-size:24px;line-height:30px;font-weight:700;color:#FFFFFF;margin-top:10px;">{{switch(1.interest; "Medical"; "How patients choose a practice now."; "Real Estate"; "How clients choose an agent now."; "Hospitality"; "How guests decide where to go now."; "Enterprise"; "Visibility across every market."; "How renters find apartments now.")}}</div>
+      <div style="font-size:15px;line-height:23px;color:#C9C6E0;margin-top:10px;">{{switch(1.interest; "Medical"; "How we help practices become the trusted choice in their area."; "Real Estate"; "How we help agents and teams build trust before the first conversation."; "Hospitality"; "How we help hospitality brands turn attention into bookings."; "Enterprise"; "How we help multi market brands stay consistent and easy to find."; "Research and field notes from The SocialDM on how apartment communities get found.")}}</div>
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:22px;"><tr>
-        <td style="background:#E9E8F2;"><a href="https://www.thesocialdm.com/blog" style="display:inline-block;padding:14px 24px;font-family:'Hanken Grotesk',Helvetica,Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0A0914;text-decoration:none;">Read the research &rarr;</a></td>
+        <td style="background:#E9E8F2;"><a href="{{switch(1.interest; "Medical"; "https://www.thesocialdm.com/medical"; "Real Estate"; "https://www.thesocialdm.com/real-estate"; "Hospitality"; "https://www.thesocialdm.com/hospitality"; "Enterprise"; "https://www.thesocialdm.com/enterprise"; "https://www.thesocialdm.com/blog")}}" style="display:inline-block;padding:14px 24px;font-family:'Hanken Grotesk',Helvetica,Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0A0914;text-decoration:none;">{{switch(1.interest; "Medical"; "See our approach"; "Real Estate"; "See our approach"; "Hospitality"; "See our approach"; "Enterprise"; "See our approach"; "Read the research")}} &rarr;</a></td>
       </tr></table>
     </td></tr>
   </table>
