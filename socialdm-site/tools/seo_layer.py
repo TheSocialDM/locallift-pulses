@@ -42,8 +42,8 @@ META = {
               'Social, Google and AI visibility for hair salons, suite owners and independent stylists, so new guests find your work and book.', 'service', 'Hair salon marketing and local SEO'),
  'hospitality': ('Hospitality Marketing and Local SEO | The SocialDM',
                  'Story led social, Google Maps and search visibility that helps hotels, restaurants, venues and retail brands get found and booked.', 'service', 'Hospitality marketing and local SEO'),
- 'enterprise': ('Multi Location Marketing and SEO | The SocialDM',
-                'One standard for Google Business Profiles, location pages and AI visibility across every market, with reporting market by market.', 'service', 'Multi location marketing and SEO'),
+ 'enterprise': ('Portfolio and Multi Location Marketing | The SocialDM',
+                'Social, Google, Maps and AI visibility for apartment operators, management companies and multi location brands, with one weekly view of every location.', 'service', 'Portfolio and multi location marketing'),
  'research-insights': ('Multifamily Research and Insights | The SocialDM',
                        'Research from The SocialDM on how renters find apartment communities across social media, Google Search, Google Maps and AI answers.', 'page', None),
  '2026-multifamily-visibility-report': ('The 2026 Multifamily Visibility Report | The SocialDM',
@@ -51,7 +51,7 @@ META = {
 }
 
 LINKS = [('/', 'Home'), ('/multifamily-marketing-agency', 'Multifamily marketing'), ('/locallift', 'LocalLift'),
-         ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/med-spa', 'Med Spa'), ('/hair-salon', 'Hair Salons'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Enterprise'),
+         ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/med-spa', 'Med Spa'), ('/hair-salon', 'Hair Salons'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Portfolios'),
          ('/blog', 'Market Intelligence blog'), ('/research-insights', 'Research and Insights'),
          ('/2026-multifamily-visibility-report', '2026 Multifamily Visibility Report'), ('/about', 'About'), ('/contact', 'Contact')]
 

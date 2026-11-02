@@ -1,85 +1,245 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Enterprise Visibility</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<title>Portfolio Marketing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@300;500;700;800&display=swap">
 <link rel="stylesheet" href="site.css">
 <style>
-.vs-hero h1{max-width:18ch;font-size:clamp(40px,5.8vw,78px)}
-.fw{counter-reset:fw}
-.fw>div{position:relative;padding-top:64px}
-.fw>div::before{counter-increment:fw;content:"0" counter(fw);position:absolute;top:26px;left:28px;font:600 12px/1 var(--body);letter-spacing:.22em;color:var(--sky)}
-@media (max-width:860px){.split{grid-template-columns:minmax(0,1fr);gap:40px}.shot{aspect-ratio:1/1}.block{padding-block:80px}.cta{padding:64px 24px;border-radius:28px}}
+.pf{--sky:#5FE3D0;--mist:#B5F5EA;--tl:#5FE3D0;--tl2:#B5F5EA;--tdk:#062420}
+.btn-tl{background:linear-gradient(180deg,#B5F5EA,#5FE3D0);color:#062420}.btn-tl:hover{filter:brightness(1.06)}
+/* hero */
+.pf-hero{position:relative;min-height:min(92vh,860px);display:grid;align-items:end;overflow:hidden;background:#06080F}
+.pf-hero .bg{position:absolute;inset:0;background:url(p12485724.jpg) center 60%/cover no-repeat;transform:scale(1.06);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.pf-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,8,15,.35),rgba(6,8,15,.45) 40%,rgba(6,8,15,.95) 88%),radial-gradient(60% 50% at 80% 30%,rgba(95,227,208,.18),transparent 70%)}
+.pf-hero .wrap{position:relative;z-index:2;padding-block:140px 90px;display:grid;gap:22px}
+.pf-hero h1{font:700 clamp(46px,7.4vw,108px)/.98 var(--head);letter-spacing:-.05em;max-width:13ch;margin:0}
+.pf-hero h1 span{background:linear-gradient(90deg,#B5F5EA,#5FE3D0 60%,#2FB8A6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pf-hero p{max-width:56ch;color:rgba(255,255,255,.84);font-size:clamp(17px,1.5vw,20px);margin:0}
+.pf-hero .ctas{justify-content:flex-start;margin-top:10px}
+.glass{position:absolute;z-index:3;max-width:260px;background:rgba(10,16,24,.55);-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:14px 16px;color:#fff;font:500 14px/1.35 var(--body);box-shadow:0 20px 50px rgba(0,0,0,.35);animation:floaty 6s ease-in-out infinite}
+.glass small{display:block;font:600 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--tl2);margin-bottom:6px}
+.glass b{color:#5FE3D0}
+.g1{right:4%;top:16%}.g2{right:6%;top:30%;animation-delay:-2s}.g3{right:3%;top:44%;animation-delay:-4s}
+@keyframes floaty{50%{transform:translateY(-10px)}}
+@media (max-width:1240px){.glass{display:none}}
+/* dashboard */
+.dash{margin-top:40px;border-radius:26px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#0F1622,#0A0F18);box-shadow:0 60px 120px rgba(0,0,0,.5),0 0 0 1px rgba(95,227,208,.06) inset;overflow:hidden}
+.dash-bar{display:flex;align-items:center;gap:14px;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.07);font:500 13px var(--body);color:var(--soft)}
+.dash-bar .dots{display:flex;gap:7px}.dash-bar .dots i{width:11px;height:11px;border-radius:50%;background:#2A3240}.dash-bar .dots i:first-child{background:#FF5F57}.dash-bar .dots i:nth-child(2){background:#FEBC2E}.dash-bar .dots i:nth-child(3){background:#28C840}
+.dash-bar b{color:#fff;font-weight:600}
+.badge{margin-left:auto;font:700 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--tdk);background:var(--tl);padding:7px 10px;border-radius:6px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.07)}
+.kpis div{background:#0C121C;padding:20px 22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px}
+.kpis small{width:100%;font-size:12px;color:var(--dim);margin-bottom:8px}
+.kpis b{font:700 clamp(30px,3.4vw,44px)/1 var(--head);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.kpis em{font:600 17px var(--head);font-style:normal;color:var(--soft)}
+.kpis .up{margin-left:auto;color:#4ADE80;font-size:13px}
+.tbl{padding:8px 10px 14px}
+.row{display:grid;grid-template-columns:minmax(150px,1.5fr) minmax(120px,1.6fr) 80px 104px 110px 70px;gap:16px;align-items:center;padding:13px 12px;border-radius:12px;font-size:14px;opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s,background .25s}
+.row.hd{opacity:1;transform:none;font:600 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding-block:14px 8px}
+.row:not(.hd):hover{background:rgba(95,227,208,.06)}
+.dash.on .row{opacity:1;transform:none}
+.loc{display:grid;gap:3px}.loc b{color:#fff;font-weight:600}.loc span{font-size:12px;color:var(--dim)}
+.bar{display:flex;align-items:center;gap:10px}.bar i{flex:1;height:8px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden;position:relative}
+.bar i::after{content:"";position:absolute;inset:0;width:var(--v);transform:scaleX(0);transform-origin:left;border-radius:5px;background:linear-gradient(90deg,#2FB8A6,#5FE3D0);transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.dash.on .bar i::after{transform:scaleX(1)}
+.bar b{font-variant-numeric:tabular-nums;min-width:24px;text-align:right;color:#fff}
+.ai{display:flex;gap:4px}.ai i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.12)}.ai i.y{background:#5FE3D0;box-shadow:0 0 8px rgba(95,227,208,.6)}
+.spk{width:100%;height:30px;overflow:visible}.spk path{fill:none;stroke:#5FE3D0;stroke-width:2;stroke-linecap:round;stroke-dasharray:200;stroke-dashoffset:200;transition:stroke-dashoffset 1.6s .4s ease-out}
+.spk.dn path{stroke:#FF8A8A}
+.dash.on .spk path{stroke-dashoffset:0}
+.chg{justify-self:end;font:700 12px/1 var(--body);padding:6px 8px;border-radius:7px;color:#4ADE80;background:rgba(74,222,128,.12)}.chg.dn{color:#FF8A8A;background:rgba(255,138,138,.12)}
+.note{font-size:12.5px;color:var(--dim);margin:14px 0 0}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.row{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 64px;gap:12px}.row>:nth-child(3),.row>:nth-child(4){display:none}}
+@media (max-width:520px){.row{grid-template-columns:minmax(0,1fr) 90px 60px}.row>:nth-child(5){display:none}.bar b{display:none}.tbl{padding:4px}}
+/* markets */
+.mk-split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:center}
+.mk{display:grid;gap:22px}
+.mk-row{display:grid;gap:8px}
+.mk-row h4{margin:0;display:flex;justify-content:space-between;font:600 15px var(--body);color:#fff}.mk-row h4 span{color:var(--dim);font-weight:500;font-size:13px}
+.mb{display:grid;grid-template-columns:76px 1fr 40px;align-items:center;gap:12px;font-size:12.5px;color:var(--soft)}
+.mb i{height:12px;border-radius:7px;background:rgba(255,255,255,.06);position:relative;overflow:hidden}
+.mb i::after{content:"";position:absolute;inset:0;width:var(--v);transform:scaleX(0);transform-origin:left;border-radius:7px;transition:transform 1.5s cubic-bezier(.2,.8,.2,1)}
+.mb.you i::after{background:linear-gradient(90deg,#2FB8A6,#5FE3D0);box-shadow:0 0 14px rgba(95,227,208,.4)}
+.mb.them i::after{background:rgba(180,195,230,.35)}
+.mk.on .mb i::after{transform:scaleX(1)}
+.mk.on .mk-row:nth-child(2) .mb i::after{transition-delay:.15s}.mk.on .mk-row:nth-child(3) .mb i::after{transition-delay:.3s}.mk.on .mk-row:nth-child(4) .mb i::after{transition-delay:.45s}
+.mb b{color:#fff;text-align:right;font-variant-numeric:tabular-nums}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}
+.bt{border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,#101624,#0B0F19);padding:26px;display:grid;gap:12px;align-content:start;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s}
+.bt:hover{transform:translateY(-4px);border-color:rgba(95,227,208,.35)}
+.bt .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(95,227,208,.12);color:#5FE3D0}
+.bt .ic svg{width:22px;height:22px}
+.bt h3{margin:0;font:700 20px/1.2 var(--head);letter-spacing:-.02em}
+.bt p{margin:0;color:var(--soft);font-size:15px}
+.bt.ph{grid-column:span 2;grid-row:span 3;padding:0;overflow:hidden;position:relative;min-height:360px;background:#0B0F19 url(p17286413.jpg) center/cover}
+.bt.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(6,8,15,.92))}
+.bt.ph div{position:absolute;left:26px;right:26px;bottom:24px;z-index:2;display:grid;gap:8px}
+.ph-k{font:600 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--tl2)}
+.bt.ph h3{font-size:clamp(24px,2.4vw,32px)}
+@media (max-width:980px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.mk-split{grid-template-columns:minmax(0,1fr);gap:40px}}
+@media (max-width:560px){.bento{grid-template-columns:minmax(0,1fr)}.bt.ph{grid-column:auto;grid-row:auto}}
+/* team */
+.team{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:center}
+.team .shot{border-radius:28px;overflow:hidden;aspect-ratio:4/5;position:relative}
+.team .shot img{width:100%;height:100%;object-fit:cover;display:block}
+.team .shot .chipx{position:absolute;left:18px;bottom:18px;background:rgba(10,16,24,.6);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px 14px;font:500 13.5px/1.35 var(--body);color:#fff}
+.team .shot .chipx small{display:block;font:600 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--tl2);margin-bottom:5px}
+.ticks{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px}
+.ticks li{position:relative;padding-left:32px;color:var(--soft)}
+.ticks li::before{content:"";position:absolute;left:0;top:.2em;width:20px;height:20px;border-radius:50%;background:rgba(95,227,208,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.5 2.5L14 7.5' fill='none' stroke='%235FE3D0' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/20px no-repeat}
+@media (max-width:900px){.team{grid-template-columns:minmax(0,1fr);gap:36px}.team .shot{aspect-ratio:4/3}}
+/* steps */
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:44px}
+.steps::before{content:"";position:absolute;left:0;right:0;top:21px;height:2px;background:rgba(255,255,255,.08)}
+.steps::after{content:"";position:absolute;left:0;top:21px;height:2px;width:100%;transform:scaleX(var(--p,0));transform-origin:left;background:linear-gradient(90deg,#2FB8A6,#5FE3D0)}
+.st{position:relative;display:grid;gap:10px;align-content:start}
+.st .n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:700 14px var(--head);background:#0B0F19;border:2px solid #5FE3D0;color:#5FE3D0;position:relative;z-index:1}
+.st h3{margin:8px 0 0;font:700 21px/1.2 var(--head)}
+.st p{margin:0;color:var(--soft)}
+@media (max-width:760px){.steps{grid-template-columns:minmax(0,1fr)}.steps::before,.steps::after{display:none}}
+.pf .faq summary::after{color:var(--tl)}
+@media (prefers-reduced-motion:reduce){.pf-hero .bg,.glass{animation:none}.row{opacity:1;transform:none}.bar i::after,.mb i::after{transform:none;transition:none}.spk path{stroke-dashoffset:0}}
 </style>
 </head><body><div class="draft">Draft</div>
 <div id="site-header"></div>
-<main>
-  <section class="hero pg-hero vs-hero">
+<main class="pf">
+  <section class="pf-hero">
+    <div class="bg" role="img" aria-label="Aerial view of an apartment community with a resort style pool"></div>
+    <div class="glass g1"><small>Weekly read</small>Every location, every Friday, one page.</div>
+    <div class="glass g2"><small>AI recommended</small><b>18 of 24</b> locations named this week</div>
+    <div class="glass g3"><small>New acquisition</small>Profiles live and reporting from week one</div>
     <div class="wrap">
-      <div class="eyebrow">Enterprise</div>
-      <h1>Attention at scale.<br>Authority across markets.<br><span>Performance you can measure.</span></h1>
-      <p>The SocialDM builds visibility infrastructure for enterprise brands operating in competitive markets.</p>
-      <div class="ctas"><a class="btn btn-light" href="contact.html">Get your visibility plan</a><a class="btn btn-line" href="#framework">See the framework</a></div>
+      <div class="eyebrow">Portfolios</div>
+      <h1>Every location. <span>One standard.</span></h1>
+      <p>For apartment operators, management companies and multi location brands. Social, Google and AI visibility managed together across every site, with one weekly view of the whole portfolio.</p>
+      <div class="ctas"><a class="btn btn-tl" href="contact.html">Get a portfolio visibility check</a><a class="btn btn-line" href="#view">See the portfolio view</a></div>
+    </div>
+  </section>
+  <!--proof:communities-->
+
+  <section class="block" id="view" style="scroll-margin-top:90px">
+    <div class="wrap">
+      <div class="eyebrow">Your whole portfolio, one view</div>
+      <h2 class="h2">See every location at a glance.</h2>
+      <p style="color:var(--soft);max-width:60ch">Which sites are getting easier to find, which ones AI recommends, and where to act next. One weekly read for regional teams, owners and asset managers.</p>
+      <div class="dash" aria-hidden="true">
+        <div class="dash-bar"><span class="dots"><i></i><i></i><i></i></span><b>Portfolio</b>&middot; Weekly read &middot; Week 44<span class="badge">Sample</span></div>
+        <div class="kpis">
+          <div><small>Locations</small><b data-to="24">0</b><span class="up">&#9650;</span></div>
+          <div><small>Average Lift Score</small><b data-to="74">0</b><em>/100</em><span class="up">&#9650;</span></div>
+          <div><small>Maps top 3</small><b data-to="62">0</b><em>%</em><span class="up">&#9650;</span></div>
+          <div><small>AI recommended</small><b data-to="18">0</b><em> of 24</em><span class="up">&#9650;</span></div>
+        </div>
+        <div class="tbl">
+          <div class="row hd"><span>Location</span><span>Lift Score</span><span>Maps top 3</span><span>AI answers</span><span>12 weeks</span><span></span></div>
+          <div class="row"><span class="loc"><b>Community A</b><span>Phoenix, AZ</span></span><span class="bar"><i style="--v:86%"></i><b>86</b></span><span>78%</span><span class="ai"><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i></span><svg class="spk" viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 26 C15 24 25 20 35 21 S55 14 65 12 S85 6 100 3"/></svg><span class="chg">&#9650; 9</span></div>
+          <div class="row"><span class="loc"><b>Community B</b><span>Dallas, TX</span></span><span class="bar"><i style="--v:81%"></i><b>81</b></span><span>71%</span><span class="ai"><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i><i></i></span><svg class="spk" viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 24 C12 25 22 18 34 19 S52 15 62 14 S82 9 100 7"/></svg><span class="chg">&#9650; 6</span></div>
+          <div class="row"><span class="loc"><b>Community C</b><span>Denver, CO</span></span><span class="bar"><i style="--v:77%"></i><b>77</b></span><span>66%</span><span class="ai"><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i><i></i></span><svg class="spk" viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 22 C14 23 24 21 36 18 S54 17 66 13 S84 12 100 9"/></svg><span class="chg">&#9650; 4</span></div>
+          <div class="row"><span class="loc"><b>Community D</b><span>Nashville, TN</span></span><span class="bar"><i style="--v:69%"></i><b>69</b></span><span>58%</span><span class="ai"><i class="y"></i><i class="y"></i><i class="y"></i><i></i><i></i></span><svg class="spk" viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 25 C16 22 26 24 38 20 S56 19 68 16 S86 14 100 12"/></svg><span class="chg">&#9650; 3</span></div>
+          <div class="row"><span class="loc"><b>Community E</b><span>Charlotte, NC</span></span><span class="bar"><i style="--v:63%"></i><b>63</b></span><span>49%</span><span class="ai"><i class="y"></i><i class="y"></i><i></i><i></i><i></i></span><svg class="spk dn" viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 12 C14 11 24 14 36 13 S54 17 66 18 S84 19 100 21"/></svg><span class="chg dn">&#9660; 2</span></div>
+          <div class="row"><span class="loc"><b>Community F</b><span>Portland, OR</span></span><span class="bar"><i style="--v:58%"></i><b>58</b></span><span>44%</span><span class="ai"><i class="y"></i><i class="y"></i><i></i><i></i><i></i></span><svg class="spk" viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 27 C14 26 26 25 38 24 S56 22 68 19 S86 18 100 15"/></svg><span class="chg">&#9650; 5</span></div>
+        </div>
+      </div>
+      <p class="note">Illustration of a sample portfolio report. Locations and numbers are examples only.</p>
     </div>
   </section>
 
-  <section class="block" style="padding-top:40px">
-    <div class="wrap split">
+  <section class="block" style="padding-top:0">
+    <div class="wrap mk-split">
       <div>
-        <div class="eyebrow">How it works</div>
-        <ul class="list">
-          <li>Social creates large scale demand and brand dominance.</li>
-          <li>Structured search authority ensures your company controls how it appears across Google, Maps, and AI platforms.</li>
-        </ul>
-        <p class="quote">We position your brand at the <b>decision layer</b> across markets.</p>
+        <div class="eyebrow">Market by market</div>
+        <h2 class="h2">Every site against its local competition.</h2>
+        <p style="color:var(--soft);max-width:48ch">A portfolio average can hide a market that is slipping. You see how each location stacks up against the community renters compare it to, so regional teams know exactly where to focus.</p>
       </div>
-      <div class="shot"><img src="p323705.jpg" alt="Glass office tower rising against a pale sky"><div class="tag"><b>Across markets</b>How your company appears on Google, Maps, and AI.</div></div>
-    </div>
-  </section>
-
-  <section class="block" id="framework" style="padding-top:0">
-    <div class="wrap">
-      <div class="eyebrow">Three stages</div>
-      <h2 class="h2">The Visibility Framework for Enterprise</h2>
-      <div class="cards fw">
-        <div><b>Attention</b><span>Large scale social and paid campaigns engineered to create category demand.</span></div>
-        <div><b>Discovery</b><span>Search authority, multi market positioning, and structured content infrastructure across Google and AI.</span></div>
-        <div><b>Performance</b><span>Competitive intelligence, measurable revenue impact, and portfolio level insight.</span></div>
+      <div class="mk" aria-hidden="true">
+        <div class="mk-row"><h4>Phoenix <span>Visibility share</span></h4><div class="mb you"><span>You</span><i style="--v:82%"></i><b>82</b></div><div class="mb them"><span>Top rival</span><i style="--v:61%"></i><b>61</b></div></div>
+        <div class="mk-row"><h4>Dallas <span>Visibility share</span></h4><div class="mb you"><span>You</span><i style="--v:74%"></i><b>74</b></div><div class="mb them"><span>Top rival</span><i style="--v:66%"></i><b>66</b></div></div>
+        <div class="mk-row"><h4>Denver <span>Visibility share</span></h4><div class="mb you"><span>You</span><i style="--v:69%"></i><b>69</b></div><div class="mb them"><span>Top rival</span><i style="--v:58%"></i><b>58</b></div></div>
+        <div class="mk-row"><h4>Charlotte <span>Visibility share</span></h4><div class="mb you"><span>You</span><i style="--v:55%"></i><b>55</b></div><div class="mb them"><span>Top rival</span><i style="--v:63%"></i><b>63</b></div></div>
+        <p class="note" style="margin:0">Sample view. Illustration only.</p>
       </div>
     </div>
   </section>
 
-  <section class="block" id="included" style="padding-top:0">
+  <section class="block" style="padding-top:0">
     <div class="wrap">
       <div class="eyebrow">What is included</div>
-      <h2 class="h2">One standard across every market.</h2>
-      <div class="cards two"><div><b>Multi location profile management</b><span>Accurate Google Business Profiles across every location, with a single process for updates, photos and policy checks.</span></div><div><b>Structured content at scale</b><span>Location and service pages built on a shared template, with local detail that makes each one useful on its own.</span></div><div><b>Search and AI visibility by market</b><span>Reporting that shows how each market appears on Google Search, Google Maps and AI assistants, side by side.</span></div><div><b>Social and paid, coordinated</b><span>Brand and local campaigns planned from the same playbook, so markets do not compete with each other.</span></div></div>
+      <h2 class="h2">Built for operators, not just one property.</h2>
+      <div class="bento">
+        <div class="bt ph"><div><span class="ph-k">One brand everywhere</span><h3>Every profile, post and page looks and sounds like one company.</h3><p style="color:rgba(255,255,255,.8)">With local detail that makes each location useful on its own.</p></div></div>
+        <div class="bt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><h3>Portfolio view</h3><p>Every location in one weekly read, by property, region and portfolio.</p></div>
+        <div class="bt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><h3>Owner ready reporting</h3><p>Plain language updates you can forward to owners and asset managers.</p></div>
+        <div class="bt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></span><h3>New sites, fast</h3><p>Acquisitions and lease ups set up and visible from week one.</p></div>
+        <div class="bt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><h3>Market by market</h3><p>Each location measured against its own local competition.</p></div>
+        <div class="bt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.4 5.3 5.6.6-4.2 3.8 1.2 5.6L12 15.5 7 18.3l1.2-5.6L4 8.9l5.6-.6z"/></svg></span><h3>Reviews at scale</h3><p>Every review answered in your brand voice, across every site.</p></div>
+        <div class="bt"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z"/><path d="M18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9z"/></svg></span><h3>AI visibility by market</h3><p>Know which locations AI assistants recommend, and which they skip.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap team">
+      <div class="shot"><img src="p8134104.jpg" alt="Young marketing team reviewing a report together on a laptop" loading="lazy"><div class="chipx"><small>Your team</small>One point of contact for the whole portfolio</div></div>
+      <div>
+        <div class="eyebrow">A dedicated team</div>
+        <h2 class="h2">One partner. Every location covered.</h2>
+        <p style="color:var(--soft);max-width:52ch">You get a team that knows your brand, your markets and your goals, so nothing gets lost between regional managers, onsite teams and owners.</p>
+        <ul class="ticks">
+          <li>A single point of contact and priority turnaround.</li>
+          <li>Brand standards set once and kept everywhere.</li>
+          <li>Onsite teams supported, not buried in requests.</li>
+          <li>Plans that grow with the portfolio, site by site.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="block" style="padding-top:0">
     <div class="wrap">
       <div class="eyebrow">How we start</div>
-      <h2 class="h2">From first call to first report.</h2>
-      <div class="cards"><div><b>01 Visibility check</b><span>We search the way your customers do, on Google Search, Google Maps and AI assistants, and record where you show up and where competitors do instead.</span></div><div><b>02 Plan</b><span>You get a written plan that lists the gaps in order of impact, what we will do about each one, and what we will not touch.</span></div><div><b>03 Reporting</b><span>We report against the baseline from the visibility check, in plain language, so you can see what moved and what did not.</span></div></div>
-      <div class="faq">
-        <details><summary>Can you work alongside our in house team or other agencies?</summary><p>Yes. We agree up front who owns what, and our reporting is built to share.</p></details>
-        <details><summary>Do you roll out to every market at once?</summary><p>Usually not. We start with a set of markets, prove the process, then extend it.</p></details>
-        <details><summary>What does reporting look like?</summary><p>A portfolio view with market by market detail, against the baseline we record at the start.</p></details>
+      <h2 class="h2">From first call to first portfolio read.</h2>
+      <div class="steps">
+        <div class="st"><span class="n">01</span><h3>Portfolio visibility check</h3><p>We look at your locations the way renters and customers do, on Google Search, Google Maps and AI assistants, and show you where you stand.</p></div>
+        <div class="st"><span class="n">02</span><h3>Written plan by market</h3><p>A clear plan that ranks the gaps by location and market, so the biggest wins come first.</p></div>
+        <div class="st"><span class="n">03</span><h3>Launch and weekly read</h3><p>We roll out across the portfolio and you get one weekly view of what moved and what is next.</p></div>
       </div>
     </div>
   </section>
 
+  <!--proof:testimonials:multifamily-->
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="eyebrow">Questions</div>
+      <h2 class="h2">Frequently asked questions.</h2>
+      <div class="faq">
+        <details><summary>Who is the portfolio plan for?</summary><p>Apartment operators and management companies with several communities, plus brokerages, med spa groups, salon groups and other brands with more than one location.</p></details>
+        <details><summary>How many locations do we need?</summary><p>There is no hard minimum. The portfolio plan usually makes sense once you have three or more locations that share a brand or a team.</p></details>
+        <details><summary>Can we start with a few locations and add more?</summary><p>Yes. Many portfolios start with a handful of sites or one region, then add locations as they see results.</p></details>
+        <details><summary>Can owners and asset managers see the reporting?</summary><p>Yes. The weekly read is written in plain language so you can forward it as is, by property, by region or for the whole portfolio.</p></details>
+        <details><summary>How is it priced?</summary><p>By number of locations and scope, after a free portfolio visibility check. You get a written plan before you commit.</p></details>
+      </div>
+    </div>
+  </section>
   <!--posts:enterprise-->
+
   <section class="wrap">
     <div class="cta">
-      <div class="eyebrow">Built for enterprise</div>
-      <h2 style="margin-top:16px">Enterprise Visibility Infrastructure</h2>
-      <a class="btn btn-light" href="contact.html">Get your visibility plan</a>
+      <div class="eyebrow">Portfolios</div>
+      <h2 style="margin-top:16px">One standard across every location.</h2>
+      <div class="ctas"><a class="btn btn-tl" href="contact.html">Get a portfolio visibility check</a><a class="btn btn-line" href="locallift.html">See how LocalLift&trade; works</a></div>
     </div>
   </section>
 </main>
 <div id="site-footer"></div>
 <script src="chrome.js"></script>
-
+<script>(function(){var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function on(el,fn){if(!el)return;if(!('IntersectionObserver' in window)||RM){el.classList.add('on');fn&&fn(el);return}new IntersectionObserver(function(e,o){if(e[0].isIntersecting){el.classList.add('on');fn&&fn(el);o.disconnect()}},{threshold:.25}).observe(el)}
+on(document.querySelector('.dash'),function(d){d.querySelectorAll('.row:not(.hd)').forEach(function(r,i){r.style.transitionDelay=(.15+i*.12)+'s'});
+  d.querySelectorAll('[data-to]').forEach(function(b){var to=+b.dataset.to,st=null;function f(ts){if(!st)st=ts;var k=Math.min(1,(ts-st)/1600);b.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)}RM?b.textContent=to:requestAnimationFrame(f)})});
+on(document.querySelector('.mk'));
+var s=document.querySelector('.steps');if(s){if(RM)s.style.setProperty('--p',1);else{var q=0,u=function(){q=0;var r=s.getBoundingClientRect(),h=innerHeight,k=(h*.85-r.top)/(r.height+h*.3);s.style.setProperty('--p',Math.max(0,Math.min(1,k)).toFixed(3))};addEventListener('scroll',function(){if(!q)q=requestAnimationFrame(u)},{passive:true});u()}}
+})();</script>
 </body></html>
