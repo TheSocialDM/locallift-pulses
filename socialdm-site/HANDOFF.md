@@ -19,6 +19,8 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 - socialdm-site/netlify.toml added (publish dist, no command). Netlify MCP works from cloud now (team has 12 projects) but cannot link a GitHub repo, so the repo link click is still Michael's.
 - DNS (read through Bird audit): MX thesocialdm-com.mail.protection.outlook.com (Microsoft 365). SPF v=spf1 include:spf.em.secureserver.net include:spf.protection.outlook.com -all. No DMARC. Microsoft 365 also needs autodiscover CNAME and DKIM selector1/selector2 CNAMEs if present; read the full zone in the DNS host before moving anything.
 
+- Netlify project "thesocialdm" (id 9d77552d-d658-4c5e-896a-415a32959593) created Nov 2 from branch socialdm-site, base socialdm-site, publish socialdm-site/dist. URL https://thesocialdm.netlify.app, currently behind Netlify team login (SSO, all deploys). Form detection enabled.
+
 ## Still to do, in order
 1. New posts: 5 drafts are in new-posts/, written and self checked but NOT yet through Editor or approval, and dist/ does not include them yet. Do not publish until they pass. Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
 2. Thin pages: Medical, Real Estate, Hospitality, Enterprise. About and Contact headline.
