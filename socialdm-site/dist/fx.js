@@ -77,3 +77,11 @@ var els=document.querySelectorAll('.block .split>*,.block .stats,.band .arches,.
 if('IntersectionObserver' in window&&!RM){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
   els.forEach(function(el){el.classList.add('rv-in');io.observe(el)})}
 })();
+/* Words section: inline photos tilt and drift as you scroll past */
+(function(){var sec=document.querySelector('.words');if(!sec||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var imgs=[].slice.call(sec.querySelectorAll('h2 img'));if(!imgs.length)return;
+var base=[-4,3,-3],dir=[1,-1,1],q=0;
+function u(){q=0;var r=sec.getBoundingClientRect(),h=innerHeight;if(r.bottom<0||r.top>h)return;
+  var p=((r.top+r.height/2)-h/2)/(h/2+r.height/2);p=Math.max(-1,Math.min(1,p));
+  imgs.forEach(function(im,i){var d=dir[i%3];im.style.transform='translate('+(d*p*16)+'px,'+(p*-18)+'px) rotate('+(base[i%3]+d*p*9)+'deg) scale('+(1+(1-Math.abs(p))*.08)+')'})}
+addEventListener('scroll',function(){if(!q)q=requestAnimationFrame(u)},{passive:true});addEventListener('resize',u);u()})();

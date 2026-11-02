@@ -145,3 +145,4 @@
 @media (max-width:420px){.wheel-hint{font-size:12px;gap:7px;padding:9px 14px}}
 @media (prefers-reduced-motion:reduce){.wplay,.wheel-hint .wh-ic:first-child{animation:none}}
 .hero .hint{margin-top:44px}
+.words h2 img{will-change:transform;transition:transform .12s linear;box-shadow:0 18px 40px rgba(20,15,58,.18)}
