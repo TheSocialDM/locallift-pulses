@@ -29,7 +29,7 @@ ICONS = {  # 24x24 stroke icons, drawn for the ticker
 
 def ticker():
     d = json.load(open(os.path.join(HERE, 'ticker.json')))
-    li = ''.join(f'<li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">{ICONS.get(i["icon"], ICONS["star"])}</svg></span>{('<b>' + html.escape(i["name"]) + '</b>') if i.get("name") else ''}{html.escape(i["text"])}</li>' for i in d['items'])
+    li = ''.join(f'<li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">{ICONS.get(i["icon"], ICONS["star"])}</svg></span>{('<b>' + html.escape(i["name"]) + '</b> ') if i.get("name") else ''}{html.escape(i["text"])}</li>' for i in d['items'])
     return (f'<section class="proof-row stat-ticker" aria-label="{html.escape(d["heading"])}"><div class="wrap"><div class="eyebrow">{html.escape(d["heading"])}</div></div>'
             f'<div class="marquee"><ul class="mq-track">{li}</ul><ul class="mq-track" aria-hidden="true">{li}</ul></div></section>')
 

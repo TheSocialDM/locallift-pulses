@@ -1,5 +1,5 @@
 {
- "note": "Stat ticker (Michael, Nov 2). Branded names in 'name' render bold before the line. ClearView = monthly social report and Lift Score = weekly score are Claude's best guess.",
+ "note": "Stat ticker, Michael's exact wording (Nov 2). 'LocalLift' renders bold before each product name.",
  "heading": "Trusted nationwide",
  "items": [
   {
@@ -10,7 +10,7 @@
   {
    "icon": "star",
    "name": "",
-   "text": "Trusted By 20+ Apartment Communities"
+   "text": "Trusted By Apartment Communities"
   },
   {
    "icon": "trend",
@@ -20,62 +20,62 @@
   {
    "icon": "send",
    "name": "",
-   "text": "300+ Posts Published Every Week"
-  },
-  {
-   "icon": "calendar",
-   "name": "Daily Presence",
-   "text": "Google Business Posts 7 Days A Week"
+   "text": "500+ Posts Published Every Week"
   },
   {
    "icon": "pulse",
-   "name": "Weekly Pulse",
-   "text": "Every Friday"
-  },
-  {
-   "icon": "tag",
-   "name": "Market Survey",
-   "text": "Competitor Rents And Specials Every Sunday"
-  },
-  {
-   "icon": "chart",
-   "name": "Snapshot",
-   "text": "Monthly Google Report"
+   "name": "LocalLift",
+   "text": "Weekly Pulse"
   },
   {
    "icon": "play",
-   "name": "ClearView",
-   "text": "Monthly Social Media Report"
-  },
-  {
-   "icon": "target",
-   "name": "Map Reach",
-   "text": "Weekly Google Maps Rank Scans"
-  },
-  {
-   "icon": "spark",
-   "name": "AI Shortlist",
-   "text": "ChatGPT, Gemini And Perplexity Tracked Weekly"
-  },
-  {
-   "icon": "globe",
-   "name": "Site Read",
-   "text": "Websites And Specials Checked Every Week"
-  },
-  {
-   "icon": "message",
-   "name": "Review Desk",
-   "text": "Google Reviews Answered For You"
+   "name": "LocalLift",
+   "text": "ClearView"
   },
   {
    "icon": "trend",
-   "name": "Lift Score",
-   "text": "Your Visibility, Scored Weekly"
+   "name": "LocalLift",
+   "text": "Lift Score"
   },
   {
-   "icon": "users",
+   "icon": "spark",
+   "name": "LocalLift",
+   "text": "AI Shortlist"
+  },
+  {
+   "icon": "target",
+   "name": "LocalLift",
+   "text": "Map Reach"
+  },
+  {
+   "icon": "globe",
+   "name": "LocalLift",
+   "text": "Site Read"
+  },
+  {
+   "icon": "tag",
+   "name": "LocalLift",
+   "text": "Market Survey"
+  },
+  {
+   "icon": "chart",
+   "name": "LocalLift",
+   "text": "Snapshot"
+  },
+  {
+   "icon": "message",
+   "name": "LocalLift",
+   "text": "Review Desk"
+  },
+  {
+   "icon": "calendar",
+   "name": "LocalLift",
+   "text": "Daily Presence"
+  },
+  {
+   "icon": "play",
    "name": "",
-   "text": "Instagram, Facebook And YouTube Managed"
+   "text": "Instagram, Facebook, TikTok And YouTube Managed"
   },
   {
    "icon": "key",
@@ -91,11 +91,6 @@
    "icon": "shield",
    "name": "",
    "text": "Every Report Audited Before It Ships"
-  },
-  {
-   "icon": "flag",
-   "name": "",
-   "text": "The SocialDM, Est. 2019"
   }
  ]
 }
