@@ -168,7 +168,7 @@ header .hcta{padding:17px 26px;font:600 13px/1 var(--body);letter-spacing:.16em;
 
 /* Family of brands strip in the footer */
 footer .brands{width:100%;border-top:1px solid var(--line);padding-top:28px;margin-top:8px}
-footer .bgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+footer .bgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 footer .bgrid a{display:block;border:1px solid var(--line);border-radius:6px;padding:18px;background:rgba(255,255,255,.03)}
 footer .bgrid a:hover{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.06)}
 footer .bgrid b{display:block;font:700 16px var(--head);color:#fff;letter-spacing:-.01em}
