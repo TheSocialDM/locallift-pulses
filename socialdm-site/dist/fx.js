@@ -22,6 +22,15 @@ if(bd){
   S.forEach(function(s){s.el.addEventListener('pointerdown',function(e){active=s;s.drag=true;s.el.setPointerCapture(e.pointerId);var r=bd.getBoundingClientRect();ox=e.clientX-r.left-s.x;oy=e.clientY-r.top-s.y;px=e.clientX;py=e.clientY;lt=performance.now();s.el.style.zIndex=5;e.preventDefault()});
     s.el.addEventListener('pointermove',function(e){if(active!==s)return;var r=bd.getBoundingClientRect(),n=performance.now(),dt=Math.max(n-lt,8);s.vx=(e.clientX-px)/dt*16;s.vy=(e.clientY-py)/dt*16;px=e.clientX;py=e.clientY;lt=n;s.x=e.clientX-r.left-ox;s.y=e.clientY-r.top-oy});
     function up(){if(active===s){s.drag=false;active=null;s.el.style.zIndex=2}}s.el.addEventListener('pointerup',up);s.el.addEventListener('pointercancel',up)});
+  /* floating hearts and thumbs, like live reactions: burst when a piece is grabbed, plus a gentle stream while on screen */
+  var lk=bd.querySelector('.likes'),HEART='<svg viewBox="0 0 24 24"><path fill="#F0566A" d="M12 21s-7.5-4.6-9.6-9.4C.9 8.2 3 4.5 6.7 4.5c2.1 0 3.6 1.1 4.3 2.4h2c.7-1.3 2.2-2.4 4.3-2.4 3.7 0 5.8 3.7 4.3 7.1C19.5 16.4 12 21 12 21z"/></svg>',
+      THUMB='<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#0866FF"/><path fill="#fff" d="M7 11h2.5v7H7zM10.5 18v-6.6l3-4.4c.3-.4 1-.4 1.3.1.2.3.2.6.1.9L14 10.5h3.3c.8 0 1.4.8 1.2 1.6l-1.2 4.8c-.2.7-.8 1.1-1.5 1.1z"/></svg>';
+  function burst(x,y,n){if(RM||!lk)return;for(var i=0;i<n;i++)(function(i){setTimeout(function(){var e=document.createElement('span');e.className='like';e.innerHTML=Math.random()<.62?HEART:THUMB;
+    e.style.left=(x+(Math.random()-.5)*30)+'px';e.style.top=y+'px';e.style.setProperty('--dx1',((Math.random()-.5)*30)+'px');e.style.setProperty('--dx2',((Math.random()-.5)*90)+'px');
+    lk.appendChild(e);setTimeout(function(){e.remove()},1700)},i*90)})(i)}
+  S.forEach(function(s){s.el.addEventListener('pointerdown',function(){burst(s.x+s.el.offsetWidth/2,s.y,6)})});
+  var bvis=false;if('IntersectionObserver' in window)new IntersectionObserver(function(en){bvis=en[0].isIntersecting}).observe(bd);
+  setInterval(function(){if(!bvis||active)return;var s=S[Math.floor(Math.random()*S.length)];if(s.el.offsetParent)burst(s.x+s.el.offsetWidth/2,s.y,2)},1800);
   function tick(){S.forEach(function(s){var w=s.el.offsetWidth,h=s.el.offsetHeight;if(!s.drag){s.t+=.012;if(!RM){s.x+=s.vx+Math.cos(s.t)*.18;s.y+=s.vy+Math.sin(s.t*1.3)*.18}else{s.x+=s.vx;s.y+=s.vy}s.vx*=.94;s.vy*=.94;
       if(s.x<0){s.x=0;s.vx=Math.abs(s.vx)*.7}if(s.y<0){s.y=0;s.vy=Math.abs(s.vy)*.7}if(s.x>W-w){s.x=W-w;s.vx=-Math.abs(s.vx)*.7}if(s.y>H-h){s.y=H-h;s.vy=-Math.abs(s.vy)*.7}}
       if(W<700&&!s.drag){var a1=H*.36,b1=H*.64,cy=s.y+h/2;if(cy>a1&&cy<b1){s.vy+=(cy<H/2?-.6:.6)}}

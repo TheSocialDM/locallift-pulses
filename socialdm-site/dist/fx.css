@@ -109,3 +109,23 @@
 .reel-box video{height:min(86vh,860px);max-width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.6)}
 .reel-x{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:26px;line-height:1;cursor:pointer}
 .stats.big b{white-space:nowrap}.stats.big b.long{font-size:clamp(44px,6.6vw,96px)}@media (max-width:640px){.stats.big b{white-space:normal}}
+
+/* Play board additions: platform logos, report card, brand tiles, floating likes */
+.o-logo{display:grid;justify-items:center;gap:6px}
+.o-logo .lg{width:58px;height:58px;border-radius:14px;display:grid;place-items:center;box-shadow:0 14px 30px rgba(20,16,52,.2)}
+.o-logo svg{width:30px;height:30px}
+.o-logo em{font:600 10.5px/1 var(--body);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:#6E6A8C;white-space:nowrap}
+.o-report{min-width:150px}
+.o-report svg{display:block;width:120px;height:44px;margin:4px 0 6px}
+.o-report .up{font-size:12px;color:#2E7D4F;font-weight:600}
+.o-report .up::before{content:"\25B2 ";font-size:10px}
+.o-brand{background:var(--night);border-radius:8px;padding:12px 16px;box-shadow:0 18px 40px rgba(20,16,52,.25)}
+.o-brand img{height:34px;width:auto}
+.o-ll img{height:26px}
+.likes{position:absolute;inset:0;pointer-events:none;z-index:4;overflow:hidden}
+.like{position:absolute;width:26px;height:26px;margin:-13px 0 0 -13px;animation:likeup 1.6s cubic-bezier(.2,.7,.3,1) forwards}
+.like svg{width:100%;height:100%;filter:drop-shadow(0 4px 8px rgba(20,16,52,.25))}
+@keyframes likeup{0%{opacity:0;transform:translate(0,0) scale(.4)}15%{opacity:1;transform:translate(var(--dx1),-30px) scale(1.05)}100%{opacity:0;transform:translate(var(--dx2),-190px) scale(.85)}}
+@media (max-width:700px){.sm-hide{display:none}.o-logo .lg{width:46px;height:46px;border-radius:11px}.o-logo svg{width:24px;height:24px}}
+@media (prefers-reduced-motion:reduce){.like{display:none}}
+@media (max-width:700px){.play{min-height:1000px}}

@@ -338,12 +338,12 @@ for f in glob.glob(SRC + '/*.html'):
     if PROD:
         t = t.replace('<div class="draft">Draft</div>', '')
         t = re.sub(r'href="(?!https?:|mailto:|#|/)([^"#]+?)\.html', lambda m: 'href="/' + ('' if m.group(1)=='index' else m.group(1)), t)
-        t = re.sub(r'(src|href)="((?:p\d+\.jpg|logo\.png|site\.css|fx\.css|fx\.js|chrome\.js))"', r'\1="/\2"', t)
+        t = re.sub(r'(src|href)="((?:p\d+\.jpg|logo\.png|locallift-white\.png|site\.css|fx\.css|fx\.js|chrome\.js))"', r'\1="/\2"', t)
     else:
         t = t.replace('</head>', '<meta name="robots" content="noindex"></head>', 1)
         t = t.replace('data-netlify="true"', 'data-netlify="true" onsubmit="return false"')  # preview never submits
     open(f'{OUT}/{n}', 'w').write(t)
-for a in ['site.css','fx.css','fx.js','logo.png'] + [os.path.basename(x) for x in glob.glob(SRC+'/p*.jpg')]:
+for a in ['site.css','fx.css','fx.js','logo.png','locallift-white.png'] + [os.path.basename(x) for x in glob.glob(SRC+'/p*.jpg')]:
     shutil.copy(f'{SRC}/{a}', f'{OUT}/{a}')
 shutil.copy(os.path.dirname(os.path.abspath(__file__)) + '/blog.css', OUT + '/blog.css')
 if os.path.isdir(SRC + '/reels'):
