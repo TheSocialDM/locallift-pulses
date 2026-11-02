@@ -1,0 +1,66 @@
+{
+ "heading": "What&rsquo;s inside, for hospitality",
+ "title": "The same system, built for how guests choose where to stay.",
+ "items": [
+  {
+   "icon": "pulse",
+   "name": "Weekly Pulse",
+   "cadence": "Every Friday",
+   "text": "A one page read on how your property showed up this week, and the one thing to do next."
+  },
+  {
+   "icon": "trend",
+   "name": "Lift Score",
+   "cadence": "Weekly",
+   "text": "One number that shows whether guests are finding you more easily than last week."
+  },
+  {
+   "icon": "spark",
+   "name": "AI Shortlist",
+   "cadence": "Weekly",
+   "text": "Know whether AI trip planners recommend you, for which kinds of stays, and who they name instead."
+  },
+  {
+   "icon": "target",
+   "name": "Map Reach",
+   "cadence": "Weekly",
+   "text": "Where you appear in Google Maps and Google Hotels across the areas your guests search from."
+  },
+  {
+   "icon": "globe",
+   "name": "Site Read",
+   "cadence": "Weekly",
+   "text": "Make sure Google and AI describe your rooms, amenities, dining and policies correctly."
+  },
+  {
+   "icon": "calendar",
+   "name": "Daily Presence",
+   "cadence": "Every week",
+   "text": "Story led posts around your seasons, events and offers, so guests feel the stay before they book."
+  },
+  {
+   "icon": "tag",
+   "name": "Market Survey",
+   "cadence": "Monthly",
+   "text": "Your comp set, side by side: who guests see first and who earns the booking click."
+  },
+  {
+   "icon": "message",
+   "name": "Review Desk",
+   "cadence": "Ongoing",
+   "text": "Every review answered in your brand voice, with the themes guests mention flagged for your team."
+  },
+  {
+   "icon": "chart",
+   "name": "Snapshot",
+   "cadence": "Monthly",
+   "text": "Calls, direct booking clicks and direction requests from Google, in plain language."
+  },
+  {
+   "icon": "play",
+   "name": "ClearView",
+   "cadence": "Monthly",
+   "text": "Your social report: what posted, what guests engaged with and what changes next."
+  }
+ ]
+}

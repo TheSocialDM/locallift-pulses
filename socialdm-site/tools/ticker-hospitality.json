@@ -1,0 +1,65 @@
+{
+ "heading": "Built for resorts, hotels and venues",
+ "items": [
+  {
+   "icon": "star",
+   "name": "",
+   "text": "Resorts"
+  },
+  {
+   "icon": "spark",
+   "name": "",
+   "text": "Boutique Hotels"
+  },
+  {
+   "icon": "pin",
+   "name": "",
+   "text": "Staycations"
+  },
+  {
+   "icon": "calendar",
+   "name": "",
+   "text": "Spa Getaways"
+  },
+  {
+   "icon": "message",
+   "name": "",
+   "text": "Restaurants And Bars"
+  },
+  {
+   "icon": "trend",
+   "name": "",
+   "text": "Wedding And Event Venues"
+  },
+  {
+   "icon": "users",
+   "name": "",
+   "text": "Golf Resorts"
+  },
+  {
+   "icon": "flag",
+   "name": "",
+   "text": "Direct Bookings"
+  },
+  {
+   "icon": "send",
+   "name": "",
+   "text": "Google Hotels"
+  },
+  {
+   "icon": "building",
+   "name": "",
+   "text": "AI Trip Planning"
+  },
+  {
+   "icon": "key",
+   "name": "",
+   "text": "Guest Reviews"
+  },
+  {
+   "icon": "star",
+   "name": "",
+   "text": "Comp Set Tracking"
+  }
+ ]
+}
