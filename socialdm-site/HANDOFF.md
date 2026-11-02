@@ -28,6 +28,8 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 
 - Nov 2 article upgrades (tools/build.py): all posts get reading time, "Updated" date when changed, BreadcrumbList schema, wordCount; Person author schema for Michael. New posts also get a hand written Key takeaways box ("takeaways" in each JSON), an H2 table of contents with anchor ids, and an author box. Related posts now score by shared title words. Old title "&nbsp;" display bug fixed. 5 new posts got Pexels photos (ids in "imageCredit"); network now allows images.pexels.com and images.unsplash.com but not their search pages, so find photo ids with WebSearch (allowed_domains pexels.com) and download from images.pexels.com.
 
+- Nov 2 site SEO layer (tools/seo_layer.py, runs in --prod builds): keyword titles and meta descriptions for all static pages, Open Graph tags, Organization schema (address, founder, sameAs, areaServed) on home/about/contact, WebSite on home, Service schema on the 6 service pages, FAQPage from any .faq details block, Article on the 2026 report, a hidden plain link copy of the menu and footer inside #site-header/#site-footer for crawlers that do not run chrome.js (chrome.js replaces it for visitors), /llms.txt, and an IndexNow key file (7c2f9e41b85a4d6e9f03a1d2c4b6e8f0.txt) for Bing pings after launch.
+
 ## Still to do, in order
 1. New posts: 5 drafts are in new-posts/, written and self checked but NOT yet through Editor or approval, and dist/ does not include them yet. Do not publish until they pass. Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
 2. Thin pages: Medical, Real Estate, Hospitality, Enterprise. About and Contact headline.

@@ -197,3 +197,6 @@ h1,h2,h3{letter-spacing:-.035em}
 .faq details p{color:var(--soft);margin:0 0 26px;max-width:64ch}
 .faq summary:focus-visible{outline:2px solid var(--sky);outline-offset:4px;border-radius:6px}
 @media (prefers-reduced-motion:reduce){.faq summary::after{transition:none}}
+
+/* Plain links for crawlers that do not run JavaScript; replaced by chrome.js for visitors */
+.crawl-nav{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

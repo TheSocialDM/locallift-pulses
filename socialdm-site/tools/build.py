@@ -346,4 +346,8 @@ if PROD:
 main404 = f'<main><section class="hero pg-hero"><div class="wrap"><div class="eyebrow">Page not found</div><h1>This page <span>moved.</span></h1><div class="ctas"><a class="btn btn-light" href="{link("blog",0)}">Read the latest</a><a class="btn btn-line" href="{link("index",0)}">Back home</a></div></div></section></main>'
 open(OUT + '/404.html', 'w').write(shell('Page not found | The SocialDM', 'This page moved.', '/404', 0, main404))
 
+if PROD:
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import seo_layer; seo_layer.run(OUT)
+
 print(json.dumps({'posts': len(posts), 'new': sum(p['new'] for p in posts), 'images_used': len(report['used_images']), 'images_missing': sorted(report['missing_images']), 'unmapped_links': sorted(report['unmapped_links']), 'text_diffs': report['text_diffs']}, indent=1))
