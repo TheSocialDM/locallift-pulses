@@ -34,6 +34,16 @@ if(ring){var ang=0,vel=RM?0:.12,dragging=false,lx2=0,lastY=scrollY;
   stage.addEventListener('pointermove',function(e){if(!dragging)return;var d=e.clientX-lx2;lx2=e.clientX;ang+=d*.3;vel=d*.3});
   function rel(){dragging=false}stage.addEventListener('pointerup',rel);stage.addEventListener('pointercancel',rel);
   addEventListener('scroll',function(){var d=scrollY-lastY;lastY=scrollY;if(!RM)vel+=d*.02},{passive:true});
+  /* reels: load and play only while the wheel is on screen; tap opens the full reel with sound */
+  var vids=[].slice.call(ring.querySelectorAll('video'));
+  if(vids.length&&'IntersectionObserver' in window){new IntersectionObserver(function(en){var on=en[0].isIntersecting;vids.forEach(function(v){if(on){if(!v.src&&!RM)v.src=v.dataset.src;if(!RM){var p=v.play();if(p&&p.catch)p.catch(function(){})}}else v.pause()})},{rootMargin:'200px'}).observe(stage)}
+  var dx0=0,dy0=0,dt0=0;stage.addEventListener('pointerdown',function(e){dx0=e.clientX;dy0=e.clientY;dt0=Date.now()},true);
+  stage.addEventListener('pointerup',function(e){if(Math.abs(e.clientX-dx0)>6||Math.abs(e.clientY-dy0)>6||Date.now()-dt0>400)return;
+    var el=document.elementFromPoint(e.clientX,e.clientY),c=el&&el.closest&&el.closest('.wc');if(c&&c.dataset.full)openReel(c.dataset.full,c.querySelector('video').getAttribute('aria-label'))});
+  function openReel(src,label){var o=document.createElement('div');o.className='reel-box';o.setAttribute('role','dialog');o.setAttribute('aria-label',label||'Reel');
+    o.innerHTML='<button class="reel-x" aria-label="Close">&times;</button><video controls autoplay playsinline src="'+src+'"></video>';document.body.appendChild(o);
+    var v=o.querySelector('video');function close(){v.pause();o.remove();removeEventListener('keydown',k)}function k(ev){if(ev.key==='Escape')close()}
+    o.addEventListener('click',function(ev){if(ev.target===o||ev.target.classList.contains('reel-x'))close()});addEventListener('keydown',k);o.querySelector('.reel-x').focus()}
   (function spin(){if(!dragging){ang+=vel;vel+=((RM?0:.12)-vel)*.03}ring.style.transform='translateZ(calc(var(--r) * -1)) rotateX(-6deg) rotateY('+ang+'deg)';requestAnimationFrame(spin)})();}
 /* 2c. Ask AI typing demo */
 var qt=document.querySelector('.aiq-t'),ans=document.querySelector('.aians');

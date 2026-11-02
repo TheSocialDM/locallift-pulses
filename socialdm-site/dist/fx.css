@@ -101,3 +101,10 @@
 @keyframes fadeup{from{opacity:0;transform:translateY(8px)}}
 @media (prefers-reduced-motion:reduce){.aibox::before,.cur{animation:none}}
 .ai .tag{color:var(--soft);font-size:15px}.ai .tag b{display:block;color:#fff;font:700 17px var(--head);margin-bottom:2px}
+
+/* Reels in the wheel and the tap-to-watch player */
+.wc video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;background:#140F3A}
+.stage .wc{cursor:pointer}
+.reel-box{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:rgba(6,5,14,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.reel-box video{height:min(86vh,860px);max-width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.reel-x{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:26px;line-height:1;cursor:pointer}

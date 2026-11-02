@@ -346,6 +346,8 @@ for f in glob.glob(SRC + '/*.html'):
 for a in ['site.css','fx.css','fx.js','logo.png'] + [os.path.basename(x) for x in glob.glob(SRC+'/p*.jpg')]:
     shutil.copy(f'{SRC}/{a}', f'{OUT}/{a}')
 shutil.copy(os.path.dirname(os.path.abspath(__file__)) + '/blog.css', OUT + '/blog.css')
+if os.path.isdir(SRC + '/reels'):
+    shutil.copytree(SRC + '/reels', OUT + '/reels', dirs_exist_ok=True)
 if os.path.isdir(os.path.dirname(os.path.abspath(__file__)) + '/images-new'):
     shutil.copytree(os.path.dirname(os.path.abspath(__file__)) + '/images-new', OUT + '/images/new', dirs_exist_ok=True)
 
