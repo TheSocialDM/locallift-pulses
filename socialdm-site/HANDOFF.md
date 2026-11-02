@@ -24,6 +24,8 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 
 - Nov 2: 3 more drafts written (marketing metrics, lease-up, review responses). Michael approved all 8 ("approve all 8") after the review page https://claude.ai/artifact/N4VxgpALBgjhy2MtCvLbRA ; all have "approved": true and are in dist. He did not answer the per-post fact questions individually (client anecdotes, $2,690 report figures, Google certifications line, five states, one to two business day reply time); approval was taken as confirmation, and he was told to flag anything untrue before DNS cutover. 5 of 8 still have no photo; 3 use stand-in photos from src. Blog and articles now use a light "paper" layout (tools/blog.css).
 
+- Contact confirmation now sends from info@thesocialdm.com through Microsoft 365 (Make connection 12095916, module microsoft-email:createAndSendAMessage), branded template in emails/contact-confirmation.html, BCC info@. Bird was dropped for this flow: the Bird plan allows one sending domain, used by mail.localliftsignature.com. End to end tested OK at 13:50 UTC Nov 2 via Bird; the Microsoft 365 version still needs one live test. The M365 mailbox display name is "Lead Designer"; Michael should rename it to The SocialDM.
+
 ## Still to do, in order
 1. New posts: 5 drafts are in new-posts/, written and self checked but NOT yet through Editor or approval, and dist/ does not include them yet. Do not publish until they pass. Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
 2. Thin pages: Medical, Real Estate, Hospitality, Enterprise. About and Contact headline.
