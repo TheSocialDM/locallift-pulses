@@ -39,33 +39,88 @@
 .path.sig::before{content:"LocalLift Signature";position:absolute;top:18px;right:18px;z-index:2;font:700 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#14100A;background:var(--gold);padding:7px 10px;border-radius:6px}
 /* AI phone */
 .ai-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
-.phone{justify-self:center;width:min(340px,86vw);aspect-ratio:9/15;border-radius:46px;padding:14px;background:linear-gradient(160deg,#2A2740,#0B0A16);box-shadow:0 40px 90px rgba(0,0,0,.55),inset 0 0 0 1.5px rgba(255,255,255,.12)}
-.screen{height:100%;border-radius:34px;background:#0F0E1A;overflow:hidden;display:flex;flex-direction:column;padding:46px 16px 18px;gap:12px;position:relative}
-.screen::before{content:"";position:absolute;top:12px;left:50%;width:96px;height:26px;margin-left:-48px;border-radius:14px;background:#000}
-.app{font:600 12px/1 var(--body);color:var(--dim);text-align:center;letter-spacing:.06em}
-.bub{max-width:88%;padding:11px 14px;border-radius:18px;font:400 14px/1.45 var(--body);opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
-.bub.me{align-self:flex-end;background:#3A3AF0;color:#fff;border-bottom-right-radius:6px}
-.bub.ai{align-self:flex-start;background:#1C1A2E;color:rgba(255,255,255,.88);border-bottom-left-radius:6px}
-.bub.ai ol{margin:6px 0 0;padding-left:18px}.bub.ai li{margin:3px 0}
-.bub.ai li.you{color:#14100A;background:linear-gradient(90deg,#F3D79A,#E8B95A);border-radius:6px;padding:2px 6px;margin-left:-6px;font-weight:600;list-style-position:inside}
-.phone.on .bub{opacity:1;transform:none}
-.phone.on .b2{transition-delay:1.1s}.phone.on .b3{transition-delay:2.3s}
-.typing{display:inline-flex;gap:4px}.typing i{width:6px;height:6px;border-radius:50%;background:var(--dim);animation:dot 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+.iph{justify-self:center;width:min(330px,84vw);aspect-ratio:9/19.3;border-radius:58px;padding:5px;background:linear-gradient(145deg,#B9BCC3,#55585F 30%,#2B2D33 55%,#8E9198 85%,#C8CBD1);box-shadow:0 50px 100px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06);position:relative}
+.iph::before,.iph::after{content:"";position:absolute;width:4px;border-radius:2px;background:linear-gradient(#9DA0A7,#4A4D53)}
+.iph::before{left:-3px;top:22%;height:11%}.iph::after{right:-3px;top:28%;height:16%}
+.iph-in{height:100%;border-radius:53px;background:#000;padding:6px;position:relative;overflow:hidden}
+.iph-in>*{position:relative}
+.iph-in{display:flex;flex-direction:column}
+.iph-in::before{content:"";position:absolute;inset:6px;border-radius:47px;background:radial-gradient(120% 60% at 50% 0%,#1B1830,#0B0A14 60%)}
+.island{position:absolute!important;top:16px;left:50%;width:108px;height:31px;margin-left:-54px;border-radius:20px;background:#000;z-index:3}
+.sbar{display:flex;justify-content:space-between;align-items:center;padding:17px 28px 0 34px;color:#fff;font:600 14px/1 -apple-system,"SF Pro Text",var(--body)}
+.sbar span{display:flex;gap:6px;align-items:center}.sbar svg{width:17px;height:12px;fill:#fff}
+.batt{width:24px;height:12px;border:1.5px solid rgba(255,255,255,.5);border-radius:4px;display:inline-block;padding:1.5px}.batt i{display:block;height:100%;width:80%;background:#fff;border-radius:2px}
+.apphd{margin:22px 0 4px;text-align:center;color:#fff;font:600 14px/1 -apple-system,var(--body)}.spark{color:#E8B95A;margin-right:6px}
+.chat{flex:1;display:flex;flex-direction:column;gap:9px;padding:10px 12px;overflow:hidden}
+.bub{max-width:86%;padding:10px 13px;border-radius:19px;font:400 13.5px/1.42 -apple-system,"SF Pro Text",var(--body);opacity:0;transform:translateY(10px) scale(.98);transition:opacity .45s,transform .45s}
+.bub.me{align-self:flex-end;background:linear-gradient(180deg,#3D8BFF,#1F6BFF);color:#fff;border-bottom-right-radius:6px}
+.bub.ai{align-self:flex-start;background:#1E1C2C;color:rgba(255,255,255,.9);border-bottom-left-radius:6px}
+.pick{display:flex;align-items:center;gap:9px;margin-top:8px;padding:7px 9px;border-radius:12px;background:linear-gradient(90deg,rgba(243,215,154,.22),rgba(232,185,90,.1));border:1px solid rgba(232,185,90,.55)}
+.pick img,.pick>i{width:28px;height:28px;border-radius:50%;object-fit:cover;flex:none;background:#2E2B40}
+.pick div{display:grid;gap:1px;flex:1}.pick b{font-size:13px;color:#fff}.pick span{font-size:11px;color:#F3D79A}
+.pick em{font:700 11px/1 var(--body);font-style:normal;color:#14100A;background:#E8B95A;border-radius:6px;padding:4px 6px}
+.pick.dim{background:none;border-color:rgba(255,255,255,.08);opacity:.7}.pick.dim span{color:rgba(255,255,255,.55)}
+.chip{display:inline-block;margin-top:6px;padding:5px 9px;border-radius:10px;background:#E8B95A;color:#14100A;font-weight:600;font-size:12px}
+.ibar{margin:6px 12px 10px;height:38px;border-radius:19px;background:#1A1826;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;padding:0 6px 0 14px;color:rgba(255,255,255,.4);font:400 13px -apple-system,var(--body)}
+.ibar i{width:28px;height:28px;border-radius:50%;background:#E8B95A}
+.homebar{width:120px;height:5px;border-radius:3px;background:rgba(255,255,255,.75);margin:0 auto 8px}
+.iph.on .b1{opacity:1;transform:none;transition-delay:.2s}
+.iph.on .b2{opacity:1;transform:none;transition-delay:.9s}
+.iph.on .b3{opacity:1;transform:none;transition-delay:2.2s}
+.iph.on .b4{opacity:1;transform:none;transition-delay:3.6s}
+.iph.on .b5{opacity:1;transform:none;transition-delay:4.6s}
+.typing{display:inline-flex;gap:4px}.typing i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);animation:dot 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
 @keyframes dot{50%{opacity:.25}}
 /* fanned posts */
-.fan{position:relative;height:440px;justify-self:center;width:min(520px,100%)}
-.post-card{position:absolute;left:50%;top:20px;width:250px;margin-left:-125px;border-radius:18px;background:#fff;color:#16132E;box-shadow:0 30px 60px rgba(0,0,0,.45);overflow:hidden;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
-.post-card .pc-top{display:flex;align-items:center;gap:8px;padding:10px 12px;font:600 12px/1 var(--body)}
-.post-card .pc-top i{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#F3D79A,#C99A3E)}
-.post-card .pc-img{aspect-ratio:1;display:grid;place-items:end start;padding:16px;color:#fff;font:700 22px/1.1 var(--head);letter-spacing:-.02em}
-.post-card .pc-img small{display:block;font:600 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;opacity:.85;margin-bottom:8px}
-.post-card .pc-act{display:flex;gap:12px;padding:10px 12px 12px;font-size:16px}
-.fan.on .c1{transform:translateX(-150px) rotate(-9deg)}
-.fan.on .c3{transform:translateX(150px) rotate(9deg)}
-.fan.on .c2{transform:translateY(-14px)}
-@media (max-width:620px){.fan.on .c1{transform:translateX(-70px) rotate(-8deg)}.fan.on .c3{transform:translateX(70px) rotate(8deg)}.fan{height:400px}.post-card{width:210px;margin-left:-105px}}
+.fan{position:relative;height:560px;justify-self:center;width:min(560px,100%)}
+.post-card{position:absolute;left:50%;top:20px;width:272px;margin-left:-136px;border-radius:20px;background:#fff;color:#111;box-shadow:0 34px 70px rgba(0,0,0,.5);overflow:hidden;transition:transform 1.1s cubic-bezier(.2,.8,.2,1);font-family:-apple-system,"SF Pro Text",var(--body)}
+.pc-top{display:flex;align-items:center;gap:8px;padding:10px 12px}
+.pc-top img{width:30px;height:30px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff,0 0 0 3.5px #E8B95A}
+.pc-top span{display:grid;line-height:1.15;flex:1}.pc-top b{font-size:12.5px}.pc-top small{font-size:10.5px;color:#777}
+.pc-top em{font-style:normal;color:#555;letter-spacing:1px}
+.pc-img{aspect-ratio:1;background:center/cover no-repeat;position:relative}
+.pc-tag{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font:700 10.5px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:7px 9px;border-radius:7px}
+.pc-act{display:flex;gap:13px;padding:9px 12px 2px;font-size:17px}.pc-act .bm{margin-left:auto}
+.pc-meta{padding:2px 12px 12px;font-size:12px;line-height:1.4}.pc-meta b{font-weight:700}.pc-meta p{margin:3px 0 0;color:#222}.pc-meta .cm{color:#555}
+.fan.on .c1{transform:translateX(-170px) rotate(-8deg) translateY(30px)}
+.fan.on .c3{transform:translateX(170px) rotate(8deg) translateY(30px)}
+.fan.on .c2{transform:translateY(-6px)}
+.c2{z-index:2}
+@media (max-width:620px){.fan{height:520px}.post-card{width:230px;margin-left:-115px}.fan.on .c1{transform:translateX(-62px) rotate(-7deg) translateY(26px)}.fan.on .c3{transform:translateX(62px) rotate(7deg) translateY(26px)}}
+/* metrics */
+.mx-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.mx-head p{max-width:46ch;color:var(--soft);margin:0}
+.mx-card{margin-top:36px;border-radius:28px;border:1px solid var(--line);background:linear-gradient(180deg,#121022,#0B0A16);padding:28px;overflow:hidden}
+.mx-top{display:flex;justify-content:space-between;align-items:center}
+.mx-badge{font:700 10.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:#14100A;background:var(--gold);padding:7px 10px;border-radius:6px}
+.mx-range{font-size:13px;color:var(--dim)}
+.mx-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:22px}
+.mx-stats div{background:#0E0C1C;padding:18px 18px 16px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px}
+.mx-stats small{width:100%;font-size:12px;color:var(--dim);margin-bottom:6px}
+.mx-stats b{font:700 clamp(30px,3.6vw,44px)/1 var(--head);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.mx-stats em{font:600 18px var(--head);font-style:normal;color:var(--soft)}
+.mx-stats .up{margin-left:auto;color:#4ADE80;font-size:13px}
+.mx-chart{position:relative;margin-top:22px;height:260px}
+.mx-chart svg{width:100%;height:100%;overflow:visible}
+.mx-chart .grid path{stroke:rgba(255,255,255,.06);stroke-width:1}
+.mx-chart .line{fill:none;stroke:#E8B95A;stroke-width:3.5;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;filter:drop-shadow(0 0 8px rgba(232,185,90,.55))}
+.mx-chart .line2{fill:none;stroke:rgba(180,195,240,.45);stroke-width:2;stroke-dasharray:6 7}
+.mx-chart .area{opacity:0;transition:opacity 1.2s 1.6s}
+.mx-chart .dot{fill:#fff;stroke:#E8B95A;stroke-width:4;opacity:0}
+.mx.on .line{animation:draw 2.6s cubic-bezier(.4,0,.2,1) forwards}.mx.on .area{opacity:1}.mx.on .dot{opacity:1}
+@keyframes draw{to{stroke-dashoffset:0}}
+.mx-legend{position:absolute;left:0;top:0;display:flex;gap:16px;font-size:12.5px;color:var(--soft)}
+.mx-legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}.mx-legend i.a{background:#E8B95A}.mx-legend i.b{background:rgba(180,195,240,.6)}
+.tape{margin-top:16px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.tape-in{display:flex;width:max-content;animation:tape 40s linear infinite}
+.tape span{padding:13px 26px;font:600 12.5px/1 var(--body);letter-spacing:.12em;color:var(--soft);white-space:nowrap;border-right:1px solid var(--line)}
+.tape b{color:#4ADE80;margin-left:8px;font-weight:700}
+@keyframes tape{to{transform:translateX(-50%)}}
+.mx-note{font-size:12.5px;color:var(--dim);margin:14px 0 0}
+@media (max-width:760px){.mx-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.mx-chart{height:200px}.mx-card{padding:18px}}
+@media (prefers-reduced-motion:reduce){.mx .line{stroke-dashoffset:0;animation:none}.mx .area{opacity:1}.tape-in{animation:none}}
 @media (max-width:900px){.paths,.ai-split{grid-template-columns:minmax(0,1fr)}.ai-split{gap:40px}}
-@media (prefers-reduced-motion:reduce){.re-hero .bg,.glass,.typing i{animation:none}.post-card{transition:none}}
+@media (prefers-reduced-motion:reduce){.re-hero .bg,.glass,.typing i{animation:none}.post-card{transition:none}.bub{opacity:1;transform:none}}
 .re .faq summary::after{color:var(--gold)}
 </style>
 <link rel="canonical" href="https://www.thesocialdm.com/real-estate"><link rel="icon" href="/logo.png"><meta name="description" content="Social, Google and AI visibility for real estate agents, teams and brokerages. Individual agents start with LocalLift Signature at $199 a month, no contract."><meta property="og:type" content="website"><meta property="og:site_name" content="The SocialDM"><meta property="og:title" content="Real Estate Marketing for Agents and Teams | The SocialDM"><meta property="og:description" content="Social, Google and AI visibility for real estate agents, teams and brokerages. Individual agents start with LocalLift Signature at $199 a month, no contract."><meta property="og:url" content="https://www.thesocialdm.com/real-estate"><meta property="og:image" content="https://www.thesocialdm.com/logo.png"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Real estate agent marketing", "serviceType": "Real estate agent marketing", "url": "https://www.thesocialdm.com/real-estate", "description": "Social, Google and AI visibility for real estate agents, teams and brokerages. Individual agents start with LocalLift Signature at $199 a month, no contract.", "provider": {"@type": "Organization", "@id": "https://www.thesocialdm.com/#organization", "name": "The SocialDM", "url": "https://www.thesocialdm.com/"}, "areaServed": {"@type": "Country", "name": "United States"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between LocalLift Signature and working with The SocialDM directly?", "acceptedAnswer": {"@type": "Answer", "text": "LocalLift Signature is our done for you weekly posting plan for individual agents, at $199 a month with no contract. Teams and brokerages work with The SocialDM directly on a custom plan that covers social, Google and AI visibility across every agent."}}, {"@type": "Question", "name": "Do you work with individual agents, teams and brokerages?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Individual agents usually start with LocalLift Signature. Teams and brokerages get a plan scoped to the number of agents and markets."}}, {"@type": "Question", "name": "Do you work with title reps?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. LocalLift Signature works for title reps as well as agents."}}, {"@type": "Question", "name": "Will you post as me?", "acceptedAnswer": {"@type": "Answer", "text": "With LocalLift Signature, posts are prepared for your market and scheduled for you, and you can reply any time if something looks off. Team and brokerage plans include an approval step for every agent and the brand."}}, {"@type": "Question", "name": "Do you run paid ads?", "acceptedAnswer": {"@type": "Answer", "text": "When they fit the plan. Many agents get more from a strong profile, steady reviews and useful local content before spending on ads."}}]}</script></head><body>
@@ -91,7 +146,7 @@
       <h2 class="h2">One system. Sized for you.</h2>
       <div class="paths">
         <article class="path sig">
-          <div class="ph"><img src="/p8482527.jpg" alt="Real estate agent on a phone call beside a home for sale sign" loading="lazy"></div>
+          <div class="ph"><img src="/p7641899.jpg" alt="Young real estate agent handing house keys to a smiling couple" loading="lazy"></div>
           <div class="pb">
             <div class="who">For individual agents</div>
             <h3>Fresh, local proof behind your name, every week.</h3>
@@ -106,7 +161,7 @@
           </div>
         </article>
         <article class="path">
-          <div class="ph"><img src="/p8729998.jpg" alt="Real estate professionals reviewing a contract with clients in a modern office" loading="lazy"></div>
+          <div class="ph"><img src="/p36729675.jpg" alt="Couple receiving house keys from their agent at a closing table" loading="lazy"></div>
           <div class="pb">
             <div class="who">For teams and brokerages</div>
             <h3>Every agent visible. One standard across the brand.</h3>
@@ -131,11 +186,23 @@
         <h2 class="h2">When they ask AI for an agent, are you the answer?</h2>
         <p style="color:var(--soft);max-width:50ch">More buyers and sellers now ask ChatGPT, Gemini or Google&rsquo;s AI who to call. The agents those tools name are the ones with consistent, local, credible proof online. That is what we build.</p>
       </div>
-      <div class="phone" aria-hidden="true"><div class="screen">
-        <div class="app">AI assistant</div>
-        <div class="bub me b1">Who are the best real estate agents in Scottsdale?</div>
-        <div class="bub ai b2"><span class="typing"><i></i><i></i><i></i></span></div>
-        <div class="bub ai b3">Here are agents with strong local reviews and recent activity:<ol><li class="you">You, your brokerage</li><li>Agent B</li><li>Agent C</li></ol></div>
+      <div class="iph" aria-hidden="true"><div class="iph-in">
+        <div class="island"></div>
+        <div class="sbar"><b>9:41</b><span><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0z"/><path d="M3.2 6.6a6.8 6.8 0 0 1 9.6 0l-1.2 1.2a5.1 5.1 0 0 0-7.2 0z"/><path d="M.8 4.2a10.2 10.2 0 0 1 14.4 0L14 5.4a8.5 8.5 0 0 0-12 0z"/></svg><i class="batt"><i></i></i></span></div>
+        <div class="apphd"><span class="spark">&#10022;</span>AI Assistant</div>
+        <div class="chat">
+          <div class="bub me b1">Who are the best real estate agents in Scottsdale?</div>
+          <div class="bub ai b2 typ"><span class="typing"><i></i><i></i><i></i></span></div>
+          <div class="bub ai b3">Based on recent reviews and local activity, here are three to start with:
+            <div class="pick"><img src="p7641899a.jpg" alt=""><div><b>You</b><span>&#9733; 4.9 &middot; Scottsdale specialist</span></div><em>#1</em></div>
+            <div class="pick dim"><i></i><div><b>Agent B</b><span>&#9733; 4.6</span></div></div>
+            <div class="pick dim"><i></i><div><b>Agent C</b><span>&#9733; 4.5</span></div></div>
+          </div>
+          <div class="bub me b4">Can I book a showing with the first one?</div>
+          <div class="bub ai b5">Yes. Here is their profile with a link to book. <span class="chip">View profile &rarr;</span></div>
+        </div>
+        <div class="ibar"><span>Ask anything</span><i></i></div>
+        <div class="homebar"></div>
       </div></div>
     </div>
   </section>
@@ -143,9 +210,18 @@
   <section class="block" style="padding-top:0">
     <div class="wrap ai-split">
       <div class="fan" aria-hidden="true">
-        <div class="post-card c1"><div class="pc-top"><i></i>yourname.realty</div><div class="pc-img" style="background:linear-gradient(160deg,#3A2F7A,#140F3A)"><div><small>Market update</small>Prices are up. Buyers can still negotiate.</div></div><div class="pc-act">&#9825; &#128172; &#10148;</div></div>
-        <div class="post-card c3"><div class="pc-top"><i></i>yourname.realty</div><div class="pc-img" style="background:linear-gradient(160deg,#C99A3E,#5A3E10)"><div><small>Local event</small>This weekend in your neighborhood.</div></div><div class="pc-act">&#9825; &#128172; &#10148;</div></div>
-        <div class="post-card c2"><div class="pc-top"><i></i>yourname.realty</div><div class="pc-img" style="background:url(p318171560.jpg) center/cover"><div style="text-shadow:0 2px 12px rgba(0,0,0,.5)"><small>Just listed</small>Modern living, minutes from everything.</div></div><div class="pc-act">&#10084;&#65039; &#128172; &#10148;</div></div>
+        <div class="post-card c1"><div class="pc-top"><img src="p7641899a.jpg" alt=""><span><b>avery.homes</b><small>Scottsdale, Arizona</small></span><em>&middot;&middot;&middot;</em></div>
+          <div class="pc-img" style="background-image:url(p8293700.jpg)"><span class="pc-tag">Just closed</span></div>
+          <div class="pc-act"><span class="hrt">&#10084;&#65039;</span><span>&#128172;</span><span>&#10148;</span><span class="bm">&#9744;</span></div>
+          <div class="pc-meta"><b>1,284 likes</b><p><b>avery.homes</b> Keys in hand. Congrats to these two on their first home! &#127881;</p><p class="cm"><b>jordan.m</b> So happy for you both!</p></div></div>
+        <div class="post-card c3"><div class="pc-top"><img src="p7641899a.jpg" alt=""><span><b>avery.homes</b><small>Scottsdale, Arizona</small></span><em>&middot;&middot;&middot;</em></div>
+          <div class="pc-img" style="background-image:url(p1669799.jpg)"><span class="pc-tag">Open house</span></div>
+          <div class="pc-act"><span class="hrt">&#10084;&#65039;</span><span>&#128172;</span><span>&#10148;</span><span class="bm">&#9744;</span></div>
+          <div class="pc-meta"><b>612 likes</b><p><b>avery.homes</b> Saturday 11 to 2. Light everywhere, steps from Old Town.</p><p class="cm"><b>mia.lux</b> Saving this one &#128525;</p></div></div>
+        <div class="post-card c2"><div class="pc-top"><img src="p7641899a.jpg" alt=""><span><b>avery.homes</b><small>Scottsdale, Arizona</small></span><em>&middot;&middot;&middot;</em></div>
+          <div class="pc-img" style="background-image:url(p318171560.jpg)"><span class="pc-tag">Just listed</span></div>
+          <div class="pc-act"><span class="hrt">&#10084;&#65039;</span><span>&#128172;</span><span>&#10148;</span><span class="bm">&#9744;</span></div>
+          <div class="pc-meta"><b>2,047 likes</b><p><b>avery.homes</b> Modern living, minutes from everything. DM me for a private tour.</p><p class="cm"><b>tyler.r</b> Is this the one with the infinity pool?</p></div></div>
       </div>
       <div>
         <div class="eyebrow">A week of you, everywhere</div>
@@ -155,7 +231,32 @@
     </div>
   </section>
 
-  <section class="block dl-sec" style="padding-top:0" aria-label="What is inside"><div class="wrap"><div class="eyebrow">What&rsquo;s inside, for agents and teams</div><h2 class="h2">The same system, built for how clients choose an agent.</h2><div class="dl-grid"><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></span><span class="dl-cad">Every Friday</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Weekly Pulse</h3><p>A one page read on how you showed up this week, and the one thing to do next.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Lift Score</h3><p>One number that shows whether you are getting easier to find in your market.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>AI Shortlist</h3><p>Know whether AI assistants recommend you when people ask for an agent, and who they recommend instead.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Map Reach</h3><p>Where you appear in Google Maps across the neighborhoods you sell in.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span class="dl-cad">Every week</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Daily Presence</h3><p>Fresh posts that keep your name in front of buyers and sellers, written for your market.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 4h16v12H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="dl-cad">Ongoing</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Review Desk</h3><p>Review replies in your voice that turn happy clients into proof for the next one.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="7"/><rect x="11" y="7" width="3" height="11"/><rect x="17" y="3" width="3" height="15"/></svg></span><span class="dl-cad">Monthly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Snapshot</h3><p>Calls, website clicks and direction requests from Google, in plain language.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="14"/><path d="M10 9l5 3-5 3z"/></svg></span><span class="dl-cad">Monthly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>ClearView</h3><p>Your social report: what posted, what people engaged with and what changes next.</p></div></div></div></section>
+  <section class="block mx" style="padding-top:0">
+    <div class="wrap">
+      <div class="mx-head"><div><div class="eyebrow">Your numbers, every week</div><h2 class="h2">Watch your name go up.</h2></div><p>Every Friday you see what moved: how often you were seen, how many people called and clicked, and whether AI recommends you. Plain language, no guesswork.</p></div>
+      <div class="mx-card">
+        <div class="mx-top"><span class="mx-badge">Sample report</span><span class="mx-range">Last 12 weeks</span></div>
+        <div class="mx-stats">
+          <div><small>Google profile views</small><b data-to="38">0</b><em>%</em><span class="up">&#9650;</span></div>
+          <div><small>Calls</small><b data-to="21">0</b><em>%</em><span class="up">&#9650;</span></div>
+          <div><small>Website clicks</small><b data-to="17">0</b><em>%</em><span class="up">&#9650;</span></div>
+          <div><small>AI recommendations</small><b data-to="4">0</b><em> of 5</em><span class="up">&#9650;</span></div>
+        </div>
+        <div class="mx-chart"><svg viewBox="0 0 1000 260" preserveAspectRatio="none">
+          <defs><linearGradient id="mxg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8B95A" stop-opacity=".35"/><stop offset="1" stop-color="#E8B95A" stop-opacity="0"/></linearGradient></defs>
+          <g class="grid"><path d="M0 65H1000M0 130H1000M0 195H1000"/></g>
+          <path class="area" d="M0 220 C60 214 90 200 140 205 S230 186 280 178 S370 190 420 160 S510 150 560 132 S650 140 700 112 S790 96 840 84 S930 60 1000 40 L1000 260 L0 260 Z" fill="url(#mxg)"/>
+          <path class="line" id="mxl" d="M0 220 C60 214 90 200 140 205 S230 186 280 178 S370 190 420 160 S510 150 560 132 S650 140 700 112 S790 96 840 84 S930 60 1000 40"/>
+          <path class="line2" d="M0 236 C80 232 140 228 200 226 S320 222 380 214 S500 210 560 200 S680 196 740 186 S860 178 1000 168"/>
+          <circle class="dot" r="7"/>
+        </svg><div class="mx-legend"><span><i class="a"></i>You</span><span><i class="b"></i>Market average</span></div></div>
+      </div>
+      <div class="tape" aria-hidden="true"><div class="tape-in"><span>PROFILE VIEWS <b>&#9650; 38%</b></span><span>CALLS <b>&#9650; 21%</b></span><span>WEBSITE CLICKS <b>&#9650; 17%</b></span><span>DIRECTION REQUESTS <b>&#9650; 12%</b></span><span>NEW REVIEWS <b>&#9650; 9</b></span><span>AI RECOMMENDATIONS <b>&#9650; 4 of 5</b></span><span>POSTS PUBLISHED <b>&#9650; 12</b></span><span>MAPS TOP 3 <b>&#9650; 31%</b></span><span>PROFILE VIEWS <b>&#9650; 38%</b></span><span>CALLS <b>&#9650; 21%</b></span><span>WEBSITE CLICKS <b>&#9650; 17%</b></span><span>DIRECTION REQUESTS <b>&#9650; 12%</b></span><span>NEW REVIEWS <b>&#9650; 9</b></span><span>AI RECOMMENDATIONS <b>&#9650; 4 of 5</b></span><span>POSTS PUBLISHED <b>&#9650; 12</b></span><span>MAPS TOP 3 <b>&#9650; 31%</b></span></div></div>
+      <p class="mx-note">Illustration of a sample weekly report. Your numbers depend on your market and starting point.</p>
+    </div>
+  </section>
+
+  <section class="block dl-sec" style="padding-top:0" aria-label="What is inside"><div class="wrap"><div class="eyebrow">What&rsquo;s inside, for agents and teams</div><h2 class="h2">The same system, built for how clients choose an agent.</h2><div class="dl-grid"><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></span><span class="dl-cad">Every Friday</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Weekly Pulse</h3><p>A one page read on how you showed up this week, and the one thing to do next.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Lift Score</h3><p>One number that shows whether you are getting easier to find in your market.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>AI Shortlist</h3><p>Know whether AI assistants recommend you when people ask for an agent, and who they recommend instead.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Map Reach</h3><p>Where you appear in Google Maps across the neighborhoods you sell in.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></span><span class="dl-cad">Weekly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Site Read</h3><p>Make sure Google and AI tools describe you, your listings and your areas correctly.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span class="dl-cad">Every week</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Daily Presence</h3><p>Fresh posts that keep your name in front of buyers and sellers, written for your market.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><span class="dl-cad">Monthly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Market Survey</h3><p>See what competing agents are doing in your market before it costs you a listing.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 4h16v12H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="dl-cad">Ongoing</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Review Desk</h3><p>Review replies in your voice that turn happy clients into proof for the next one.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="7"/><rect x="11" y="7" width="3" height="11"/><rect x="17" y="3" width="3" height="15"/></svg></span><span class="dl-cad">Monthly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>Snapshot</h3><p>Calls, website clicks and direction requests from Google, in plain language.</p></div><div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="14"/><path d="M10 9l5 3-5 3z"/></svg></span><span class="dl-cad">Monthly</span></div><span class="dl-brand">LocalLift&trade;</span><h3>ClearView</h3><p>Your social report: what posted, what people engaged with and what changes next.</p></div></div></div></section>
 
   <section class="block proof-tm" style="padding-top:0"><div class="wrap tm-head"><div><div class="eyebrow">What clients say</div><h2 class="h2">Rated 5.0 on Google.</h2></div><p class="tm-note">From 5 Google reviews of The SocialDM.</p></div><div class="marquee tm-marquee"><div class="mq-track"><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Working with TheSocialDM has strengthened my professional visibility and brand consistency in the Arizona real estate market.&rdquo;</blockquote><figcaption><b>Jody Sayler</b><span>Broker, Arizona real estate &middot; Google review</span></figcaption></figure><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Working with TheSocialDM has strengthened my visibility and professional presence within the real estate industry.&rdquo;</blockquote><figcaption><b>Shari Griffin</b><span>Real estate client &middot; Google review</span></figcaption></figure><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Since working with Social DM, my social media has become more consistent, more professional, and much more strategic.&rdquo;</blockquote><figcaption><b>Alex Roberts</b><span>Client &middot; Google review</span></figcaption></figure></div><div class="mq-track" aria-hidden="true"><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Working with TheSocialDM has strengthened my professional visibility and brand consistency in the Arizona real estate market.&rdquo;</blockquote><figcaption><b>Jody Sayler</b><span>Broker, Arizona real estate &middot; Google review</span></figcaption></figure><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Working with TheSocialDM has strengthened my visibility and professional presence within the real estate industry.&rdquo;</blockquote><figcaption><b>Shari Griffin</b><span>Real estate client &middot; Google review</span></figcaption></figure><figure class="tm-card"><span class="tm-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>&ldquo;Since working with Social DM, my social media has become more consistent, more professional, and much more strategic.&rdquo;</blockquote><figcaption><b>Alex Roberts</b><span>Client &middot; Google review</span></figcaption></figure></div></div></section>
 
@@ -184,6 +285,12 @@
 </main>
 <div id="site-footer"><div class="crawl-nav"><p>The SocialDM, 3104 E Camelback Rd #2161, Phoenix AZ 85016. info@thesocialdm.com</p><a href="https://www.instagram.com/the.socialdm/">www.instagram.com</a><a href="https://www.facebook.com/thesocialdm">www.facebook.com</a><a href="https://www.tiktok.com/@thesocialdm">www.tiktok.com</a><a href="https://www.youtube.com/@thesocialdm">www.youtube.com</a></div></div>
 <script src="/chrome.js"></script>
-<script>(function(){var els=document.querySelectorAll('.phone,.fan');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
-var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');if(e.target.classList.contains('phone')){var t=e.target.querySelector('.b2');setTimeout(function(){t.style.display='none'},2300)}io.unobserve(e.target)}})},{threshold:.35});els.forEach(function(e){io.observe(e)})})();</script>
+<script>(function(){var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function on(el,fn){if(!el)return;if(!('IntersectionObserver' in window)||RM){el.classList.add('on');fn&&fn(el);return}new IntersectionObserver(function(e,o){if(e[0].isIntersecting){el.classList.add('on');fn&&fn(el);o.disconnect()}},{threshold:.35}).observe(el)}
+on(document.querySelector('.iph'),function(el){var t=el.querySelector('.typ');setTimeout(function(){t.style.display='none'},2100)});
+on(document.querySelector('.fan'));
+on(document.querySelector('.mx'),function(sec){sec.querySelectorAll('[data-to]').forEach(function(b){var to=+b.dataset.to,st=null;function f(ts){if(!st)st=ts;var k=Math.min(1,(ts-st)/1800);b.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)}RM?b.textContent=to:requestAnimationFrame(f)});
+  var path=sec.querySelector('#mxl'),dot=sec.querySelector('.dot'),L=path.getTotalLength(),st=null;function g(ts){if(!st)st=ts;var k=Math.min(1,(ts-st)/2600);k=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;var p=path.getPointAtLength(L*k);dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y);if(k<1)requestAnimationFrame(g)}
+  if(RM){var p=path.getPointAtLength(L);dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y)}else requestAnimationFrame(g)});
+})();</script>
 </body></html>

@@ -27,10 +27,22 @@
    "text": "Where you appear in Google Maps across the neighborhoods you sell in."
   },
   {
+   "icon": "globe",
+   "name": "Site Read",
+   "cadence": "Weekly",
+   "text": "Make sure Google and AI tools describe you, your listings and your areas correctly."
+  },
+  {
    "icon": "calendar",
    "name": "Daily Presence",
    "cadence": "Every week",
    "text": "Fresh posts that keep your name in front of buyers and sellers, written for your market."
+  },
+  {
+   "icon": "tag",
+   "name": "Market Survey",
+   "cadence": "Monthly",
+   "text": "See what competing agents are doing in your market before it costs you a listing."
   },
   {
    "icon": "message",

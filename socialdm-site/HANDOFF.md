@@ -53,3 +53,7 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 7. Before DNS: confirm where thesocialdm.com name servers and MX records live (Squarespace Domains shown), copy every record so info@thesocialdm.com never drops. Then point the domain, verify HTTPS, every old URL returns 200 or 301, submit sitemap in Search Console.
 8. Editor plus Approval Assistant on the final site. Then set up the blog schedule (default 3 posts a week), newsletter and drips on Make and Bird, subscriptions on PayPal or Stripe when he is ready.
 9. LocalLift Now (localliftnow.com, plan ends Feb 28 2027): RETIRED by Michael on Nov 2 2026 (Semrush: 8 keywords, ~0 organic traffic; renter facing, confused agency prospects). Footer card removed from thesocialdm.com. Before Feb 28 2027: keep the domain registered, inventory its URLs, then 301 every path to https://www.thesocialdm.com/blog (domain alias on a tiny Netlify redirect site with "/* https://www.thesocialdm.com/blog 301!"). Optionally rewrite the best renter guides as operator facing market reports on the blog and point their old URLs at those instead.
+
+## Real estate page, second pass (Nov 2)
+- iPhone style AI chat mockup (.iph), Instagram style post cards (avery.homes, sample), sample weekly report section (.mx) with animated line chart and metric tape, deliverables grid filled to 10 tiles (Site Read, Market Survey added).
+- New photos (Pexels): p7641899 (+a avatar), p36729675, p8293700, p1669799.
