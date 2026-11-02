@@ -18,6 +18,7 @@
 .form textarea{min-height:140px;resize:vertical}
 .form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--sky);outline-offset:1px;border-color:transparent}
 .form .btn{justify-self:start;margin-top:6px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .note{font-size:13px;color:var(--dim);margin:0}
 .aside{border-radius:28px;padding:34px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
 .aside h2{font-size:26px;line-height:1.15}
@@ -32,13 +33,16 @@
   <section class="hero pg-hero">
     <div class="wrap">
       <div class="eyebrow">Contact</div>
-      <h1>Let&rsquo;s make you feel like a <span>Social Media Pro!</span></h1>
+      <h1>Let&rsquo;s get you found <span>before they choose.</span></h1>
+      <p>Tell us about your community, practice or business. A real person reads every message and replies within one business day.</p>
     </div>
   </section>
 
   <section class="block" style="padding-top:20px">
     <div class="wrap contact-grid">
-      <form class="form" onsubmit="return false" aria-label="Contact form (draft)">
+      <form class="form" name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" aria-label="Contact form">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp" aria-hidden="true"><label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="row">
           <label>First name<input type="text" name="first_name" autocomplete="given-name" required></label>
           <label>Last name<input type="text" name="last_name" autocomplete="family-name" required></label>
@@ -61,7 +65,7 @@
         </label>
         <label>Message<textarea name="message" required></textarea></label>
         <button class="btn btn-light" type="submit">Get your visibility plan</button>
-        <p class="note">Draft: form goes live after delivery is tested.</p>
+        <p class="note">We reply from info@thesocialdm.com. No newsletters unless you ask.</p>
       </form>
 
       <aside class="aside">

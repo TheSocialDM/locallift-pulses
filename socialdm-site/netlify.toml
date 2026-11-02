@@ -1,0 +1,11 @@
+# thesocialdm.com on Netlify. Site settings: branch socialdm-site, base directory socialdm-site.
+# dist/ is prebuilt and committed (tools/build.py --prod), so there is no build command.
+[build]
+  publish = "dist"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

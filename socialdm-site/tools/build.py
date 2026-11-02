@@ -162,6 +162,8 @@ for p in d['posts']:
         excerpt=undash(ex), body=body, iso=iso, nice=nice, year=yr, hero=hero, author=p.get('author') or 'The SocialDM', updated=fmt(p['updatedOn'])[0], new=False, faq=[], alt=undash(p['title'])))
 for f in sorted(glob.glob(NEW + '/*.json')):
     n = json.load(open(f))
+    if PROD and not n.get('approved'):   # unapproved drafts appear only in the preview
+        continue
     iso, nice, yr = fmt(n['date'])
     hero = None
     if n.get('image'):
@@ -253,6 +255,7 @@ for f in glob.glob(SRC + '/*.html'):
         t = re.sub(r'(src|href)="((?:p\d+\.jpg|logo\.png|site\.css|fx\.css|fx\.js|chrome\.js))"', r'\1="/\2"', t)
     else:
         t = t.replace('</head>', '<meta name="robots" content="noindex"></head>', 1)
+        t = t.replace('data-netlify="true"', 'data-netlify="true" onsubmit="return false"')  # preview never submits
     open(f'{OUT}/{n}', 'w').write(t)
 for a in ['site.css','fx.css','fx.js','logo.png'] + [os.path.basename(x) for x in glob.glob(SRC+'/p*.jpg')]:
     shutil.copy(f'{SRC}/{a}', f'{OUT}/{a}')
@@ -282,7 +285,7 @@ if PROD:
 /blog/tag/* /blog 301
 /blog/category/* /blog 301
 ''')
-    urls = ['/'] + ['/' + os.path.basename(f)[:-5] for f in glob.glob(OUT + '/*.html') if os.path.basename(f) not in ('index.html','404.html')]
+    urls = ['/'] + ['/' + os.path.basename(f)[:-5] for f in glob.glob(OUT + '/*.html') if os.path.basename(f) not in ('index.html','404.html','thank-you.html')]
     urls += ['/apartment-seo-blog-hub/cuvee-apartments-westgate-glendale'] + [f'/blog/{p["slug"]}' for p in posts]
     open(OUT + '/sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'<url><loc>{SITE}{u}</loc></url>\n' for u in sorted(set(urls))) + '</urlset>\n')
     open(OUT + '/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
