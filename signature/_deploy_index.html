@@ -538,7 +538,7 @@ tr.me .bar span{background:var(--gold)}
 .brief .mast small{color:var(--muted);font-size:13px}
 .brief h4{font-family:var(--f-head);font-size:20px;letter-spacing:-.02em;margin:28px 0 10px}
 .brief p{color:#3A3A3E;font-size:16px;margin-top:8px}
-.bstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.bstats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .bstats div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
 .bstats b{display:block;font-family:var(--f-head);font-size:26px;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
 .bstats span{font-size:12.5px;color:var(--muted);line-height:1.35;display:block}
@@ -598,7 +598,7 @@ tr.me .bar span{background:var(--gold)}
 @media (prefers-reduced-motion:reduce){.rv-track{animation:none;flex-wrap:wrap;width:auto;padding:0 22px}.rv.dup{display:none}.lt{transition:none}}
 
 /* Brief preview */
-.bp{position:relative;height:600px;overflow:hidden;border-radius:26px 26px 0 0;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 97%);mask-image:linear-gradient(180deg,#000 72%,transparent 97%)}
+.bp{position:relative;height:640px;overflow:hidden;border-radius:26px 26px 0 0;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 97%);mask-image:linear-gradient(180deg,#000 72%,transparent 97%)}
 .bp-mail{background:#fff;border-radius:26px;box-shadow:0 30px 60px rgba(17,17,19,.12),0 0 0 1px var(--line);overflow:hidden}
 .bp-bar{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid #ECEAE4;font-size:13px;color:var(--muted)}
 .bp-bar .av{width:34px;height:34px;border-radius:50%;background:#0A0A0B;color:#fff;display:grid;place-items:center;font:500 18px/1 var(--f-serif);flex:none}
@@ -611,7 +611,7 @@ tr.me .bar span{background:var(--gold)}
 .bp-body{padding:22px 24px}
 .bp-body p{font-size:15px;color:#444;margin:0}
 .bp-k{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9C7636;font-weight:600;margin-top:18px}
-.bp-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:10px}
+.bp-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
 .bp-stats div{background:#F1F0EC;border-radius:12px;padding:12px 10px}
 .bp-stats b{display:block;font:700 22px/1 var(--f-head);letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums}
 .bp-stats span{display:block;font-size:11px;line-height:1.3;color:var(--muted);margin-top:6px}
@@ -621,7 +621,7 @@ tr.me .bar span{background:var(--gold)}
 .bp-fade{position:absolute;left:-60px;right:-60px;bottom:-10px;height:190px;background:linear-gradient(180deg,rgba(241,240,236,0),rgba(241,240,236,.9) 38%,var(--page) 58%);pointer-events:none}
 .bp-cta{position:relative;margin-top:-70px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
 .bp-cta small{font-size:12px;color:var(--muted);letter-spacing:.04em}
-@media (max-width:640px){.bp{height:560px}.bp-hero{height:150px}.bp-hero strong{font-size:22px}.bp-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.bp{height:660px}.bp-hero{height:150px}.bp-hero strong{font-size:22px}.bp-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 
 <nav>
@@ -927,7 +927,7 @@ tr.me .bar span{background:var(--gold)}
           </div>
           <div class="bp-fade"></div>
         </div>
-        <div class="bp-cta"><button class="btn btn-gold" type="button" id="open-brief" style="background:#0A0A0B;color:#fff">Unlock the full sample issue</button><small>Free. Add your details on the left and it opens right away.</small></div>
+        <div class="bp-cta"><button class="btn btn-gold" type="button" id="open-brief" style="background:#0A0A0B;color:#fff">Unlock the full sample issue</button><small>Free. Add your details and it opens right away.</small></div>
       </div>
     </div>
   </div>
