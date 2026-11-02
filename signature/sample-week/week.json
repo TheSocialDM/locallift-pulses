@@ -1,6 +1,6 @@
 {
  "date": "2026-11-02",
- "data_note": "Each sample post shows its own data date.",
+ "data_note": "Market posts show their source and data date.",
  "month_label": "November 2026",
  "posts": [
   {
@@ -10,8 +10,8 @@
    "img": "2026-11-02_market.jpg",
    "google_img": "2026-11-02_market_photo.jpg",
    "alt": "Scottsdale market update post: buyers paid 96% of asking",
-   "caption": "Scottsdale buyers paid about 96% of asking in September. Sale to list price was 96.4%, and the median home sold for about $890K over the three months to September, up 9.2% from a year ago. Prices are firm, with room to talk on the right home. #ScottsdaleAZ #ScottsdaleRealEstate",
-   "google": "<b>Scottsdale market, September 2026.</b> Buyers paid 96.4% of list price, and the median home sold for about $890K over the three months to September, up 9.2% from a year ago. Thinking about a move? Ask me what it means for your street."
+   "caption": "Scottsdale buyers paid about 96% of asking in September. Sale to list price was 96.4%, and the median home sold for about $890K over the three months to September, up 9.2% from a year ago. The median is up, with room to talk on the right home. Source: Redfin, MLS based data. #ScottsdaleAZ #ScottsdaleRealEstate",
+   "google": "<b>Scottsdale market, September 2026.</b> Buyers paid 96.4% of list price, and the median home sold for about $890K over the three months to September, up 9.2% from a year ago. Thinking about a move? Ask me what it means for your street. Source: Redfin, MLS based data."
   },
   {
    "key": "corner",
@@ -21,7 +21,7 @@
    "google_img": "2026-11-02_corner_photo.jpg",
    "alt": "Canal Convergence at the Scottsdale Waterfront post",
    "caption": "Canal Convergence lights up the Scottsdale Waterfront Nov 6 to 15, evenings from 6 pm. Light art along the canal, right in the middle of Old Town. Who's going? #ScottsdaleAZ #CanalConvergence",
-   "google": "<b>Canal Convergence lights up Nov 6.</b> Light art fills the Scottsdale Waterfront Nov 6 to 15, evenings from 6 pm. Thinking about living close by? Ask me which neighborhoods fit."
+   "google": "<b>Canal Convergence lights up Nov 6.</b> Light art fills the Scottsdale Waterfront Nov 6 to 15, evenings from 6 pm. Thinking about a move? Ask me about homes near the Waterfront."
   },
   {
    "key": "smart",
@@ -31,7 +31,7 @@
    "google_img": "2026-11-02_seller_photo.jpg",
    "alt": "Your front door is the first showing seller tip post",
    "caption": "Selling soon? Buyers judge your home from the curb in seconds, and most see it first in your listing photos. Fresh paint, healthy plants and a working porch light go a long way. #ScottsdaleAZ #SellingYourHome",
-   "google": "<b>Your front door is the first showing.</b> Buyers judge a home from the curb in seconds, and most see it first in your listing photos. Paint, plants and a porch light make the first impression count."
+   "google": "<b>Selling in Scottsdale? Your front door is the first showing.</b> Buyers judge your home from the curb in seconds, and most see it first in your listing photos. Paint, plants and a porch light make the first impression count."
   }
  ],
  "tiles": [
@@ -57,8 +57,10 @@
     "Median sale price, 3 months to Sep 2026, up 9.2% from a year ago"
    ]
   ],
-  "line": "Scottsdale buyers paid about 96% of asking in September, and prices are up from a year ago.",
-  "say": "“Scottsdale buyers paid about 96% of asking in September, and the median sale price is up from a year ago. Prices are firm, with room to talk on the right home.”",
-  "src": "Market numbers from Redfin, MLS based data through Sep 2026."
- }
+  "line": "Scottsdale buyers paid about 96% of asking in September, and the median sale price is up from a year ago.",
+  "say": "“Scottsdale buyers paid about 96% of asking in September. The median is up from a year ago, with room to talk on the right home.”",
+  "src": "Market numbers from Redfin, MLS based data through Sep 2026.",
+  "headline": "Buyers paid 96% of asking."
+ },
+ "float": "Scottsdale buyers paid 96.4% of list price in September."
 }
