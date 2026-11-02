@@ -33,5 +33,32 @@
    "caption": "Selling soon? Buyers judge your home from the curb in seconds, and most see it first in your listing photos. Fresh paint, healthy plants and a working porch light go a long way. #ScottsdaleAZ #SellingYourHome",
    "google": "<b>Your front door is the first showing.</b> Buyers judge a home from the curb in seconds, and most see it first in your listing photos. Paint, plants and a porch light make the first impression count."
   }
- ]
+ ],
+ "tiles": [
+  {
+   "key": "questions",
+   "img": "master_a.jpg",
+   "alt": "Desert modern, done right design post"
+  },
+  {
+   "key": "lesson",
+   "img": "master_b.jpg",
+   "alt": "Find the repairs before buyers do seller post"
+  }
+ ],
+ "brief": {
+  "stats": [
+   [
+    "96.4%",
+    "Sale to list price, Sep 2026, up 0.3 points from a year ago"
+   ],
+   [
+    "$890K",
+    "Median sale price, 3 months to Sep 2026, up 9.2% from a year ago"
+   ]
+  ],
+  "line": "Scottsdale buyers paid about 96% of asking in September, and prices are up from a year ago.",
+  "say": "“Scottsdale buyers paid about 96% of asking in September, and the median sale price is up from a year ago. Prices are firm, with room to talk on the right home.”",
+  "src": "Market numbers from Redfin, MLS based data through Sep 2026."
+ }
 }
