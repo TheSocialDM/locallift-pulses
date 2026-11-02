@@ -30,6 +30,8 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 
 - Nov 2 site SEO layer (tools/seo_layer.py, runs in --prod builds): keyword titles and meta descriptions for all static pages, Open Graph tags, Organization schema (address, founder, sameAs, areaServed) on home/about/contact, WebSite on home, Service schema on the 6 service pages, FAQPage from any .faq details block, Article on the 2026 report, a hidden plain link copy of the menu and footer inside #site-header/#site-footer for crawlers that do not run chrome.js (chrome.js replaces it for visitors), /llms.txt, and an IndexNow key file (7c2f9e41b85a4d6e9f03a1d2c4b6e8f0.txt) for Bing pings after launch.
 
+- GA4: the Squarespace site used G-WJ6LRXJV21 (GA4 property "TheSocial DM", Windsor id 429000303). seo_layer.py now adds that tag to every production page, and thank-you fires generate_lead. Search Console has a URL prefix property https://www.thesocialdm.com/ with no meta verification tag in the old HTML, so it is verified by GA, DNS or file; keep GA tag and DNS TXT records. Windsor.ai has GA4, Search Console and GBP (locations/13937784954903437869 "The SocialDM") connected for reads.
+
 ## Still to do, in order
 1. New posts: 5 drafts are in new-posts/, written and self checked but NOT yet through Editor or approval, and dist/ does not include them yet. Do not publish until they pass. Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
 2. Thin pages: Medical, Real Estate, Hospitality, Enterprise. About and Contact headline.

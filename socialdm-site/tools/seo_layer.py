@@ -5,6 +5,7 @@ import glob, html, json, os, re
 from bs4 import BeautifulSoup
 
 SITE = 'https://www.thesocialdm.com'
+GA4_ID = 'G-WJ6LRXJV21'  # same GA4 tag the Squarespace site used (property: TheSocial DM)
 INDEXNOW_KEY = '7c2f9e41b85a4d6e9f03a1d2c4b6e8f0'
 ORG_ID = SITE + '/#organization'
 SOCIAL = ['https://www.instagram.com/the.socialdm/', 'https://www.facebook.com/thesocialdm',
@@ -60,6 +61,11 @@ def run(out):
     for f in glob.glob(out + '/**/*.html', recursive=True):
         rel = os.path.relpath(f, out)[:-5]
         t = open(f).read()
+        if GA4_ID not in t:
+            ga = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>'
+                  f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','{GA4_ID}');"
+                  + ("gtag('event','generate_lead',{form_name:'contact'});" if rel == 'thank-you' else '') + '</script>')
+            t = t.replace('<head>', '<head>' + ga, 1) if '<head>' in t else t.replace('</head>', ga + '</head>', 1)
         t = t.replace('<div id="site-header"></div>', f'<div id="site-header">{static_nav}</div>', 1)
         t = t.replace('<div id="site-footer"></div>', f'<div id="site-footer">{static_foot}</div>', 1)
         if rel in META:
