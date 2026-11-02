@@ -1,0 +1,69 @@
+{
+ "slug": "fair-housing-apartment-marketing",
+ "title": "Fair Housing Rules for Apartment Marketing on Social Media and Google Ads",
+ "seoTitle": "Fair Housing Rules for Apartment Social Media and Google Ads",
+ "seoDescription": "What the Fair Housing Act, HUD's advertising rule, Meta's Special Ad Category and Google's housing ad policy mean for apartment posts, ads and targeting.",
+ "excerpt": "The Fair Housing Act covers every apartment ad and post, and Meta and Google add their own limits on housing ad targeting. Describe the home, not the ideal resident.",
+ "date": "2026-11-02",
+ "imageAlt": "Upper floors of a modern gray apartment building with green panels and black metal balconies against a pale sky",
+ "imageIdea": "Real photo of a modern apartment building exterior, no people, no signage or brand logos.",
+ "image": "images/new/fair-housing-apartment-marketing.jpg",
+ "author": "Michael Shad, Founder of The SocialDM",
+ "bodyHtml": "<p>The Fair Housing Act applies to every apartment ad and post, whether it runs on Instagram, Facebook or Google: it cannot indicate a preference, limitation or discrimination based on a protected class. On top of the law, Meta and Google both limit how housing ads can be targeted in the United States.</p> <p>I run a marketing agency, not a law firm, and this is not legal advice. What follows is how we read the primary sources and the process we use. Your counsel should review your policies and anything you are unsure about.</p> <h2>What does the Fair Housing Act say about advertising?</h2> <p>Section 3604(c) of the Act makes it unlawful to make, print or publish any notice, statement or advertisement about renting a dwelling that indicates a preference, limitation or discrimination based on race, color, religion, sex, handicap, familial status or national origin. You can read it in <a href=\"https://www.law.cornell.edu/uscode/text/42/3604\">42 U.S.C. 3604</a>.</p> <p>HUD's regulation at <a href=\"https://www.ecfr.gov/current/title-24/subtitle-B/chapter-I/subchapter-A/part-100/subpart-B/section-100.75\">24 CFR 100.75</a> spells out what that covers. It applies to written and oral notices and statements, and it names words, phrases, photographs, illustrations and symbols that convey a dwelling is or is not available to a particular group. It also covers selecting media or locations for ads in a way that denies parts of the housing market information about housing. That last point is why ad targeting matters, not only ad copy. Your state or city may protect additional classes, so check local law too.</p> <h2>Did HUD's advertising guidance change?</h2> <p>Yes. HUD withdrew its April 2024 guidance on advertising housing through digital platforms, effective September 17, 2025, in a <a href=\"https://www.federalregister.gov/documents/2026/04/06/2026-06624/notification-of-withdrawal-of-fair-housing-and-equal-opportunity-guidance-documents\">notice published in the Federal Register</a> on April 6, 2026. The Act and HUD's regulations were not withdrawn, and HUD said it is still reviewing which guidance to keep or reissue.</p> <p>So the platform specific explainer is gone, but the rule it explained is not. I would not treat the withdrawal as permission to target housing ads more narrowly.</p> <h2>What are Meta's rules for apartment ads?</h2> <p>Ads for housing on Facebook and Instagram must run in Meta's housing Special Ad Category, which limits targeting. Meta's <a href=\"https://developers.facebook.com/documentation/ads-commerce/marketing-api/audiences/special-ad-category\">Special Ad Category documentation</a> says audiences must include ages 18 to 65 and older and all genders, location targeting cannot use postal codes or exclude locations, and some detailed targeting and lookalike options are not available.</p> <p>In the United States and Canada, Meta's documentation also says city level audiences include a 15 mile radius around the city center. These limits trace back to legal challenges. In 2022 Meta settled a Justice Department Fair Housing Act case over its housing ad delivery, and the <a href=\"https://www.justice.gov/archives/opa/pr/justice-department-and-meta-platforms-inc-reach-key-agreement-they-implement-groundbreaking\">Justice Department announced</a> in January 2023 that the two had agreed on compliance targets for a new Variance Reduction System. Meta updates its tools often, so check the current documentation before each campaign.</p> <h2>What are Google's rules for apartment ads?</h2> <p>Google's <a href=\"https://support.google.com/adspolicy/answer/143465?hl=en\">personalized advertising policy</a> says housing ads targeting the United States and Canada cannot target or exclude people by gender, age, parental status, marital status or ZIP code. You can still run search campaigns on the terms renters use and target reasonable geographic areas.</p> <p>That makes keyword choice and ad copy carry more of the load. Our post on <a href=\"/blog/multifamily-google-ads\">multifamily Google Ads</a> covers how we structure campaigns for lease up and stabilized communities within those limits.</p> <h2>What wording and images should apartment marketers avoid?</h2> <p>Describe the home, the amenities and the location, not the kind of person who should live there. Words that describe residents by family status, age, religion, national origin, disability or sex are where most problems start.</p> <table><thead><tr><th>Avoid</th><th>Say instead</th></tr></thead><tbody><tr><td>Perfect for young professionals</td><td>Ten minute drive to downtown offices</td></tr><tr><td>Ideal for singles or couples</td><td>One bedroom and studio floor plans</td></tr><tr><td>No kids, adults only</td><td>Describe the floor plans and amenities</td></tr><tr><td>Walking distance to a named church</td><td>Walking distance to shops and transit</td></tr><tr><td>Must be able to climb stairs</td><td>Third floor unit, no elevator</td></tr></tbody></table> <p>Images count as well. The regulation names photographs and illustrations, so look at your feed and ads as a whole: if every resident pictured looks the same, ask whether a renter would read that as a message about who belongs.</p> <h2>Do the rules apply to organic social posts and review replies?</h2> <p>Yes. The regulation covers notices and statements, not just paid ads, so captions, stories, comments and replies are included. A leasing agent's casual comment on a post is still a statement by someone renting housing.</p> <p>Review replies are a common risk. Never mention or guess at a reviewer's family, background, religion or disability in a reply. Our guide to <a href=\"/blog/how-to-respond-to-apartment-reviews\">responding to apartment reviews</a> has examples.</p> <h2>What review process should a marketing team use?</h2> <p>A short written process, applied to every ad and post, with a named person who can stop something before it goes live. Training once a year is not enough if no one checks the work.</p> <ol> <li>Pick the Special Ad Category for every housing campaign on Meta before building the audience.</li> <li>Check targeting against the platform rules and against the regulation's point about selecting media.</li> <li>Read the copy for words that describe people instead of the property.</li> <li>Look at images as a set across the campaign and the feed.</li> <li>Include your Equal Housing Opportunity statement or logo where your compliance team requires it.</li> <li>Keep a record of what ran, when and to which audience.</li> </ol> <p>Compliance review is built into how we run campaigns for communities as a <a href=\"/multifamily-marketing-agency\">multifamily marketing agency</a>, alongside the work that does not depend on targeting at all: Google, Maps and AI visibility.</p><h2>Questions we hear</h2><h3>Can we target apartment ads by age or ZIP code?</h3><p>Not on Google or Meta in the United States. Google's policy bars targeting or excluding by gender, age, parental status, marital status or ZIP code for housing ads, and Meta's housing Special Ad Category fixes age and gender and blocks postal code targeting.</p><h3>Did HUD remove its fair housing advertising rules?</h3><p>No. HUD withdrew its 2024 guidance on digital platform advertising, effective September 17, 2025, but the Fair Housing Act and HUD's advertising regulation at 24 CFR 100.75 still apply.</p><h3>Do fair housing rules apply to Instagram captions and comments?</h3><p>Yes. The regulation covers notices and statements, not only paid ads, so captions, stories, comments and review replies are included.</p><h3>Can we say a community is great for families or young professionals?</h3><p>I would not. Describe the floor plans, amenities and location instead. Phrases about who should live somewhere are where fair housing problems usually start.</p><h3>Who should approve apartment ads for fair housing?</h3><p>A named person trained on your company's fair housing policy, with counsel available for anything unclear. The marketing team should not be the only check.</p><p><strong>Want a second set of eyes on your ads and posts?</strong> <a href=\"/contact\">Request a free visibility plan</a> and we will review how your community shows up, including your current ad setup.</p>",
+ "faq": [
+  {
+   "q": "Can we target apartment ads by age or ZIP code?",
+   "a": "Not on Google or Meta in the United States. Google's policy bars targeting or excluding by gender, age, parental status, marital status or ZIP code for housing ads, and Meta's housing Special Ad Category fixes age and gender and blocks postal code targeting."
+  },
+  {
+   "q": "Did HUD remove its fair housing advertising rules?",
+   "a": "No. HUD withdrew its 2024 guidance on digital platform advertising, effective September 17, 2025, but the Fair Housing Act and HUD's advertising regulation at 24 CFR 100.75 still apply."
+  },
+  {
+   "q": "Do fair housing rules apply to Instagram captions and comments?",
+   "a": "Yes. The regulation covers notices and statements, not only paid ads, so captions, stories, comments and review replies are included."
+  },
+  {
+   "q": "Can we say a community is great for families or young professionals?",
+   "a": "I would not. Describe the floor plans, amenities and location instead. Phrases about who should live somewhere are where fair housing problems usually start."
+  },
+  {
+   "q": "Who should approve apartment ads for fair housing?",
+   "a": "A named person trained on your company's fair housing policy, with counsel available for anything unclear. The marketing team should not be the only check."
+  }
+ ],
+ "sources": [
+  {
+   "claim": "Unlawful to make, print or publish a notice, statement or advertisement indicating preference, limitation or discrimination based on race, color, religion, sex, handicap, familial status or national origin",
+   "url": "https://www.law.cornell.edu/uscode/text/42/3604"
+  },
+  {
+   "claim": "Covers written or oral notices or statements; words, phrases, photographs, illustrations, symbols; selecting media or locations that deny segments of the market information",
+   "url": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-I/subchapter-A/part-100/subpart-B/section-100.75"
+  },
+  {
+   "claim": "HUD withdrew April 2024 digital platform advertising guidance effective September 17, 2025; notice published April 6, 2026; FHEO continuing review and may reissue",
+   "url": "https://www.federalregister.gov/documents/2026/04/06/2026-06624/notification-of-withdrawal-of-fair-housing-and-equal-opportunity-guidance-documents"
+  },
+  {
+   "claim": "Meta housing Special Ad Category: ages 18 to 65+, all genders, no postal codes, no location exclusions, 15 mile radius for city audiences in US and Canada, lookalikes and some detailed targeting unavailable",
+   "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/audiences/special-ad-category"
+  },
+  {
+   "claim": "DOJ and Meta agreed on Variance Reduction System compliance targets in January 2023 under 2022 settlement",
+   "url": "https://www.justice.gov/archives/opa/pr/justice-department-and-meta-platforms-inc-reach-key-agreement-they-implement-groundbreaking"
+  },
+  {
+   "claim": "Google housing ads in US and Canada cannot target or exclude by gender, age, parental status, marital status or ZIP code",
+   "url": "https://support.google.com/adspolicy/answer/143465?hl=en"
+  }
+ ],
+ "takeaways": [
+  "The Fair Housing Act bars any housing ad or statement that indicates a preference based on a protected class, including through photos.",
+  "HUD withdrew its 2024 digital advertising guidance effective September 17, 2025, but the Act and its advertising regulation still apply.",
+  "Meta's housing Special Ad Category fixes age and gender and blocks postal code targeting, and Google bars age, gender, family status and ZIP targeting for US housing ads.",
+  "Describe the home, amenities and location, never the kind of person who should live there."
+ ],
+ "vertical": "multifamily",
+ "imageCredit": "Pexels photo 33230969"
+}
