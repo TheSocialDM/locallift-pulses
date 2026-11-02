@@ -8,6 +8,10 @@ if(hero&&!RM){
   var i=0,lx=-999,ly=-999;
   function drop(x,y){var im=new Image();im.src=PICS[i++%PICS.length];im.alt='';im.style.left=x+'px';im.style.top=y+'px';tr.appendChild(im);setTimeout(function(){im.remove()},1400)}
   hero.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;var r=hero.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;if(Math.hypot(x-lx,y-ly)>110){lx=x;ly=y;drop(x,y)}});
+  /* phones and tablets: images follow the finger too (passive, so scrolling still works) */
+  function tdrop(t,force){var r=hero.getBoundingClientRect(),x=t.clientX-r.left,y=t.clientY-r.top;if(force||Math.hypot(x-lx,y-ly)>70){lx=x;ly=y;drop(x,y)}}
+  hero.addEventListener('touchstart',function(e){tdrop(e.touches[0],true)},{passive:true});
+  hero.addEventListener('touchmove',function(e){tdrop(e.touches[0])},{passive:true});
   if(matchMedia('(hover: none)').matches){var vis=true;new IntersectionObserver(function(en){vis=en[0].isIntersecting}).observe(hero);
     setInterval(function(){if(!vis)return;var r=hero.getBoundingClientRect();drop(30+Math.random()*(r.width-60),r.height*.55+Math.random()*(r.height*.4))},650)}
 }
