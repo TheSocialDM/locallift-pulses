@@ -1,0 +1,294 @@
+#!/usr/bin/env python3
+"""Builds thesocialdm.com from the static draft pages, the Squarespace export and new post JSON files.
+usage: build.py SRC EXPORT_JSON IMAGES_JSON NEW_POSTS_DIR OUT [--prod]
+--prod: clean root URLs, no draft badge, indexable. Default: preview with relative .html links, noindex."""
+import base64, datetime, glob, html, json, os, re, shutil, sys
+from bs4 import BeautifulSoup, NavigableString
+
+SRC, EXPORT, IMAGES, NEW, OUT = sys.argv[1:6]
+PROD = '--prod' in sys.argv
+SITE = 'https://www.thesocialdm.com'
+d = json.load(open(EXPORT))
+imgs = json.load(open(IMAGES))
+shutil.rmtree(OUT, ignore_errors=True)
+os.makedirs(OUT + '/blog'); os.makedirs(OUT + '/images/blog'); os.makedirs(OUT + '/apartment-seo-blog-hub')
+report = {'unmapped_links': set(), 'used_images': set(), 'missing_images': set(), 'text_diffs': []}
+
+def undash(s):
+    """House rule: no em or en dashes in visible copy."""
+    s = re.sub(r'\s*[—–]\s*', ', ', s)
+    return s.replace(',,', ',')
+
+def local_image(u):
+    u = u.split('?')[0]
+    if u not in imgs:
+        report['missing_images'].add(u); return None
+    name = re.sub(r'[^a-z0-9.-]+', '-', html.unescape(u.rsplit('/', 1)[-1]).lower()).strip('-')
+    name = re.sub(r'\.[a-z0-9]+$', '', name)[:70] or 'image'
+    tag = re.search(r'/(\d{10,})-', u)
+    if tag: name += '-' + tag.group(1)[-5:]
+    path = f'images/blog/{name}.jpg'
+    if not os.path.exists(f'{OUT}/{path}'):
+        open(f'{OUT}/{path}', 'wb').write(base64.b64decode(imgs[u]['jpg']))
+    report['used_images'].add(u)
+    return path, imgs[u]['w'], imgs[u]['h']
+
+POST_SLUGS = {p['fullUrl'].split('/blog/')[1] for p in d['posts']}
+PAGE_MAP = {'': 'index', '/': 'index', '/contact': 'contact', '/about': 'about', '/locallift': 'locallift', '/blog': 'blog',
+  '/research-insights': 'research-insights', '/multifamily-marketing-agency': 'multifamily-marketing-agency',
+  '/apartment-seo-for-multifamily-communities': 'apartment-seo-for-multifamily-communities', '/medical': 'medical',
+  '/hospitality': 'hospitality', '/enterprise': 'enterprise', '/new-page': 'real-estate', '/real-estate': 'real-estate',
+  '/2026-multifamily-visibility-report': '2026-multifamily-visibility-report', '/montage-tigard': 'montage-tigard',
+  '/pillar-communities': 'pillar-communities', '/home': 'index'}
+
+def link(target, depth):
+    """target is a site path without .html such as 'contact' or 'blog/slug'."""
+    if PROD: return '/' + ('' if target == 'index' else target)
+    return '../' * depth + target + '.html'
+
+def asset(path, depth):
+    return ('/' if PROD else '../' * depth) + path
+
+def map_href(h, depth):
+    h = (h or '').strip()
+    if h.startswith('file:'): return None
+    m = re.match(r'https?://(?:www\.)?thesocialdm\.com(/[^?#]*)?(.*)$', h)
+    if m: path, rest = (m.group(1) or '/').rstrip('/') or '/', m.group(2)
+    elif h.startswith('/'):
+        m2 = re.match(r'([^?#]*)(.*)$', h); path, rest = m2.group(1).rstrip('/') or '/', m2.group(2)
+    else: return h
+    if path.startswith('/blog/') and path[6:] in POST_SLUGS: return link('blog/' + path[6:], depth) + rest
+    if path in PAGE_MAP: return link(PAGE_MAP[path], depth) + rest
+    report['unmapped_links'].add(h)
+    return SITE + path + rest
+
+KEEP = {'p','h2','h3','h4','ul','ol','li','blockquote','strong','em','a','br','table','thead','tbody','tr','td','th','figure','img','figcaption','hr','b','i'}
+def clean(fragment, depth, skip_image=None, strip_title=None):
+    s = BeautifulSoup(fragment, 'html.parser')
+    for t in s(['style','script','noscript','button','svg','form']): t.decompose()
+    seen = set()
+    for im in list(s('img')):
+        u = (im.get('data-src') or im.get('src') or '').split('?')[0]
+        alt = im.get('alt') or ''
+        fig = im.find_parent('figure')
+        target = fig or im
+        if not u or u in seen:
+            target.decompose() if target.parent else None; continue
+        seen.add(u)
+        got = local_image(u)
+        if not got:
+            target.decompose(); continue
+        path, w, h = got
+        new = s.new_tag('figure')
+        ni = s.new_tag('img', src=asset(path, depth), alt=undash(alt.strip()), width=str(w), height=str(h), loading='lazy')
+        new.append(ni)
+        cap = fig.find('figcaption') if fig else None
+        if cap and cap.get_text(strip=True):
+            nc = s.new_tag('figcaption'); nc.string = undash(cap.get_text(' ', strip=True)); new.append(nc)
+        target.replace_with(new)
+    for h1 in s('h1'): h1.name = 'h2'
+    for t in s.find_all(True):
+        if t.name not in KEEP:
+            t.unwrap(); continue
+        if t.name == 'img': continue
+        if t.name == 'a':
+            nh = map_href(t.get('href'), depth)
+            if nh is None or not t.get('href'):
+                t.unwrap(); continue
+            ext = nh.startswith('http') and SITE not in nh
+            t.attrs = {'href': nh}
+            if ext: t.attrs.update({'target': '_blank', 'rel': 'noopener'})
+        else:
+            t.attrs = {}
+    for t in s.find_all(['p','h2','h3','h4','li','blockquote']):
+        if not t.get_text(strip=True) and not t.find('img'): t.decompose()
+    for n in list(s.find_all(string=True)):
+        if isinstance(n, NavigableString):
+            nu = undash(str(n))
+            if nu != str(n): n.replace_with(nu)
+    if strip_title:
+        first = s.find(['h2','h3'])
+        if first and re.sub(r'\W+','',first.get_text()).lower() == re.sub(r'\W+','',undash(strip_title)).lower(): first.decompose()
+    out = str(s)
+    out = re.sub(r'\n\s*\n+', '\n', out)
+    return out.strip()
+
+def plain(h):
+    s = BeautifulSoup(h, 'html.parser')
+    for t in s(['style','script','noscript','button']): t.decompose()
+    return re.sub(r'\W+', ' ', undash(s.get_text(' '))).lower().split()
+
+FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@300;500;700;800&display=swap">'
+def shell(title, desc, canon, depth, body, extra_head='', og_image=None, og_type='website'):
+    e = html.escape
+    robots = '' if PROD else '<meta name="robots" content="noindex">'
+    draft = '' if PROD else '<div class="draft">Draft</div>'
+    og = f'<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{SITE}{canon}"><meta property="og:site_name" content="The SocialDM"><meta property="og:type" content="{og_type}"><meta name="twitter:card" content="summary_large_image">'
+    if og_image: og += f'<meta property="og:image" content="{SITE}/{og_image}">'
+    return f'''<!doctype html><html lang="en" data-base="{'/' if PROD else '../'*depth}" data-prod="{1 if PROD else 0}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{e(title)}</title><meta name="description" content="{e(desc)}"><link rel="canonical" href="{SITE}{canon}">{robots}{og}
+<meta name="claude:viewport-fit-sides" content="cover">{FONTS}
+<link rel="icon" href="{asset('logo.png',depth)}"><link rel="stylesheet" href="{asset('site.css',depth)}"><link rel="stylesheet" href="{asset('blog.css',depth)}">{extra_head}
+</head><body>{draft}<div id="site-header"></div>
+{body}
+<div id="site-footer"></div><script src="{asset('chrome.js',depth)}"></script></body></html>
+'''
+
+def fmt(ms_or_date):
+    if isinstance(ms_or_date, (int, float)):
+        dt = datetime.datetime.fromtimestamp(ms_or_date / 1000, datetime.timezone(datetime.timedelta(hours=-7)))
+    else:
+        dt = datetime.datetime.strptime(ms_or_date, '%Y-%m-%d')
+    return dt.strftime('%Y-%m-%d'), dt.strftime('%b ') + str(dt.day) + dt.strftime(', %Y'), dt.year
+
+CTA = lambda depth: f'''<section class="wrap"><div class="cta"><div class="eyebrow">Get your visibility plan</div><h2 style="margin-top:16px">See where your community shows up, and where it doesn&rsquo;t.</h2><p>We check Google Search, Google Maps and AI answers for your community and send a clear plan to close the gaps.</p><a class="btn btn-light" href="{link('contact',depth)}">Get your visibility plan</a></div></section>'''
+
+# ---------- collect posts ----------
+posts = []
+for p in d['posts']:
+    slug = p['fullUrl'].split('/blog/')[1]
+    sd = p.get('seoData') or {}
+    body = clean(p['body'], 1, strip_title=p['title'])
+    a, b = plain(p['body']), plain(body)
+    if abs(len(a) - len(b)) > max(14, len(p['title'].split()) + 8):
+        report['text_diffs'].append((slug, len(a), len(b)))
+    ex = BeautifulSoup(p.get('excerpt') or '', 'html.parser').get_text(' ', strip=True)
+    if not ex:
+        fp = BeautifulSoup(body, 'html.parser').find('p')
+        ex = fp.get_text(' ', strip=True) if fp else ''
+    iso, nice, yr = fmt(p['publishOn'])
+    hero = local_image(p['assetUrl']) if p.get('assetUrl') else None
+    posts.append(dict(slug=slug, title=undash(p['title']), seoTitle=undash(sd.get('seoTitle') or ''), seoDesc=undash(sd.get('seoDescription') or ''),
+        excerpt=undash(ex), body=body, iso=iso, nice=nice, year=yr, hero=hero, author=p.get('author') or 'The SocialDM', updated=fmt(p['updatedOn'])[0], new=False, faq=[], alt=undash(p['title'])))
+for f in sorted(glob.glob(NEW + '/*.json')):
+    n = json.load(open(f))
+    iso, nice, yr = fmt(n['date'])
+    hero = None
+    if n.get('image'):
+        hero = (n['image'], 1400, 933)
+    posts.append(dict(slug=n['slug'], title=n['title'], seoTitle=n['seoTitle'], seoDesc=n['seoDescription'], excerpt=n['excerpt'], body=n['bodyHtml'], iso=iso, nice=nice, year=yr, hero=hero,
+        author='Michael Shad', updated=iso, new=True, faq=n.get('faq', []), alt=n.get('imageAlt', n['title'])))
+    POST_SLUGS.add(n['slug'])
+posts.sort(key=lambda x: x['iso'], reverse=True)
+
+def fix_internal(h, depth):
+    def rep(m):
+        nh = map_href(m.group(1), depth)
+        return f'href="{nh}"' if nh else 'href="#"'
+    return re.sub(r'href="(/[^"]*)"', rep, h)
+
+def card(p, depth, feat=False):
+    im = f'<div class="pimg"><img src="{asset(p["hero"][0],depth)}" alt="" loading="lazy"></div>' if p['hero'] else ''
+    ex = html.escape(p['excerpt'][:170].rsplit(' ', 1)[0] + '...' if len(p['excerpt']) > 170 else p['excerpt'])
+    return f'<a class="post{" feat" if feat else ""}" href="{link("blog/"+p["slug"],depth)}">{im}<time datetime="{p["iso"]}">{p["nice"]}</time><h3>{html.escape(p["title"])}</h3><p>{ex}</p><span class="more">Read the article</span></a>'
+
+for i, p in enumerate(posts):
+    related = [q for q in posts if q is not p][:0]
+    words = set(re.findall(r'[a-z]{5,}', p['title'].lower()))
+    scored = sorted((q for q in posts if q is not p), key=lambda q: (-len(words & set(re.findall(r'[a-z]{5,}', q['title'].lower()))), q['iso']), reverse=False)
+    related = scored[:3]
+    body = fix_internal(p['body'], 1)
+    has_body_img = '<img' in body[:600]
+    heroimg = ''
+    if p['hero'] and not has_body_img:
+        heroimg = f'<figure class="art-hero"><img src="{asset(p["hero"][0],1)}" alt="{html.escape(p["alt"])}" width="{p["hero"][1]}" height="{p["hero"][2]}"></figure>'
+    ld = {'@context':'https://schema.org','@type':'BlogPosting','headline':p['title'],'datePublished':p['iso'],'dateModified':p['updated'],
+          'mainEntityOfPage':f'{SITE}/blog/{p["slug"]}','author':{'@type':'Person' if p['author']=='Michael Shad' else 'Organization','name':p['author'] if p['author']=='Michael Shad' else 'The SocialDM'},
+          'publisher':{'@type':'Organization','name':'The SocialDM','logo':{'@type':'ImageObject','url':SITE+'/logo.png'}},'description':p['seoDesc'] or p['excerpt'][:155]}
+    if p['hero']: ld['image'] = f'{SITE}/{p["hero"][0]}'
+    head = f'<script type="application/ld+json">{json.dumps(ld)}</script>'
+    if p['faq']:
+        head += '<script type="application/ld+json">' + json.dumps({'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q['q'],'acceptedAnswer':{'@type':'Answer','text':q['a']}} for q in p['faq']]}) + '</script>'
+    by = 'Michael Shad, Founder of The SocialDM' if p['author']=='Michael Shad' else 'The SocialDM'
+    main = f'''<main><article class="art"><div class="art-head wrap"><a class="back" href="{link('blog',1)}">Market Intelligence</a><h1>{html.escape(p['title'])}</h1><div class="meta"><time datetime="{p['iso']}">{p['nice']}</time><span>{by}</span></div></div>
+<div class="art-body wrap">{heroimg}{body}</div></article>
+<section class="wrap related"><div class="eyebrow">Keep reading</div><div class="posts">{''.join(card(q,1) for q in related)}</div></section>{CTA(1)}</main>'''
+    title = (p['seoTitle'] or p['title'])
+    if 'The SocialDM' not in title: title += ' | The SocialDM'
+    desc = (p['seoDesc'] or p['excerpt'])[:158]
+    open(f'{OUT}/blog/{p["slug"]}.html','w').write(shell(title, desc, f'/blog/{p["slug"]}', 1, main, head, p['hero'][0] if p['hero'] else None, 'article'))
+
+# ---------- blog index ----------
+years = sorted({p['year'] for p in posts}, reverse=True)
+grp = ''.join(f'<h2 class="yr" id="y{y}">{y}</h2><div class="posts">' + ''.join(card(p,0) for p in posts[1:] if p['year']==y) + '</div>' for y in years)
+jump = ''.join(f'<a href="#y{y}">{y}</a>' for y in years)
+main = f'''<main><section class="hero pg-hero bl-hero"><div class="wrap"><div class="eyebrow">Market Intelligence</div><h1>How renters find <span>apartments now.</span></h1><p>Research and field notes on how apartment communities get discovered across Google Search, Google Maps and AI answers.</p><div class="jump" aria-label="Jump to year">{jump}</div></div></section>
+<section class="wrap bl" aria-label="All articles"><div class="featwrap">{card(posts[0],0,True)}<div class="report"><div><div class="eyebrow">Research</div><h3>The 2026 Multifamily Visibility Report</h3><p>How apartment communities and lease ups are being discovered across social media, Google Search, Google Maps, and AI search.</p></div><a class="btn btn-line" href="{link('2026-multifamily-visibility-report',0)}">Read the report</a></div></div>{grp}</section>{CTA(0)}</main>'''
+open(f'{OUT}/blog.html','w').write(shell('Market Intelligence Blog | The SocialDM','Research and field notes from The SocialDM on how renters find apartment communities across Google Search, Google Maps and AI search.','/blog',0,main))
+
+# ---------- carried over pages ----------
+def carry(path, title_fallback=None):
+    raw = d['extra'][path]
+    s = BeautifulSoup(raw, 'html.parser')
+    title = (s.title.get_text(strip=True) if s.title else title_fallback)
+    md = s.find('meta', attrs={'name':'description'}); desc = md.get('content','') if md else ''
+    m = s.find('main') or s.find(id='page') or s
+    depth = path.count('/') - 1
+    h1 = m.find('h1'); head = h1.get_text(' ', strip=True) if h1 else title
+    for x in m.select('.blog-item-top-wrapper, .blog-item-comments, .item-pagination, .blog-meta-section, .blog-item-author-profile-wrapper'): x.decompose()
+    body = clean(str(m), depth, strip_title=head)
+    if not desc:
+        fp = BeautifulSoup(body,'html.parser').find('p'); desc = fp.get_text(' ',strip=True)[:155] if fp else title
+    main = f'<main><article class="art"><div class="art-head wrap"><h1>{html.escape(undash(head))}</h1></div><div class="art-body wrap">{fix_internal(body,depth)}</div></article>{CTA(depth)}</main>'
+    open(f'{OUT}{path}.html','w').write(shell(undash(title), undash(desc), path, depth, main))
+for pth in ['/apartment-seo-for-multifamily-communities','/montage-tigard','/pillar-communities','/apartment-seo-blog-hub/cuvee-apartments-westgate-glendale']:
+    carry(pth)
+
+# ---------- static draft pages ----------
+for f in glob.glob(SRC + '/*.html'):
+    n = os.path.basename(f)
+    if n == 'blog.html': continue
+    t = open(f).read()
+    if t.count('<!doctype') > 1:           # artifact wrapper around index
+        t = t[t.rfind('<!doctype'):]
+        t = re.sub(r'</body></html>\s*</body></html>\s*$', '</body></html>\n', t)
+    stem = n[:-5]
+    canon = '/' if stem == 'index' else '/' + stem
+    if '<link rel="canonical"' not in t:
+        t = t.replace('</head>', f'<link rel="canonical" href="{SITE}{canon}"><link rel="icon" href="logo.png"></head>', 1)
+    t = t.replace('<html lang="en">', f'<html lang="en" data-base="{"/" if PROD else ""}" data-prod="{1 if PROD else 0}">', 1)
+    if PROD:
+        t = t.replace('<div class="draft">Draft</div>', '')
+        t = re.sub(r'href="(?!https?:|mailto:|#|/)([^"#]+?)\.html', lambda m: 'href="/' + ('' if m.group(1)=='index' else m.group(1)), t)
+        t = re.sub(r'(src|href)="((?:p\d+\.jpg|logo\.png|site\.css|fx\.css|fx\.js|chrome\.js))"', r'\1="/\2"', t)
+    else:
+        t = t.replace('</head>', '<meta name="robots" content="noindex"></head>', 1)
+    open(f'{OUT}/{n}', 'w').write(t)
+for a in ['site.css','fx.css','fx.js','logo.png'] + [os.path.basename(x) for x in glob.glob(SRC+'/p*.jpg')]:
+    shutil.copy(f'{SRC}/{a}', f'{OUT}/{a}')
+shutil.copy(os.path.dirname(os.path.abspath(__file__)) + '/blog.css', OUT + '/blog.css')
+if os.path.isdir(os.path.dirname(os.path.abspath(__file__)) + '/images-new'):
+    shutil.copytree(os.path.dirname(os.path.abspath(__file__)) + '/images-new', OUT + '/images/new', dirs_exist_ok=True)
+
+# shared header and footer script: all menu links resolve through one function
+c = open(SRC + '/chrome.js').read()
+c = c.replace('var here=(location.pathname.split("/").pop()||"index.html");',
+ '''var R=document.documentElement.dataset,PROD=R.prod==="1",BASE=R.base||"";
+function L(h){if(/^(https?:|mailto:|#)/.test(h))return h;if(PROD)return "/"+h.replace(/\\.html$/,"").replace(/^index$/,"");return BASE+h}
+var here=(location.pathname.split("/").pop()||"index.html");if(here.indexOf(".")<0)here+=".html";''')
+c = re.sub(r'href="\'\+x\[1\]\+\'"', 'href="\'+L(x[1])+\'"', c)
+for pg in ['index.html','contact.html','locallift.html','blog.html']:
+    c = c.replace(f'href="{pg}"', f'href="\'+L("{pg}")+\'"')
+c = c.replace('src="logo.png"', 'src="\'+(PROD?"/":BASE)+\'logo.png"')
+c = c.replace('new Date().getFullYear()+\' The SocialDM. LocalLift', 'new Date().getFullYear()+\' The SocialDM. LocalLift')
+open(OUT + '/chrome.js', 'w').write(c)
+
+# ---------- production plumbing ----------
+if PROD:
+    open(OUT + '/_redirects', 'w').write('''/new-page /real-estate 301
+/home / 301
+/apartment-seo-blog-hub /blog 301
+/services-1 /multifamily-marketing-agency 301
+/blog/tag/* /blog 301
+/blog/category/* /blog 301
+''')
+    urls = ['/'] + ['/' + os.path.basename(f)[:-5] for f in glob.glob(OUT + '/*.html') if os.path.basename(f) not in ('index.html','404.html')]
+    urls += ['/apartment-seo-blog-hub/cuvee-apartments-westgate-glendale'] + [f'/blog/{p["slug"]}' for p in posts]
+    open(OUT + '/sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'<url><loc>{SITE}{u}</loc></url>\n' for u in sorted(set(urls))) + '</urlset>\n')
+    open(OUT + '/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
+    items = ''.join(f'<item><title>{html.escape(p["title"])}</title><link>{SITE}/blog/{p["slug"]}</link><guid>{SITE}/blog/{p["slug"]}</guid><pubDate>{datetime.datetime.strptime(p["iso"],"%Y-%m-%d").strftime("%a, %d %b %Y 12:00:00 -0700")}</pubDate><description>{html.escape(p["excerpt"][:300])}</description></item>' for p in posts[:50])
+    open(OUT + '/blog/rss.xml', 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>The SocialDM Market Intelligence</title><link>{SITE}/blog</link><description>How renters find apartments now.</description>{items}</channel></rss>\n')
+main404 = f'<main><section class="hero pg-hero"><div class="wrap"><div class="eyebrow">Page not found</div><h1>This page <span>moved.</span></h1><div class="ctas"><a class="btn btn-light" href="{link("blog",0)}">Read the latest</a><a class="btn btn-line" href="{link("index",0)}">Back home</a></div></div></section></main>'
+open(OUT + '/404.html', 'w').write(shell('Page not found | The SocialDM', 'This page moved.', '/404', 0, main404))
+
+print(json.dumps({'posts': len(posts), 'new': sum(p['new'] for p in posts), 'images_used': len(report['used_images']), 'images_missing': sorted(report['missing_images']), 'unmapped_links': sorted(report['unmapped_links']), 'text_diffs': report['text_diffs']}, indent=1))
