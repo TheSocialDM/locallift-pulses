@@ -76,7 +76,15 @@ def check(path):
     if dashes:
         notes.append(f'{dashes} em/en dash(es), legacy copy, fix on next rebuild')
 
-    own = OWN.get(slug, [])
+    # Adjudicated Oct 10 2026, re-confirmed Oct 31 and Nov 2: Village of Chandler is a
+    # Pillar Communities property. One referral sentence in village/index.html lists the
+    # other Pillar websites that sent visits. That is Pillar's own portfolio described to
+    # Pillar, not a cross-property leak. Scoped to that one file only.
+    ALLOWED_CROSS = {
+        'village/index.html': ('Pillar Lago', 'Elevation SanTan', 'Circa on Central'),
+    }
+
+    own = list(OWN.get(slug, [])) + list(ALLOWED_CROSS.get(rel, ()))
     strict = any(rel.startswith(p) for p in STRICT_PREFIXES)
     for name in PROPERTIES:
         if name in own:
