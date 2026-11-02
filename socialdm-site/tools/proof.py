@@ -27,17 +27,17 @@ ICONS = {  # 24x24 stroke icons, drawn for the ticker
  'flag':'<path d="M5 21V4M5 4h12l-2 4 2 4H5"/>',
 }
 
-def ticker():
-    d = json.load(open(os.path.join(HERE, 'ticker.json')))
+def ticker(name='ticker'):
+    d = json.load(open(os.path.join(HERE, name + '.json')))
     li = ''.join(f'<li><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">{ICONS.get(i["icon"], ICONS["star"])}</svg></span>{('<b>' + html.escape(i["name"]) + '</b> ') if i.get("name") else ''}{html.escape(i["text"])}</li>' for i in d['items'])
     return (f'<section class="proof-row stat-ticker" aria-label="{html.escape(d["heading"])}"><div class="wrap"><div class="eyebrow">{html.escape(d["heading"])}</div></div>'
             f'<div class="marquee"><ul class="mq-track">{li}</ul><ul class="mq-track" aria-hidden="true">{li}</ul></div></section>')
 
-def deliverables():
-    d = json.load(open(os.path.join(HERE, 'deliverables.json')))
+def deliverables(name='deliverables'):
+    d = json.load(open(os.path.join(HERE, name + '.json')))
     tiles = ''.join(f'<div class="dl-tile"><div class="dl-top"><span class="tk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">{ICONS.get(i["icon"], ICONS["star"])}</svg></span><span class="dl-cad">{html.escape(i["cadence"])}</span></div><h3>{html.escape(i["name"])}</h3><p>{html.escape(i["text"])}</p></div>' for i in d['items'])
-    return (f'<section class="block dl-sec" style="padding-top:0" aria-label="What is inside LocalLift"><div class="wrap"><div class="eyebrow">What&rsquo;s inside LocalLift&trade;</div>'
-            f'<h2 class="h2">Ten reports and services. One team running them.</h2><div class="dl-grid">{tiles}</div></div></section>')
+    return (f'<section class="block dl-sec" style="padding-top:0" aria-label="What is inside"><div class="wrap"><div class="eyebrow">{d.get("heading","What&rsquo;s inside LocalLift&trade;")}</div>'
+            f'<h2 class="h2">{d.get("title","Ten reports and services. One team running them.")}</h2><div class="dl-grid">{tiles}</div></div></section>')
 
 def communities():
     d = json.load(open(os.path.join(HERE, 'communities.json')))
@@ -62,4 +62,6 @@ def testimonials(group):
 def render(t):
     t = t.replace('<!--proof:communities-->', ticker())
     t = t.replace('<!--proof:deliverables-->', deliverables())
+    t = t.replace('<!--proof:deliverables:medical-->', deliverables('deliverables-medical'))
+    t = t.replace('<!--proof:ticker:medical-->', ticker('ticker-medical'))
     return re.sub(r'<!--proof:testimonials:([a-z-]+)-->', lambda m: testimonials(m.group(1)), t)

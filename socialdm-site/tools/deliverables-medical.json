@@ -1,0 +1,66 @@
+{
+ "heading": "What&rsquo;s inside, for practices",
+ "title": "The same system, built for how patients choose.",
+ "items": [
+  {
+   "icon": "pulse",
+   "name": "Weekly Pulse",
+   "cadence": "Every Friday",
+   "text": "A one page read on how your practice showed up this week, and the one thing to do next."
+  },
+  {
+   "icon": "trend",
+   "name": "Lift Score",
+   "cadence": "Weekly",
+   "text": "One score for your practice across Google Search, Google Maps and AI answers, week over week."
+  },
+  {
+   "icon": "spark",
+   "name": "AI Shortlist",
+   "cadence": "Weekly",
+   "text": "Whether ChatGPT, Gemini and Perplexity name your practice when patients ask, and who they name instead."
+  },
+  {
+   "icon": "target",
+   "name": "Map Reach",
+   "cadence": "Weekly",
+   "text": "Where your practice appears in Google Maps across the neighborhoods your patients come from."
+  },
+  {
+   "icon": "globe",
+   "name": "Site Read",
+   "cadence": "Weekly",
+   "text": "Services, providers, insurance and hours checked so Google and AI tools describe you accurately."
+  },
+  {
+   "icon": "tag",
+   "name": "Market Survey",
+   "cadence": "Monthly",
+   "text": "How nearby practices are showing up, so you see changes in your market early."
+  },
+  {
+   "icon": "calendar",
+   "name": "Daily Presence",
+   "cadence": "7 days a week",
+   "text": "Google Business Profile posts that keep your practice active and current."
+  },
+  {
+   "icon": "message",
+   "name": "Review Desk",
+   "cadence": "Ongoing",
+   "text": "Review replies that stay warm and never confirm someone is a patient or mention their care."
+  },
+  {
+   "icon": "chart",
+   "name": "Snapshot",
+   "cadence": "Monthly",
+   "text": "Calls, direction requests and website clicks from Google, in plain language."
+  },
+  {
+   "icon": "play",
+   "name": "ClearView",
+   "cadence": "Monthly",
+   "text": "Your social report: what posted, what patients engaged with and what changes next."
+  }
+ ]
+}

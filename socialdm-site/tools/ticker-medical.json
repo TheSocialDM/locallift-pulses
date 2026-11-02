@@ -1,0 +1,65 @@
+{
+ "heading": "Built for practices",
+ "items": [
+  {
+   "icon": "shield",
+   "name": "",
+   "text": "Primary Care"
+  },
+  {
+   "icon": "star",
+   "name": "",
+   "text": "Dental"
+  },
+  {
+   "icon": "spark",
+   "name": "",
+   "text": "Dermatology"
+  },
+  {
+   "icon": "users",
+   "name": "",
+   "text": "Pediatrics"
+  },
+  {
+   "icon": "target",
+   "name": "",
+   "text": "Orthopedics"
+  },
+  {
+   "icon": "trend",
+   "name": "",
+   "text": "Physical Therapy"
+  },
+  {
+   "icon": "key",
+   "name": "",
+   "text": "Chiropractic"
+  },
+  {
+   "icon": "message",
+   "name": "",
+   "text": "Med Spa And Aesthetics"
+  },
+  {
+   "icon": "globe",
+   "name": "",
+   "text": "Specialty Clinics"
+  },
+  {
+   "icon": "building",
+   "name": "",
+   "text": "Multi Location Groups"
+  },
+  {
+   "icon": "calendar",
+   "name": "",
+   "text": "New Patient Growth"
+  },
+  {
+   "icon": "shield",
+   "name": "",
+   "text": "Privacy First Reviews"
+  }
+ ]
+}
