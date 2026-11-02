@@ -69,3 +69,10 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 - enterprise.html rebuilt as Portfolios (teal accent) with animated dashboard; menu label Portfolios; URL unchanged.
 - About intro no longer names founder, city or year.
 - Reel wheel: play badges, hint pill, one intro flick (fx.js / fx.css).
+
+## Go-live and Squarespace exit (Nov 2 2026)
+- DNS for thesocialdm.com is hosted by Squarespace (GoDaddy registrar, nameservers connect1/2.squarespacedns.com). Squarespace Defaults deleted; added A @ 75.2.60.5 and CNAME www thesocialdm.netlify.app (30 min TTL). Email records (MX outlook, TXT NETORGFT..., google-site-verification, SPF) untouched.
+- Netlify: www.thesocialdm.com and thesocialdm.com added, DNS verified. Still to do: set www.thesocialdm.com as primary once the certificate is issued (canonicals use www).
+- Squarespace website plan for thesocialdm.com set to cancel; it EXPIRES APR 19 2027. BEFORE THEN (target March 2027): recreate all DNS records at GoDaddy, then switch GoDaddy nameservers to GoDaddy default, so email and site keep working.
+- LocalLift Now site: set redirects to the new site before its plan ends.
+- realestatebrandawareness.com is a Squarespace-registered domain (renews Oct 10 2027); left alone.
