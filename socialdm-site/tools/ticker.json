@@ -1,81 +1,100 @@
 {
- "note": "Stat ticker supplied by Michael on 2026-11-02. Icons are keys in tools/proof.py ICONS.",
+ "note": "Stat ticker (Michael, Nov 2). Branded names in 'name' render bold before the line. ClearView = monthly social report and Lift Score = weekly score are Claude's best guess.",
  "heading": "Trusted nationwide",
  "items": [
   {
    "icon": "building",
+   "name": "",
    "text": "7,900+ Doors And Growing"
   },
   {
    "icon": "star",
+   "name": "",
    "text": "Trusted By 20+ Apartment Communities"
   },
   {
    "icon": "trend",
+   "name": "",
    "text": "Growing Nationwide"
   },
   {
    "icon": "send",
+   "name": "",
    "text": "300+ Posts Published Every Week"
   },
   {
    "icon": "calendar",
+   "name": "Daily Presence",
    "text": "Google Business Posts 7 Days A Week"
   },
   {
    "icon": "pulse",
-   "text": "Weekly Pulse Every Friday"
+   "name": "Weekly Pulse",
+   "text": "Every Friday"
   },
   {
-   "icon": "clipboard",
-   "text": "Market Surveys Every Sunday"
+   "icon": "tag",
+   "name": "Market Survey",
+   "text": "Competitor Rents And Specials Every Sunday"
   },
   {
    "icon": "chart",
-   "text": "Monthly Google Snapshot Reports"
+   "name": "Snapshot",
+   "text": "Monthly Google Report"
   },
   {
-   "icon": "chart",
-   "text": "Monthly Social Media Reports"
+   "icon": "play",
+   "name": "ClearView",
+   "text": "Monthly Social Media Report"
   },
   {
    "icon": "target",
+   "name": "Map Reach",
    "text": "Weekly Google Maps Rank Scans"
   },
   {
    "icon": "spark",
+   "name": "AI Shortlist",
    "text": "ChatGPT, Gemini And Perplexity Tracked Weekly"
   },
   {
-   "icon": "tag",
-   "text": "Competitor Rents And Specials Tracked Weekly"
-  },
-  {
    "icon": "globe",
+   "name": "Site Read",
    "text": "Websites And Specials Checked Every Week"
   },
   {
    "icon": "message",
+   "name": "Review Desk",
    "text": "Google Reviews Answered For You"
   },
   {
-   "icon": "play",
+   "icon": "trend",
+   "name": "Lift Score",
+   "text": "Your Visibility, Scored Weekly"
+  },
+  {
+   "icon": "users",
+   "name": "",
    "text": "Instagram, Facebook And YouTube Managed"
   },
   {
    "icon": "key",
+   "name": "",
    "text": "Lease Up And Stabilized Campaigns"
   },
   {
    "icon": "users",
+   "name": "",
    "text": "Social, Google And AI, One Team"
   },
   {
    "icon": "shield",
+   "name": "",
    "text": "Every Report Audited Before It Ships"
   },
   {
    "icon": "flag",
+   "name": "",
    "text": "The SocialDM, Est. 2019"
   }
  ]

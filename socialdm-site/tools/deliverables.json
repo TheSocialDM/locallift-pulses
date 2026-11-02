@@ -1,0 +1,65 @@
+{
+ "note": "LocalLift deliverable names from Michael (Nov 2). Lift Score and ClearView descriptions are Claude's best guess, awaiting his confirmation.",
+ "items": [
+  {
+   "icon": "pulse",
+   "name": "Weekly Pulse",
+   "cadence": "Every Friday",
+   "text": "A one page read on what changed for your community this week across Search, Maps and AI, and the one thing to do next."
+  },
+  {
+   "icon": "trend",
+   "name": "Lift Score",
+   "cadence": "Weekly",
+   "text": "One score per community that tracks visibility across Google Search, Google Maps and AI answers, week over week."
+  },
+  {
+   "icon": "spark",
+   "name": "AI Shortlist",
+   "cadence": "Weekly",
+   "text": "Whether ChatGPT, Gemini and Perplexity name your community when renters ask, and who they name instead."
+  },
+  {
+   "icon": "target",
+   "name": "Map Reach",
+   "cadence": "Weekly",
+   "text": "Google Maps rank scans across your neighborhood, not just from your own front door."
+  },
+  {
+   "icon": "globe",
+   "name": "Site Read",
+   "cadence": "Weekly",
+   "text": "Your website and specials checked the way Google and AI tools read them, so pricing and offers stay accurate."
+  },
+  {
+   "icon": "tag",
+   "name": "Market Survey",
+   "cadence": "Every Sunday",
+   "text": "Competitor rents, specials and concessions tracked, so you see the market before it shows up in traffic."
+  },
+  {
+   "icon": "calendar",
+   "name": "Daily Presence",
+   "cadence": "7 days a week",
+   "text": "Google Business Profile posts every day, written for your community and your neighborhood."
+  },
+  {
+   "icon": "message",
+   "name": "Review Desk",
+   "cadence": "Ongoing",
+   "text": "Google reviews answered for you, in your voice, with fair housing and privacy in mind."
+  },
+  {
+   "icon": "chart",
+   "name": "Snapshot",
+   "cadence": "Monthly",
+   "text": "Your monthly Google report: searches, views, calls, direction requests and website clicks, in plain language."
+  },
+  {
+   "icon": "play",
+   "name": "ClearView",
+   "cadence": "Monthly",
+   "text": "Your monthly social media report: what posted, what performed and what we are changing next."
+  }
+ ]
+}

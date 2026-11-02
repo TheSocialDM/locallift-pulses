@@ -244,3 +244,17 @@ h1,h2,h3{letter-spacing:-.035em}
 .tk-ic svg{width:16px;height:16px}
 @media (hover:none){.marquee:hover .mq-track{animation-play-state:running}}
 @media (max-width:620px){.stat-ticker .mq-track li{padding:0 22px;font-size:14px}}
+
+/* LocalLift deliverables grid: square, crisp */
+.dl-sec{padding-top:70px}
+.dl-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;margin-top:36px;background:var(--line);border:1px solid var(--line)}
+.dl-tile{background:var(--night);padding:24px 22px 26px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:background .2s}
+.dl-tile:hover{background:#13112A}
+.dl-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.dl-cad{font:600 11px/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);text-align:right}
+.dl-tile h3{font-size:21px;line-height:1.15;letter-spacing:-.02em}
+.dl-tile p{margin:0;font-size:14.5px;line-height:1.55;color:var(--soft)}
+@media (max-width:1100px){.dl-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.dl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.dl-grid{grid-template-columns:minmax(0,1fr)}}
+.stat-ticker .mq-track li b{color:var(--mist);font-weight:700;margin-right:2px}
