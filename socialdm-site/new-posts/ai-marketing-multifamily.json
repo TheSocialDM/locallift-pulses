@@ -63,5 +63,11 @@
  ],
  "approved": true,
  "image": "images/new/ai-marketing-multifamily.jpg",
- "imageCredit": "Pexels photo 4049424"
+ "imageCredit": "Pexels photo 4049424",
+ "takeaways": [
+  "\"AI marketing\" covers very different things: AI written content, AI chat on property sites, and showing up accurately in AI answers.",
+  "Renter surveys put AI tools at 5% to 11.5% of apartment search sources so far. Small, but expected to grow.",
+  "AI visibility is worth paying for only if it starts by checking what AI tools say about you and is measured over time.",
+  "Google cares about scale and purpose, not whether a person or a tool wrote the first draft."
+ ]
 }

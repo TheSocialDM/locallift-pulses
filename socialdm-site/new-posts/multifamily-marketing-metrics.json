@@ -42,5 +42,11 @@
    "url": "https://developers.google.com/my-business/reference/performance/rest/v1/DailyMetric"
   }
  ],
- "approved": true
+ "approved": true,
+ "takeaways": [
+  "Cost per lease by source, read with tour to lease conversion, tells you more than any other single number.",
+  "Cost per lead is only useful next to lease data. A cheap lead that never tours costs more than it looks.",
+  "Unbranded search visibility, Google Maps visibility and tours booked are the leading indicators to watch.",
+  "Report weekly, date every number, and compare each week with the previous four before acting."
+ ]
 }

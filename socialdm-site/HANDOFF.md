@@ -26,6 +26,8 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 
 - Contact confirmation now sends from info@thesocialdm.com through Microsoft 365 (Make connection 12095916, module microsoft-email:createAndSendAMessage), branded template in emails/contact-confirmation.html, BCC info@. Bird was dropped for this flow: the Bird plan allows one sending domain, used by mail.localliftsignature.com. End to end tested OK at 13:50 UTC Nov 2 via Bird; the Microsoft 365 version still needs one live test. The M365 mailbox display name is "Lead Designer"; Michael should rename it to The SocialDM.
 
+- Nov 2 article upgrades (tools/build.py): all posts get reading time, "Updated" date when changed, BreadcrumbList schema, wordCount; Person author schema for Michael. New posts also get a hand written Key takeaways box ("takeaways" in each JSON), an H2 table of contents with anchor ids, and an author box. Related posts now score by shared title words. Old title "&nbsp;" display bug fixed. 5 new posts got Pexels photos (ids in "imageCredit"); network now allows images.pexels.com and images.unsplash.com but not their search pages, so find photo ids with WebSearch (allowed_domains pexels.com) and download from images.pexels.com.
+
 ## Still to do, in order
 1. New posts: 5 drafts are in new-posts/, written and self checked but NOT yet through Editor or approval, and dist/ does not include them yet. Do not publish until they pass. Each needs an image file and an Editor pass, a fact check of every linked stat, then a separate approval. Real photos only.
 2. Thin pages: Medical, Real Estate, Hospitality, Enterprise. About and Contact headline.
