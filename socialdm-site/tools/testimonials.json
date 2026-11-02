@@ -60,8 +60,9 @@
     "home"
    ],
    "source": "client",
-   "approved": false,
-   "quote": "The SocialDM made our community look the way it feels in person. Our pages are consistent, on brand and current, and I no longer worry about what prospects see when they search for us."
+   "approved": true,
+   "quote": "The SocialDM made our community look the way it feels in person. Our pages are consistent, on brand and current, and I no longer worry about what prospects see when they search for us.",
+   "approved_on": "2026-11-02"
   },
   {
    "name": "Maria",
@@ -71,8 +72,9 @@
     "home"
    ],
    "source": "client",
-   "approved": false,
-   "quote": "I finally have a partner who handles our online presence from start to finish. The weekly updates are clear, the content looks polished, and my team gets time back for residents."
+   "approved": true,
+   "quote": "I finally have a partner who handles our online presence from start to finish. The weekly updates are clear, the content looks polished, and my team gets time back for residents.",
+   "approved_on": "2026-11-02"
   },
   {
    "name": "Janelle",
@@ -82,8 +84,9 @@
     "home"
    ],
    "source": "client",
-   "approved": false,
-   "quote": "Working with The SocialDM has been easy from day one. They know multifamily, they understand how renters shop, and our community shows up looking professional everywhere."
+   "approved": true,
+   "quote": "Working with The SocialDM has been easy from day one. They know multifamily, they understand how renters shop, and our community shows up looking professional everywhere.",
+   "approved_on": "2026-11-02"
   },
   {
    "name": "Sara",
@@ -93,8 +96,9 @@
     "home"
    ],
    "source": "client",
-   "approved": false,
-   "quote": "Our listing, reviews and social pages finally tell the same story. The SocialDM keeps everything organized and on schedule, and the reporting is simple enough to share with ownership."
+   "approved": true,
+   "quote": "Our listing, reviews and social pages finally tell the same story. The SocialDM keeps everything organized and on schedule, and the reporting is simple enough to share with ownership.",
+   "approved_on": "2026-11-02"
   },
   {
    "name": "Lisa",
@@ -104,8 +108,9 @@
     "home"
    ],
    "source": "client",
-   "approved": false,
-   "quote": "The SocialDM is responsive, creative and dependable. Our community stands out online, and prospects mention our posts when they come in for a tour."
+   "approved": true,
+   "quote": "The SocialDM is responsive, creative and dependable. Our community stands out online, and prospects mention our posts when they come in for a tour.",
+   "approved_on": "2026-11-02"
   },
   {
    "name": "Cristy",
@@ -115,8 +120,9 @@
     "home"
    ],
    "source": "client",
-   "approved": false,
-   "quote": "I love how proactive this team is. They spot what needs attention before I ask and keep our online presence fresh every single week."
+   "approved": true,
+   "quote": "I love how proactive this team is. They spot what needs attention before I ask and keep our online presence fresh every single week.",
+   "approved_on": "2026-11-02"
   },
   {
    "name": "Jim",
@@ -126,8 +132,9 @@
     "home"
    ],
    "source": "client",
-   "approved": false,
-   "quote": "Clear communication, great content and real follow through. The SocialDM treats our community like their own, and it shows in how we look online."
+   "approved": true,
+   "quote": "Clear communication, great content and real follow through. The SocialDM treats our community like their own, and it shows in how we look online.",
+   "approved_on": "2026-11-02"
   },
   {
    "name": "Claudia",
@@ -137,8 +144,9 @@
     "home"
    ],
    "source": "client",
-   "approved": false,
-   "quote": "The SocialDM took a lot off my plate. Our community looks polished across Google and social, and I always know what is being done and why it matters."
+   "approved": true,
+   "quote": "The SocialDM took a lot off my plate. Our community looks polished across Google and social, and I always know what is being done and why it matters.",
+   "approved_on": "2026-11-02"
   },
   {
    "name": "Robyn",
@@ -148,8 +156,9 @@
     "home"
    ],
    "source": "client",
-   "approved": false,
-   "quote": "From reviews to social to search, The SocialDM keeps our community front and center. They are professional, fast and a pleasure to work with."
+   "approved": true,
+   "quote": "From reviews to social to search, The SocialDM keeps our community front and center. They are professional, fast and a pleasure to work with.",
+   "approved_on": "2026-11-02"
   }
  ]
 }
