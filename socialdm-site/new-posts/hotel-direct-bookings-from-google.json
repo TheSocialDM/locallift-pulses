@@ -75,5 +75,5 @@
   "Benchmark visibility against a comp set, where 100 means fair share, to see whether you are gaining or losing ground."
  ],
  "vertical": "hospitality",
- "approved": false
+ "approved": true
 }
