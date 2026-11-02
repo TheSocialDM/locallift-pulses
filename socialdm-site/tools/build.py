@@ -128,7 +128,7 @@ def shell(title, desc, canon, depth, body, extra_head='', og_image=None, og_type
     return f'''<!doctype html><html lang="en" data-base="{'/' if PROD else '../'*depth}" data-prod="{1 if PROD else 0}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}"><link rel="canonical" href="{SITE}{canon}">{robots}{og}
 <meta name="claude:viewport-fit-sides" content="cover">{FONTS}
-<link rel="icon" href="{asset('logo.png',depth)}"><link rel="stylesheet" href="{asset('site.css',depth)}"><link rel="stylesheet" href="{asset('blog.css',depth)}">{extra_head}
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#140F3A"><link rel="stylesheet" href="{asset('site.css',depth)}"><link rel="stylesheet" href="{asset('blog.css',depth)}">{extra_head}
 </head><body>{draft}<div id="site-header"></div>
 {body}
 <div id="site-footer"></div><script src="{asset('chrome.js',depth)}"></script></body></html>
@@ -335,7 +335,7 @@ for f in glob.glob(SRC + '/*.html'):
         t = t.replace('<link rel="stylesheet" href="site.css">', '<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="blog.css">', 1)
     canon = '/' if stem == 'index' else '/' + stem
     if '<link rel="canonical"' not in t:
-        t = t.replace('</head>', f'<link rel="canonical" href="{SITE}{canon}"><link rel="icon" href="logo.png"></head>', 1)
+        t = t.replace('</head>', f'<link rel="canonical" href="{SITE}{canon}"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#140F3A"></head>', 1)
     t = t.replace('<html lang="en">', f'<html lang="en" data-base="{"/" if PROD else ""}" data-prod="{1 if PROD else 0}">', 1)
     if PROD:
         t = t.replace('<div class="draft">Draft</div>', '')
@@ -345,7 +345,7 @@ for f in glob.glob(SRC + '/*.html'):
         t = t.replace('</head>', '<meta name="robots" content="noindex"></head>', 1)
         t = t.replace('data-netlify="true"', 'data-netlify="true" onsubmit="return false"')  # preview never submits
     open(f'{OUT}/{n}', 'w').write(t)
-for a in ['site.css','fx.css','fx.js','logo.png','locallift-white.png'] + [os.path.basename(x) for x in glob.glob(SRC+'/p*.jpg')]:
+for a in ['site.css','fx.css','fx.js','logo.png','locallift-white.png','favicon.ico','favicon-32.png','favicon-48.png','icon-192.png','icon-512.png','apple-touch-icon.png','site.webmanifest','og-image.png'] + [os.path.basename(x) for x in glob.glob(SRC+'/p*.jpg')]:
     shutil.copy(f'{SRC}/{a}', f'{OUT}/{a}')
 shutil.copy(os.path.dirname(os.path.abspath(__file__)) + '/blog.css', OUT + '/blog.css')
 if os.path.isdir(SRC + '/reels'):

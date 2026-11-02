@@ -11,7 +11,7 @@ ORG_ID = SITE + '/#organization'
 SOCIAL = ['https://www.instagram.com/the.socialdm/', 'https://www.facebook.com/thesocialdm',
           'https://www.tiktok.com/@thesocialdm', 'https://www.youtube.com/@thesocialdm']
 ORG = {'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'url': SITE + '/',
-       'logo': SITE + '/logo.png', 'email': 'info@thesocialdm.com', 'foundingDate': '2019',
+       'logo': SITE + '/icon-512.png', 'email': 'info@thesocialdm.com', 'foundingDate': '2019',
        'founder': {'@type': 'Person', 'name': 'Michael Shad', 'jobTitle': 'Founder'},
        'address': {'@type': 'PostalAddress', 'streetAddress': '3104 E Camelback Rd #2161', 'addressLocality': 'Phoenix',
                    'addressRegion': 'AZ', 'postalCode': '85016', 'addressCountry': 'US'},
@@ -81,7 +81,7 @@ def run(out):
             if 'property="og:title"' not in t:
                 head += (f'<meta property="og:type" content="{"article" if kind == "article" else "website"}"><meta property="og:site_name" content="The SocialDM">'
                          f'<meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}">'
-                         f'<meta property="og:url" content="{canon}"><meta property="og:image" content="{SITE}/logo.png"><meta name="twitter:card" content="summary">')
+                         f'<meta property="og:url" content="{canon}"><meta property="og:image" content="{SITE}/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">')
             blocks = []
             if kind in ('home', 'about', 'contact'):
                 blocks.append(ORG)
@@ -94,7 +94,7 @@ def run(out):
             if kind == 'article':
                 blocks.append({'@context': 'https://schema.org', '@type': 'Article', 'headline': 'The 2026 Multifamily Visibility Report', 'url': canon,
                                'description': desc, 'author': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM'},
-                               'publisher': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'logo': {'@type': 'ImageObject', 'url': SITE + '/logo.png'}}})
+                               'publisher': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'logo': {'@type': 'ImageObject', 'url': SITE + '/icon-512.png'}}})
             soup = BeautifulSoup(t, 'html.parser')
             qa = [(d.find('summary').get_text(' ', strip=True), d.find('p').get_text(' ', strip=True))
                   for d in soup.select('.faq details') if d.find('summary') and d.find('p')]
