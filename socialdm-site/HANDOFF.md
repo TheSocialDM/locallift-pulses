@@ -19,6 +19,7 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 - socialdm-site/netlify.toml added (publish dist, no command). Netlify MCP works from cloud now (team has 12 projects) but cannot link a GitHub repo, so the repo link click is still Michael's.
 - DNS (read through Bird audit): MX thesocialdm-com.mail.protection.outlook.com (Microsoft 365). SPF v=spf1 include:spf.em.secureserver.net include:spf.protection.outlook.com -all. No DMARC. Microsoft 365 also needs autodiscover CNAME and DKIM selector1/selector2 CNAMEs if present; read the full zone in the DNS host before moving anything.
 
+- Contact form delivery: Netlify outgoing notification never reached Make, so contact.html now also sends each submission from the browser to the Make webhook with navigator.sendBeacon (production only, skipped when the honeypot is filled). The Make scenario only acts on payloads with source=site, so a Netlify notification, if one exists, cannot send duplicates. Netlify still stores every submission.
 - Netlify project "thesocialdm" (id 9d77552d-d658-4c5e-896a-415a32959593) created Nov 2 from branch socialdm-site, base socialdm-site, publish socialdm-site/dist. URL https://thesocialdm.netlify.app, currently behind Netlify team login (SSO, all deploys). Form detection enabled.
 
 ## Still to do, in order
