@@ -144,3 +144,4 @@
 .wheel-hint.done{opacity:0;transform:translateY(6px);pointer-events:none}
 @media (max-width:420px){.wheel-hint{font-size:12px;gap:7px;padding:9px 14px}}
 @media (prefers-reduced-motion:reduce){.wplay,.wheel-hint .wh-ic:first-child{animation:none}}
+.hero .hint{margin-top:44px}
