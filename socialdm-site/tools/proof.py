@@ -56,8 +56,11 @@ def testimonials(group):
             f'<p class="tm-note">From {d["count"]} Google reviews of The SocialDM.</p></div>')
     if len(rs) < 3:
         return f'<section class="block proof-tm" style="padding-top:0">{head}<div class="wrap tm-static">{cards}</div></section>'
+    reps = max(1, -(-8 // len(rs)))            # repeat short lists so the loop never shows a gap on wide screens
+    track = cards * reps
+    dur = round(len(rs) * reps * 4.5)          # same speed whatever the count, about 4.5s per card
     return (f'<section class="block proof-tm" style="padding-top:0">{head}'
-            f'<div class="marquee tm-marquee"><div class="mq-track">{cards}</div><div class="mq-track" aria-hidden="true">{cards}</div></div></section>')
+            f'<div class="marquee tm-marquee"><div class="mq-track" style="animation-duration:{dur}s">{track}</div><div class="mq-track" aria-hidden="true" style="animation-duration:{dur}s">{track}</div></div></section>')
 
 def render(t):
     t = t.replace('<!--proof:communities-->', ticker())
