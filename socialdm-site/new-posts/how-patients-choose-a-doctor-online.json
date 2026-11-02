@@ -4,7 +4,7 @@
  "seoTitle": "How Patients Choose a Doctor Online Today",
  "seoDescription": "How patients find and choose a medical or dental practice online, from Google Search and Maps to reviews, websites and AI answers, and what to fix first.",
  "excerpt": "Patients search, compare the map, read reviews and check your website before they call. A gap at any step can cost you the appointment.",
- "date": "2026-11-13",
+ "date": "2026-11-02",
  "imageAlt": "Woman sitting on a leather sofa at home, looking closely at her smartphone",
  "imageIdea": "Real photo of a person at home searching on a smartphone, daylight, screen not readable, no clinical setting and no brand logos.",
  "author": "Michael Shad, Founder of The SocialDM",
@@ -53,5 +53,6 @@
   "A June 2026 KFF poll found 29% of U.S. adults use AI tools for health information at least monthly, up from 17% in 2024.",
   "Clear service and provider pages, a current insurance list and hours that match your Google profile help patients choose you."
  ],
- "vertical": "medical"
+ "vertical": "medical",
+ "approved": true
 }
