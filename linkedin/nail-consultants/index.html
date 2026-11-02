@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TNC LinkedIn October</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#FBFAFA; --surface:#FFFFFF; --ink:#1C1A1D; --muted:#6B6468; --line:#E7E2E4;
+  --lacquer:#B0122F; --lacquer-soft:#F7E4E8; --good:#2F7A55; --good-soft:#E3F1EA; --warn:#9A6210; --warn-soft:#F7EEDD;
+  --display:"Libre Caslon Display", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#141214; --surface:#1D1A1D; --ink:#F1ECEE; --muted:#A69DA2; --line:#332E32;
+    --lacquer:#E8566F; --lacquer-soft:#3A1D24; --good:#6CC499; --good-soft:#1B3127; --warn:#E0A64C; --warn-soft:#352A17;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#141214; --surface:#1D1A1D; --ink:#F1ECEE; --muted:#A69DA2; --line:#332E32;
+  --lacquer:#E8566F; --lacquer-soft:#3A1D24; --good:#6CC499; --good-soft:#1B3127; --warn:#E0A64C; --warn-soft:#352A17;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;margin:0;-webkit-user-select:none;user-select:none}
+.wrap{max-width:980px;margin:0 auto;padding:40px 16px 64px;display:flex;flex-direction:column;gap:40px}
+header{display:flex;flex-direction:column;gap:10px;border-bottom:1px solid var(--line);padding-bottom:28px}
+.eyebrow{font:500 11px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{color:var(--lacquer);font-weight:500}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1 em{color:var(--lacquer);font-style:italic}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-size:13px}
+.verdict{font-family:var(--display);font-size:clamp(21px,3vw,27px);line-height:1.3;margin:0;max-width:36ch;text-wrap:balance}
+.verdict-sub{color:var(--muted);max-width:64ch;margin:12px 0 0}
+h2{font:600 12px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+h2 .sub{font-weight:400;letter-spacing:.04em;text-transform:none}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.kpi{background:var(--surface);padding:20px 18px;display:flex;flex-direction:column;gap:6px}
+.kpi .n{font:500 36px/1 var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.kpi .l{font-size:13px;color:var(--muted)}
+.kpi .d{font:500 12px/1.35 var(--mono);color:var(--muted)}
+.chip{align-self:flex-start;font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:3px}
+.chip.good{background:var(--good-soft);color:var(--good)}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.flat{background:var(--line);color:var(--muted)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:22px}
+.chart-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.chart-head strong{font-size:16px}
+.chart-head span{font:12px var(--mono);color:var(--muted)}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.charts{display:grid;grid-template-columns:1.25fr 1fr;gap:24px}
+.grid2{display:grid;grid-template-columns:1.15fr 1fr;gap:24px}
+.now{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
+.now li{display:grid;grid-template-columns:10px 1fr;gap:12px}
+.dot{width:10px;height:10px;border-radius:50%;margin-top:7px}
+.dot.good{background:var(--good)} .dot.warn{background:var(--warn)} .dot.flat{background:var(--muted)}
+.now b{display:block;font-weight:600}
+.now p{margin:2px 0 0;color:var(--muted)}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar-row{display:grid;grid-template-columns:1fr auto;gap:4px 12px}
+.bar-row .k{font:11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);grid-column:1/-1}
+.bar-row .v{font:500 14px var(--mono);font-variant-numeric:tabular-nums}
+.bar-row .was{grid-column:1/-1;font:12px var(--mono);color:var(--muted)}
+.track{grid-column:1/-1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.fill{height:100%;background:var(--ink);border-radius:3px}
+.fill.target{background:var(--lacquer)}
+.legend{font-size:12px;color:var(--muted);margin-top:14px;display:flex;gap:16px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:6px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plan div{border-top:2px solid var(--lacquer);padding-top:12px}
+.plan b{display:block;margin-bottom:4px}
+.plan p{margin:0;color:var(--muted);font-size:14px}
+.page-sec{display:flex;flex-direction:column;gap:20px}
+.page-sec .intro{color:var(--muted);max-width:66ch;margin:0}
+.kpis.three{grid-template-columns:repeat(4,1fr)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:right;padding:10px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+th{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{font-family:var(--mono)}
+td.txt{font-family:var(--sans);text-align:left;white-space:normal}
+.muted-row td{color:var(--muted)}
+.hl td{font-weight:500;background:var(--lacquer-soft)}
+.table-box{overflow-x:auto}
+.brandbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px 16px;margin-bottom:-16px}
+.agency{display:flex;align-items:baseline;gap:8px;font-size:15px}
+.agency .sdm{font-weight:600;letter-spacing:-.01em}
+.agency .x{color:var(--muted);font-family:var(--display);font-style:italic}
+.agency .ll{font-weight:600;color:var(--lacquer)}
+.agency sup{font-size:9px}
+.brandbar .tag{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px;max-width:80ch}
+.sign{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:12px}
+.sign b{color:var(--ink);font-weight:600}
+@media (max-width:760px){
+  .wrap{padding-top:68px}
+  .savebtn{top:12px;right:12px;padding:10px 14px}
+  .kpis,.kpis.three{grid-template-columns:repeat(2,1fr)}
+  .grid2,.plan,.charts{grid-template-columns:1fr}
+  .kpi .n{font-size:30px}
+  .hide-sm{display:none}
+}
+.savebtn{position:fixed;top:14px;right:14px;z-index:50;font:600 13px/1 var(--sans);color:#fff;background:var(--lacquer);border:0;border-radius:999px;padding:11px 16px;box-shadow:0 6px 18px rgba(176,18,47,.28);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.savebtn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(176,18,47,.34)}
+.kpi{transition:transform .25s ease,box-shadow .25s ease}
+.kpi:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(28,26,29,.08);position:relative;z-index:1}
+.anim .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.anim .reveal.in{opacity:1;transform:none}
+.anim .fill{transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.anim .wkbar{transform:scaleY(0);transform-box:fill-box;transform-origin:bottom;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.anim .wkbar.in{transform:scaleY(1)}
+.anim .wklabel{opacity:0;transition:opacity .5s ease .8s}
+.anim .wklabel.in{opacity:1}
+.anim .drawline{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s ease}
+.anim .drawline.in{stroke-dashoffset:0}
+.anim .fade{opacity:0;transition:opacity .8s ease 1s}
+.anim .fade.in{opacity:1}
+.wkbar:hover{filter:brightness(1.12)}
+#tip{position:fixed;pointer-events:none;z-index:60;background:var(--ink);color:var(--surface);font:500 12px/1.3 var(--mono);padding:7px 9px;border-radius:4px;opacity:0;transition:opacity .15s}
+@media (prefers-reduced-motion: reduce){.anim .reveal,.anim .fill,.anim .wkbar,.anim .wklabel,.anim .drawline,.anim .fade{transition:none!important;opacity:1!important;transform:none!important;stroke-dashoffset:0!important}}
+@media print{
+  .savebtn,#tip{display:none!important}
+  .anim .reveal,.anim .wkbar,.anim .wklabel,.anim .fade{opacity:1!important;transform:none!important;transition:none!important}
+  .anim .drawline{stroke-dashoffset:0!important;transition:none!important}
+  .anim .fill{transition:none!important}
+  @page{size:letter;margin:0.45in}
+  :root{--ground:#FFFFFF}
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:13.5px}
+  .wrap{padding:0;gap:24px;max-width:none}
+  .panel,.kpis,.plan,.grid2 > div,table,.charts > div,header,section{break-inside:avoid}
+  footer{break-inside:avoid}
+  .page-break{break-before:page}
+}
+</style>
+</head>
+<body>
+<button class="savebtn" type="button" onclick="window.print()" aria-label="Save as PDF or print">Save or print</button>
+<div id="tip"></div>
+<div class="wrap">
+  <div class="brandbar">
+    <div class="agency"><span class="sdm">The SocialDM</span><span class="x">&amp;</span><span class="ll">LocalLift<sup>™</sup></span></div>
+    <span class="tag">Client performance report</span>
+  </div>
+
+  <header>
+    <div class="eyebrow"><b>The Nail Consultants, Ltd.®</b> &nbsp;/&nbsp; LinkedIn Monthly Snapshot</div>
+    <h1>October: the launch <em>held</em>, and the audience got sharper</h1>
+    <div class="meta"><span>Renee Resler, Founder</span><span>October 2026</span><span>Prepared by The SocialDM and LocalLift™</span></div>
+  </header>
+
+  <section>
+    <p class="verdict">Renee's posts now earn about 330 impressions a week, up from 8 a week before the program. Her following reached 301, up 33% since the program began.</p>
+    <p class="verdict-sub">October was the first full month of steady posting: 17 posts on Renee's profile (Oct 1 to 31) and 16 on the company page (Oct 5 to 30). September's launch was not a one time spike. Weekly impressions stayed above 220 every week of the month, new followers arrived every week, and more of her audience is now the exact buyer this program is built for: personal care product manufacturers (21%, up from 13%).</p>
+  </section>
+
+  <section>
+    <h2>Renee's profile at a glance <span class="sub">&nbsp;Oct 6 to Nov 2</span></h2>
+    <div class="kpis">
+      <div class="kpi"><span class="chip good">Strong</span><span class="n">1,323</span><span class="l">Post impressions, 4 weeks</span><span class="d">about 330 a week, was 8 a week before launch</span></div>
+      <div class="kpi"><span class="chip good">Growing</span><span class="n">301</span><span class="l">Total followers</span><span class="d">+38 in 4 weeks, +74 since the program began (227)</span></div>
+      <div class="kpi"><span class="chip good">New reach</span><span class="n">368</span><span class="l">Members reached</span><span class="d">unique people who saw her posts</span></div>
+      <div class="kpi"><span class="chip warn">Next lever</span><span class="n">26</span><span class="l">Engagements</span><span class="d">reactions, comments and reposts</span></div>
+    </div>
+  </section>
+
+  <section class="charts">
+    <div class="panel">
+      <div class="chart-head"><strong>Weekly post impressions</strong><span>Renee's profile</span></div>
+      <svg id="wk" viewBox="0 0 520 260" role="img" aria-label="Weekly impressions: 8 in the baseline week, 383 in launch week, then 471, 224, 391 and 237 across October"></svg>
+      <div class="legend"><span><i style="background:var(--muted)"></i>September (from the launch report)</span><span><i style="background:var(--lacquer)"></i>October</span></div>
+    </div>
+    <div class="panel">
+      <div class="chart-head"><strong>Followers</strong><span>Running total</span></div>
+      <svg id="fol" viewBox="0 0 420 260" role="img" aria-label="Followers grew from 227 on Sep 14 to 301 on Nov 2"></svg>
+      <div class="legend"><span>New followers each October week: 7, 9, 13, 9</span></div>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div>
+      <h2>What October showed</h2>
+      <ul class="now">
+        <li><span class="dot good"></span><div><b>The momentum held after launch</b><p>Every October week cleared 220 impressions. Before the program, a full week drew 8.</p></div></li>
+        <li><span class="dot good"></span><div><b>The right industry is following</b><p>Personal care product manufacturing is now 21% of Renee's audience, up from 13% at launch. It is the largest industry in her audience by a wide margin.</p></div></li>
+        <li><span class="dot good"></span><div><b>Decision makers are following</b><p>CXO, Director and Owner level members now make up 42% of her audience. These are the roles that typically approve new products and partnerships.</p></div></li>
+        <li><span class="dot good"></span><div><b>The reach went national</b><p>Phoenix fell from 38% to 32% of her audience, and New York (20%) and Los Angeles (10%) are now her next largest markets. Among people who saw her posts in this period, New York ranked first at 13%.</p></div></li>
+        <li><span class="dot warn"></span><div><b>Conversation is the next step</b><p>The reach is in place. The next step is turning it into comments and replies from the right people.</p></div></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h2>Who is following Renee</h2>
+      <div class="bars">
+        <div class="bar-row"><span class="k">Industry</span><span>Personal Care Product Mfg</span><span class="v">21%</span><div class="track"><div class="fill target" style="width:21%"></div></div><span class="was">was 13% at launch</span></div>
+        <div class="bar-row"><span class="k">Seniority</span><span>CXO</span><span class="v">15%</span><div class="track"><div class="fill target" style="width:15%"></div></div></div>
+        <div class="bar-row"><span class="k">Seniority</span><span>Director</span><span class="v">14%</span><div class="track"><div class="fill target" style="width:14%"></div></div></div>
+        <div class="bar-row"><span class="k">Seniority</span><span>Owner</span><span class="v">13%</span><div class="track"><div class="fill target" style="width:13%"></div></div></div>
+        <div class="bar-row"><span class="k">Location</span><span>Greater Phoenix Area</span><span class="v">32%</span><div class="track"><div class="fill" style="width:32%"></div></div><span class="was">was 38% at launch</span></div>
+        <div class="bar-row"><span class="k">Location</span><span>New York City Metro</span><span class="v">20%</span><div class="track"><div class="fill" style="width:20%"></div></div></div>
+      </div>
+      <div class="legend"><span><i style="background:var(--lacquer)"></i>Campaign target signal</span><span><i style="background:var(--ink)"></i>Context</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Renee's top posts <span class="sub">&nbsp;by impressions, plus the most engaged post, Oct 6 to Nov 2</span></h2>
+    <div class="table-box"><table>
+      <thead><tr><th>Posted</th><th style="text-align:left">Topic</th><th>Impressions</th><th>Engagements</th></tr></thead>
+      <tbody>
+        <tr><td>Oct 9</td><td class="txt">Beauty innovation and product development</td><td>172</td><td>1</td></tr>
+        <tr><td>Oct 11</td><td class="txt">Product development</td><td>133</td><td>5</td></tr>
+        <tr><td>Oct 7</td><td class="txt">Nail innovation and private label</td><td>109</td><td>4</td></tr>
+        <tr><td>Oct 21</td><td class="txt">Pedicure innovation</td><td>88</td><td>3</td></tr>
+        <tr><td>Oct 6</td><td class="txt">Nail professionals and the nail industry</td><td>83</td><td>1</td></tr>
+        <tr class="hl"><td>Oct 14</td><td class="txt">Beauty innovation (most engaged post of the month)</td><td>76</td><td>6</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="page-sec page-break">
+    <h2>The Nail Consultants company page <span class="sub">&nbsp;Oct 2 to 31</span></h2>
+    <p class="intro">October was the company page's foundation month. The goal was a steady rhythm and a library of brand content. Both are in place, and reach picked up at month end.</p>
+    <div class="kpis three">
+      <div class="kpi"><span class="chip good">Consistent</span><span class="n">16</span><span class="l">Posts published</span><span class="d">Oct 5 to Oct 30, about 4 a week</span></div>
+      <div class="kpi"><span class="chip good">Building</span><span class="n">158</span><span class="l">Page impressions</span><span class="d">all organic, no paid spend</span></div>
+      <div class="kpi"><span class="chip good">Picking up</span><span class="n">60</span><span class="l">Impressions, final week</span><span class="d">Oct 25 to 31, was 12 the week before</span></div>
+      <div class="kpi"><span class="chip flat">Early</span><span class="n">24</span><span class="l">Video views</span><span class="d">across 3 video posts</span></div>
+    </div>
+    <div class="table-box"><table>
+      <thead><tr><th>Posted</th><th style="text-align:left">Top company page posts</th><th>Impressions</th></tr></thead>
+      <tbody>
+        <tr><td>Oct 28</td><td class="txt">A product launch is exciting. Repeat professional use is where the real opportunity begins</td><td>37</td></tr>
+        <tr><td>Oct 7</td><td class="txt">What would an express nail color product need to do to earn a place in your portfolio?</td><td>20</td></tr>
+        <tr><td>Oct 6</td><td class="txt">Getting noticed is one thing. Becoming part of a professional's everyday routine is another</td><td>12</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>New in October: Reputation and Relationship Management</h2>
+    <p class="intro" style="color:var(--muted);max-width:66ch;margin:0 0 16px">Alongside the content program, we added hands on reputation and relationship work to Renee's LinkedIn this month. Reach shows who sees her posts. This work is aimed at turning those viewers into real connections.</p>
+    <div class="plan">
+      <div><b>Replies on her posts</b><p>We replied to comments on Renee's posts with responses written in her voice.</p></div>
+      <div><b>Active in her network</b><p>We regularly liked and engaged with posts across Renee's network between her own posts.</p></div>
+      <div><b>Relationships, not just reach</b><p>The goal is warmer connections with the manufacturers, brand owners and executives now following her.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>November focus</h2>
+    <div class="plan">
+      <div><b>Bridge Renee's reach to the page</b><p>Renee reshares select company posts with her own one line take, pointing her 330 weekly impressions toward the brand page.</p></div>
+      <div><b>Invite the right followers</b><p>Invite the manufacturers, brand owners and executives now following Renee to follow The Nail Consultants page.</p></div>
+      <div><b>Turn reach into conversation</b><p>Close more posts with a direct question for brand owners and reply to every comment the same day.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Month over month</h2>
+    <div class="table-box"><table>
+      <thead><tr><th>Period</th><th>Dates</th><th>Profile impressions</th><th class="hide-sm">Per week</th><th>Followers</th><th>New followers</th><th class="hide-sm">Personal care mfg share</th></tr></thead>
+      <tbody>
+        <tr class="muted-row"><td>Before program</td><td>Sep 8 to 14</td><td>8</td><td class="hide-sm">8</td><td>227</td><td>n/a</td><td class="hide-sm">n/a</td></tr>
+        <tr><td>Launch week</td><td>Sep 15 to 21</td><td>383</td><td class="hide-sm">383</td><td>240</td><td>13</td><td class="hide-sm">13%</td></tr>
+        <tr class="hl"><td>October</td><td>Oct 6 to Nov 2</td><td>1,323</td><td class="hide-sm">about 330</td><td>301</td><td>38</td><td class="hide-sm">21%</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <footer>Source: LinkedIn analytics for Renee Resler's profile (Oct 6 to Nov 2, 2026) and The Nail Consultants company page (Oct 2 to 31, 2026, UTC), exported Nov 2, 2026. September figures come from the launch week report (Sep 21). Followers at Oct 5, 12, 19 and 26 are counted back from LinkedIn's daily new follower numbers. Company page follower totals were not included in this export.
+    <div class="sign"><span>Prepared by <b>The SocialDM</b> and <b>LocalLift™</b> for The Nail Consultants, Ltd.®</span><span>Michael Shad, Founder</span></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  // Weekly impressions bars
+  const W = [["Sep 8","8",8,0],["Sep 15","launch",383,0],["Oct 6","",471,1],["Oct 13","",224,1],["Oct 20","",391,1],["Oct 27","",237,1]];
+  const svg=document.getElementById("wk"), w=520,h=260,L=40,R=10,T=20,B=40, max=500;
+  const bw=(w-L-R)/W.length, y=v=>T+(h-T-B)*(1-v/max);
+  let s="";
+  [0,100,200,300,400,500].forEach(v=>{s+=`<line x1="${L}" x2="${w-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end">${v}</text>`;});
+  W.forEach((d,i)=>{
+    const x=L+i*bw+bw*0.18, bwi=bw*0.64, col=d[3]?"var(--lacquer)":"var(--muted)";
+    const top=y(Math.max(d[2],4));
+    s+=`<rect class="wkbar" data-tip="${d[0]}: ${d[2]} impressions" style="transition-delay:${i*0.12}s" x="${x}" y="${top}" width="${bwi}" height="${y(0)-top}" rx="2" fill="${col}" ${d[3]?'':'fill-opacity=".55"'}/>`;
+    s+=`<text class="wklabel" x="${x+bwi/2}" y="${top-6}" text-anchor="middle" style="fill:var(--ink)">${d[2]}</text>`;
+    s+=`<text x="${x+bwi/2}" y="${h-22}" text-anchor="middle">${d[0]}</text>`;
+    s+=`<text x="${x+bwi/2}" y="${h-8}" text-anchor="middle">${i==0?"before":i==1?"launch":"week"}</text>`;
+  });
+  s+=`<line x1="${L+2*bw-2}" x2="${L+2*bw-2}" y1="${T}" y2="${y(0)}" stroke="var(--line)" stroke-dasharray="3 3"/>`;
+  svg.innerHTML=s;
+
+  // Followers line
+  const F=[["Sep 14",227,0],["Sep 21",240,7],["Oct 5",263,21],["Oct 12",270,28],["Oct 19",279,35],["Oct 26",292,42],["Nov 2",301,49]];
+  const f=document.getElementById("fol"), fw=420,fh=260,fL=40,fR=16,fT=24,fB=40, lo=200, hi=320;
+  const fx=i=>fL+F[i][2]*(fw-fL-fR)/49, fy=v=>fT+(fh-fT-fB)*(1-(v-lo)/(hi-lo));
+  let t="";
+  [200,240,280,320].forEach(v=>{t+=`<line x1="${fL}" x2="${fw-fR}" y1="${fy(v)}" y2="${fy(v)}" stroke="var(--line)"/><text x="${fL-6}" y="${fy(v)+4}" text-anchor="end">${v}</text>`;});
+  F.forEach((d,i)=>{ if(i==0||i==2||i==4||i==F.length-1) t+=`<text x="${fx(i)}" y="${fh-14}" text-anchor="middle">${d[0]}</text>`; });
+  const pts=F.map((d,i)=>`${fx(i)},${fy(d[1])}`).join(" ");
+  t+=`<polygon points="${fx(0)},${fy(lo)} ${pts} ${fx(F.length-1)},${fy(lo)}" fill="var(--lacquer)" fill-opacity=".10" class="fade"/>`;
+  t+=`<polyline class="drawline" pathLength="1" points="${pts}" fill="none" stroke="var(--lacquer)" stroke-width="2.5" stroke-linejoin="round"/>`;
+  F.forEach((d,i)=>{const last=i==F.length-1; t+=`<circle class="fade" data-tip="${d[0]}: ${d[1]} followers" cx="${fx(i)}" cy="${fy(d[1])}" r="${last?5:3}" fill="${last?'var(--lacquer)':'var(--surface)'}" stroke="var(--lacquer)" stroke-width="2"/>`;});
+  t+=`<text x="${fx(0)+4}" y="${fy(227)+18}" style="fill:var(--ink)">227</text>`;
+  t+=`<text x="${fx(F.length-1)}" y="${fy(301)-12}" text-anchor="end" style="fill:var(--ink)">301</text>`;
+  f.innerHTML=t;
+})();
+
+(function(){
+  const root=document.documentElement;
+  const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!('IntersectionObserver' in window)) return;
+  root.classList.add('anim');
+  document.querySelectorAll('.wrap > section, .wrap > header').forEach(el=>el.classList.add('reveal'));
+  const fills=[...document.querySelectorAll('.fill')]; fills.forEach(f=>{f.dataset.w=f.style.width;f.style.width='0%';});
+  const nums=[...document.querySelectorAll('.kpi .n')];
+  nums.forEach(n=>{n.dataset.final=n.textContent;});
+  function countUp(n){
+    const fin=n.dataset.final, target=parseInt(fin.replace(/,/g,''),10);
+    if(isNaN(target)||reduce){n.textContent=fin;return;}
+    const t0=performance.now(), dur=1300;
+    (function step(t){const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+      n.textContent=Math.round(target*e).toLocaleString('en-US'); if(p<1) requestAnimationFrame(step); else n.textContent=fin;})(t0);
+  }
+  const io=new IntersectionObserver(es=>{es.forEach(en=>{ if(!en.isIntersecting) return; const el=en.target; io.unobserve(el);
+    el.classList.add('in');
+    el.querySelectorAll('.fill').forEach(f=>{f.style.width=f.dataset.w;});
+    el.querySelectorAll('.kpi .n').forEach(countUp);
+    el.querySelectorAll('.wkbar,.wklabel,.drawline,.fade').forEach(x=>x.classList.add('in'));
+  });},{threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  window.addEventListener('beforeprint',()=>{
+    document.querySelectorAll('.reveal,.wkbar,.wklabel,.drawline,.fade').forEach(x=>x.classList.add('in'));
+    fills.forEach(f=>{f.style.width=f.dataset.w;}); nums.forEach(n=>{n.textContent=n.dataset.final;});
+  });
+  const tip=document.getElementById('tip');
+  document.addEventListener('pointerover',e=>{const d=e.target.closest&&e.target.closest('[data-tip]'); if(!d) return; tip.textContent=d.dataset.tip; tip.style.opacity=1;});
+  document.addEventListener('pointermove',e=>{tip.style.left=(e.clientX+12)+'px'; tip.style.top=(e.clientY-34)+'px';});
+  document.addEventListener('pointerout',e=>{if(e.target.closest&&e.target.closest('[data-tip]')) tip.style.opacity=0;});
+})();
+document.addEventListener("copy",e=>{e.preventDefault();});
+document.addEventListener("contextmenu",e=>e.preventDefault());
+</script>
+</body>
+</html>
