@@ -167,7 +167,12 @@ for f in sorted(glob.glob(NEW + '/*.json')):
     iso, nice, yr = fmt(n['date'])
     hero = None
     if n.get('image'):
-        hero = (n['image'], 1400, 933)
+        try:
+            from PIL import Image as _I
+            _w,_h = _I.open(os.path.dirname(os.path.abspath(__file__)) + '/images-new/' + os.path.basename(n['image'])).size
+        except Exception:
+            _w,_h = 1400, 933
+        hero = (n['image'], _w, _h)
     posts.append(dict(slug=n['slug'], title=n['title'], seoTitle=n['seoTitle'], seoDesc=n['seoDescription'], excerpt=n['excerpt'], body=n['bodyHtml'], iso=iso, nice=nice, year=yr, hero=hero,
         author='Michael Shad', updated=iso, new=True, faq=n.get('faq', []), alt=n.get('imageAlt', n['title'])))
     POST_SLUGS.add(n['slug'])
@@ -202,7 +207,7 @@ for i, p in enumerate(posts):
     if p['faq']:
         head += '<script type="application/ld+json">' + json.dumps({'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q['q'],'acceptedAnswer':{'@type':'Answer','text':q['a']}} for q in p['faq']]}) + '</script>'
     by = 'Michael Shad, Founder of The SocialDM' if p['author']=='Michael Shad' else 'The SocialDM'
-    main = f'''<main><article class="art"><div class="art-head wrap"><a class="back" href="{link('blog',1)}">Market Intelligence</a><h1>{html.escape(p['title'])}</h1><div class="meta"><time datetime="{p['iso']}">{p['nice']}</time><span>{by}</span></div></div>
+    main = f'''<main class="paper"><article class="art"><div class="art-head wrap"><a class="back" href="{link('blog',1)}">Market Intelligence</a><h1>{html.escape(p['title'])}</h1><div class="meta"><time datetime="{p['iso']}">{p['nice']}</time><span>{by}</span></div></div>
 <div class="art-body wrap">{heroimg}{body}</div></article>
 <section class="wrap related"><div class="eyebrow">Keep reading</div><div class="posts">{''.join(card(q,1) for q in related)}</div></section>{CTA(1)}</main>'''
     title = (p['seoTitle'] or p['title'])
@@ -214,7 +219,7 @@ for i, p in enumerate(posts):
 years = sorted({p['year'] for p in posts}, reverse=True)
 grp = ''.join(f'<h2 class="yr" id="y{y}">{y}</h2><div class="posts">' + ''.join(card(p,0) for p in posts[1:] if p['year']==y) + '</div>' for y in years)
 jump = ''.join(f'<a href="#y{y}">{y}</a>' for y in years)
-main = f'''<main><section class="hero pg-hero bl-hero"><div class="wrap"><div class="eyebrow">Market Intelligence</div><h1>How renters find <span>apartments now.</span></h1><p>Research and field notes on how apartment communities get discovered across Google Search, Google Maps and AI answers.</p><div class="jump" aria-label="Jump to year">{jump}</div></div></section>
+main = f'''<main class="paper"><section class="hero pg-hero bl-hero"><div class="wrap"><div class="eyebrow">Market Intelligence</div><h1>How renters find <span>apartments now.</span></h1><p>Research and field notes on how apartment communities get discovered across Google Search, Google Maps and AI answers.</p><div class="jump" aria-label="Jump to year">{jump}</div></div></section>
 <section class="wrap bl" aria-label="All articles"><div class="featwrap">{card(posts[0],0,True)}<div class="report"><div><div class="eyebrow">Research</div><h3>The 2026 Multifamily Visibility Report</h3><p>How apartment communities and lease ups are being discovered across social media, Google Search, Google Maps, and AI search.</p></div><a class="btn btn-line" href="{link('2026-multifamily-visibility-report',0)}">Read the report</a></div></div>{grp}</section>{CTA(0)}</main>'''
 open(f'{OUT}/blog.html','w').write(shell('Market Intelligence Blog | The SocialDM','Research and field notes from The SocialDM on how renters find apartment communities across Google Search, Google Maps and AI search.','/blog',0,main))
 
@@ -231,7 +236,7 @@ def carry(path, title_fallback=None):
     body = clean(str(m), depth, strip_title=head)
     if not desc:
         fp = BeautifulSoup(body,'html.parser').find('p'); desc = fp.get_text(' ',strip=True)[:155] if fp else title
-    main = f'<main><article class="art"><div class="art-head wrap"><h1>{html.escape(undash(head))}</h1></div><div class="art-body wrap">{fix_internal(body,depth)}</div></article>{CTA(depth)}</main>'
+    main = f'<main class="paper"><article class="art"><div class="art-head wrap"><h1>{html.escape(undash(head))}</h1></div><div class="art-body wrap">{fix_internal(body,depth)}</div></article>{CTA(depth)}</main>'
     open(f'{OUT}{path}.html','w').write(shell(undash(title), undash(desc), path, depth, main))
 for pth in ['/apartment-seo-for-multifamily-communities','/montage-tigard','/pillar-communities','/apartment-seo-blog-hub/cuvee-apartments-westgate-glendale']:
     carry(pth)

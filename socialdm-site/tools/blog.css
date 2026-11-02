@@ -57,3 +57,25 @@
 @media (max-width:620px){.art{padding-top:44px}.art-body{font-size:17px}}
 .art-body figcaption{margin-top:10px;font-size:14px;line-height:1.5;color:var(--dim)}
 .bl-hero .jump{justify-content:flex-start}
+
+/* Paper: light reading surface for the blog index and articles. Header, footer and CTA cards stay dark. */
+.paper{--ink:#16132E;--soft:#46435C;--dim:#6E6A84;--line:rgba(22,19,46,.13);--sky:#4B4FB8;--mist:#3A2F7A;background:#F7F6F2;color:var(--ink);color-scheme:light}
+.paper .hero{background:#F7F6F2}
+.paper .hero h1{color:var(--ink)}
+.paper .hero h1 span{background:linear-gradient(90deg,#3A2F7A,#4B4FB8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.paper .jump a{background:#fff;color:var(--soft)}
+.paper .jump a:hover{color:var(--ink);border-color:rgba(22,19,46,.35)}
+.paper .post{background:#fff;box-shadow:0 1px 2px rgba(22,19,46,.05)}
+.paper .post:hover{border-color:rgba(75,79,184,.5);box-shadow:0 6px 20px rgba(22,19,46,.08)}
+.paper .post h3{color:var(--ink)}
+.paper .report{background:#fff}
+.paper .art-body{color:#2A2742}
+.paper .art-body h2,.paper .art-body h3,.paper .art-body h4,.paper .art-body strong,.paper .art-body b,.paper .art-body blockquote{color:var(--ink)}
+.paper .art-body a{color:#3A2F7A}
+.paper .art-body a:hover{color:#4B4FB8}
+.paper .art-body th{background:#EFEEF6}
+.paper .art-body figcaption{color:var(--dim)}
+.paper .art-head h1{color:var(--ink)}
+.paper .cta{--ink:#fff;--soft:rgba(255,255,255,.74);--line:rgba(255,255,255,.14);--sky:#7A8FE2;--mist:#B4C3F0;color:#fff;color-scheme:dark}
+.paper .cta + *,.paper > :last-child{margin-bottom:0}
+.paper{padding-bottom:1px}
