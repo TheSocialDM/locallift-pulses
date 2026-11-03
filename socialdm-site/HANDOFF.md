@@ -76,3 +76,11 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 - Squarespace website plan for thesocialdm.com set to cancel; it EXPIRES APR 19 2027. BEFORE THEN (target March 2027): recreate all DNS records at GoDaddy, then switch GoDaddy nameservers to GoDaddy default, so email and site keep working.
 - LocalLift Now site: set redirects to the new site before its plan ends.
 - realestatebrandawareness.com is a Squarespace-registered domain (renews Oct 10 2027); left alone.
+
+## Email signature (paused, Nov 2 2026) - PICK UP HERE
+- Goal: replace WiseStamp ($85/yr) with a self-hosted signature that works in Apple Mail (Mac) on the Exchange account info@thesocialdm.com, and on iPhone.
+- Hosted files: src/email/ (served at https://www.thesocialdm.com/email/). index.html = copy page; signature.html = current float layout; signature-body.html = table layout (used by the Terminal file method, do NOT reuse that method).
+- Lessons: Apple Mail's signature pane strips tables, image sizes and (if "Always match my default message font" is ticked) all styles. Writing the .mailsignature file directly made iPhone show raw MIME; reverted (files unlocked with chflags nouchg). Do not have Michael run Terminal again.
+- Next step when Michael returns: he sends WiseStamp's "Copy HTML code" output (as a plain text file). Rebuild our design (full color logo-full.png left, The SocialDM | LocalLift, tagline, gradient bar, website, email, IG/FB/TikTok/YouTube icons, "Free AI visibility check" to /contact) on WiseStamp's proven structure, test, then one paste.
+- Open questions: X and LinkedIn URLs for icons (x.png, linkedin.png already made).
+- Meanwhile Michael uses WiseStamp's "Apple Mail for Mac" install.
