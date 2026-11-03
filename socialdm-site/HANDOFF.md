@@ -84,3 +84,8 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 - Next step when Michael returns: he sends WiseStamp's "Copy HTML code" output (as a plain text file). Rebuild our design (full color logo-full.png left, The SocialDM | LocalLift, tagline, gradient bar, website, email, IG/FB/TikTok/YouTube icons, "Free AI visibility check" to /contact) on WiseStamp's proven structure, test, then one paste.
 - Open questions: X and LinkedIn URLs for icons (x.png, linkedin.png already made).
 - Meanwhile Michael uses WiseStamp's "Apple Mail for Mac" install.
+
+## Nov 3 2026: 4 posts published at Michael's request (2 medical, 2 real estate)
+- open-enrollment-new-patients-january, cold-flu-season-same-day-patients (medical); real-estate-agent-marketing-plan-2027, real-estate-short-form-video (real estate). All dated Nov 3, "approved": true (Michael asked directly for them to go live).
+- Facts checked through search results only (cms.gov, cdc.gov, nar.realtor, hud.gov and support.google.com are blocked from cloud). NAR referral figures (43% buyers, 66% sellers) come from the Virginia REALTORS summary of the 2025 Profile; confirm against NAR if challenged.
+- Links to the Nov 6 (real-estate-agents-ai-search) and Dec 4 (google-business-profile-real-estate-agents) posts were left out because those are not live yet. Add them to real-estate-agent-marketing-plan-2027 after Dec 4 if wanted.
