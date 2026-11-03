@@ -370,7 +370,20 @@ for pg in ['index.html','contact.html','locallift.html','blog.html']:
     c = c.replace(f'href="{pg}"', f'href="\'+L("{pg}")+\'"')
 c = c.replace('src="logo.png"', 'src="\'+(PROD?"/":BASE)+\'logo.png"')
 c = c.replace('new Date().getFullYear()+\' The SocialDM. LocalLift', 'new Date().getFullYear()+\' The SocialDM. LocalLift')
+# social proof popup: approved reviews from testimonials.json, appended to chrome.js so every page gets it
+def _first(q, lim=100):
+    m = re.match(r'(.+?[.!?])(\s|$)', q.strip())
+    s = m.group(1) if m else q.strip()
+    if len(s) > lim:
+        s = s[:lim].rsplit(' ', 1)[0].rstrip(',;:') + '\u2026'
+    return s
+_tj = json.load(open(os.path.dirname(os.path.abspath(__file__)) + '/testimonials.json'))
+_pop = [dict(q=_first(r['quote']), n=r['name'], r=r.get('role', ''), v=r.get('vertical', ['home']), g=1 if r.get('source') == 'google' else 0)
+        for r in _tj['reviews'] if r.get('approved')]
+c += '\nwindow.SDM_POP=' + json.dumps({'reviews': _pop}, ensure_ascii=False) + ';\n' + open(SRC + '/pop.js').read()
 open(OUT + '/chrome.js', 'w').write(c)
+if os.path.exists(SRC + '/activity.json'):
+    shutil.copy(SRC + '/activity.json', OUT + '/activity.json')
 
 # ---------- production plumbing ----------
 if PROD:

@@ -1,0 +1,5 @@
+{
+  "updated": "2026-11-03",
+  "note": "Real events only (for example a free visibility check request or a new client sign up). City and business type only, never names. Events older than 14 days are not shown. Example: {\"m\": \"A medical practice in Mesa requested a free visibility check\", \"d\": \"2026-11-03\"}",
+  "events": []
+}
