@@ -380,7 +380,7 @@ def _first(q, lim=100):
 _tj = json.load(open(os.path.dirname(os.path.abspath(__file__)) + '/testimonials.json'))
 _pop = [dict(q=_first(r['quote']), n=r['name'], r=r.get('role', ''), v=r.get('vertical', ['home']), g=1 if r.get('source') == 'google' else 0)
         for r in _tj['reviews'] if r.get('approved')]
-c += '\nwindow.SDM_POP=' + json.dumps({'reviews': _pop}, ensure_ascii=False) + ';\n' + open(SRC + '/pop.js').read()
+c += '\nwindow.SDM_POP=' + json.dumps({'reviews': _pop}, ensure_ascii=False) + ';\n' + open(SRC + '/pop.js').read() + '\n' + open(SRC + '/offer.js').read()
 open(OUT + '/chrome.js', 'w').write(c)
 if os.path.exists(SRC + '/activity.json'):
     shutil.copy(SRC + '/activity.json', OUT + '/activity.json')
