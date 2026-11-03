@@ -66,7 +66,9 @@ var Q=[];
 function build(){Q=[];var r=REV.slice(),k=0;EV.slice(0,6).forEach(function(e){Q.push({m:e.m,t:ago(e.d),a:1});if(r.length)Q.push(r.shift())});
  while(r.length){Q.push(r.shift());if(++k%3===0)Q.push(CTA)}if(Q[Q.length-1]!==CTA)Q.push(CTA)}
 build();
-try{fetch((PROD?"/":BASE)+"activity.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(j){if(j&&Array.isArray(j.events)){EV=j.events.filter(fresh);build()}}).catch(function(){})}catch(e){}
+/* two real activity feeds: this site's /activity.json and the LocalLift Signature feed (same company, same rules) */
+var FEEDS=[(PROD?"/":BASE)+"activity.json","https://cdn.jsdelivr.net/gh/TheSocialDM/locallift-pulses@main/signature/activity.json"],ALL=[],SEEN={};
+FEEDS.forEach(function(u){try{fetch(u,{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(j){if(j&&Array.isArray(j.events)){j.events.filter(fresh).forEach(function(x){if(!SEEN[x.m+x.d]){SEEN[x.m+x.d]=1;ALL.push(x)}});ALL.sort(function(a,b){return a.d<b.d?1:-1});EV=ALL;build()}}).catch(function(){})}catch(e){}});
 var i=0,tm,off=false,cur=null;
 function show(){if(off||!Q.length)return;var e=cur=Q[i++%Q.length];M.textContent=e.m;T.innerHTML=e.t;el.classList.toggle("go",!!e.go);el.classList.remove("out");clearTimeout(tm);tm=setTimeout(function(){el.classList.add("out");tm=setTimeout(show,6000)},e.go?7000:8000)}
 el.addEventListener("click",function(ev){if(ev.target.closest(".x"))return;if(cur&&cur.go)location.href=go});
