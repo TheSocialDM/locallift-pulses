@@ -401,6 +401,9 @@ if PROD:
 /medical-1 /medical 301
 /hospitality-1 /hospitality 301
 /enterprise-1 /enterprise 301
+/cuvee /apartment-seo-blog-hub/cuvee-apartments-westgate-glendale 301
+/cuvee-blog/* /blog 301
+/cuvee-blog /blog 301
 /blog/tag/* /blog 301
 /blog/category/* /blog 301
 ''')
@@ -419,3 +422,10 @@ if PROD:
     import seo_layer; seo_layer.run(OUT)
 
 print(json.dumps({'posts': len(posts), 'new': sum(p['new'] for p in posts), 'images_used': len(report['used_images']), 'images_missing': sorted(report['missing_images']), 'unmapped_links': sorted(report['unmapped_links']), 'text_diffs': report['text_diffs']}, indent=1))
+
+# guard: every old URL Google knows (tools/known-urls.txt) must have a page or a redirect, or the deploy fails and the live site stays as it was
+if PROD:
+    import check_urls
+    _miss = check_urls.check(OUT, os.path.dirname(os.path.abspath(__file__)) + '/known-urls.txt')
+    if _miss:
+        sys.exit('BUILD STOPPED: these old URLs would land on the 404 page. Add a redirect in build.py:\n' + '\n'.join(_miss))

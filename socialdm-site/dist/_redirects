@@ -12,5 +12,8 @@
 /medical-1 /medical 301
 /hospitality-1 /hospitality 301
 /enterprise-1 /enterprise 301
+/cuvee /apartment-seo-blog-hub/cuvee-apartments-westgate-glendale 301
+/cuvee-blog/* /blog 301
+/cuvee-blog /blog 301
 /blog/tag/* /blog 301
 /blog/category/* /blog 301

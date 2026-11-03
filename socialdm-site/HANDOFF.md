@@ -104,3 +104,5 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 ## Nov 3 2026: old URL fixes and salon wording
 - Search Console (Windsor searchconsole, last 12 months) showed 3 old Squarespace URLs landing on the 404: /multifamily (270 impressions), /research (17), /company (2). Redirects added in build.py (_redirects) plus common old variants (/about-us, /contact-us, /services, /*-1). Re-run that check after Google recrawls.
 - hair-salon.html: AI chat mockups now say "hair colorist" instead of "balayage" (a client did not know the term); body text explains balayage as hand painted highlights.
+- Guard added: tools/known-urls.txt lists every path Search Console showed (Jul 2025 to Nov 2026). tools/check_urls.py runs at the end of build.py --prod and STOPS the build if any of them has no page and no redirect, so Netlify keeps the last good site. When removing or renaming a page, add a redirect in build.py. Refresh the list from Windsor searchconsole (field page, filter contains thesocialdm.com) about monthly.
+- Also added /cuvee and /cuvee-blog/* redirects (old Squarespace pages still in Google).

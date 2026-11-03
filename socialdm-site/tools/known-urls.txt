@@ -1,0 +1,42 @@
+# Every thesocialdm.com path Google Search Console has shown (Jul 2025 to Nov 2026), plus old Squarespace paths.
+# build.py --prod fails if any of these has no page and no redirect, so an old link can never land on the 404 again.
+# Add new paths here whenever Search Console shows one.
+/
+/about
+/apartment-seo-blog-hub
+/apartment-seo-blog-hub/cuvee-apartments-westgate-glendale
+/blog
+/blog/wo2zwqfsh2st30ph1k3hjj0o4qpk13
+/blog/wzowr7rukseb3f3nltpfqypwcqoh5w
+/blog/most-property-managers-stop-at-thanks-for-the-review-thats-the-problem
+/blog/tiktok-2025-will-your-apartment-marketing-survive-the-ban-essential-updates-for-multifamily-pros
+/blog/why-your-property-needs-intent-based-seo-in-2025
+/blog/ai-visibility-multifamily-apartments
+/blog/the-future-of-apartment-marketing-is-owned-visibility-in-2026
+/blog/how-ai-decides-which-apartments-to-recommend-and-how-to-show-up
+/blog/more-than-80-of-americans-now-use-ai-to-research-housing-here-is-how-your-community-becomes-the-one-it-recommends
+/blog/the-next-layer-of-multifamily-visibility-why-search-engines-must-understand-your-apartment-community
+/blog/renters-are-asking-ai-about-your-property-the-problem-is-the-ai-cannot-read-your-website
+/blog/why-multifamily-properties-must-control-google-maps-and-ai-visibility-in-2026
+/blog/why-multifamily-visibility-works-differently-in-2026
+/blog/why-ai-keeps-recommending-the-same-apartments-in-your-market-and-how-to-break-into-the-shortlist-in-2026
+/blog/best-multifamily-marketing-strategies-in-2026
+/blog/why-apartment-seo-is-different-in-2026-and-why-old-tactics-are-fading
+/blog/why-apartment-communities-need-a-google-maps-strategy-in-2026
+/blog/how-new-apartment-communities-get-found-by-ai-before-they-open-in-2026
+/blog/how-review-sentiment-impacts-apartment-leasing-in-2026
+/company
+/contact
+/cuvee
+/cuvee-blog/blog-post-title-two-zwsfl
+/enterprise
+/hospitality
+/locallift
+/medical
+/multifamily
+/multifamily-marketing-agency
+/new-page
+/research
+/research-insights
+/services-1
+/2026-multifamily-visibility-report
