@@ -37,11 +37,11 @@ var page=(location.pathname.split("/").pop()||"index").replace(/\.html$/,"");
 if(/^(contact|thank-you)$/.test(page))return;
 try{if(sessionStorage.getItem("sdmPopOff")==="1")return}catch(e){}
 var V=/real-estate/.test(page)?"real-estate":/multifamily|locallift|apartment/.test(page)?"multifamily":"home";
-var icon=(PROD?"/":BASE)+"icon-192.png",go=PROD?"/contact":BASE+"contact.html";
+var icon=(PROD?"/":BASE)+"logo.png",go=PROD?"/contact":BASE+"contact.html";
 var css=".sdmp{position:fixed;left:calc(20px + env(safe-area-inset-left,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:min(360px,calc(100vw - 32px));background:#0A0914;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:14px 42px 14px 14px;display:flex;gap:12px;align-items:center;box-shadow:0 20px 50px rgba(0,0,0,.45);transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s;font-family:var(--body,system-ui,sans-serif)}"+
 ".sdmp.out{transform:translateY(24px);opacity:0;pointer-events:none}.sdmp.go{cursor:pointer}.sdmp.go small{color:#F0566A}"+
-".sdmp .pin{width:44px;height:44px;border-radius:50%;overflow:hidden;flex:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);background:#1B1740}"+
-".sdmp .pin img{width:100%;height:100%;display:block;transform:scale(1.18)}"+
+".sdmp .pin{width:64px;height:64px;border-radius:14px;flex:none;background:#14112E;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);display:grid;place-items:center;padding:7px;box-sizing:border-box}"+
+".sdmp .pin img{width:100%;height:100%;display:block;object-fit:contain}"+
 ".sdmp b{display:block;font:600 14px/1.35 var(--body,system-ui,sans-serif)}.sdmp small{display:block;font-size:12px;color:rgba(255,255,255,.55);margin-top:3px}"+
 ".sdmp .st{color:#F5B83D;letter-spacing:1px;margin-right:4px}"+
 ".sdmp .x{position:absolute;top:8px;right:8px;width:30px;height:30px;border:0;border-radius:8px;background:transparent;color:rgba(255,255,255,.55);font-size:18px;cursor:pointer}"+
