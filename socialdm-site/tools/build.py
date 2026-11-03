@@ -391,6 +391,16 @@ if PROD:
 /home / 301
 /apartment-seo-blog-hub /blog 301
 /services-1 /multifamily-marketing-agency 301
+/multifamily /multifamily-marketing-agency 301
+/research /research-insights 301
+/company /about 301
+/about-us /about 301
+/contact-us /contact 301
+/services /multifamily-marketing-agency 301
+/real-estate-1 /real-estate 301
+/medical-1 /medical 301
+/hospitality-1 /hospitality 301
+/enterprise-1 /enterprise 301
 /blog/tag/* /blog 301
 /blog/category/* /blog 301
 ''')

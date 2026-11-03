@@ -100,3 +100,7 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 - src/offer.js, appended to dist/chrome.js after pop.js. Centered card over a dimmed page, stays until closed (X, No thanks, click outside, Esc). Opens after 50% scroll or 25 seconds; once per visitor per 30 days, never again after sign up; not on contact, thank-you, privacy, terms. Hides the review popup while open.
 - Fields: first name, city, email, business name, type of business (preselected from the page). Submits to the existing Netlify form "contact" (interest = business type, message = "Free AI visibility report request (website popup). City: X. Page: /path") and to the same Make webhook as contact.html (source=site), and fires GA4 generate_lead. Then shows a Thank you card.
 - Each sign up is a real event: add it to src/activity.json (city and business type, no names) so it shows in the review popup.
+
+## Nov 3 2026: old URL fixes and salon wording
+- Search Console (Windsor searchconsole, last 12 months) showed 3 old Squarespace URLs landing on the 404: /multifamily (270 impressions), /research (17), /company (2). Redirects added in build.py (_redirects) plus common old variants (/about-us, /contact-us, /services, /*-1). Re-run that check after Google recrawls.
+- hair-salon.html: AI chat mockups now say "hair colorist" instead of "balayage" (a client did not know the term); body text explains balayage as hand painted highlights.
