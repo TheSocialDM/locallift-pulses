@@ -143,6 +143,8 @@ def fmt(ms_or_date):
 
 CTA = lambda depth: f'''<section class="wrap"><div class="cta"><div class="eyebrow">Get your visibility plan</div><h2 style="margin-top:16px">See where your community shows up, and where it doesn&rsquo;t.</h2><p>We check Google Search, Google Maps and AI answers for your community and send a clear plan to close the gaps.</p><a class="btn btn-light" href="{link('contact',depth)}">Get your visibility plan</a></div></section>'''
 
+CTA_HUB = lambda depth: f'''<section class="wrap"><div class="cta"><div class="eyebrow">Get your visibility plan</div><h2 style="margin-top:16px">See where you show up, and where you don&rsquo;t.</h2><p>We check Google Search, Google Maps and AI answers for your business and send a clear plan to close the gaps.</p><a class="btn btn-light" href="{link('contact',depth)}">Get your visibility plan</a></div></section>'''
+
 # ---------- collect posts ----------
 posts = []
 for p in d['posts']:
@@ -161,13 +163,13 @@ for p in d['posts']:
     posts.append(dict(slug=slug, title=undash(html.unescape(p['title']).replace('\xa0',' ')), seoTitle=undash(sd.get('seoTitle') or ''), seoDesc=undash(sd.get('seoDescription') or ''),
         excerpt=undash(ex), body=body, iso=iso, nice=nice, year=yr, hero=hero, author=p.get('author') or 'The SocialDM', updated=fmt(p['updatedOn'])[0], new=False, faq=[], alt=undash(p['title'])))
 TODAY = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=7)).strftime('%Y-%m-%d')   # Phoenix date, no DST
-VERTICALS = {'multifamily': ('Multifamily', 'Multifamily marketing insights', 'How apartment communities get found on Google Search, Google Maps, social and AI answers.'),
-             'real-estate': ('Real Estate', 'Real estate marketing insights', 'How agents and teams build visibility and trust on Google, social and AI answers.'),
-             'medical': ('Medical', 'Medical practice marketing insights', 'How practices become the trusted local choice on Google, Maps and AI answers.'),
-             'med-spa': ('Med Spa', 'Med spa marketing insights', 'How med spas and aesthetic practices get found, trusted and booked on Google, social and AI answers.'),
-             'salon': ('Hair Salons', 'Salon marketing insights', 'How salons and stylists fill their chairs through Google, social and AI answers.'),
-             'hospitality': ('Hospitality', 'Hospitality marketing insights', 'How hotels, restaurants and venues get found and booked through search, Maps and AI.'),
-             'enterprise': ('Enterprise', 'Multi location marketing insights', 'How multi location brands stay consistent and visible in every market.')}
+VERTICALS = {'multifamily': ('Multifamily', 'Multifamily Marketing Insights', 'How apartment communities get found on Google Search, Google Maps, social and AI answers.'),
+             'real-estate': ('Real Estate', 'Real Estate Marketing Insights', 'How agents and teams build visibility and trust on Google, social and AI answers.'),
+             'medical': ('Medical', 'Medical Practice Marketing Insights', 'How practices become the trusted local choice on Google, Maps and AI answers.'),
+             'med-spa': ('Med Spa', 'Med Spa Marketing Insights', 'How med spas and aesthetic practices get found, trusted and booked on Google, social and AI answers.'),
+             'salon': ('Hair Salons', 'Salon Marketing Insights', 'How salons and stylists fill their chairs through Google, social and AI answers.'),
+             'hospitality': ('Hospitality', 'Hospitality Marketing Insights', 'How hotels, restaurants and venues get found and booked through search, Maps and AI.'),
+             'enterprise': ('Enterprise', 'Multi Location Marketing Insights', 'How multi location brands stay consistent and visible in every market.')}
 for _p in posts:
     _p['vertical'] = 'real-estate' if re.search(r'realtor|real estate', _p['title'], re.I) else 'multifamily'
 for f in sorted(glob.glob(NEW + '/*.json')):
@@ -278,7 +280,7 @@ for i, p in enumerate(posts):
 years = sorted({p['year'] for p in posts}, reverse=True)
 grp = ''.join(f'<h2 class="yr" id="y{y}">{y}</h2><div class="posts">' + ''.join(card(p,0) for p in posts[1:] if p['year']==y) + '</div>' for y in years)
 jump = ''.join(f'<a href="#y{y}">{y}</a>' for y in years)
-main = f'''<main class="paper"><section class="hero pg-hero bl-hero"><div class="wrap"><div class="eyebrow">Market Intelligence</div><h1>How renters find <span>apartments now.</span></h1><p>Research and field notes on how apartment communities get discovered across Google Search, Google Maps and AI answers.</p><div class="jump" aria-label="Jump to year">{jump}</div></div></section>
+main = f'''<main class="listing"><section class="hero pg-hero bl-hero"><div class="wrap"><div class="eyebrow">Market Intelligence</div><h1>How customers find <span>you now.</span></h1><p>Research and field notes on how apartment communities, agents, practices, spas, salons and resorts get found and chosen across Google Search, Google Maps, social and AI answers.</p><div class="jump" aria-label="Jump to year">{jump}</div></div></section>
 <section class="wrap bl" aria-label="All articles"><div class="featwrap">{card(posts[0],0,True)}<div class="report"><div><div class="eyebrow">Research</div><h3>The 2026 Multifamily Visibility Report</h3><p>How apartment communities and lease ups are being discovered across social media, Google Search, Google Maps, and AI search.</p></div><a class="btn btn-line" href="{link('2026-multifamily-visibility-report',0)}">Read the report</a></div></div>{grp}</section>{CTA(0)}</main>'''
 topics_present = [v for v in VERTICALS if any(p.get('vertical') == v for p in posts)]
 chips = ''.join(f'<a href="{link("blog/topics/" + v, 0)}">{VERTICALS[v][0]}</a>' for v in topics_present)
@@ -288,10 +290,12 @@ for v in topics_present:
     name, h, sub = VERTICALS[v]
     vp = [p for p in posts if p.get('vertical') == v]
     others = ''.join(f'<a href="{link("blog/topics/" + o, 2)}">{VERTICALS[o][0]}</a>' for o in topics_present if o != v)
-    hub = (f'<main class="paper"><section class="hero pg-hero bl-hero"><div class="wrap"><a class="back" href="{link("blog", 2)}">All articles</a>'
-           f'<div class="eyebrow" style="margin-top:18px">{name}</div><h1>{h.rsplit(" ", 1)[0]} <span>{h.rsplit(" ", 1)[1]}.</span></h1><p>{sub}</p>'
-           f'<div class="jump" aria-label="Other topics">{others}</div></div></section>'
-           f'<section class="wrap bl"><div class="posts">{"".join(card(p, 2) for p in vp)}</div></section>{CTA(2)}</main>')
+    allchips = f'<a href="{link("blog", 2)}">All</a>' + ''.join(f'<a href="{link("blog/topics/" + o, 2)}"' + (' class="on" aria-current="page"' if o == v else '') + f'>{VERTICALS[o][0]}</a>' for o in topics_present)
+    words = h.rsplit(' ', 1)
+    hub = (f'<main class="listing"><section class="hero pg-hero bl-hero"><div class="wrap"><a class="back" href="{link("blog", 2)}">All articles</a>'
+           f'<div class="eyebrow" style="margin-top:18px">{name} &middot; {len(vp)} article{"s" if len(vp) != 1 else ""}</div><h1>{words[0]} <span>{words[1]}.</span></h1><p>{sub}</p>'
+           f'<div class="jump topics" aria-label="Topics">{allchips}</div></div></section>'
+           f'<section class="wrap bl"><div class="posts">{"".join(card(p, 2) for p in vp)}</div></section>{CTA_HUB(2)}</main>')
     open(f'{OUT}/blog/topics/{v}.html', 'w').write(shell(f'{h.title()} | The SocialDM', f'{sub} Articles from The SocialDM.', f'/blog/topics/{v}', 2, hub))
 open(f'{OUT}/blog.html','w').write(shell('Market Intelligence Blog | The SocialDM','Research and field notes from The SocialDM on how renters find apartment communities across Google Search, Google Maps and AI search.','/blog',0,main))
 
