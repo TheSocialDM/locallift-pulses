@@ -16,12 +16,12 @@ const webPage = (p, title, description) => ({'@type': 'WebPage', '@id': u(p) + '
 
 const IND_META = {
   'Multifamily': ['Multifamily Visibility for Apartment Communities', 'Help renters find, understand and tour your apartment communities across Google Search, Google Maps and AI answers, with weekly market and visibility intelligence.', 'Apartment owners and operators'],
-  'Build to rent': ['Build to Rent Marketing and Local Visibility', 'Make your build to rent community the one families find and understand on Google, Google Maps and AI answers, from first phase through lease up.', 'Build to rent owners and operators'],
+  'Build to Rent': ['Build to Rent Marketing and Local Visibility', 'Make your build to rent community the one renters find and understand on Google, Google Maps and AI answers, from first phase through lease up.', 'Build to rent owners and operators'],
   'Medical': ['Local Visibility for Medical Practices', 'Keep your practice hours, locations and reputation accurate on Google, Google Maps and AI answers, so referred patients call you with confidence.', 'Medical practices'],
   'Med Spa': ['Med Spa Marketing and Local Visibility', 'Help first time clients find and trust your med spa across Google Search, Google Maps and AI answers, with daily posts and review responses in your voice.', 'Med spas'],
   'Real Estate': ['Local Visibility for Real Estate Agents', 'Be the agent sellers find and AI assistants name for your neighborhoods, with map rank tracking, daily Google posts and review responses.', 'Real estate agents and teams'],
   'Hair Salons': ['Hair Salon Marketing and Local Visibility', 'Keep your salon in the first look on Google Maps and AI answers, with accurate hours, fresh posts and review responses in your voice.', 'Hair salons'],
-  'Hospitality': ['Hotel and Hospitality Local Visibility', 'Get your hotel named in AI travel answers and seen on Google Maps, with guest review responses and daily posts that keep your property current.', 'Hotels and hospitality businesses'],
+  'Hospitality': ['Hotel and Hospitality Local Visibility', 'Help your hotel get named in AI travel answers and seen on Google Maps, with guest review responses and daily posts that keep your property current.', 'Hotels and hospitality businesses'],
   'Portfolios': ['Portfolio Visibility Reporting for Owners', 'See every property side by side on the same measures, with a weekly score and one recommended move for each property in your portfolio.', 'Property owners and asset managers'],
 };
 

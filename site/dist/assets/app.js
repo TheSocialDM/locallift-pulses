@@ -38,13 +38,13 @@ function Pops({items,run}){
 }
 /* The one real number on these sample panels. Raise it here and every counter follows. */
 const DOORS=7900; /* real door count. The counter ends here, so raising this raises every counter. */
-const DOORS_FAST_TO=DOORS-339; /* quick climb to here, then one door at a time */
+const DOORS_FAST_TO=DOORS-24; /* quick climb to here, then a few final doors */
 const doorStore={v:DOORS,started:false,subs:new Set()};
 const setDoors=v=>{doorStore.v=v;doorStore.subs.forEach(f=>f(v))};
 function startDoors(){
   if(doorStore.started||REDUCED)return;doorStore.started=true;
-  const FROM=7000,DUR=2000;let t0;
-  const step=t=>{t0=t0||t;const k=Math.min(1,(t-t0)/DUR);setDoors(Math.round(FROM+(DOORS_FAST_TO-FROM)*(1-Math.pow(1-k,3))));if(k<1)requestAnimationFrame(step);else{const i=setInterval(()=>{if(doorStore.v>=DOORS){clearInterval(i);return}setDoors(doorStore.v+1)},180)}};
+  const FROM=7400,DUR=1600;let t0;
+  const step=t=>{t0=t0||t;const k=Math.min(1,(t-t0)/DUR);setDoors(Math.round(FROM+(DOORS_FAST_TO-FROM)*(1-Math.pow(1-k,3))));if(k<1)requestAnimationFrame(step);else{const i=setInterval(()=>{if(doorStore.v>=DOORS){clearInterval(i);return}setDoors(Math.min(DOORS,doorStore.v+1))},90)}};
   requestAnimationFrame(step);
 }
 function Doors(){
@@ -57,7 +57,7 @@ function DoorsStat(){
 }
 
 /* ---------- 1. navigation ---------- */
-const NAV=[["Platform","/#platform"],["Industries","/industries/"],["Intelligence","/#intelligence"],["Results","/#results"],["Insights","/#insights"]];
+const NAV=[["Platform","/#platform"],["Industries","/industries/"],["Intelligence","/#intelligence"],["Results","/#results"]];
 function Nav(){
   const[open,setOpen]=useState(false);
   return html`<header className="nav"><div className="wrap">
@@ -157,7 +157,7 @@ function Hero(){
 const RQ=[
  {id:"apt",label:"apartments near me",k:15,p:1.5,n:3,comps:["Sample Community A","Sample Community B","Sample Community C","Sample Community D"]},
  {id:"spa",label:"med spa near me",k:24,p:1.15,n:4,comps:["Sample Med Spa A","Sample Med Spa B","Sample Med Spa C","Sample Med Spa D"]},
- {id:"agent",label:"best realtor near me",k:34,p:1.0,n:6,comps:["Sample Agent A","Sample Agent B","Sample Agent C","Sample Agent D"]},
+ {id:"agent",label:"best real estate agent near me",k:34,p:1.0,n:6,comps:["Sample Agent A","Sample Agent B","Sample Agent C","Sample Agent D"]},
 ];
 const MW=800,MH=560,PX=400,PY=280;
 function ReachMap(){
@@ -169,7 +169,7 @@ function ReachMap(){
   const shown=pts.filter(p=>p.x>view.x+16&&p.x<view.x+view.w-16);
   const ranked=shown.map(p=>{const v=Math.round(1+q.k*Math.pow(p.d,q.p)+(p.noise-.5)*q.n*2);return{...p,rank:Math.max(1,v)}});
   const active=ranked.find(p=>p.x===(sel&&sel.x)&&p.y===(sel&&sel.y))||ranked.reduce((a,b)=>Math.hypot(a.x-560,a.y-190)<Math.hypot(b.x-560,b.y-190)?a:b);
-  const top3=ranked.filter(p=>p.rank<=3).length,top10=ranked.filter(p=>p.rank>3&&p.rank<=10).length,missing=ranked.filter(p=>p.rank>20).length;
+  const top3=ranked.filter(p=>p.rank<=3).length,top10=ranked.filter(p=>p.rank>3&&p.rank<=10).length,missing=ranked.filter(p=>p.rank>10).length;
   const list=useMemo(()=>{const off=Math.floor(active.noise*4),c=[0,1,2,3].map(i=>q.comps[(i+off)%4]),out=[];let k=0;for(let pos=1;pos<=3;pos++){if(pos===active.rank)out.push({pos,name:"Your business",you:true});else out.push({pos,name:c[k++]})}return out},[active,q]);
   const fill=r=>r<=3?"#E22319":r<=10?"#141414":"#FFFFFF",txt=r=>r<=10?"#FFFFFF":"#595959";
   return html`<section className="band white" id="map"><div className="wrap">
@@ -206,7 +206,7 @@ function ReachMap(){
         <div className="tally">
           <div><strong>${top3}</strong><span>points in the top 3</span></div>
           <div><strong>${top10}</strong><span>points ranked 4 to 10</span></div>
-          <div><strong>${missing}</strong><span>points beyond 20</span></div>
+          <div><strong>${missing}</strong><span>points ranked 11 or lower</span></div>
         </div>
         <div className="legend"><span><i style=${{background:'#E22319'}}></i>Top 3</span><span><i style=${{background:'#141414'}}></i>4 to 10</span><span><i style=${{background:'#fff',border:'1px solid #B8B8B8'}}></i>11 and beyond</span></div>
         <div className="sample">Illustrative sample. Not client data.</div>
@@ -311,14 +311,14 @@ function LiftChart(){
 const TOOLS=[
  {n:"Weekly Pulse",c:"Fridays",d:"One page on what changed across Search, Maps and AI, plus one recommended next step.",b:()=>html`<div><${Rows} rows=${[["Search","More people found you for two local phrases","Up"],["Maps","Stronger on the east side, softer downtown","Mixed"],["AI answers","Named in one more answer this week","Up"]]}/><div className="next"><small>This week's one next step</small>Add your current offer to your Google profile before the weekend.</div></div>`},
  {n:"Lift Score",c:"Weekly",d:"A single number that shows whether you are getting easier to find.",b:()=>html`<div className="score"><div className="score-n">68</div><${LiftChart}/></div>`},
- {n:"AI Shortlist",c:"Weekly",d:"Whether AI assistants recommend you, and who they suggest instead.",b:()=>html`<${Rows} rows=${[["Who should I try near me?","Competitor A, Competitor B","Not named","flag"],["Best option for families?","You, Competitor C","Named","good"],["Who has the best reviews?","Competitor B, Competitor A","Not named","flag"],["Who is closest to downtown?","You, Competitor A","Named","good"]]}/>`},
- {n:"Map Reach",c:"Weekly",d:"Google Maps rank across the surrounding neighborhood, not only from your own address.",b:()=>html`<div><div style=${{display:'grid',gridTemplateColumns:'repeat(9,minmax(0,1fr))',gap:'4px',maxWidth:'460px'}}>${Array.from({length:45}).map((_,i)=>{const cx=(i%9)-4,cy=Math.floor(i/9)-2,d=Math.hypot(cx/4,cy/2),r=Math.max(1,Math.round(1+d*d*14+((i*7)%5)-1));return html`<div key=${i} style=${{aspectRatio:'1',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'var(--mono)',fontSize:'12px',borderRadius:'50%',background:r<=3?'#E22319':r<=10?'#2A2A2A':'transparent',border:r>10?'1px solid #2A2A2A':'0',color:r>10?'rgba(255,255,255,.72)':'#fff'}}>${r}</div>`})}</div><a href="/#map" style=${{display:'inline-block',marginTop:'16px',fontSize:'15px'}}>Open the full map above</a></div>`},
+ {n:"AI Shortlist",c:"Weekly",d:"Whether AI assistants recommend you, and who they suggest instead.",b:()=>html`<${Rows} rows=${[["Who should I try near me?","Competitor A, Competitor B","Not named","flag"],["Best value nearby?","You, Competitor C","Named","good"],["Who has the best reviews?","Competitor B, Competitor A","Not named","flag"],["Who is closest to downtown?","You, Competitor A","Named","good"]]}/>`},
+ {n:"Map Reach",c:"Weekly",d:"Google Maps rank across the surrounding neighborhood, not only from your own address.",b:(o={})=>html`<div><div style=${{display:'grid',gridTemplateColumns:'repeat(9,minmax(0,1fr))',gap:'4px',maxWidth:'460px'}}>${Array.from({length:45}).map((_,i)=>{const cx=(i%9)-4,cy=Math.floor(i/9)-2,d=Math.hypot(cx/4,cy/2),r=Math.max(1,Math.round(1+d*d*14+((i*7)%5)-1));return html`<div key=${i} style=${{aspectRatio:'1',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'var(--mono)',fontSize:'12px',borderRadius:'50%',background:r<=3?'#E22319':r<=10?'#2A2A2A':'transparent',border:r>10?'1px solid #2A2A2A':'0',color:r>10?'rgba(255,255,255,.72)':'#fff'}}>${r}</div>`})}</div>${o.ind?null:html`<a href="#map" style=${{display:'inline-block',marginTop:'16px',fontSize:'15px'}}>Open the full map above</a>`}</div>`},
  {n:"Site Read",c:"Weekly",d:"Checks that Google and AI tools describe your business, your pricing and your specials accurately.",b:()=>html`<${Rows} rows=${[["Hours","Website and Google profile agree","Match","good"],["Current offer","Website shows it, Google profile does not","Fix","flag"],["Pricing","AI answer quotes last season's price","Fix","flag"],["Address and phone","Consistent everywhere checked","Match","good"]]}/>`},
  {n:"Market Survey",c:"Sundays",d:"Tracks what your competitors are doing in your market.",b:()=>html`<${Rows} rows=${[["Competitor A","New offer started this week","New","flag"],["Competitor B","Prices down from last survey","Changed","flag"],["Competitor C","No change since last survey","Steady"],["Competitor D","Added a new listing photo set","Changed"]]}/>`},
  {n:"Snapshot",c:"Monthly",d:"Your monthly Google report: searches, views, calls, direction requests and website clicks.",b:()=>html`<div className="tiles">${[["1,240","Searches"],["3,180","Views"],["46","Calls"],["88","Direction requests"],["212","Website clicks"]].map(t=>html`<div className="tile" key=${t[1]}><strong>${t[0]}</strong><span>${t[1]}</span></div>`)}</div>`},
  {n:"ClearView",c:"Monthly",d:"Your monthly social media report: what posted, what performed and what changes next.",b:()=>html`<${Rows} rows=${[["What posted","24 posts across your social channels","24"],["What performed","Neighborhood reels outperformed photo posts","Reels"],["What changes","More neighborhood content next month","Next"]]}/>`},
  {n:"Review Desk",c:"Ongoing",d:"Google review responses written in your voice, with fair housing and privacy in mind.",b:()=>html`<div><div className="quote"><small>Sample review, five stars</small>The team made the whole process easy and answered every question.</div><div className="quote"><small>Sample response, in your voice</small>Thank you for sharing this. We are glad the process felt easy, and we will pass your note along to the team.</div></div>`},
- {n:"Daily Presence",c:"7 days a week",d:"Daily Google Business Profile posts written for your business and your neighborhood.",b:()=>html`<div className="week">${[["Mon","Neighborhood guide"],["Tue","Current offer"],["Wed","Team spotlight"],["Thu","Local event"],["Fri","Weekend idea"],["Sat","Customer favorite"],["Sun","Week ahead"]].map(d=>html`<div className="day" key=${d[0]}><b>${d[0]}</b><span>${d[1]}</span><i></i></div>`)}</div>`},
+ {n:"Daily Presence",c:"7 days a week",d:"Daily posts on your Google profile, written for your business and your neighborhood.",b:()=>html`<div className="week">${[["Mon","Neighborhood guide"],["Tue","Current offer"],["Wed","Team spotlight"],["Thu","Local event"],["Fri","Weekend idea"],["Sat","Customer favorite"],["Sun","Week ahead"]].map(d=>html`<div className="day" key=${d[0]}><b>${d[0]}</b><span>${d[1]}</span><i></i></div>`)}</div>`},
 ];
 function Console({tool,setTool}){
   const T=TOOLS.find(t=>t.n===tool);
@@ -377,8 +377,8 @@ function TypeLine({text,run}){
   useEffect(()=>{if(n>=text.length)return;const t=setTimeout(()=>setN(n+1),22);return()=>clearTimeout(t)},[n,text]);
   return html`<span>${text.slice(0,n)}${n<text.length?html`<span className="caret"></span>`:null}</span>`;
 }
-function Bars({data,labels,run,name,accentLast=true,height=190}){
-  const W=680,H=height,L=8,R=8,T=26,B=24;const[h,setH]=useState(data.length-1);
+function Bars({data,labels,run,name,accentLast=true,height=190,hi}){
+  const W=680,H=height,L=8,R=8,T=26,B=24;const[h,setH]=useState(hi==null?data.length-1:hi);
   const max=Math.max(...data)*1.08,bw=(W-L-R)/data.length;
   return html`<svg viewBox=${`0 0 ${W} ${H}`} role="img" aria-label=${name+' sample values '+data.join(', ')}>
     <line x1=${L} x2=${W-R} y1=${H-B} y2=${H-B} style=${{stroke:'var(--line)'}}/>
@@ -431,7 +431,7 @@ const RTABS=[
  {t:"Market Survey",pops:["Competitor B has a new special","Competitor D is the lowest effective rent","You are above the market on one beds"],body:(run)=>html`<div>
    <div className="rw-head"><h3>One bedroom rent against your competitors</h3><span className="sample">Every Sunday</span></div>
    <div className="viz mk">
-     <div className="mk-row h"><span>Community</span><span className="tk"><span className="axis"><span>$1,500</span><span>$1,600</span><span>$1,700</span><span>$1,800</span></span></span><b>Asking</b><b>Effective</b><b>Conc.</b></div>
+     <div className="mk-row h"><span>Community</span><span className="tk"><span className="axis"><span>$1,500</span><span>$1,600</span><span>$1,700</span><span>$1,800</span></span></span><b>Asking</b><b>Effective</b><b>Concession</b></div>
      ${COMPS.map((c,i)=>html`<div key=${c[0]} className=${'mk-row'+(c[3]?' you':'')}>
        <span>${c[0]}</span>
        <span className="trk"><span className=${'ln'+(run?' grow-x':'')} style=${{left:pct(c[2])+'%',width:(pct(c[1])-pct(c[2]))+'%',animationDelay:i*90+'ms'}}></span><span className="dot ask" style=${{left:pct(c[1])+'%'}}></span><span className="dot" style=${{left:pct(c[2])+'%'}}></span></span>
@@ -441,7 +441,7 @@ const RTABS=[
    <div className="legend" style=${{marginTop:'12px'}}><span><i style=${{background:'var(--white)',border:'2px solid var(--ink)'}}></i>Asking rent</span><span><i style=${{background:'var(--ink)'}}></i>Effective rent</span></div>
    <div className="rw-so"><b>So what:</b> <${TypeLine} run=${run} text=${'your effective rent is $'+(COMPS[0][2]-MKT)+' above the $'+MKT.toLocaleString('en-US')+' competitor average on one beds.'}/></div>
  </div>`},
- {t:"AI Competition",pops:["Competitor A named in 14 answers","You were added to one more answer","Competitor C dropped out of two answers"],body:(run)=>html`<div>
+ {t:"AI Shortlist",pops:["Competitor A named in 14 answers","You were added to one more answer","Competitor C dropped out of two answers"],body:(run)=>html`<div>
    <div className="rw-head"><h3>Who AI recommends instead of you</h3><span className="sample">Weekly</span></div>
    <div className="viz ai-bars">
      ${AIB.map((b,i)=>html`<div key=${b[0]} className=${'ai-b'+(b[2]?' you':'')}><span>${b[0]}</span><div className="tr"><div className=${'fl'+(run?' grow-x':'')} style=${{width:b[1]/24*100+'%',animationDelay:i*90+'ms'}}></div></div><b>${b[1]} of 24</b></div>`)}
@@ -454,7 +454,7 @@ const RTABS=[
  {t:"The Brief",pops:["Short enough to forward from a phone"],body:(run)=>html`<div>
    <div className="rw-head"><h3>What to tell your team</h3><span className="sample">Top of the Weekly Pulse</span></div>
    <div className="brief" key=${run?'p':'r'}>
-     <small>Sample Community, Cedar Mesa</small>
+     <small>Sample Community, Quillmere</small>
      <ol>
        <li>Actions on Google are up 11% this week.</li>
        <li style=${{animationDelay:'.2s'}}>Competitor B's one bed effective rent now sits $20 below yours.</li>
@@ -466,10 +466,10 @@ const RTABS=[
 ];
 
 function useTick(ms,on){const[t,setT]=useState(0);useEffect(()=>{if(!on||REDUCED)return;const i=setInterval(()=>setT(x=>x+1),ms);return()=>clearInterval(i)},[ms,on]);return t}
-const FUNNEL=[["Views on Google",1180],["Actions on Google",412],["Website visits",212],["Leads",12]];
+const FUNNEL=[["Views on Google",1180],["Actions on Google",412],["Website visits",212],["Leads",10]];
 const RACE=[["You",128,"+5",1],["Competitor A",164,"+8"],["Competitor B",97,"+2"],["Competitor C",61,"+1"]];
 const MOVES=[["Competitor B started a new special","New"],["Competitor A posted on Google","Today"],["Competitor D lowered one bed rent","Down"],["Competitor C added new photos","New"],["Competitor A gained eight reviews","Up"]];
-const CITIES=[["Cedar Mesa",44],["Harbor Vale",21],["Lakemont",15],["Sunridge",11],["Bellpoint",9]];
+const CITIES=[["Quillmere",44],["Fernhallow",21],["Ostrabay",15],["Calderwick",11],["Brindlecrest",9]];
 const ASKS=[["Which apartments near downtown allow large dogs?",["Competitor A","Your community","Competitor C"]],["Who has the best recent reviews nearby?",["Competitor B","Competitor A"]],["What is the newest community in this area?",["Your community","Competitor B"]]];
 function AskTile({run,vis}){
   const t=useTick(5600,vis);const a=ASKS[t%ASKS.length];
@@ -505,7 +505,7 @@ const Mini=({d,c="#E22319"})=>{const W=320,H=84,min=Math.min(...d)-3,max=Math.ma
 const PEEKS=[
  {t:"Weekly Pulse",when:"Every Friday",body:()=>html`<div><div className="big">68</div><div className="small">Lift Score, up 4 this week</div><${Mini} d=${PULSE}/><div className="pr you" style=${{marginTop:'8px',gridTemplateColumns:'1fr'}}><span>This week's one next step: ask for five new reviews.</span></div></div>`},
  {t:"Market Survey",when:"Every Sunday",body:()=>html`<div><div className="small" style=${{marginTop:'14px',marginBottom:'6px'}}>One bedroom effective rent</div>${COMPS.map(c=>html`<div key=${c[0]} className=${'pr'+(c[3]?' you':'')}><span>${c[3]?'You':c[0]}</span><div className="t"><div className="f" style=${{width:(c[2]-1400)/300*100+'%'}}></div></div><b>$${c[2].toLocaleString('en-US')}</b></div>`)}<div className="pr you" style=${{marginTop:'8px',gridTemplateColumns:'1fr'}}><span>You sit $${COMPS[0][2]-MKT} above the competitor average.</span></div></div>`},
- {t:"AI Competition",when:"Weekly",body:()=>html`<div><div className="big">9<span style=${{fontSize:'26px',letterSpacing:'-.02em'}}> of 24</span></div><div className="small">AI answers that name you</div><div style=${{marginTop:'12px'}}>${AIB.slice(0,4).map(c=>html`<div key=${c[0]} className=${'pr'+(c[2]?' you':'')}><span>${c[0]}</span><div className="t"><div className="f" style=${{width:c[1]/24*100+'%'}}></div></div><b>${c[1]}</b></div>`)}</div></div>`},
+ {t:"AI Shortlist",when:"Weekly",body:()=>html`<div><div className="big">9<span style=${{fontSize:'26px',letterSpacing:'-.02em'}}> of 24</span></div><div className="small">AI answers that name you</div><div style=${{marginTop:'12px'}}>${AIB.slice(0,4).map(c=>html`<div key=${c[0]} className=${'pr'+(c[2]?' you':'')}><span>${c[0]}</span><div className="t"><div className="f" style=${{width:c[1]/24*100+'%'}}></div></div><b>${c[1]}</b></div>`)}</div></div>`},
  {t:"LocalLift Lens",when:"Every Friday",body:()=>html`<div><div className="big">38%</div><div className="small">of leads came from your Google listing</div><div style=${{marginTop:'12px'}}>${SHARE.map((c,i)=>html`<div key=${c[0]} className=${'pr'+(i===0?' you':'')}><span>${c[0]}</span><div className="t"><div className="f" style=${{width:c[1]/38*100+'%'}}></div></div><b>${c[1]}%</b></div>`)}</div></div>`},
 ];
 const FAN=[{x:0,y:0,r:0,s:1,z:4,b:1},{x:62,y:-6,r:5,s:.95,z:3,b:.72},{x:-62,y:-2,r:-5,s:.93,z:2,b:.62},{x:112,y:6,r:10,s:.88,z:1,b:.45}];
@@ -523,7 +523,7 @@ function SneakPeek(){
     <div className="peek" ref=${ref}>
       ${PEEKS.map((p,i)=>{const pos=(i-a+PEEKS.length)%PEEKS.length,f=seen||REDUCED?FAN[pos]:{x:0,y:30,r:0,s:.94,z:FAN[pos].z,b:FAN[pos].b};return html`<button key=${p.t} className="paper" aria-label=${'Show the '+p.t+' sample'} onClick=${()=>go(i)} style=${{transform:`translate(${f.x*k}px,${f.y}px) rotate(${f.r*k}deg) scale(${f.s})`,zIndex:f.z,filter:`brightness(${f.b})`,transitionDelay:seen?'0ms':pos*120+'ms'}}>
         <div className="paper-wrap"><span className="paper-top"><img src=${LOGO_WHITE} alt=""/><span>${p.when}</span></span>
-        <div className="paper-in"><h3>${p.t}</h3><div className="sub">Sample Community, Cedar Mesa</div>${p.body()}</div>
+        <div className="paper-in"><h3>${p.t}</h3><div className="sub">Sample Community, Quillmere</div>${p.body()}</div>
         <${Ghost}/>
         <div className="paper-tag"><span>Fake numbers</span><b>Full report is private</b></div></div>
       </button>`})}
@@ -538,7 +538,7 @@ function Reports(){
     <${SneakPeek}/>
     <h3 className="bento-h">Open one up.</h3>
     <div className="rw" ref=${ref} style=${{marginTop:'24px'}}>
-      <div className="rw-bar"><span>Sample Community / Cedar Mesa</span><span>Fake numbers. Fictional city. Not client data.</span></div>
+      <div className="rw-bar"><span>Sample Community / Quillmere</span><span>Fake numbers. Fictional city. Not client data.</span></div>
       <div className="rw-tabs" role="group" aria-label="Sample reports">${RTABS.map((t,k)=>html`<button key=${t.t} aria-pressed=${k===i} onClick=${()=>{setI(k);setAuto(false)}}>${t.t}</button>`)}</div>
       <div className="rw-body">
                 <div className="fade" key=${i}>
@@ -554,13 +554,13 @@ function Reports(){
 /* ---------- 7. industries ---------- */
 const M6=["Jun","Jul","Aug","Sep","Oct","Nov"];
 const IND=[
- {t:"Multifamily",who:"A renter relocating for a new job, with two weeks to decide.",s:["Searches for apartments near downtown with a pool and a move in special.","Opens Google Maps and compares the closest communities by recent reviews.","Asks an AI assistant which newer communities near the office allow large dogs.","Books tours at the two names that appeared everywhere."],tools:["Map Reach","AI Shortlist","Market Survey","Site Read"],city:"Sample community, Cedar Mesa",metric:"Direction requests from Google",d:[62,71,68,84,92,108],pops:["Up in the last two months","A new map point reached the top 3"],stats:[["5","sample competitors tracked"],["11","sample AI answers naming you"]],doors:true},
- {t:"Build to rent",who:"A family that wants a house and a yard without buying one.",s:["Searches for build to rent homes near well regarded schools.","Checks Google Maps for commute, nearby parks and community photos.","Asks an AI assistant how build to rent differs from a house rental nearby.","Tours the community that explained itself clearly."],tools:["AI Shortlist","Site Read","Map Reach","Daily Presence"],city:"Sample community, Harbor Vale",metric:"Website clicks from Google",d:[44,49,57,55,66,73],pops:["Named for build to rent in a new AI answer","Website clicks at a six month high"],big:["73","sample website clicks in November"],stats:[["7","sample posts a week on Google"],["2","sample site details corrected"]]},
- {t:"Medical",who:"A new patient comparing practices after a referral.",s:["Searches for the practice by name, then for a specialist near home.","Compares ratings, hours and location on Google Maps.","Asks an AI assistant who is well reviewed for that specialty nearby.","Calls the practice whose details all match and feel current."],tools:["Site Read","Review Desk","AI Shortlist","Map Reach"],city:"Sample practice, Lakemont",metric:"Calls from Google",d:[31,34,33,41,46,52],pops:["Calls up again this month","Hours now match everywhere checked"],big:["52","sample calls from Google in November"],stats:[["4.9","sample Google rating"],["6","sample reviews answered this month"]]},
- {t:"Med Spa",who:"Someone choosing a first treatment, and reading everything first.",s:["Searches for a med spa open near work.","Scans Google Maps photos, reviews and how the owner answers them.","Asks an AI assistant which local med spa has the best reputation.","Books a consult at the name that looks established."],tools:["AI Shortlist","Review Desk","Daily Presence","Map Reach"],city:"Sample med spa, Juniper Falls",metric:"Website clicks from Google",d:[58,63,74,72,88,97],pops:["Your med spa appeared in a new AI answer","A new review was answered"],big:["97","sample website clicks in November"],stats:[["5 of 12","sample AI answers naming you"],["30","sample Google posts this month"]]},
- {t:"Real Estate",who:"A homeowner getting ready to sell, looking for the right agent.",s:["Searches for the top listing agent in their neighborhood.","Reads Google reviews and looks at recent activity on each profile.","Asks an AI assistant who knows that part of town best.","Calls the agent who looks established and current."],tools:["AI Shortlist","Map Reach","Review Desk","Daily Presence"],city:"Sample agent, Sunridge",metric:"Profile views on Google",d:[120,134,129,151,168,186],pops:["Profile views keep climbing","Named for a new neighborhood"],big:["186","sample profile views in November"],stats:[["3","sample neighborhoods in the top 3"],["12","sample Google posts this month"]]},
- {t:"Hair Salons",who:"A neighbor who just moved in and needs a new salon by Saturday.",s:["Searches for a hair salon open Saturday near home.","Opens Google Maps and checks photos, hours and how owners answer reviews.","Asks an AI assistant which salon is best with curly hair nearby.","Books the salon that looked open, active and easy to trust."],tools:["Map Reach","Review Desk","Daily Presence","Snapshot"],city:"Sample salon, Old Mill",metric:"Direction requests from Google",d:[26,29,35,33,41,47],pops:["Saturday searches are finding you","New photos are live on Google"],big:["47","sample direction requests in November"],stats:[["4.8","sample Google rating"],["9","sample reviews answered this month"]]},
- {t:"Hospitality",who:"A traveler planning a weekend in a city they barely know.",s:["Searches for a boutique hotel near the old town with a rooftop.","Uses Google Maps to judge the walk to restaurants and sights.","Asks an AI assistant which stay fits a quiet anniversary trip.","Books the place that kept appearing, with recent photos and replies."],tools:["AI Shortlist","Review Desk","Snapshot","Daily Presence"],city:"Sample hotel, Bellpoint",metric:"Website clicks from Google",d:[140,152,171,163,188,204],pops:["Weekend searches are up","AI answer named your rooftop"],big:["204","sample website clicks in November"],stats:[["2 of 8","sample AI answers naming you"],["14","sample reviews answered this month"]]},
+ {t:"Multifamily",who:"A renter relocating for a new job, with two weeks to decide.",s:["Searches for apartments near downtown with a pool and a move in special.","Opens Google Maps and compares the closest communities by recent reviews.","Asks an AI assistant which newer communities near the office allow large dogs.","Books tours at the two names that appeared everywhere."],tools:["Map Reach","AI Shortlist","Market Survey","Site Read"],city:"Sample community, Quillmere",metric:"Direction requests from Google",d:[62,71,68,84,92,108],pops:["Up in the last two months","A new map point reached the top 3"],stats:[["5","sample competitors tracked"],["9 of 24","sample AI answers naming you"]],doors:true},
+ {t:"Build to Rent",who:"A renter who wants a house and a yard without buying one.",s:["Searches for build to rent homes with a yard near work.","Checks Google Maps for commute, nearby parks and community photos.","Asks an AI assistant how build to rent differs from a house rental nearby.","Tours the community that explained itself clearly."],tools:["AI Shortlist","Site Read","Map Reach","Daily Presence"],city:"Sample community, Fernhallow",metric:"Website clicks from Google",d:[44,49,57,55,66,73],pops:["Named for build to rent in a new AI answer","Website clicks at a six month high"],big:["73","sample website clicks in November"],stats:[["7","sample posts a week on Google"],["2","sample site details corrected"]]},
+ {t:"Medical",who:"A new patient comparing practices after a referral.",s:["Searches for the practice by name, then for a specialist near home.","Compares ratings, hours and location on Google Maps.","Asks an AI assistant who is well reviewed for that specialty nearby.","Calls the practice whose details all match and feel current."],tools:["Site Read","Review Desk","AI Shortlist","Map Reach"],city:"Sample practice, Ostrabay",metric:"Calls from Google",d:[31,34,33,41,46,52],pops:["Calls up again this month","Hours now match everywhere checked"],big:["52","sample calls from Google in November"],stats:[["4.9","sample Google rating"],["6","sample reviews answered this month"]]},
+ {t:"Med Spa",who:"Someone choosing a first treatment, and reading everything first.",s:["Searches for a med spa open near work.","Scans Google Maps photos, reviews and how the owner answers them.","Asks an AI assistant which local med spa has the best reputation.","Books a consult at the name that looks established."],tools:["AI Shortlist","Review Desk","Daily Presence","Map Reach"],city:"Sample med spa, Marrowvale",metric:"Website clicks from Google",d:[58,63,74,72,88,97],pops:["Your med spa appeared in a new AI answer","A new review was answered"],big:["97","sample website clicks in November"],stats:[["5 of 12","sample AI answers naming you"],["30","sample Google posts this month"]]},
+ {t:"Real Estate",who:"A homeowner getting ready to sell, looking for the right agent.",s:["Searches for the top listing agent in their neighborhood.","Reads Google reviews and looks at recent activity on each profile.","Asks an AI assistant who knows that part of town best.","Calls the agent who looks established and current."],tools:["AI Shortlist","Map Reach","Review Desk","Daily Presence"],city:"Sample agent, Calderwick",metric:"Profile views on Google",d:[120,134,129,151,168,186],pops:["Profile views keep climbing","Named for a new neighborhood"],big:["186","sample profile views in November"],stats:[["3","sample neighborhoods in the top 3"],["12","sample Google posts this month"]]},
+ {t:"Hair Salons",who:"A neighbor who just moved in and needs a new salon by Saturday.",s:["Searches for a hair salon open Saturday near home.","Opens Google Maps and checks photos, hours and how owners answer reviews.","Asks an AI assistant which salon is best with curly hair nearby.","Books the salon that looked open, active and easy to trust."],tools:["Map Reach","Review Desk","Daily Presence","Snapshot"],city:"Sample salon, Wrenhollow",metric:"Direction requests from Google",d:[26,29,35,33,41,47],pops:["Saturday searches are finding you","New photos are live on Google"],big:["47","sample direction requests in November"],stats:[["4.8","sample Google rating"],["9","sample reviews answered this month"]]},
+ {t:"Hospitality",who:"A traveler planning a weekend in a city they barely know.",s:["Searches for a boutique hotel near the old town with a rooftop.","Uses Google Maps to judge the walk to restaurants and sights.","Asks an AI assistant which stay fits a quiet anniversary trip.","Books the place that kept appearing, with recent photos and replies."],tools:["AI Shortlist","Review Desk","Snapshot","Daily Presence"],city:"Sample hotel, Brindlecrest",metric:"Website clicks from Google",d:[140,152,171,163,188,204],pops:["Weekend searches are up","AI answer named your rooftop"],big:["204","sample website clicks in November"],stats:[["2 of 8","sample AI answers naming you"],["14","sample reviews answered this month"]]},
  {t:"Portfolios",who:"An owner who needs one clear read on every property at once.",labels:["Portfolio view","Market","AI answers","Decision"],s:["Sees every property side by side, with the same measures on each.","Checks which properties are falling behind their local competitors.","Sees which properties AI assistants name, and which they skip.","Puts attention where one recommended move will count most."],tools:["Lift Score","Weekly Pulse","Market Survey","AI Shortlist"],city:"Sample portfolio, six properties",metric:"Lift Score by property",d:[58,74,63,81,49,68],labels2:["P1","P2","P3","P4","P5","P6"],pops:["Property 4 leads the portfolio","Property 5 needs attention first"],big:["66","sample portfolio average Lift Score"],stats:[["6","sample properties compared"],["1","recommended move per property"]]},
 ];
 const JLABEL=["Search","Google Maps","AI answer","Decision"];
@@ -580,7 +580,7 @@ function Industries(){
       </div>
       <div className="ia">
         <div>
-          ${d.doors?html`<div className="ia-city">Our real multifamily portfolio</div><div className="ia-big"><i className="live-dot"></i><span><${Doors}/>+</span></div><div className="ia-sub">doors and counting, nationwide</div>`
+          ${d.doors?html`<div className="ia-city">Multifamily doors we work across</div><div className="ia-big"><i className="live-dot"></i><span><${Doors}/>+</span></div><div className="ia-sub">doors and counting</div>`
             :html`<div className="ia-big"><${Count} to=${+d.big[0]} run=${seen}/></div><div className="ia-sub">${d.big[1]}</div>`}
           ${d.doors?html`<div className="ia-city" style=${{margin:'20px 0 -6px'}}>Sample figures</div>`:null}<div className="ia-stats">${d.stats.map(s=>html`<div key=${s[1]}><strong>${s[0]}</strong><span>${s[1]}</span></div>`)}</div>
         </div>
@@ -696,11 +696,12 @@ function App(){
 }
 
 /* ---------- industry pages ---------- */
-const IND_SLUG={"Multifamily":"multifamily","Build to rent":"build-to-rent","Medical":"medical","Med Spa":"med-spa","Real Estate":"real-estate","Hair Salons":"hair-salons","Hospitality":"hospitality","Portfolios":"portfolios"};
+const IND_SLUG={"Multifamily":"multifamily","Build to Rent":"build-to-rent","Medical":"medical","Med Spa":"med-spa","Real Estate":"real-estate","Hair Salons":"hair-salons","Hospitality":"hospitality","Portfolios":"portfolios"};
 function indHref(x){return '/industries/'+IND_SLUG[x.t]+'/'}
 
 const IND_COPY={
  "Multifamily":{
+  plural:"apartment communities",sample:"Sample community",
   h1:["Renters decide who to tour ","before they call."],
   sub:"LocalLift shows how your communities appear when renters search Google, scan Google Maps and ask AI assistants, then keeps every property visible, accurate and chosen through lease up and beyond.",
   card:"Communities, lease ups and stabilized assets.",
@@ -713,23 +714,25 @@ const IND_COPY={
    ["Site Read","Checks that your pricing, specials and pet policy read the same on your website, your Google profile and in AI answers."],
    ["Review Desk","Resident review responses in your voice, written with fair housing in mind."],
    ["Daily Presence","A Google post every day about your community, your neighborhood and what is happening this week."]]},
- "Build to rent":{
-  h1:["Families want the yard. ","Help them find yours."],
-  sub:"Build to rent is still new to many searchers. LocalLift makes sure Google and AI assistants explain your community clearly, so families who want a house without buying one find you first.",
-  card:"Single family rental communities, from first phase to full.",
-  pains:[["The category needs explaining.","Many families do not search for build to rent by name. They search for homes for rent with a yard, and your community has to show up for that."],
+ "Build to Rent":{
+  plural:"build to rent communities",sample:"Sample build to rent community",
+  h1:["Renters want the yard. ","Help them find yours."],
+  sub:"Build to rent is still new to many searchers. LocalLift helps Google and AI assistants explain your community clearly, so renters who want a house without buying one find you.",
+  card:"Single family rental communities, from first phase to fully leased.",
+  pains:[["The category needs explaining.","Many renters do not search for build to rent by name. They search for homes for rent with a yard, and your community has to show up for that."],
    ["AI answers fill the gap.","When someone asks how build to rent differs from renting a house, the answer shapes who they tour. You want to be the example."],
-   ["Lease up moves fast.","New phases, new pricing and new amenities change often. Every listing has to keep up, or families see last month's story."]],
-  does:[["AI Shortlist","Weekly checks on whether AI assistants name your community for the questions families actually ask."],
+   ["Lease up moves fast.","New phases, new pricing and new amenities change often. Every listing has to keep up, or renters see last month's story."]],
+  does:[["AI Shortlist","Weekly checks on whether AI assistants name your community for the questions renters actually ask."],
    ["Site Read","Makes sure phases, pricing and amenities read the same on your website, your Google profile and in AI answers."],
-   ["Map Reach","Google Maps rank across the school zones and commute routes your families care about."],
+   ["Map Reach","Google Maps rank across the neighborhoods and commute routes renters care about."],
    ["Daily Presence","Daily Google posts that explain the community, the homes and the neighborhood in plain language."],
    ["Market Survey","What nearby rentals and other communities are offering, every Sunday."],
    ["Weekly Pulse","One page every Friday on what moved and the one next step for your lease up."]]},
  "Medical":{
+  plural:"medical practices",sample:"Sample practice",
   h1:["Patients check you ","before they call."],
-  sub:"After a referral, most patients search the practice, compare ratings and ask AI who is well reviewed nearby. LocalLift keeps your hours, locations and reputation accurate everywhere they look.",
-  card:"Practices, specialists and multi location groups.",
+  sub:"After a referral, many patients search the practice, compare ratings and ask AI who is well reviewed nearby. LocalLift keeps your hours, locations and reputation accurate everywhere they look.",
+  card:"Practices, specialists and groups with several locations.",
   pains:[["Details drift across listings.","Old hours, a moved suite or a retired provider can linger on Google and in AI answers, and patients call the wrong place."],
    ["Reviews carry the decision.","Patients read how a practice answers reviews. Silence reads as neglect, and a careless reply can expose private details."],
    ["Specialists compete street by street.","A patient searching from home sees a different list than one searching from the hospital campus."]],
@@ -740,6 +743,7 @@ const IND_COPY={
    ["Snapshot","Your monthly Google report: searches, views, calls and direction requests."],
    ["Weekly Pulse","One page every Friday, short enough to share with the practice manager."]]},
  "Med Spa":{
+  plural:"med spas",sample:"Sample med spa",
   h1:["First time clients read everything. ","Make it worth reading."],
   sub:"Someone choosing a first treatment studies photos, reviews and every answer an AI assistant gives. LocalLift keeps your med spa visible, current and trusted across all of it.",
   card:"Med spas, aesthetics studios and wellness clinics.",
@@ -748,13 +752,14 @@ const IND_COPY={
    ["Near work matters.","Many clients book close to the office, not home. Your map rank needs to hold where they spend the day."]],
   does:[["AI Shortlist","Whether AI assistants name your med spa when people ask who has the best reputation nearby."],
    ["Review Desk","Thoughtful review responses in your voice, written with client privacy in mind."],
-   ["Daily Presence","Daily Google posts on treatments, results, your team and this month's offer."],
+   ["Daily Presence","Daily Google posts on treatments, aftercare tips, your team and this month's offer."],
    ["Map Reach","Google Maps rank across the office districts and neighborhoods your clients come from."],
    ["Site Read","Checks that treatments, pricing and offers match everywhere a client looks."],
    ["Snapshot","Your monthly Google report: searches, views, calls and website clicks."]]},
  "Real Estate":{
+  plural:"real estate agents",sample:"Sample agent",
   h1:["Sellers pick the agent ","who looks current."],
-  sub:"Before a homeowner calls, they search your name, read your reviews and ask AI who knows their part of town. LocalLift makes sure the answer is you.",
+  sub:"Before a homeowner calls, they search your name, read your reviews and ask AI who knows their part of town. LocalLift helps make sure the answer includes you.",
   card:"Agents, teams and brokerages.",
   pains:[["Activity signals expertise.","A Google profile with no recent posts looks retired, even when your calendar is full."],
    ["Neighborhoods are the battleground.","Sellers want the agent who knows their streets. Your visibility has to hold neighborhood by neighborhood."],
@@ -766,6 +771,7 @@ const IND_COPY={
    ["Snapshot","Your monthly Google report: profile views, calls and website clicks."],
    ["Weekly Pulse","One page every Friday on what moved and the one next step."]]},
  "Hair Salons":{
+  plural:"hair salons",sample:"Sample salon",
   h1:["New neighbors need a salon ","by Saturday."],
   sub:"People new to the area search, scan photos and check hours on their phone, then book the salon that looks open and active. LocalLift keeps your salon in that first look.",
   card:"Salons, barbers and independent stylists.",
@@ -779,8 +785,9 @@ const IND_COPY={
    ["AI Shortlist","Whether AI assistants name your salon for the specialties you are known for."],
    ["Site Read","Checks that hours, services and prices match everywhere."]]},
  "Hospitality":{
+  plural:"hotels and stays",sample:"Sample hotel",
   h1:["Travelers plan the trip ","in an AI answer."],
-  sub:"Guests ask which stay fits a quiet weekend, check the walk to dinner on Google Maps, then book the place that kept appearing. LocalLift keeps your property in that answer.",
+  sub:"Guests ask which stay fits a quiet weekend, check the walk to dinner on Google Maps, then book the place that kept appearing. LocalLift works to keep your property in that answer.",
   card:"Boutique hotels, inns and short stay properties.",
   pains:[["Booking sites own the first click.","Your own Google profile and website need to give travelers a reason to book with you directly."],
    ["Every trip has a reason.","Anniversaries, conferences, game weekends. AI answers match stays to reasons, and you want to match more of them."],
@@ -792,6 +799,7 @@ const IND_COPY={
    ["Map Reach","Google Maps rank from the places guests start their search: the station, the stadium, the old town."],
    ["Site Read","Checks that amenities, policies and rates read the same everywhere."]]},
  "Portfolios":{
+  plural:"portfolios",sample:"Sample portfolio",
   h1:["One clear read ","on every property."],
   sub:"Owners and operators see every property side by side, on the same measures, with one recommended move for each. LocalLift turns a stack of reports into one decision.",
   card:"Owners, operators and asset managers.",
@@ -816,7 +824,7 @@ function IndJourney({d}){
       </div>
       <div className="ia">
         <div>
-          ${d.doors?html`<div className="ia-city">Our real multifamily portfolio</div><div className="ia-big"><i className="live-dot"></i><span><${Doors}/>+</span></div><div className="ia-sub">doors and counting, nationwide</div>`
+          ${d.doors?html`<div className="ia-city">Multifamily doors we work across</div><div className="ia-big"><i className="live-dot"></i><span><${Doors}/>+</span></div><div className="ia-sub">doors and counting</div>`
             :html`<div className="ia-big"><${Count} to=${+d.big[0]} run=${seen}/></div><div className="ia-sub">${d.big[1]}</div>`}
           ${d.doors?html`<div className="ia-city" style=${{margin:'20px 0 -6px'}}>Sample figures</div>`:null}<div className="ia-stats">${d.stats.map(s=>html`<div key=${s[1]}><strong>${s[0]}</strong><span>${s[1]}</span></div>`)}</div>
         </div>
@@ -825,7 +833,7 @@ function IndJourney({d}){
           <div className="viz" style=${{marginTop:0}}>
             <${Pops} items=${d.pops} run=${vis}/>
             <div className="viz-t">${d.metric}</div>
-            <${Bars} data=${d.d} labels=${d.labels2||M6} run=${seen} name=${d.metric} height=${210}/>
+            <${Bars} data=${d.d} labels=${d.labels2||M6} run=${seen} name=${d.metric} height=${210} hi=${d.labels2?d.d.indexOf(Math.max(...d.d)):null}/>
           </div>
         </div>
       </div>
@@ -837,7 +845,7 @@ function IndTools({d,c}){
   const names=c.does.map(x=>x[0]);const[tool,setTool]=useState(names[0]);
   const T=TOOLS.find(t=>t.n===tool);const mine=c.does.find(x=>x[0]===tool);
   return html`<div className="console" style=${{marginTop:'40px'}}>
-      <div className="console-bar"><span>LocalLift Intelligence / Sample ${d.t} business</span><span>Illustrative data. Not client results.</span></div>
+      <div className="console-bar"><span>LocalLift Intelligence / ${c.sample}</span><span>Illustrative panels. A separate sample from the chart above.</span></div>
       <div className="console-body">
         <div className="rail" role="group" aria-label="LocalLift tools">
           ${names.map(n=>{const t=TOOLS.find(x=>x.n===n);return html`<button key=${n} aria-pressed=${n===tool} onClick=${()=>setTool(n)}><span>${n}</span><small>${t.c}</small></button>`})}
@@ -845,7 +853,7 @@ function IndTools({d,c}){
         <div className="panel fade" key=${tool}>
           <div className="panel-head"><h3>${T.n}</h3><span className="sample">${T.c}</span></div>
           <p className="panel-desc">${mine[1]}</p>
-          <div className="panel-body">${T.b()}</div>
+          <div className="panel-body">${T.b({ind:true})}</div>
         </div>
       </div>
     </div>`;
@@ -873,7 +881,7 @@ function IndustryPage({name}){
     </section>
     <div className="statement"><div className="wrap statement-in"><span>Be found.</span><span>Be understood.</span><span>Be chosen.</span>${d.doors?html`<${DoorsStat}/>`:null}</div></div>
     <section className="band char"><div className="wrap">
-      <${Eyebrow}>The visibility problem in ${name.toLowerCase()}<//>
+      <${Eyebrow}>The visibility problem for ${c.plural}<//>
       <h2 className="title" style=${{maxWidth:'16em'}}>Where the customer slips away, <em>and why.</em></h2>
       <div className="pains">${c.pains.map((p,i)=>html`<article className="pain" key=${i}><b>0${i+1}</b><h3>${p[0]}</h3><p>${p[1]}</p></article>`)}</div>
     </div></section>
@@ -883,7 +891,7 @@ function IndustryPage({name}){
       <${IndJourney} d=${d}/>
     </div></section>
     <section className="band mist" id="intelligence"><div className="wrap">
-      <${Eyebrow}>What LocalLift does for ${name.toLowerCase()}<//>
+      <${Eyebrow}>What LocalLift does for ${c.plural}<//>
       <h2 className="title" style=${{maxWidth:'15em'}}>The tools that matter here, <em>run for you.</em></h2>
       <p className="lede">We run the tools and tell you what they mean. You get the answer and one next step, not another login.</p>
       <div className="does">${c.does.map(x=>{const t=TOOLS.find(y=>y.n===x[0]);return html`<div className="do" key=${x[0]}><small>${t.c}</small><h3>${x[0]}</h3><p>${x[1]}</p></div>`})}</div>
@@ -927,11 +935,11 @@ const FAQS={
   ["How do you know what AI assistants say about my business?","Every week we ask the leading AI assistants the questions your customers ask, and record who gets named. You see where you appear, where you do not, and who is named instead."],
   ["Do I need to learn a new platform?","No. There is no dashboard to log in to. Our team runs the tools and sends written reports you can read in minutes and forward to ownership."],
   ["What do I receive each week?","A Weekly Pulse every Friday with one recommended next step, plus weekly reads on your map rank, AI answers and listing accuracy. Snapshot and ClearView reports arrive monthly."],
-  ["Does LocalLift replace my website or my ads?","No. LocalLift works alongside them. It strengthens how you appear in organic search, on Google Maps and in AI answers, where most local decisions now start."],
-  ["Are the numbers on this site real?","The door count is real. Every other number, chart, business and city on this site is a sample, made up to show what our reports look like."],
+  ["Does LocalLift replace my website or my ads?","No. LocalLift works alongside them. It strengthens how you appear in organic search, on Google Maps and in AI answers, where many local decisions start."],
+  ["Are the numbers on this site real?","The door count, the weekly post count and the case study are real. Every number, chart, business and city in the samples is made up to show what our reports look like."],
   ["How do I get started?","Request a Visibility Audit. The audit form on this preview does not send yet, so contact The SocialDM directly in the meantime."]],
  Industries:[
-  ["Which industries does LocalLift work with?","Multifamily, build to rent, medical practices, med spas, real estate agents, hair salons, hospitality and multi property portfolios."],
+  ["Which industries does LocalLift work with?","Multifamily, build to rent, medical practices, med spas, real estate agents, hair salons, hospitality and portfolios of many properties."],
   ["Is the service different for each industry?","The loop is the same: discover, compare, strengthen and measure. The questions we track, the competitors we watch and the content we write change for each industry."],
   ["My industry is not listed. Can you still help?","If customers search for you nearby, the same approach applies. Contact The SocialDM and we will tell you honestly whether LocalLift fits."],
   ["Do you work with groups and multi location businesses?","Yes. Portfolio reporting puts every location side by side on the same measures, with one recommended move for each."]],
@@ -941,11 +949,11 @@ const FAQS={
   ["Are review responses written with fair housing in mind?","Yes. Every response is written in your voice, stays neutral and never references a protected characteristic or a resident's personal details."],
   ["Do you work with lease ups as well as stabilized communities?","Yes. Lease ups need visibility fast and change often. Stabilized communities need to hold their place against newer competitors. The weekly loop covers both."],
   ["How large is your multifamily portfolio?","LocalLift works across more than 7,900 doors, and counting."]],
- "Build to rent":[
-  ["What makes build to rent visibility different?","Many families do not yet search for build to rent by name. Your community has to appear for the searches they do make, like homes for rent with a yard, and be explained clearly when they ask AI assistants."],
+ "Build to Rent":[
+  ["What makes build to rent visibility different?","Many renters do not yet search for build to rent by name. Your community has to appear for the searches they do make, like homes for rent with a yard, and be explained clearly when they ask AI assistants."],
   ["Do you support communities still in lease up?","Yes. We keep phases, pricing and amenities current across your website, your Google profile and AI answers as they change."],
   ["Can you control what AI assistants say about us?","No one can control AI answers directly. We track what they say every week, correct the sources they draw on, and publish clear content so the answers improve over time."],
-  ["Do you track nearby rentals and other communities?","Yes. Market Survey watches nearby offers every Sunday so you know what families are comparing you with."]],
+  ["Do you track nearby rentals and other communities?","Yes. Market Survey watches nearby offers every Sunday so you know what renters are comparing you with."]],
  "Medical":[
   ["Is your review response process safe for patient privacy?","Yes. Responses never confirm that someone is a patient and never discuss care. We do not need access to patient records."],
   ["Can you fix wrong hours, addresses or provider details?","Yes. Site Read checks your details across your website, your Google profile and AI answers every week, and we correct what is out of date."],
