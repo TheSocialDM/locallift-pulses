@@ -554,3 +554,6 @@ html,body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}
 @media(min-width:861px) and (max-width:1240px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:860px){.tiles .tile:last-child:nth-child(odd){grid-column:1/-1}}
 @media(min-width:861px) and (max-width:960px){.week{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* two light sections in a row: a hairline between them and less doubled white space */
+.band:is(.white,.mist)+.band:is(.white,.mist):not([style*="padding-top"]){border-top:1px solid #E4E4E4;padding-top:clamp(56px,7vw,96px)}
+.band:is(.white,.mist):has(+.band:is(.white,.mist):not([style*="padding-top"])){padding-bottom:clamp(56px,7vw,96px)}
