@@ -527,3 +527,5 @@ html,body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}
 
 .sched-hint{display:none;margin:0 0 8px;font-size:13px;color:var(--on-dark-2)}
 @media(max-width:620px){.sched-hint{display:block}}
+/* very narrow phones: keep the stat numbers and the loop buttons inside their boxes */
+@media(max-width:380px){.stat-n{font-size:38px}.stage-btn{font-size:13.5px;padding:0 10px;min-height:44px}}

@@ -49,7 +49,12 @@ ${SITE.url ? `<link rel="canonical" href="${SITE.url}/${p.path ? p.path + '/' : 
 <meta property="og:title" content="${esc(p.title)}">
 <meta property="og:description" content="${esc(p.description)}">
 ${SITE.url ? `<meta property="og:url" content="${SITE.url}/${p.path ? p.path + '/' : ''}">` : ''}
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${SITE.url}/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LocalLift. Your next customer is searching. Will they find you?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE.url}/assets/og-image.png">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
