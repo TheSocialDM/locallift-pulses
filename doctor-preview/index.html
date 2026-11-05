@@ -83,7 +83,6 @@ a{color:inherit}
 .who{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.75);border:1px solid var(--line);border-radius:var(--radius-md);padding:10px 16px 10px 10px;width:fit-content;max-width:100%;box-shadow:var(--shadow-1)}
 .who-text{font-size:14px;line-height:1.4;color:var(--ink-2)}
 .who-text b{display:block;color:var(--ink);font-family:"Manrope",sans-serif;font-weight:700;font-size:15px;letter-spacing:-0.01em}
-.photo-tile{flex:none;width:56px;height:56px;border-radius:14px;border:1.5px dashed #9ec2cf;background:repeating-linear-gradient(135deg,var(--blue-1) 0 8px,#f7fbfe 8px 16px);display:grid;place-items:center;text-align:center;font-family:"Manrope",sans-serif;font-weight:700;font-size:9.5px;line-height:1.15;color:var(--teal);letter-spacing:.02em;padding:4px}
 
 /* Phone stage */
 .stage{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;width:100%;max-width:100%;padding:6px 0 0}
@@ -142,7 +141,7 @@ section{scroll-margin-top:20px}
 .letter-meta b{color:var(--ink);font-weight:600}
 .letter-body{font-size:16px;color:var(--ink);display:flex;flex-direction:column;gap:14px}
 .sig{margin-top:8px}
-.sig .name{font-family:"Manrope",sans-serif;font-weight:700;font-size:18px;letter-spacing:-0.02em}
+.sig .name{display:block;font-family:"Manrope",sans-serif;font-weight:700;font-size:18px;letter-spacing:-0.02em}
 .sig small{display:block;color:var(--ink-3);font-size:13.5px}
 .approve{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink-3)}
 .pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 12px;font-weight:600;font-size:13px;white-space:nowrap}
@@ -209,11 +208,55 @@ section{scroll-margin-top:20px}
 .closing{text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px}
 .closing h2{max-width:16ch}
 .closing p{color:var(--ink-2);max-width:42ch}
-footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
-.foot{display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center}
-.foot p{font-size:14.5px;color:var(--ink-2)}
-.foot p b{color:var(--ink);font-weight:600}
-.foot small{font-size:12.5px;color:var(--ink-3)}
+
+
+/* Real photos */
+.headshot{flex:none;width:56px;height:56px;border-radius:14px;object-fit:cover;object-position:center 20%;background:var(--blue-1);box-shadow:0 0 0 3px #fff,0 4px 12px rgba(14,48,72,.12)}
+.top-note{display:flex;align-items:center;gap:10px}
+.top-note img{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center 18%;box-shadow:0 0 0 2px #fff,0 2px 8px rgba(14,48,72,.15)}
+
+/* Team band */
+.team{position:relative;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-2);background:linear-gradient(180deg,#5d6265 0 40%,var(--blue-1) 40%)}
+.team>img{display:block;width:100%;height:auto;aspect-ratio:1104/710;object-fit:cover}
+.team-card{position:relative;margin:-56px 14px 14px;border-radius:var(--radius-lg);padding:22px 20px;display:flex;flex-direction:column;gap:10px}
+.team-card h3{font-size:clamp(22px,4.4vw,30px);letter-spacing:-0.03em;line-height:1.1}
+.team-card p{color:var(--ink-2);font-size:15.5px}
+.team-card .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.team-card .meta span{font-size:13px;color:var(--ink-2);background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+
+/* Letterhead */
+.letter{padding:0;overflow:hidden}
+.lh{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;padding:24px 22px 18px;border-bottom:3px solid #1d5c97;background:linear-gradient(180deg,#fff,#fbfdff)}
+.lh img{height:54px;width:auto}
+.lh address{font-style:normal;font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:right}
+.lh address b{display:block;color:#1d4f80;font-weight:600;font-size:13px}
+.letter-inner{padding:22px 22px 8px}
+.letter-tagrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.letter-tagrow .date{font-size:13.5px;color:var(--ink-3)}
+.sig{display:flex;align-items:center;gap:14px;margin-top:10px}
+.sig img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center 18%;box-shadow:0 0 0 3px #fff,0 4px 12px rgba(14,48,72,.14)}
+.lf{margin:18px 22px 0;padding:14px 0 18px;border-top:1px solid var(--line);font-size:12px;line-height:1.6;color:var(--ink-3);text-align:center}
+.lf b{color:#1d4f80;font-weight:600}
+.lf .sep{display:inline-block;margin:0 6px;color:#b5c7d4}
+.letter .approve{margin:0;padding:16px 22px;border-top:1px dashed var(--line);background:var(--mist)}
+
+/* Closing over desert */
+.closing-band{position:relative;overflow:hidden;padding:0}
+.closing-band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.closing-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(238,245,251,.25),rgba(14,48,72,.25))}
+.closing-band .wrap{position:relative;z-index:1;padding-top:96px;padding-bottom:96px}
+.closing-card{border-radius:var(--radius-xl);padding:36px 22px;max-width:640px;margin:0 auto}
+
+/* Page footer */
+footer{background:#fff;padding:0 0 calc(32px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:22px;padding:36px 0 24px;align-items:center}
+.foot-brand{display:flex;flex-direction:column;gap:10px}
+.foot-brand p{font-size:14.5px;color:var(--ink-2);max-width:40ch}
+.foot-for{display:flex;align-items:center;gap:12px;background:var(--blue-1);border-radius:var(--radius-md);padding:12px 16px 12px 12px;width:fit-content;max-width:100%}
+.foot-for img{width:44px;height:44px;border-radius:12px;object-fit:cover;object-position:center 18%}
+.foot-for div{font-size:13.5px;line-height:1.4;color:var(--ink-2)}
+.foot-for b{display:block;color:var(--ink);font-family:"Manrope",sans-serif;font-weight:700;font-size:14.5px}
+.foot-bottom{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--ink-3)}
 
 /* Reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
@@ -227,7 +270,6 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
   .metrics{grid-template-columns:repeat(4,1fr)}
   .results{padding:320px 24px 24px}
   .summary{padding:28px 26px}
-  .letter{padding:40px 40px}
 }
 @media (min-width:960px){
   .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:20px;padding:56px 0 110px}
@@ -251,6 +293,27 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
   .metrics{grid-template-columns:1fr}
 }
 
+
+@media (min-width:700px){
+  .lh{padding:30px 40px 22px}
+  .letter-inner{padding:28px 40px 8px}
+  .lf{margin:20px 40px 0}
+  .letter .approve{padding:18px 40px}
+  .closing-band .wrap{padding-top:140px;padding-bottom:140px}
+  .closing-card{padding:48px 40px}
+  .foot-grid{grid-template-columns:1fr auto}
+}
+@media (max-width:420px){
+  .lh address{text-align:left}
+  .lh img{height:40px}
+}
+
+@media (min-width:900px){
+  .team{display:grid;grid-template-columns:1.5fr 1fr;align-items:stretch;background:linear-gradient(160deg,#fff,var(--blue-1))}
+  .team>img{height:100%;aspect-ratio:auto;object-position:center 30%}
+  .team-card{margin:0;align-self:center;background:transparent;border:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;padding:40px 40px}
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -271,7 +334,7 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
         <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 L12 5 L19 19"/><path d="M8.5 13h7"/></svg></span>
         LocalLift
       </div>
-      <div class="top-note">Prepared for Dr. Ylli Zhubi</div>
+      <div class="top-note"><img src="images/zhubi.jpg" alt="" width="64" height="80"><span>Prepared for Dr. Ylli Zhubi</span></div>
     </nav>
 
     <div class="hero-grid">
@@ -281,8 +344,8 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
         <p class="lede">We keep you in front of referring doctors, with letters you approve before anything goes out.</p>
         <div><a class="btn" href="#how">See how it works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></div>
         <div class="who">
-          <div class="photo-tile" aria-label="Placeholder for Dr. Zhubi's photo">Your photo here</div>
-          <div class="who-text"><b>Dr. Ylli Zhubi</b>Colorectal Surgery<br>Arizona Preferred Surgeons, Glendale,&nbsp;AZ</div>
+          <img class="headshot" src="images/zhubi.jpg" alt="Dr. Ylli Zhubi" width="500" height="625">
+          <div class="who-text"><b>Dr. Ylli Zhubi</b>Colon and Rectal Surgery<br>Arizona Preferred Surgeons, Glendale,&nbsp;AZ</div>
         </div>
       </div>
 
@@ -313,6 +376,21 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
 
 <main>
 
+  <!-- Practice -->
+  <section class="sec" id="practice" style="padding-bottom:0">
+    <div class="wrap">
+      <figure class="team reveal" style="margin:0">
+        <img src="images/aps-surgeons.jpg" alt="Dr. Ylli Zhubi with his fellow surgeons at Arizona Preferred Surgeons" width="1104" height="710">
+        <figcaption class="team-card glass">
+          <span class="eyebrow">Arizona Preferred Surgeons</span>
+          <h3>Your name. Your practice. Your letters.</h3>
+          <p>Every note carries your name and your practice, so referring offices know exactly who it comes from.</p>
+          <div class="meta"><span>Dr. Ylli Zhubi</span><span>Glendale, Arizona</span></div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
   <!-- 1. How it works -->
   <section id="how" class="sec">
     <div class="wrap">
@@ -322,7 +400,7 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
         <p class="lede">You stay in charge of every word. We take care of the rest.</p>
       </div>
       <div class="how-panel reveal">
-        <img src="images/hallway.jpg" alt="A bright, quiet hospital hallway with tall windows" loading="lazy" width="1600" height="1200">
+        <img src="images/hallway.jpg" alt="A bright, quiet hospital hallway with tall windows" width="1600" height="1200">
         <ol class="steps">
           <li class="step glass">
             <span class="step-num"><b>1</b>STEP ONE</span>
@@ -354,31 +432,34 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
       </div>
       <div class="letter-grid">
         <article class="letter reveal" aria-label="Sample letter">
-          <div class="letter-top">
-            <div class="letter-from">
-              <div class="photo-tile" aria-label="Placeholder for Dr. Zhubi's photo">Your photo here</div>
-              <div class="who-text"><b>Dr. Ylli Zhubi</b>Arizona Preferred Surgeons, Glendale</div>
+          <header class="lh">
+            <img src="images/aps-logo.jpg" alt="Arizona Preferred Surgeons" width="388" height="117">
+            <address><b>Arizona Preferred Surgeons</b>18699 North 67th Ave., Suite 280<br>Glendale, AZ 85308<br>602.995.0822</address>
+          </header>
+          <div class="letter-inner">
+            <div class="letter-tagrow"><span class="date">November 2026</span><span class="sample-tag">Sample letter</span></div>
+            <p class="letter-meta">To <b>Dr. Elena Marsh</b>, Saguaro Bend Family Practice<br>Fictional recipient, for illustration only</p>
+            <div class="letter-body">
+              <p>Dear Dr. Marsh,</p>
+              <p>I hope the fall season is treating you and your team well. I wanted to send a brief note to say thank you for the working relationship between our offices this year. It means a great deal to me.</p>
+              <p>If your team ever has a question about a colorectal concern, or wants to talk through whether a referral makes sense, my office is glad to help. I am always happy to take a call.</p>
+              <p>Wishing you and your staff a good season ahead.</p>
+              <p>Warm regards,</p>
+              <div class="sig">
+                <img src="images/zhubi.jpg" alt="" width="500" height="625">
+                <div><span class="name">Dr. Ylli Zhubi</span>
+                <small>Colon and Rectal Surgery, Arizona Preferred Surgeons</small></div>
+              </div>
             </div>
-            <span class="sample-tag">Sample letter</span>
           </div>
-          <p class="letter-meta">To <b>Dr. Elena Marsh</b>, Saguaro Bend Family Practice<br>Fictional recipient, for illustration only</p>
-          <div class="letter-body">
-            <p>Dear Dr. Marsh,</p>
-            <p>I hope the fall season is treating you and your team well. I wanted to send a brief note to say thank you for the working relationship between our offices this year. It means a great deal to me.</p>
-            <p>If your team ever has a question about a colorectal concern, or wants to talk through whether a referral makes sense, my office is glad to help. I am always happy to take a call.</p>
-            <p>Wishing you and your staff a good season ahead.</p>
-            <div class="sig">
-              <span class="name">Dr. Ylli Zhubi</span>
-              <small>Colorectal Surgery, Arizona Preferred Surgeons</small>
-            </div>
-          </div>
+          <footer class="lf"><b>Arizona Preferred Surgeons</b><span class="sep">&middot;</span>18699 North 67th Ave., Suite 280, Glendale, AZ 85308<br>Phone 602.995.0822<span class="sep">&middot;</span>Fax 602.995.0825<span class="sep">&middot;</span>azpreferredsurgeons.com</footer>
           <div class="approve">
             <span class="pill wait"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Waiting for your approval</span>
             <span>Nothing is sent until you say yes.</span>
           </div>
         </article>
         <figure class="photo-card reveal" style="margin:0">
-          <img src="images/consultation.jpg" alt="A doctor smiling during a calm conversation across a desk in a bright office" loading="lazy" width="1600" height="1067">
+          <img src="images/consultation.jpg" alt="A doctor smiling during a calm conversation across a desk in a bright office" width="1600" height="1067">
           <figcaption class="glass">
             <h3>Your voice, your call.</h3>
             <p>Edit anything, skip anyone, or pause at any time. Replies come straight to your office.</p>
@@ -438,7 +519,7 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
           </ul>
         </div>
         <figure class="photo-card desk-card reveal" style="margin:0">
-          <img src="images/desk.jpg" alt="A doctor writing notes at a wooden desk in a calm office" loading="lazy" width="1600" height="2400">
+          <img src="images/desk.jpg" alt="A doctor writing notes at a wooden desk in a calm office" width="1600" height="2400">
           <figcaption class="glass">
             <h3>Five minutes on Monday.</h3>
             <p>Read the list with your coffee. Make the calls that matter. That is the whole job.</p>
@@ -457,7 +538,7 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
         <p class="lede">Plain language on one page. Nothing new to learn.</p>
       </div>
       <div class="results reveal">
-        <img src="images/clinic.jpg" alt="A modern, light filled clinic lounge with soft grey chairs" loading="lazy" width="1600" height="1067">
+        <img src="images/clinic.jpg" alt="A modern, light filled clinic lounge with soft grey chairs" width="1600" height="1067">
         <div class="summary glass">
           <div class="summary-head">
             <div><h3>Monthly summary</h3><small>Labels shown in place of numbers</small></div>
@@ -523,21 +604,39 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
     </div>
   </section>
 
-  <section class="sec sec-blue">
-    <div class="wrap closing reveal">
-      <span class="eyebrow">Private preview</span>
-      <h2>Stay top of mind, in your own words.</h2>
-      <p>This page is a private sample for Dr. Zhubi. Nothing here has been sent to anyone.</p>
-      <a class="btn" href="#how">See how it works</a>
+  <section class="closing-band">
+    <img src="images/desert.jpg" alt="Sonoran desert with saguaro cactus under a blue Arizona sky" width="1600" height="625">
+    <div class="wrap">
+      <div class="closing closing-card glass reveal">
+        <span class="eyebrow">Private preview</span>
+        <h2>Stay top of mind, in your own words.</h2>
+        <p>This page is a private sample for Dr. Zhubi. Nothing here has been sent to anyone.</p>
+        <a class="btn" href="#how">See how it works</a>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <p><b>Prepared by LocalLift, a service by The SocialDM.</b></p>
-    <small>Private preview for Dr. Zhubi. Sample content, nothing is live.</small>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 L12 5 L19 19"/><path d="M8.5 13h7"/></svg></span>
+          LocalLift
+        </div>
+        <p><b>Prepared by LocalLift, a service by The SocialDM.</b></p>
+      </div>
+      <div class="foot-for">
+        <img src="images/zhubi.jpg" alt="" width="500" height="625">
+        <div><b>Prepared for Dr. Ylli Zhubi</b>Arizona Preferred Surgeons, Glendale,&nbsp;AZ</div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Private preview for Dr. Zhubi. Sample content, nothing is live.</span>
+      <span>Not for distribution.</span>
+    </div>
   </div>
 </footer>
 
