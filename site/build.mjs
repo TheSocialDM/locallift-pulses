@@ -1,0 +1,73 @@
+// Builds the LocalLift preview site into dist/. Run: node build.mjs
+import fs from 'fs';
+import path from 'path';
+import React from 'react';
+import {renderToString} from 'react-dom/server';
+import htm from 'htm';
+import {pageList, SITE} from './src/meta.mjs';
+
+const ROOT = path.dirname(new URL(import.meta.url).pathname);
+const OUT = path.join(ROOT, 'dist');
+const read = f => fs.readFileSync(path.join(ROOT, f), 'utf8');
+const PREVIEW = process.env.LIVE !== '1'; // preview builds are always noindex
+
+const body = read('src/proto.js') + '\n' + read('src/pages.js');
+const prelude = 'const {useState,useEffect,useRef,useMemo}=React;const html=htm.bind(React.createElement);\n';
+const factory = new Function('React', 'htm', 'window', prelude + body + '\nreturn {PAGES,IND};');
+const {PAGES} = factory(React, htm, undefined);
+
+fs.rmSync(OUT, {recursive: true, force: true});
+fs.mkdirSync(path.join(OUT, 'assets/vendor'), {recursive: true});
+fs.cpSync(path.join(ROOT, 'public'), OUT, {recursive: true});
+for (const f of ['react/umd/react.production.min.js', 'react-dom/umd/react-dom.production.min.js', 'htm/dist/htm.umd.js'])
+  fs.copyFileSync(path.join(ROOT, 'node_modules', f), path.join(OUT, 'assets/vendor', path.basename(f)));
+fs.writeFileSync(path.join(OUT, 'assets/site.css'), read('src/site.css') + '\n' + read('src/extra.css'));
+fs.writeFileSync(path.join(OUT, 'assets/app.js'),
+  '(function(){' + prelude + body +
+  '\nvar P=PAGES[window.__PAGE__];if(P)ReactDOM.hydrateRoot(document.getElementById("root"),React.createElement(P));})();');
+
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+for (const p of pageList) {
+  const Comp = PAGES[p.page];
+  if (!Comp) throw new Error('No component for ' + p.page);
+  const app = renderToString(React.createElement(Comp));
+  const ld = p.schema.map(o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`).join('\n');
+  const doc = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>${esc(p.title)}</title>
+<meta name="description" content="${esc(p.description)}">
+${PREVIEW ? '<meta name="robots" content="noindex,nofollow">' : ''}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LocalLift">
+<meta property="og:title" content="${esc(p.title)}">
+<meta property="og:description" content="${esc(p.description)}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+${ld}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="root">${app}</div>
+<script>window.__PAGE__=${JSON.stringify(p.page)};</script>
+<script src="/assets/vendor/react.production.min.js" defer></script>
+<script src="/assets/vendor/react-dom.production.min.js" defer></script>
+<script src="/assets/vendor/htm.umd.js" defer></script>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>
+`;
+  const file = path.join(OUT, p.path, 'index.html');
+  fs.mkdirSync(path.dirname(file), {recursive: true});
+  fs.writeFileSync(file, doc);
+  console.log('built', p.path || '/');
+}
+fs.writeFileSync(path.join(OUT, 'robots.txt'), PREVIEW ? 'User-agent: *\nDisallow: /\n' : `User-agent: *\nAllow: /\n`);
+fs.writeFileSync(path.join(OUT, '_headers'), PREVIEW ? '/*\n  X-Robots-Tag: noindex, nofollow\n' : '');

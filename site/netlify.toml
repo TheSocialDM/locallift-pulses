@@ -1,0 +1,4 @@
+# LocalLift website preview. Manual draft deploys only; no domain is attached.
+[build]
+  command = "npm ci && node build.mjs && node check.mjs"
+  publish = "dist"
