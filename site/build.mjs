@@ -4,7 +4,7 @@ import path from 'path';
 import React from 'react';
 import {renderToString} from 'react-dom/server';
 import htm from 'htm';
-import {pageList, SITE} from './src/meta.mjs';
+import {buildPages} from './src/meta.mjs';
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const OUT = path.join(ROOT, 'dist');
@@ -13,8 +13,10 @@ const PREVIEW = process.env.LIVE !== '1'; // preview builds are always noindex
 
 const body = read('src/proto.js') + '\n' + read('src/pages.js');
 const prelude = 'const {useState,useEffect,useRef,useMemo}=React;const html=htm.bind(React.createElement);\n';
-const factory = new Function('React', 'htm', 'window', prelude + body + '\nreturn {PAGES,IND};');
-const {PAGES} = factory(React, htm, undefined);
+const factory = new Function('React', 'htm', 'window', prelude + body + '\nreturn {PAGES,IND,IND_SLUG,IND_COPY,FAQS};');
+const data = factory(React, htm, undefined);
+const {PAGES} = data;
+const pageList = buildPages(data);
 
 fs.rmSync(OUT, {recursive: true, force: true});
 fs.mkdirSync(path.join(OUT, 'assets/vendor'), {recursive: true});

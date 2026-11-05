@@ -56,7 +56,7 @@ function DoorsStat(){
 }
 
 /* ---------- 1. navigation ---------- */
-const NAV=[["Platform","/#platform"],["Industries","/#industries"],["Intelligence","/#intelligence"],["Results","/#results"],["Insights","/#insights"]];
+const NAV=[["Platform","/#platform"],["Industries","/industries/"],["Intelligence","/#intelligence"],["Results","/#results"],["Insights","/#insights"]];
 function Nav(){
   const[open,setOpen]=useState(false);
   return html`<header className="nav"><div className="wrap">
@@ -592,7 +592,7 @@ function Industries(){
           </div>
         </div>
       </div>
-      <div className="j-tools"><b>Where LocalLift works this journey:</b><span>${d.tools.join(', ')}</span></div>
+      <div className="j-tools"><b>Where LocalLift works this journey:</b><span>${d.tools.join(', ')}</span><a className="j-more" href=${indHref(d)}>See LocalLift for ${d.t}</a></div>
       <div className="sample" style=${{marginTop:'14px'}}>Sample journey, sample place and sample charts. Illustrative only.</div>
     </div>
   </div></section>`;
@@ -642,7 +642,7 @@ function Results(){
 }
 
 /* ---------- 9. audit ---------- */
-function Audit(){
+function Audit({industry="Multifamily"}){
   return html`<section className="band black audit" id="audit">
     <div className="audit-rings" aria-hidden="true"><span></span><span></span><span></span></div>
     <div className="wrap audit-grid">
@@ -656,7 +656,7 @@ function Audit(){
         <fieldset disabled style=${{border:0,margin:0,padding:0,display:'flex',flexDirection:'column',gap:'14px'}}>
           <label htmlFor="biz">Business name<input id="biz" placeholder="Your business" autoComplete="off"/></label>
           <label htmlFor="city">City<input id="city" placeholder="Your city" autoComplete="off"/></label>
-          <label htmlFor="ind">Industry<select id="ind" defaultValue="Multifamily">${IND.map(x=>html`<option key=${x.t}>${x.t}</option>`)}</select></label>
+          <label htmlFor="ind">Industry<select id="ind" defaultValue=${industry}>${IND.map(x=>html`<option key=${x.t}>${x.t}</option>`)}</select></label>
           <label htmlFor="mail">Work email<input id="mail" type="text" placeholder="you@company.com" autoComplete="off"/></label>
           <button className="btn red" type="button">Get Your Visibility Audit</button>
         </fieldset>

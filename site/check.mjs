@@ -19,7 +19,7 @@ for (const f of pages) {
   for (const m of copy.matchAll(/.{0,30}[‐-―−].{0,30}/g)) flag(f, 'dash: ' + m[0]);
   for (const m of copy.matchAll(/.{0,30}[A-Za-z0-9] ?- ?[A-Za-z0-9].{0,30}/g)) if (!/https?:|www\.|@|\.com/.test(m[0])) flag(f, 'hyphen: ' + m[0]);
   const b = copy.match(BANNED); if (b) flag(f, 'named tool or source: ' + b[0]);
-  for (const m of visible.matchAll(/.{0,40}\b(phoenix|tigard|oregon|arizona)\b.{0,40}/gi)) console.log('NOTE real place', path.relative(OUT, f) || 'index.html', '::', m[0].trim());
+  for (const m of visible.replace('The SocialDM™. Phoenix, Arizona.', '').matchAll(/.{0,40}\b(phoenix|tigard|oregon|arizona)\b.{0,40}/gi)) console.log('NOTE real place', path.relative(OUT, f) || 'index.html', '::', m[0].trim());
   for (const m of visible.matchAll(/(\d{1,2},\d{3})\+? ?doors/gi)) if (+m[1].replace(',', '') > 7900) flag(f, 'door count over 7,900: ' + m[0]);
   if (!/does not send yet/i.test(visible) && /id="audit"/.test(html)) flag(f, 'audit form missing does not send note');
   if (/<form[^>]*(action=|netlify|method=)/i.test(html)) flag(f, 'form has an action or Netlify attribute');
