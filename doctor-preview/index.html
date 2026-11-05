@@ -86,22 +86,42 @@ a{color:inherit}
 
 /* Phone stage */
 .stage{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;width:100%;max-width:100%;padding:6px 0 0}
-.phone{position:relative;width:min(252px,68vw);aspect-ratio:272/556;border-radius:46px;background:linear-gradient(160deg,#ffffff,#e9f0f5);padding:10px;box-shadow:0 0 0 1px #d4e1ea,0 30px 70px rgba(14,48,72,.18),inset 0 0 0 1px #fff;z-index:1}
-.screen{position:relative;height:100%;border-radius:37px;background:linear-gradient(180deg,#f8fbfd 0%,#eef5fa 100%);overflow:hidden;display:flex;flex-direction:column}
-.island{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:84px;height:24px;border-radius:20px;background:#1c2f3a}
-.status{display:flex;justify-content:space-between;padding:13px 22px 0;font-size:11.5px;font-weight:600;color:var(--ink)}
-.status i{font-style:normal;letter-spacing:.06em}
-.screen-head{padding:28px 20px 0;text-align:center}
-.screen-head .eyebrow{font-size:10px}
-.screen-head h3{font-size:19px;margin-top:8px;letter-spacing:-0.025em}
-.screen-body{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding:0 22px;text-align:center}
-.halo{width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--blue-3));box-shadow:0 0 0 10px rgba(207,225,240,.45),0 0 0 22px rgba(207,225,240,.22)}
-.screen-body p{font-size:12.5px;color:var(--ink-3);max-width:20ch;line-height:1.45;margin-top:22px}
-.input{margin:0 12px 16px;min-height:50px;border-radius:18px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;gap:8px;padding:8px 8px 8px 14px;box-shadow:0 6px 18px rgba(14,48,72,.06)}
-.input #typed{flex:1;font-size:12.5px;line-height:1.3;color:var(--ink);min-height:2.6em;display:flex;align-items:center}
-.input #typed::after{content:"";display:inline-block;width:1.5px;height:14px;background:var(--teal);margin-left:2px;animation:blink 1s steps(1) infinite;vertical-align:middle}
-.send{flex:none;width:32px;height:32px;border-radius:50%;background:var(--teal);display:grid;place-items:center}
-.send svg{width:14px;height:14px}
+.phone{position:relative;width:min(256px,68vw);aspect-ratio:272/560;border-radius:48px;padding:4px;background:linear-gradient(145deg,#f3f5f7 0%,#c3cbd3 28%,#eef1f4 52%,#aeb8c2 78%,#e6eaee 100%);box-shadow:0 1px 0 1px rgba(255,255,255,.6) inset,0 40px 80px rgba(14,48,72,.22),0 12px 24px rgba(14,48,72,.12);z-index:1}
+.phone::before,.phone::after{content:"";position:absolute;width:3px;border-radius:2px;background:linear-gradient(90deg,#9aa5b0,#d5dbe0)}
+.phone::before{left:-3px;top:20%;height:9%;box-shadow:0 52px 0 #b4bec7,0 0 0 transparent}
+.phone::after{right:-3px;top:28%;height:14%}
+.bezel{height:100%;border-radius:44px;background:#0b1217;padding:6px}
+.screen{position:relative;height:100%;border-radius:38px;background:#f6f8fb;overflow:hidden;display:flex;flex-direction:column;font-family:-apple-system,"SF Pro Text","DM Sans",system-ui,sans-serif}
+.island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:25%;height:20px;border-radius:20px;background:#05090c;z-index:3}
+.status{display:flex;justify-content:space-between;align-items:center;padding:11px 16px 0 22px;height:34px;font-size:11.5px;font-weight:600;color:#0e1a22;position:relative;z-index:2}
+.status .icons{display:flex;gap:4px;align-items:center}
+.status svg{display:block;height:9px;width:auto}
+.status .icons{gap:3px}
+.chat-head{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 9px;background:rgba(246,248,251,.85);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:.5px solid #dbe3ea}
+.chat-head .back{width:22px;color:var(--teal)}
+.chat-title{display:flex;flex-direction:column;align-items:center;gap:3px}
+.chat-av{width:30px;height:30px;border-radius:50%;background:linear-gradient(145deg,#d7ebec,#b9d8e6);display:grid;place-items:center}
+.chat-av svg{width:15px;height:15px}
+.chat-title b{font-size:11px;font-weight:600;color:#0e1a22;letter-spacing:-0.01em}
+.thread{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:7px;padding:10px 12px 10px;overflow:hidden}
+.stamp{align-self:center;font-size:9.5px;color:#8a9aa6;font-weight:500;margin-bottom:2px}
+.hint{align-self:center;text-align:center;font-size:10.5px;color:#8a9aa6;background:#eaf0f5;border-radius:10px;padding:5px 10px;max-width:90%;line-height:1.35}
+.msg{align-self:flex-end;max-width:84%;background:linear-gradient(180deg,#14787e,#0b5c61);color:#fff;font-size:12px;line-height:1.35;padding:7px 11px;border-radius:17px 17px 5px 17px;box-shadow:0 2px 6px rgba(11,92,97,.18);animation:pop .32s cubic-bezier(.2,.9,.3,1.2) both}
+.msg.old{opacity:.55}
+.delivered{align-self:flex-end;font-size:9px;color:#8a9aa6;margin:-3px 4px 0 0}
+@keyframes pop{from{transform:translateY(8px) scale(.92);opacity:0}to{transform:none;opacity:1}}
+.compose{display:flex;align-items:flex-end;gap:7px;padding:7px 10px 6px;background:rgba(246,248,251,.92);border-top:.5px solid #dbe3ea}
+.plus{flex:none;width:27px;height:27px;border-radius:50%;background:#e3e9ef;display:grid;place-items:center;margin-bottom:1px}
+.plus svg{width:12px;height:12px}
+.field{flex:1;min-height:29px;border:1px solid #d3dce4;background:#fff;border-radius:16px;display:flex;align-items:flex-end;gap:4px;padding:3px 3px 3px 11px}
+.field #typed{flex:1;font-size:12px;line-height:1.35;color:#0e1a22;padding:3px 0;min-height:1.35em;word-break:break-word}
+.field #typed:empty::before{content:"Ask anything";color:#9aa8b3}
+.field #typed::after{content:"";display:inline-block;width:1.5px;height:13px;background:#0b5c61;margin-left:1px;animation:blink 1s steps(1) infinite;vertical-align:-2px}
+.send{flex:none;width:23px;height:23px;border-radius:50%;background:#c4ced7;display:grid;place-items:center;transition:background .2s}
+.send.ready{background:var(--teal)}
+.send svg{width:11px;height:11px}
+.homebar{height:18px;display:grid;place-items:center;background:rgba(246,248,251,.92)}
+.homebar i{width:34%;height:4px;border-radius:3px;background:#0e1a22;opacity:.85}
 @keyframes blink{50%{opacity:0}}
 
 .bubble{position:relative;z-index:2;max-width:min(300px,88%);background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:12px 16px 12px 14px;box-shadow:var(--shadow-2);font-size:14.5px;line-height:1.38;color:var(--ink);display:flex;gap:10px;align-items:flex-start}
@@ -382,7 +402,7 @@ button.bubble.active .dot svg{stroke:#fff}
 /* Reduced motion */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .bubble,.input #typed::after{animation:none!important}
+  .bubble,.field #typed::after,.msg{animation:none!important}
   .reveal{opacity:1;transform:none;transition:none}
   .btn{transition:none}
 }
@@ -425,19 +445,28 @@ button.bubble.active .dot svg{stroke:#fff}
         </div>
         <button type="button" class="bubble b1" data-i="0"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b5c61" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg></span><span class="q">Who is a good colorectal surgeon near me?</span></button>
         <div class="phone" aria-hidden="true">
-          <div class="screen">
+          <div class="bezel"><div class="screen">
             <div class="island"></div>
-            <div class="status"><span>9:41</span><i>&#9679;&#9679;&#9679;</i></div>
-            <div class="screen-head">
-              <div class="eyebrow">New question</div>
-              <h3>What would you like to know?</h3>
+            <div class="status"><span>9:41</span><span class="icons">
+              <svg width="16" height="10" viewBox="0 0 16 10"><rect x="0" y="7" width="3" height="3" rx=".8" fill="#0e1a22"/><rect x="4.3" y="5" width="3" height="5" rx=".8" fill="#0e1a22"/><rect x="8.6" y="2.6" width="3" height="7.4" rx=".8" fill="#0e1a22"/><rect x="12.9" y="0" width="3" height="10" rx=".8" fill="#0e1a22"/></svg>
+              <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="#0e1a22" stroke-width="1.7" stroke-linecap="round"><path d="M1 3.6a8.6 8.6 0 0 1 12 0"/><path d="M3.3 6a5.3 5.3 0 0 1 7.4 0"/><circle cx="7" cy="8.5" r=".9" fill="#0e1a22" stroke="none"/></svg>
+              <svg width="24" height="11" viewBox="0 0 24 11"><rect x=".5" y=".5" width="20" height="10" rx="3" fill="none" stroke="#0e1a22" opacity=".4"/><rect x="2" y="2" width="15" height="7" rx="1.8" fill="#0e1a22"/><rect x="21.6" y="3.6" width="1.6" height="3.8" rx=".8" fill="#0e1a22" opacity=".45"/></svg>
+            </span></div>
+            <div class="chat-head">
+              <svg class="back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+              <div class="chat-title"><span class="chat-av"><svg viewBox="0 0 24 24" fill="none" stroke="#0b5c61" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg></span><b>New question</b></div>
+              <span style="width:22px"></span>
             </div>
-            <div class="screen-body">
-              <div class="halo"></div>
-              <p>Tap any question to see it typed.</p>
+            <div class="thread" id="thread">
+              <span class="stamp">Today 9:41</span>
+              <span class="hint">Tap any question around the phone</span>
             </div>
-            <div class="input"><span id="typed">Who is a good colorectal surgeon near me?</span><span class="send"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></span></div>
-          </div>
+            <div class="compose">
+              <span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="#4a5b67" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+              <div class="field"><span id="typed"></span><span class="send" id="send"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></span></div>
+            </div>
+            <div class="homebar"><i></i></div>
+          </div></div>
         </div>
         <button type="button" class="bubble b2" data-i="1"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b5c61" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg></span><span class="q">Where should I refer this patient?</span></button>
         <button type="button" class="bubble b3" data-i="2"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b5c61" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg></span><span class="q">Who does robotic colon surgery in Glendale?</span></button>
@@ -812,14 +841,26 @@ button.bubble.active .dot svg{stroke:#fff}
   var bubbles = Array.prototype.slice.call(document.querySelectorAll('.bubble'));
   var segs = Array.prototype.slice.call(document.querySelectorAll('.seg-btn'));
   function mark(){ bubbles.forEach(function(b, i){ b.classList.toggle('active', i === qi); }); }
+  var thread = document.getElementById('thread');
+  var sendBtn = document.getElementById('send');
+  function send(text){
+    var hint = thread.querySelector('.hint'); if (hint) hint.remove();
+    thread.querySelectorAll('.delivered').forEach(function(d){ d.remove(); });
+    thread.querySelectorAll('.msg').forEach(function(m){ m.classList.add('old'); });
+    var m = document.createElement('span'); m.className = 'msg'; m.textContent = text; thread.appendChild(m);
+    var d = document.createElement('span'); d.className = 'delivered'; d.textContent = 'Delivered'; thread.appendChild(d);
+    var msgs = thread.querySelectorAll('.msg'); if (msgs.length > 3) msgs[0].remove();
+    target.textContent = ''; sendBtn.classList.remove('ready');
+  }
+  function clearThread(){ thread.querySelectorAll('.msg,.delivered').forEach(function(x){ x.remove(); }); }
   function typeNow(text, hold){
     clearTimeout(timer); mark();
-    if (reduce){ target.textContent = text; return; }
-    var i = 0; target.textContent = '';
+    if (reduce){ send(text); return; }
+    var i = 0; target.textContent = ''; sendBtn.classList.add('ready');
     (function step(){
       i++; target.textContent = text.slice(0, i);
-      if (i < text.length) timer = setTimeout(step, 38);
-      else timer = setTimeout(next, hold || 2600);
+      if (i < text.length) timer = setTimeout(step, 36);
+      else timer = setTimeout(function(){ send(text); timer = setTimeout(next, hold || 2400); }, 550);
     })();
   }
   function next(){ qi = (qi + 1) % 3; typeNow(sets[cur][qi]); }
@@ -831,11 +872,11 @@ button.bubble.active .dot svg{stroke:#fff}
       cur = btn.getAttribute('data-set');
       segs.forEach(function(x){ var on = x === btn; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
       bubbles.forEach(function(b, i){ b.querySelector('.q').textContent = sets[cur][i]; });
-      qi = 0; typeNow(sets[cur][0], 4000);
+      qi = 0; clearThread(); typeNow(sets[cur][0], 4000);
     });
   });
-  mark();
-  if (!reduce) timer = setTimeout(next, 2600);
+  qi = 0; mark();
+  if (reduce) send(sets[cur][0]); else timer = setTimeout(function(){ typeNow(sets[cur][0]); }, 900);
 })();
 </script>
 </body>
