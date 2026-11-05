@@ -59,7 +59,7 @@ def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensu
 
 def run(out):
     static_nav = ('<nav class="crawl-nav" aria-label="Site links">' +
-                  ''.join(f'<a href="{h}">{html.escape(t)}</a>' for h, t in LINKS) + '</nav>')
+                  ''.join(f'<a href="{h}"' + (' target="_blank" rel="noopener"' if 'localliftnow.com' in h else '') + f'>{html.escape(t)}</a>' for h, t in LINKS) + '</nav>')
     static_foot = ('<div class="crawl-nav"><p>The SocialDM, 3104 E Camelback Rd #2161, Phoenix AZ 85016. info@thesocialdm.com</p>' +
                    ''.join(f'<a href="{u}">{u.split("/")[2]}</a>' for u in SOCIAL) + '</div>')
     for f in glob.glob(out + '/**/*.html', recursive=True):
