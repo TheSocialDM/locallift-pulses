@@ -45,7 +45,7 @@ img{max-width:100%;display:block}
 h1,h2,h3{font-family:"Manrope",system-ui,sans-serif;font-weight:800;letter-spacing:-0.035em;line-height:1.06;margin:0;color:var(--ink)}
 h2{font-size:clamp(30px,6.4vw,48px)}
 h3{font-size:20px;letter-spacing:-0.02em;line-height:1.2;font-weight:700}
-p{margin:0}
+p{margin:0;text-wrap:pretty}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
 .eyebrow{font-family:"Manrope",sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
@@ -214,7 +214,6 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
 .foot p{font-size:14.5px;color:var(--ink-2)}
 .foot p b{color:var(--ink);font-weight:600}
 .foot small{font-size:12.5px;color:var(--ink-3)}
-.photo-credit{font-size:12px;color:var(--ink-3)}
 
 /* Reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
@@ -279,11 +278,11 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
       <div class="hero-copy">
         <span class="eyebrow">Referral care for surgeons</span>
         <h1>Stay the name referring doctors <em>remember.</em></h1>
-        <p class="lede">We keep you in front of the doctors who send you patients, with letters you approve before anything goes out.</p>
+        <p class="lede">We keep you in front of referring doctors, with letters you approve before anything goes out.</p>
         <div><a class="btn" href="#how">See how it works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></div>
         <div class="who">
           <div class="photo-tile" aria-label="Placeholder for Dr. Zhubi's photo">Your photo here</div>
-          <div class="who-text"><b>Dr. Ylli Zhubi</b>Colorectal Surgery<br>Arizona Preferred Surgeons, Glendale, AZ</div>
+          <div class="who-text"><b>Dr. Ylli Zhubi</b>Colorectal Surgery<br>Arizona Preferred Surgeons, Glendale,&nbsp;AZ</div>
         </div>
       </div>
 
@@ -351,7 +350,7 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
       <div class="sec-head reveal">
         <span class="eyebrow">What referring offices see</span>
         <h2>A warm note from you. Never a sales pitch.</h2>
-        <p class="lede">Short, personal and easy to reply to. Here is a sample sent to a fictional family doctor.</p>
+        <p class="lede">Short, personal and easy to reply to. Here is a sample written to a fictional family doctor.</p>
       </div>
       <div class="letter-grid">
         <article class="letter reveal" aria-label="Sample letter">
@@ -424,7 +423,7 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
             <li class="row">
               <span class="av t-bday" aria-hidden="true">ME</span>
               <div class="row-main"><span class="row-name">Dr. Marcus Ellery<small>Palo Verde Gastroenterology</small></span><span class="tag t-bday">Birthday note</span></div>
-              <p class="row-note">Birthday on Thursday. A short handwritten style note is drafted for you.</p>
+              <p class="row-note">Birthday on Thursday. A short birthday note is drafted for you to review.</p>
             </li>
             <li class="row">
               <span class="av t-quiet" aria-hidden="true">LO</span>
@@ -490,7 +489,7 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
               <small>Calls placed from your online listing</small>
             </div>
           </div>
-          <p class="summary-foot">Bars are illustrative. Your real summary starts after your first month.</p>
+          <p class="summary-foot">Bars are illustrative. Nothing here reflects real activity.</p>
         </div>
       </div>
     </div>
@@ -539,7 +538,6 @@ footer{background:var(--blue-1);padding:40px 0 calc(40px + env(safe-area-inset-b
   <div class="wrap foot">
     <p><b>Prepared by LocalLift, a service by The SocialDM.</b></p>
     <small>Private preview for Dr. Zhubi. Sample content, nothing is live.</small>
-    <small class="photo-credit">Photos licensed from Pexels. People shown are not Dr. Zhubi or his staff.</small>
   </div>
 </footer>
 
