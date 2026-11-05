@@ -691,5 +691,5 @@ function Footer(){
 function App(){
   const[tool,setTool]=useState("Weekly Pulse");
   const goTool=t=>{setTool(t);const el=document.getElementById('intelligence');if(el)el.scrollIntoView({behavior:REDUCED?'auto':'smooth'})};
-  return html`<div><${Nav}/><main id="main"><${Hero}/><${ReachMap}/><${Problem}/><${Framework} goTool=${goTool}/><${Console} tool=${tool} setTool=${setTool}/><${Reports}/><${Industries}/><${Managed}/><${Results}/><${Audit}/></main><${Footer}/></div>`;
+  return html`<div><${Nav}/><main id="main"><${Hero}/><${ReachMap}/><${Problem}/><${Framework} goTool=${goTool}/><${Console} tool=${tool} setTool=${setTool}/><${Reports}/><${Industries}/><${Managed}/><${Results}/><${Faq} items=${FAQS.Home}/><${Audit}/></main><${Footer}/></div>`;
 }

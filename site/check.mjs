@@ -7,6 +7,7 @@ const pages = [];
 const BANNED = /\b(yardi|rentcafe|entrata|realpage|costar|apartments\.com|zillow|local ?falcon|semrush|ahrefs|similarweb|brightlocal|whitespark|chatgpt|openai|gemini|perplexity|claude|copilot|metricool|windsor|supermetrics|search console|google analytics|ga4|hubspot|klaviyo|canva|airtable|netlify|instagram|facebook|tiktok|linkedin)\b/i;
 const REAL_CITIES = /\b(phoenix|scottsdale|tempe|mesa|chandler|gilbert|tigard|portland|seattle|denver|austin|dallas|houston|chicago|atlanta|miami|los angeles|san diego|las vegas)\b/i;
 let bad = 0;
+const titles = new Set();
 const flag = (f, m) => { bad++; console.log('FAIL', path.relative(OUT, f) || 'index.html', m); };
 for (const f of pages) {
   const html = fs.readFileSync(f, 'utf8');
@@ -26,6 +27,15 @@ for (const f of pages) {
   if (/<input[^>]*\bname=/i.test(html)) flag(f, 'input has a name attribute');
   if (!/<title>[^<]{10,}<\/title>/.test(html)) flag(f, 'missing title');
   if (!/application\/ld\+json/.test(html)) flag(f, 'missing schema');
+  let graph = [];
+  try { for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) { const o = JSON.parse(m[1]); graph.push(...(o['@graph'] || [o])); } } catch (e) { flag(f, 'schema is not valid JSON'); }
+  const fq = graph.find(o => o['@type'] === 'FAQPage');
+  if (!fq) flag(f, 'missing FAQPage schema');
+  if (!/id="faq"/.test(html)) flag(f, 'missing visible FAQ section');
+  if (fq) for (const q of fq.mainEntity) if (!visible.includes(q.name)) flag(f, 'FAQ in schema but not on page: ' + q.name);
+  if (!graph.some(o => o['@type'] === 'WebPage')) flag(f, 'missing WebPage schema');
+  const t = (html.match(/<title>([^<]*)<\/title>/) || [])[1]; if (titles.has(t)) flag(f, 'duplicate title'); titles.add(t);
+  if (!/<meta name="description" content="[^"]{50,}"/.test(html)) flag(f, 'missing meta description');
 }
 const js = fs.readFileSync(path.join(OUT, 'assets/app.js'), 'utf8');
 if (!/const DOORS=7900;/.test(js)) flag(OUT, 'DOORS constant is not 7900');

@@ -225,6 +225,61 @@ function IndustriesIndex(){
 }
 
 /* ---------- page registry ---------- */
-const FAQS={};
+const FAQS={
+ Home:[
+  ["What is LocalLift?","LocalLift is a local visibility service from The SocialDM. We show how your business appears across Google Search, Google Maps and AI answers, then do the work to strengthen it: daily Google posts, review responses, content and weekly reporting."],
+  ["How do you know what AI assistants say about my business?","Every week we ask the leading AI assistants the questions your customers ask, and record who gets named. You see where you appear, where you do not, and who is named instead."],
+  ["Do I need to learn a new platform?","No. There is no dashboard to log in to. Our team runs the tools and sends written reports you can read in minutes and forward to ownership."],
+  ["What do I receive each week?","A Weekly Pulse every Friday with one recommended next step, plus weekly reads on your map rank, AI answers and listing accuracy. Snapshot and ClearView reports arrive monthly."],
+  ["Does LocalLift replace my website or my ads?","No. LocalLift works alongside them. It strengthens how you appear in organic search, on Google Maps and in AI answers, where most local decisions now start."],
+  ["Are the numbers on this site real?","The door count is real. Every other number, chart, business and city on this site is a sample, made up to show what our reports look like."],
+  ["How do I get started?","Request a Visibility Audit. The audit form on this preview does not send yet, so contact The SocialDM directly in the meantime."]],
+ Industries:[
+  ["Which industries does LocalLift work with?","Multifamily, build to rent, medical practices, med spas, real estate agents, hair salons, hospitality and multi property portfolios."],
+  ["Is the service different for each industry?","The loop is the same: discover, compare, strengthen and measure. The questions we track, the competitors we watch and the content we write change for each industry."],
+  ["My industry is not listed. Can you still help?","If customers search for you nearby, the same approach applies. Contact The SocialDM and we will tell you honestly whether LocalLift fits."],
+  ["Do you work with groups and multi location businesses?","Yes. Portfolio reporting puts every location side by side on the same measures, with one recommended move for each."]],
+ "Multifamily":[
+  ["How does LocalLift help apartment communities?","We track how renters find your community on Google Search, Google Maps and AI answers, fix what is wrong or out of date, and keep your Google presence active every day. Every Friday you get one page on what moved and one next step."],
+  ["Do you track competitor rents and specials?","Yes. Market Survey compares asking rents, effective rents and specials at your competitors every Sunday, side by side with yours."],
+  ["Are review responses written with fair housing in mind?","Yes. Every response is written in your voice, stays neutral and never references a protected characteristic or a resident's personal details."],
+  ["Do you work with lease ups as well as stabilized communities?","Yes. Lease ups need visibility fast and change often. Stabilized communities need to hold their place against newer competitors. The weekly loop covers both."],
+  ["How large is your multifamily portfolio?","LocalLift works across more than 7,900 doors, and counting."]],
+ "Build to rent":[
+  ["What makes build to rent visibility different?","Many families do not yet search for build to rent by name. Your community has to appear for the searches they do make, like homes for rent with a yard, and be explained clearly when they ask AI assistants."],
+  ["Do you support communities still in lease up?","Yes. We keep phases, pricing and amenities current across your website, your Google profile and AI answers as they change."],
+  ["Can you control what AI assistants say about us?","No one can control AI answers directly. We track what they say every week, correct the sources they draw on, and publish clear content so the answers improve over time."],
+  ["Do you track nearby rentals and other communities?","Yes. Market Survey watches nearby offers every Sunday so you know what families are comparing you with."]],
+ "Medical":[
+  ["Is your review response process safe for patient privacy?","Yes. Responses never confirm that someone is a patient and never discuss care. We do not need access to patient records."],
+  ["Can you fix wrong hours, addresses or provider details?","Yes. Site Read checks your details across your website, your Google profile and AI answers every week, and we correct what is out of date."],
+  ["Do you work with practices that have several locations?","Yes. Each location is tracked on its own, and portfolio reporting shows every location side by side."],
+  ["Will this replace our website or patient marketing?","No. LocalLift works alongside them and focuses on how patients find and judge your practice before they call."]],
+ "Med Spa":[
+  ["How do you help a med spa get recommended by AI assistants?","We track the questions clients ask every week, see which med spas are named, and strengthen the reviews, posts and details AI answers draw on."],
+  ["Can you promote our monthly offers?","Yes. Daily Presence posts feature current offers and treatments, and Site Read checks that the offer reads the same everywhere."],
+  ["Do your posts make claims about treatment results?","No. Posts and review replies stay factual, avoid promising outcomes and respect client privacy."],
+  ["How soon will we see changes?","Some fixes, like correct hours or a current offer, show within days. Map rank and AI answers move over weeks, which is why we report every week."]],
+ "Real Estate":[
+  ["Do you work with individual agents or teams?","Both. LocalLift works for a single agent, a team or a brokerage with many profiles."],
+  ["Can you help me show up in specific neighborhoods?","Yes. Map Reach measures your Google Maps rank across the neighborhoods you choose, and your posts and content are written for those same areas."],
+  ["Do I need to write the posts myself?","No. We write and publish daily Google posts on your listings, sales and market notes. You can review them whenever you like."],
+  ["How do you handle client reviews?","Review Desk answers every review in your voice, so each reply adds to your reputation instead of sitting unanswered."]],
+ "Hair Salons":[
+  ["Does LocalLift work for a single salon?","Yes. LocalLift runs for you, so one salon gets the same weekly work without adding to the front desk."],
+  ["Do you need our photos?","Your own photos work best. Share them with us and we will put them to work in your daily Google posts."],
+  ["How do you handle a negative review?","Calmly and in your voice. We thank the client, acknowledge the concern and invite them to talk with you directly."],
+  ["Will our hours and services stay correct online?","Yes. Site Read checks hours, services and prices across your website, your Google profile and AI answers every week."]],
+ "Hospitality":[
+  ["Can LocalLift help us earn more direct bookings?","We strengthen your own Google profile and website so travelers have a reason to book with you directly, and we report the calls and website clicks that come from Google."],
+  ["How do you respond to guest reviews?","In your voice, while the stay is still fresh. Thoughtful replies show future guests that someone is paying attention."],
+  ["Do you track how AI assistants recommend hotels?","Yes. Every week we ask the trip questions your guests ask and record which properties are named."],
+  ["Do you work with groups of properties?","Yes. Portfolio reporting shows every property side by side on the same measures."]],
+ "Portfolios":[
+  ["How do you compare properties in different markets?","Each property is measured against its own local market, then scored on the same Lift Score, so a portfolio view is a fair comparison."],
+  ["Can ownership read the reports directly?","Yes. Every report is written to be read in minutes and forwarded as it is."],
+  ["How many properties can you cover?","From a handful to a full portfolio. Each property gets the same weekly read and one recommended move."],
+  ["Do property teams need to change how they work?","No. There is no new login. Teams receive one clear next step each week, and our team does the visibility work."]],
+};
 const PAGES={home:App,industries:IndustriesIndex};
 IND.forEach(x=>{PAGES['ind:'+x.t]=()=>html`<${IndustryPage} name=${x.t}/>`});
