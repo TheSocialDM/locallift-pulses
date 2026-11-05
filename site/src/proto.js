@@ -297,11 +297,11 @@ function Framework({goTool}){
 /* ---------- 6. intelligence tools ---------- */
 const Rows=({rows})=>html`<div>${rows.map((r,i)=>html`<div className="drow" key=${i}><span>${r[0]}</span><span>${r[1]}</span><b className=${r[3]||''}>${r[2]}</b></div>`)}</div>`;
 function LiftChart(){
-  const sm=useMedia('(max-width:600px)'),fs=sm?12:11;
-  const v=[52,54,55,58,60,61,64,68],W=sm?320:520,H=sm?150:170,L=30,R=sm?12:18,T=14,B=26;
+  const sm=useMedia('(max-width:600px)'),xs=useMedia('(max-width:380px)'),fs=sm?12:11;
+  const v=[52,54,55,58,60,61,64,68],W=xs?280:sm?320:520,H=sm?150:170,L=30,R=sm?12:18,T=14,B=26;
   const x=i=>L+i*(W-L-R)/(v.length-1),y=n=>T+(80-n)*(H-T-B)/(80-40);
   const d=v.map((n,i)=>(i?'L':'M')+x(i)+' '+y(n)).join('');
-  return html`<svg viewBox=${`0 0 ${W} ${H}`} style=${{width:'100%',height:'auto',display:'block'}} role="img" aria-label="Sample Lift Score rising from 52 to 68 across eight weeks">
+  return html`<svg className="ch" viewBox=${`0 0 ${W} ${H}`} style=${{width:'100%',height:'auto',display:'block','--ar-sm':'320/150','--ar-xs':'280/150'}} role="img" aria-label="Sample Lift Score rising from 52 to 68 across eight weeks">
     ${[40,60,80].map(n=>html`<g key=${n}><line x1=${L} x2=${W-R} y1=${y(n)} y2=${y(n)} stroke="#2A2A2A"/><text x=${L-8} y=${y(n)+4} fontSize=${fs} textAnchor="end" fill="rgba(255,255,255,.72)" fontFamily="var(--mono)">${n}</text></g>`)}
     <path d=${d+`L${x(7)} ${H-B}L${x(0)} ${H-B}Z`} fill="rgba(226,35,25,.14)"/>
     <path d=${d} fill="none" stroke="#FF5A4D" strokeWidth="2"/>
@@ -347,14 +347,14 @@ function Console({tool,setTool}){
 /* ---------- sample charts: fake numbers, fictional places ---------- */
 const smoothPath=pts=>{let d='M'+pts[0][0].toFixed(1)+' '+pts[0][1].toFixed(1);for(let i=0;i<pts.length-1;i++){const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;d+=`C${(p1[0]+(p2[0]-p0[0])/6).toFixed(1)} ${(p1[1]+(p2[1]-p0[1])/6).toFixed(1)} ${(p2[0]-(p3[0]-p1[0])/6).toFixed(1)} ${(p2[1]-(p3[1]-p1[1])/6).toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`}return d};
 function LineChart({data,base,run,vis,name}){
-  const sm=useMedia('(max-width:600px)'),fs=sm?12:11;
-  const W=sm?320:680,H=sm?210:250,L=sm?30:34,R=sm?10:16,T=14,B=28;const last=data.length-1;const[h,setH]=useState(last);const[auto,setAuto]=useState(true);
+  const sm=useMedia('(max-width:600px)'),xs=useMedia('(max-width:380px)'),fs=sm?12:11;
+  const W=xs?280:sm?320:680,H=sm?210:250,L=sm?30:34,R=sm?10:16,T=14,B=28;const last=data.length-1;const[h,setH]=useState(last);const[auto,setAuto]=useState(true);
   useEffect(()=>{if(!vis||!auto||REDUCED)return;const t=setInterval(()=>setH(x=>(x+1)%data.length),1100);return()=>clearInterval(t)},[vis,auto]);
   const min=40,max=80,x=i=>L+i*(W-L-R)/last,y=n=>T+(max-n)*(H-T-B)/(max-min);
   const p=smoothPath(data.map((n,i)=>[x(i),y(n)])),q=smoothPath(base.map((n,i)=>[x(i),y(n)]));
-  const tw=150,tx=x(h)+tw+14>W-R?x(h)-tw-12:x(h)+12,ty=Math.max(2,Math.min(y(data[h])-34,H-B-70));
+  const tw=sm?132:150,tx0=x(h)+tw+14>W-R?x(h)-tw-12:x(h)+12,tx=Math.max(L+2,Math.min(W-R-tw,tx0)),ty=Math.max(2,Math.min(y(data[h])-34,H-B-70));
   const pick=i=>{setAuto(false);setH(i)};
-  return html`<svg viewBox=${`0 0 ${W} ${H}`} role="img" aria-label=${name+' sample trend from '+data[0]+' to '+data[last]}>
+  return html`<svg className="ch" style=${{'--ar-sm':'320/210','--ar-xs':'280/210'}} viewBox=${`0 0 ${W} ${H}`} role="img" aria-label=${name+' sample trend from '+data[0]+' to '+data[last]}>
     <defs><linearGradient id="ln" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stopColor="#E22319" stopOpacity=".12"/><stop offset=".22" stopColor="#FF5A4D"/></linearGradient>
     <linearGradient id="ar" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor="#E22319" stopOpacity=".3"/><stop offset="1" stopColor="#E22319" stopOpacity="0"/></linearGradient></defs>
     ${[40,60,80].map(n=>html`<g key=${n}><line x1=${L} x2=${W-R} y1=${y(n)} y2=${y(n)} style=${{stroke:'var(--line)'}}/><text x=${L-8} y=${y(n)+4} fontSize=${fs} textAnchor="end" style=${{fill:'var(--grey)',fontFamily:'var(--mono)'}}>${n}</text></g>`)}
@@ -381,10 +381,10 @@ function TypeLine({text,run}){
   return html`<span>${text.slice(0,n)}${n<text.length?html`<span className="caret"></span>`:null}</span>`;
 }
 function Bars({data,labels,run,name,accentLast=true,height=190,hi}){
-  const sm=useMedia('(max-width:600px)');
-  const W=sm?320:680,H=sm?Math.round(height*.9):height,L=8,R=8,T=26,B=24;const[h,setH]=useState(hi==null?data.length-1:hi);
+  const sm=useMedia('(max-width:600px)'),xs=useMedia('(max-width:380px)'),hs=Math.round(height*.9);
+  const W=xs?280:sm?320:680,H=sm?hs:height,L=8,R=8,T=26,B=24;const[h,setH]=useState(hi==null?data.length-1:hi);
   const max=Math.max(...data)*1.08,bw=(W-L-R)/data.length;
-  return html`<svg viewBox=${`0 0 ${W} ${H}`} role="img" aria-label=${name+' sample values '+data.join(', ')}>
+  return html`<svg className="ch" style=${{'--ar-sm':'320/'+hs,'--ar-xs':'280/'+hs}} viewBox=${`0 0 ${W} ${H}`} role="img" aria-label=${name+' sample values '+data.join(', ')}>
     <line x1=${L} x2=${W-R} y1=${H-B} y2=${H-B} style=${{stroke:'var(--line)'}}/>
     ${data.map((v,i)=>{const bh=(H-T-B)*v/max,on=i===h;return html`<g key=${i} className="bar-hit" onMouseEnter=${()=>setH(i)} onClick=${()=>setH(i)}>
       <rect x=${L+i*bw} y=${T} width=${bw} height=${H-T-B} fill="transparent"/>

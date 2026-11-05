@@ -529,3 +529,6 @@ html,body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}
 @media(max-width:620px){.sched-hint{display:block}}
 /* very narrow phones: keep the stat numbers and the loop buttons inside their boxes */
 @media(max-width:380px){.stat-n{font-size:38px}.stage-btn{font-size:13.5px;padding:0 10px;min-height:44px}}
+/* phones: reserve each chart's final shape before the script redraws it, and keep the fanned report cards inside the page */
+@media(max-width:600px){svg.ch{aspect-ratio:var(--ar-sm)}.peek{overflow-x:clip}}
+@media(max-width:380px){svg.ch{aspect-ratio:var(--ar-xs)}}
