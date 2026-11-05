@@ -4,7 +4,7 @@ import path from 'path';
 import React from 'react';
 import {renderToString} from 'react-dom/server';
 import htm from 'htm';
-import {buildPages} from './src/meta.mjs';
+import {buildPages, SITE} from './src/meta.mjs';
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const OUT = path.join(ROOT, 'dist');
@@ -41,6 +41,7 @@ for (const p of pageList) {
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${esc(p.title)}</title>
 <meta name="description" content="${esc(p.description)}">
+${SITE.url ? `<link rel="canonical" href="${SITE.url}/${p.path ? p.path + '/' : ''}">\n<meta property="og:url" content="${SITE.url}/${p.path ? p.path + '/' : ''}">` : ''}
 ${PREVIEW ? '<meta name="robots" content="noindex,nofollow">' : ''}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LocalLift">
@@ -71,5 +72,6 @@ ${ld}
   fs.writeFileSync(file, doc);
   console.log('built', p.path || '/');
 }
-fs.writeFileSync(path.join(OUT, 'robots.txt'), PREVIEW ? 'User-agent: *\nDisallow: /\n' : `User-agent: *\nAllow: /\n`);
+fs.writeFileSync(path.join(OUT, 'robots.txt'), PREVIEW ? 'User-agent: *\nDisallow: /\n' : `User-agent: *\nAllow: /\n${SITE.url ? `Sitemap: ${SITE.url}/sitemap.xml\n` : ''}`);
+if (!PREVIEW && SITE.url) fs.writeFileSync(path.join(OUT, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + pageList.map(p => `  <url><loc>${SITE.url}/${p.path ? p.path + '/' : ''}</loc></url>`).join('\n') + '\n</urlset>\n');
 fs.writeFileSync(path.join(OUT, '_headers'), PREVIEW ? '/*\n  X-Robots-Tag: noindex, nofollow\n' : '');

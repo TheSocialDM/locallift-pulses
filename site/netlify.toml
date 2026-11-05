@@ -1,4 +1,8 @@
-# LocalLift website preview. Manual draft deploys only; no domain is attached.
+# LocalLift website, live at localliftnow.com.
 [build]
   command = "npm ci && node build.mjs && node check.mjs"
   publish = "dist"
+
+[build.environment]
+  LIVE = "1"
+  SITE_URL = "https://localliftnow.com"

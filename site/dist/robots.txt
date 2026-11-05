@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://localliftnow.com/sitemap.xml
