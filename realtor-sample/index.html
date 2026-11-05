@@ -61,7 +61,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;paddi
 
 /* HERO */
 .hero{display:grid;gap:28px;padding:clamp(28px,6vw,72px)}
-.hero h1{font-size:clamp(40px,10.5vw,84px);margin:18px 0 18px}
+.hero h1{font-size:clamp(42px,11.5vw,84px);margin:18px 0 18px}
 .hero h1 em{font-style:normal;color:var(--gold2)}
 .hero p.lead{font-size:clamp(16px,2.2vw,19px);max-width:30ch;color:var(--onDarkMuted)}
 .hero .cta{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
@@ -93,11 +93,12 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;paddi
 .post img{width:100%;aspect-ratio:4/5;object-fit:cover}
 .post .cap{font-size:11.5px;line-height:1.45;padding:9px 13px 14px}
 .post .cap b{font-weight:600}
-.postGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.postGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .postGrid figure{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5}
 .postGrid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .postGrid figure:hover img{transform:scale(1.04)}
-.postGrid figcaption{position:absolute;left:8px;right:8px;bottom:8px;padding:8px 10px;font-size:12px;font-weight:500;border-radius:12px}
+.postGrid figcaption{position:absolute;left:6px;right:6px;bottom:6px;padding:6px 8px;font-size:11px;font-weight:500;line-height:1.25;border-radius:10px}
+@media (min-width:600px){.postGrid{gap:12px}.postGrid figcaption{left:8px;right:8px;bottom:8px;padding:8px 10px;font-size:12px}}
 .postsCopy h3{font-size:clamp(26px,5vw,38px);margin:14px 0 12px}
 .postsCopy p{margin-bottom:22px}
 
@@ -277,7 +278,7 @@ footer{margin:clamp(40px,7vw,80px) 0 0;padding-bottom:20px}
       <div><span class="eyebrow">Working together</span><h2 style="margin-top:12px">What you get with Victoria.</h2></div>
     </div>
     <div class="cards">
-      <div class="card feature rv"><span class="num">01</span><h3>Local knowledge</h3><p>Clear insight on Scottsdale streets, schools nearby, commute routes, and what to look for in each home.</p></div>
+      <div class="card feature rv"><span class="num">01</span><h3>Local knowledge</h3><p>Clear insight on Scottsdale streets, local amenities, commute routes, and what to look for in each home.</p></div>
       <div class="card rv"><span class="num">02</span><h3>A clear plan</h3><p>Every step laid out in advance, so you always know what comes next and why.</p></div>
       <div class="card rv"><span class="num">03</span><h3>Honest updates</h3><p>Quick replies and straight answers, by phone, text, or email, whatever you prefer.</p></div>
     </div>
