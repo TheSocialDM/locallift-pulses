@@ -241,7 +241,7 @@ const FAQS={
   ["What do I receive each week?","A Weekly Pulse every Friday with one recommended next step, plus weekly reads on your map rank, AI answers and listing accuracy. Snapshot and ClearView reports arrive monthly."],
   ["Does LocalLift replace my website or my ads?","No. LocalLift works alongside them. It strengthens how you appear in organic search, on Google Maps and in AI answers, where many local decisions start."],
   ["Are the numbers on this site real?","The door count, the weekly post count and the case study are real. Every number, chart, business and city in the samples is made up to show what our reports look like."],
-  ["How do I get started?","Request a Visibility Audit. The audit form does not send yet, so contact The SocialDM directly in the meantime."]],
+  ["How do I get started?","Request a Visibility Audit with the form on this page. A real person replies within one business day."]],
  Industries:[
   ["Which industries does LocalLift work with?","Multifamily, build to rent, medical practices, med spas, real estate agents, hair salons, hospitality and portfolios of many properties."],
   ["Is the service different for each industry?","The loop is the same: discover, compare, strengthen and measure. The questions we track, the competitors we watch and the content we write change for each industry."],

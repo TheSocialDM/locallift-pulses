@@ -1,4 +1,11 @@
-# LocalLift website preview. Manual draft deploys only; no domain is attached.
+# LocalLift website.
 [build]
   command = "npm ci && node build.mjs && node check.mjs"
   publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
+[build.environment]
+  LIVE = "1"
+  SITE_URL = "https://www.localliftnow.com"

@@ -646,6 +646,17 @@ function Results(){
 
 /* ---------- 9. audit ---------- */
 function Audit({industry="Multifamily"}){
+  const [state,setState]=useState('idle');
+  const send=async e=>{
+    e.preventDefault();
+    const f=e.currentTarget;
+    if(!f.reportValidity())return;
+    setState('sending');
+    try{
+      const r=await fetch('/api/audit',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))});
+      setState(r.ok?'sent':'error');
+    }catch(err){setState('error')}
+  };
   return html`<section className="band black audit" id="audit">
     <div className="audit-rings" aria-hidden="true"><span></span><span></span><span></span></div>
     <div className="wrap audit-grid">
@@ -654,17 +665,17 @@ function Audit({industry="Multifamily"}){
         <h2 className="title">See where you show up, and <em>where you don't.</em></h2>
         <p className="lede">We check Google Search, Google Maps and AI answers for your business and send a clear plan to close the gaps.</p>
       </div>
-      <form className="form" aria-describedby="audit-note" onSubmit=${e=>e.preventDefault()} noValidate>
-        <p className="form-flag" id="audit-note" role="note"><b>This form does not send yet.</b> It is switched off for now and collects nothing. Nothing you see here is saved, stored or sent.</p>
-        <fieldset disabled style=${{border:0,margin:0,padding:0,display:'flex',flexDirection:'column',gap:'14px'}}>
-          <label htmlFor="biz">Business name<input id="biz" placeholder="Your business" autoComplete="off"/></label>
-          <label htmlFor="city">City<input id="city" placeholder="Your city" autoComplete="off"/></label>
-          <label htmlFor="ind">Industry<select id="ind" defaultValue=${industry}>${IND.map(x=>html`<option key=${x.t}>${x.t}</option>`)}</select></label>
-          <label htmlFor="mail">Work email<input id="mail" type="text" placeholder="you@company.com" autoComplete="off"/></label>
-          <button className="btn red" type="button">Get Your Visibility Audit</button>
-        </fieldset>
-        <p className="form-note">Want an audit now? <a href="https://www.thesocialdm.com/contact" target="_blank" rel="noopener">Contact The SocialDM</a>.</p>
-      </form>
+      ${state==='sent'
+        ? html`<div className="form form-done" role="status"><h3>Thanks. We have your request.</h3><p>A real person will reply within one business day. Check your inbox for a copy of what you sent.</p></div>`
+        : html`<form className="form" onSubmit=${send}>
+        <label htmlFor="biz">Business name<input id="biz" name="business" required maxLength="120" placeholder="Your business" autoComplete="organization"/></label>
+        <label htmlFor="city">City<input id="city" name="city" required maxLength="80" placeholder="Your city" autoComplete="address-level2"/></label>
+        <label htmlFor="ind">Industry<select id="ind" name="industry" defaultValue=${industry}>${IND.map(x=>html`<option key=${x.t}>${x.t}</option>`)}</select></label>
+        <label htmlFor="mail">Work email<input id="mail" name="email" type="email" required maxLength="160" placeholder="you@company.com" autoComplete="email"/></label>
+        <p className="form-hp" aria-hidden="true"><label>Leave this empty<input name="website" tabIndex="-1" autoComplete="off"/></label></p>
+        <button className="btn red" type="submit" disabled=${state==='sending'}>${state==='sending'?'Sending':'Get Your Visibility Audit'}</button>
+        ${state==='error'&&html`<p className="form-flag" role="alert">That did not go through. Please try again, or email <a href="mailto:info@thesocialdm.com">info@thesocialdm.com</a>.</p>`}
+      </form>`}
     </div>
   </section>`;
 }
@@ -939,7 +950,7 @@ const FAQS={
   ["What do I receive each week?","A Weekly Pulse every Friday with one recommended next step, plus weekly reads on your map rank, AI answers and listing accuracy. Snapshot and ClearView reports arrive monthly."],
   ["Does LocalLift replace my website or my ads?","No. LocalLift works alongside them. It strengthens how you appear in organic search, on Google Maps and in AI answers, where many local decisions start."],
   ["Are the numbers on this site real?","The door count, the weekly post count and the case study are real. Every number, chart, business and city in the samples is made up to show what our reports look like."],
-  ["How do I get started?","Request a Visibility Audit. The audit form does not send yet, so contact The SocialDM directly in the meantime."]],
+  ["How do I get started?","Request a Visibility Audit with the form on this page. A real person replies within one business day."]],
  Industries:[
   ["Which industries does LocalLift work with?","Multifamily, build to rent, medical practices, med spas, real estate agents, hair salons, hospitality and portfolios of many properties."],
   ["Is the service different for each industry?","The loop is the same: discover, compare, strengthen and measure. The questions we track, the competitors we watch and the content we write change for each industry."],

@@ -2,8 +2,10 @@ html,body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}
 /* real site additions */
 .form-flag{margin:0;padding:12px 14px;background:#FFF1F0;border-left:3px solid var(--red);font-size:14px;line-height:1.45;color:#000}
 .form-flag b{font-weight:600}
-.form fieldset[disabled] input,.form fieldset[disabled] select{background:#F5F5F5;color:#8C8C8C;cursor:not-allowed}
-.form fieldset[disabled] .btn{opacity:.55;cursor:not-allowed}
+.form .btn[disabled]{opacity:.55;cursor:wait}
+.form-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;margin:0}
+.form-done h3{margin:0;font-size:26px;line-height:1.15;letter-spacing:-.02em;font-weight:700}
+.form-done p{margin:0;font-size:16px;line-height:1.5}
 .form-note a{color:var(--ink);font-weight:500}
 .skip{position:absolute;left:-9999px;top:0;z-index:100;background:#fff;color:#000;padding:10px 14px}
 .skip:focus{left:12px;top:12px}

@@ -25,9 +25,8 @@ for (const f of pages) {
   for (const m of html.matchAll(/href="(\/[^"#]*)/g)) { const t = path.join(OUT, m[1], m[1].endsWith('/') || !path.extname(m[1]) ? 'index.html' : ''); if (!fs.existsSync(t)) flag(f, 'broken internal link: ' + m[1]); }
   for (const m of visible.replace('The SocialDM™. Phoenix, Arizona.', '').matchAll(/.{0,40}\b(phoenix|tigard|oregon|arizona)\b.{0,40}/gi)) console.log('NOTE real place', path.relative(OUT, f) || 'index.html', '::', m[0].trim());
   for (const m of visible.matchAll(/(\d{1,2},\d{3})\+? ?doors/gi)) if (+m[1].replace(',', '') > 7900) flag(f, 'door count over 7,900: ' + m[0]);
-  if (!/does not send yet/i.test(visible) && /id="audit"/.test(html)) flag(f, 'audit form missing does not send note');
-  if (/<form[^>]*(action=|netlify|method=)/i.test(html)) flag(f, 'form has an action or Netlify attribute');
-  if (/<input[^>]*\bname=/i.test(html)) flag(f, 'input has a name attribute');
+  if (/does not send|switched off/i.test(visible)) flag(f, 'old form switched off copy still present');
+  if (/id="audit"/.test(html) && !/name="email"/.test(html)) flag(f, 'audit form is missing its email field');
   if (!/<title>[^<]{10,}<\/title>/.test(html)) flag(f, 'missing title');
   if (!/application\/ld\+json/.test(html)) flag(f, 'missing schema');
   let graph = [];
