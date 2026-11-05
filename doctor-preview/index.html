@@ -322,6 +322,95 @@ button.bubble.active .dot svg{stroke:#fff}
 .check-rows li{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 6px;border-top:1px solid var(--line)}
 .check-rows .src{font-family:"Manrope",sans-serif;font-weight:700;font-size:15px;letter-spacing:-0.01em}
 
+
+/* Sample sends */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tab{appearance:none;border:1px solid var(--line);background:#fff;color:var(--ink-2);font:600 14px/1 "DM Sans",sans-serif;min-height:42px;padding:0 16px;border-radius:999px;cursor:pointer;box-shadow:var(--shadow-1);transition:background .2s,color .2s,border-color .2s}
+.tab.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.tab:focus-visible{outline:3px solid #7cc3c6;outline-offset:3px}
+.panel{display:grid;grid-template-columns:1fr;gap:20px;align-items:start}
+.panel[hidden]{display:none}
+.panel .mock{animation:fadeup .4s ease both}
+@keyframes fadeup{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.mock{background:#fff;border:1px solid var(--line);border-radius:var(--radius-xl);box-shadow:var(--shadow-2);overflow:hidden;min-width:0}
+.about-send{background:var(--blue-1);border-radius:var(--radius-lg);padding:22px 22px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.about-send dl{margin:4px 0 0;display:grid;gap:4px}
+.about-send dt{font-family:"Manrope",sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+.about-send dd{margin:0;font-size:15px;color:var(--ink-2)}
+/* mail */
+.mail-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;background:var(--mist);border-bottom:1px solid var(--line)}
+.mail-bar span{width:10px;height:10px;border-radius:50%;background:#d9e2ea}
+.mail-bar em{font-style:normal;font-size:12.5px;color:var(--ink-3);margin-left:8px;font-weight:600}
+.mail-meta{padding:14px 18px;border-bottom:1px solid var(--line);display:grid;gap:5px;font-size:13.5px;color:var(--ink-2)}
+.mail-meta div{display:grid;grid-template-columns:58px 1fr;gap:6px}
+.mail-meta small{color:var(--ink-3);font-size:12px;padding-top:1px}
+.mail-meta b{color:var(--ink);font-weight:600}
+.mail-body{padding:20px 18px 22px;display:flex;flex-direction:column;gap:12px;font-size:15px}
+.mini-card{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:16px;padding:12px;background:var(--mist);margin-top:4px}
+.mini-card img{width:48px;height:48px;border-radius:12px;object-fit:cover;object-position:center 18%}
+.mini-card b{display:block;font-family:"Manrope",sans-serif;font-size:14.5px}
+.mini-card span{display:block;font-size:13px;color:var(--ink-2)}
+/* newsletter */
+.nl{background:#f4f8fb;padding:14px}
+.nl-hero{position:relative;border-radius:18px;overflow:hidden}
+.nl-hero>img{width:100%;height:210px;object-fit:cover;object-position:center 60%}
+.nl-hero-in{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.nl-hero-in img{height:26px;width:auto;align-self:flex-start;margin-bottom:6px}
+.nl-hero-in b{font-family:"Manrope",sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.02em}
+.nl-hero-in span{font-size:12.5px;color:var(--ink-3)}
+.nl-body{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.nl-item{background:#fff;border-radius:14px;padding:14px 16px;border:1px solid var(--line)}
+.nl-item h4{font-family:"Manrope",sans-serif;font-weight:700;font-size:15.5px;letter-spacing:-0.015em;margin:4px 0;line-height:1.3}
+.nl-item p{font-size:14px;color:var(--ink-2);line-height:1.5}
+.nl-k{font-family:"Manrope",sans-serif;font-weight:700;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.nl-team{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center}
+.nl-team img{width:96px;height:72px;object-fit:cover;border-radius:10px}
+.nl-btn{align-self:center;background:var(--teal);color:#fff;font-family:"Manrope",sans-serif;font-weight:700;font-size:14px;border-radius:999px;padding:11px 20px;margin:6px 0 4px}
+/* tip sheet */
+.sheet{padding:22px 20px}
+.sheet-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-bottom:14px;border-bottom:3px solid #1d5c97}
+.sheet-top img{height:34px;width:auto}
+.sheet-k{font-family:"Manrope",sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1d5c97;background:#e6eff8;border-radius:999px;padding:5px 10px}
+.sheet h4{font-family:"Manrope",sans-serif;font-weight:800;font-size:clamp(20px,4.6vw,26px);letter-spacing:-0.03em;line-height:1.15;margin:18px 0 12px}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ticks li{position:relative;padding:10px 12px 10px 40px;background:var(--mist);border-radius:12px;font-size:14.5px;line-height:1.4}
+.ticks li::before{content:"";position:absolute;left:12px;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/11px no-repeat}
+.sheet-foot{display:flex;align-items:center;gap:12px;margin-top:16px;padding:12px;border:1px solid var(--line);border-radius:14px}
+.sheet-foot img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:center 18%}
+.sheet-foot div{font-size:13.5px;color:var(--ink-2);line-height:1.4}
+.sheet-foot b{display:block;color:var(--ink);font-family:"Manrope",sans-serif}
+.fine{font-size:11.5px;color:var(--ink-3);margin-top:12px;line-height:1.45}
+/* postcard */
+.postcard{display:grid;grid-template-columns:1fr;background:#fffdf9}
+.pc-front{position:relative;aspect-ratio:16/8}
+.pc-front img{width:100%;height:100%;object-fit:cover}
+.pc-front span{position:absolute;left:14px;bottom:14px;right:14px;font-family:"Manrope",sans-serif;font-weight:800;font-size:clamp(18px,4.6vw,24px);letter-spacing:-0.025em;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.45);line-height:1.15}
+.pc-back{padding:20px 20px 22px;font-size:14.5px;border-top:1px dashed #e6dccb}
+.pc-back p{margin:0 0 10px}
+.pc-back::after{content:"";display:block;clear:both}
+.pc-sign{font-family:"Manrope",sans-serif;font-weight:700}
+.pc-stamp{float:right;margin:0 0 10px 14px;width:44px;height:52px;border:2px dashed #b9cde0;border-radius:6px;display:grid;place-items:center;background:#f3f8fc}
+.pc-stamp svg{width:24px;height:24px}
+/* notecard */
+.notecard{padding:26px 24px;background:linear-gradient(180deg,#fff,#fbfaf7);display:flex;flex-direction:column;gap:12px;font-size:15px}
+.nc-head{padding-bottom:12px;border-bottom:1px solid var(--line)}
+.nc-head img{height:32px;width:auto}
+.nc-hi{font-family:"Manrope",sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.025em;color:var(--ink)}
+/* seasonal */
+.season{padding:0 0 26px;text-align:center;background:linear-gradient(180deg,#fdf6ec,#fff);display:flex;flex-direction:column;gap:10px;align-items:center}
+.se-art{width:100%;background:linear-gradient(180deg,#fbe9d0,#f7dcb6)}
+.se-art svg{display:block;width:100%;height:auto;max-height:180px}
+.se-k{font-family:"Manrope",sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a0662a;margin-top:10px}
+.season h4{font-family:"Manrope",sans-serif;font-weight:800;font-size:clamp(22px,5vw,28px);letter-spacing:-0.03em;margin:0;padding:0 20px}
+.season p{padding:0 22px;max-width:44ch;color:var(--ink-2);font-size:15px}
+.season .se-sign{font-family:"Manrope",sans-serif;font-weight:700;color:var(--ink);font-size:14px}
+/* quarter */
+.quarter{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-xl);padding:22px 18px;box-shadow:var(--shadow-1)}
+.q-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-grid li{background:var(--mist);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.q-grid b{font-family:"Manrope",sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.q-grid span{font-size:14px;color:var(--ink)}
+
 /* Reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -368,6 +457,8 @@ button.bubble.active .dot svg{stroke:#fff}
   .foot-grid{grid-template-columns:1fr auto}
 }
 @media (max-width:420px){
+  .nl-team{grid-template-columns:1fr}
+  .nl-team img{width:100%;height:auto;aspect-ratio:1104/710}
   .lh address{text-align:left}
   .lh img{height:40px}
 }
@@ -388,6 +479,16 @@ button.bubble.active .dot svg{stroke:#fff}
   .card-grid{grid-template-columns:1fr 1fr;gap:56px}
 }
 
+@media (min-width:960px){
+  .panel{grid-template-columns:1.5fr 1fr;gap:28px}
+  .about-send{position:sticky;top:24px}
+  .postcard{grid-template-columns:1fr 1fr}
+  .pc-front{aspect-ratio:auto;min-height:260px}
+  .pc-back{border-top:0;border-left:1px dashed #e6dccb}
+  .q-grid{grid-template-columns:repeat(6,1fr)}
+  .mail-body,.sheet,.notecard{padding-left:28px;padding-right:28px}
+}
+
 /* Phones: show the photo in full, cards tucked under it */
 @media (max-width:699px){
   .how-panel,.results{padding:0;background:linear-gradient(180deg,#dfe9f1,var(--blue-1))}
@@ -402,7 +503,7 @@ button.bubble.active .dot svg{stroke:#fff}
 /* Reduced motion */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .bubble,.field #typed::after,.msg{animation:none!important}
+  .bubble,.field #typed::after,.msg,.panel .mock{animation:none!important}
   .reveal{opacity:1;transform:none;transition:none}
   .btn{transition:none}
 }
@@ -584,6 +685,138 @@ button.bubble.active .dot svg{stroke:#fff}
             <p>Edit anything, skip anyone, or pause at any time. Replies come straight to your office.</p>
           </figcaption>
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample sends -->
+  <section class="sec" id="sends">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">What goes out</span>
+        <h2>Every touch, in your name.</h2>
+        <p class="lede">Letters are only the start. Tap through a sample of what referring offices receive over a year.</p>
+      </div>
+
+      <div class="tabs reveal" role="tablist" aria-label="Sample sends">
+        <button type="button" role="tab" class="tab on" id="t-news" aria-controls="p-news" aria-selected="true">Newsletter</button>
+        <button type="button" role="tab" class="tab" id="t-tip" aria-controls="p-tip" aria-selected="false" tabindex="-1">Clinical tip</button>
+        <button type="button" role="tab" class="tab" id="t-local" aria-controls="p-local" aria-selected="false" tabindex="-1">Local note</button>
+        <button type="button" role="tab" class="tab" id="t-follow" aria-controls="p-follow" aria-selected="false" tabindex="-1">Follow up</button>
+        <button type="button" role="tab" class="tab" id="t-welcome" aria-controls="p-welcome" aria-selected="false" tabindex="-1">New staff welcome</button>
+        <button type="button" role="tab" class="tab" id="t-season" aria-controls="p-season" aria-selected="false" tabindex="-1">Seasonal card</button>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="panel" role="tabpanel" id="p-news" aria-labelledby="t-news">
+        <div class="mock mail">
+          <div class="mail-bar"><span></span><span></span><span></span><em>Inbox</em></div>
+          <div class="mail-meta">
+            <div><small>From</small>Dr. Ylli Zhubi, Arizona Preferred Surgeons</div>
+            <div><small>To</small>Dr. Priya Raman, Canyon Vista Internal Medicine</div>
+            <div><small>Subject</small><b>Colon and Rectal Notes, Winter 2026</b></div>
+          </div>
+          <div class="nl">
+            <div class="nl-hero"><img src="images/desert.jpg" alt="" width="1600" height="625"><div class="nl-hero-in"><img src="images/aps-logo.jpg" alt="Arizona Preferred Surgeons" width="388" height="117"><b>Colon and Rectal Notes</b><span>Winter 2026, a short note for referring offices</span></div></div>
+            <div class="nl-body">
+              <div class="nl-item"><span class="nl-k">Looking ahead</span><h4>March is Colorectal Cancer Awareness Month</h4><p>A simple screening reminder card for your front desk comes with our next note.</p></div>
+              <div class="nl-item"><span class="nl-k">Quick reminder</span><h4>Average risk screening starts at 45</h4><p>Current national guidance recommends average risk adults begin colorectal cancer screening at age 45.</p></div>
+              <div class="nl-item nl-team"><img src="images/aps-surgeons.jpg" alt="The surgeons of Arizona Preferred Surgeons" width="1104" height="710"><div><span class="nl-k">Our team</span><h4>Three surgeons, one Glendale office</h4><p>Dr. Zhubi practices alongside Dr. Brian Lipton and Dr. Kara Villareal.</p></div></div>
+              <div class="nl-item"><span class="nl-k">Office hours</span><h4>Monday to Thursday 8:30 am to 5:00 pm, Friday 8:30 am to 4:00 pm</h4><p>Phone 602.995.0822, fax 602.995.0825.</p></div>
+              <span class="nl-btn">Save our referral card</span>
+            </div>
+          </div>
+        </div>
+        <aside class="about-send"><span class="sample-tag">Sample</span><h3>Quarterly newsletter</h3><dl><dt>What it is</dt><dd>A short, friendly email with one useful reminder and one practice update.</dd><dt>When</dt><dd>Four times a year</dd><dt>Who gets it</dt><dd>Every doctor and office manager on your list</dd></dl></aside>
+      </div>
+
+      <!-- Clinical tip -->
+      <div class="panel" role="tabpanel" id="p-tip" aria-labelledby="t-tip" hidden>
+        <div class="mock sheet">
+          <div class="sheet-top"><img src="images/aps-logo.jpg" alt="Arizona Preferred Surgeons" width="388" height="117"><span class="sheet-k">Clinical tip</span></div>
+          <h4>When to consider a colorectal surgery referral</h4>
+          <ul class="ticks">
+            <li>Rectal bleeding that persists or is unexplained</li>
+            <li>A change in bowel habits lasting several weeks</li>
+            <li>Hemorrhoids not improving with conservative care</li>
+            <li>Recurrent or complicated diverticulitis</li>
+            <li>An anal fissure or fistula that is not healing</li>
+            <li>A polyp or finding that needs a surgical opinion</li>
+          </ul>
+          <div class="sheet-foot"><img src="images/zhubi.jpg" alt="" width="500" height="625"><div><b>Questions? Call Dr. Zhubi's office</b>602.995.0822, fax 602.995.0825</div></div>
+          <p class="fine">General guidance for referring clinicians, not a substitute for clinical judgment. Reviewed and approved by Dr. Zhubi before it is sent.</p>
+        </div>
+        <aside class="about-send"><span class="sample-tag">Sample</span><h3>Clinical tip sheet</h3><dl><dt>What it is</dt><dd>A one page, easy to pin reference on one topic. Nothing salesy.</dd><dt>When</dt><dd>Every other month, rotating topics</dd><dt>Who gets it</dt><dd>Primary care, GI, and women's health offices</dd></dl></aside>
+      </div>
+
+      <!-- Local note -->
+      <div class="panel" role="tabpanel" id="p-local" aria-labelledby="t-local" hidden>
+        <div class="mock postcard">
+          <div class="pc-front"><img src="images/desert.jpg" alt="" width="1600" height="625"><span>Hello from your neighbors in Glendale</span></div>
+          <div class="pc-back">
+            <div class="pc-stamp" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#1d5c97" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M8 8c-2 0-3 1-3 3v2M16 6c2 0 3 1 3 3v3"/></svg></div>
+            <p>Dear Dr. Ellery and team,</p>
+            <p>Arizona Preferred Surgeons is right here in the Arrowhead area, at 18699 North 67th Ave., Suite 280. Our door and our phone line are always open to your team.</p>
+            <p class="pc-sign">Dr. Ylli Zhubi</p>
+          </div>
+        </div>
+        <aside class="about-send"><span class="sample-tag">Sample</span><h3>Local postcard</h3><dl><dt>What it is</dt><dd>A printed card that lands on the front desk and stays there.</dd><dt>When</dt><dd>Twice a year</dd><dt>Who gets it</dt><dd>Offices within a short drive of your Glendale office</dd></dl></aside>
+      </div>
+
+      <!-- Follow up -->
+      <div class="panel" role="tabpanel" id="p-follow" aria-labelledby="t-follow" hidden>
+        <div class="mock mail">
+          <div class="mail-bar"><span></span><span></span><span></span><em>Inbox</em></div>
+          <div class="mail-meta">
+            <div><small>From</small>Dr. Ylli Zhubi</div>
+            <div><small>To</small>Dr. James Whitfield, Mesquite Creek Women's Health</div>
+            <div><small>Subject</small><b>Thank you for the call today</b></div>
+          </div>
+          <div class="mail-body">
+            <p>Dr. Whitfield,</p>
+            <p>Thank you for taking a few minutes on the phone today. As promised, my referral card is below with our direct line and fax.</p>
+            <p>If your team ever wants to talk something through, my office is glad to help.</p>
+            <p>Best,<br>Ylli Zhubi, MD</p>
+            <div class="mini-card"><img src="images/zhubi.jpg" alt="" width="500" height="625"><div><b>Dr. Ylli Zhubi</b><span>Colon and Rectal Surgery</span><span>602.995.0822, fax 602.995.0825</span></div></div>
+          </div>
+        </div>
+        <aside class="about-send"><span class="sample-tag">Sample</span><h3>Follow up note</h3><dl><dt>What it is</dt><dd>A short note after a call, a reply, or a visit, ready for you to approve the same day.</dd><dt>When</dt><dd>As it happens</dd><dt>Who gets it</dt><dd>The person you just spoke with</dd></dl></aside>
+      </div>
+
+      <!-- Welcome -->
+      <div class="panel" role="tabpanel" id="p-welcome" aria-labelledby="t-welcome" hidden>
+        <div class="mock notecard">
+          <div class="nc-head"><img src="images/aps-logo.jpg" alt="Arizona Preferred Surgeons" width="388" height="117"></div>
+          <p class="nc-hi">Welcome to the team, Jordan.</p>
+          <p>I heard you recently joined Sonoran Primary Care as office manager. Congratulations. If you ever need to reach my office, our scheduling line is 602.995.0822 and our fax is 602.995.0825. A referral card is enclosed for your desk.</p>
+          <p>We look forward to working with you.</p>
+          <div class="sig"><img src="images/zhubi.jpg" alt="" width="500" height="625"><div><span class="name">Dr. Ylli Zhubi</span><small>Arizona Preferred Surgeons, Glendale</small></div></div>
+        </div>
+        <aside class="about-send"><span class="sample-tag">Sample</span><h3>New staff welcome</h3><dl><dt>What it is</dt><dd>A warm hello when a referring office has a new manager or front desk lead.</dd><dt>When</dt><dd>Whenever we spot a staff change</dd><dt>Who gets it</dt><dd>The new person, with your referral card</dd></dl></aside>
+      </div>
+
+      <!-- Seasonal -->
+      <div class="panel" role="tabpanel" id="p-season" aria-labelledby="t-season" hidden>
+        <div class="mock season">
+          <div class="se-art" aria-hidden="true"><svg viewBox="0 0 200 120" fill="none"><circle cx="150" cy="38" r="20" fill="#f3c98b"/><path d="M0 92c30-14 55-14 85 0s60 14 115-4v32H0z" fill="#c9a77a"/><path d="M0 100c40-10 70-6 100 4s65 8 100-2v18H0z" fill="#a9845a"/><path d="M48 98V58m0 14h-8V62m8 18h8V68" stroke="#4f7a5a" stroke-width="5" stroke-linecap="round"/></svg></div>
+          <p class="se-k">Happy Thanksgiving</p>
+          <h4>Grateful for good colleagues.</h4>
+          <p>Thank you for the care your team gives our community. Wishing you and everyone at Saguaro Bend Family Practice a restful holiday.</p>
+          <p class="se-sign">Dr. Ylli Zhubi and the team at Arizona Preferred Surgeons</p>
+        </div>
+        <aside class="about-send"><span class="sample-tag">Sample</span><h3>Seasonal card</h3><dl><dt>What it is</dt><dd>A simple card for the holidays and the new year. Cards only, never gifts.</dd><dt>When</dt><dd>Thanksgiving and New Year</dd><dt>Who gets it</dt><dd>Everyone on your list</dd></dl></aside>
+      </div>
+
+      <div class="quarter reveal">
+        <div class="five-head" style="padding:0 0 14px"><div><h3>A sample quarter</h3><small>What a typical three months could look like</small></div><span class="sample-tag">Sample</span></div>
+        <ol class="q-grid">
+          <li><b>Every Monday</b><span>Your Monday Five</span></li>
+          <li><b>Week 1</b><span>Quarterly newsletter</span></li>
+          <li><b>Week 3</b><span>Clinical tip sheet</span></li>
+          <li><b>Week 6</b><span>Thank you letters</span></li>
+          <li><b>Week 9</b><span>Local postcard</span></li>
+          <li><b>As it happens</b><span>Follow ups and welcomes</span></li>
+        </ol>
       </div>
     </div>
   </section>
@@ -828,6 +1061,20 @@ button.bubble.active .dot svg{stroke:#fff}
     }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
     els.forEach(function(el){ io.observe(el); });
   }
+
+
+  // Sample sends tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function pick(t){
+    tabs.forEach(function(x){ var on = x === t; x.classList.toggle('on', on); x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ pick(t); });
+    t.addEventListener('keydown', function(e){
+      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (k){ e.preventDefault(); var n = tabs[(i + k + tabs.length) % tabs.length]; pick(n); n.focus(); }
+    });
+  });
 
   // Questions only, never an answer.
   var target = document.getElementById('typed');
