@@ -666,7 +666,7 @@ function Audit({industry=""}){
       </div>
       ${state==='sent'
         ? html`<div className="form form-done" role="status"><h3>Thanks. We have your request.</h3><p>A real person will reply within one business day. Check your inbox for a copy of what you sent.</p></div>`
-        : html`<form className="form" method="post" onSubmit=${send}>
+        : html`<form className="form" method="post" action="/api/audit" onSubmit=${send}>
         <label htmlFor="biz">Business name<input id="biz" name="business" required maxLength="120" placeholder="Your business" autoComplete="organization"/></label>
         <label htmlFor="city">City<input id="city" name="city" required maxLength="80" placeholder="Your city" autoComplete="address-level2"/></label>
         <label htmlFor="ind">Industry<select id="ind" name="industry" required defaultValue=${industry}><option value="" disabled>Select your industry</option>${IND.map(x=>html`<option key=${x.t}>${x.t}</option>`)}<option>Other</option></select></label>

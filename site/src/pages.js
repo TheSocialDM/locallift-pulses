@@ -27,7 +27,7 @@ const IND_COPY={
    ["AI answers fill the gap.","When someone asks how build to rent differs from renting a house, the answer shapes who they tour. You want to be the example."],
    ["Lease up moves fast.","New phases, new pricing and new amenities change often. Every listing has to keep up, or renters see last month's story."]],
   does:[["AI Shortlist","Weekly checks on whether AI assistants name your community for the questions renters actually ask."],
-   ["Site Read","Makes sure phases, pricing and amenities read the same on your website, your Google profile and in AI answers."],
+   ["Site Read","Checks that phases, pricing and amenities read the same on your website, your Google profile and in AI answers."],
    ["Map Reach","Google Maps rank across the neighborhoods and commute routes renters care about."],
    ["Daily Presence","Daily Google posts that explain the community, the homes and the neighborhood in plain language."],
    ["Market Survey","What nearby rentals and other communities are offering, every Sunday."],
@@ -49,7 +49,7 @@ const IND_COPY={
  "Med Spa":{
   plural:"med spas",sample:"Sample med spa",
   h1:["First time clients read everything. ","Make it worth reading."],
-  sub:"Someone choosing a first treatment studies photos, reviews and every answer an AI assistant gives. LocalLift keeps your med spa visible, current and trusted across all of it.",
+  sub:"Someone choosing a first treatment studies photos, reviews and every answer an AI assistant gives. LocalLift works to keep your med spa visible and current across all of it.",
   card:"Med spas, aesthetics studios and wellness clinics.",
   pains:[["Reputation is the product.","Clients choose the med spa that looks established. Thin photos and unanswered reviews send them to the name that looks busier."],
    ["Offers change monthly.","Seasonal pricing and new treatments need to read the same on your website, your Google profile and in AI answers."],
@@ -77,7 +77,7 @@ const IND_COPY={
  "Hair Salons":{
   plural:"hair salons",sample:"Sample salon",
   h1:["New neighbors need a salon ","by Saturday."],
-  sub:"People new to the area search, scan photos and check hours on their phone, then book the salon that looks open and active. LocalLift keeps your salon in that first look.",
+  sub:"People new to the area search, scan photos and check hours on their phone, then book the salon that looks open and active. LocalLift works to keep your salon in that first look.",
   card:"Salons, barbers and independent stylists.",
   pains:[["Hours decide the booking.","If Saturday hours are wrong anywhere, a ready client books somewhere else."],
    ["Photos do the selling.","Searchers judge the work before they read a word. Fresh photos and recent posts show the chairs are full."],
@@ -141,7 +141,7 @@ function IndJourney({d}){
           </div>
         </div>
       </div>
-      <div className="sample" style=${{marginTop:'14px'}}>Sample journey, sample place and sample charts. Illustrative only.</div>
+      <div className="sample" style=${{marginTop:'14px'}}>Sample journey, sample place and sample charts. Illustrative only.${d.doors?' The door count is real.':''}</div>
   </div>`;
 }
 
@@ -256,7 +256,7 @@ const FAQS={
  "Build to Rent":[
   ["What makes build to rent visibility different?","Many renters do not yet search for build to rent by name. Your community has to appear for the searches they do make, like homes for rent with a yard, and be explained clearly when they ask AI assistants."],
   ["Do you support communities still in lease up?","Yes. We keep phases, pricing and amenities current on your Google profile, flag what needs changing on your website, and track what AI answers say."],
-  ["Can you control what AI assistants say about us?","No one can control AI answers directly. We track what they say every week, correct the sources they draw on, and publish clear content so the answers improve over time."],
+  ["Can you control what AI assistants say about us?","No one can control AI answers directly. We track what they say every week, work to correct the sources they draw on, and publish clear content so the answers improve over time."],
   ["Do you track nearby rentals and other communities?","Yes. Market Survey watches nearby offers every Sunday so you know what renters are comparing you with."]],
  "Medical":[
   ["Is your review response process safe for patient privacy?","Responses never confirm that someone is a patient and never discuss care. We do not need access to patient records."],
