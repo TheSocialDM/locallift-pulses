@@ -64,6 +64,7 @@ function Nav(){
       <a href="/" aria-label="LocalLift home"><${Logo}/></a>
       <nav className="nav-links" aria-label="Main">
         ${NAV.map(([t,h])=>html`<a key=${t} href=${h}>${t}</a>`)}
+        <a className="back-sdm" href="https://www.thesocialdm.com/">The SocialDM</a>
         <a className="btn red" style=${{color:'#fff'}} href="/#audit">Get Your Visibility Audit</a>
       </nav>
       <button className="menu-btn" aria-label="Menu" aria-expanded=${open} onClick=${()=>setOpen(!open)}>
@@ -72,6 +73,7 @@ function Nav(){
     </div>
     <nav className=${'nav-drop'+(open?' open':'')} aria-label="Mobile">
       ${NAV.map(([t,h])=>html`<a key=${t} href=${h} onClick=${()=>setOpen(false)}>${t}</a>`)}
+      <a href="https://www.thesocialdm.com/">Back to The SocialDM</a>
       <a className="btn red" href="/#audit" onClick=${()=>setOpen(false)}>Get Your Visibility Audit</a>
     </nav>
   </div></header>`;
@@ -652,7 +654,7 @@ function Audit({industry="Multifamily"}){
         <p className="lede">We check Google Search, Google Maps and AI answers for your business and send a clear plan to close the gaps.</p>
       </div>
       <form className="form" aria-describedby="audit-note" onSubmit=${e=>e.preventDefault()} noValidate>
-        <p className="form-flag" id="audit-note" role="note"><b>This form does not send yet.</b> It is switched off in this preview and collects nothing. Nothing you see here is saved, stored or sent.</p>
+        <p className="form-flag" id="audit-note" role="note"><b>This form does not send yet.</b> It is switched off for now and collects nothing. Nothing you see here is saved, stored or sent.</p>
         <fieldset disabled style=${{border:0,margin:0,padding:0,display:'flex',flexDirection:'column',gap:'14px'}}>
           <label htmlFor="biz">Business name<input id="biz" placeholder="Your business" autoComplete="off"/></label>
           <label htmlFor="city">City<input id="city" placeholder="Your city" autoComplete="off"/></label>
@@ -673,7 +675,7 @@ function Giant(){
   return html`<div className="giant" ref=${box} aria-hidden="true"><span className="giant-in" ref=${inner}>L<span className="giant-pin"><span className="gr"></span><span className="gr b"></span><svg viewBox="0 0 24 34" preserveAspectRatio="xMidYMid meet"><path d="M12 0C5.4 0 0 5.4 0 12c0 8.6 12 22 12 22s12-13.4 12-22C24 5.4 18.6 0 12 0z" fill="#E22319"/><circle cx="12" cy="12" r="4.6" fill="#000"/></svg></span>calLift<sup>™</sup></span></div>`;
 }
 function Footer(){
-  return html`<footer className="foot"><div className="wrap">
+  return html`<${React.Fragment}><div className="sdm-band"><div className="wrap"><span>LocalLift is built and run by The SocialDM.</span><a className="btn ghost" href="https://www.thesocialdm.com/">Back to The SocialDM</a></div></div><footer className="foot"><div className="wrap">
     <div className="foot-grid">
       <div>
         <${Logo} h=${36}/>
@@ -684,8 +686,8 @@ function Footer(){
       <div><h3>The SocialDM</h3><ul><li><a href="https://www.thesocialdm.com/about" target="_blank" rel="noopener">About</a></li><li><a href="https://www.thesocialdm.com/blog" target="_blank" rel="noopener">Market Intelligence</a></li><li><a href="https://www.thesocialdm.com/research-insights" target="_blank" rel="noopener">Research and Insights</a></li><li><a href="https://www.thesocialdm.com/contact" target="_blank" rel="noopener">Contact</a></li></ul></div>
     </div>
     <${Giant}/>
-    <div className="foot-base"><span>LocalLift™ by The SocialDM™. Phoenix, Arizona.</span><span>Private preview. All maps, scores and sample businesses are illustrative.</span></div>
-  </div></footer>`;
+    <div className="foot-base"><span>LocalLift™ by The SocialDM™. Phoenix, Arizona.</span><span>All maps, scores and sample businesses are illustrative.</span></div>
+  </div></footer><//>`;
 }
 
 function App(){
