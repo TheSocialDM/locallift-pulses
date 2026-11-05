@@ -323,15 +323,18 @@ const TOOLS=[
  {n:"Daily Presence",c:"7 days a week",d:"Daily posts on your Google profile, written for your business and your neighborhood.",b:()=>html`<div className="week">${[["Mon","Neighborhood guide"],["Tue","Common question"],["Wed","Team spotlight"],["Thu","Local event"],["Fri","Weekend idea"],["Sat","Customer favorite"],["Sun","Week ahead"]].map(d=>html`<div className="day" key=${d[0]}><b>${d[0]}</b><span>${d[1]}</span><i></i></div>`)}</div>`},
 ];
 function Console({tool,setTool}){
-  const T=TOOLS.find(t=>t.n===tool);
-  return html`<section className="band mist" id="intelligence"><div className="wrap">
+  const T=TOOLS.find(t=>t.n===tool);const railRef=useRef(null);
+  useEffect(()=>{const r=railRef.current,c=r&&r.querySelector('[aria-pressed="true"]');if(!c||r.scrollWidth<=r.clientWidth)return;r.scrollLeft+=c.getBoundingClientRect().left-r.getBoundingClientRect().left-20},[tool]);
+  return html`<section className="band black intel" id="intelligence"><div className="wrap">
     <${Eyebrow}>LocalLift intelligence<//>
     <h2 className="title" style=${{maxWidth:'15em'}}>Ten tools. <em>One clear read</em> on your market.</h2>
     <p className="lede">We run the tools and tell you what they mean. You get the answer, not another login to manage.</p>
+    </div>
     <div className="console">
-      <div className="console-bar"><span>LocalLift Intelligence / Sample Business</span><span>Illustrative data. Not client results.</span></div>
+      <div className="console-bar"><div className="wrap console-bar-in"><span>LocalLift Intelligence / Sample Business</span><span>Illustrative data. Not client results.</span></div></div>
+      <div className="wrap">
       <div className="console-body">
-        <div className="rail" role="group" aria-label="LocalLift tools">
+        <div className="rail" ref=${railRef} role="group" aria-label="LocalLift tools">
           ${TOOLS.map(t=>html`<button key=${t.n} aria-pressed=${t.n===tool} onClick=${()=>setTool(t.n)}><span>${t.n}</span><small>${t.c}</small></button>`)}
         </div>
         <div className="panel fade" key=${tool}>
@@ -340,8 +343,9 @@ function Console({tool,setTool}){
           <div className="panel-body">${T.b()}</div>
         </div>
       </div>
+      </div>
     </div>
-  </div></section>`;
+  </section>`;
 }
 
 /* ---------- sample charts: fake numbers, fictional places ---------- */
@@ -514,9 +518,9 @@ const PEEKS=[
 ];
 const FAN=[{x:0,y:0,r:0,s:1,z:4,b:1},{x:62,y:-6,r:5,s:.95,z:3,b:.72},{x:-62,y:-2,r:-5,s:.93,z:2,b:.62},{x:112,y:6,r:10,s:.88,z:1,b:.45}];
 function SneakPeek(){
-  const[a,setA]=useState(0);const[auto,setAuto]=useState(!REDUCED);const[ref,seen,vis]=useInView(.2);const narrow=useMedia('(max-width:560px)');
+  const[a,setA]=useState(0);const[auto,setAuto]=useState(!REDUCED);const[ref,seen,vis]=useInView(.2);const narrow=useMedia('(max-width:560px)'),mid=useMedia('(max-width:1240px)');
   useEffect(()=>{if(!auto||!vis)return;const t=setInterval(()=>setA(x=>(x+1)%PEEKS.length),3400);return()=>clearInterval(t)},[auto,vis]);
-  const go=i=>{setA(i);setAuto(false)};const k=narrow?.5:1;
+  const go=i=>{setA(i);setAuto(false)};const k=narrow?.5:mid?.68:1;
   return html`<div className="peek-grid">
     <div>
       <${Eyebrow}>A sneak peek<//>

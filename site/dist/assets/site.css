@@ -532,3 +532,25 @@ html,body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}
 /* phones: reserve each chart's final shape before the script redraws it, and keep the fanned report cards inside the page */
 @media(max-width:600px){svg.ch{aspect-ratio:var(--ar-sm)}.peek{overflow-x:clip}}
 @media(max-width:380px){svg.ch{aspect-ratio:var(--ar-xs)}}
+
+/* platform to intelligence: the white loop hands off to one full width black chapter, so the tools sit on the page instead of in a box floating on white */
+#platform{padding-bottom:clamp(64px,7vw,104px)}
+.intel{padding-bottom:0}
+.intel .console{margin-top:clamp(40px,4.5vw,64px);border:0;border-top:1px solid var(--char2);border-bottom:1px solid var(--char2);border-radius:0;overflow:visible;background:transparent}
+.intel .console-bar{display:block;padding:0}
+.intel .console-bar-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding-block:15px}
+.intel .console-body{min-height:560px}
+.intel .rail{padding:14px 14px 14px 0}
+.intel .rail button{margin-left:-14px;width:calc(100% + 14px)}
+.intel .panel{padding:clamp(24px,3.6vw,52px) 0 clamp(24px,3.6vw,52px) clamp(24px,3.6vw,56px)}
+#reports{overflow-x:clip}
+@media(max-width:860px){
+  .intel .rail{padding:10px var(--gut-r) 10px var(--gut-l);margin-inline:calc(var(--gut-l) * -1) calc(var(--gut-r) * -1)}
+  .intel .rail button{margin-left:0;width:auto}
+  .intel .panel{padding:24px 0 32px}
+  .intel .console-body{min-height:0}
+}
+/* keep the seven day cards readable between phone and full desktop, and let an odd last tile fill its row */
+@media(min-width:861px) and (max-width:1240px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:860px){.tiles .tile:last-child:nth-child(odd){grid-column:1/-1}}
+@media(min-width:861px) and (max-width:960px){.week{grid-template-columns:repeat(3,minmax(0,1fr))}}
