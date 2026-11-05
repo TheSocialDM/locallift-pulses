@@ -136,7 +136,7 @@ function StatBand(){
   return html`<div className="stat-band"><div className="wrap"><div className="stat-grid">
     <div className="stat-c"><div className="stat-l">By the numbers</div><div className="stat-s">Every report audited before it ships.</div></div>
     <div className="stat-c"><div className="stat-n"><${Doors}/>+</div><div className="stat-t">Doors and counting</div></div>
-    <div className="stat-c"><div className="stat-n">500+</div><div className="stat-t">Posts published every week</div></div>
+    <div className="stat-c"><div className="stat-n">400+</div><div className="stat-t">Posts published every week</div></div>
     <div className="stat-c"><div className="stat-n">10</div><div className="stat-t">Tools working for you</div></div>
   </div></div></div>`;
 }
@@ -319,7 +319,7 @@ const TOOLS=[
  {n:"Snapshot",c:"Monthly",d:"Your monthly Google report: searches, views, calls, direction requests and website clicks.",b:()=>html`<div className="tiles">${[["1,240","Searches"],["3,180","Views"],["46","Calls"],["88","Direction requests"],["212","Website clicks"]].map(t=>html`<div className="tile" key=${t[1]}><strong>${t[0]}</strong><span>${t[1]}</span></div>`)}</div>`},
  {n:"ClearView",c:"Monthly",d:"Your monthly social media report: what posted, what performed and what changes next.",b:()=>html`<${Rows} rows=${[["What posted","24 posts across your social channels","24"],["What performed","Neighborhood reels outperformed photo posts","Reels"],["What changes","More neighborhood content next month","Next"]]}/>`},
  {n:"Review Desk",c:"Ongoing",d:"Google review responses written in your voice, with fair housing and privacy in mind.",b:()=>html`<div><div className="quote"><small>Sample review, five stars</small>The team made the whole process easy and answered every question.</div><div className="quote"><small>Sample response, in your voice</small>Thank you for sharing this. We are glad the process felt easy, and we will pass your note along to the team.</div></div>`},
- {n:"Daily Presence",c:"7 days a week",d:"Daily posts on your Google profile, written for your business and your neighborhood.",b:()=>html`<div className="week">${[["Mon","Neighborhood guide"],["Tue","Current offer"],["Wed","Team spotlight"],["Thu","Local event"],["Fri","Weekend idea"],["Sat","Customer favorite"],["Sun","Week ahead"]].map(d=>html`<div className="day" key=${d[0]}><b>${d[0]}</b><span>${d[1]}</span><i></i></div>`)}</div>`},
+ {n:"Daily Presence",c:"7 days a week",d:"Daily posts on your Google profile, written for your business and your neighborhood.",b:()=>html`<div className="week">${[["Mon","Neighborhood guide"],["Tue","Common question"],["Wed","Team spotlight"],["Thu","Local event"],["Fri","Weekend idea"],["Sat","Customer favorite"],["Sun","Week ahead"]].map(d=>html`<div className="day" key=${d[0]}><b>${d[0]}</b><span>${d[1]}</span><i></i></div>`)}</div>`},
 ];
 function Console({tool,setTool}){
   const T=TOOLS.find(t=>t.n===tool);
@@ -555,11 +555,11 @@ function Reports(){
 /* ---------- 7. industries ---------- */
 const M6=["Jun","Jul","Aug","Sep","Oct","Nov"];
 const IND=[
- {t:"Multifamily",who:"A renter relocating for a new job, with two weeks to decide.",s:["Searches for apartments near downtown with a pool and a move in special.","Opens Google Maps and compares the closest communities by recent reviews.","Asks an AI assistant which newer communities near the office allow large dogs.","Books tours at the two names that appeared everywhere."],tools:["Map Reach","AI Shortlist","Market Survey","Site Read"],city:"Sample community, Quillmere",metric:"Direction requests from Google",d:[62,71,68,84,92,108],pops:["Up in the last two months","A new map point reached the top 3"],stats:[["5","sample competitors tracked"],["9 of 24","sample AI answers naming you"]],doors:true},
+ {t:"Multifamily",who:"A renter relocating for a new job, with two weeks to decide.",s:["Searches for apartments near downtown with a pool and a move in special.","Opens Google Maps and compares the closest communities by recent reviews.","Asks an AI assistant which newer communities near the office allow large dogs.","Books tours at the two names that appeared everywhere."],tools:["Map Reach","AI Shortlist","Market Survey","Site Read"],city:"Sample community, Quillmere",metric:"Direction requests from Google",d:[62,71,68,84,92,108],pops:["Up in the last two months","A new map point reached the top 3"],stats:[["4","sample competitors tracked"],["9 of 24","sample AI answers naming you"]],doors:true},
  {t:"Build to Rent",who:"A renter who wants a house and a yard without buying one.",s:["Searches for build to rent homes with a yard near work.","Checks Google Maps for commute, nearby parks and community photos.","Asks an AI assistant how build to rent differs from a house rental nearby.","Tours the community that explained itself clearly."],tools:["AI Shortlist","Site Read","Map Reach","Daily Presence"],city:"Sample community, Fernhallow",metric:"Website clicks from Google",d:[44,49,57,55,66,73],pops:["Named for build to rent in a new AI answer","Website clicks at a six month high"],big:["73","sample website clicks in November"],stats:[["7","sample posts a week on Google"],["2","sample site details corrected"]]},
  {t:"Medical",who:"A new patient comparing practices after a referral.",s:["Searches for the practice by name, then for a specialist near home.","Compares ratings, hours and location on Google Maps.","Asks an AI assistant who is well reviewed for that specialty nearby.","Calls the practice whose details all match and feel current."],tools:["Site Read","Review Desk","AI Shortlist","Map Reach"],city:"Sample practice, Ostrabay",metric:"Calls from Google",d:[31,34,33,41,46,52],pops:["Calls up again this month","Hours now match everywhere checked"],big:["52","sample calls from Google in November"],stats:[["4.9","sample Google rating"],["6","sample reviews answered this month"]]},
  {t:"Med Spa",who:"Someone choosing a first treatment, and reading everything first.",s:["Searches for a med spa open near work.","Scans Google Maps photos, reviews and how the owner answers them.","Asks an AI assistant which local med spa has the best reputation.","Books a consult at the name that looks established."],tools:["AI Shortlist","Review Desk","Daily Presence","Map Reach"],city:"Sample med spa, Marrowvale",metric:"Website clicks from Google",d:[58,63,74,72,88,97],pops:["Your med spa appeared in a new AI answer","A new review was answered"],big:["97","sample website clicks in November"],stats:[["5 of 12","sample AI answers naming you"],["30","sample Google posts this month"]]},
- {t:"Real Estate",who:"A homeowner getting ready to sell, looking for the right agent.",s:["Searches for the top listing agent in their neighborhood.","Reads Google reviews and looks at recent activity on each profile.","Asks an AI assistant who knows that part of town best.","Calls the agent who looks established and current."],tools:["AI Shortlist","Map Reach","Review Desk","Daily Presence"],city:"Sample agent, Calderwick",metric:"Profile views on Google",d:[120,134,129,151,168,186],pops:["Profile views keep climbing","Named for a new neighborhood"],big:["186","sample profile views in November"],stats:[["3","sample neighborhoods in the top 3"],["12","sample Google posts this month"]]},
+ {t:"Real Estate",who:"A homeowner getting ready to sell, looking for the right agent.",s:["Searches for the top listing agent in their neighborhood.","Reads Google reviews and looks at recent activity on each profile.","Asks an AI assistant who knows that part of town best.","Calls the agent who looks established and current."],tools:["AI Shortlist","Map Reach","Review Desk","Daily Presence"],city:"Sample agent, Calderwick",metric:"Profile views on Google",d:[120,134,129,151,168,186],pops:["Profile views keep climbing","Named for a new neighborhood"],big:["186","sample profile views in November"],stats:[["3","sample neighborhoods in the top 3"],["30","sample Google posts this month"]]},
  {t:"Hair Salons",who:"A neighbor who just moved in and needs a new salon by Saturday.",s:["Searches for a hair salon open Saturday near home.","Opens Google Maps and checks photos, hours and how owners answer reviews.","Asks an AI assistant which salon is best with curly hair nearby.","Books the salon that looked open, active and easy to trust."],tools:["Map Reach","Review Desk","Daily Presence","Snapshot"],city:"Sample salon, Wrenhollow",metric:"Direction requests from Google",d:[26,29,35,33,41,47],pops:["Saturday searches are finding you","New photos are live on Google"],big:["47","sample direction requests in November"],stats:[["4.8","sample Google rating"],["9","sample reviews answered this month"]]},
  {t:"Hospitality",who:"A traveler planning a weekend in a city they barely know.",s:["Searches for a boutique hotel near the old town with a rooftop.","Uses Google Maps to judge the walk to restaurants and sights.","Asks an AI assistant which stay fits a quiet anniversary trip.","Books the place that kept appearing, with recent photos and replies."],tools:["AI Shortlist","Review Desk","Snapshot","Daily Presence"],city:"Sample hotel, Brindlecrest",metric:"Website clicks from Google",d:[140,152,171,163,188,204],pops:["Weekend searches are up","AI answer named your rooftop"],big:["204","sample website clicks in November"],stats:[["2 of 8","sample AI answers naming you"],["14","sample reviews answered this month"]]},
  {t:"Portfolios",who:"An owner who needs one clear read on every property at once.",labels:["Portfolio view","Market","AI answers","Decision"],s:["Sees every property side by side, with the same measures on each.","Checks which properties are falling behind their local competitors.","Sees which properties AI assistants name, and which they skip.","Puts attention where one recommended move will count most."],tools:["Lift Score","Weekly Pulse","Market Survey","AI Shortlist"],city:"Sample portfolio, six properties",metric:"Lift Score by property",d:[58,74,63,81,49,68],labels2:["P1","P2","P3","P4","P5","P6"],pops:["Property 4 leads the portfolio","Property 5 needs attention first"],big:["66","sample portfolio average Lift Score"],stats:[["6","sample properties compared"],["1","recommended move per property"]]},
@@ -595,7 +595,7 @@ function Industries(){
         </div>
       </div>
       <div className="j-tools"><b>Where LocalLift works this journey:</b><span>${d.tools.join(', ')}</span><a className="j-more" href=${indHref(d)}>See LocalLift for ${d.t}</a></div>
-      <div className="sample" style=${{marginTop:'14px'}}>Sample journey, sample place and sample charts. Illustrative only.</div>
+      <div className="sample" style=${{marginTop:'14px'}}>Sample journey, sample place and sample charts. Illustrative only.${d.doors?' The door count is real.':''}</div>
     </div>
   </div></section>`;
 }
@@ -616,7 +616,7 @@ function Managed(){
         <li>No new platform for your team to log in to or learn.</li>
       </ul>
       <div>
-        <div className="sched-wrap"><div className="sched" role="table" aria-label="A typical LocalLift week">
+        <p className="sched-hint">Swipe to see the full week.</p><div className="sched-wrap"><div className="sched" role="table" aria-label="A typical LocalLift week">
           <div className="h"></div>${days.map(d=>html`<div className="h" key=${d}>${d}</div>`)}
           <div className="n">Daily Presence</div>${days.map(d=>html`<div className="c" key=${d}>${dot(true)}</div>`)}
           <div className="n">Review Desk</div><div className="span">Ongoing</div>
@@ -636,7 +636,7 @@ function Results(){
     <${Eyebrow}>Results and insights<//>
     <h2 className="title" id="insights">See the work and <em>the thinking behind it.</em></h2>
     <div className="cards">
-      <a className="card" href="https://www.thesocialdm.com/blog/montage-tigard-case-study" target="_blank" rel="noopener"><span className="sample">Case study</span><h3>Montage, Tigard, Oregon</h3><p>33 reviews at 4.8. The gap was the count, not the rating.</p><em>Read the case study</em></a>
+      <a className="card" href="https://www.thesocialdm.com/blog/montage-tigard-case-study" target="_blank" rel="noopener"><span className="sample">Case study</span><h3>Montage, Tigard, Oregon</h3><p>33 reviews at 4.8 as of October 2026.</p><em>Read the case study</em></a>
       <a className="card" href="https://www.thesocialdm.com/2026-multifamily-visibility-report" target="_blank" rel="noopener"><span className="sample">Research</span><h3>2026 Multifamily Visibility Report</h3><p>Published by The SocialDM, powered by LocalLift.</p><em>Read the report</em></a>
       <a className="card" href="https://www.thesocialdm.com/blog" target="_blank" rel="noopener"><span className="sample">Insights</span><h3>Market Intelligence</h3><p>Ongoing writing on Google, Maps, AI search and local visibility.</p><em>Read the latest</em></a>
     </div>
@@ -644,7 +644,7 @@ function Results(){
 }
 
 /* ---------- 9. audit ---------- */
-function Audit({industry="Multifamily"}){
+function Audit({industry=""}){
   const [state,setState]=useState('idle');
   const send=async e=>{
     e.preventDefault();
@@ -666,10 +666,10 @@ function Audit({industry="Multifamily"}){
       </div>
       ${state==='sent'
         ? html`<div className="form form-done" role="status"><h3>Thanks. We have your request.</h3><p>A real person will reply within one business day. Check your inbox for a copy of what you sent.</p></div>`
-        : html`<form className="form" onSubmit=${send}>
+        : html`<form className="form" method="post" onSubmit=${send}>
         <label htmlFor="biz">Business name<input id="biz" name="business" required maxLength="120" placeholder="Your business" autoComplete="organization"/></label>
         <label htmlFor="city">City<input id="city" name="city" required maxLength="80" placeholder="Your city" autoComplete="address-level2"/></label>
-        <label htmlFor="ind">Industry<select id="ind" name="industry" defaultValue=${industry}>${IND.map(x=>html`<option key=${x.t}>${x.t}</option>`)}</select></label>
+        <label htmlFor="ind">Industry<select id="ind" name="industry" required defaultValue=${industry}><option value="" disabled>Select your industry</option>${IND.map(x=>html`<option key=${x.t}>${x.t}</option>`)}<option>Other</option></select></label>
         <label htmlFor="mail">Work email<input id="mail" name="email" type="email" required maxLength="160" placeholder="you@company.com" autoComplete="email"/></label>
         <p className="form-hp" aria-hidden="true"><label>Leave this empty<input name="website" tabIndex="-1" autoComplete="off"/></label></p>
         <button className="btn red" type="submit" disabled=${state==='sending'}>${state==='sending'?'Sending':'Get Your Visibility Audit'}</button>

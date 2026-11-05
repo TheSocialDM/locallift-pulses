@@ -7,7 +7,7 @@ const IND_COPY={
  "Multifamily":{
   plural:"apartment communities",sample:"Sample community",
   h1:["Renters decide who to tour ","before they call."],
-  sub:"LocalLift shows how your communities appear when renters search Google, scan Google Maps and ask AI assistants, then keeps every property visible, accurate and chosen through lease up and beyond.",
+  sub:"LocalLift shows how your communities appear when renters search Google, scan Google Maps and ask AI assistants, then works to keep every property visible and accurate through lease up and beyond.",
   card:"Communities, lease ups and stabilized assets.",
   pains:[["Specials go stale online.","A concession ends on your website but lives on in your Google profile and in AI answers. Renters arrive expecting a price you no longer offer."],
    ["Rank depends on the street.","A community can lead the map from its leasing office and vanish a mile away, right where your next renter works."],
@@ -35,7 +35,7 @@ const IND_COPY={
  "Medical":{
   plural:"medical practices",sample:"Sample practice",
   h1:["Patients check you ","before they call."],
-  sub:"After a referral, many patients search the practice, compare ratings and ask AI who is well reviewed nearby. LocalLift keeps your hours, locations and reputation accurate everywhere they look.",
+  sub:"After a referral, many patients search the practice, compare ratings and ask AI who is well reviewed nearby. LocalLift helps keep your hours and locations accurate where patients look.",
   card:"Practices, specialists and groups with several locations.",
   pains:[["Details drift across listings.","Old hours, a moved suite or a retired provider can linger on Google and in AI answers, and patients call the wrong place."],
    ["Reviews carry the decision.","Patients read how a practice answers reviews. Silence reads as neglect, and a careless reply can expose private details."],
@@ -56,7 +56,7 @@ const IND_COPY={
    ["Near work matters.","Many clients book close to the office, not home. Your map rank needs to hold where they spend the day."]],
   does:[["AI Shortlist","Whether AI assistants name your med spa when people ask who has the best reputation nearby."],
    ["Review Desk","Thoughtful review responses in your voice, written with client privacy in mind."],
-   ["Daily Presence","Daily Google posts on treatments, aftercare tips, your team and this month's offer."],
+   ["Daily Presence","Daily Google posts on treatments, aftercare tips, your team and seasonal care."],
    ["Map Reach","Google Maps rank across the office districts and neighborhoods your clients come from."],
    ["Site Read","Checks that treatments, pricing and offers match everywhere a client looks."],
    ["Snapshot","Your monthly Google report: searches, views, calls and website clicks."]]},
@@ -84,7 +84,7 @@ const IND_COPY={
    ["Specialties get asked about.","People ask AI assistants which salon is best with curly hair or color correction nearby. You want to be named for what you do best."]],
   does:[["Map Reach","Google Maps rank across the neighborhoods around your salon, street by street."],
    ["Review Desk","Review responses in your voice, so happy clients feel thanked and new ones see you care."],
-   ["Daily Presence","Daily Google posts on cuts, color, your stylists and open appointments."],
+   ["Daily Presence","Daily Google posts on cuts, color, your stylists and seasonal looks."],
    ["Snapshot","Your monthly Google report: searches, calls and direction requests."],
    ["AI Shortlist","Whether AI assistants name your salon for the specialties you are known for."],
    ["Site Read","Checks that hours, services and prices match everywhere."]]},
@@ -97,7 +97,7 @@ const IND_COPY={
    ["Every trip has a reason.","Anniversaries, conferences, game weekends. AI answers match stays to reasons, and you want to match more of them."],
    ["Recent beats beautiful.","Travelers trust recent photos and recent replies over polished pictures from three years ago."]],
   does:[["AI Shortlist","Whether AI assistants recommend your property for the trips travelers describe."],
-   ["Review Desk","Guest review responses in your voice, posted while the stay is still fresh."],
+   ["Review Desk","Guest review responses in your voice, posted promptly."],
    ["Snapshot","Your monthly Google report: searches, views, calls and website clicks."],
    ["Daily Presence","Daily Google posts on rooms, dining, events and what is happening nearby."],
    ["Map Reach","Google Maps rank from the places guests start their search: the station, the stadium, the old town."],
@@ -186,12 +186,12 @@ function IndustryPage({name}){
     <div className="statement"><div className="wrap statement-in"><span>Be found.</span><span>Be understood.</span><span>Be chosen.</span>${d.doors?html`<${DoorsStat}/>`:null}</div></div>
     <section className="band char"><div className="wrap">
       <${Eyebrow}>The visibility problem for ${c.plural}<//>
-      <h2 className="title" style=${{maxWidth:'16em'}}>Where the customer slips away, <em>and why.</em></h2>
+      <h2 className="title" style=${{maxWidth:'16em'}}>${name==='Portfolios'?'Where a portfolio loses sight, ':'Where the customer slips away, '}<em>and why.</em></h2>
       <div className="pains">${c.pains.map((p,i)=>html`<article className="pain" key=${i}><b>0${i+1}</b><h3>${p[0]}</h3><p>${p[1]}</p></article>`)}</div>
     </div></section>
     <section className="band white" id="journey"><div className="wrap">
       <${Eyebrow}>The customer journey<//>
-      <h2 className="title" style=${{maxWidth:'15em'}}>Four moments decide <em>who gets chosen.</em></h2>
+      <h2 className="title" style=${{maxWidth:'15em'}}>${name==='Portfolios'?'Four moments ':'Four moments decide '}<em>${name==='Portfolios'?'shape the decision.':'who gets chosen.'}</em></h2>
       <${IndJourney} d=${d}/>
     </div></section>
     <section className="band mist" id="intelligence"><div className="wrap">
@@ -248,39 +248,39 @@ const FAQS={
   ["My industry is not listed. Can you still help?","If customers search for you nearby, the same approach applies. Contact The SocialDM and we will tell you honestly whether LocalLift fits."],
   ["Do you work with groups and multi location businesses?","Yes. Portfolio reporting puts every location side by side on the same measures, with one recommended move for each."]],
  "Multifamily":[
-  ["How does LocalLift help apartment communities?","We track how renters find your community on Google Search, Google Maps and AI answers, fix what is wrong or out of date, and keep your Google presence active every day. Every Friday you get one page on what moved and one next step."],
+  ["How does LocalLift help apartment communities?","We track how renters find your community on Google Search, Google Maps and AI answers, correct or flag what is wrong or out of date, and keep your Google presence active every day. Every Friday you get one page on what moved and one next step."],
   ["Do you track competitor rents and specials?","Yes. Market Survey compares asking rents, effective rents and specials at your competitors every Sunday, side by side with yours."],
   ["Are review responses written with fair housing in mind?","Yes. Every response is written in your voice, stays neutral and never references a protected characteristic or a resident's personal details."],
   ["Do you work with lease ups as well as stabilized communities?","Yes. Lease ups need visibility fast and change often. Stabilized communities need to hold their place against newer competitors. The weekly loop covers both."],
   ["How large is your multifamily portfolio?","LocalLift works across more than 7,900 doors, and counting."]],
  "Build to Rent":[
   ["What makes build to rent visibility different?","Many renters do not yet search for build to rent by name. Your community has to appear for the searches they do make, like homes for rent with a yard, and be explained clearly when they ask AI assistants."],
-  ["Do you support communities still in lease up?","Yes. We keep phases, pricing and amenities current across your website, your Google profile and AI answers as they change."],
+  ["Do you support communities still in lease up?","Yes. We keep phases, pricing and amenities current on your Google profile, flag what needs changing on your website, and track what AI answers say."],
   ["Can you control what AI assistants say about us?","No one can control AI answers directly. We track what they say every week, correct the sources they draw on, and publish clear content so the answers improve over time."],
   ["Do you track nearby rentals and other communities?","Yes. Market Survey watches nearby offers every Sunday so you know what renters are comparing you with."]],
  "Medical":[
-  ["Is your review response process safe for patient privacy?","Yes. Responses never confirm that someone is a patient and never discuss care. We do not need access to patient records."],
-  ["Can you fix wrong hours, addresses or provider details?","Yes. Site Read checks your details across your website, your Google profile and AI answers every week, and we correct what is out of date."],
+  ["Is your review response process safe for patient privacy?","Responses never confirm that someone is a patient and never discuss care. We do not need access to patient records."],
+  ["Can you fix wrong hours, addresses or provider details?","Yes. Site Read checks your details across your website, your Google profile and AI answers every week, and we correct or flag what is out of date."],
   ["Do you work with practices that have several locations?","Yes. Each location is tracked on its own, and portfolio reporting shows every location side by side."],
   ["Will this replace our website or patient marketing?","No. LocalLift works alongside them and focuses on how patients find and judge your practice before they call."]],
  "Med Spa":[
   ["How do you help a med spa get recommended by AI assistants?","We track the questions clients ask every week, see which med spas are named, and strengthen the reviews, posts and details AI answers draw on."],
-  ["Can you promote our monthly offers?","Yes. Daily Presence posts feature current offers and treatments, and Site Read checks that the offer reads the same everywhere."],
+  ["Can you promote our monthly offers?","Yes. Current offers run as separate Google offer posts, and Site Read checks that the offer reads the same everywhere."],
   ["Do your posts make claims about treatment results?","No. Posts and review replies stay factual, avoid promising outcomes and respect client privacy."],
   ["How soon will we see changes?","Some fixes, like correct hours or a current offer, show within days. Map rank and AI answers move over weeks, which is why we report every week."]],
  "Real Estate":[
   ["Do you work with individual agents or teams?","Both. LocalLift works for a single agent, a team or a brokerage with many profiles."],
   ["Can you help me show up in specific neighborhoods?","Yes. Map Reach measures your Google Maps rank across the neighborhoods you choose, and your posts and content are written for those same areas."],
   ["Do I need to write the posts myself?","No. We write and publish daily Google posts on your listings, sales and market notes. You can review them whenever you like."],
-  ["How do you handle client reviews?","Review Desk answers every review in your voice, so each reply adds to your reputation instead of sitting unanswered."]],
+  ["How do you handle client reviews?","Review Desk answers reviews in your voice, so each reply adds to your reputation instead of sitting unanswered."]],
  "Hair Salons":[
   ["Does LocalLift work for a single salon?","Yes. LocalLift runs for you, so one salon gets the same weekly work without adding to the front desk."],
   ["Do you need our photos?","Your own photos work best. Share them with us and we will put them to work in your daily Google posts."],
   ["How do you handle a negative review?","Calmly and in your voice. We thank the client, acknowledge the concern and invite them to talk with you directly."],
-  ["Will our hours and services stay correct online?","Yes. Site Read checks hours, services and prices across your website, your Google profile and AI answers every week."]],
+  ["Will our hours and services stay correct online?","Site Read checks hours, services and prices across your website, your Google profile and AI answers every week, and we fix or flag what we find."]],
  "Hospitality":[
   ["Can LocalLift help us earn more direct bookings?","We strengthen your own Google profile and website so travelers have a reason to book with you directly, and we report the calls and website clicks that come from Google."],
-  ["How do you respond to guest reviews?","In your voice, while the stay is still fresh. Thoughtful replies show future guests that someone is paying attention."],
+  ["How do you respond to guest reviews?","In your voice, and promptly. Thoughtful replies show future guests that someone is paying attention."],
   ["Do you track how AI assistants recommend hotels?","Yes. Every week we ask the trip questions your guests ask and record which properties are named."],
   ["Do you work with groups of properties?","Yes. Portfolio reporting shows every property side by side on the same measures."]],
  "Portfolios":[

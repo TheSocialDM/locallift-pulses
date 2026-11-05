@@ -78,3 +78,6 @@ html,body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}
 .score-n{font-size:clamp(96px,12vw,160px)}
 .console-body{grid-template-columns:280px minmax(0,1fr)}
 @media(max-width:860px){.console-body{grid-template-columns:1fr}}
+
+.sched-hint{display:none;margin:0 0 8px;font-size:13px;color:var(--on-dark-2)}
+@media(max-width:620px){.sched-hint{display:block}}

@@ -40,7 +40,7 @@ for (const f of pages) {
   if (!/<meta name="description" content="[^"]{50,}"/.test(html)) flag(f, 'missing meta description');
 }
 const js = fs.readFileSync(path.join(OUT, 'assets/app.js'), 'utf8');
-if (!/const DOORS=7900;/.test(js)) flag(OUT, 'DOORS constant is not 7900');
+if (!/const DOORS=7900;/.test(fs.readFileSync(path.join(path.dirname(new URL(import.meta.url).pathname), 'src/proto.js'), 'utf8'))) flag(OUT, 'DOORS constant is not 7900');
 // interactive copy lives in the script bundle: check its string literals too
 const strs = [...js.matchAll(/"([^"\\]{3,})"|`([^`]{3,})`/g)].map(m => m[1] || m[2]).join(' \n ');
 const jb = strs.match(BANNED); if (jb) flag(OUT, 'named tool or source in script copy: ' + jb[0]);

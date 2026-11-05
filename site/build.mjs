@@ -4,6 +4,7 @@ import path from 'path';
 import React from 'react';
 import {renderToString} from 'react-dom/server';
 import htm from 'htm';
+import {transformSync} from 'esbuild';
 import {buildPages, SITE} from './src/meta.mjs';
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
@@ -24,9 +25,9 @@ fs.cpSync(path.join(ROOT, 'public'), OUT, {recursive: true});
 for (const f of ['react/umd/react.production.min.js', 'react-dom/umd/react-dom.production.min.js', 'htm/dist/htm.umd.js'])
   fs.copyFileSync(path.join(ROOT, 'node_modules', f), path.join(OUT, 'assets/vendor', path.basename(f)));
 fs.writeFileSync(path.join(OUT, 'assets/site.css'), read('src/site.css') + '\n' + read('src/extra.css'));
-fs.writeFileSync(path.join(OUT, 'assets/app.js'),
+fs.writeFileSync(path.join(OUT, 'assets/app.js'), transformSync(
   '(function(){' + prelude + body +
-  '\nvar P=PAGES[window.__PAGE__];if(P)ReactDOM.hydrateRoot(document.getElementById("root"),React.createElement(P));})();');
+  '\nvar P=PAGES[window.__PAGE__],R=document.getElementById("root");if(P){if(REDUCED)ReactDOM.createRoot(R).render(React.createElement(P));else ReactDOM.hydrateRoot(R,React.createElement(P));}})();', {minify: true, legalComments: 'none'}).code);
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 for (const p of pageList) {
@@ -47,6 +48,7 @@ ${SITE.url ? `<link rel="canonical" href="${SITE.url}/${p.path ? p.path + '/' : 
 <meta property="og:site_name" content="LocalLift">
 <meta property="og:title" content="${esc(p.title)}">
 <meta property="og:description" content="${esc(p.description)}">
+${SITE.url ? `<meta property="og:url" content="${SITE.url}/${p.path ? p.path + '/' : ''}">` : ''}
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -59,6 +61,7 @@ ${ld}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div id="root">${app}</div>
+<noscript><p style="padding:16px;background:#fff;color:#000">To request a Visibility Audit without JavaScript, email <a href="mailto:info@thesocialdm.com">info@thesocialdm.com</a>.</p></noscript>
 <script>window.__PAGE__=${JSON.stringify(p.page)};</script>
 <script src="/assets/vendor/react.production.min.js" defer></script>
 <script src="/assets/vendor/react-dom.production.min.js" defer></script>
