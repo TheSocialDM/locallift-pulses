@@ -314,6 +314,17 @@ footer{background:#fff;padding:0 0 calc(32px + env(safe-area-inset-bottom));bord
   .team-card{margin:0;align-self:center;background:transparent;border:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;padding:40px 40px}
 }
 
+/* Phones: show the photo in full, cards tucked under it */
+@media (max-width:699px){
+  .how-panel,.results{padding:0;background:linear-gradient(180deg,#dfe9f1,var(--blue-1))}
+  .how-panel>img,.results>img{position:relative;inset:auto;height:auto;aspect-ratio:4/3;filter:saturate(1.12) contrast(1.06)}
+  .how-panel>img{object-position:center 70%}
+  .results>img{object-position:center 65%}
+  .how-panel::after,.results::after{display:none}
+  .steps{margin:-44px 12px 12px}
+  .summary{margin:-44px 12px 12px}
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
