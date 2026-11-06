@@ -1662,5 +1662,28 @@ function draw(){
 draw();
 })();
 </script>
+
+<!-- protect -->
+<style>
+.wm{position:fixed;inset:0;z-index:9998;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22420%22%20height%3D%22260%22%3E%3Ctext%20x%3D%22210%22%20y%3D%22130%22%20text-anchor%3D%22middle%22%20transform%3D%22rotate%28-24%20210%20130%29%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22%230e2430%22%20fill-opacity%3D%220.07%22%3EPrepared%20for%20Dr.%20Ylli%20Zhubi%20%C2%B7%20The%20SocialDM%3C/text%3E%3C/svg%3E");background-repeat:repeat}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea,select{-webkit-user-select:text;user-select:text}
+@media print{body *{visibility:hidden}body::after{content:"Private preview for Dr. Ylli Zhubi. Printing is not available.";visibility:visible;position:fixed;top:40px;left:40px;font:16px Arial,sans-serif}}
+</style>
+<div class="wm" aria-hidden="true"></div>
+<script>
+(function(){
+  var end=Date.UTC(2026,10,21,7,0,0);
+  if(Date.now()>=end){
+    document.title="Private preview ended";
+    document.body.innerHTML='<div style="min-height:100vh;display:grid;place-items:center;padding:24px;font-family:-apple-system,Arial,sans-serif;background:#f5f9fc;color:#0e2430;text-align:center"><div><img src="images/socialdm-logo.png" alt="The SocialDM" style="height:90px;width:auto;margin:0 auto 18px;display:block"><h1 style="font-size:24px;margin:0 0 10px">This private preview has ended.</h1><p style="margin:0;color:#3d5562">To see it again, contact Michael Shad at <a href="mailto:info@thesocialdm.com" style="color:#0b5c61">info@thesocialdm.com</a>.</p></div></div>';
+    return;
+  }
+  function allow(e){var t=e.target;return t&&t.closest&&t.closest('input,textarea,select');}
+  document.addEventListener('contextmenu',function(e){if(!allow(e))e.preventDefault();});
+  document.addEventListener('copy',function(e){if(!allow(e))e.preventDefault();});
+  document.addEventListener('dragstart',function(e){if(e.target&&e.target.tagName==='IMG')e.preventDefault();});
+})();
+</script>
 </body>
 </html>
