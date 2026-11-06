@@ -177,7 +177,8 @@ button:focus-visible,summary:focus-visible,a:focus-visible,input:focus-visible,s
 .step p{color:var(--ink-2);font-size:15.5px}
 
 /* Board */
-.board{background:var(--white);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow-2);padding:20px 16px;display:grid;gap:18px;min-width:0}
+.board{background:var(--white);border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow-2);padding:20px 16px;display:grid;gap:18px;min-width:0;grid-template-columns:minmax(0,1fr)}
+#vAfter,#vBefore{min-width:0}
 .board-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .flip{display:inline-flex;gap:4px;padding:4px;background:var(--paper-2);border-radius:999px}
 .flip button{appearance:none;border:0;background:transparent;font:600 14px var(--body);color:var(--ink-2);min-height:40px;padding:0 16px;border-radius:999px;cursor:pointer}
@@ -227,6 +228,69 @@ button:focus-visible,summary:focus-visible,a:focus-visible,input:focus-visible,s
 .jr li span{display:block;font-size:14px;color:var(--ink-2);margin-top:4px;line-height:1.4}
 .cap{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:14.5px;color:var(--ink-2)}
 .cap b{color:var(--ink);font-weight:600}
+
+/* v2 */
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-2{display:inline-flex;align-items:center;min-height:52px;padding:0 22px;text-decoration:none;font-size:15px}
+.ww{margin-top:4px;border:1px solid rgba(255,255,255,.14);border-radius:var(--r-lg);overflow:hidden;background:rgba(255,255,255,.04)}
+.ww-row{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:16px 18px;border-top:1px solid rgba(255,255,255,.1);font-size:15px;color:#c9c7bd}
+.ww-row:first-child{border-top:0}
+.ww-row b{font:700 15.5px/1.3 var(--display);color:#fbf7ee}
+.ww-yes{color:#f0ddb4}
+.ww-head{display:none}
+.calc{background:var(--white);color:var(--ink);border-radius:var(--r-lg);padding:22px;display:grid;gap:14px;min-width:0}
+.calc h3{font-size:19px}
+.calc label{display:block;font-size:14px;color:var(--ink-2)}
+.calc output{float:right;font:800 15px var(--display);color:var(--ink)}
+.calc input[type=range]{width:100%;margin-top:8px;accent-color:var(--brass-ink);min-height:28px}
+.calc-out{background:var(--brass-soft);border-radius:var(--r-md);padding:16px}
+.calc-out b{display:block;font:500 34px/1.05 var(--serif)}
+.calc-out span{display:block;margin-top:6px;font-size:14.5px;color:var(--ink-2);line-height:1.4}
+.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--white);-webkit-overflow-scrolling:touch}
+.sheet table{border-collapse:separate;border-spacing:0;width:100%;min-width:980px;font-size:14px;font-variant-numeric:tabular-nums}
+.sheet th,.sheet td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);border-right:1px solid var(--line);white-space:nowrap;font-weight:400}
+.sheet thead th{background:var(--paper-2);font:700 12px var(--display);letter-spacing:.04em;color:var(--ink-2);position:sticky;top:0}
+.sheet tbody tr:last-child th,.sheet tbody tr:last-child td{border-bottom:0}
+.sheet th:last-child,.sheet td:last-child{border-right:0}
+.sheet th:first-child{position:sticky;left:0;background:var(--white);z-index:1;box-shadow:2px 0 0 var(--line)}
+.sheet thead th:first-child{background:var(--paper-2);z-index:2}
+.sheet tbody th button{appearance:none;border:0;background:none;padding:6px 0;font:700 14px var(--display);color:var(--ink);cursor:pointer;text-decoration:underline;text-decoration-color:var(--brass-2);text-underline-offset:3px}
+.sheet tr.sel td,.sheet tr.sel th{background:var(--brass-soft)}
+.sheet tr.fresh td,.sheet tr.fresh th{background:var(--sage-soft)}
+.detail{margin-top:12px;background:var(--paper);border-radius:var(--r-md);padding:14px 16px}
+.d-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.d-top b{font:800 16px var(--display)}
+.detail ul{margin:8px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-2);display:grid;gap:3px}
+.msheet{background:var(--white);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow-2);max-width:980px;margin:0 auto;overflow:hidden}
+.ms-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:22px 20px 16px;border-bottom:3px double var(--ink)}
+.ms-title{display:block;font:500 clamp(34px,6vw,46px)/1 var(--serif)}
+.ms-for{display:block;margin-top:6px;font-size:14px;color:var(--ink-2)}
+.ms-five{padding:18px 20px 4px}
+.ms-five .p-name small{font:400 13px var(--body);color:var(--ink-3);letter-spacing:0;margin-left:6px;white-space:nowrap}
+.ms-grid{display:grid;grid-template-columns:minmax(0,1fr);border-top:1px solid var(--line)}
+.ms-box{padding:18px 20px;border-top:1px solid var(--line);min-width:0}
+.ms-box:first-child{border-top:0}
+.ms-box h4{font-size:15px;letter-spacing:-.01em;margin-bottom:10px}
+.ms-box ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:14px;line-height:1.35}
+.ms-box li b{display:block;font:700 12px var(--display);color:var(--brass-ink)}
+.ms-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ms-stats div{background:var(--paper);border-radius:10px;padding:10px}
+.ms-stats b{display:block;font:800 21px/1 var(--display)}
+.ms-stats span{display:block;font-size:12.5px;color:var(--ink-2);margin-top:4px}
+.ms-box label{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:14px;line-height:1.35;cursor:pointer}
+.ms-box input{flex:none;width:19px;height:19px;margin:0;accent-color:var(--brass-ink)}
+.sub-head{margin:40px 0 16px;max-width:620px}
+.sub-head h3{font-size:clamp(22px,4vw,28px);letter-spacing:-.03em}
+.sub-head p{color:var(--ink-2);margin-top:6px}
+.mores{display:grid;gap:12px;max-width:940px}
+.more{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-1);overflow:hidden}
+.more>summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;font:700 17px/1.3 var(--display);letter-spacing:-.015em}
+.more>summary::-webkit-details-marker{display:none}
+.more[open]>summary .plus{transform:rotate(45deg);background:var(--brass-soft)}
+.more-in{padding:0 18px 22px;min-width:0}
+.more-lede{color:var(--ink-2);margin-bottom:16px;font-size:15.5px}
+.more .check,.more .layer-panel{box-shadow:none}
+.plus{transition:transform .25s}
 
 /* Sends */
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
@@ -390,6 +454,11 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
 .foot-bottom{border-top:1px solid var(--line);margin-top:14px;padding-top:16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--ink-3)}
 
 @media (min-width:700px){
+  .ww-row{grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,1.1fr);gap:18px;align-items:start}
+  .ww-head{display:grid;font:700 12px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--brass-2)}
+  .ms-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ms-box{border-top:0;border-left:1px solid var(--line)}
+  .ms-box:first-child{border-left:0}
   .wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}
   .pains{grid-template-columns:repeat(2,minmax(0,1fr))}
   .nums{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -463,8 +532,8 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
       <div class="hero-copy">
         <span class="eyebrow">Referral Desk for Realtors</span>
         <h1>Your database, <em>finally working</em> for you.</h1>
-        <p class="lede">Send us your contact list. We sort it, email your people in your brand, and tell you who to call every Monday. No CRM to learn.</p>
-        <div><a class="btn" href="#list">Try it with a sample list <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a></div>
+        <p class="lede">Stay close to the people who already know you. We sort your list, send warm notes in your name, and hand you a short sheet every Monday. No CRM to learn.</p>
+        <div class="hero-cta"><a class="btn" href="#list">See a sample database <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a><a class="try ghost hero-2" href="#monday">See a Monday Sheet</a></div>
         <div class="who">
           <img src="images/victoria.jpg" alt="Sample agent Victoria Richards" width="600" height="600">
           <div class="who-text"><b>Victoria Richards</b>Sample agent, fictional<br>Sonoran Crest Realty, Scottsdale,&nbsp;AZ</div>
@@ -499,53 +568,40 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
   </div>
 </header>
 
-<div class="ticker" aria-hidden="true"><div><span>Your list, sorted</span><span>Your Monday Five</span><span>Market notes by ZIP</span><span>Home anniversaries</span><span>New lead welcomes</span><span>Open house thank yous</span><span>Local weekend notes</span><span>Your referral card</span><span>A copy of every send</span><span>One clear monthly summary</span><span>Your list, sorted</span><span>Your Monday Five</span><span>Market notes by ZIP</span><span>Home anniversaries</span><span>New lead welcomes</span><span>Open house thank yous</span><span>Local weekend notes</span><span>Your referral card</span><span>A copy of every send</span><span>One clear monthly summary</span></div></div>
+<div class="ticker" aria-hidden="true"><div><span>Your list, sorted</span><span>Your Monday Sheet</span><span>Market notes by ZIP</span><span>Home anniversaries</span><span>New lead welcomes</span><span>Open house thank yous</span><span>Local weekend notes</span><span>Your referral card</span><span>A copy of every send</span><span>One clear monthly summary</span><span>Your list, sorted</span><span>Your Monday Sheet</span><span>Market notes by ZIP</span><span>Home anniversaries</span><span>New lead welcomes</span><span>Open house thank yous</span><span>Local weekend notes</span><span>Your referral card</span><span>A copy of every send</span><span>One clear monthly summary</span></div></div>
 
 <main>
-
-  <section class="sec" style="padding-bottom:0">
-    <div class="wrap">
-      <figure class="team">
-        <img src="images/aerial.jpg" alt="Desert homes at sunset with mountains behind them" width="1000" height="667" loading="lazy">
-        <figcaption class="team-card">
-          <span class="eyebrow">Your brand, not ours</span>
-          <h3>Your name. Your brokerage. Your emails.</h3>
-          <p>Every email carries your photo, your brokerage and your office address. Replies come straight to you.</p>
-          <div class="meta"><span>Victoria Richards</span><span>Sonoran Crest Realty</span><span>Scottsdale, Arizona</span></div>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="sec" id="familiar">
+  <section class="sec why" id="why">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Sound familiar?</span>
-        <h2>Your best leads are already in your phone.</h2>
-        <p class="lede">This is easy to put off. You are out showing homes, and the list waits.</p>
+        <span class="eyebrow">Why this matters</span>
+        <h2>You earned these relationships. This keeps them warm.</h2>
+        <p class="lede">You worked hard for every name in your phone. When life gets busy, the list waits. Here is how the same year can go.</p>
       </div>
-      <div class="pains">
-        <div class="pain"><b>Five places</b><h3>The list is scattered</h3><p>Your phone, an old CRM, a spreadsheet, open house sign in sheets and a stack of business cards.</p></div>
-        <div class="pain"><b>Never set up</b><h3>You paid for a CRM</h3><p>The login still works. The drips were never written, and the tags were never finished.</p></div>
-        <div class="pain"><b>Gone quiet</b><h3>Past clients drift</h3><p>You closed, you sent a gift, and then life got busy. A year goes by faster than it should.</p></div>
-        <div class="pain"><b>One text</b><h3>Leads go cold</h3><p>A new lead gets a quick hello and then nothing, because the next closing needed you first.</p></div>
+      <div class="ww" role="table" aria-label="The same year, without and with Referral Desk">
+        <div class="ww-row ww-head" role="row"><span role="columnheader">The moment</span><span role="columnheader">On your own</span><span role="columnheader">With Referral Desk</span></div>
+        <div class="ww-row" role="row"><b role="cell">A new lead on a busy Tuesday</b><span role="cell">You send a quick hello, then the week takes over.</span><span role="cell" class="ww-yes">A warm welcome goes out, and you hear about it if they reply.</span></div>
+        <div class="ww-row" role="row"><b role="cell">A past client's five year home anniversary</b><span role="cell">It passes quietly.</span><span role="cell" class="ww-yes">A personal note goes out in your name.</span></div>
+        <div class="ww-row" role="row"><b role="cell">A friend asks them for an agent</b><span role="cell">They try to remember your last name.</span><span role="cell" class="ww-yes">Your referral card is already in their inbox.</span></div>
+        <div class="ww-row" role="row"><b role="cell">They start thinking about selling</b><span role="cell">It has been a while since they heard from you.</span><span role="cell" class="ww-yes">Your market note came this month, so your name is fresh.</span></div>
+        <div class="ww-row" role="row"><b role="cell">Monday morning</b><span role="cell">You wonder who to call first.</span><span role="cell" class="ww-yes">Five names, and what to say to each.</span></div>
       </div>
-    </div>
-  </section>
-
-  <section class="sec why" id="why">
-    <div class="wrap why-grid">
-      <div class="sec-head" style="margin-bottom:0">
-        <span class="eyebrow">Why this list matters</span>
-        <h2>Your next listing may know you, or know someone who does.</h2>
-        <p class="lede">Most people pick an agent they know or one someone recommends. Staying in touch keeps your name ready when the moment comes.</p>
-      </div>
-      <div>
-        <div class="nums">
-          <div class="num"><b>66%</b><span>of sellers found their agent through a personal referral (37%) or used an agent they had worked with before (29%).</span></div>
-          <div class="num"><b>58%</b><span>of buyers found their agent through a personal referral (43%) or went back to an agent they had used before (15%).</span></div>
+      <div class="why-grid" style="margin-top:28px">
+        <div>
+          <div class="nums">
+            <div class="num"><b>66%</b><span>of sellers found their agent through a personal referral (37%) or used an agent they had worked with before (29%).</span></div>
+            <div class="num"><b>58%</b><span>of buyers found their agent through a personal referral (43%) or went back to an agent they had used before (15%).</span></div>
+          </div>
+          <p class="src">National Association of Realtors, 2025 Profile of Home Buyers and Sellers. Added together from the separate answers shown.</p>
         </div>
-        <p class="src">National Association of Realtors, 2025 Profile of Home Buyers and Sellers. Added together from the separate answers shown.</p>
+        <div class="calc" aria-label="Estimate what moves through your list">
+          <h3>What moves through your list each year?</h3>
+          <label for="cCount">People on your list <output id="oCount"></output><input type="range" id="cCount" min="50" max="1000" step="10" value="110"></label>
+          <label for="cPct">Your guess at how many move in a year <output id="oPct"></output><input type="range" id="cPct" min="2" max="12" step="1" value="5"></label>
+          <label for="cCom">Your typical commission <output id="oCom"></output><input type="range" id="cCom" min="5000" max="30000" step="1000" value="12000"></label>
+          <div class="calc-out"><b id="cOut"></b><span id="cOutB"></span></div>
+          <p class="fine">Your own estimate, shown as an example. This is not a promise of any result.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -554,7 +610,7 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">How it works</span>
-        <h2>You send a list. We run the desk.</h2>
+        <h2>You send a list. We take it from there.</h2>
         <p class="lede">A short start from you. After that, your time goes to the people who raised a hand.</p>
       </div>
       <div class="how-panel">
@@ -562,7 +618,7 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
         <ol class="steps">
           <li class="step"><span class="step-num">1</span><h3>Send your contacts</h3><p>A spreadsheet or a phone export is fine, and messy is fine. A hundred contacts is plenty to start.</p></li>
           <li class="step"><span class="step-num">2</span><h3>Approve your first month</h3><p>We sort your list and show you the emails in your brand. You change anything you like, then say yes.</p></li>
-          <li class="step"><span class="step-num">3</span><h3>See who to call</h3><p>Emails go out, you get a copy of each one, and every Monday you get five names worth your attention.</p></li>
+          <li class="step"><span class="step-num">3</span><h3>See who to call</h3><p>Emails go out, you get a copy of each one, and every Monday you get your Monday Sheet.</p></li>
         </ol>
       </div>
     </div>
@@ -571,18 +627,19 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
   <section class="sec sec-alt" id="list">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Try it</span>
-        <h2>From a messy list to a working one.</h2>
-        <p class="lede">We call this the Desk Sort. Flip the sample list, filter it, then add a lead of your own.</p>
+        <span class="eyebrow">Your database</span>
+        <h2>Everyone you know, on one clean sheet.</h2>
+        <p class="lede">Here is what a sorted database looks like. You never have to run it, and it is always yours. Tap a name to see the history.</p>
       </div>
       <div class="board">
         <div class="board-top">
           <div class="flip" role="group" aria-label="Show the list">
-            <button type="button" id="fBefore" aria-pressed="false">What you send</button>
-            <button type="button" id="fAfter" class="on" aria-pressed="true">What we run</button>
+            <button type="button" id="fBefore" aria-pressed="false">What you send us</button>
+            <button type="button" id="fAfter" class="on" aria-pressed="true">Your database</button>
           </div>
-          <span class="sample-tag">Sample list, fictional</span>
+          <span class="sample-tag">Sample, all fictional</span>
         </div>
+
 
         <div id="vBefore" hidden>
           <div class="messy" tabindex="0" aria-label="Sample of a messy contact list">
@@ -599,18 +656,24 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
             </table>
           </div>
           <div class="tally" style="margin-top:14px">
-            <div><b>147</b><span>Rows you sent</span></div>
+            <div><b>145</b><span>Rows you sent</span></div>
             <div><b>21</b><span>Duplicates merged</span></div>
             <div><b>9</b><span>Missing an email, sent back to you</span></div>
             <div><b>5</b><span>You told us to skip</span></div>
           </div>
-          <p class="fine" style="margin-top:12px">Sample numbers. 147 rows in, 112 clean contacts out. We email only people you know.</p>
+          <p class="fine" style="margin-top:12px">Sample numbers. 145 rows in, 110 clean contacts out. We email only people you know.</p>
         </div>
 
         <div id="vAfter">
-          <div class="chips-f" id="chips" role="group" aria-label="Filter the list"></div>
-          <ul class="people" id="people" style="margin-top:14px"></ul>
-          <p class="fine" style="margin-top:6px">A few names from a sample list. Counts are sample numbers.</p>
+          <div class="chips-f" id="chips" role="group" aria-label="Filter the database"></div>
+          <div class="sheet" tabindex="0" aria-label="Sample database table" style="margin-top:14px">
+            <table>
+              <thead><tr><th>Name</th><th>Group</th><th>ZIP</th><th>Email</th><th>Closed</th><th>Birthday</th><th>Latest activity</th><th>Next email</th></tr></thead>
+              <tbody id="people"></tbody>
+            </table>
+          </div>
+          <p class="fine" style="margin-top:8px">A few rows from the sample list. Swipe or scroll the table to see every column.</p>
+          <div class="detail" id="detail" aria-live="polite"></div>
         </div>
 
         <div class="add">
@@ -623,24 +686,45 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
             <label for="addZip">ZIP<input id="addZip" inputmode="numeric" autocomplete="off" placeholder="85251" maxlength="5"></label>
             <button class="try" type="submit" style="min-height:46px">Add to the list</button>
           </form>
-          <p class="add-msg" id="addMsg" role="status" aria-live="polite">Forward a contact, text a name or use a short form. That is the whole job.</p>
+          <p class="add-msg" id="addMsg" role="status" aria-live="polite">Forward a contact, text a name or use a short form. That is all you do.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="paths">
+  <section class="sec" id="monday">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Who gets what</span>
-        <h2>The right email for the right person.</h2>
-        <p class="lede">A past client and a new lead should not get the same note. Tap a group and see the main emails they get.</p>
+        <span class="eyebrow">Your Monday Sheet</span>
+        <h2>One page. Five people. A few good calls.</h2>
+        <p class="lede">It lands in your inbox every Monday, with nothing to log in to. Read it with your coffee, and print it if you like. Try the buttons.</p>
       </div>
-      <div class="jr">
-        <div class="chips-f" id="jrChips" role="group" aria-label="Pick a group"></div>
-        <ol id="jrList"></ol>
-        <p class="cap"><span class="sample-tag">Sample</span><span><b>One or two emails a week at most,</b> so nobody on your list gets buried.</span></p>
-      </div>
+      <article class="msheet">
+        <header class="ms-head">
+          <div><span class="ms-title">Monday Sheet</span><span class="ms-for">Prepared for Victoria Richards</span></div>
+          <span class="sample-tag">Sample week, all fictional</span>
+        </header>
+        <div class="ms-five">
+          <div class="five-head"><h3>Your Monday Five<small>The buttons are for this demo</small></h3></div>
+          <div class="progress"><span id="prog">0 of 5 done</span><i><b id="progBar"></b></i></div>
+          <ul class="rows">
+            <li class="row"><span class="av t-hot" aria-hidden="true">SP</span><div class="p-top"><span class="p-name">Sam Porter <small>480.555.0117</small></span><span class="tag t-hot">Clicked twice</span></div><p class="p-note">Clicked the 85251 market note twice last week.</p></li>
+            <li class="row"><span class="av t-new" aria-hidden="true">DL</span><div class="p-top"><span class="p-name">Dana Lee <small>480.555.0123</small></span><span class="tag t-new">Replied</span></div><p class="p-note">New lead. Answered your welcome note and said she may sell next spring.</p></li>
+            <li class="row"><span class="av t-past" aria-hidden="true">CV</span><div class="p-top"><span class="p-name">Chris Vale <small>480.555.0131</small></span><span class="tag t-past">Anniversary</span></div><p class="p-note">Five years in the house this month. The note goes out Tuesday.</p></li>
+            <li class="row"><span class="av t-sphere" aria-hidden="true">JH</span><div class="p-top"><span class="p-name">Jordan Hale <small>480.555.0138</small></span><span class="tag t-sphere">Birthday</span></div><p class="p-note">Birthday on Thursday. A personal text means more than an email.</p></li>
+            <li class="row"><span class="av t-open" aria-hidden="true">PN</span><div class="p-top"><span class="p-name">Pat Nolan <small>480.555.0146</small></span><span class="tag t-open">Gone quiet</span></div><p class="p-note">Past client. No reply or call in over a year.</p></li>
+          </ul>
+        </div>
+        <div class="ms-grid">
+          <div class="ms-box"><h4>Going out this week</h4><ul><li><b>Today</b>Welcome note to Casey Ward and open house thank you to Morgan Ellis</li><li><b>Tuesday</b>Home anniversary note to Chris Vale</li><li><b>Wednesday</b>Market note to your 85254 contacts</li><li><b>Thursday</b>Local note to friends, neighbors and past clients</li></ul></div>
+          <div class="ms-box"><h4>Since last Monday</h4><div class="ms-stats"><div><b>86</b><span>Emails sent</span></div><div><b>4</b><span>Replies</span></div><div><b>2</b><span>New contacts</span></div><div><b>1</b><span>Unsubscribed</span></div></div><p class="fine" style="margin-top:8px">Sample numbers.</p></div>
+          <div class="ms-box"><h4>Your short list</h4>
+            <label><input type="checkbox" id="w1"> Send a photo of the sign in sheet after your next open house</label>
+            <label><input type="checkbox" id="w3"> Tell us about any closing, so the anniversary date is saved</label>
+            <label><input type="checkbox" id="w4"> Tell us about any new photo or phone number</label>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -648,7 +732,7 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">What goes out</span>
-        <h2>Every touch, in your name.</h2>
+        <h2>Warm notes, in your name.</h2>
         <p class="lede">Tap through a sample of what your people get over a year. You get a copy of each one.</p>
       </div>
 
@@ -744,7 +828,7 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
           </div>
           <p class="mail-foot">Sonoran Crest Realty, 100 Sample Avenue, Suite 200, Scottsdale, AZ. Unsubscribe anytime.</p>
         </div>
-        <aside class="about-send"><span class="sample-tag">Sample</span><h3>Seller tip</h3><dl><dt>What it is</dt><dd>One small, useful idea that keeps you helpful when they get serious.</dd><dt>When</dt><dd>A few times a year</dd><dt>Who gets it</dt><dd>Likely sellers, friends, neighbors and past clients</dd></dl></aside>
+        <aside class="about-send"><span class="sample-tag">Sample</span><h3>Seller tip</h3><dl><dt>What it is</dt><dd>One small, useful idea, so you are the one they call when they get serious.</dd><dt>When</dt><dd>A few times a year</dd><dt>Who gets it</dt><dd>Likely sellers, friends, neighbors and past clients</dd></dl></aside>
       </div>
 
       <div class="panel" role="tabpanel" id="p-season" aria-labelledby="t-season" hidden>
@@ -762,30 +846,17 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
         </div>
         <aside class="about-send"><span class="sample-tag">Sample</span><h3>Seasonal card</h3><dl><dt>What it is</dt><dd>A simple email card for the holidays and the new year. You can print it if you like.</dd><dt>When</dt><dd>Thanksgiving and New Year</dd><dt>Who gets it</dt><dd>Everyone on your list</dd></dl></aside>
       </div>
-
-      <div class="quarter">
-        <div class="five-head"><h3>A sample year<small>One feature each month. Market notes, local notes and your Monday Five run alongside it.</small></h3><span class="sample-tag">Sample</span></div>
-        <ol class="q-grid"><li><b>January</b><span>New Year card</span></li><li><b>February</b><span>Seller tip</span></li><li><b>March</b><span>Spring selling checklist</span></li><li><b>April</b><span>Spring local guide</span></li><li><b>May</b><span>Summer home care tip</span></li><li><b>June</b><span>Mid year review of your ZIP</span></li><li><b>July</b><span>Your referral card</span></li><li><b>August</b><span>Buyer tip</span></li><li><b>September</b><span>Fall selling tip</span></li><li><b>October</b><span>Fall local guide</span></li><li><b>November</b><span>Thanksgiving card</span></li><li><b>December</b><span>Year end thank you</span></li></ol>
+      <div class="sub-head"><h3>Who gets what</h3><p>A past client and a new lead should not get the same note. Tap a group and see the main emails they get.</p></div>
+      <div class="jr">
+        <div class="chips-f" id="jrChips" role="group" aria-label="Pick a group"></div>
+        <ol id="jrList"></ol>
+        <p class="cap"><span class="sample-tag">Sample</span><span><b>One or two emails a week at most,</b> so nobody on your list gets buried.</span></p>
       </div>
+      <details class="more" style="margin-top:14px"><summary>See a sample year<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="fine" style="margin-bottom:12px">One feature each month. Market notes, local notes and your Monday Sheet run alongside it.</p><ol class="q-grid"><li><b>January</b><span>New Year card</span></li><li><b>February</b><span>Seller tip</span></li><li><b>March</b><span>Spring selling checklist</span></li><li><b>April</b><span>Spring local guide</span></li><li><b>May</b><span>Summer home care tip</span></li><li><b>June</b><span>Mid year review of your ZIP</span></li><li><b>July</b><span>Your referral card</span></li><li><b>August</b><span>Buyer tip</span></li><li><b>September</b><span>Fall selling tip</span></li><li><b>October</b><span>Fall local guide</span></li><li><b>November</b><span>Thanksgiving card</span></li><li><b>December</b><span>Year end thank you</span></li></ol></div></details>
     </div>
   </section>
 
-  <section class="sec" id="posts">
-    <div class="wrap posts">
-      <div class="sec-head" style="margin-bottom:0">
-        <span class="eyebrow">Works with your posts</span>
-        <h2>Your feed and your inbox finally match.</h2>
-        <p class="lede">With LocalLift Signature, the same local ideas show up in your social posts, your Google posts and your emails.</p>
-      </div>
-      <div><div style="margin-bottom:12px"><span class="sample-tag">Sample posts</span></div><div class="post-row">
-        <img src="images/post-a.jpg" alt="Sample social post for Victoria Richards about desert modern homes" width="864" height="1080" loading="lazy">
-        <img src="images/post-b.jpg" alt="Sample social post for Victoria Richards about a front door" width="864" height="1080" loading="lazy">
-        <img src="images/post-c.jpg" alt="Sample social post for Victoria Richards about living in Scottsdale" width="864" height="1080" loading="lazy">
-      </div></div>
-    </div>
-  </section>
-
-  <section class="sec sec-alt" id="card">
+  <section class="sec" id="card">
     <div class="wrap card-grid">
       <div class="sec-head" style="margin-bottom:0">
         <span class="eyebrow">Made to forward</span>
@@ -810,49 +881,34 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
     </div>
   </section>
 
-  <section class="sec" id="monday">
+  <section class="sec sec-alt" >
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Your Monday Five</span>
-        <h2>Five names worth your time this week.</h2>
-        <p class="lede">No dashboard to log in to. One short email tells you who replied, who is new and who has gone quiet. Try it.</p>
-      </div>
-      <div class="five-grid">
-        <div class="five">
-          <div class="five-head"><h3>Monday, sample week<small>All names are fictional. Buttons are for this demo.</small></h3><span class="sample-tag">Sample</span></div>
-          <div class="mail-meta"><div><small>From</small>LocalLift, for Victoria Richards</div><div><small>Subject</small><b>Your Monday Five, sample week</b></div></div>
-          <div class="progress"><span id="prog">0 of 5 done</span><i><b id="progBar"></b></i></div>
-          <ul class="rows">
-            <li class="row"><span class="av t-hot" aria-hidden="true">SP</span><div class="p-top"><span class="p-name">Sam Porter</span><span class="tag t-hot">Clicked twice</span></div><p class="p-note">Opened the 85251 market note and clicked it twice this week.</p></li>
-            <li class="row"><span class="av t-new" aria-hidden="true">DL</span><div class="p-top"><span class="p-name">Dana Lee</span><span class="tag t-new">Replied</span></div><p class="p-note">New lead. Answered your welcome note and said she may sell next spring.</p></li>
-            <li class="row"><span class="av t-past" aria-hidden="true">CV</span><div class="p-top"><span class="p-name">Chris Vale</span><span class="tag t-past">Anniversary</span></div><p class="p-note">Five years in the house this month. The note goes out Tuesday.</p></li>
-            <li class="row"><span class="av t-sphere" aria-hidden="true">JH</span><div class="p-top"><span class="p-name">Jordan Hale</span><span class="tag t-sphere">Birthday</span></div><p class="p-note">Birthday on Thursday. A personal text means more than an email.</p></li>
-            <li class="row"><span class="av t-open" aria-hidden="true">PN</span><div class="p-top"><span class="p-name">Pat Nolan</span><span class="tag t-open">Gone quiet</span></div><p class="p-note">Past client. No reply or call in over a year.</p></li>
-          </ul>
-        </div>
-        <figure class="photo-card">
-          <img src="images/lounge.jpg" alt="A modern living room with a round mirror and a dining table" width="1600" height="1051" loading="lazy" style="object-position:78% center">
-          <figcaption><h3>One short read on Monday.</h3><p>Read it with your coffee. Make the calls that matter. That is your part.</p></figcaption>
-        </figure>
-      </div>
-      <div class="staff">
-        <div class="five-head"><h3>Your short list for the week<small>For you or your assistant. Try checking one off.</small></h3><span class="sample-tag">Sample</span></div>
-        <label><input type="checkbox" id="w1"> Send a photo of Sunday's open house sign in sheet</label>
-        <label><input type="checkbox" id="w2"> Forward the two new contacts from this week</label>
-        <label><input type="checkbox" id="w3"> Tell us about any closing, so the anniversary date is saved</label>
-        <label><input type="checkbox" id="w4"> Tell us about any new photo, phone number or brokerage change</label>
-      </div>
+      <figure class="team">
+        <img src="images/aerial.jpg" alt="Desert homes at sunset with mountains behind them" width="1000" height="667" loading="lazy">
+        <figcaption class="team-card">
+          <span class="eyebrow">Your brand, not ours</span>
+          <h3>Your name. Your brokerage. Your emails.</h3>
+          <p>Every email carries your photo, your brokerage and your office address. Replies come straight to you.</p>
+          <div class="meta"><span>Victoria Richards</span><span>Sonoran Crest Realty</span><span>Scottsdale, Arizona</span></div>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="sec sec-alt" id="check">
+  <section class="sec" id="more">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Where they look you up</span>
-        <h2>Is your name the same everywhere?</h2>
-        <p class="lede">When someone gets your name from a friend, they look you up before they call. We flag anything out of date.</p>
+        <span class="eyebrow">When you are ready for more</span>
+        <h2>Your list is the start.</h2>
+        <p class="lede">These can sit around your database, so people find you and remember you. Open whatever interests you.</p>
       </div>
-      <div class="check">
+      <div class="mores">
+        <details class="more"><summary>Your posts and your emails, working together<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="more-lede">With LocalLift Signature, the same local ideas show up in your social posts, your Google posts and your emails.</p><div><div style="margin-bottom:12px"><span class="sample-tag">Sample posts</span></div><div class="post-row">
+        <img src="images/post-a.jpg" alt="Sample social post for Victoria Richards about desert modern homes" width="864" height="1080" loading="lazy">
+        <img src="images/post-b.jpg" alt="Sample social post for Victoria Richards about a front door" width="864" height="1080" loading="lazy">
+        <img src="images/post-c.jpg" alt="Sample social post for Victoria Richards about living in Scottsdale" width="864" height="1080" loading="lazy">
+      </div></div></div></details>
+        <details class="more"><summary>Is your name the same everywhere?<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="more-lede">When someone gets your name from a friend, they look you up before they call. We flag anything out of date.</p>      <div class="check">
         <div class="five-head"><h3>Sample listing check<small>Example only, for a fictional agent</small></h3><span class="sample-tag">Sample</span></div>
         <ul class="check-rows">
           <li><b>Your website</b><span class="tag t-past">Matches</span></li>
@@ -863,17 +919,8 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
           <li><b>Homes.com profile</b><span class="tag t-hot">Not claimed</span></li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <section class="sec" id="questions">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Part of your visibility plan</span>
-        <h2>Answer what your market is already asking.</h2>
-        <p class="lede">Questions like these often come up on home searches. Each one can become a clear answer under your name.</p>
-      </div>
-      <div class="qa-grid">
+    </div></details>
+        <details class="more"><summary>Answers to what your market is asking<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="more-lede">Questions like these often come up on home searches. Each one can become a clear answer under your name.</p>      <div class="qa-grid">
         <div class="faq">
           <details open><summary>How do I find out what my home is worth?<span class="plus" aria-hidden="true"></span></summary><div class="ans">Online estimates are a starting point. A local agent can compare recent nearby sales and look at the condition of your home, usually for free.</div></details>
           <details><summary>What does it cost to sell a house in Arizona?<span class="plus" aria-hidden="true"></span></summary><div class="ans">Costs usually include agent commission, which is negotiable, title and escrow fees, and any repairs or prep. Ask for a written estimate of what you would take home.</div></details>
@@ -886,19 +933,8 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
           <div class="qa-card"><h3>Where answers show up</h3><ul><li>Your website</li><li>Your Google and social posts</li><li>Your emails</li></ul></div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="sec sec-alt" id="results">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">How you will see the work</span>
-        <h2>One clear summary, once a month.</h2>
-        <p class="lede">Plain language on one page. Nothing new to learn.</p>
-      </div>
-      <div class="results">
-        <img src="images/city.jpg" alt="Aerial view of modern buildings in the desert" width="1200" height="675" loading="lazy">
-        <div class="summary">
+    </div></details>
+        <details class="more"><summary>One clear summary each month<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="more-lede">Plain language on one page, with nothing new to learn.</p>
           <div class="five-head"><h3>Monthly summary<small>Labels shown in place of numbers</small></h3><span class="sample-tag">Sample</span></div>
           <div class="metrics">
             <div class="metric"><span class="label">Emails sent</span><div class="bars" aria-hidden="true"><i style="height:40%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:70%"></i></div><span class="val">Sample</span><small>Everything that went out this month</small></div>
@@ -907,19 +943,8 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
             <div class="metric"><span class="label">List size</span><div class="bars" aria-hidden="true"><i style="height:35%"></i><i style="height:52%"></i><i style="height:44%"></i><i style="height:66%"></i></div><span class="val">Sample</span><small>New contacts added and removed</small></div>
           </div>
           <p class="fine" style="margin-top:14px">Bars are illustrative. Nothing here reflects real activity.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="stack">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">The LocalLift&trade; full stack</span>
-        <h2>One system, working from every side.</h2>
-        <p class="lede">Your database is one layer of how people find you and remember you. Tap each layer.</p>
-      </div>
-      <div class="layers" role="group" aria-label="Layers of the system">
+        </div></details>
+        <details class="more"><summary>The full LocalLift&trade; system<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="more-lede">Your database is one layer of how people find you and remember you. Tap each layer.</p>      <div class="layers" role="group" aria-label="Layers of the system">
         <button type="button" class="layer on" data-l="0">Referral Desk</button>
         <button type="button" class="layer" data-l="1">Signature posts</button>
         <button type="button" class="layer" data-l="2">SEO</button>
@@ -933,6 +958,8 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
         <div class="lp-grid"><div><small>What it does</small><span id="lpA"></span></div><div><small>Who it reaches</small><span id="lpB"></span></div><div><small>How you see it</small><span id="lpC"></span></div></div>
       </div>
       <p class="src">What is included depends on your plan. No one can promise what Google or an AI tool will show.</p>
+    </div></details>
+      </div>
     </div>
   </section>
 
@@ -945,12 +972,12 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
       </div>
       <div class="yes-grid">
         <div class="yes-col"><h3>You</h3><ul><li>Send your contact list, in any shape</li><li>Send your photo, logo and brokerage details</li><li>Approve your first month of emails</li><li>Pass along new leads as you meet them</li><li>Make the calls that matter on Monday</li></ul></div>
-        <div class="yes-col we"><h3>LocalLift</h3><ul><li>Sort your list and keep it current</li><li>Write your emails in your brand</li><li>Send them, handle unsubscribes and track replies</li><li>Prepare your Monday Five</li><li>Send one clear summary each month</li></ul></div>
+        <div class="yes-col we"><h3>LocalLift</h3><ul><li>Sort your list and keep it current</li><li>Write your emails in your brand</li><li>Send them, handle unsubscribes and track replies</li><li>Prepare your Monday Sheet</li><li>Send one clear summary each month</li></ul></div>
       </div>
       <ol class="days">
         <li><b>Week 1</b>You send your list and photo. We sort it.</li>
         <li><b>Week 2</b>You approve your first month of emails.</li>
-        <li><b>Weeks 3 and 4</b>Emails start and your Monday Five begins.</li>
+        <li><b>Weeks 3 and 4</b>Emails start and your Monday Sheet begins.</li>
         <li><b>Day 30</b>Your first summary shows what went out and who replied.</li>
       </ol>
       <p class="src">Sample schedule. Your start date and timing are confirmed together.</p>
@@ -964,12 +991,12 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
         <h2>The short answers.</h2>
       </div>
       <div class="faq">
-        <details><summary>Do I have to learn new software?<span class="plus" aria-hidden="true"></span></summary><div class="ans"><b>No.</b> There is nothing to log in to. You send names to us, and your Monday Five comes by email.</div></details>
+        <details><summary>Do I have to learn new software?<span class="plus" aria-hidden="true"></span></summary><div class="ans"><b>No.</b> There is nothing to log in to. You send names to us, and your Monday Sheet comes by email.</div></details>
         <details><summary>My list is a mess. Is that a problem?<span class="plus" aria-hidden="true"></span></summary><div class="ans"><b>No.</b> Sorting it out is part of the job. We email only people you know, and you can tell us who to skip.</div></details>
         <details><summary>I only have about 100 contacts.<span class="plus" aria-hidden="true"></span></summary><div class="ans">That is a fine start. These are people who already know you.</div></details>
         <details><summary>Who do the emails come from?<span class="plus" aria-hidden="true"></span></summary><div class="ans"><b>You.</b> They carry your name, your email address, your brokerage and your office address.</div></details>
-        <details><summary>Who gets the replies?<span class="plus" aria-hidden="true"></span></summary><div class="ans"><b>You do.</b> Replies come to your inbox. We see a copy so your Monday Five stays accurate, and you get a copy of everything your people receive.</div></details>
-        <details><summary>Do I approve every email?<span class="plus" aria-hidden="true"></span></summary><div class="ans">You approve your first month and how it sounds. After that it runs, so you do not become the bottleneck. Change, skip or pause anything, any time.</div></details>
+        <details><summary>Who gets the replies?<span class="plus" aria-hidden="true"></span></summary><div class="ans"><b>You do.</b> Replies come to your inbox. We see a copy so your Monday Sheet stays accurate, and you get a copy of everything your people receive.</div></details>
+        <details><summary>Do I approve every email?<span class="plus" aria-hidden="true"></span></summary><div class="ans">You approve your first month and how it sounds. After that it runs, so it keeps moving on your busy weeks. Change, skip or pause anything, any time.</div></details>
         <details><summary>How many emails will people get?<span class="plus" aria-hidden="true"></span></summary><div class="ans">One or two a week at most, and each group gets its own set. Anyone can unsubscribe, and we remove them for you.</div></details>
         <details><summary>Will this get me more deals?<span class="plus" aria-hidden="true"></span></summary><div class="ans"><b>We can't promise that.</b> It keeps you in front of people who already know you. Once emails start, you can see what went out, who replied and who to call.</div></details>
         <details><summary>I already have a CRM.<span class="plus" aria-hidden="true"></span></summary><div class="ans">Keep it if it works for you, and send us an export. If yours never got fully set up, we run the part that keeps getting skipped.</div></details>
@@ -977,7 +1004,7 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
         <details><summary>What about my brokerage's rules?<span class="plus" aria-hidden="true"></span></summary><div class="ans">Every email carries your brokerage name and office address, and copy is checked for Fair Housing language. Your broker can review the samples before anything goes out.</div></details>
         <details><summary>Do you send texts or print?<span class="plus" aria-hidden="true"></span></summary><div class="ans">No. This is email only, and you can print any card on your own if you like.</div></details>
         <details><summary>Is this just AI writing?<span class="plus" aria-hidden="true"></span></summary><div class="ans">AI helps us draft and organize. We review it, and you approve how it sounds before anything starts.</div></details>
-        <details><summary>Is my list safe? Whose list is it?<span class="plus" aria-hidden="true"></span></summary><div class="ans"><b>Your list stays yours.</b> We use it only to run your emails, and we hand it back if you stop.</div></details>
+        <details><summary>Is my list safe? Whose list is it?<span class="plus" aria-hidden="true"></span></summary><div class="ans"><b>Your list stays yours.</b> We use it only to run your emails. Ask for your database any time, and we hand it back if you stop.</div></details>
       </div>
     </div>
   </section>
@@ -987,9 +1014,9 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
     <div class="wrap">
       <div class="closing-card">
         <span class="eyebrow">Private preview</span>
-        <h2>Stay top of mind, without running a CRM.</h2>
+        <h2>Stay close to your people, without running a CRM.</h2>
         <p>Have a question, or want to see what this looks like with your own list? Reach Michael Shad at <a href="mailto:info@thesocialdm.com" style="color:inherit;font-weight:600;-webkit-user-select:text;user-select:text">info@thesocialdm.com</a>. Nothing here has been sent to anyone.</p>
-        <a class="btn" href="#list">Try the sample list</a>
+        <a class="btn" href="#list">See the sample database</a>
       </div>
     </div>
   </section>
@@ -1056,35 +1083,42 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
   mark();
   if(reduce){send(sets.all[0]);addReply(sets.all[0]);}else timer=setTimeout(function(){typeNow(sets.all[0]);},900);
 
-  /* The list */
-  var kinds={hot:['Hot leads','t-hot','Hot lead',6],fresh:['New leads','t-new','New lead',9],past:['Past clients','t-past','Past client',38],sphere:['Friends and neighbors','t-sphere','Friend or neighbor',52],open:['Open house','t-open','Open house guest',7]};
+  /* The database */
+  var kinds={hot:['Hot leads','t-hot','Hot lead',6],fresh:['New leads','t-new','New lead',9],past:['Past clients','t-past','Past client',37],sphere:['Friends and neighbors','t-sphere','Friend or neighbor',51],open:['Open house','t-open','Open house guest',7]};
+  /* name, group, zip, email, closed, birthday, latest, next, history */
   var people=[
-    ['Sam Porter','hot','85251','Clicked the market note twice. On your Monday Five.'],
-    ['Avery Stone','hot','85254','Replied to a seller tip last week and was on that Monday Five. Next: your call.'],
-    ['Dana Lee','fresh','85254','Replied to your welcome note. On your Monday Five.'],
-    ['Casey Ward','fresh','85260','Next: welcome note.'],
-    ['Chris Vale','past','85258','Next: home anniversary note.'],
-    ['Pat Nolan','past','85251','Next: market note, and a name for your Monday Five.'],
-    ['Riley Moss','sphere','85251','Next: local Saturday note.'],
-    ['Taylor Quinn','sphere','85254','Next: market note for 85254.'],
-    ['Morgan Ellis','open','85258','Next: open house thank you.']
+    ['Sam Porter','hot','85251','sam@example.com','','Mar 12','Clicked the market note twice','Market note',['Met at an open house in the spring','Clicked the market note twice last week','On this week\'s Monday Sheet']],
+    ['Avery Stone','hot','85255','avery@example.com','','Jun 3','Replied to a seller tip two weeks ago','Seller tip',['Asked about selling last year','Replied to a seller tip two weeks ago','Was on last week\'s Monday Sheet. Next: your call']],
+    ['Dana Lee','fresh','85255','dana@example.com','','','Replied to your welcome note','Seller tip',['Joined your list from your website','Replied to your welcome note','On this week\'s Monday Sheet']],
+    ['Casey Ward','fresh','85260','casey@example.com','','','Added today','Welcome note',['You forwarded this contact today','Welcome note goes out today']],
+    ['Chris Vale','past','85258','chris@example.com','Nov 2021','Aug 21','Five year home anniversary this month','Home anniversary note',['Bought with you in November 2021','Replied to the holiday card last year','Home anniversary note goes out Tuesday']],
+    ['Pat Nolan','past','85251','pat@example.com','May 2019','Jan 9','No reply or call in over a year','Local note',['Bought with you in May 2019','Still getting your market notes','On this week\'s Monday Sheet']],
+    ['Jordan Hale','sphere','85260','jordan@example.com','','Nov 19','Birthday this Thursday','Local note',['Friend from your neighborhood','Birthday on Thursday','On this week\'s Monday Sheet']],
+    ['Riley Moss','sphere','85251','riley@example.com','','Oct 2','Forwarded your local note','Local note',['Friend from your gym','Forwarded your local note last month','Local note goes out Thursday']],
+    ['Taylor Quinn','sphere','85254','taylor@example.com','','Feb 17','No activity this month','Market note',['Neighbor of a past client','Market note goes out Wednesday']],
+    ['Morgan Ellis','open','85258','morgan@example.com','','','Signed in on Sunday','Open house thank you',['Signed in at Sunday\'s open house','Thank you note is next']]
   ];
-  var filter='all',freshName=null,added=0;
+  var filter='all',freshName=null,added=0,sel=people[0];
   function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
-  function initials(n){return n.trim().split(/\s+/).slice(0,2).map(function(x){return x.charAt(0).toUpperCase();}).join('');}
   function drawChips(){
-    var total=112+added,h='<button type="button" class="chip'+(filter==='all'?' on':'')+'" data-f="all">Everyone<b>'+total+'</b></button>';
+    var total=110+added,h='<button type="button" class="chip'+(filter==='all'?' on':'')+'" data-f="all">Everyone<b>'+total+'</b></button>';
     Object.keys(kinds).forEach(function(k){h+='<button type="button" class="chip'+(filter===k?' on':'')+'" data-f="'+k+'">'+kinds[k][0]+'<b>'+kinds[k][3]+'</b></button>';});
     $('chips').innerHTML=h;
     [].forEach.call($('chips').children,function(b){b.addEventListener('click',function(){filter=b.getAttribute('data-f');drawChips();drawPeople();});});
   }
-  function drawPeople(){
-    $('people').innerHTML=people.filter(function(p){return filter==='all'||p[1]===filter;}).map(function(p){
-      var k=kinds[p[1]];
-      return '<li class="person'+(p===freshName?' fresh':'')+'"><span class="av '+k[1]+'" aria-hidden="true">'+esc(initials(p[0]))+'</span><div class="p-top"><span class="p-name">'+esc(p[0])+'<small>'+esc(p[2])+'</small></span><span class="tag '+k[1]+'">'+k[2]+'</span></div><p class="p-note">'+esc(p[3])+'</p></li>';
-    }).join('');
+  function drawDetail(){
+    var k=kinds[sel[1]];
+    $('detail').innerHTML='<div class="d-top"><b>'+esc(sel[0])+'</b><span class="tag '+k[1]+'">'+k[2]+'</span></div><ul>'+sel[8].map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>';
   }
-  drawChips();drawPeople();
+  function drawPeople(){
+    var rows=people.filter(function(p){return filter==='all'||p[1]===filter;});
+    $('people').innerHTML=rows.map(function(p){
+      var k=kinds[p[1]],i=people.indexOf(p);
+      return '<tr class="'+(p===freshName?'fresh ':'')+(p===sel?'sel':'')+'"><th scope="row"><button type="button" data-i="'+i+'">'+esc(p[0])+'</button></th><td><span class="tag '+k[1]+'">'+k[2]+'</span></td><td>'+esc(p[2])+'</td><td>'+esc(p[3]||'Email needed')+'</td><td>'+esc(p[4]||'No closing yet')+'</td><td>'+esc(p[5]||'Not on file')+'</td><td>'+esc(p[6])+'</td><td>'+esc(p[7])+'</td></tr>';
+    }).join('');
+    [].forEach.call($('people').querySelectorAll('button'),function(b){b.addEventListener('click',function(){sel=people[+b.getAttribute('data-i')];drawPeople();drawDetail();});});
+  }
+  drawChips();drawPeople();drawDetail();
   function flip(after){
     $('vAfter').hidden=!after;$('vBefore').hidden=after;
     $('fAfter').classList.toggle('on',after);$('fBefore').classList.toggle('on',!after);
@@ -1098,18 +1132,28 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
     if(!n){$('addMsg').className='add-msg err';$('addMsg').textContent='Type a name first.';$('addName').focus();return;}
     if(z&&!/^\d{5}$/.test(z)){$('addMsg').className='add-msg err';$('addMsg').textContent='A ZIP has five digits.';$('addZip').focus();return;}
     z=z||'ZIP needed';
-    var nx=k==='open'?'Next: open house thank you.':k==='sphere'?'Next: local note and your next market note.':'Next: welcome note.';
-    var p=[n,k,z,nx];people.unshift(p);freshName=p;kinds[k][3]++;added++;filter='all';
-    flip(true);drawChips();drawPeople();this.reset();
-    $('addMsg').className='add-msg';$('addMsg').textContent=n+' is on the sample list. Sample only, nothing was sent or saved.';
+    var nx=k==='open'?'Next: open house thank you.':k==='sphere'?'Next: local note.':'Next: welcome note.';
+    var p=[n,k,z,'','','','Added today',(k==='open'?'Open house thank you':k==='sphere'?'Local note':'Welcome note'),['You added this contact today',nx]];people.unshift(p);freshName=p;sel=p;kinds[k][3]++;added++;filter='all';
+    flip(true);drawChips();drawPeople();drawDetail();this.reset();
+    $('addMsg').className='add-msg';$('addMsg').textContent=n+' is in the sample database. Sample only, nothing was sent or saved.';
   });
+
+  /* Estimate */
+  function money(n){return '$'+Math.round(n).toLocaleString('en-US');}
+  function calc(){
+    var c=+$('cCount').value,pc=+$('cPct').value,m=+$('cCom').value,mv=c*pc/100;
+    $('oCount').textContent=c;$('oPct').textContent=pc+'%';$('oCom').textContent=money(m);
+    $('cOut').textContent='About '+money(Math.round(mv*m/1000)*1000);
+    $('cOutB').textContent='in commission from about '+(mv%1?mv.toFixed(1):String(mv))+(mv===1?' move':' moves')+' a year among people who already know you. If one more of them called you first, that move could be worth about '+money(m)+' to you.';
+  }
+  ['cCount','cPct','cCom'].forEach(function(i){$(i).addEventListener('input',calc);});calc();
 
   /* Who gets what */
   var paths={
-    'New leads':[['First','Welcome note','One easy question, sent from you.'],['Next','Buyer or seller tip','Useful, with no pitch.'],['Then','Market note','Numbers for the ZIP they care about.'],['Your call','When they raise a hand','We flag who raised a hand on your Monday Five.']],
-    'Past clients':[['Monthly','Market note','What their home\'s ZIP did this month.'],['Their month','Home anniversary','Remembers the day they got the keys.'],['Their birthday','A reminder to you','On your Monday Five, so the hello is personal.'],['Holidays','Seasonal card','Thanksgiving and New Year.']],
+    'New leads':[['First','Welcome note','One easy question, sent from you.'],['Next','Buyer or seller tip','Useful, with no pitch.'],['Then','Market note','Numbers for the ZIP they care about.'],['Your call','When they raise a hand','We flag who raised a hand on your Monday Sheet.']],
+    'Past clients':[['Monthly','Market and local notes','What their home\'s ZIP did, plus a good idea for the weekend.'],['Their month','Home anniversary','Remembers the day they got the keys.'],['Their birthday','A reminder to you','On your Monday Five, so the hello is personal.'],['Holidays','Seasonal card','Thanksgiving and New Year.']],
     'Friends and neighbors':[['Monthly','Market note','Something worth a quick read.'],['Once or twice a month','Local note','A good idea for the weekend.'],['A few times a year','Seller tip','Keeps you the one they think of.'],['Once a year','Your referral card','Easy to forward to a friend.']],
-    'Open house':[['Right after','Thank you note','From your sign in sheet.'],['Next','Buyer tip','What to look for on the next tour.'],['Then','Market note','For the ZIP they visited.'],['Your call','When they raise a hand','We flag who raised a hand on your Monday Five.']]
+    'Open house':[['Right after','Thank you note','From your sign in sheet.'],['Next','Buyer tip','What to look for on the next tour.'],['Then','Market note','For the ZIP they visited.'],['Your call','When they raise a hand','We flag who raised a hand on your Monday Sheet.']]
   };
   var jrKeys=Object.keys(paths),jrCur=jrKeys[0];
   function drawJr(){
@@ -1143,7 +1187,7 @@ footer{background:var(--white);padding-bottom:calc(32px + env(safe-area-inset-bo
 
   /* Full stack */
   var L=[
-    ['New for you','Stay the agent your people remember.','Keeps your list clean and your name in their inbox all year.','Past clients, friends, neighbors and new leads.','Your Monday Five and a monthly summary.'],
+    ['New for you','Stay the agent your people remember.','Keeps your list clean and your name in their inbox all year.','Past clients, friends, neighbors and new leads.','Your Monday Sheet and a monthly summary.'],
     ['LocalLift Signature','Show up every week, in your brand.','Local social posts and Google posts, written and designed for you.','People who follow you and people looking you up.','Your weekly posts and your feed.'],
     ['Search engine optimization','Be found when people search your area.','Keeps your website clear about who you are, what you do and where you work.','Buyers and sellers searching Google.','Your monthly summary.'],
     ['Your map listing','Show up when someone searches nearby.','Keeps your Google profile complete, accurate and active.','People searching for an agent near them.','Your map check and actions on your listing.'],
