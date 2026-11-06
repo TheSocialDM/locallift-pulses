@@ -1,0 +1,9 @@
+# Keeps the published site lean so Pages deploys stay fast.
+# Build sources and raw working photos stay in the repo but are not published.
+exclude:
+  - "social/*/src"
+  - "social/*/*/src"
+  - "media/*/src"
+  - "*.py"
+  - "scripts"
+  - "README.md"
