@@ -67,8 +67,6 @@ function open(){if(shown)return;shown=true;try{if(localStorage.getItem(KEY)!=="d
     message:"Free AI visibility report request (website popup). City: "+f.elements.city.value.trim()+". Page: "+location.pathname};
    var nf=new URLSearchParams({"form-name":"contact"});Object.keys(d).forEach(function(k){nf.append(k,d[k])});
    try{fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:nf.toString()}).catch(function(){})}catch(err){}
-   var mk=new URLSearchParams(d);mk.append("source","site");mk.append("sid",Date.now()+"-"+Math.random().toString(36).slice(2,10));
-   try{navigator.sendBeacon("https://hook.us2.make.com/iohhty0efvjr39dni63w6nzco3wqp3t4",mk)}catch(err){}
    try{if(window.gtag)gtag("event","generate_lead",{form:"ai_report_popup"})}catch(err){}
   }
   try{localStorage.setItem(KEY,"done")}catch(err){}

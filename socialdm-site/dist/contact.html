@@ -82,19 +82,6 @@
 </main>
 <div id="site-footer"><div class="crawl-nav"><p>The SocialDM, 3104 E Camelback Rd #2161, Phoenix AZ 85016. info@thesocialdm.com</p><a href="https://www.instagram.com/the.socialdm/">www.instagram.com</a><a href="https://www.facebook.com/thesocialdm">www.facebook.com</a><a href="https://www.tiktok.com/@thesocialdm">www.tiktok.com</a><a href="https://www.youtube.com/@thesocialdm">www.youtube.com</a></div></div>
 <script src="/chrome.js"></script>
-<script>
-(function(){
-  var f=document.querySelector('form[name="contact"]');
-  if(!f||document.documentElement.dataset.prod!=="1")return;   /* preview never sends */
-  f.addEventListener('submit',function(){
-    if(f.elements['bot-field']&&f.elements['bot-field'].value)return;
-    var p=new URLSearchParams();
-    new FormData(f).forEach(function(v,k){if(k!=='bot-field'&&k!=='form-name')p.append(k,v)});
-    p.append('source','site');
-    p.append('sid',Date.now()+'-'+Math.random().toString(36).slice(2,10));
-    try{navigator.sendBeacon('https://hook.us2.make.com/iohhty0efvjr39dni63w6nzco3wqp3t4',p)}catch(e){}
-  });
-})();
-</script>
+<!-- Leads reach Make only through the Netlify function submission-created, after Netlify's spam check. -->
 
 </body></html>
