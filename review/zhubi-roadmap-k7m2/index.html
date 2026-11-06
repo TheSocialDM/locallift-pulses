@@ -57,6 +57,7 @@ p{margin:0}
 .map-box{background:var(--mist);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:center}
 .seg{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .seg button{font:inherit;font-size:14.5px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink-2);border-radius:999px;padding:9px 14px;cursor:pointer}
+@media (max-width:420px){.seg{gap:6px}.seg button{padding:8px 10px;font-size:13.5px}}
 .seg button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
 .grid49{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;max-width:330px;margin:0 auto;width:100%}
 .grid49 i{aspect-ratio:1;border-radius:50%;background:#d9e4ec;transition:background .35s,transform .35s}
@@ -102,6 +103,35 @@ p{margin:0}
 .safe p{color:#dcefee}
 .safe ul{margin:0;padding-left:20px;color:#e9f5f4}
 .safe li{margin-bottom:8px}
+
+
+/* how it works */
+.flow{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 16px 26px;box-shadow:var(--shadow-1)}
+.src{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.src > div{position:relative;background:var(--mist);border:1px solid var(--line);border-radius:var(--radius-md);padding:14px 12px 16px;text-align:center}
+.src > div:last-child{grid-column:1 / -1}
+.src b{display:block;font-family:"Manrope",sans-serif;font-size:15.5px}
+.src span{display:block;font-size:13px;color:var(--ink-3);margin-top:3px;line-height:1.35}
+.src i{display:block;width:34px;height:34px;margin:0 auto 8px;border-radius:12px;background:var(--teal-soft);color:var(--teal);font-style:normal;font-weight:800;font-family:"Manrope",sans-serif;line-height:34px;font-size:15px}
+.bus{position:relative;height:4px;width:80%;margin:18px auto 0;background:var(--teal-soft);border-radius:4px}
+.bus::before,.bus::after{content:"";position:absolute;top:-3px;width:10px;height:10px;border-radius:50%;background:var(--teal);animation:inl 2.2s ease-in infinite}
+.bus::before{left:0}.bus::after{right:0;background:var(--gold);animation-name:inr}
+@keyframes inl{0%{left:0;opacity:1}90%{opacity:1}100%{left:calc(50% - 5px);opacity:0}}
+@keyframes inr{0%{right:0;opacity:1}90%{opacity:1}100%{right:calc(50% - 5px);opacity:0}}
+.pipe{position:relative;height:56px;width:4px;margin:0 auto;background:linear-gradient(var(--line),var(--teal-soft));border-radius:4px}
+.pipe::before,.pipe::after{content:"";position:absolute;left:-3px;width:10px;height:10px;border-radius:50%;background:var(--teal);top:-12px;animation:drop 1.8s linear infinite}
+.pipe::after{background:var(--gold);animation-delay:.9s}
+@keyframes drop{0%{top:-4px;opacity:0}15%{opacity:1}85%{opacity:1}100%{top:46px;opacity:0}}
+.hub{position:relative;max-width:420px;margin:0 auto;background:linear-gradient(160deg,#0b5c61,#0e3f52);color:#fff;border-radius:var(--radius-lg);padding:18px;display:flex;gap:14px;align-items:center}
+.hub img{width:58px;height:58px;border-radius:16px;object-fit:cover;position:relative;z-index:1}
+.hub b{display:block;font-family:"Manrope",sans-serif;font-size:17px}
+.hub span{color:#cfe3e8;font-size:14px}
+.hub::before{content:"";position:absolute;inset:-6px;border-radius:30px;border:2px solid rgba(14,111,117,.45);animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{opacity:.9;transform:scale(.98)}100%{opacity:0;transform:scale(1.06)}}
+.out{max-width:420px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.out span{background:var(--gold-soft);color:#6b4a10;border:1px solid #efdcb6;border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px}
+@media (min-width:760px){.src{grid-template-columns:repeat(5,minmax(0,1fr))}.src > div:last-child{grid-column:auto}.flow{padding:30px}}
+@media (prefers-reduced-motion:reduce){.pipe::before,.pipe::after,.hub::before,.bus::before,.bus::after{animation:none}}
 
 footer{border-top:1px solid var(--line);padding:30px 0 44px;font-size:13.5px;color:var(--ink-3)}
 footer .brand img{height:62px}
@@ -161,9 +191,9 @@ footer p{margin-top:12px;max-width:720px}
     <div>
       <div class="seg" role="group" aria-label="Choose a point in time">
         <button type="button" aria-pressed="true" data-n="1">Today</button>
-        <button type="button" aria-pressed="false" data-n="8">90 days</button>
-        <button type="button" aria-pressed="false" data-n="16">6 months</button>
-        <button type="button" aria-pressed="false" data-n="25">12 months</button>
+        <button type="button" aria-pressed="false" data-n="6">90 days</button>
+        <button type="button" aria-pressed="false" data-n="14">6 months</button>
+        <button type="button" aria-pressed="false" data-n="22">12 months</button>
       </div>
       <div class="grid49" id="grid49" aria-hidden="true"></div>
     </div>
@@ -173,6 +203,28 @@ footer p{margin-top:12px;max-width:720px}
       <p id="mapText">You show in the top 3 at one spot on the map. Almost everywhere else, patients see other practices first.</p>
       <span class="tag" id="mapTag">Measured November 1, 2026</span>
     </div>
+  </div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">How it works</span>
+    <h2>Five places patients look. We work all five.</h2>
+    <p class="lede">Patients and referring doctors find a surgeon in five places. We work all five, every week, and build each one to point patients back to your practice.</p>
+  </div>
+  <div class="flow">
+    <div class="src">
+      <div><i>1</i><b>Google Maps</b><span>The map near your office</span></div>
+      <div><i>2</i><b>Google Search</b><span>Your profile, website and reviews</span></div>
+      <div><i>3</i><b>AI answers</b><span>ChatGPT, Gemini, Perplexity and Google's AI Overviews</span></div>
+      <div><i>4</i><b>Social</b><span>Instagram, Facebook and LinkedIn</span></div>
+      <div><i>5</i><b>Referring doctors</b><span>The offices that send you patients</span></div>
+    </div>
+    <div class="bus" aria-hidden="true"></div>
+    <div class="pipe" aria-hidden="true"></div>
+    <div class="hub"><img src="images/zhubi.jpg" alt="" width="500" height="625"><div><b>Dr. Ylli Zhubi</b><span>Easier to find, trust and choose</span></div></div>
+    <div class="pipe" aria-hidden="true"></div>
+    <div class="out"><span>A phone call</span><span>A consult request</span><span>A referral</span></div>
   </div>
 </div></section>
 
@@ -186,8 +238,8 @@ footer p{margin-top:12px;max-width:720px}
     <div class="card"><span class="when">Month one</span><h3>The Profile Rebuild</h3><p>Your Google profile and listings set up the way patients and AI search read them, so your reviews work harder for you.</p></div>
     <div class="card"><span class="when">Every day</span><h3>Daily Presence</h3><p>Google Business posts 7 days a week and social posts 3 times a week on Instagram, Facebook and LinkedIn, in your voice.</p></div>
     <div class="card"><span class="when">Every week</span><h3>Your Weekly Report</h3><p>One clear page: where you show on the map, what patients did on your profile, and what we did that week.</p></div>
-    <div class="card"><span class="when">Every Monday</span><h3>Referral Desk</h3><p>Your Monday Five, letters you approve before they go out, and a referral list that is always yours. Included on the annual plan.</p></div>
-    <div class="card"><span class="when">Four times a year, annual plan</span><h3>Referring Office Newsletter</h3><p>A short, useful note to the offices that send you patients, so your name stays front of mind.</p></div>
+    <div class="card"><span class="when">Every week</span><h3>AI Answer Ready</h3><p>Your practice kept current so ChatGPT, Gemini, Perplexity and Google's AI Overviews can find you, trust you and name you when patients ask.</p></div>
+    <div class="card"><span class="when">Every Monday, annual plan</span><h3>Referral Desk</h3><p>Your Monday Five, letters you approve before they go out, a newsletter to referring offices four times a year, and a referral list that is always yours.</p></div>
     <div class="card"><span class="when">Every month</span><h3>Your Monthly Summary</h3><p>What moved, what went out, who replied, and what we focus on next, on one page.</p></div>
   </div>
 </div></section>
@@ -205,28 +257,28 @@ footer p{margin-top:12px;max-width:720px}
     <button role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">12 months</button>
   </div>
   <div class="tl-panel" role="tabpanel" id="p1" aria-labelledby="t1">
-    <div class="tl-col"><h4>What we will have done</h4><ul><li>Profile Rebuild complete</li><li>Daily posts and social running</li><li>Your referral list built and your first letter approved</li><li>Your first weekly report, with today's numbers as the starting line</li></ul></div>
-    <div class="tl-col goal"><h4>Goal</h4><ul><li>Everything set up and running. The only ask of your staff is one question at check in</li><li>Your break even number set with you, using your own average case value</li></ul></div>
+    <div class="tl-col"><h4>What we will have done</h4><ul><li>Profile Rebuild and AI Answer Ready setup complete</li><li>Daily posts and social running</li><li>Your referral list built and your first letter approved</li><li>Your first weekly report, with today's numbers as the starting line</li></ul></div>
+    <div class="tl-col goal"><h4>Goal</h4><ul><li>Everything set up and running, with one question at check in as the only ask of your staff</li><li>Your break even number set with you, using your own average case value</li></ul></div>
   </div>
   <div class="tl-panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-    <div class="tl-col"><h4>What we will have done</h4><ul><li>About 90 Google posts and 36 social posts</li><li>12 weekly reports and 3 monthly summaries</li><li>Your Monday Five running every week</li><li>Every office on your list has heard from you</li></ul></div>
-    <div class="tl-col goal"><h4>Goal</h4><ul><li>Top 3 in about 8 of 49 map spots, up from 1</li><li>More calls, website clicks and direction requests from your profile than in month one</li><li>First replies from referring offices</li></ul></div>
+    <div class="tl-col"><h4>What we will have done</h4><ul><li>About 90 Google posts and 36 social posts</li><li>12 weekly reports and 3 monthly summaries</li><li>Your Monday Five running every week</li><li>Your first letters out to the offices on your list</li></ul></div>
+    <div class="tl-col goal"><h4>Goal</h4><ul><li>Top 3 in about 6 of 49 map spots, up from 1</li><li>More calls, website clicks and direction requests from your profile than in month one</li><li>First replies from referring offices</li></ul></div>
   </div>
   <div class="tl-panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
     <div class="tl-col"><h4>What we will have done</h4><ul><li>Six months of daily presence</li><li>Two newsletters to your referring offices</li><li>A full picture of which offices send you patients</li></ul></div>
-    <div class="tl-col goal"><h4>Goal</h4><ul><li>Top 3 in about 16 of 49 map spots</li><li>New patients each month that trace back to Google or a referring office</li><li>On track to your break even number</li></ul></div>
+    <div class="tl-col goal"><h4>Goal</h4><ul><li>Top 3 in about 14 of 49 map spots</li><li>Showing up in AI answers for colorectal questions near Glendale</li><li>New patients each month that trace back to Google or a referring office</li><li>On track to your break even number</li></ul></div>
   </div>
   <div class="tl-panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
     <div class="tl-col"><h4>What we will have done</h4><ul><li>A full year of presence, reports and reviews</li><li>About 50 Monday Five lists and 4 newsletters</li><li>A referral list that is yours to keep</li></ul></div>
-    <div class="tl-col goal"><h4>Goal</h4><ul><li>Top 3 in about half the map, 25 of 49 spots, closing in on the leader</li><li>A steady monthly flow of new patients from Google and referring offices</li><li>Past your break even number, with the numbers to show it</li></ul></div>
+    <div class="tl-col goal"><h4>Goal</h4><ul><li>Top 3 in about 22 of 49 map spots, narrowing the gap with the leader</li><li>Named regularly when patients ask AI for a colorectal surgeon nearby</li><li>A steady monthly flow of new patients from Google and referring offices</li><li>Past your break even number, tracked in your reports</li></ul></div>
   </div>
-  <p class="note">Referral Desk items (your list, letters, Monday Five and newsletters) apply on the annual plan. Goals, not guarantees. Every practice and market is different. We agree these with you in month one and report against them every week.</p>
+  <p class="note">Referral Desk items (your list, letters, Monday Five and newsletters) apply on the annual plan. These are the targets we aim for. We set them with you in month one, and you see how we are tracking every week.</p>
 </div></section>
 
 <section class="sec" style="background:var(--mist)"><div class="wrap">
   <div class="sec-head">
     <span class="eyebrow">Your scoreboard</span>
-    <h2>Six numbers, in every weekly report.</h2>
+    <h2>Seven numbers, in every weekly report.</h2>
   </div>
   <div class="tbl"><table class="score">
     <thead><tr><th>What we track</th><th>Why it matters</th><th>Where you start</th></tr></thead>
@@ -234,6 +286,7 @@ footer p{margin-top:12px;max-width:720px}
       <tr><td>Top 3 on the map</td><td>The top 3 get the most attention on the map</td><td>1 of 49 spots</td></tr>
       <tr><td>Average map position</td><td>Shows the whole map moving, not just the top 3</td><td>8.5</td></tr>
       <tr><td>Profile actions</td><td>Calls, website clicks and direction requests from your Google profile</td><td>Set in your first weekly report</td></tr>
+      <tr><td>Named by AI</td><td>How often AI answers name you when patients ask about colorectal care nearby</td><td>Set in your first weekly report</td></tr>
       <tr><td>Reviews and rating</td><td>Trust that turns a search into a call</td><td>4.8 stars, 74 reviews</td></tr>
       <tr><td>Referring offices</td><td>Offices reached, replies and new offices added</td><td>Set when your list is built</td></tr>
       <tr><td>New patients by source</td><td>Your front desk asks "How did you hear about us?" so every new patient is counted</td><td>Starts in month one</td></tr>
@@ -274,9 +327,9 @@ footer p{margin-top:12px;max-width:720px}
   var dots=grid.children;
   var copy={
     1:['Today','1 of 49','You show in the top 3 at one spot on the map. Almost everywhere else, patients see other practices first.','Measured November 1, 2026'],
-    8:['90 days','About 8 of 49','Spots closest to your office start to show you in the top 3.','Goal'],
-    16:['6 months','About 16 of 49','More patients around your office start seeing you in the top 3.','Goal'],
-    25:['12 months','About 25 of 49','You show in the top 3 across about half the map, closing in on the leader.','Goal']
+    6:['90 days','About 6 of 49','Spots closest to your office start to show you in the top 3.','Goal'],
+    14:['6 months','About 14 of 49','More patients around your office start seeing you in the top 3.','Goal'],
+    22:['12 months','About 22 of 49','You show in the top 3 across a large part of the map, narrowing the gap with the leader.','Goal']
   };
   function show(n){
     for(var i=0;i<49;i++){dots[i].classList.toggle('on',rank[i]<n);}
