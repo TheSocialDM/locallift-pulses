@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Your First 12 Months, Dr. Zhubi</title>
+<meta name="description" content="A private 12 month roadmap for Dr. Ylli Zhubi and Arizona Preferred Surgeons.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e2430;--ink-2:#3d5562;--ink-3:#6b8290;--line:#dde8f0;--mist:#f5f9fc;--teal:#0b5c61;--teal-2:#0e6f75;--teal-soft:#e2f1f1;--gold:#e9c98f;--gold-soft:#fbf3e3;--radius-lg:24px;--radius-md:16px;--shadow-1:0 1px 2px rgba(14,36,48,.04),0 8px 24px rgba(14,36,48,.06);--shadow-2:0 2px 6px rgba(14,36,48,.05),0 24px 60px rgba(14,48,72,.12)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:"Manrope",sans-serif;line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font-family:"Manrope",sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.lede{font-size:18px;color:var(--ink-2);margin-top:12px;max-width:660px}
+.sec{padding:56px 0}
+.sec-head{margin-bottom:26px}
+.sec-head h2{font-size:clamp(26px,4vw,36px);margin-top:8px}
+.note{font-size:13.5px;color:var(--ink-3);margin-top:16px}
+
+/* top */
+.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-family:"Manrope",sans-serif;font-weight:800;font-size:18px}
+.brand img{height:50px;width:auto;padding-right:12px;border-right:1px solid var(--line)}
+.for{font-size:13px;color:var(--ink-3);text-align:right}
+.conf{background:#0e2430;color:#cfe3e8;font-size:13px;text-align:center;padding:8px 16px}
+
+/* hero */
+.hero{background:linear-gradient(160deg,#0b5c61,#0e3f52);color:#fff;padding:56px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center}
+.hero .eyebrow{color:#bfe3e1}
+.hero h1{font-size:clamp(34px,6vw,54px);margin-top:10px}
+.hero .lede{color:#dcefee}
+.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-lg);padding:20px;display:flex;gap:16px;align-items:center}
+.hero-card img{width:72px;height:72px;border-radius:18px;object-fit:cover}
+.hero-card b{display:block;font-family:"Manrope",sans-serif;font-size:18px}
+.hero-card span{color:#cfe3e8;font-size:15px}
+.promise{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.promise span{background:rgba(255,255,255,.12);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:600}
+
+/* baseline */
+.base-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-1)}
+.stat b{display:block;font-family:"Manrope",sans-serif;font-weight:800;font-size:34px;line-height:1;color:var(--teal)}
+.stat span{display:block;margin-top:8px;font-size:15px;color:var(--ink-2)}
+.stat.alt b{color:#8a5a12}
+
+/* map */
+.map-box{background:var(--mist);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:center}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.seg button{font:inherit;font-size:14.5px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink-2);border-radius:999px;padding:9px 14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.grid49{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;max-width:330px;margin:0 auto;width:100%}
+.grid49 i{aspect-ratio:1;border-radius:50%;background:#d9e4ec;transition:background .35s,transform .35s}
+.grid49 i.on{background:var(--teal);transform:scale(1.06)}
+.grid49 i.home{outline:3px solid var(--gold);outline-offset:2px}
+.map-copy h3{font-size:24px}
+.map-copy .big{font-family:"Manrope",sans-serif;font-weight:800;font-size:44px;color:var(--teal);line-height:1;margin-top:12px}
+.map-copy p{color:var(--ink-2);margin-top:10px}
+.tag{display:inline-block;margin-top:12px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:5px 10px;background:var(--gold-soft);color:#6b4a10}
+
+/* deliver */
+.cards{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-1)}
+.card h3{font-size:18px}
+.card p{font-size:15.5px;color:var(--ink-2);margin-top:6px}
+.card .when{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;display:block}
+
+/* timeline */
+.tl-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;background:var(--mist);border:1px solid var(--line);border-radius:999px;padding:5px;margin-bottom:18px}
+.tl-tabs button{font:inherit;font-weight:700;font-size:14px;border:0;background:transparent;color:var(--ink-2);border-radius:999px;padding:10px 6px;cursor:pointer}
+.tl-tabs button[aria-selected="true"]{background:var(--teal);color:#fff}
+.tl-panel{border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-1);display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.tl-panel[hidden]{display:none!important}
+.tl-panel h3{font-size:22px}
+.tl-col h4{font-family:"Manrope",sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
+.tl-col ul{margin:0;padding-left:20px}
+.tl-col li{margin-bottom:8px;color:var(--ink-2);font-size:16px}
+.tl-col.goal{background:var(--gold-soft);border-radius:var(--radius-md);padding:18px}
+.tl-col.goal h4{color:#6b4a10}
+
+/* scoreboard */
+.score{width:100%;border-collapse:collapse;font-size:15.5px}
+.score th,.score td{text-align:left;padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.score th{font-family:"Manrope",sans-serif;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);background:var(--mist)}
+.score td:first-child{font-weight:600;color:var(--ink)}
+.score td{color:var(--ink-2)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-md)}
+.tbl table{min-width:560px}
+
+/* safety */
+.safe{background:linear-gradient(160deg,#0b5c61,#0e3f52);color:#fff;border-radius:var(--radius-lg);padding:28px;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+.safe h2{font-size:clamp(24px,3.6vw,32px)}
+.safe p{color:#dcefee}
+.safe ul{margin:0;padding-left:20px;color:#e9f5f4}
+.safe li{margin-bottom:8px}
+
+footer{border-top:1px solid var(--line);padding:30px 0 44px;font-size:13.5px;color:var(--ink-3)}
+footer .brand img{height:62px}
+footer p{margin-top:12px;max-width:720px}
+
+@media (min-width:760px){
+  .hero .wrap{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+  .base-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .map-box{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);padding:30px}
+  .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tl-panel{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .safe{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:36px}
+  .brand img{height:60px}
+}
+@media (max-width:520px){.for{display:none}.tl-tabs button{font-size:13px}}
+@media (max-width:640px){.tbl{border:0;overflow:visible}.tbl table{min-width:0}.score thead{display:none}.score,.score tbody,.score tr,.score td{display:block;width:100%}.score tr{border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;padding:12px 14px;margin-bottom:10px}.score td{border:0;padding:3px 0}.score td:nth-child(3){margin-top:6px;font-weight:700;color:var(--teal)}.score td:nth-child(3)::before{content:"Where you start: ";font-weight:600;color:var(--ink-3)}}
+</style>
+</head>
+<body>
+<div class="conf">Confidential. Prepared for Dr. Ylli Zhubi and Arizona Preferred Surgeons.</div>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top"><img src="images/socialdm-logo.png" alt="The SocialDM" width="240" height="198">LocalLift</a>
+  <span class="for">Prepared for Dr. Ylli Zhubi</span>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow">Your 12 month roadmap</span>
+    <h1>How you will know it is working.</h1>
+    <p class="lede">What we deliver, the numbers we track from day one, and what a good result looks like at 30 days, 90 days, 6 months and 12 months.</p>
+    <div class="promise"><span>Clear milestones</span><span>A weekly report</span><span>A 90 day checkpoint</span></div>
+  </div>
+  <div class="hero-card">
+    <img src="images/zhubi.jpg" alt="Dr. Ylli Zhubi" width="500" height="625">
+    <div><b>Dr. Ylli Zhubi</b><span>Colorectal and general surgery<br>Arizona Preferred Surgeons, Glendale</span></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">Where you start</span>
+    <h2>Your starting line, measured.</h2>
+    <p class="lede">We scanned Google Maps for "colorectal surgeon" at 49 points within 5 miles of your office. This is the number we move first.</p>
+  </div>
+  <div class="base-grid">
+    <div class="stat"><b>1 of 49</b><span>Spots where you show in the top 3 on the map</span></div>
+    <div class="stat"><b>8.5</b><span>Your average position on the map</span></div>
+    <div class="stat alt"><b>69%</b><span>Of spots where the leading practice shows in the top 3</span></div>
+    <div class="stat"><b>4.8</b><span>Your star rating from 74 reviews, a strong base to build on</span></div>
+  </div>
+  <p class="note">Google Maps scan for "colorectal surgeon", 7 by 7 grid, 5 mile radius, November 1, 2026.</p>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="map-box">
+    <div>
+      <div class="seg" role="group" aria-label="Choose a point in time">
+        <button type="button" aria-pressed="true" data-n="1">Today</button>
+        <button type="button" aria-pressed="false" data-n="8">90 days</button>
+        <button type="button" aria-pressed="false" data-n="16">6 months</button>
+        <button type="button" aria-pressed="false" data-n="25">12 months</button>
+      </div>
+      <div class="grid49" id="grid49" aria-hidden="true"></div>
+    </div>
+    <div class="map-copy" aria-live="polite">
+      <h3 id="mapTitle">Today</h3>
+      <div class="big" id="mapBig">1 of 49</div>
+      <p id="mapText">You show in the top 3 at one spot on the map. Almost everywhere else, patients see other practices first.</p>
+      <span class="tag" id="mapTag">Measured November 1, 2026</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" style="background:var(--mist)"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">What we deliver</span>
+    <h2>The work you can count on.</h2>
+    <p class="lede">These are in our hands, so we commit to them from the first month.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="when">Month one</span><h3>The Profile Rebuild</h3><p>Your Google profile and listings set up the way patients and AI search read them, so your reviews work harder for you.</p></div>
+    <div class="card"><span class="when">Every day</span><h3>Daily Presence</h3><p>Google Business posts 7 days a week and social posts 3 times a week on Instagram, Facebook and LinkedIn, in your voice.</p></div>
+    <div class="card"><span class="when">Every week</span><h3>Your Weekly Report</h3><p>One clear page: where you show on the map, what patients did on your profile, and what we did that week.</p></div>
+    <div class="card"><span class="when">Every Monday</span><h3>Referral Desk</h3><p>Your Monday Five, letters you approve before they go out, and a referral list that is always yours. Included on the annual plan.</p></div>
+    <div class="card"><span class="when">Four times a year, annual plan</span><h3>Referring Office Newsletter</h3><p>A short, useful note to the offices that send you patients, so your name stays front of mind.</p></div>
+    <div class="card"><span class="when">Every month</span><h3>Your Monthly Summary</h3><p>What moved, what went out, who replied, and what we focus on next, on one page.</p></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">Milestones</span>
+    <h2>What success could look like.</h2>
+    <p class="lede">Choose a stage to see what we will have done and the goal we measure against.</p>
+  </div>
+  <div class="tl-tabs" role="tablist" aria-label="Milestones">
+    <button role="tab" id="t1" aria-controls="p1" aria-selected="true">30 days</button>
+    <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">90 days</button>
+    <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">6 months</button>
+    <button role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">12 months</button>
+  </div>
+  <div class="tl-panel" role="tabpanel" id="p1" aria-labelledby="t1">
+    <div class="tl-col"><h4>What we will have done</h4><ul><li>Profile Rebuild complete</li><li>Daily posts and social running</li><li>Your referral list built and your first letter approved</li><li>Your first weekly report, with today's numbers as the starting line</li></ul></div>
+    <div class="tl-col goal"><h4>Goal</h4><ul><li>Everything set up and running. The only ask of your staff is one question at check in</li><li>Your break even number set with you, using your own average case value</li></ul></div>
+  </div>
+  <div class="tl-panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+    <div class="tl-col"><h4>What we will have done</h4><ul><li>About 90 Google posts and 36 social posts</li><li>12 weekly reports and 3 monthly summaries</li><li>Your Monday Five running every week</li><li>Every office on your list has heard from you</li></ul></div>
+    <div class="tl-col goal"><h4>Goal</h4><ul><li>Top 3 in about 8 of 49 map spots, up from 1</li><li>More calls, website clicks and direction requests from your profile than in month one</li><li>First replies from referring offices</li></ul></div>
+  </div>
+  <div class="tl-panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+    <div class="tl-col"><h4>What we will have done</h4><ul><li>Six months of daily presence</li><li>Two newsletters to your referring offices</li><li>A full picture of which offices send you patients</li></ul></div>
+    <div class="tl-col goal"><h4>Goal</h4><ul><li>Top 3 in about 16 of 49 map spots</li><li>New patients each month that trace back to Google or a referring office</li><li>On track to your break even number</li></ul></div>
+  </div>
+  <div class="tl-panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+    <div class="tl-col"><h4>What we will have done</h4><ul><li>A full year of presence, reports and reviews</li><li>About 50 Monday Five lists and 4 newsletters</li><li>A referral list that is yours to keep</li></ul></div>
+    <div class="tl-col goal"><h4>Goal</h4><ul><li>Top 3 in about half the map, 25 of 49 spots, closing in on the leader</li><li>A steady monthly flow of new patients from Google and referring offices</li><li>Past your break even number, with the numbers to show it</li></ul></div>
+  </div>
+  <p class="note">Referral Desk items (your list, letters, Monday Five and newsletters) apply on the annual plan. Goals, not guarantees. Every practice and market is different. We agree these with you in month one and report against them every week.</p>
+</div></section>
+
+<section class="sec" style="background:var(--mist)"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">Your scoreboard</span>
+    <h2>Six numbers, in every weekly report.</h2>
+  </div>
+  <div class="tbl"><table class="score">
+    <thead><tr><th>What we track</th><th>Why it matters</th><th>Where you start</th></tr></thead>
+    <tbody>
+      <tr><td>Top 3 on the map</td><td>The top 3 get the most attention on the map</td><td>1 of 49 spots</td></tr>
+      <tr><td>Average map position</td><td>Shows the whole map moving, not just the top 3</td><td>8.5</td></tr>
+      <tr><td>Profile actions</td><td>Calls, website clicks and direction requests from your Google profile</td><td>Set in your first weekly report</td></tr>
+      <tr><td>Reviews and rating</td><td>Trust that turns a search into a call</td><td>4.8 stars, 74 reviews</td></tr>
+      <tr><td>Referring offices</td><td>Offices reached, replies and new offices added</td><td>Set when your list is built</td></tr>
+      <tr><td>New patients by source</td><td>Your front desk asks "How did you hear about us?" so every new patient is counted</td><td>Starts in month one</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="safe">
+    <div>
+      <span class="eyebrow" style="color:#bfe3e1">Your checkpoint</span>
+      <h2 style="margin-top:8px">You never have to wonder.</h2>
+      <p style="margin-top:12px">You see the numbers every week and get a summary every month. Michael and Shelby are a call away whenever you want to talk it through.</p>
+    </div>
+    <ul>
+      <li>On the 6 month plan, you can walk away at day 90 if you are not seeing progress.</li>
+      <li>We never handle patient information, and your staff only adds one question at check in.</li>
+      <li>Your plan rates and the founding practice offer hold through Friday, November 20.</li>
+    </ul>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <a class="brand" href="#top"><img src="images/socialdm-logo.png" alt="" width="240" height="198">LocalLift</a>
+  <p>LocalLift™, Referral Desk, this page and its methods are proprietary to The SocialDM. Prepared only for Dr. Ylli Zhubi and Arizona Preferred Surgeons. Please do not copy, share, or reproduce any part of it without written permission.</p>
+  <p>© 2026 The SocialDM. All rights reserved.</p>
+</div></footer>
+
+<script>
+(function(){
+  var grid=document.getElementById('grid49');
+  // spots ordered from the center outward, so growth spreads around the office
+  var order=[];for(var r=0;r<7;r++)for(var c=0;c<7;c++)order.push({i:r*7+c,d:Math.abs(r-3)+Math.abs(c-3)+((r*7+c)%3)*0.01});
+  order.sort(function(a,b){return a.d-b.d});
+  var rank={};order.forEach(function(o,k){rank[o.i]=k});
+  for(var i=0;i<49;i++){var el=document.createElement('i');if(i===24)el.className='home';grid.appendChild(el);}
+  var dots=grid.children;
+  var copy={
+    1:['Today','1 of 49','You show in the top 3 at one spot on the map. Almost everywhere else, patients see other practices first.','Measured November 1, 2026'],
+    8:['90 days','About 8 of 49','Spots closest to your office start to show you in the top 3.','Goal'],
+    16:['6 months','About 16 of 49','More patients around your office start seeing you in the top 3.','Goal'],
+    25:['12 months','About 25 of 49','You show in the top 3 across about half the map, closing in on the leader.','Goal']
+  };
+  function show(n){
+    for(var i=0;i<49;i++){dots[i].classList.toggle('on',rank[i]<n);}
+    var c=copy[n];document.getElementById('mapTitle').textContent=c[0];document.getElementById('mapBig').textContent=c[1];document.getElementById('mapText').textContent=c[2];document.getElementById('mapTag').textContent=c[3];
+  }
+  var btns=document.querySelectorAll('.seg button');
+  btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');show(+b.dataset.n);});});
+  show(1);
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(t,k){t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){var n=tabs[(k+d+tabs.length)%tabs.length];sel(n);n.focus();}});});
+})();
+</script>
+</body>
+</html>
