@@ -612,11 +612,54 @@ input,textarea{-webkit-user-select:text;user-select:text}
   .reveal{opacity:1;transform:none;transition:none}
   .btn{transition:none}
 }
+/* v2 additions */
+.ww{border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:#fff;box-shadow:var(--shadow-1)}
+.ww-row{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:16px 18px;border-top:1px solid var(--line);font-size:15px;color:var(--ink-2)}
+.ww-row:first-child{border-top:0}
+.ww-row b{font-family:"Manrope",sans-serif;font-weight:700;font-size:15.5px;color:var(--ink);line-height:1.3}
+.ww-yes{color:var(--teal);font-weight:500}
+.ww-head{display:none}
+.dbx{background:#fff;border:1px solid var(--line);border-radius:var(--radius-xl);padding:20px 16px;box-shadow:var(--shadow-2);display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-width:0}
+.dbx-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.dbx-note{font-size:13px;color:var(--ink-3)}
+.dsheet{overflow-x:auto;border:1px solid var(--line);border-radius:14px;-webkit-overflow-scrolling:touch}
+.dsheet table{border-collapse:separate;border-spacing:0;width:100%;min-width:860px;font-size:14px}
+.dsheet th,.dsheet td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);border-right:1px solid var(--line);white-space:nowrap;font-weight:400}
+.dsheet thead th{background:var(--blue-1);font-family:"Manrope",sans-serif;font-weight:700;font-size:12px;color:var(--ink-2)}
+.dsheet tbody tr:last-child th,.dsheet tbody tr:last-child td{border-bottom:0}
+.dsheet th:last-child,.dsheet td:last-child{border-right:0}
+.dsheet th:first-child{position:sticky;left:0;background:#fff;z-index:1;box-shadow:2px 0 0 var(--line)}
+.dsheet thead th:first-child{background:var(--blue-1);z-index:2}
+.dsheet tbody th button{appearance:none;border:0;background:none;padding:6px 0;font:700 14px "Manrope",sans-serif;color:var(--ink);cursor:pointer;text-decoration:underline;text-decoration-color:var(--blue-3);text-underline-offset:3px}
+.dsheet tr.sel td,.dsheet tr.sel th{background:var(--teal-soft)}
+.dbx-detail{background:var(--mist);border-radius:var(--radius-md);padding:14px 16px}
+.dbx-detail b{font-family:"Manrope",sans-serif;font-size:16px}
+.dbx-detail ul{margin:8px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-2)}
+.ms-strip{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-top:20px}
+.ms-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px;box-shadow:var(--shadow-1);min-width:0}
+.ms-box h4{font-family:"Manrope",sans-serif;font-size:15px;margin:0 0 10px}
+.ms-box ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14.5px;line-height:1.4}
+.ms-box li b{display:block;font-family:"Manrope",sans-serif;font-size:12px;color:var(--teal)}
+.ms-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ms-stats div{background:var(--mist);border-radius:12px;padding:10px}
+.ms-stats b{display:block;font-family:"Manrope",sans-serif;font-weight:800;font-size:21px}
+.ms-stats span{display:block;font-size:12.5px;color:var(--ink-2);margin-top:3px}
+.mores{display:grid;gap:12px;max-width:960px}
+.more{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-1);overflow:hidden}
+.more>summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:"Manrope",sans-serif;font-weight:700;font-size:17px}
+.more>summary::-webkit-details-marker{display:none}
+.more>summary .plus{flex:none;width:30px;height:30px;border-radius:50%;background:var(--blue-1);position:relative;transition:transform .25s}
+.more>summary .plus::before,.more>summary .plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--teal);transform:translate(-50%,-50%)}
+.more>summary .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.more[open]>summary .plus{transform:rotate(45deg)}
+.more-in{padding:0 16px 22px;min-width:0}
+.more-lede{color:var(--ink-2);margin:0 0 16px;font-size:15.5px}
+@media (min-width:700px){.ww-row{grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,1.1fr);gap:18px}.ww-head{display:grid;font-family:"Manrope",sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}.ms-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.dbx{padding:26px}.more-in{padding:0 22px 24px}}
 </style>
 </head>
 <body>
 
-<div class="preview-bar" role="note"><strong>Confidential preview for Dr. Zhubi.</strong> Sample content, nothing is live. Please do not share.</div>
+<div class="preview-bar" role="note"><strong>Confidential preview for Dr. Zhubi of a service we are building.</strong> Sample content. Please do not share.</div>
 
 <header class="hero">
   <div class="wrap">
@@ -719,6 +762,24 @@ input,textarea{-webkit-user-select:text;user-select:text}
   </section>
 
   <!-- 1. How it works -->
+  <section class="sec" id="difference">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The difference</span>
+        <h2>On your own, or with a desk behind you.</h2>
+        <p class="lede">Your staff could do this. It is usually what slips when the clinic comes first.</p>
+      </div>
+      <div class="ww" role="table" aria-label="The same year, on your own and with Referral Desk">
+        <div class="ww-row ww-head" role="row"><span role="columnheader">The moment</span><span role="columnheader">On your own</span><span role="columnheader">With Referral Desk</span></div>
+        <div class="ww-row" role="row"><b role="cell">A referring office hires a new office manager</b><span role="cell">Nobody tells you, and your card in their files is old.</span><span role="cell" class="ww-yes">She gets a welcome note and your referral card.</span></div>
+        <div class="ww-row" role="row"><b role="cell">A referring doctor writes back</b><span role="cell">It sits in a busy inbox.</span><span role="cell" class="ww-yes">It is on your Monday Sheet, with a reply drafted.</span></div>
+        <div class="ww-row" role="row"><b role="cell">An office goes quiet</b><span role="cell">You may not notice for months.</span><span role="cell" class="ww-yes">It shows up on Monday, so a call can happen early.</span></div>
+        <div class="ww-row" role="row"><b role="cell">Your phone, fax or hours change</b><span role="cell">Offices keep using the old numbers.</span><span role="cell" class="ww-yes">We send the update to every office on your list.</span></div>
+        <div class="ww-row" role="row"><b role="cell">Monday morning</b><span role="cell">The list lives in someone's head.</span><span role="cell" class="ww-yes">One page tells you who matters this week.</span></div>
+      </div>
+    </div>
+  </section>
+
   <section id="how" class="sec">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -1027,12 +1088,33 @@ input,textarea{-webkit-user-select:text;user-select:text}
   </section>
 
   <!-- 3. Monday Five -->
+  <section class="sec" id="database">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Your referring offices</span>
+        <h2>Everyone who sends you patients, on one clean sheet.</h2>
+        <p class="lede">This is the job a CRM is supposed to do, without you running one. Nothing to log in to. Tap a name to see the history.</p>
+      </div>
+      <div class="dbx">
+        <div class="dbx-top"><span class="sample-tag">Sample, all fictional</span><span class="dbx-note">Offices and doctors only. Never patient information.</span></div>
+        <div class="dsheet" tabindex="0" aria-label="Sample referring office list">
+          <table>
+            <thead><tr><th>Contact</th><th>Office</th><th>Type</th><th>Latest activity</th><th>Next from you</th><th>Birthday</th></tr></thead>
+            <tbody id="dbRows"></tbody>
+          </table>
+        </div>
+        <p class="dbx-note" style="margin-top:8px">A few rows from a sample list. Swipe or scroll the table to see every column.</p>
+        <div class="dbx-detail" id="dbDetail" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
   <section class="sec sec-blue" id="monday">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Your Monday Five</span>
-        <h2>Five names worth your time this week.</h2>
-        <p class="lede">One short list, every Monday. Who replied, who is new, who has a birthday and who has gone quiet.</p>
+        <span class="eyebrow">Your Monday Sheet</span>
+        <h2>One page. Five people. A few good calls.</h2>
+        <p class="lede">It lands in your inbox every Monday: your Monday Five, what goes out this week and how last week went. Nothing to log in to.</p>
       </div>
       <div class="five-grid">
         <div class="five reveal">
@@ -1040,7 +1122,7 @@ input,textarea{-webkit-user-select:text;user-select:text}
             <div><h3>Monday, sample week</h3><small>All names and offices are fictional</small></div>
             <span class="sample-tag">Sample</span>
           </div>
-          <div class="mail-meta"><div><small>From</small>LocalLift, for Dr. Ylli Zhubi</div><div><small>Subject</small><b>Your Monday Five, sample week</b></div></div>
+          <div class="mail-meta"><div><small>From</small>LocalLift, for Dr. Ylli Zhubi</div><div><small>Subject</small><b>Your Monday Sheet, sample week</b></div></div>
           <div class="progress"><span id="prog">0 of 5 done</span><i><b id="progBar"></b></i></div>
           <div class="counts" aria-label="Sample counts">
             <span class="count"><b>2</b>replied</span>
@@ -1085,6 +1167,10 @@ input,textarea{-webkit-user-select:text;user-select:text}
           </figcaption>
         </figure>
       </div>
+      <div class="ms-strip">
+        <div class="ms-box"><h4>Going out this week</h4><ul><li><b>Tuesday</b>First letter to Dr. Priya Raman, once you approve it</li><li><b>Wednesday</b>Welcome note and referral card to Jordan at Red Rock Primary Care</li><li><b>Thursday</b>Birthday note to Dr. Marcus Ellery</li></ul></div>
+        <div class="ms-box"><h4>Since last Monday</h4><div class="ms-stats"><div><b>24</b><span>Letters sent</span></div><div><b>2</b><span>Replies</span></div><div><b>1</b><span>New contact</span></div><div><b>0</b><span>Unsubscribed</span></div></div><p class="dbx-note" style="margin-top:8px">Sample numbers.</p></div>
+      </div>
     <div class="staff reveal">
         <div class="five-head" style="padding:0 0 12px"><div><h3>Your office's weekly list</h3><small>A short list for the person you choose. Try checking one off.</small></div><span class="sample-tag">Sample</span></div>
         <label><input type="checkbox"> Confirm the new office manager's name at Red Rock Primary Care</label>
@@ -1096,14 +1182,24 @@ input,textarea{-webkit-user-select:text;user-select:text}
   </section>
 
   <!-- Listing check -->
-  <section class="sec" id="check">
+
+  <!-- Questions -->
+
+  <!-- 4. Results -->
+
+  <!-- Full stack -->
+
+  <!-- When you say yes -->
+  <section class="sec sec-blue" id="more">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Where they look you up</span>
-        <h2>Is your name the same everywhere?</h2>
-        <p class="lede">Offices and patients check more than one place before they call. We flag anything that is out of date.</p>
+      <div class="sec-head">
+        <span class="eyebrow">When you are ready for more</span>
+        <h2>Your referral list is the start.</h2>
+        <p class="lede">These can sit around it, so patients and offices find you and remember you. Open whatever interests you.</p>
       </div>
-      <div class="check reveal">
+      <div class="mores">
+        <details class="more" id="check"><summary>Is your name the same everywhere?<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="more-lede">Offices and patients check more than one place before they call. We flag anything that is out of date.</p>
+      <div class="check">
         <div class="five-head" style="padding:0 6px 14px">
           <div><h3>Sample listing check</h3><small>Example only, not a review of your real listings</small></div>
           <span class="sample-tag">Sample</span>
@@ -1117,19 +1213,10 @@ input,textarea{-webkit-user-select:text;user-select:text}
           <li><span class="src">Map listing</span><span class="tag t-new">Photo missing</span></li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- Questions -->
-  <section class="sec" id="questions">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Part of your visibility plan</span>
-        <h2>Answer what patients are already asking.</h2>
-        <p class="lede">Questions like these often appear on colonoscopy searches. Each one becomes a clear answer under your name.</p>
-      </div>
+        </div></details>
+        <details class="more" id="questions"><summary>Answer what patients are already asking<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="more-lede">Questions like these often appear on colonoscopy searches. Each one becomes a clear answer under your name.</p>
       <div class="qa-grid">
-        <div class="faq reveal">
+        <div class="faq">
           <details open>
             <summary>Who is the best doctor for a colonoscopy?<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b5c61" stroke-width="2.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
             <div class="ans">No single doctor is best for everyone. Compare training, how often the doctor performs the procedure, patient reviews and how clearly the office explains each step.</div>
@@ -1148,24 +1235,15 @@ input,textarea{-webkit-user-select:text;user-select:text}
           </details>
           <p class="fine">Sample answers. General information only, and you approve every word before anything is published.</p>
         </div>
-        <div class="qa-side reveal">
+        <div class="qa-side">
           <div class="qa-card"><h3>Your first three pages</h3><ul><li>Colonoscopy and upper endoscopy</li><li>Hemorrhoids</li><li>Colon cancer surgery</li></ul></div>
           <div class="qa-card"><h3>On every page</h3><ul><li>Your real photo</li><li>Real Google reviews</li><li>What to expect and how to prepare</li><li>One clear way to reach your office</li></ul></div>
           <div class="qa-card"><h3>Where answers show up</h3><ul><li>Your procedure pages</li><li>Google and social posts</li><li>Letters to referring offices</li></ul></div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- 4. Results -->
-  <section class="sec sec-blue" id="results">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">How you will see results</span>
-        <h2>One clear summary, once a month.</h2>
-        <p class="lede">Plain language on one page. Nothing new to learn.</p>
-      </div>
-      <div class="results reveal">
+        </div></details>
+        <details class="more" id="results"><summary>One clear summary each month<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="more-lede">Plain language on one page. Nothing new to learn.</p>
+      <div class="results">
         <img src="images/clinic.jpg" alt="A modern, light filled clinic lounge with soft grey chairs" width="1600" height="1067">
         <div class="summary glass">
           <div class="summary-head">
@@ -1201,18 +1279,9 @@ input,textarea{-webkit-user-select:text;user-select:text}
           <p class="summary-foot">Bars are illustrative. Nothing here reflects real activity.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Full stack -->
-  <section class="sec sec-blue" id="stack">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">The LocalLift&trade; full stack</span>
-        <h2>One system, working from every side.</h2>
-        <p class="lede">Referral care is one layer of a larger system for how patients and offices find you. Tap each layer.</p>
-      </div>
-      <div class="layers reveal" role="group" aria-label="Layers of the system">
+        </div></details>
+        <details class="more" id="stack"><summary>The full LocalLift&trade; system<span class="plus" aria-hidden="true"></span></summary><div class="more-in"><p class="more-lede">Referral care is one layer of a larger system for how patients and offices find you. Tap each layer.</p>
+      <div class="layers" role="group" aria-label="Layers of the system">
         <button type="button" class="layer on" data-l="0">Referral Desk</button>
         <button type="button" class="layer" data-l="1">SEO</button>
         <button type="button" class="layer" data-l="2">Google Business</button>
@@ -1220,21 +1289,22 @@ input,textarea{-webkit-user-select:text;user-select:text}
         <button type="button" class="layer" data-l="4">GEO</button>
         <button type="button" class="layer" data-l="5">Reputation and social</button>
       </div>
-      <div class="layer-panel reveal" aria-live="polite">
+      <div class="layer-panel" aria-live="polite">
         <div><span class="eyebrow" id="lpK"></span><h3 id="lpT"></h3></div>
         <div class="lp-grid"><div><small>What it does</small><span id="lpA"></span></div><div><small>Who it reaches</small><span id="lpB"></span></div><div><small>How you see it</small><span id="lpC"></span></div></div>
       </div>
-      <p class="src reveal">What is included depends on your plan. No one can promise what Google or an AI tool will show.</p>
+      <p class="src">What is included depends on your plan. No one can promise what Google or an AI tool will show.</p>
+        </div></details>
+      </div>
     </div>
   </section>
 
-  <!-- When you say yes -->
   <section class="sec" id="yes">
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">When you say yes</span>
         <h2>What you do, and what we do.</h2>
-        <p class="lede">About 30 minutes from you to start, then a few minutes to approve what goes out.</p>
+        <p class="lede">A short start from you, then a few minutes to approve what goes out.</p>
       </div>
       <div class="yes-grid reveal">
         <div class="yes-col"><h3>You and your office</h3><ul><li>Send your list of referring doctors and offices</li><li>Set your referral promise</li><li>Approve each letter and medical answer</li><li>Make the calls that matter on Monday</li><li>Keep handling every patient in your own systems</li></ul></div>
@@ -1258,6 +1328,10 @@ input,textarea{-webkit-user-select:text;user-select:text}
         <h2>The short answers.</h2>
       </div>
       <div class="faq reveal">
+        <details>
+          <summary>Is this a CRM we have to run?<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b5c61" stroke-width="2.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="ans">No. We do the job a CRM is supposed to do, without you running one. There is nothing to log in to, and your list is always yours. Ask for a copy any time.</div>
+        </details>
         <details>
           <summary>Do you handle patient information?<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b5c61" stroke-width="2.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
           <div class="ans"><b>No.</b> We never receive patient records or contact patients. Patient records stay in your systems.</div>
@@ -1308,7 +1382,7 @@ input,textarea{-webkit-user-select:text;user-select:text}
         </details>
         <details>
           <summary>Is this just AI writing?<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b5c61" stroke-width="2.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="ans">AI helps us draft and organize. People review it, and nothing goes out until you approve it.</div>
+          <div class="ans">AI helps us draft and organize. We review it, and nothing goes out until you approve it.</div>
         </details>
         <details>
           <summary>We already have someone helping with SEO.<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b5c61" stroke-width="2.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
@@ -1357,7 +1431,7 @@ input,textarea{-webkit-user-select:text;user-select:text}
     </div>
     <p class="legal">LocalLift&trade;, Referral Desk, this page and its methods are proprietary to The SocialDM. Prepared only for Dr. Ylli Zhubi and Arizona Preferred Surgeons. Please do not copy, share, or reproduce any part of it without written permission.</p>
     <div class="foot-bottom">
-      <span>Confidential preview for Dr. Zhubi. Sample content, nothing is live.</span>
+      <span>Confidential preview for Dr. Zhubi of a service we are building. Sample content.</span>
       <span>&copy; 2026 The SocialDM. All rights reserved.</span>
     </div>
   </div>
@@ -1487,6 +1561,27 @@ input,textarea{-webkit-user-select:text;user-select:text}
   var ls=[].slice.call(document.querySelectorAll('.layer'));
   function show(i){var x=L[i];['lpK','lpT','lpA','lpB','lpC'].forEach(function(id,j){document.getElementById(id).textContent=x[j];});ls.forEach(function(b,j){b.classList.toggle('on',j===i);});}
   ls.forEach(function(b,i){b.addEventListener('click',function(){show(i);});});show(0);
+})();
+</script>
+<script>
+(function(){
+var T={doc:'Referring doctor',mgr:'Office manager'};
+var D=[
+['Dr. Elena Marsh','Saguaro Bend Family Practice','doc','Wrote back to thank you for the note','Quick call this week','Apr 18',['On your list since you started','Got your winter letter','Wrote back to thank you, on this week\'s Monday Sheet']],
+['Dr. Priya Raman','Canyon Vista Internal Medicine','doc','Added to your list this month','First letter, once you approve it','Not on file',['You met at a hospital event','Added this month','First letter goes out Tuesday, once you approve it']],
+['Dr. Marcus Ellery','Palo Verde Gastroenterology','doc','Birthday this Thursday','Birthday note','Nov 19',['On your list since you started','Birthday note goes out Thursday']],
+['Linda Ortega','Sonoran Primary Care','mgr','No contact in a while','A personal call from you','Not on file',['Office manager','Still getting your letters','Gone quiet, on this week\'s Monday Sheet']],
+['Dr. James Whitfield','Mesquite Creek Women\'s Health','doc','Asked for your direct office number','Your direct number, in a short reply','Jan 30',['Spoke by phone this month','Asked for the best direct number to reach your office','On this week\'s Monday Sheet']],
+['Jordan','Red Rock Primary Care','mgr','New office manager','Welcome note and referral card','Not on file',['Joined Red Rock Primary Care recently','Welcome note and referral card go out Wednesday']]
+];
+var sel=D[0];
+function esc(x){var d=document.createElement('div');d.textContent=x;return d.innerHTML;}
+function draw(){
+ document.getElementById('dbRows').innerHTML=D.map(function(r,i){return '<tr'+(r===sel?' class="sel"':'')+'><th scope="row"><button type="button" data-i="'+i+'">'+esc(r[0])+'</button></th><td>'+esc(r[1])+'</td><td>'+T[r[2]]+'</td><td>'+esc(r[3])+'</td><td>'+esc(r[4])+'</td><td>'+esc(r[5])+'</td></tr>';}).join('');
+ [].forEach.call(document.querySelectorAll('#dbRows button'),function(b){b.addEventListener('click',function(){sel=D[+b.getAttribute('data-i')];draw();});});
+ document.getElementById('dbDetail').innerHTML='<b>'+esc(sel[0])+'</b> <span class="dbx-note">'+esc(sel[1])+'</span><ul>'+sel[6].map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>';
+}
+draw();
 })();
 </script>
 </body>
