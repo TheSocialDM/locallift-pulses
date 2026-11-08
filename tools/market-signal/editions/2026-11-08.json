@@ -1,0 +1,55 @@
+{
+ "slug": "2026-11-08-no03",
+ "issue": "03",
+ "finding_id": "MS-003",
+ "finding": "Yardi Matrix's September 2026 national report (Oct 19, 2026) says national renewal rent growth slowed to 1.7%, far below its 8.7% peak in early 2023, and turned negative in Phoenix (negative 2.4%) and Austin (negative 4.3%), while U.S. advertised asking rent growth improved to 0.7% year over year.",
+ "sections": {
+  "signal": "Yardi Matrix's September 2026 national report says national renewal rent growth slowed to 1.7%, far below its 8.7% peak in early 2023, even as the average U.S. advertised asking rent stood at $1,775 in September (down $1 on the month) and annual growth improved to 0.7%. Renewal growth turned negative in Phoenix (negative 2.4%) and Austin (negative 4.3%); San Francisco was the exception at 8.2%.",
+  "local_reality": "Yardi Matrix's Phoenix report for September 2026 (Oct 5) shows average advertised asking rents of $1,529, down 2.1% year over year and flat on a trailing three month basis; stabilized occupancy 93.2% in June, down 20 basis points year over year; 9,149 units completed in 2026 through July and 24,400 under construction. RealPage (Oct 6) says Phoenix's annual rent cuts narrowed to less than 2% and Phoenix saw rent growth in Q3. Limitation: Yardi's public page does not state the period or method behind the renewal figure; one month from one source; no Arizona figure beyond Phoenix and no verified Seattle figure this week.",
+  "operator_decision": {
+   "question": "Is each renewal offer priced against last year's lease, or against what the same home is advertised for today?",
+   "examine": "Compare each renewal offer with the current advertised rent and special for the same floor plan, renewal conversion by floor plan, and the full cost of a move out (vacant days, make ready, the concession to lease again). A metro renewal figure alone does not justify changing renewal pricing."
+  },
+  "watch": [
+   {
+    "indicator": "Yardi Matrix national report, October 2026: is Phoenix renewal rent growth still negative?",
+    "date": "Mid to late November 2026",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   },
+   {
+    "indicator": "Yardi Matrix Phoenix report, next edition: asking rent change year over year (negative 2.1% in September)",
+    "date": "November to December 2026",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   },
+   {
+    "indicator": "RealPage Q4 2026 data update: Phoenix annual rent change and occupancy",
+    "date": "Early January 2027",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "name": "Yardi Matrix, National Multifamily Market Report, September 2026",
+   "date": "Oct 19, 2026",
+   "url": "https://www.yardimatrix.com/blog/national-multifamily-market-report/"
+  },
+  {
+   "name": "Yardi Matrix, Phoenix Multifamily Market Report, September 2026",
+   "date": "Oct 5, 2026",
+   "url": "https://www.yardimatrix.com/blog/phoenix-multifamily-market-report/"
+  },
+  {
+   "name": "RealPage Analytics, 3Q 2026 U.S. Apartment Demand Update",
+   "date": "Oct 6, 2026",
+   "url": "https://www.realpage.com/analytics/3q-2026-us-data-update/"
+  }
+ ],
+ "posts": "see captions.md",
+ "interpretation": "In Phoenix, Yardi's renewal rent growth measure has turned negative while asking rents are flat over three months and down 2.1% over the year, which may mean residents are comparing renewal offers with what they can find advertised, so retention may depend more on how an offer compares with visible asking rents than on the size of the increase.",
+ "confidence": "Low",
+ "confidence_reason": "One monthly figure from one source; Yardi's public page does not state the period or method behind the renewal figure; no verified local renewal or retention data from operators."
+}

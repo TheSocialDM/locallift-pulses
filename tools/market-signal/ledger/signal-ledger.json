@@ -78,6 +78,11 @@
      "at": "2026-11-01 07:40 MST",
      "by": "Q (weekly build No. 02)",
      "change": "Graded checkpoints 1 (Census Q3: Not confirmed) and 2 (Apartment List October: Partly confirmed). RealPage Q4 checkpoint still pending; overall outcome stays Pending. RealPage page re-read: Phoenix named among markets with the most Q3 deliveries."
+    },
+    {
+     "at": "2026-11-08 07:30 MST",
+     "by": "Q (weekly build No. 03)",
+     "change": "No checkpoint due this week (RealPage Q4 update estimated late January 2027). Outcome stays Pending."
     }
    ]
   },
@@ -111,6 +116,11 @@
      "at": "2026-11-01 07:40 MST",
      "by": "Q (weekly build No. 02)",
      "change": "Retried. NMHC's survey index lists the October 2026 survey dated 10/22/2026, but the report page could not be fetched (permission not granted in the unattended run). Still held; retry next week."
+    },
+    {
+     "at": "2026-11-08 07:30 MST",
+     "by": "Q (weekly build No. 03)",
+     "change": "Retried. NMHC's press release search surfaced only the July 2026 survey page; the NMHC data table link returned rows only through October 2023. October 2026 figures still not readable on NMHC's own page; still held, retry next week."
     }
    ]
   },
@@ -166,6 +176,67 @@
      "at": "2026-11-01 07:35 MST",
      "by": "Independent editor",
      "change": "LocalLift caption moved to the West statistic and a trust angle so it no longer repeats Michael's; Michael hook and lead report line hedged; Melanie caption given the Phoenix delivery fact and a hedge; Michael graphic tagline contrast raised, byline removed from footnote, footnotes enlarged."
+    },
+    {
+     "at": "2026-11-08 07:30 MST",
+     "by": "Q (weekly build No. 03)",
+     "change": "No checkpoint due this week (Apartment List November data estimated late November). Michael's No. 02 post still not placed in Metricool; Mon Nov 16 now has no LinkedIn post on his profile."
+    }
+   ]
+  },
+  {
+   "id": "MS-003",
+   "edition": "No. 03",
+   "status": "Built Nov 8, 2026; posts queued for approval (Melanie Nov 10, LocalLift Nov 11, Pillar Nov 12); Michael's post sent to Metricool for his approval, Tue Nov 17 7:41 AM (Fri Nov 13 already had a LinkedIn post on his profile)",
+   "logged": "2026-11-08",
+   "finding": "Yardi Matrix's September 2026 national report (Oct 19, 2026) says national renewal rent growth slowed to 1.7%, far below its 8.7% peak in early 2023, and turned negative in Phoenix (negative 2.4%) and Austin (negative 4.3%), while U.S. advertised asking rent growth improved to 0.7% year over year.",
+   "source": "Yardi Matrix, National Multifamily Market Report, September 2026, Oct 19, 2026",
+   "url": "https://www.yardimatrix.com/blog/national-multifamily-market-report/",
+   "url_note": "This Yardi blog URL is reused for each month's national report; the September text was read Nov 8, 2026.",
+   "verification": "Read on Yardi Matrix's page by Q and by an independent fact checker, Nov 8, 2026 (exact quotes). Yardi Phoenix report and RealPage 3Q demand update read the same day.",
+   "local_evidence": "Yardi Matrix's Phoenix report for September 2026 (Oct 5) shows average advertised asking rents of $1,529, down 2.1% year over year and flat on a trailing three month basis; stabilized occupancy 93.2% in June, down 20 basis points year over year; 9,149 units completed in 2026 through July and 24,400 under construction. RealPage (Oct 6) says Phoenix's annual rent cuts narrowed to less than 2% and Phoenix saw rent growth in Q3. Limitation: Yardi's public page does not state the period or method behind the renewal figure; one month from one source; no Arizona figure beyond Phoenix and no verified Seattle figure this week.",
+   "interpretation": "In Phoenix, Yardi's renewal rent growth measure has turned negative while asking rents are flat over three months and down 2.1% over the year, which may mean residents are comparing renewal offers with what they can find advertised, so retention may depend more on how an offer compares with visible asking rents than on the size of the increase.",
+   "confidence": "Low",
+   "confidence_reason": "One monthly figure from one source; Yardi's public page does not state the period or method behind the renewal figure; no verified local renewal or retention data from operators.",
+   "checkpoints": [
+    {
+     "indicator": "Yardi Matrix national report, October 2026: Phoenix renewal rent growth still negative?",
+     "date": "Mid to late November 2026",
+     "date_status": "Estimated",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    },
+    {
+     "indicator": "Yardi Matrix Phoenix report, next edition: asking rent change year over year (negative 2.1% in September)",
+     "date": "November to December 2026",
+     "date_status": "Estimated",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    },
+    {
+     "indicator": "RealPage Q4 2026 data update: Phoenix annual rent change and occupancy",
+     "date": "Early January 2027",
+     "date_status": "Estimated",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    }
+   ],
+   "outcome": "Pending",
+   "revisions": [
+    {
+     "at": "2026-11-08 07:05 MST",
+     "by": "Q (builder)",
+     "change": "First draft: one finding (Phoenix renewal rent growth negative), four sections, two LinkedIn graphics, four captions."
+    },
+    {
+     "at": "2026-11-08 07:25 MST",
+     "by": "Independent fact checker",
+     "change": "All figures matched. 'Averaged a decrease' removed (Yardi's page does not define the metric); 'new lease pricing and renewals moving in different directions' corrected; report titles corrected to 'Market Report'; $1,775 paired with the $1 monthly dip; interpretation adds Phoenix asking rents down 2.1% year over year."
+    },
+    {
+     "at": "2026-11-08 07:25 MST",
+     "by": "Independent editor",
+     "change": "LocalLift caption rewritten to a resident review angle with a different statistic (San Francisco and Austin) so it no longer overlaps Michael's; Pillar hook and closing question changed and last week's line removed; Michael opener, closer and question varied from No. 02 and hedged; Melanie graphic note neutralized, '8.2%' label pulled inside the margin, sans numerals instead of slashed zero mono, footnotes enlarged; Michael stat shown as '2.4%' with 'Below zero' label."
     }
    ]
   }
