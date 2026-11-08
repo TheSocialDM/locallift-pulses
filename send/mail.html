@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Opening Mail</title>
+<style>body{margin:0;font:17px/1.45 -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;background:#f5f4ef;color:#1d1d1f;display:flex;min-height:100vh;align-items:center;justify-content:center}
+.c{max-width:460px;width:100%;padding:28px 22px;text-align:center}h1{font-size:22px;margin:0 0 6px}p{color:#6e6e73;margin:0 0 18px}
+a.b,button{display:block;width:100%;box-sizing:border-box;border:0;border-radius:14px;padding:16px;font:600 18px -apple-system,sans-serif;margin:0 0 12px;cursor:pointer;text-decoration:none}
+a.b{background:#2f6fed;color:#fff}button{background:#fff;color:#2f6fed;box-shadow:0 1px 3px rgba(0,0,0,.12)}#m{min-height:22px;color:#2d7d46;font-weight:600}</style></head>
+<body><div class="c"><h1 id="t">Opening Mail</h1><p id="s">If Mail did not open, tap the blue button.</p>
+<a class="b" id="go" href="#">Open in Mail</a><button id="cp" hidden>Copy email</button><div id="m"></div>
+<p style="font-size:14px;margin-top:10px">In Mail, tap in the body and Paste. To, CC, BCC and subject are already filled in.</p></div>
+<script>
+(function(){
+var q={};location.hash.slice(1).split("&").forEach(function(p){if(!p)return;var i=p.indexOf("=");q[decodeURIComponent(p.slice(0,i))]=decodeURIComponent(p.slice(i+1));});
+var e=encodeURIComponent,parts=[];
+if(q.cc)parts.push("cc="+e(q.cc));if(q.bcc)parts.push("bcc="+e(q.bcc));if(q.s)parts.push("subject="+e(q.s));
+var href="mailto:"+(q.to||"")+(parts.length?"?"+parts.join("&"):"");
+var go=document.getElementById("go");go.href=href;
+if(q.s)document.getElementById("s").textContent=q.s;
+if(q.t||q.h){var cp=document.getElementById("cp");cp.hidden=false;cp.onclick=function(){
+ var m=document.getElementById("m");
+ try{if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write&&q.h){navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([q.h],{type:"text/html"}),"text/plain":new Blob([q.t||""],{type:"text/plain"})})]).then(function(){m.textContent="Email copied. Now tap Open in Mail and Paste.";},fb);}else fb();}catch(x){fb();}
+ function fb(){var d=document.createElement("div");d.contentEditable="true";d.style.position="fixed";d.style.left="-9999px";d.innerHTML=q.h||(q.t||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\n/g,"<br>");document.body.appendChild(d);var r=document.createRange();r.selectNodeContents(d);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);var ok=false;try{ok=document.execCommand("copy");}catch(y){}sel.removeAllRanges();d.remove();m.textContent=ok?"Email copied. Now tap Open in Mail and Paste.":"Copy did not work here. Use Copy email again on HQ.";}
+};}
+setTimeout(function(){location.href=href;},150);
+})();
+</script></body></html>
