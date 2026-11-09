@@ -14,6 +14,7 @@
       var c=cards[i]; if(c){var b=c.querySelector(".day b"),s=c.querySelector(".day span"); if(b)b.textContent=p.label; if(s)s.textContent=p.day}
     });
     (w.tiles||[]).forEach(function(t){if(window.SIGT) window.SIGT[t.key]=tpl(B+t.img+v,t.alt)});
+    if(w.feed){var g=document.querySelectorAll(".grid9 .js-post");w.feed.forEach(function(f,i){if(g[i]&&window.SIGT){var k="feed"+i;window.SIGT[k]=tpl(B+f.img+v,f.alt);g[i].dataset.k=k}})}
     if(window.sigRender) window.sigRender();
     if(window.sigSetG) window.sigSetG(w.posts.map(function(p){return [B+p.google_img+v,p.google]}));
     if(w.data_note) all(".js-datanote",function(e){e.textContent=w.data_note});

@@ -62,5 +62,43 @@
   "src": "Market numbers from Phoenix REALTORS, ARMLS data through Oct 2026.",
   "headline": "Fewer contracts. Prices still up."
  },
- "float": "Scottsdale's median single family price was up 5.6% in October."
+ "float": "Scottsdale's median single family price was up 5.6% in October.",
+ "feed": [
+  {
+   "img": "2026-11-09_seller.jpg",
+   "alt": "Price it right from day one seller tip post"
+  },
+  {
+   "img": "2026-11-09_corner.jpg",
+   "alt": "ArtWalk night Thursday at 7 post"
+  },
+  {
+   "img": "2026-11-09_market.jpg",
+   "alt": "Scottsdale market update post: fewer contracts, prices still up"
+  },
+  {
+   "img": "evergreen_buyer.jpg",
+   "alt": "Know your number first buyer tip post"
+  },
+  {
+   "img": "2026-11-02_seller.jpg",
+   "alt": "Your front door is the first showing seller tip post"
+  },
+  {
+   "img": "2026-11-02_corner.jpg",
+   "alt": "Canal Convergence lights up Nov 6 post"
+  },
+  {
+   "img": "2026-11-02_market.jpg",
+   "alt": "Scottsdale market update post: buyers paid 96% of asking"
+  },
+  {
+   "img": "master_a.jpg",
+   "alt": "Desert modern, done right design post"
+  },
+  {
+   "img": "master_b.jpg",
+   "alt": "Find the repairs before buyers do seller post"
+  }
+ ]
 }
