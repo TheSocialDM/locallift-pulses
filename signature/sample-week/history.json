@@ -19,5 +19,26 @@
   "headline": "Your front door is the first showing.",
   "family": "B",
   "pexels": 5252546
+ },
+ {
+  "week": "2026-11-09",
+  "key": "market",
+  "headline": "Fewer contracts. Prices still up.",
+  "family": "C",
+  "pexels": 32371656
+ },
+ {
+  "week": "2026-11-09",
+  "key": "corner",
+  "headline": "ArtWalk night. Thursday at 7.",
+  "family": "A",
+  "pexels": 14595876
+ },
+ {
+  "week": "2026-11-09",
+  "key": "smart",
+  "headline": "Price it right from day one.",
+  "family": "B",
+  "pexels": 28122111
  }
 ]

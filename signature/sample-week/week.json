@@ -1,5 +1,5 @@
 {
- "date": "2026-11-02",
+ "date": "2026-11-09",
  "data_note": "Market posts show their source and data date.",
  "month_label": "November 2026",
  "posts": [
@@ -7,60 +7,60 @@
    "key": "market",
    "day": "Monday",
    "label": "Market Update",
-   "img": "2026-11-02_market.jpg",
-   "google_img": "2026-11-02_market_photo.jpg",
-   "alt": "Scottsdale market update post: buyers paid 96% of asking",
-   "caption": "Scottsdale buyers paid about 96% of asking in September. Sale to list price was 96.4%, and the median home sold for about $890K over the three months to September, up 9.2% from a year ago. The median is up, with room to talk on the right home. Source: Redfin, MLS based data. #ScottsdaleAZ #ScottsdaleRealEstate",
-   "google": "<b>Scottsdale market, September 2026.</b> Buyers paid 96.4% of list price, and the median home sold for about $890K over the three months to September, up 9.2% from a year ago. Thinking about a move? Ask me what it means for your street. Source: Redfin, MLS based data."
+   "img": "2026-11-09_market.jpg",
+   "google_img": "2026-11-09_market_photo.jpg",
+   "alt": "Scottsdale market update post: fewer contracts, prices still up",
+   "caption": "Fewer contracts in Scottsdale, but prices are still up. In October the median single family home sold for $1,225,000, up 5.6% from a year ago, while pending sales fell 43.5% from a year ago, to 208. Fewer homes went under contract, but the median price held its gains. Source: Phoenix REALTORS, ARMLS data, October 2026. #ScottsdaleAZ #ScottsdaleRealEstate",
+   "google": "<b>Scottsdale market, October 2026.</b> The median single family home sold for $1,225,000, up 5.6% from a year ago, while pending sales fell 43.5% from a year ago, to 208. Thinking about a move? Ask me what it means for your street. Source: Phoenix REALTORS, ARMLS data."
   },
   {
    "key": "corner",
    "day": "Wednesday",
    "label": "Community Spotlight",
-   "img": "2026-11-02_corner.jpg",
-   "google_img": "2026-11-02_corner_photo.jpg",
-   "alt": "Canal Convergence at the Scottsdale Waterfront post",
-   "caption": "Canal Convergence lights up the Scottsdale Waterfront Nov 6 to 15, evenings from 6 pm. Light art along the canal, right in the middle of Old Town. Who's going? #ScottsdaleAZ #CanalConvergence",
-   "google": "<b>Canal Convergence lights up Nov 6.</b> Light art fills the Scottsdale Waterfront Nov 6 to 15, evenings from 6 pm. Thinking about a move? Ask me about homes near the Waterfront."
+   "img": "2026-11-09_corner.jpg",
+   "google_img": "2026-11-09_corner_photo.jpg",
+   "alt": "Scottsdale ArtWalk Thursday night post",
+   "caption": "ArtWalk night in Old Town. Galleries along Main Street and Marshall Way open their doors Thursday, Nov 12, from 7 to 9 pm, and it's free. Who's going? #ScottsdaleAZ #ScottsdaleArtWalk",
+   "google": "<b>ArtWalk night. Thursday at 7.</b> Old Town galleries on Main Street and Marshall Way stay open Thursday, Nov 12, 7 to 9 pm, free. Thinking about a move? Ask me about homes near Old Town."
   },
   {
    "key": "smart",
    "day": "Friday",
    "label": "Seller Tip",
-   "img": "2026-11-02_seller.jpg",
-   "google_img": "2026-11-02_seller_photo.jpg",
-   "alt": "Your front door is the first showing seller tip post",
-   "caption": "Selling soon? Buyers judge your home from the curb in seconds, and most see it first in your listing photos. Fresh paint, healthy plants and a working porch light go a long way. #ScottsdaleAZ #SellingYourHome",
-   "google": "<b>Selling in Scottsdale? Your front door is the first showing.</b> Buyers judge your home from the curb in seconds, and most see it first in your listing photos. Paint, plants and a porch light make the first impression count."
+   "img": "2026-11-09_seller.jpg",
+   "google_img": "2026-11-09_seller_photo.jpg",
+   "alt": "Price it right from day one seller tip post",
+   "caption": "Selling soon? Scottsdale had about 4.2 months of single family homes for sale in October, so buyers have choices and they compare. Price for the market buyers see today. Source: Phoenix REALTORS, ARMLS data. #ScottsdaleAZ #SellingYourHome",
+   "google": "<b>Selling in Scottsdale? Price it right from day one.</b> About 4.2 months of single family homes were for sale in October, so buyers compare. Price for the market buyers see today."
   }
  ],
  "tiles": [
   {
    "key": "questions",
-   "img": "master_a.jpg",
-   "alt": "Desert modern, done right design post"
+   "img": "2026-11-02_corner.jpg",
+   "alt": "Canal Convergence lights up Nov 6 post"
   },
   {
    "key": "lesson",
-   "img": "master_b.jpg",
-   "alt": "Find the repairs before buyers do seller post"
+   "img": "2026-11-02_seller.jpg",
+   "alt": "Your front door is the first showing seller post"
   }
  ],
  "brief": {
   "stats": [
    [
-    "96.4%",
-    "Sale to list price, Sep 2026, up 0.3 points from a year ago"
+    "$1.225M",
+    "Median sale price, single family, Oct 2026, up 5.6% from a year ago"
    ],
    [
-    "$890K",
-    "Median sale price, 3 months to Sep 2026, up 9.2% from a year ago"
+    "208",
+    "Pending sales, Oct 2026, down 43.5% from a year ago"
    ]
   ],
-  "line": "Scottsdale buyers paid about 96% of asking in September, and the median sale price is up from a year ago.",
-  "say": "“Scottsdale buyers paid about 96% of asking in September. The median is up from a year ago, with room to talk on the right home.”",
-  "src": "Market numbers from Redfin, MLS based data through Sep 2026.",
-  "headline": "Buyers paid 96% of asking."
+  "line": "Fewer Scottsdale homes went under contract in October, but the median single family price is still up from a year ago.",
+  "say": "“Fewer contracts in Scottsdale, but prices are still up. The median single family price was up 5.6% from a year ago.”",
+  "src": "Market numbers from Phoenix REALTORS, ARMLS data through Oct 2026.",
+  "headline": "Fewer contracts. Prices still up."
  },
- "float": "Scottsdale buyers paid 96.4% of list price in September."
+ "float": "Scottsdale's median single family price was up 5.6% in October."
 }
