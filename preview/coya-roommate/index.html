@@ -43,7 +43,7 @@ a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important
 .photo{background-size:cover!important;background-position:center!important}
 .photo.has-img::after{display:none}
 .brand img{height:40px;display:block}
-footer .flogo{height:46px;filter:brightness(0) invert(1);opacity:.9;margin-bottom:10px}
+footer .flogo{height:54px;background:#fff;padding:8px 12px;margin-bottom:12px}
 .fp .photo.fpimg{background-color:#fff!important;background-size:contain!important;background-repeat:no-repeat!important}
 .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
 .ribbon{background:var(--ink);color:var(--gold2);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:8px 12px}
@@ -102,8 +102,9 @@ section{padding:88px 0}
 .calc{background:var(--sand)}
 .calc-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:stretch}
 @media(max-width:880px){.calc-grid{grid-template-columns:1fr}}
-.plans-pick{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.pick{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:16px;cursor:pointer;text-align:left;font:inherit;transition:.2s}
+.plans-pick{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-content:start}
+.pick img{width:100%;height:110px;object-fit:contain;margin-bottom:10px;background:#fff}
+.pick{color:var(--ink);-webkit-appearance:none;appearance:none;background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:16px;cursor:pointer;text-align:left;font:inherit;transition:.2s}
 .pick:hover{border-color:var(--gold2)}
 .pick.on{border-color:var(--gold);box-shadow:0 0 0 3px rgba(105,66,58,.15)}
 .pick .n{font-weight:700;font-size:15px}
@@ -115,7 +116,7 @@ section{padding:88px 0}
 .result .row span:last-child{font-weight:600}
 .result .fine{font-size:12px;color:rgba(255,255,255,.55);margin-top:14px}
 .split{display:flex;gap:8px;margin:18px 0 6px}
-.split button{flex:1;padding:10px;border-radius:12px;border:1.5px solid rgba(255,255,255,.25);background:transparent;color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.split button{-webkit-appearance:none;appearance:none;flex:1;padding:10px;border-radius:12px;border:1.5px solid rgba(255,255,255,.25);background:transparent;color:#fff;font:inherit;font-weight:600;cursor:pointer}
 .split button.on{background:var(--gold);border-color:var(--gold)}
 
 /* floor plans */
@@ -300,8 +301,8 @@ footer a{color:var(--gold2)}
   </div>
   <div class="sp-grid">
    <div class="sp"><div class="amt">$2,000</div><h3>Look &amp; Lease savings, up to</h3><p>Tour and lease to unlock bonus savings. Terms and eligible homes confirmed by the leasing team.</p></div>
-   <div class="sp"><div class="amt">+</div><h3>First Responder program</h3><p>Additional savings for first responders, on top of Look &amp; Lease.</p></div>
-   <div class="sp"><div class="amt">+</div><h3>Preferred Employer program</h3><p>Work for a partner employer? Extra savings on top of Look &amp; Lease.</p></div>
+   <div class="sp"><div class="amt">Stack it</div><h3>First Responder program</h3><p>Additional savings for first responders, on top of Look &amp; Lease.</p></div>
+   <div class="sp"><div class="amt">Stack it</div><h3>Preferred Employer program</h3><p>Work for a partner employer? Extra savings on top of Look &amp; Lease.</p></div>
   </div>
  </div>
 </section>
@@ -419,6 +420,7 @@ const floorSvg = `<svg viewBox="0 0 200 120" fill="none" stroke="#14161a" stroke
 
 $("#picks").innerHTML = PLANS.map((p,i)=>`
  <button class="pick ${i==0?'on':''}" data-i="${i}">
+  <img src="https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_500/s3/2/5748/${encodeURIComponent(p.img)}" alt="COYA ${p.id} floor plan">
   <div class="n">${p.id} · 2 bed · 2 bath</div>
   <div class="d">${p.sq} sq ft · ${p.avail} available</div>
   <div class="d">${money(p.base/2)} each, base</div>
