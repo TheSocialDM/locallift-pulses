@@ -6,6 +6,8 @@
   function esc(s){return String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
   function tpl(src,alt){return function(){return '<img class="full" src="'+src+'" alt="'+esc(alt)+'">'}}
   all(".js-month",function(e){e.textContent=m});
+  /* Menu link back to The SocialDM (desktop menu and phone menu) */
+  all(".navlinks, #msheet",function(n){if(n.querySelector(".to-sdm"))return;var a=document.createElement("a");a.href="https://www.thesocialdm.com/";a.className="to-sdm";a.textContent="The SocialDM \u2197";a.setAttribute("aria-label","Go to The SocialDM home page");n.appendChild(a)});
   fetch(B+"week.json?d="+new Date().toISOString().slice(0,10)).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(w){
     var v="?v="+w.date, cards=document.querySelectorAll("#week .ig");
     w.posts.forEach(function(p,i){
