@@ -287,7 +287,7 @@ footer a{color:var(--gold2)}
   <div class="sec-head">
    <div class="eyebrow" style="color:var(--gold)">Two bedroom floor plans</div>
    <h2>Four ways to share. Every one has two full baths.</h2>
-   <p>43 two bedroom homes available as of Nov 9, 2026.</p>
+   <p>Available now, with specials on select homes. B1 and B3b are down to their last few.</p>
   </div>
   <div class="fp-grid" id="fpgrid"></div>
  </div>
@@ -380,7 +380,7 @@ footer a{color:var(--gold2)}
  <div class="wrap">
   <div class="eyebrow">Room up at COYA</div>
   <h2>Your share of a 2 bedroom starts at $973.</h2>
-  <p>43 two bedroom homes available now. Tour this week and ask about up to $2,000 in Look &amp; Lease savings.</p>
+  <p>The lowest priced 2 bedrooms go first. Tour this week and ask about up to $2,000 in Look &amp; Lease savings.</p>
   <div class="ctas">
    <a class="btn btn-gold" data-track="apply_click" data-plan="final" href="https://www.coyaliving.com/floorplans">Apply now</a>
    <a class="btn btn-light" data-track="tour_click" data-plan="final" href="https://www.coyaliving.com/contactus">Book a tour</a>
@@ -423,7 +423,7 @@ $("#picks").innerHTML = PLANS.map((p,i)=>`
  <button class="pick ${i==0?'on':''}" data-i="${i}">
   <img src="https://resource.rentcafe.com/image/upload/${p.crop}q_auto,f_auto,c_limit,w_500/s3/2/5748/${encodeURIComponent(p.img)}" alt="COYA ${p.id} floor plan">
   <div class="n">${p.id} · 2 bed · 2 bath</div>
-  <div class="d">${p.sq} sq ft · ${p.avail} available</div>
+  <div class="d">${p.sq} sq ft${p.avail<=5?' · <b style="color:var(--clay)">only '+p.avail+' left</b>':''}</div>
   <div class="d">${money(p.base/2)} each, base</div>
   ${p.special?'<span class="tag">Specials available</span>':''}
  </button>`).join("");
@@ -436,7 +436,7 @@ $("#fpgrid").innerHTML = PLANS.map(p=>`
    <div class="meta">2 bed · 2 bath · ${p.sq} sq ft</div>
    <div class="pp">Per roommate, base<b>${money(p.base/2)}</b></div>
    <div class="tot">Base ${money(p.base)} · Total ${money(p.tmin)} to ${money(p.tmax)}/mo</div>
-   <div class="avail">${p.avail} available now</div>
+   <div class="avail">${p.avail<=5?'Only '+p.avail+' left at this price':'Available now'}</div>
    <a class="btn btn-ghost" data-track="apply_click" data-plan="${p.id}" href="https://www.coyaliving.com/floorplans">Apply for ${p.id}</a>
   </div>
  </article>`).join("");
@@ -448,7 +448,7 @@ function render(){
  $("#r-base").textContent = money(cur.base);
  $("#r-total").textContent = "from " + money(cur.tmin);
  $("#r-each").textContent = "from " + money(cur.tmin/n);
- $("#r-avail").textContent = cur.avail + " homes";
+ $("#r-avail").textContent = cur.avail<=5 ? "Only "+cur.avail+" left" : "Yes";
 }
 document.querySelectorAll(".pick").forEach(b=>b.onclick=()=>{
  document.querySelectorAll(".pick").forEach(x=>x.classList.remove("on"));
@@ -465,7 +465,7 @@ const FAQ = [
  ["How much does each roommate pay at COYA?", "Split two ways, the B3 plan's $1,945 base rent comes to about $973 per roommate. With required monthly fees, it is about $1,075 each. The calculator above shows every 2 bedroom plan."],
  ["Does COYA have a roommate special?", "COYA is promoting 2 bedrooms for roommates, plus up to $2,000 in Look & Lease savings. First Responder or Preferred Employer savings can stack on top. The leasing team confirms terms and eligible homes."],
  ["What 2 bedroom floor plans does COYA offer?", "Four plans, all 2 bed and 2 bath: B1 at 1,065 sq ft, B2 at 1,177 sq ft, B3 at 1,091 to 1,153 sq ft, and B3b at 1,075 sq ft."],
- ["How many 2 bedrooms are available right now?", "As of Nov 9, 2026, COYA lists 43 two bedroom homes: 23 B2, 12 B3, 4 B1 and 4 B3b. Availability changes daily."],
+ ["Are 2 bedrooms available right now?", "Yes. All four 2 bedroom plans have homes available, but the B1 and B3b plans are down to 4 homes each as of Nov 9, 2026. Availability changes daily, so tour soon to lock in your plan."],
  ["What is included in COYA's total monthly price?", "The total monthly price includes base rent, all mandatory monthly fees and any optional fees you choose. It does not include usage based fees or charges due at move in or move out."],
  ["Can roommates apply together at COYA?", "COYA is marketing its 2 bedrooms to roommates. Ask the leasing team how applications and income are reviewed when two people share a lease."],
  ["Where is COYA located?", "COYA is at 3475 W Desert Inn Rd, Las Vegas, NV 89102, in Chinatown, minutes from the Las Vegas Strip."],
