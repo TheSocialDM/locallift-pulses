@@ -103,7 +103,7 @@ section{padding:88px 0}
 .calc-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:stretch}
 @media(max-width:880px){.calc-grid{grid-template-columns:1fr}}
 .plans-pick{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-content:start}
-.pick img{width:100%;height:110px;object-fit:contain;margin-bottom:10px;background:#fff}
+.pick img{width:100%;height:140px;object-fit:contain;margin-bottom:10px;background:#fff}
 .pick{color:var(--ink);-webkit-appearance:none;appearance:none;background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:16px;cursor:pointer;text-align:left;font:inherit;transition:.2s}
 .pick:hover{border-color:var(--gold2)}
 .pick.on{border-color:var(--gold);box-shadow:0 0 0 3px rgba(105,66,58,.15)}
@@ -407,10 +407,10 @@ footer a{color:var(--gold2)}
 <script>
 const FEES = 204;
 const PLANS = [
- {id:"B3", img:"b3(11).png", sq:"1,091 to 1,153", base:1945, tmin:2149, tmax:2349, avail:12, special:true},
- {id:"B2", img:"b2(10).png", sq:"1,177", base:2069, tmin:2273, tmax:3048, avail:23, special:true},
- {id:"B1", img:"b1(12).png", sq:"1,065", base:2100, tmin:2304, tmax:2804, avail:4, special:false},
- {id:"B3b", img:"b3b(2).png", sq:"1,075", base:2140, tmin:2344, tmax:2369, avail:4, special:false}
+ {id:"B3", crop:"x_681,y_114,w_2477,h_2786,c_crop/", img:"b3(11).png", sq:"1,091 to 1,153", base:1945, tmin:2149, tmax:2349, avail:12, special:true},
+ {id:"B2", crop:"x_395,y_111,w_3066,h_2769,c_crop/", img:"b2(10).png", sq:"1,177", base:2069, tmin:2273, tmax:3048, avail:23, special:true},
+ {id:"B1", crop:"x_438,y_130,w_2980,h_2726,c_crop/", img:"b1(12).png", sq:"1,065", base:2100, tmin:2304, tmax:2804, avail:4, special:false},
+ {id:"B3b", crop:"x_655,y_58,w_2532,h_2846,c_crop/", img:"b3b(2).png", sq:"1,075", base:2140, tmin:2344, tmax:2369, avail:4, special:false}
 ];
 const $ = s => document.querySelector(s);
 const money = n => "$" + Math.round(n).toLocaleString("en-US");
@@ -420,7 +420,7 @@ const floorSvg = `<svg viewBox="0 0 200 120" fill="none" stroke="#14161a" stroke
 
 $("#picks").innerHTML = PLANS.map((p,i)=>`
  <button class="pick ${i==0?'on':''}" data-i="${i}">
-  <img src="https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_500/s3/2/5748/${encodeURIComponent(p.img)}" alt="COYA ${p.id} floor plan">
+  <img src="https://resource.rentcafe.com/image/upload/${p.crop}q_auto,f_auto,c_limit,w_500/s3/2/5748/${encodeURIComponent(p.img)}" alt="COYA ${p.id} floor plan">
   <div class="n">${p.id} · 2 bed · 2 bath</div>
   <div class="d">${p.sq} sq ft · ${p.avail} available</div>
   <div class="d">${money(p.base/2)} each, base</div>
@@ -429,7 +429,7 @@ $("#picks").innerHTML = PLANS.map((p,i)=>`
 
 $("#fpgrid").innerHTML = PLANS.map(p=>`
  <article class="fp">
-  <div class="photo fpimg has-img" role="img" aria-label="COYA ${p.id} 2 bedroom floor plan" style="background-image:url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_700/s3/2/5748/${encodeURIComponent(p.img)}')"></div>
+  <div class="photo fpimg has-img" role="img" aria-label="COYA ${p.id} 2 bedroom floor plan" style="background-image:url('https://resource.rentcafe.com/image/upload/${p.crop}q_auto,f_auto,c_limit,w_700/s3/2/5748/${encodeURIComponent(p.img)}')"></div>
   <div class="body">
    <h3>${p.id}${p.special?'<span class="badge">Special</span>':''}</h3>
    <div class="meta">2 bed · 2 bath · ${p.sq} sq ft</div>
