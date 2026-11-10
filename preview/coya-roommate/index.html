@@ -221,7 +221,7 @@ footer a{color:var(--gold2)}
    <a href="#amenities">Amenities</a>
    <a href="#faq">FAQ</a>
   </div>
-  <a class="btn btn-gold" data-track="tour_click" data-plan="nav" href="https://www.coyaliving.com/contactus">Book a tour</a>
+  <a class="btn btn-gold" data-track="tour_click" data-plan="nav" href="https://www.coyaliving.com/contactus?utm_source=moveinlocal&utm_medium=referral&utm_campaign=coya_roommate&utm_content=tour">Book a tour</a>
  </div>
 </nav>
 
@@ -229,11 +229,11 @@ footer a{color:var(--gold2)}
  <div class="photo has-img" role="img" aria-label="COYA Club Room" style="background:url('https://resource.rentcafe.com/image/upload/q_auto,f_auto,c_limit,w_1600/s3/2/5748/coya%20-%20clubroom.jpg')"></div>
  <div class="wrap">
   <div class="eyebrow">Room up. Save big.</div>
-  <h1>Split a luxury 2 bedroom in Las Vegas from <em>$973</em> per roommate.</h1>
+  <h1>2 bedroom apartments for roommates in Las Vegas, from <em>$973</em> each.</h1>
   <p class="lead">Two bedrooms, two baths, 10 foot ceilings and a Sky Lounge that looks out over the Strip. Same address, half the rent.</p>
   <div class="ctas">
    <a class="btn btn-gold" href="#roommates">See your share</a>
-   <a class="btn btn-light" data-track="apply_click" data-plan="hero" href="https://www.coyaliving.com/floorplans">View available homes</a>
+   <a class="btn btn-light" data-track="apply_click" data-plan="hero" href="https://www.coyaliving.com/floorplans?utm_source=moveinlocal&utm_medium=referral&utm_campaign=coya_roommate&utm_content=apply">View available homes</a>
   </div>
   <div class="stamp">Base rent on the B3 plan ($1,945, 12 month term) split two ways. From about $1,075 each with required monthly fees. Prices checked Nov 9, 2026.</div>
  </div>
@@ -274,7 +274,7 @@ footer a{color:var(--gold2)}
      </div>
     </div>
     <div>
-     <a class="btn btn-gold" style="width:100%;margin-top:20px" data-track="apply_click" data-plan="calculator" href="https://www.coyaliving.com/floorplans">Apply for this plan</a>
+     <a class="btn btn-gold" style="width:100%;margin-top:20px" data-track="apply_click" data-plan="calculator" href="https://www.coyaliving.com/floorplans?utm_source=moveinlocal&utm_medium=referral&utm_campaign=coya_roommate&utm_content=apply">Apply for this plan</a>
      <div class="fine">Base rents shown for a 12 month term. Pricing and availability are subject to change. Look &amp; Lease savings not included. Additional fees may apply.</div>
     </div>
    </div>
@@ -382,8 +382,8 @@ footer a{color:var(--gold2)}
   <h2>Your share of a 2 bedroom starts at $973.</h2>
   <p>The lowest priced 2 bedrooms go first. Tour this week and ask about up to $2,000 in Look &amp; Lease savings.</p>
   <div class="ctas">
-   <a class="btn btn-gold" data-track="apply_click" data-plan="final" href="https://www.coyaliving.com/floorplans">Apply now</a>
-   <a class="btn btn-light" data-track="tour_click" data-plan="final" href="https://www.coyaliving.com/contactus">Book a tour</a>
+   <a class="btn btn-gold" data-track="apply_click" data-plan="final" href="https://www.coyaliving.com/floorplans?utm_source=moveinlocal&utm_medium=referral&utm_campaign=coya_roommate&utm_content=apply">Apply now</a>
+   <a class="btn btn-light" data-track="tour_click" data-plan="final" href="https://www.coyaliving.com/contactus?utm_source=moveinlocal&utm_medium=referral&utm_campaign=coya_roommate&utm_content=tour">Book a tour</a>
   </div>
   <div class="phone">Or call 702 605 6291</div>
  </div>
@@ -399,8 +399,8 @@ footer a{color:var(--gold2)}
 
 <div class="mobilebar">
  <a class="btn btn-ghost" data-track="call_tap" data-plan="mobilebar" href="tel:+17026056291">Call</a>
- <a class="btn btn-ghost" data-track="tour_click" data-plan="mobilebar" href="https://www.coyaliving.com/contactus">Tour</a>
- <a class="btn btn-gold" data-track="apply_click" data-plan="mobilebar" href="https://www.coyaliving.com/floorplans" style="flex:1.4;flex-direction:column;gap:0;line-height:1.15">Apply<small style="font-size:10.5px;font-weight:400;letter-spacing:.02em;opacity:.9">up to $2,000 savings</small></a>
+ <a class="btn btn-ghost" data-track="tour_click" data-plan="mobilebar" href="https://www.coyaliving.com/contactus?utm_source=moveinlocal&utm_medium=referral&utm_campaign=coya_roommate&utm_content=tour">Tour</a>
+ <a class="btn btn-gold" data-track="apply_click" data-plan="mobilebar" href="https://www.coyaliving.com/floorplans?utm_source=moveinlocal&utm_medium=referral&utm_campaign=coya_roommate&utm_content=apply" style="flex:1.4;flex-direction:column;gap:0;line-height:1.15">Apply<small style="font-size:10.5px;font-weight:400;letter-spacing:.02em;opacity:.9">up to $2,000 savings</small></a>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -437,7 +437,7 @@ $("#fpgrid").innerHTML = PLANS.map(p=>`
    <div class="pp">Per roommate, base<b>${money(p.base/2)}</b></div>
    <div class="tot">Base ${money(p.base)} · Total ${money(p.tmin)} to ${money(p.tmax)}/mo</div>
    <div class="avail">${p.avail<=5?'Only '+p.avail+' left at this price':'Available now'}</div>
-   <a class="btn btn-ghost" data-track="apply_click" data-plan="${p.id}" href="https://www.coyaliving.com/floorplans">Apply for ${p.id}</a>
+   <a class="btn btn-ghost" data-track="apply_click" data-plan="${p.id}" href="https://www.coyaliving.com/floorplans?utm_source=moveinlocal&utm_medium=referral&utm_campaign=coya_roommate&utm_content=apply">Apply for ${p.id}</a>
   </div>
  </article>`).join("");
 
@@ -464,6 +464,8 @@ const FAQ = [
  ["How much is a 2 bedroom apartment at COYA?", "Two bedroom base rents at COYA start at $1,945 a month on the B3 plan with a 12 month term. With required monthly fees included, the total monthly price starts at $2,149. Prices checked Nov 9, 2026."],
  ["How much does each roommate pay at COYA?", "Split two ways, the B3 plan's $1,945 base rent comes to about $973 per roommate. With required monthly fees, it is about $1,075 each. The calculator above shows every 2 bedroom plan."],
  ["Does COYA have a roommate special?", "COYA is promoting 2 bedrooms for roommates, plus up to $2,000 in Look & Lease savings. First Responder or Preferred Employer savings can stack on top. The leasing team confirms terms and eligible homes."],
+ ["Are there 2 bedroom apartments with two bathrooms near the Las Vegas Strip?", "Yes. Every 2 bedroom plan at COYA has two full baths, and COYA sits in Chinatown, minutes from the Las Vegas Strip. Two bedroom base rents start at $1,945 on the B3 plan."],
+ ["How much is a 2 bedroom apartment per person at COYA in Las Vegas?", "Split two ways, COYA's B3 plan comes to about $973 per person in base rent, or about $1,075 each with required monthly fees, as of Nov 9, 2026."],
  ["What 2 bedroom floor plans does COYA offer?", "Four plans, all 2 bed and 2 bath: B1 at 1,065 sq ft, B2 at 1,177 sq ft, B3 at 1,091 to 1,153 sq ft, and B3b at 1,075 sq ft."],
  ["Are 2 bedrooms available right now?", "Yes. All four 2 bedroom plans have homes available, but the B1 and B3b plans are down to 4 homes each as of Nov 9, 2026. Availability changes daily, so tour soon to lock in your plan."],
  ["What is included in COYA's total monthly price?", "The total monthly price includes base rent, all mandatory monthly fees and any optional fees you choose. It does not include usage based fees or charges due at move in or move out."],
