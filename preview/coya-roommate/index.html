@@ -178,6 +178,7 @@ section{padding:88px 0}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{margin-top:12px;color:var(--ink2);font-size:15.5px}
 .faq-side{position:sticky;top:90px;align-self:start}
+@media(max-width:860px){.faq-side{position:static}.faq-side .box{display:none}#faqlist{margin-top:-10px}}
 .faq-side .box{background:var(--ink);color:#fff;border-radius:22px;padding:28px}
 .faq-side .box p{color:rgba(255,255,255,.72);font-size:14.5px;margin:10px 0 18px}
 
@@ -399,7 +400,7 @@ footer a{color:var(--gold2)}
 <div class="mobilebar">
  <a class="btn btn-ghost" data-track="call_tap" data-plan="mobilebar" href="tel:+17026056291">Call</a>
  <a class="btn btn-ghost" data-track="tour_click" data-plan="mobilebar" href="https://www.coyaliving.com/contactus">Tour</a>
- <a class="btn btn-gold" data-track="apply_click" data-plan="mobilebar" href="https://www.coyaliving.com/floorplans">Apply</a>
+ <a class="btn btn-gold" data-track="apply_click" data-plan="mobilebar" href="https://www.coyaliving.com/floorplans" style="flex:1.4;flex-direction:column;gap:0;line-height:1.15">Apply<small style="font-size:10.5px;font-weight:400;letter-spacing:.02em;opacity:.9">up to $2,000 savings</small></a>
 </div>
 
 <div class="toast" id="toast"></div>
