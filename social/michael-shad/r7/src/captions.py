@@ -85,7 +85,7 @@ Does your website say which of your buildings have elevators?
 ('2026-11-28','michael-shad-2026-11-28-fewer-clicks.png','ms-1128-fewer-clicks',"Is Google's AI naming you? A free report checks, within 1 business day",RPT,
 """Your website traffic is down. That may not mean fewer people are finding you.
 
-Pew Research Center studied the browsing of 900 U.S. adults in March 2025. When Google showed an AI summary, people clicked a regular search result on 8% of visits. Without one, they clicked on 15%. Links inside the summary itself got clicked on about 1% of visits.
+Pew Research Center studied the browsing of 900 U.S. adults in March 2025. When Google showed an AI summary, people clicked a regular search result on 8% of visits. Without one, they clicked on 15%. Links inside the summary itself got clicked on about 1% of the visits that had one.
 
 So more searches may now end on the results page. Someone can read a summary that names you, look at your Google profile, then call you, without ever visiting your website.
 
