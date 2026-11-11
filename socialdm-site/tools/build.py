@@ -388,12 +388,15 @@ if os.path.exists(SRC + '/activity.json'):
 # ---------- answer pages (/answers/<slug>): approved Q and A copy in tools/answers.json ----------
 ANSWERS = json.load(open(os.path.dirname(os.path.abspath(__file__)) + '/answers.json'))['pages']
 os.makedirs(OUT + '/answers', exist_ok=True)
-ANS_CSS = ('<style>.ans-short{margin:34px 0 8px;padding:26px 28px;border-radius:8px;background:#EFEEF8;border:1px solid rgba(75,79,184,.22)}'
-           '.ans-short p{margin:0;font-size:19px;line-height:1.6}.ans-faq h3{margin-top:30px}.ans-cta{margin:46px 0 10px}'
-           '.art-body .ans-cta a.btn{white-space:normal;text-align:center;line-height:1.35;color:#fff;text-decoration:none;background:#16132E}'
-           '.art-body .ans-cta a.btn:hover{background:#2A2560}.ans-list{list-style:none;padding:0;margin:34px 0 0}.ans-list li{border-top:1px solid var(--line);padding:26px 0;margin:0}'
-           '.art-body .ans-list a{text-decoration:none;color:var(--ink)}.ans-list h2{font-size:clamp(22px,2.4vw,28px);margin:0 0 10px}.ans-list p{margin:0;color:var(--soft)}'
-           '.ans-list .more{display:inline-block;margin-top:12px;font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}</style>')
+ANS_CSS = ('<style>.ans-pg .pg-hero .eyebrow{text-decoration:none}.ans-pg .pg-hero h1{max-width:20ch}'
+           '.ans-short{max-width:760px;margin-top:10px;padding:26px 28px;border-radius:24px;background:linear-gradient(160deg,rgba(75,79,184,.32),rgba(30,26,77,.5));border:1px solid var(--line);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}'
+           '.ans-short p{margin:12px 0 0;color:#fff;font-size:clamp(18px,1.7vw,21px);line-height:1.55;max-width:none}'
+           '.ans-meta{color:var(--dim);font-size:14px}.ans-sec{padding-block:70px 0}.ans-pg .cta{margin-top:90px}'
+           '.ans-causes b{font:700 15px/1 var(--body);letter-spacing:.14em;color:var(--sky)}.ans-causes span{color:#fff;font-size:17px;margin-top:14px}'
+           '.cards.two span{font-size:16.5px}.ans-pg .cta .btn{white-space:normal;text-align:center;line-height:1.3}'
+           '.ans-hub .cards a{transition:border-color .2s,transform .2s}.ans-hub .cards a:hover{border-color:var(--sky);transform:translateY(-2px)}'
+           '.ans-hub .cards b{font-size:21px}.ans-hub .more{display:inline-block;margin-top:16px;font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}'
+           '@media (max-width:860px){.ans-sec{padding-block:50px 0}.ans-short{padding:22px}}</style>')
 def _ans_desc(t, lim=154):
     if len(t) <= lim: return t
     first = re.split(r'(?<=[.!?])\s+', t)[0]
@@ -402,7 +405,7 @@ def _ans_desc(t, lim=154):
 for a in ANSWERS:
     e = html.escape
     url = f'{SITE}/answers/{a["slug"]}'
-    title = a['q'] + ' | The SocialDM'
+    title = a['q'] + ' | The SocialDM' if len(a['q']) <= 60 else a['q']
     desc = a.get('desc') or _ans_desc(a['short'])
     faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
         {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': ans}} for q, ans in a['faq']]}
@@ -413,21 +416,30 @@ for a in ANSWERS:
     head = ('<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
             + ''.join('<script type="application/ld+json">' + json.dumps(b, ensure_ascii=False) + '</script>' for b in (faq_ld, crumbs)) + ANS_CSS)
     iso, nice, _ = fmt(a['date'])
-    body = (f'<div class="ans-short"><div class="tk-label">Short answer</div><p>{e(a["short"])}</p></div>'
-            f'<h2>{e(a["list_title"])}</h2><ul>' + ''.join(f'<li>{e(x)}</li>' for x in a['list']) + '</ul>'
-            f'<p><b>What it costs you:</b> {e(a["cost"])}</p>'
-            f'<p><b>{e(a["help_label"])}</b> {e(a["help"])}</p>'
-            '<div class="ans-faq"><h2>FAQ</h2>' + ''.join(f'<h3>{e(q)}</h3><p>{e(ans)}</p>' for q, ans in a['faq']) + '</div>'
-            f'<p class="ans-cta"><a class="btn" href="{a.get("cta_href") or link("contact", 1)}">{e(a["cta"])}</a></p>')
-    main = (f'<main class="paper"><article class="art"><div class="art-head wrap"><a class="back" href="{link("answers", 1)}">Answers</a>'
-            f'<h1>{e(a["q"])}</h1><div class="meta"><span>The SocialDM</span><time datetime="{iso}">{nice}</time></div></div>'
-            f'<div class="art-body wrap">{body}</div></article></main>')
+    _w = a['q'].split(); _cut = max(1, len(_w) - 3)
+    h1 = e(' '.join(_w[:_cut])) + ' <span>' + e(' '.join(_w[_cut:])) + '</span>'
+    causes = ''.join(f'<div><b>{i:02d}</b><span>{e(x)}</span></div>' for i, x in enumerate(a['list'], 1))
+    faq = ''.join(f'<details><summary>{e(q)}</summary><p>{e(ans)}</p></details>' for q, ans in a['faq'])
+    href = a.get('cta_href') or link('contact', 1)
+    main = (f'<main class="ans-pg"><section class="hero pg-hero"><div class="wrap">'
+            f'<a class="eyebrow" href="{link("answers", 1)}">&larr; Answers</a><h1>{h1}</h1>'
+            f'<div class="ans-short"><div class="eyebrow">Short answer</div><p>{e(a["short"])}</p></div>'
+            f'<div class="ans-meta">The SocialDM &middot; <time datetime="{iso}">{nice}</time></div></div></section>'
+            f'<section class="block ans-sec"><div class="wrap"><div class="eyebrow">The problem</div><h2 class="h2">{e(a["list_title"])}</h2>'
+            f'<div class="cards ans-causes">{causes}</div></div></section>'
+            f'<section class="block ans-sec"><div class="wrap"><div class="cards two">'
+            f'<div><b>What it costs you</b><span>{e(a["cost"][:1].upper() + a["cost"][1:])}</span></div>'
+            f'<div><b>{e(a["help_label"].rstrip(":"))}</b><span>{e(a["help"])}</span></div></div></div></section>'
+            f'<section class="block ans-sec"><div class="wrap"><div class="eyebrow">FAQ</div><h2 class="h2">Questions we hear</h2><div class="faq">{faq}</div></div></section>'
+            f'<section class="wrap"><div class="cta"><div class="eyebrow">Next step</div><h2 style="margin-top:16px">{"See what a week of posts looks like" if a.get("cta_href") else e(a["cta"])}</h2>'
+            f'<a class="btn btn-light" href="{href}">{"See a sample week" if a.get("cta_href") else "Get your visibility plan"}</a></div></section></main>')
     open(f'{OUT}/answers/{a["slug"]}.html', 'w').write(shell(title, desc, f'/answers/{a["slug"]}', 1, main, head, 'og-image.png'))
-_items = ''.join(f'<li><a href="{link("answers/" + a["slug"], 0)}"><h2>{html.escape(a["q"])}</h2><p>{html.escape(a["short"])}</p><span class="more">Read the answer</span></a></li>' for a in ANSWERS)
+_items = ''.join(f'<a href="{link("answers/" + a["slug"], 0)}"><b>{html.escape(a["q"])}</b><span>{html.escape(a["short"])}</span><span class="more">Read the answer</span></a>' for a in ANSWERS)
 _crumbs0 = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
     {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE + '/'}, {'@type': 'ListItem', 'position': 2, 'name': 'Answers', 'item': SITE + '/answers'}]}
-_main0 = (f'<main class="paper"><article class="art"><div class="art-head wrap"><a class="back" href="{link("blog", 0)}">Market Intelligence</a><h1>Answers</h1>'
-          f'<div class="meta"><span>Short, direct answers from The SocialDM</span></div></div><div class="art-body wrap"><ul class="ans-list">{_items}</ul></div></article>{CTA_HUB(0)}</main>')
+_main0 = (f'<main class="ans-pg ans-hub"><section class="hero pg-hero"><div class="wrap"><div class="eyebrow">Answers</div><h1>Straight answers, <span>no runaround.</span></h1>'
+          f'<p>Short, direct answers from The SocialDM on getting found on Google, Maps and AI search.</p></div></section>'
+          f'<section class="block ans-sec" style="padding-top:0"><div class="wrap"><div class="cards two">{_items}</div></div></section>{CTA_HUB(0)}</main>')
 open(f'{OUT}/answers.html', 'w').write(shell('Answers | The SocialDM', 'Short, direct answers from The SocialDM on getting apartment communities and local practices found on Google, Maps and AI search.',
      '/answers', 0, _main0, '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">' + json.dumps(_crumbs0) + '</script>' + ANS_CSS, 'og-image.png'))
 
