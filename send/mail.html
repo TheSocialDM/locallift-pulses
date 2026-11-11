@@ -5,26 +5,30 @@ a.b,button{display:block;width:100%;box-sizing:border-box;border:0;border-radius
 a.b{background:#2f6fed;color:#fff}button{background:#fff;color:#2f6fed;box-shadow:0 1px 3px rgba(0,0,0,.12);padding:14px;font-size:16px}[hidden]{display:none!important}#m{min-height:22px;color:#2d7d46;font-weight:600;margin:4px 0 10px}</style></head>
 <body><div class="c"><h1 id="s">Your email</h1>
 <a class="b" id="go" href="#">Open in Mail</a><div id="m"></div>
-<p style="font-size:15px">One tap copies the email and opens Mail with To, CC, BCC and subject filled in. In Mail, tap in the body and Paste.</p>
-<button id="cp" hidden>Copy email again</button></div>
+<p style="font-size:15px">One tap opens Mail with To, CC, BCC, subject and the full email already written. Just check it and hit Send.</p>
+<button id="cp" hidden>Copy email instead</button></div>
 <script>
-/* Nov 8 2026: no automatic redirect. Safari asks "Allow" when a page opens Mail on its own, so Mail only opens from a real tap,
+/* Nov 11 2026: Open in Mail now fills the body too (no paste step). Copy is a backup and pastes plain 14px, no background.
+   Nov 8 2026: no automatic redirect. Safari asks "Allow" when a page opens Mail on its own, so Mail only opens from a real tap,
    and that same tap copies the email with its named link. */
 (function(){
 var q={};location.hash.slice(1).split("&").forEach(function(p){if(!p)return;var i=p.indexOf("=");q[decodeURIComponent(p.slice(0,i))]=decodeURIComponent(p.slice(i+1));});
+if(!q.t&&q.h){var tmp=document.createElement("div");tmp.innerHTML=q.h;tmp.querySelectorAll("a[href]").forEach(function(a){if(a.textContent.trim()!==a.href)a.textContent=a.textContent+" ("+a.href+")";});tmp.querySelectorAll("br").forEach(function(b){b.replaceWith("\n");});tmp.querySelectorAll("p,div,li").forEach(function(b){b.append("\n\n");});q.t=tmp.textContent.replace(/\n{3,}/g,"\n\n").trim();}
 var e=encodeURIComponent,parts=[];
 if(q.cc)parts.push("cc="+e(q.cc));if(q.bcc)parts.push("bcc="+e(q.bcc));if(q.s)parts.push("subject="+e(q.s));
+if(q.t)parts.push("body="+e(q.t));
 var href="mailto:"+(q.to||"")+(parts.length?"?"+parts.join("&"):"");
 var go=document.getElementById("go"),m=document.getElementById("m"),cp=document.getElementById("cp");go.href=href;
 if(q.s){document.getElementById("s").textContent=q.s;document.title=q.s;}
+var WRAP=function(h){return '<div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;color:#000;background:transparent">'+h+"</div>";};
 function copy(done){
  if(!(q.t||q.h)){done(false);return;}
- try{if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write&&q.h){navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([q.h],{type:"text/html"}),"text/plain":new Blob([q.t||""],{type:"text/plain"})})]).then(function(){done(true);},function(){done(fb());});return;}}catch(x){}
+ try{if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write&&q.h){navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([WRAP(q.h)],{type:"text/html"}),"text/plain":new Blob([q.t||""],{type:"text/plain"})})]).then(function(){done(true);},function(){done(fb());});return;}}catch(x){}
  done(fb());
 }
-function fb(){var d=document.createElement("div");d.contentEditable="true";d.style.position="fixed";d.style.left="-9999px";d.innerHTML=q.h||(q.t||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\n/g,"<br>");document.body.appendChild(d);var r=document.createRange();r.selectNodeContents(d);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);var ok=false;try{ok=document.execCommand("copy");}catch(y){}sel.removeAllRanges();d.remove();return ok;}
+function fb(){var d=document.createElement("div");d.contentEditable="true";d.style.cssText="position:fixed;left:-9999px;background:transparent;color:#000;font:14px Helvetica,Arial,sans-serif";d.innerHTML=q.h?WRAP(q.h):(q.t||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\n/g,"<br>");document.body.appendChild(d);var r=document.createRange();r.selectNodeContents(d);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);var ok=false;try{ok=document.execCommand("copy");}catch(y){}sel.removeAllRanges();d.remove();return ok;}
 function say(ok){m.textContent=ok?"Email copied. In Mail, tap the body and Paste.":"Mail is opening. If Paste is empty, come back and tap Copy email again.";if(q.t||q.h)cp.hidden=false;}
-go.addEventListener("click",function(){copy(say);});
-cp.onclick=function(){copy(function(ok){m.textContent=ok?"Email copied. Now tap Open in Mail.":"Copy did not work here. Use Copy email again on HQ.";});};
+go.addEventListener("click",function(){m.textContent="Opening Mail with your email ready to send.";if(q.t||q.h)cp.hidden=false;});
+cp.onclick=function(){copy(function(ok){m.textContent=ok?"Email copied, clean 14 point, no highlight.":"Copy did not work here. Use Copy email on HQ.";});};
 })();
 </script></body></html>
