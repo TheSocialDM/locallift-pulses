@@ -418,7 +418,7 @@ for a in ANSWERS:
             f'<p><b>What it costs you:</b> {e(a["cost"])}</p>'
             f'<p><b>{e(a["help_label"])}</b> {e(a["help"])}</p>'
             '<div class="ans-faq"><h2>FAQ</h2>' + ''.join(f'<h3>{e(q)}</h3><p>{e(ans)}</p>' for q, ans in a['faq']) + '</div>'
-            f'<p class="ans-cta"><a class="btn" href="{link("contact", 1)}">{e(a["cta"])}</a></p>')
+            f'<p class="ans-cta"><a class="btn" href="{a.get("cta_href") or link("contact", 1)}">{e(a["cta"])}</a></p>')
     main = (f'<main class="paper"><article class="art"><div class="art-head wrap"><a class="back" href="{link("answers", 1)}">Answers</a>'
             f'<h1>{e(a["q"])}</h1><div class="meta"><span>The SocialDM</span><time datetime="{iso}">{nice}</time></div></div>'
             f'<div class="art-body wrap">{body}</div></article></main>')
