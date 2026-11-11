@@ -5,7 +5,7 @@
   {
    "icon": "pulse",
    "name": "Weekly Pulse",
-   "cadence": "Every Friday",
+   "cadence": "Weekly",
    "text": "A one page read on how you showed up this week, and the one thing to do next."
   },
   {

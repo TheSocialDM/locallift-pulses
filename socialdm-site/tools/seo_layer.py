@@ -15,15 +15,15 @@ ORG = {'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID,
        'address': {'@type': 'PostalAddress', 'streetAddress': '3104 E Camelback Rd #2161', 'addressLocality': 'Phoenix',
                    'addressRegion': 'AZ', 'postalCode': '85016', 'addressCountry': 'US'},
        'areaServed': {'@type': 'Country', 'name': 'United States'},
-       'description': 'The SocialDM is a Phoenix based multifamily marketing agency that helps apartment communities get found on Google Search, Google Maps, social media and AI answers.',
+       'description': 'The SocialDM is a multifamily marketing agency, headquartered in Phoenix, that helps apartment communities nationwide get found on Google Search, Google Maps, social media and AI answers.',
        'knowsAbout': ['Multifamily marketing', 'Apartment SEO', 'Google Business Profile', 'Google Maps visibility', 'AI search visibility', 'Social media marketing'],
        'sameAs': SOCIAL}
 
 # path stem -> (title, description, schema kind, service name)
 META = {
  'index': ('Multifamily Marketing for Search, Maps and AI | The SocialDM',
-           'The SocialDM is a Phoenix based multifamily marketing agency helping apartment communities get found on Google Search, Google Maps, social and AI answers.', 'home', None),
- 'about': ('About The SocialDM | Multifamily Marketing Agency in Phoenix',
+           'The SocialDM is a multifamily marketing agency helping apartment communities nationwide get found on Google Search, Google Maps, social and AI answers.', 'home', None),
+ 'about': ('About The SocialDM | National Multifamily Marketing Agency',
            'Founded in 2019, The SocialDM helps apartment communities nationwide get found on Google, Maps and AI answers before renters choose.', 'about', None),
  'contact': ('Contact The SocialDM | Get Your Visibility Plan',
              'Tell us about your community, practice or business. A real person reads every message and replies within one business day from info@thesocialdm.com.', 'contact', None),
@@ -32,9 +32,9 @@ META = {
  'multifamily-marketing-agency': ('Multifamily Marketing Agency | Apartment SEO | The SocialDM',
                'A multifamily marketing agency focused on apartment SEO, Google Maps, reviews, social and AI visibility, so renters find your community before they compare.', 'service', 'Multifamily marketing and apartment SEO'),
  'apartment-google-business-profile-management': ('Google Business Profile Management for Apartments | The SocialDM',
-               'Google Business Profile management for apartment communities: a new Google post every day, a reply to every review the same day, and weekly listing checks.', 'service', 'Google Business Profile management for apartment communities'),
+               'Google Business Profile management for apartment communities nationwide: an active profile, every review answered and a listing that stays accurate.', 'service', 'Google Business Profile management for apartment communities'),
  'phoenix-multifamily-marketing-agency': ('Phoenix Multifamily Marketing Agency | The SocialDM',
-               'Apartment marketing from a Phoenix and Scottsdale agency. Google Business Profile, review replies, social and AI visibility, with a report every week.', 'service', 'Phoenix multifamily marketing'),
+               'Apartment marketing for the Valley from a national agency headquartered in Phoenix and Scottsdale. Google, reviews, social and AI, reported weekly.', 'service', 'Phoenix multifamily marketing'),
  'medical': ('Medical Practice Marketing and SEO | The SocialDM',
              'AI ready SEO, Google Business Profile care, careful review management and clear service pages that help medical practices become the trusted local choice.', 'service', 'Medical practice marketing and SEO'),
  'real-estate': ('Real Estate Marketing for Agents and Teams | The SocialDM',
@@ -122,7 +122,7 @@ def write_llms(out):
         if h1: posts.append((os.path.basename(f)[:-5], h1.get_text(' ', strip=True), d.get('content', '') if d else ''))
     posts.sort(key=lambda p: p[0])
     lines = ['# The SocialDM', '',
-             '> The SocialDM is a Phoenix based multifamily marketing agency, founded in 2019. It helps apartment communities nationwide, more than 7,900 apartment homes, get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
+             '> The SocialDM is a multifamily marketing agency founded in 2019 and headquartered in Phoenix. It markets more than 7,900 apartment homes across five states and helps apartment communities nationwide get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
              'Contact: info@thesocialdm.com, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
     for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'phoenix-multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]

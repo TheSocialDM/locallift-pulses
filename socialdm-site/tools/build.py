@@ -205,8 +205,8 @@ def card(p, depth, feat=False):
     return f'<a class="post{" feat" if feat else ""}" href="{link("blog/"+p["slug"],depth)}">{im}<time datetime="{p["iso"]}">{p["nice"]}</time><h3>{html.escape(p["title"])}</h3><p>{ex}</p><span class="more">Read the article</span></a>'
 
 
-AUTHOR_BIO = ('The SocialDM Insights Team is the research and editorial desk of The SocialDM, a Phoenix based marketing agency started in 2019. '
-              'Led by a Google certified strategist, the team runs LocalLift&trade;, a weekly Google, Maps and AI visibility program, and fact checks every article against its sources.')
+AUTHOR_BIO = ('The SocialDM Insights Team is the research and editorial desk of The SocialDM, a marketing agency started in 2019 that markets more than 7,900 apartment homes across five states from its Phoenix headquarters. '
+              'Led by a Google certified strategist, the desk fact checks every article against its sources. The SocialDM runs LocalLift&trade;, a weekly Google, Maps and AI visibility program.')
 def slugify(s):
     return re.sub(r'[^a-z0-9]+', '-', BeautifulSoup(s, 'html.parser').get_text().lower()).strip('-')[:60]
 def enrich(p, body):

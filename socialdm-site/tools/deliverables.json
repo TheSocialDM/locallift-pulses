@@ -4,7 +4,7 @@
   {
    "icon": "pulse",
    "name": "Weekly Pulse",
-   "cadence": "Every Friday",
+   "cadence": "Weekly",
    "text": "A one page read on what changed for your community this week across Search, Maps and AI, and the one thing to do next."
   },
   {
@@ -23,7 +23,7 @@
    "icon": "target",
    "name": "Map Reach",
    "cadence": "Weekly",
-   "text": "Google Maps rank scans across your neighborhood, not just from your own front door."
+   "text": "Where your community appears in Google Maps across your neighborhood, not just from your own front door."
   },
   {
    "icon": "globe",
@@ -34,14 +34,14 @@
   {
    "icon": "tag",
    "name": "Market Survey",
-   "cadence": "Every Sunday",
+   "cadence": "Weekly",
    "text": "See what competing communities are doing before it shows up in your traffic."
   },
   {
    "icon": "calendar",
    "name": "Daily Presence",
-   "cadence": "7 days a week",
-   "text": "Google Business Profile posts every day, written for your community and your neighborhood."
+   "cadence": "Always on",
+   "text": "A Google Business Profile that stays active and current, written for your community and your neighborhood."
   },
   {
    "icon": "message",

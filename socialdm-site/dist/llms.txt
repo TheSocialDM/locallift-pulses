@@ -1,13 +1,13 @@
 # The SocialDM
 
-> The SocialDM is a Phoenix based multifamily marketing agency, founded in 2019. It helps apartment communities nationwide, more than 7,900 apartment homes, get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.
+> The SocialDM is a multifamily marketing agency founded in 2019 and headquartered in Phoenix. It markets more than 7,900 apartment homes across five states and helps apartment communities nationwide get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.
 
 Contact: info@thesocialdm.com, 3104 E Camelback Rd #2161, Phoenix AZ 85016.
 
 ## Services
 - [Multifamily Marketing Agency](https://www.thesocialdm.com/multifamily-marketing-agency): A multifamily marketing agency focused on apartment SEO, Google Maps, reviews, social and AI visibility, so renters find your community before they compare.
-- [Google Business Profile Management for Apartments](https://www.thesocialdm.com/apartment-google-business-profile-management): Google Business Profile management for apartment communities: a new Google post every day, a reply to every review the same day, and weekly listing checks.
-- [Phoenix Multifamily Marketing Agency](https://www.thesocialdm.com/phoenix-multifamily-marketing-agency): Apartment marketing from a Phoenix and Scottsdale agency. Google Business Profile, review replies, social and AI visibility, with a report every week.
+- [Google Business Profile Management for Apartments](https://www.thesocialdm.com/apartment-google-business-profile-management): Google Business Profile management for apartment communities nationwide: an active profile, every review answered and a listing that stays accurate.
+- [Phoenix Multifamily Marketing Agency](https://www.thesocialdm.com/phoenix-multifamily-marketing-agency): Apartment marketing for the Valley from a national agency headquartered in Phoenix and Scottsdale. Google, reviews, social and AI, reported weekly.
 - [LocalLift: Google, Maps and AI Visibility for Apartments](https://www.thesocialdm.com/locallift): LocalLift by The SocialDM checks how apartment communities show up on Google Search, Google Maps and AI answers every week, and reports what changed.
 - [Medical Practice Marketing and SEO](https://www.thesocialdm.com/medical): AI ready SEO, Google Business Profile care, careful review management and clear service pages that help medical practices become the trusted local choice.
 - [Real Estate Marketing for Agents and Teams](https://www.thesocialdm.com/real-estate): Social, Google and AI visibility for real estate agents, teams and brokerages. Individual agents start with LocalLift Signature at $199 a month, no contract.
@@ -40,7 +40,7 @@ Contact: info@thesocialdm.com, 3104 E Camelback Rd #2161, Phoenix AZ 85016.
 - [How do I get my real estate business to show up in ChatGPT?](https://www.thesocialdm.com/answers/realtor-show-up-in-chatgpt): AI tools name agents they can confirm across public sources. See what gets an agent named, why most are skipped, and how to check where you stand.
 - [Is it worth paying someone to do social media for my real estate business?](https://www.thesocialdm.com/answers/realtor-social-media-worth-it): For most Realtors and title reps, yes, if it keeps you posting consistently and makes you look like the local expert.
 - [What does a multifamily marketing agency do?](https://www.thesocialdm.com/answers/what-does-a-multifamily-marketing-agency-do): A multifamily marketing agency helps apartment communities get found and chosen: Google, social, reviews, ads and AI search, with weekly reporting.
-- [What is The SocialDM?](https://www.thesocialdm.com/answers/what-is-the-socialdm): The SocialDM is a multifamily marketing and AI visibility agency near Phoenix running LocalLift for apartments and LocalLift Signature for Realtors.
+- [What is The SocialDM?](https://www.thesocialdm.com/answers/what-is-the-socialdm): A multifamily marketing and AI visibility agency marketing 7,900+ apartment homes in five states, running LocalLift and LocalLift Signature.
 - [What should a Realtor post on social media each week?](https://www.thesocialdm.com/answers/what-should-realtors-post): A simple weekly mix for Realtors: a local market update, a neighborhood spot and a post about you. Why it works and how to keep it going.
 
 ## Articles

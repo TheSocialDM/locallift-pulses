@@ -5,7 +5,7 @@
   {
    "icon": "pulse",
    "name": "Weekly Pulse",
-   "cadence": "Every Friday",
+   "cadence": "Weekly",
    "text": "A one page read on how your practice showed up this week, and the one thing to do next."
   },
   {
@@ -41,7 +41,7 @@
   {
    "icon": "calendar",
    "name": "Daily Presence",
-   "cadence": "7 days a week",
+   "cadence": "Always on",
    "text": "Google Business Profile posts that keep your practice active and current."
   },
   {
