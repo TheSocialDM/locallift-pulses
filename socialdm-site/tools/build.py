@@ -397,18 +397,36 @@ ANS_CSS = ('<style>.ans-pg .pg-hero .eyebrow{text-decoration:none}.ans-pg .pg-he
            '.cards.two span{font-size:16.5px}.ans-pg .cta .btn{white-space:normal;text-align:center;line-height:1.3}'
            '.ans-hub .cards a{transition:border-color .2s,transform .2s}.ans-hub .cards a:hover{border-color:var(--sky);transform:translateY(-2px)}'
            '.ans-hub .cards b{font-size:21px}.ans-hub .more{display:inline-block;margin-top:16px;font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}'
+           '.ans-disc{max-width:760px;margin:6px 0 18px;color:var(--soft);font-size:16px;line-height:1.55}'
+           '.ans-note{max-width:760px;margin-top:26px;color:var(--soft);font-size:17px;line-height:1.6}'
+           '.ans-ranks{display:grid;gap:16px}.ans-rank{border:1px solid var(--line);border-radius:24px;padding:28px 28px 26px;background:rgba(255,255,255,.03)}'
+           '.ans-rank h3{font-size:clamp(21px,2vw,25px);line-height:1.2;letter-spacing:-.02em}.ans-rank p{color:var(--soft);font-size:16.5px;line-height:1.6;margin:12px 0 0;max-width:72ch}.ans-rank p b{color:#fff}'
+           '.ans-rank.un{background:transparent;border-style:dashed}'
            '@media (max-width:860px){.ans-sec{padding-block:50px 0}.ans-short{padding:22px}}</style>')
 def _ans_desc(t, lim=154):
     if len(t) <= lim: return t
     first = re.split(r'(?<=[.!?])\s+', t)[0]
     if len(first) <= lim: return first
     return t[:lim].rsplit(' ', 1)[0].rstrip(',;:') + '.'
+def _ans_ranked(a):
+    # ranked list (roundup pages): each entry a card in the doc's order; unranked entries carry no number in schema
+    if not a.get('ranked'): return ''
+    e = html.escape; out = ''
+    for r in a['ranked']:
+        why = f'<p><b>{e(r["why"][0])}</b> {e(r["why"][1])}</p>' if r.get('why') else ''
+        out += f'<article class="ans-rank{" un" if r.get("unranked") else ""}"><h3>{e(r["name"])}</h3><p>{e(r["body"])}</p>{why}</article>'
+    return f'<section class="block ans-sec"><div class="wrap"><div class="ans-ranks">{out}</div></div></section>'
 def _ans_cards(a):
     e = html.escape; out = ''
     if a.get('cost'): out += f'<div><b>What it costs you</b><span>{e(a["cost"][:1].upper() + a["cost"][1:])}</span></div>'
     if a.get('help'): out += f'<div><b>{e(a["help_label"].rstrip(":"))}</b><span>{e(a["help"])}</span></div>'
     for lab, txt in a.get('extras', []): out += f'<div><b>{e(lab)}</b><span>{e(txt)}</span></div>'
     return out
+def _ans_itemlist(a, url):
+    import re as _re
+    items = [r for r in a['ranked'] if not r.get('unranked')]
+    return {'@context': 'https://schema.org', '@type': 'ItemList', 'name': a['q'], 'url': url, 'itemListOrder': 'https://schema.org/ItemListOrderAscending',
+            'numberOfItems': len(items), 'itemListElement': [{'@type': 'ListItem', 'position': i, 'name': _re.sub(r'^\d+\.\s*', '', r['name'])} for i, r in enumerate(items, 1)]}
 for a in ANSWERS:
     e = html.escape
     url = f'{SITE}/answers/{a["slug"]}'
@@ -421,7 +439,7 @@ for a in ANSWERS:
         {'@type': 'ListItem', 'position': 2, 'name': 'Answers', 'item': SITE + '/answers'},
         {'@type': 'ListItem', 'position': 3, 'name': a['q'], 'item': url}]}
     head = ('<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
-            + ''.join('<script type="application/ld+json">' + json.dumps(b, ensure_ascii=False) + '</script>' for b in (faq_ld, crumbs)) + ANS_CSS)
+            + ''.join('<script type="application/ld+json">' + json.dumps(b, ensure_ascii=False) + '</script>' for b in ((faq_ld, crumbs) + ((_ans_itemlist(a, url),) if a.get('ranked') else ()))) + ANS_CSS)
     iso, nice, _ = fmt(a['date'])
     _w = a['q'].split(); _cut = max(1, len(_w) - 3)
     h1 = e(' '.join(_w[:_cut])) + ' <span>' + e(' '.join(_w[_cut:])) + '</span>'
@@ -430,14 +448,18 @@ for a in ANSWERS:
     href = a.get('cta_href') or link('contact', 1)
     main = (f'<main class="ans-pg"><section class="hero pg-hero"><div class="wrap">'
             f'<a class="eyebrow" href="{link("answers", 1)}">&larr; Answers</a><h1>{h1}</h1>'
-            f'<div class="ans-short"><div class="eyebrow">Short answer</div><p>{e(a["short"])}</p></div>'
+            + (f'<p class="ans-disc"><em>{e(a["disclosure"])}</em></p>' if a.get('disclosure') else '')
+            + f'<div class="ans-short">' + (f'<div class="eyebrow">{e(a.get("short_label", "Short answer"))}</div>' if a.get('short_label', 'Short answer') else '') + f'<p>{e(a["short"])}</p></div>'
             f'<div class="ans-meta">The SocialDM &middot; <time datetime="{iso}">{nice}</time></div></div></section>'
-            f'<section class="block ans-sec"><div class="wrap"><div class="eyebrow">The problem</div><h2 class="h2">{e(a["list_title"])}</h2>'
-            f'<div class="cards ans-causes">{causes}</div></div></section>'
-            f'<section class="block ans-sec"><div class="wrap"><div class="cards two">{_ans_cards(a)}</div>'
-            + (f'<p class="ans-meta" style="margin-top:22px">Related: <a href="{a["related"][1]}" style="color:var(--sky)">{e(a["related"][0])}</a></p>' if a.get('related') else '')
-            + f'</div></section>'
-            f'<section class="block ans-sec"><div class="wrap"><div class="eyebrow">FAQ</div><h2 class="h2">Questions we hear</h2><div class="faq">{faq}</div></div></section>'
+            f'<section class="block ans-sec"><div class="wrap">' + (f'<div class="eyebrow">{e(a.get("list_eyebrow", "The problem"))}</div>' if a.get('list_eyebrow', 'The problem') else '') + f'<h2 class="h2">{e(a["list_title"])}</h2>'
+            f'<div class="cards ans-causes">{causes}</div>' + (f'<p class="ans-note">{e(a["list_note"])}</p>' if a.get('list_note') else '') + '</div></section>'
+            + _ans_ranked(a)
+            + (f'<section class="block ans-sec"><div class="wrap"><h2 class="h2">{e(a["steps_title"])}</h2><div class="cards ans-causes">'
+               + ''.join(f'<div><b>{i:02d}</b><span>{e(x)}</span></div>' for i, x in enumerate(a['steps'], 1)) + '</div></div></section>' if a.get('steps') else '')
+            + ((f'<section class="block ans-sec"><div class="wrap">' + (f'<div class="cards two">{_ans_cards(a)}</div>' if _ans_cards(a) else '')
+               + (f'<p class="ans-meta" style="margin-top:22px">Related: <a href="{a["related"][1]}" style="color:var(--sky)">{e(a["related"][0])}</a></p>' if a.get('related') else '')
+               + '</div></section>') if (_ans_cards(a) or a.get('related')) else '')
+            + f'<section class="block ans-sec"><div class="wrap"><div class="eyebrow">FAQ</div><h2 class="h2">Questions we hear</h2><div class="faq">{faq}</div></div></section>'
             f'<section class="wrap"><div class="cta"><div class="eyebrow">Next step</div><h2 style="margin-top:16px">{e(a["cta_head"]) if a.get("cta_head") else ("See what a week of posts looks like" if a.get("cta_href") else e(a["cta"]))}</h2>'
             f'<a class="btn btn-light" href="{href}">{e(a["cta_btn"]) if a.get("cta_btn") else ("See a sample week" if a.get("cta_href") else "Get your visibility plan")}</a></div></section></main>')
     open(f'{OUT}/answers/{a["slug"]}.html', 'w').write(shell(title, desc, f'/answers/{a["slug"]}', 1, main, head, 'og-image.png'))

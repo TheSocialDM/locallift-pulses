@@ -33,6 +33,8 @@ META = {
                'A multifamily marketing agency focused on apartment SEO, Google Maps, reviews, social and AI visibility, so renters find your community before they compare.', 'service', 'Multifamily marketing and apartment SEO'),
  'apartment-google-business-profile-management': ('Google Business Profile Management for Apartments | The SocialDM',
                'Google Business Profile management for apartment communities: a new Google post every day, a reply to every review the same day, and weekly listing checks.', 'service', 'Google Business Profile management for apartment communities'),
+ 'phoenix-multifamily-marketing-agency': ('Phoenix Multifamily Marketing Agency | The SocialDM',
+               'Apartment marketing from a Phoenix and Scottsdale agency. Google Business Profile, review replies, social and AI visibility, with a report every week.', 'service', 'Phoenix multifamily marketing'),
  'medical': ('Medical Practice Marketing and SEO | The SocialDM',
              'AI ready SEO, Google Business Profile care, careful review management and clear service pages that help medical practices become the trusted local choice.', 'service', 'Medical practice marketing and SEO'),
  'real-estate': ('Real Estate Marketing for Agents and Teams | The SocialDM',
@@ -51,7 +53,10 @@ META = {
                        'How apartment communities and lease ups are discovered across social media, Google Search, Google Maps and AI search in 2026, from The SocialDM.', 'article', None),
 }
 
-LINKS = [('/', 'Home'), ('/multifamily-marketing-agency', 'Multifamily marketing'), ('/apartment-google-business-profile-management', 'Google Business Profile management'), ('https://www.localliftnow.com/', 'LocalLift'),
+# service pages with a local area instead of the default United States
+AREA = {'phoenix-multifamily-marketing-agency': [{'@type': 'City', 'name': c} for c in ('Phoenix', 'Scottsdale', 'Chandler', 'Tempe', 'Glendale')] + [{'@type': 'State', 'name': 'Arizona'}]}
+
+LINKS = [('/', 'Home'), ('/multifamily-marketing-agency', 'Multifamily marketing'), ('/apartment-google-business-profile-management', 'Google Business Profile management'), ('/phoenix-multifamily-marketing-agency', 'Phoenix multifamily marketing agency'), ('https://www.localliftnow.com/', 'LocalLift'),
          ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/med-spa', 'Med Spa'), ('/hair-salon', 'Hair Salons'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Portfolios'),
          ('/blog', 'Market Intelligence blog'), ('/research-insights', 'Research and Insights'),
          ('/2026-multifamily-visibility-report', '2026 Multifamily Visibility Report'), ('/answers', 'Answers'), ('/about', 'About'), ('/contact', 'Contact')]
@@ -91,7 +96,7 @@ def run(out):
             if kind == 'service':
                 blocks.append({'@context': 'https://schema.org', '@type': 'Service', 'name': svc, 'serviceType': svc, 'url': canon,
                                'description': desc, 'provider': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'url': SITE + '/'},
-                               'areaServed': {'@type': 'Country', 'name': 'United States'}})
+                               'areaServed': AREA.get(rel, {'@type': 'Country', 'name': 'United States'})})
             if kind == 'article':
                 blocks.append({'@context': 'https://schema.org', '@type': 'Article', 'headline': 'The 2026 Multifamily Visibility Report', 'url': canon,
                                'description': desc, 'author': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM'},
@@ -119,7 +124,7 @@ def write_llms(out):
     lines = ['# The SocialDM', '',
              '> The SocialDM is a Phoenix based multifamily marketing agency, founded in 2019. It helps apartment communities nationwide, more than 7,900 apartment homes, get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
              'Contact: info@thesocialdm.com, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
-    for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
+    for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'phoenix-multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]
         lines.append(f'- [{title.split(" | ")[0]}]({SITE}/{stem}): {desc}')
     lines += ['', '## Research', f'- [The 2026 Multifamily Visibility Report]({SITE}/2026-multifamily-visibility-report): {META["2026-multifamily-visibility-report"][1]}',
