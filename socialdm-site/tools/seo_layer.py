@@ -12,7 +12,6 @@ SOCIAL = ['https://www.instagram.com/the.socialdm/', 'https://www.facebook.com/t
           'https://www.tiktok.com/@thesocialdm', 'https://www.youtube.com/@thesocialdm']
 ORG = {'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'url': SITE + '/',
        'logo': SITE + '/icon-512.png', 'email': 'info@thesocialdm.com', 'foundingDate': '2019',
-       'founder': {'@type': 'Person', 'name': 'Michael Shad', 'jobTitle': 'Founder'},
        'address': {'@type': 'PostalAddress', 'streetAddress': '3104 E Camelback Rd #2161', 'addressLocality': 'Phoenix',
                    'addressRegion': 'AZ', 'postalCode': '85016', 'addressCountry': 'US'},
        'areaServed': {'@type': 'Country', 'name': 'United States'},
@@ -25,7 +24,7 @@ META = {
  'index': ('Multifamily Marketing for Search, Maps and AI | The SocialDM',
            'The SocialDM is a Phoenix based multifamily marketing agency helping apartment communities get found on Google Search, Google Maps, social and AI answers.', 'home', None),
  'about': ('About The SocialDM | Multifamily Marketing Agency in Phoenix',
-           'Founded in 2019 by Michael Shad, The SocialDM helps apartment communities nationwide get found on Google, Maps and AI answers before renters choose.', 'about', None),
+           'Founded in 2019, The SocialDM helps apartment communities nationwide get found on Google, Maps and AI answers before renters choose.', 'about', None),
  'contact': ('Contact The SocialDM | Get Your Visibility Plan',
              'Tell us about your community, practice or business. A real person reads every message and replies within one business day from info@thesocialdm.com.', 'contact', None),
  'locallift': ('LocalLift: Google, Maps and AI Visibility for Apartments',
@@ -118,7 +117,7 @@ def write_llms(out):
         if h1: posts.append((os.path.basename(f)[:-5], h1.get_text(' ', strip=True), d.get('content', '') if d else ''))
     posts.sort(key=lambda p: p[0])
     lines = ['# The SocialDM', '',
-             '> The SocialDM is a Phoenix based multifamily marketing agency, founded in 2019 by Michael Shad. It helps apartment communities nationwide, more than 7,900 apartment homes, get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
+             '> The SocialDM is a Phoenix based multifamily marketing agency, founded in 2019. It helps apartment communities nationwide, more than 7,900 apartment homes, get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
              'Contact: info@thesocialdm.com, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
     for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]
