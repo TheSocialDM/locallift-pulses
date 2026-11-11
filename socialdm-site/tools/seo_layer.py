@@ -11,7 +11,7 @@ ORG_ID = SITE + '/#organization'
 SOCIAL = ['https://www.instagram.com/the.socialdm/', 'https://www.facebook.com/thesocialdm',
           'https://www.tiktok.com/@thesocialdm', 'https://www.youtube.com/@thesocialdm']
 ORG = {'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'url': SITE + '/',
-       'logo': SITE + '/icon-512.png', 'email': 'info@thesocialdm.com', 'foundingDate': '2019',
+       'logo': SITE + '/icon-512.png', 'foundingDate': '2019',
        'address': {'@type': 'PostalAddress', 'streetAddress': '3104 E Camelback Rd #2161', 'addressLocality': 'Phoenix',
                    'addressRegion': 'AZ', 'postalCode': '85016', 'addressCountry': 'US'},
        'areaServed': {'@type': 'Country', 'name': 'United States'},
@@ -26,7 +26,7 @@ META = {
  'about': ('About The SocialDM | National Multifamily Marketing Agency',
            'Founded in 2019, The SocialDM helps apartment communities nationwide get found on Google, Maps and AI answers before renters choose.', 'about', None),
  'contact': ('Contact The SocialDM | Get Your Visibility Plan',
-             'Tell us about your community, practice or business. A real person reads every message and replies within one business day from info@thesocialdm.com.', 'contact', None),
+             'Tell us about your community, practice or business. A real person reads every message and replies within one business day.', 'contact', None),
  'locallift': ('LocalLift: Google, Maps and AI Visibility for Apartments',
                'LocalLift by The SocialDM checks how apartment communities show up on Google Search, Google Maps and AI answers every week, and reports what changed.', 'service', 'LocalLift apartment visibility program'),
  'multifamily-marketing-agency': ('Multifamily Marketing Agency | Apartment SEO | The SocialDM',
@@ -66,7 +66,7 @@ def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensu
 def run(out):
     static_nav = ('<nav class="crawl-nav" aria-label="Site links">' +
                   ''.join(f'<a href="{h}"' + (' target="_blank" rel="noopener"' if 'localliftnow.com' in h else '') + f'>{html.escape(t)}</a>' for h, t in LINKS) + '</nav>')
-    static_foot = ('<div class="crawl-nav"><p>The SocialDM, 3104 E Camelback Rd #2161, Phoenix AZ 85016. info@thesocialdm.com</p>' +
+    static_foot = ('<div class="crawl-nav"><p>The SocialDM, 3104 E Camelback Rd #2161, Phoenix AZ 85016.</p>' +
                    ''.join(f'<a href="{u}">{u.split("/")[2]}</a>' for u in SOCIAL) + '</div>')
     for f in glob.glob(out + '/**/*.html', recursive=True):
         rel = os.path.relpath(f, out)[:-5]
@@ -123,7 +123,7 @@ def write_llms(out):
     posts.sort(key=lambda p: p[0])
     lines = ['# The SocialDM', '',
              '> The SocialDM is a multifamily marketing agency founded in 2019 and headquartered in Phoenix. It markets more than 7,900 apartment homes across five states and helps apartment communities nationwide get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
-             'Contact: info@thesocialdm.com, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
+             'Contact: thesocialdm.com/contact, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
     for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'phoenix-multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]
         lines.append(f'- [{title.split(" | ")[0]}]({SITE}/{stem}): {desc}')
