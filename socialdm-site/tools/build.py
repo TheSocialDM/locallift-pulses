@@ -161,7 +161,7 @@ for p in d['posts']:
     iso, nice, yr = fmt(p['publishOn'])
     hero = local_image(p['assetUrl']) if p.get('assetUrl') else None
     posts.append(dict(slug=slug, title=undash(html.unescape(p['title']).replace('\xa0',' ')), seoTitle=undash(sd.get('seoTitle') or ''), seoDesc=undash(sd.get('seoDescription') or ''),
-        excerpt=undash(ex), body=body, iso=iso, nice=nice, year=yr, hero=hero, author=p.get('author') or 'The SocialDM', updated=fmt(p['updatedOn'])[0], new=False, faq=[], alt=undash(p['title'])))
+        excerpt=undash(ex), body=body, iso=iso, nice=nice, year=yr, hero=hero, author='The SocialDM Insights Team', updated=fmt(p['updatedOn'])[0], new=False, faq=[], alt=undash(p['title'])))
 TODAY = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=7)).strftime('%Y-%m-%d')   # Phoenix date, no DST
 VERTICALS = {'ai-search': ('AI Search', 'AI Search Insights', 'How local businesses get named in ChatGPT, Gemini and Google AI answers.'),
              'multifamily': ('Multifamily', 'Multifamily Marketing Insights', 'How apartment communities get found on Google Search, Google Maps, social and AI answers.'),
@@ -189,7 +189,7 @@ for f in sorted(glob.glob(NEW + '/*.json')):
             _w,_h = 1400, 933
         hero = (n['image'], _w, _h)
     posts.append(dict(slug=n['slug'], title=n['title'], seoTitle=n['seoTitle'], seoDesc=n['seoDescription'], excerpt=n['excerpt'], body=n['bodyHtml'], iso=iso, nice=nice, year=yr, hero=hero,
-        author='Michael Shad', updated=iso, new=True, faq=n.get('faq', []), alt=n.get('imageAlt', n['title']), takeaways=n.get('takeaways', []), vertical=n.get('vertical', 'multifamily')))
+        author='The SocialDM Insights Team', updated=iso, new=True, faq=n.get('faq', []), alt=n.get('imageAlt', n['title']), takeaways=n.get('takeaways', []), vertical=n.get('vertical', 'multifamily')))
     POST_SLUGS.add(n['slug'])
 posts.sort(key=lambda x: x['iso'], reverse=True)
 
@@ -205,8 +205,8 @@ def card(p, depth, feat=False):
     return f'<a class="post{" feat" if feat else ""}" href="{link("blog/"+p["slug"],depth)}">{im}<time datetime="{p["iso"]}">{p["nice"]}</time><h3>{html.escape(p["title"])}</h3><p>{ex}</p><span class="more">Read the article</span></a>'
 
 
-AUTHOR_BIO = ('Michael Shad is the founder of The SocialDM, a Phoenix based marketing agency started in 2019, '
-              'and leads LocalLift&trade;, its weekly Google, Maps and AI visibility program for apartment communities.')
+AUTHOR_BIO = ('The SocialDM Insights Team is the research and editorial desk of The SocialDM, a Phoenix based marketing agency started in 2019. '
+              'Led by a Google certified strategist, the team runs LocalLift&trade;, a weekly Google, Maps and AI visibility program, and fact checks every article against its sources.')
 def slugify(s):
     return re.sub(r'[^a-z0-9]+', '-', BeautifulSoup(s, 'html.parser').get_text().lower()).strip('-')[:60]
 def enrich(p, body):
@@ -233,8 +233,8 @@ def enrich(p, body):
     if len(toc) >= 3:
         box += '<nav class="toc" aria-label="In this article"><div class="tk-label">In this article</div><ol>' + ''.join(f'<li><a href="#{i}">{html.escape(t)}</a></li>' for i, t in toc) + '</ol></nav>'
     return body, box
-AUTHOR_BOX = ('<aside class="author-box"><div class="ab-mark" aria-hidden="true">MS</div><div><div class="tk-label">About the author</div>'
-              '<b>Michael Shad</b><span class="ab-role">Founder, The SocialDM</span><p>' + AUTHOR_BIO + '</p>'
+AUTHOR_BOX = ('<aside class="author-box"><div class="ab-mark" aria-hidden="true">SD</div><div><div class="tk-label">About the authors</div>'
+              '<b>The SocialDM Insights Team</b><span class="ab-role">Research and Editorial, The SocialDM</span><p>' + AUTHOR_BIO + '</p>'
               '<a href="{about}">More about The SocialDM</a></div></aside>')
 
 for i, p in enumerate(posts):
@@ -257,7 +257,7 @@ for i, p in enumerate(posts):
         heroimg = f'<figure class="art-hero"><img src="{asset(p["hero"][0],1)}" alt="{html.escape(p["alt"])}" width="{p["hero"][1]}" height="{p["hero"][2]}"></figure>'
     ld = {'@context':'https://schema.org','@type':'BlogPosting','headline':p['title'],'datePublished':p['iso'],'dateModified':p['updated'],
           'mainEntityOfPage':f'{SITE}/blog/{p["slug"]}','wordCount':nwords,'inLanguage':'en-US',
-          'author':({'@type':'Person','name':'Michael Shad','jobTitle':'Founder','url':SITE+'/about','worksFor':{'@type':'Organization','name':'The SocialDM','url':SITE}} if p['author']=='Michael Shad' else {'@type':'Organization','name':'The SocialDM','url':SITE}),
+          'author':({'@type':'Organization','name':'The SocialDM Insights Team','url':SITE+'/about','parentOrganization':{'@type':'Organization','name':'The SocialDM','url':SITE}} if p['author']=='The SocialDM Insights Team' else {'@type':'Organization','name':'The SocialDM','url':SITE}),
           'publisher':{'@type':'Organization','name':'The SocialDM','logo':{'@type':'ImageObject','url':SITE+'/logo.png'}},'description':p['seoDesc'] or p['excerpt'][:155]}
     if p['hero']: ld['image'] = f'{SITE}/{p["hero"][0]}'
     head = f'<script type="application/ld+json">{json.dumps(ld)}</script>'
@@ -266,9 +266,9 @@ for i, p in enumerate(posts):
         {'@type':'ListItem','position':3,'name':p['title'],'item':f'{SITE}/blog/{p["slug"]}'}]}) + '</script>'
     if p['faq']:
         head += '<script type="application/ld+json">' + json.dumps({'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q['q'],'acceptedAnswer':{'@type':'Answer','text':q['a']}} for q in p['faq']]}) + '</script>'
-    by = 'Michael Shad, Founder of The SocialDM' if p['author']=='Michael Shad' else 'The SocialDM'
+    by = 'The SocialDM Insights Team' if p['author']=='The SocialDM Insights Team' else 'The SocialDM'
     upd = f'<span>Updated {fmt(p["updated"])[1]}</span>' if p['updated'] and p['updated'] > p['iso'] else ''
-    abox = AUTHOR_BOX.replace('{about}', link('about', 1)) if p['author']=='Michael Shad' else ''
+    abox = AUTHOR_BOX.replace('{about}', link('about', 1)) if p['author']=='The SocialDM Insights Team' else ''
     main = f'''<main class="paper"><article class="art"><div class="art-head wrap"><a class="back" href="{link('blog',1)}">Market Intelligence</a><h1>{html.escape(p['title'])}</h1><div class="meta"><time datetime="{p['iso']}">{p['nice']}</time><span>{by}</span><span>{mins} min read</span>{upd}</div></div>
 <div class="art-body wrap">{heroimg}{extras}{body}{abox}</div></article>
 <section class="wrap related"><div class="eyebrow">Keep reading</div><div class="posts">{''.join(card(q,1) for q in related)}</div></section>{CTA(1)}</main>'''
