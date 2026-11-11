@@ -55,7 +55,7 @@ META = {
 LINKS = [('/', 'Home'), ('/multifamily-marketing-agency', 'Multifamily marketing'), ('/apartment-google-business-profile-management', 'Google Business Profile management'), ('https://www.localliftnow.com/', 'LocalLift'),
          ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/med-spa', 'Med Spa'), ('/hair-salon', 'Hair Salons'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Portfolios'),
          ('/blog', 'Market Intelligence blog'), ('/research-insights', 'Research and Insights'),
-         ('/2026-multifamily-visibility-report', '2026 Multifamily Visibility Report'), ('/about', 'About'), ('/contact', 'Contact')]
+         ('/2026-multifamily-visibility-report', '2026 Multifamily Visibility Report'), ('/answers', 'Answers'), ('/about', 'About'), ('/contact', 'Contact')]
 
 def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False) + '</script>'
 
@@ -125,6 +125,12 @@ def write_llms(out):
         lines.append(f'- [{title.split(" | ")[0]}]({SITE}/{stem}): {desc}')
     lines += ['', '## Research', f'- [The 2026 Multifamily Visibility Report]({SITE}/2026-multifamily-visibility-report): {META["2026-multifamily-visibility-report"][1]}',
               f'- [Market Intelligence blog]({SITE}/blog): Research and field notes on how renters find apartments.', '', '## Articles']
+    answers = []
+    for f in sorted(glob.glob(out + '/answers/*.html')):
+        s2 = BeautifulSoup(open(f).read(), 'html.parser'); h1 = s2.find('h1'); d2 = s2.find('meta', attrs={'name': 'description'})
+        if h1: answers.append(f'- [{h1.get_text(" ", strip=True)}]({SITE}/answers/{os.path.basename(f)[:-5]})' + (f': {d2.get("content", "")}' if d2 else ''))
+    if answers:
+        lines = lines[:-2] + ['', '## Answers'] + answers + lines[-2:]
     for slug, title, desc in posts:
         lines.append(f'- [{title}]({SITE}/blog/{slug})' + (f': {desc}' if desc else ''))
     lines += ['', '## Company', f'- [About]({SITE}/about)', f'- [Contact]({SITE}/contact)', '']

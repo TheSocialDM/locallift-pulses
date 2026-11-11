@@ -3,7 +3,7 @@
 var M=[
  {t:"Solutions",items:[["LocalLift™","https://www.localliftnow.com/","Google, Maps and AI visibility"],["Multifamily","multifamily-marketing-agency.html","Social and search for apartments"],["Google Business Profile","apartment-google-business-profile-management.html","Daily posts and review replies"],["Real Estate","real-estate.html","Agents, teams and brokerages"],["Medical","medical.html","Visibility for practices"],["Med Spa","med-spa.html","Aesthetics and med spas"],["Hair Salons","hair-salon.html","Salons and independent stylists"],["LocalLift Signature \u2197","https://www.localliftsignature.com","Done for you posts for agents"],["Hospitality","hospitality.html","Hotels, resorts and venues"],["Portfolios","enterprise.html","Operators, groups and multi location brands"]]},
  {t:"Company",items:[["About","about.html"],["Contact","contact.html"]]},
- {t:"Research",items:[["Research & Insights","research-insights.html"],["Market Intelligence","blog.html","The blog"],["How Multifamily Visibility Works","multifamily-marketing-agency.html"],["2026 Multifamily Visibility Report","2026-multifamily-visibility-report.html"]]}
+ {t:"Research",items:[["Research & Insights","research-insights.html"],["Market Intelligence","blog.html","The blog"],["How Multifamily Visibility Works","multifamily-marketing-agency.html"],["2026 Multifamily Visibility Report","2026-multifamily-visibility-report.html"],["Answers","answers.html","Short answers to common questions"]]}
 ];
 var here=(location.pathname.split("/").pop()||"index.html");
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}

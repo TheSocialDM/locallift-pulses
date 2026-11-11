@@ -317,37 +317,6 @@ def carry(path, title_fallback=None):
 for pth in ['/apartment-seo-for-multifamily-communities','/montage-tigard','/pillar-communities','/apartment-seo-blog-hub/cuvee-apartments-westgate-glendale']:
     carry(pth)
 
-# ---------- answer pages (plain questions, direct answer first; for ChatGPT and Google AI) ----------
-ANS = []
-_af = os.path.join(os.path.dirname(SRC.rstrip('/')), 'answers', 'answers.json')
-if os.path.exists(_af):
-    ANS = json.load(open(_af))
-    os.makedirs(OUT + '/answers', exist_ok=True)
-    e = html.escape
-    for a in ANS:
-        faq = ''.join(f'<details><summary>{e(q)}</summary><p>{e(x)}</p></details>' for q, x in a['faq'])
-        why = ''.join(f'<li>{e(w)}</li>' for w in a['why'])
-        body = (f'<p class="lede"><strong>Short answer:</strong> {e(a["short"])}</p>'
-                f'<h2>{e(a["why_h"])}</h2><ul>{why}</ul>'
-                f'<h2>What it costs you</h2><p>{e(a["cost"])}</p>'
-                f'<h2>{e(a["helps_h"])}</h2><p>{e(a["helps"])}</p>'
-                f'<h2>Questions we hear</h2><div class="faq">{faq}</div>'
-                f'<p style="margin-top:28px"><a href="{link("contact",1)}"><strong>{e(a["cta"])}</strong></a></p>')
-        main = (f'<main class="paper"><article class="art"><div class="art-head wrap"><div class="eyebrow">Answers</div><h1>{e(a["q"])}</h1></div>'
-                f'<div class="art-body wrap">{body}</div></article>{CTA(1) if a.get("vertical")!="medical" else CTA(1).replace("your community","your practice")}</main>')
-        canon = f'/answers/{a["slug"]}'
-        schema = {'@context':'https://schema.org','@graph':[
-            {'@type':'QAPage','mainEntity':{'@type':'Question','name':a['q'],'acceptedAnswer':{'@type':'Answer','text':a['short'],'url':SITE+canon},
-              'answerCount':1,'author':{'@type':'Organization','name':'The SocialDM','url':SITE+'/'}}},
-            {'@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':x}} for q, x in a['faq']]},
-            {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':SITE+'/'},{'@type':'ListItem','position':2,'name':'Answers','item':SITE+'/answers'},{'@type':'ListItem','position':3,'name':a['q'],'item':SITE+canon}]}]}
-        head = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False) + '</script>'
-        open(f'{OUT}{canon}.html','w').write(shell(a['seo_title'], a['desc'], canon, 1, main, head))
-    lis = ''.join(f'<li><a href="{link("answers/"+a["slug"],0)}">{html.escape(a["q"])}</a></li>' for a in ANS)
-    hub = (f'<main class="paper"><article class="art"><div class="art-head wrap"><div class="eyebrow">Answers</div><h1>Straight answers to the questions owners and operators ask</h1></div>'
-           f'<div class="art-body wrap"><ul>{lis}</ul></div></article>{CTA(0)}</main>')
-    open(f'{OUT}/answers.html','w').write(shell('Answers | The SocialDM', 'Direct answers from The SocialDM to the questions apartment owners, operators and medical practices ask about Google, Maps and AI search.', '/answers', 0, hub))
-
 # ---------- static draft pages ----------
 for f in glob.glob(SRC + '/*.html'):
     n = os.path.basename(f)
@@ -415,6 +384,54 @@ c += '\nwindow.SDM_POP=' + json.dumps({'reviews': _pop}, ensure_ascii=False) + '
 open(OUT + '/chrome.js', 'w').write(c)
 if os.path.exists(SRC + '/activity.json'):
     shutil.copy(SRC + '/activity.json', OUT + '/activity.json')
+
+# ---------- answer pages (/answers/<slug>): approved Q and A copy in tools/answers.json ----------
+ANSWERS = json.load(open(os.path.dirname(os.path.abspath(__file__)) + '/answers.json'))['pages']
+os.makedirs(OUT + '/answers', exist_ok=True)
+ANS_CSS = ('<style>.ans-short{margin:34px 0 8px;padding:26px 28px;border-radius:8px;background:#EFEEF8;border:1px solid rgba(75,79,184,.22)}'
+           '.ans-short p{margin:0;font-size:19px;line-height:1.6}.ans-faq h3{margin-top:30px}.ans-cta{margin:46px 0 10px}'
+           '.art-body .ans-cta a.btn{white-space:normal;text-align:center;line-height:1.35;color:#fff;text-decoration:none;background:#16132E}'
+           '.art-body .ans-cta a.btn:hover{background:#2A2560}.ans-list{list-style:none;padding:0;margin:34px 0 0}.ans-list li{border-top:1px solid var(--line);padding:26px 0;margin:0}'
+           '.art-body .ans-list a{text-decoration:none;color:var(--ink)}.ans-list h2{font-size:clamp(22px,2.4vw,28px);margin:0 0 10px}.ans-list p{margin:0;color:var(--soft)}'
+           '.ans-list .more{display:inline-block;margin-top:12px;font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}</style>')
+def _ans_desc(t, lim=154):
+    if len(t) <= lim: return t
+    first = re.split(r'(?<=[.!?])\s+', t)[0]
+    if len(first) <= lim: return first
+    return t[:lim].rsplit(' ', 1)[0].rstrip(',;:') + '.'
+for a in ANSWERS:
+    e = html.escape
+    url = f'{SITE}/answers/{a["slug"]}'
+    title = a['q'] + ' | The SocialDM'
+    desc = a.get('desc') or _ans_desc(a['short'])
+    faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': ans}} for q, ans in a['faq']]}
+    crumbs = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE + '/'},
+        {'@type': 'ListItem', 'position': 2, 'name': 'Answers', 'item': SITE + '/answers'},
+        {'@type': 'ListItem', 'position': 3, 'name': a['q'], 'item': url}]}
+    head = ('<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+            + ''.join('<script type="application/ld+json">' + json.dumps(b, ensure_ascii=False) + '</script>' for b in (faq_ld, crumbs)) + ANS_CSS)
+    iso, nice, _ = fmt(a['date'])
+    body = (f'<div class="ans-short"><div class="tk-label">Short answer</div><p>{e(a["short"])}</p></div>'
+            f'<h2>{e(a["list_title"])}</h2><ul>' + ''.join(f'<li>{e(x)}</li>' for x in a['list']) + '</ul>'
+            f'<p><b>What it costs you:</b> {e(a["cost"])}</p>'
+            f'<p><b>{e(a["help_label"])}</b> {e(a["help"])}</p>'
+            '<div class="ans-faq"><h2>FAQ</h2>' + ''.join(f'<h3>{e(q)}</h3><p>{e(ans)}</p>' for q, ans in a['faq']) + '</div>'
+            f'<p class="ans-cta"><a class="btn" href="{link("contact", 1)}">{e(a["cta"])}</a></p>')
+    main = (f'<main class="paper"><article class="art"><div class="art-head wrap"><a class="back" href="{link("answers", 1)}">Answers</a>'
+            f'<h1>{e(a["q"])}</h1><div class="meta"><span>The SocialDM</span><time datetime="{iso}">{nice}</time></div></div>'
+            f'<div class="art-body wrap">{body}</div></article></main>')
+    open(f'{OUT}/answers/{a["slug"]}.html', 'w').write(shell(title, desc, f'/answers/{a["slug"]}', 1, main, head, 'og-image.png'))
+_items = ''.join(f'<li><a href="{link("answers/" + a["slug"], 0)}"><h2>{html.escape(a["q"])}</h2><p>{html.escape(a["short"])}</p><span class="more">Read the answer</span></a></li>' for a in ANSWERS)
+_crumbs0 = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE + '/'}, {'@type': 'ListItem', 'position': 2, 'name': 'Answers', 'item': SITE + '/answers'}]}
+_main0 = (f'<main class="paper"><article class="art"><div class="art-head wrap"><a class="back" href="{link("blog", 0)}">Market Intelligence</a><h1>Answers</h1>'
+          f'<div class="meta"><span>Short, direct answers from The SocialDM</span></div></div><div class="art-body wrap"><ul class="ans-list">{_items}</ul></div></article>{CTA_HUB(0)}</main>')
+open(f'{OUT}/answers.html', 'w').write(shell('Answers | The SocialDM', 'Short, direct answers from The SocialDM on getting apartment communities and local practices found on Google, Maps and AI search.',
+     '/answers', 0, _main0, '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><script type="application/ld+json">' + json.dumps(_crumbs0) + '</script>' + ANS_CSS, 'og-image.png'))
+
+ANS = ANSWERS
 
 # ---------- production plumbing ----------
 if PROD:

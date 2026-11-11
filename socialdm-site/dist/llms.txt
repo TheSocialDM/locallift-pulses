@@ -19,6 +19,12 @@ Contact: info@thesocialdm.com, 3104 E Camelback Rd #2161, Phoenix AZ 85016.
 - [The 2026 Multifamily Visibility Report](https://www.thesocialdm.com/2026-multifamily-visibility-report): How apartment communities and lease ups are discovered across social media, Google Search, Google Maps and AI search in 2026, from The SocialDM.
 - [Market Intelligence blog](https://www.thesocialdm.com/blog): Research and field notes on how renters find apartments.
 
+## Answers
+- [Why aren't people finding my apartment complex online?](https://www.thesocialdm.com/answers/apartment-not-found-online): Renters usually can't find an apartment community for one of three reasons.
+- [How do I get ChatGPT to recommend my apartment community?](https://www.thesocialdm.com/answers/chatgpt-apartment-community): To get ChatGPT to recommend your apartment community, make it the easiest property for AI to describe with confidence.
+- [Why isn't my doctor's office showing up on Google Maps?](https://www.thesocialdm.com/answers/doctor-office-google-maps): A doctor's office usually drops off Google Maps because its Google Business Profile is incomplete or inconsistent, or Google can't tell its specialty.
+- [How do I fill units faster during a lease up?](https://www.thesocialdm.com/answers/lease-up-marketing): A lease up fills faster when renters can find the community before it opens and trust what they see.
+
 ## Articles
 - [93% of AI Searches End Without a Click. Here Is How Apartment Communities Still Win in 2026](https://www.thesocialdm.com/blog/93-of-ai-searches-end-without-a-click-here-is-how-apartment-communities-still-win-in-2026): Google AI Mode passed one billion users and most AI searches end without a click. What the zero-click renter means for multifamily visibility in 2026
 - [AI Marketing for Multifamily: The Pitch vs. the Proof](https://www.thesocialdm.com/blog/ai-marketing-multifamily): What is real in AI marketing for multifamily and what is vendor talk. Six common pitches checked against surveys and Google's own documentation.
