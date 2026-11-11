@@ -11,7 +11,7 @@ ORG_ID = SITE + '/#organization'
 SOCIAL = ['https://www.instagram.com/the.socialdm/', 'https://www.facebook.com/thesocialdm',
           'https://www.tiktok.com/@thesocialdm', 'https://www.youtube.com/@thesocialdm']
 ORG = {'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'url': SITE + '/',
-       'logo': SITE + '/icon-512.png', 'foundingDate': '2019',
+       'logo': SITE + '/icon-512.png', 'foundingDate': '2019', 'telephone': '+1-602-753-6807',
        'address': {'@type': 'PostalAddress', 'streetAddress': '3104 E Camelback Rd #2161', 'addressLocality': 'Phoenix',
                    'addressRegion': 'AZ', 'postalCode': '85016', 'addressCountry': 'US'},
        'areaServed': {'@type': 'Country', 'name': 'United States'},
@@ -66,7 +66,7 @@ def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensu
 def run(out):
     static_nav = ('<nav class="crawl-nav" aria-label="Site links">' +
                   ''.join(f'<a href="{h}"' + (' target="_blank" rel="noopener"' if 'localliftnow.com' in h else '') + f'>{html.escape(t)}</a>' for h, t in LINKS) + '</nav>')
-    static_foot = ('<div class="crawl-nav"><p>The SocialDM, 3104 E Camelback Rd #2161, Phoenix AZ 85016.</p>' +
+    static_foot = ('<div class="crawl-nav"><p>The SocialDM, 3104 E Camelback Rd #2161, Phoenix AZ 85016. (602) 753-6807.</p>' +
                    ''.join(f'<a href="{u}">{u.split("/")[2]}</a>' for u in SOCIAL) + '</div>')
     for f in glob.glob(out + '/**/*.html', recursive=True):
         rel = os.path.relpath(f, out)[:-5]
@@ -123,7 +123,7 @@ def write_llms(out):
     posts.sort(key=lambda p: p[0])
     lines = ['# The SocialDM', '',
              '> The SocialDM is a multifamily marketing agency founded in 2019 and headquartered in Phoenix. It markets more than 7,900 apartment homes across the country and helps apartment communities get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
-             'Contact: thesocialdm.com/contact, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
+             'Contact: thesocialdm.com/contact, (602) 753-6807, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
     for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'phoenix-multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]
         lines.append(f'- [{title.split(" | ")[0]}]({SITE}/{stem}): {desc}')
