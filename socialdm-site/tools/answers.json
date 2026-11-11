@@ -1,170 +1,347 @@
 {
-  "_note": "Answer pages at /answers/<slug>. Copy approved by Michael Nov 11 2026 (Claude Doc 'ChatGPT Answer Pages, Batch 1'). Do not reword. Built by build.py.",
-  "pages": [
-    {
-      "slug": "chatgpt-apartment-community",
-      "date": "2026-11-11",
-      "q": "How do I get ChatGPT to recommend my apartment community?",
-      "short": "To get ChatGPT to recommend your apartment community, make it the easiest property for AI to describe with confidence. AI looks for clear, consistent, current facts on your website, Google Business Profile, listing sites and reviews. It skips properties whose information is thin or contradictory.",
-      "list_title": "Why most communities get skipped",
-      "list": [
-        "Your website talks about lifestyle but never plainly answers renter questions such as price range, pet policy, parking or what is nearby.",
-        "Your rent, specials and floor plans say one thing on your site and another on listing sites.",
-        "Your Google Business Profile is missing categories, amenities or recent photos.",
-        "Reviews are old, few, or rarely answered.",
-        "Nothing outside your own website mentions your community in a way AI trusts."
-      ],
-      "cost": "renters who ask ChatGPT for \"pet friendly apartments near downtown Phoenix\" get a short list. If you are not on it, you never get the tour.",
-      "help_label": "How The SocialDM helps:",
-      "help": "LocalLift™ is our AI visibility service for apartment communities. We measure where AI names your property today, close the gaps and report the change every week in the LocalLift Weekly Pulse. The Pulse tracks calls, direction requests and website clicks. The SocialDM is based in Phoenix and supports marketing for more than 7,900 apartment homes across Arizona, Nevada, Florida, Oregon and Washington, including communities in Phoenix, Scottsdale and Chandler.",
-      "faq": [
-        [
-          "Can an agency guarantee ChatGPT will recommend my property?",
-          "No. Anyone who guarantees placement is overpromising. What we can do is make your property the easiest one for AI to describe accurately, and measure the result."
-        ],
-        [
-          "How long does it take?",
-          "It depends on how much was missing. We measure where you stand first and report the change every week, so you see movement as it happens."
-        ],
-        [
-          "Is this different from SEO?",
-          "It builds on SEO, but AI answers are judged differently from keyword rankings."
-        ]
-      ],
-      "cta": "Talk to The SocialDM about AI visibility"
-    },
-    {
-      "slug": "apartment-not-found-online",
-      "date": "2026-11-11",
-      "q": "Why aren't people finding my apartment complex online?",
-      "short": "Renters usually can't find an apartment community for one of three reasons. Either the property doesn't show up where renters search, the information they find isn't convincing, or booking a tour is too hard. Renters search on Google Maps, listing sites, social media and AI tools.",
-      "list_title": "The most common causes",
-      "list": [
-        "You show up when someone types your exact name, but not for searches like \"2 bedroom apartments in Scottsdale\" or \"pet friendly apartments near me.\"",
-        "Your Google Business Profile has the wrong category, missing amenities or old photos.",
-        "Prices, specials or floor plans don't match across your website and listing sites.",
-        "Nearby communities have more recent reviews and more local content than you do.",
-        "Social media looks good but rarely connects the property to its neighborhood.",
-        "AI tools like ChatGPT don't have enough clear facts about your community to recommend it.",
-        "Reporting shows views and impressions, not calls, tours and applications."
-      ],
-      "cost": "every renter who doesn't find you tours a competitor instead, and you pay for that gap in concessions and days on market.",
-      "help_label": "How The SocialDM helps:",
-      "help": "We start with a visibility check across Google, Maps, social and AI search. It shows where your community appears, where competitors win and what is holding you back. Then LocalLift™ closes those gaps, and the LocalLift Weekly Pulse reports the calls, direction requests and website clicks you can show ownership. We support more than 7,900 apartment homes, including communities in Phoenix, Scottsdale and Chandler.",
-      "faq": [
-        [
-          "Is it my website or my Google listing?",
-          "Usually both. Renters often decide from Google and listing sites before they ever reach your website."
-        ],
-        [
-          "Do I need more ads?",
-          "Not always. Many communities lose renters they could win without extra ad spend in Maps and AI search."
-        ],
-        [
-          "How do I know where I stand today?",
-          "A visibility check compares you with nearby communities on the searches renters actually use."
-        ]
-      ],
-      "cta": "Talk to The SocialDM about your visibility"
-    },
-    {
-      "slug": "lease-up-marketing",
-      "date": "2026-11-11",
-      "q": "How do I fill units faster during a lease up?",
-      "short": "A lease up fills faster when renters can find the community before it opens and trust what they see. That means being visible on Google, Maps, social media and AI search early, with current prices, floor plans and photos everywhere a renter looks.",
-      "list_title": "Why lease ups stall",
-      "list": [
-        "The property starts marketing too late, so Google, Maps and AI tools barely know it exists on opening day.",
-        "A new property has few or no reviews, so established communities nearby look safer.",
-        "Renderings and \"coming soon\" pages don't answer real questions about price, move in dates or the neighborhood.",
-        "Specials change weekly but the listings and posts don't keep up.",
-        "Social content shows the building but not the life around it."
-      ],
-      "cost": "in a lease up, every week of slow absorption means more concessions, more ad spend and a later stabilization date for ownership.",
-      "help_label": "How The SocialDM helps:",
-      "help": "The SocialDM is based in Phoenix and supports marketing for more than 7,900 apartment homes in five states, including new communities in lease up. LocalLift™ builds the property's presence across Google, Maps, social media and AI search before opening. We keep specials and details current and track how often renters find you compared with nearby competitors.",
-      "faq": [
-        [
-          "When should lease up marketing start?",
-          "Well before opening, so search engines and AI tools know the property on day one."
-        ],
-        [
-          "What matters most early in a lease up?",
-          "Being findable and trusted before the first move in, then proving it with weekly results."
-        ],
-        [
-          "How do we show progress to ownership?",
-          "The LocalLift Weekly Pulse reports visibility, calls, direction requests and website clicks every week, not just impressions."
-        ]
-      ],
-      "cta": "Talk to The SocialDM about your lease up"
-    },
-    {
-      "slug": "realtor-social-media-worth-it",
-      "date": "2026-11-11",
-      "q": "Is it worth paying someone to do social media for my real estate business?",
-      "short": "For most Realtors and title reps, yes, if it keeps you posting consistently and makes you look like the local expert. Consistency is what keeps you top of mind when someone is ready to buy, sell or refer.",
-      "list_title": "Why agents do it themselves and stall",
-      "list": [
-        "Posting stops the moment you get busy with clients, which is exactly when you need it most.",
-        "Template posts look like everyone else's, so they are easy to forget.",
-        "Content is all listings and \"just sold,\" with nothing about the neighborhoods you know.",
-        "Your Google Business Profile sits untouched, so you are hard to find in local search.",
-        "Hiring an agency built for big brokerages costs more than a solo agent needs."
-      ],
-      "cost": "a past client who forgets your name refers someone else. Staying visible every week is cheaper than winning that client back.",
-      "help_label": "How LocalLift Signature helps:",
-      "help": "LocalLift Signature is a done for you posting service for Realtors and title reps. Every week you get polished, brand matched posts for social media and your Google Business Profile, built around your market. You stay visible without designing or writing anything. It is a LocalLift brand by The SocialDM in Phoenix.",
-      "faq": [
-        [
-          "How much does a real estate social media manager cost?",
-          "Freelancers and agencies range widely. LocalLift Signature is a flat monthly plan. Ask us for current pricing."
-        ],
-        [
-          "Will the posts sound like me?",
-          "That is the goal. Posts are matched to your brand, your market and the way you talk to clients, and you can request changes."
-        ],
-        [
-          "Does this work for title reps too?",
-          "Yes. Title reps use it to stay top of mind with the Realtors who send them business."
-        ]
-      ],
-      "cta": "See a sample week",
-      "cta_href": "https://localliftsignature.com/"
-    },
-    {
-      "slug": "doctor-office-google-maps",
-      "date": "2026-11-11",
-      "q": "Why isn't my doctor's office showing up on Google Maps?",
-      "short": "A doctor's office usually drops off Google Maps because its Google Business Profile is incomplete or inconsistent, it has fewer recent reviews than nearby practices, or Google can't tell its specialty. Maps ranks practices on relevance, distance and prominence.",
-      "list_title": "The most common causes",
-      "list": [
-        "The profile's primary category is too general, so you don't appear for your specialty.",
-        "Doctor and location listings aren't set up correctly, which splits or confuses your results.",
-        "Your name, address or phone number differs between your website, Google and directories like Healthgrades.",
-        "Nearby practices have more recent reviews than you do.",
-        "Your website doesn't clearly list conditions treated, procedures and the areas you serve.",
-        "Patients now ask AI tools like ChatGPT to recommend specialists, and those tools draw on the same signals."
-      ],
-      "cost": "patients searching \"colorectal surgeon near me\" or \"dermatologist in Phoenix\" choose from the first few results. If you are not there, referrals and self referred patients go to the practice that is.",
-      "help_label": "How The SocialDM helps:",
-      "help": "LocalLift™ for medical practices checks how your practice shows up across Google, Maps, directories and AI search. It compares you with nearby practices and closes the gaps that keep patients from finding you. We focus on getting found, not on advertising claims.",
-      "faq": [
-        [
-          "Can I pay Google to rank higher on Maps?",
-          "Ads can appear above the map results, but your regular map ranking can't be bought."
-        ],
-        [
-          "How long until we move up?",
-          "Timing depends on what is missing and how competitive your area is. We measure where you stand first, then report the change."
-        ],
-        [
-          "Do reviews really matter for doctors?",
-          "Yes. Recent reviews are one of the strongest local signals and one of the first things patients read."
-        ]
-      ],
-      "cta": "Talk to The SocialDM about your practice",
-      "desc": "A doctor's office usually drops off Google Maps because its Google Business Profile is incomplete or inconsistent, or Google can't tell its specialty."
-    }
-  ]
+ "_note": "Answer pages at /answers/<slug>. Copy approved by Michael Nov 11 2026 (Claude Doc 'ChatGPT Answer Pages, Batch 1'). Do not reword. Built by build.py. Batch 2 (5 pages) approved by Michael Nov 11 2026 (Claude Doc 'ChatGPT Answer Pages, Batch 2').",
+ "pages": [
+  {
+   "slug": "chatgpt-apartment-community",
+   "date": "2026-11-11",
+   "q": "How do I get ChatGPT to recommend my apartment community?",
+   "short": "To get ChatGPT to recommend your apartment community, make it the easiest property for AI to describe with confidence. AI looks for clear, consistent, current facts on your website, Google Business Profile, listing sites and reviews. It skips properties whose information is thin or contradictory.",
+   "list_title": "Why most communities get skipped",
+   "list": [
+    "Your website talks about lifestyle but never plainly answers renter questions such as price range, pet policy, parking or what is nearby.",
+    "Your rent, specials and floor plans say one thing on your site and another on listing sites.",
+    "Your Google Business Profile is missing categories, amenities or recent photos.",
+    "Reviews are old, few, or rarely answered.",
+    "Nothing outside your own website mentions your community in a way AI trusts."
+   ],
+   "cost": "renters who ask ChatGPT for \"pet friendly apartments near downtown Phoenix\" get a short list. If you are not on it, you never get the tour.",
+   "help_label": "How The SocialDM helps:",
+   "help": "LocalLift™ is our AI visibility service for apartment communities. We measure where AI names your property today, close the gaps and report the change every week in the LocalLift Weekly Pulse. The Pulse tracks calls, direction requests and website clicks. The SocialDM is based in Phoenix and supports marketing for more than 7,900 apartment homes across Arizona, Nevada, Florida, Oregon and Washington, including communities in Phoenix, Scottsdale and Chandler.",
+   "faq": [
+    [
+     "Can an agency guarantee ChatGPT will recommend my property?",
+     "No. Anyone who guarantees placement is overpromising. What we can do is make your property the easiest one for AI to describe accurately, and measure the result."
+    ],
+    [
+     "How long does it take?",
+     "It depends on how much was missing. We measure where you stand first and report the change every week, so you see movement as it happens."
+    ],
+    [
+     "Is this different from SEO?",
+     "It builds on SEO, but AI answers are judged differently from keyword rankings."
+    ]
+   ],
+   "cta": "Talk to The SocialDM about AI visibility"
+  },
+  {
+   "slug": "apartment-not-found-online",
+   "date": "2026-11-11",
+   "q": "Why aren't people finding my apartment complex online?",
+   "short": "Renters usually can't find an apartment community for one of three reasons. Either the property doesn't show up where renters search, the information they find isn't convincing, or booking a tour is too hard. Renters search on Google Maps, listing sites, social media and AI tools.",
+   "list_title": "The most common causes",
+   "list": [
+    "You show up when someone types your exact name, but not for searches like \"2 bedroom apartments in Scottsdale\" or \"pet friendly apartments near me.\"",
+    "Your Google Business Profile has the wrong category, missing amenities or old photos.",
+    "Prices, specials or floor plans don't match across your website and listing sites.",
+    "Nearby communities have more recent reviews and more local content than you do.",
+    "Social media looks good but rarely connects the property to its neighborhood.",
+    "AI tools like ChatGPT don't have enough clear facts about your community to recommend it.",
+    "Reporting shows views and impressions, not calls, tours and applications."
+   ],
+   "cost": "every renter who doesn't find you tours a competitor instead, and you pay for that gap in concessions and days on market.",
+   "help_label": "How The SocialDM helps:",
+   "help": "We start with a visibility check across Google, Maps, social and AI search. It shows where your community appears, where competitors win and what is holding you back. Then LocalLift™ closes those gaps, and the LocalLift Weekly Pulse reports the calls, direction requests and website clicks you can show ownership. We support more than 7,900 apartment homes, including communities in Phoenix, Scottsdale and Chandler.",
+   "faq": [
+    [
+     "Is it my website or my Google listing?",
+     "Usually both. Renters often decide from Google and listing sites before they ever reach your website."
+    ],
+    [
+     "Do I need more ads?",
+     "Not always. Many communities lose renters they could win without extra ad spend in Maps and AI search."
+    ],
+    [
+     "How do I know where I stand today?",
+     "A visibility check compares you with nearby communities on the searches renters actually use."
+    ]
+   ],
+   "cta": "Talk to The SocialDM about your visibility"
+  },
+  {
+   "slug": "lease-up-marketing",
+   "date": "2026-11-11",
+   "q": "How do I fill units faster during a lease up?",
+   "short": "A lease up fills faster when renters can find the community before it opens and trust what they see. That means being visible on Google, Maps, social media and AI search early, with current prices, floor plans and photos everywhere a renter looks.",
+   "list_title": "Why lease ups stall",
+   "list": [
+    "The property starts marketing too late, so Google, Maps and AI tools barely know it exists on opening day.",
+    "A new property has few or no reviews, so established communities nearby look safer.",
+    "Renderings and \"coming soon\" pages don't answer real questions about price, move in dates or the neighborhood.",
+    "Specials change weekly but the listings and posts don't keep up.",
+    "Social content shows the building but not the life around it."
+   ],
+   "cost": "in a lease up, every week of slow absorption means more concessions, more ad spend and a later stabilization date for ownership.",
+   "help_label": "How The SocialDM helps:",
+   "help": "The SocialDM is based in Phoenix and supports marketing for more than 7,900 apartment homes in five states, including new communities in lease up. LocalLift™ builds the property's presence across Google, Maps, social media and AI search before opening. We keep specials and details current and track how often renters find you compared with nearby competitors.",
+   "faq": [
+    [
+     "When should lease up marketing start?",
+     "Well before opening, so search engines and AI tools know the property on day one."
+    ],
+    [
+     "What matters most early in a lease up?",
+     "Being findable and trusted before the first move in, then proving it with weekly results."
+    ],
+    [
+     "How do we show progress to ownership?",
+     "The LocalLift Weekly Pulse reports visibility, calls, direction requests and website clicks every week, not just impressions."
+    ]
+   ],
+   "cta": "Talk to The SocialDM about your lease up"
+  },
+  {
+   "slug": "realtor-social-media-worth-it",
+   "date": "2026-11-11",
+   "q": "Is it worth paying someone to do social media for my real estate business?",
+   "short": "For most Realtors and title reps, yes, if it keeps you posting consistently and makes you look like the local expert. Consistency is what keeps you top of mind when someone is ready to buy, sell or refer.",
+   "list_title": "Why agents do it themselves and stall",
+   "list": [
+    "Posting stops the moment you get busy with clients, which is exactly when you need it most.",
+    "Template posts look like everyone else's, so they are easy to forget.",
+    "Content is all listings and \"just sold,\" with nothing about the neighborhoods you know.",
+    "Your Google Business Profile sits untouched, so you are hard to find in local search.",
+    "Hiring an agency built for big brokerages costs more than a solo agent needs."
+   ],
+   "cost": "a past client who forgets your name refers someone else. Staying visible every week is cheaper than winning that client back.",
+   "help_label": "How LocalLift Signature helps:",
+   "help": "LocalLift Signature is a done for you posting service for Realtors and title reps. Every week you get polished, brand matched posts for social media and your Google Business Profile, built around your market. You stay visible without designing or writing anything. It is a LocalLift brand by The SocialDM in Phoenix.",
+   "faq": [
+    [
+     "How much does a real estate social media manager cost?",
+     "Freelancers and agencies range widely. LocalLift Signature is a flat monthly plan. Ask us for current pricing."
+    ],
+    [
+     "Will the posts sound like me?",
+     "That is the goal. Posts are matched to your brand, your market and the way you talk to clients, and you can request changes."
+    ],
+    [
+     "Does this work for title reps too?",
+     "Yes. Title reps use it to stay top of mind with the Realtors who send them business."
+    ]
+   ],
+   "cta": "See a sample week",
+   "cta_href": "https://localliftsignature.com/"
+  },
+  {
+   "slug": "doctor-office-google-maps",
+   "date": "2026-11-11",
+   "q": "Why isn't my doctor's office showing up on Google Maps?",
+   "short": "A doctor's office usually drops off Google Maps because its Google Business Profile is incomplete or inconsistent, it has fewer recent reviews than nearby practices, or Google can't tell its specialty. Maps ranks practices on relevance, distance and prominence.",
+   "list_title": "The most common causes",
+   "list": [
+    "The profile's primary category is too general, so you don't appear for your specialty.",
+    "Doctor and location listings aren't set up correctly, which splits or confuses your results.",
+    "Your name, address or phone number differs between your website, Google and directories like Healthgrades.",
+    "Nearby practices have more recent reviews than you do.",
+    "Your website doesn't clearly list conditions treated, procedures and the areas you serve.",
+    "Patients now ask AI tools like ChatGPT to recommend specialists, and those tools draw on the same signals."
+   ],
+   "cost": "patients searching \"colorectal surgeon near me\" or \"dermatologist in Phoenix\" choose from the first few results. If you are not there, referrals and self referred patients go to the practice that is.",
+   "help_label": "How The SocialDM helps:",
+   "help": "LocalLift™ for medical practices checks how your practice shows up across Google, Maps, directories and AI search. It compares you with nearby practices and closes the gaps that keep patients from finding you. We focus on getting found, not on advertising claims.",
+   "faq": [
+    [
+     "Can I pay Google to rank higher on Maps?",
+     "Ads can appear above the map results, but your regular map ranking can't be bought."
+    ],
+    [
+     "How long until we move up?",
+     "Timing depends on what is missing and how competitive your area is. We measure where you stand first, then report the change."
+    ],
+    [
+     "Do reviews really matter for doctors?",
+     "Yes. Recent reviews are one of the strongest local signals and one of the first things patients read."
+    ]
+   ],
+   "cta": "Talk to The SocialDM about your practice",
+   "desc": "A doctor's office usually drops off Google Maps because its Google Business Profile is incomplete or inconsistent, or Google can't tell its specialty."
+  },
+  {
+   "slug": "realtor-instagram-posting-service",
+   "date": "2026-11-11",
+   "q": "Who can post on Instagram for me as a Realtor?",
+   "title": "Who Can Post on Instagram for Me as a Realtor? | LocalLift",
+   "desc": "A done for you posting service can make your Instagram, Facebook, LinkedIn and Google posts every week, built on your brand and your ZIP codes.",
+   "short": "A done for you posting service can. LocalLift Signature, from The SocialDM, makes 3 local posts a week for real estate agents, sized for Instagram, Facebook, LinkedIn and Google Business, with your headshot, logo, brokerage and contact details on every one. It costs $199 a month, month to month.",
+   "list_title": "What to look for in a posting service",
+   "list": [
+    "Local and dated. Real market numbers with the date they came from, plus spots and events in the ZIP codes you serve.",
+    "Your brand, not a template. Your posts should look like you, not like every other agent in your ZIP code.",
+    "A caption for each platform. Instagram, Facebook and LinkedIn readers want different things.",
+    "Set it up once. You approve your headshot, logo and details at sign up, not every post."
+   ],
+   "extras": [
+    [
+     "What it does not replace",
+     "Your own listings, stories and videos. The feeds that work best mix both: a steady local presence from us, your personality from you."
+    ]
+   ],
+   "faq": [
+    [
+     "Do I have to approve every post?",
+     "No. You approve your brand details once when you sign up, and the posts come every week after that."
+    ],
+    [
+     "Is there a contract?",
+     "No. It is month to month, and you can cancel anytime."
+    ],
+    [
+     "Can I still post my own content?",
+     "Yes, and we recommend it."
+    ]
+   ],
+   "cta": "See a sample week",
+   "cta_href": "https://localliftsignature.com/#week"
+  },
+  {
+   "slug": "realtor-show-up-in-chatgpt",
+   "date": "2026-11-11",
+   "q": "How do I get my real estate business to show up in ChatGPT?",
+   "title": "How Do Realtors Show Up in ChatGPT? | LocalLift Signature",
+   "desc": "AI tools name agents they can confirm across public sources. See what gets an agent named, why most are skipped, and how to check where you stand.",
+   "short": "ChatGPT tends to name agents it can confirm from public sources: a complete Google Business Profile, recent reviews, the same name and contact details everywhere, and pages and posts that tie your name to specific neighborhoods. An agent missing any of these is easier for AI to skip. LocalLift Signature's free AI report checks whether Google's AI names you in your city today.",
+   "list_title": "Why agents get skipped",
+   "list": [
+    "No Google Business Profile, or one with few photos and old reviews.",
+    "A different name, phone or brokerage on your website, Zillow, Realtor.com and social pages.",
+    "Nothing public that connects you to the neighborhoods you actually sell.",
+    "Long quiet stretches with no fresh local posts."
+   ],
+   "extras": [
+    [
+     "A test you can run today",
+     "Ask ChatGPT for the best agent in your city in a private window while logged out. Your own account can be shaped by your past chats and saved memory, so the answer you see may differ from what clients see."
+    ]
+   ],
+   "faq": [
+    [
+     "Is this the same as SEO?",
+     "Partly. AI pulls from many of the same places Google does, and it rewards facts that match everywhere."
+    ],
+    [
+     "Do social posts help?",
+     "Steady local posts keep your name tied to your area in public places AI can read. They work best alongside a complete Google profile and reviews."
+    ]
+   ],
+   "cta": "Get my free AI report",
+   "cta_href": "https://localliftsignature.com/#report",
+   "cta_head": "See if AI names you in your city",
+   "cta_btn": "Get my free AI report"
+  },
+  {
+   "slug": "chatgpt-recommend-medical-practice",
+   "date": "2026-11-11",
+   "q": "How do I get ChatGPT to recommend my medical practice?",
+   "title": "How to Get ChatGPT to Recommend Your Practice | The SocialDM",
+   "desc": "AI tools recommend practices they can confirm across trusted sources. See what they check, the gaps that get practices skipped, and where to start.",
+   "short": "ChatGPT tends to recommend practices it can confirm across trusted sources: an accurate Google Business Profile, matching listings on medical directories, recent patient reviews, and a website that says plainly who you treat, what you treat and where. A gap in any of these makes it easier for AI to name another practice. The SocialDM's LocalLift program shows where a practice is named today and which gaps to close first.",
+   "list_title": "Common gaps that get practices skipped",
+   "list": [
+    "Different addresses, phone numbers or doctor names across Google, directories and the practice website.",
+    "A services page that lists specialties but not the conditions patients actually search for.",
+    "No answers to the questions patients ask first: insurance, whether a referral is needed, location and parking.",
+    "Reviews that stopped coming in months ago."
+   ],
+   "extras": [
+    [
+     "One rule on reviews",
+     "Never confirm that a reviewer is a patient or mention their care, even if they shared it first. Thank them in general terms and invite them to call the office directly."
+    ]
+   ],
+   "faq": [
+    [
+     "Does this replace doctor referrals?",
+     "No. Many patients look a doctor up online after a referral, so what AI and Google say about you still matters."
+    ],
+    [
+     "Is this different from regular SEO?",
+     "It overlaps. AI reads many of the same sources Google does, but it also needs clear, consistent facts it can repeat."
+    ]
+   ],
+   "cta": "Talk to The SocialDM about your practice"
+  },
+  {
+   "slug": "med-spa-marketing-phoenix",
+   "date": "2026-11-11",
+   "q": "How do med spas get more clients from Google and AI search?",
+   "title": "Med Spa Marketing in Phoenix: Google and AI | The SocialDM",
+   "desc": "Many people pick a med spa from the few that Google Maps and AI tools name first. See what those spas have in common and how to join them.",
+   "short": "Phoenix has a lot of med spas, so many people choose from the few that Google Maps and AI tools name first. Spas that get named tend to have a complete Google profile, every treatment listed by name, steady recent reviews, real photos, and clear answers about who performs treatments and how to book. The SocialDM's LocalLift program shows a med spa where it is named today and which gaps to close first.",
+   "list_title": "What helps a med spa get named",
+   "list": [
+    "Every treatment by name. Neurotoxin (such as Botox®), filler, laser hair removal and facials each listed on Google and each with its own page, not one \"services\" line.",
+    "Who does the work. Names and credentials of the people performing treatments.",
+    "Real photos. The actual rooms and team, not stock images.",
+    "Plain answers. Price ranges or starting prices, consults, booking and parking.",
+    "Fresh reviews. A steady flow, not a burst from two years ago."
+   ],
+   "extras": [
+    [
+     "Keep claims honest",
+     "Skip promises of guaranteed results. They cause trouble with advertising rules and with clients. Show real results only with client consent, and never promise a before and after."
+    ]
+   ],
+   "faq": [
+    [
+     "Do Google posts help a med spa rank?",
+     "Google says local results are mainly based on relevance, distance and how well known a business is. Posts keep your profile current and give people a reason to choose you, alongside reviews and complete info."
+    ],
+    [
+     "We already run ads. Do we still need this?",
+     "Ads stop when the budget does. Being named in Maps and AI answers can keep working between campaigns."
+    ]
+   ],
+   "cta": "Talk to The SocialDM about your med spa"
+  },
+  {
+   "slug": "apartment-google-review-management",
+   "date": "2026-11-11",
+   "q": "Who can manage Google reviews for my apartment property?",
+   "title": "Google Review Management for Apartments | The SocialDM",
+   "desc": "An apartment marketing agency can reply to every Google review in your property's voice. See what good replies do and what to ask a provider.",
+   "short": "An apartment marketing agency or reputation service can reply to your Google reviews for you. The SocialDM replies to Google reviews for apartment communities in Arizona, Nevada, Florida and Oregon, so reviews get answered in the property's own voice.",
+   "list_title": "What a good reply does",
+   "list": [
+    "Thanks the reviewer for something specific they said.",
+    "Acknowledges the concern without arguing, and moves the details to a private conversation.",
+    "Never shares personal details, and never mentions family status, disability, religion or any other protected trait.",
+    "Sounds like your team, not a copy and paste line."
+   ],
+   "extras": [
+    [
+     "Why replies matter",
+     "Renters read the replies, not just the stars. A calm, specific answer to a bad review can do more for the next renter than the review did harm. AI tools also read reviews when they describe a community."
+    ],
+    [
+     "What to ask any provider",
+     "Who writes the replies, and how do they learn your community's voice? What happens with a negative or fake review? Do you also manage the rest of the Google Business Profile?"
+    ]
+   ],
+   "related": [
+    "Google Business Profile management for apartments",
+    "https://www.thesocialdm.com/apartment-google-business-profile-management"
+   ],
+   "faq": [
+    [
+     "Can you remove bad reviews?",
+     "Only Google or the reviewer can remove a review, and Google removes only those that break its policies. We flag those through Google's process."
+    ],
+    [
+     "Whose name do replies post under?",
+     "Your property's Google Business Profile, the same as if your team wrote them."
+    ]
+   ],
+   "cta": "Talk to The SocialDM about your reviews"
+  }
+ ]
 }

@@ -403,10 +403,16 @@ def _ans_desc(t, lim=154):
     first = re.split(r'(?<=[.!?])\s+', t)[0]
     if len(first) <= lim: return first
     return t[:lim].rsplit(' ', 1)[0].rstrip(',;:') + '.'
+def _ans_cards(a):
+    e = html.escape; out = ''
+    if a.get('cost'): out += f'<div><b>What it costs you</b><span>{e(a["cost"][:1].upper() + a["cost"][1:])}</span></div>'
+    if a.get('help'): out += f'<div><b>{e(a["help_label"].rstrip(":"))}</b><span>{e(a["help"])}</span></div>'
+    for lab, txt in a.get('extras', []): out += f'<div><b>{e(lab)}</b><span>{e(txt)}</span></div>'
+    return out
 for a in ANSWERS:
     e = html.escape
     url = f'{SITE}/answers/{a["slug"]}'
-    title = a['q'] + ' | The SocialDM' if len(a['q']) <= 60 else a['q']
+    title = a.get('title') or (a['q'] + ' | The SocialDM' if len(a['q']) <= 60 else a['q'])
     desc = a.get('desc') or _ans_desc(a['short'])
     faq_ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
         {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': ans}} for q, ans in a['faq']]}
@@ -428,12 +434,12 @@ for a in ANSWERS:
             f'<div class="ans-meta">The SocialDM &middot; <time datetime="{iso}">{nice}</time></div></div></section>'
             f'<section class="block ans-sec"><div class="wrap"><div class="eyebrow">The problem</div><h2 class="h2">{e(a["list_title"])}</h2>'
             f'<div class="cards ans-causes">{causes}</div></div></section>'
-            f'<section class="block ans-sec"><div class="wrap"><div class="cards two">'
-            f'<div><b>What it costs you</b><span>{e(a["cost"][:1].upper() + a["cost"][1:])}</span></div>'
-            f'<div><b>{e(a["help_label"].rstrip(":"))}</b><span>{e(a["help"])}</span></div></div></div></section>'
+            f'<section class="block ans-sec"><div class="wrap"><div class="cards two">{_ans_cards(a)}</div>'
+            + (f'<p class="ans-meta" style="margin-top:22px">Related: <a href="{a["related"][1]}" style="color:var(--sky)">{e(a["related"][0])}</a></p>' if a.get('related') else '')
+            + f'</div></section>'
             f'<section class="block ans-sec"><div class="wrap"><div class="eyebrow">FAQ</div><h2 class="h2">Questions we hear</h2><div class="faq">{faq}</div></div></section>'
-            f'<section class="wrap"><div class="cta"><div class="eyebrow">Next step</div><h2 style="margin-top:16px">{"See what a week of posts looks like" if a.get("cta_href") else e(a["cta"])}</h2>'
-            f'<a class="btn btn-light" href="{href}">{"See a sample week" if a.get("cta_href") else "Get your visibility plan"}</a></div></section></main>')
+            f'<section class="wrap"><div class="cta"><div class="eyebrow">Next step</div><h2 style="margin-top:16px">{e(a["cta_head"]) if a.get("cta_head") else ("See what a week of posts looks like" if a.get("cta_href") else e(a["cta"]))}</h2>'
+            f'<a class="btn btn-light" href="{href}">{e(a["cta_btn"]) if a.get("cta_btn") else ("See a sample week" if a.get("cta_href") else "Get your visibility plan")}</a></div></section></main>')
     open(f'{OUT}/answers/{a["slug"]}.html', 'w').write(shell(title, desc, f'/answers/{a["slug"]}', 1, main, head, 'og-image.png'))
 _items = ''.join(f'<a href="{link("answers/" + a["slug"], 0)}"><b>{html.escape(a["q"])}</b><span>{html.escape(a["short"])}</span><span class="more">Read the answer</span></a>' for a in ANSWERS)
 _crumbs0 = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
