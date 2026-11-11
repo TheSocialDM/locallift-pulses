@@ -112,3 +112,4 @@ Without --prod it makes a preview (relative .html links, noindex, Draft badge), 
 
 - Nov 11 2026 byline change (Michael's decision): every blog post, old and new, is bylined "The SocialDM Insights Team" with an Organization author schema and a team author box. No personal name on any post. Michael Shad is no longer used as a blog author. Writers set "author": "The SocialDM Insights Team" in new-posts JSON.
 - Nov 11 2026: Michael's name removed sitewide (Organization founder schema, About text, llms.txt). Never put Michael Shad, Greyson or any personal name for him on thesocialdm.com.
+- Nov 11 2026: Pillar's President appears as "Melanie P." on the site, never her last name.
