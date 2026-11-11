@@ -163,7 +163,8 @@ for p in d['posts']:
     posts.append(dict(slug=slug, title=undash(html.unescape(p['title']).replace('\xa0',' ')), seoTitle=undash(sd.get('seoTitle') or ''), seoDesc=undash(sd.get('seoDescription') or ''),
         excerpt=undash(ex), body=body, iso=iso, nice=nice, year=yr, hero=hero, author=p.get('author') or 'The SocialDM', updated=fmt(p['updatedOn'])[0], new=False, faq=[], alt=undash(p['title'])))
 TODAY = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=7)).strftime('%Y-%m-%d')   # Phoenix date, no DST
-VERTICALS = {'multifamily': ('Multifamily', 'Multifamily Marketing Insights', 'How apartment communities get found on Google Search, Google Maps, social and AI answers.'),
+VERTICALS = {'ai-search': ('AI Search', 'AI Search Insights', 'How local businesses get named in ChatGPT, Gemini and Google AI answers.'),
+             'multifamily': ('Multifamily', 'Multifamily Marketing Insights', 'How apartment communities get found on Google Search, Google Maps, social and AI answers.'),
              'real-estate': ('Real Estate', 'Real Estate Marketing Insights', 'How agents and teams build visibility and trust on Google, social and AI answers.'),
              'medical': ('Medical', 'Medical Practice Marketing Insights', 'How practices become the trusted local choice on Google, Maps and AI answers.'),
              'med-spa': ('Med Spa', 'Med Spa Marketing Insights', 'How med spas and aesthetic practices get found, trusted and booked on Google, social and AI answers.'),
