@@ -317,6 +317,37 @@ def carry(path, title_fallback=None):
 for pth in ['/apartment-seo-for-multifamily-communities','/montage-tigard','/pillar-communities','/apartment-seo-blog-hub/cuvee-apartments-westgate-glendale']:
     carry(pth)
 
+# ---------- answer pages (plain questions, direct answer first; for ChatGPT and Google AI) ----------
+ANS = []
+_af = os.path.join(os.path.dirname(SRC.rstrip('/')), 'answers', 'answers.json')
+if os.path.exists(_af):
+    ANS = json.load(open(_af))
+    os.makedirs(OUT + '/answers', exist_ok=True)
+    e = html.escape
+    for a in ANS:
+        faq = ''.join(f'<details><summary>{e(q)}</summary><p>{e(x)}</p></details>' for q, x in a['faq'])
+        why = ''.join(f'<li>{e(w)}</li>' for w in a['why'])
+        body = (f'<p class="lede"><strong>Short answer:</strong> {e(a["short"])}</p>'
+                f'<h2>{e(a["why_h"])}</h2><ul>{why}</ul>'
+                f'<h2>What it costs you</h2><p>{e(a["cost"])}</p>'
+                f'<h2>{e(a["helps_h"])}</h2><p>{e(a["helps"])}</p>'
+                f'<h2>Questions we hear</h2><div class="faq">{faq}</div>'
+                f'<p style="margin-top:28px"><a href="{link("contact",1)}"><strong>{e(a["cta"])}</strong></a></p>')
+        main = (f'<main class="paper"><article class="art"><div class="art-head wrap"><div class="eyebrow">Answers</div><h1>{e(a["q"])}</h1></div>'
+                f'<div class="art-body wrap">{body}</div></article>{CTA(1) if a.get("vertical")!="medical" else CTA(1).replace("your community","your practice")}</main>')
+        canon = f'/answers/{a["slug"]}'
+        schema = {'@context':'https://schema.org','@graph':[
+            {'@type':'QAPage','mainEntity':{'@type':'Question','name':a['q'],'acceptedAnswer':{'@type':'Answer','text':a['short'],'url':SITE+canon},
+              'answerCount':1,'author':{'@type':'Organization','name':'The SocialDM','url':SITE+'/'}}},
+            {'@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':x}} for q, x in a['faq']]},
+            {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':SITE+'/'},{'@type':'ListItem','position':2,'name':'Answers','item':SITE+'/answers'},{'@type':'ListItem','position':3,'name':a['q'],'item':SITE+canon}]}]}
+        head = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False) + '</script>'
+        open(f'{OUT}{canon}.html','w').write(shell(a['seo_title'], a['desc'], canon, 1, main, head))
+    lis = ''.join(f'<li><a href="{link("answers/"+a["slug"],0)}">{html.escape(a["q"])}</a></li>' for a in ANS)
+    hub = (f'<main class="paper"><article class="art"><div class="art-head wrap"><div class="eyebrow">Answers</div><h1>Straight answers to the questions owners and operators ask</h1></div>'
+           f'<div class="art-body wrap"><ul>{lis}</ul></div></article>{CTA(0)}</main>')
+    open(f'{OUT}/answers.html','w').write(shell('Answers | The SocialDM', 'Direct answers from The SocialDM to the questions apartment owners, operators and medical practices ask about Google, Maps and AI search.', '/answers', 0, hub))
+
 # ---------- static draft pages ----------
 for f in glob.glob(SRC + '/*.html'):
     n = os.path.basename(f)
@@ -409,6 +440,7 @@ if PROD:
 ''')
     urls = ['/'] + ['/' + os.path.basename(f)[:-5] for f in glob.glob(OUT + '/*.html') if os.path.basename(f) not in ('index.html','404.html','thank-you.html')]
     urls += ['/blog/topics/' + os.path.basename(x)[:-5] for x in glob.glob(OUT + '/blog/topics/*.html')]
+    urls += [f'/answers/{a["slug"]}' for a in ANS]
     urls += ['/apartment-seo-blog-hub/cuvee-apartments-westgate-glendale'] + [f'/blog/{p["slug"]}' for p in posts]
     open(OUT + '/sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'<url><loc>{SITE}{u}</loc></url>\n' for u in sorted(set(urls))) + '</urlset>\n')
     open(OUT + '/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
