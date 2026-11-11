@@ -4,7 +4,7 @@
   "seoTitle": "Claim Your Business in ChatGPT: Business Hub Guide",
   "seoDescription": "OpenAI launched Businesses in ChatGPT on Nov 10, 2026. What Business Hub does, who can claim, what the insights show and what local owners should do now.",
   "excerpt": "ChatGPT now lets businesses claim a profile, keep details current and see mentions and clicks. Here is what launched and what to do this week.",
-  "date": "2026-11-12",
+  "date": "2026-11-11",
   "vertical": "ai-search",
   "imageAlt": "Business owner in a white shirt working on a laptop with a coffee cup in a modern cafe",
   "imageIdea": "Owner on a laptop in a bright modern space.",
@@ -46,5 +46,5 @@
       "url": "https://openai.com/index/introducing-businesses-chatgpt/"
     }
   ],
-  "approved": false
+  "approved": true
 }
