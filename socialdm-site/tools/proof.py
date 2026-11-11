@@ -42,7 +42,7 @@ def deliverables(name='deliverables'):
 def communities():
     d = json.load(open(os.path.join(HERE, 'communities.json')))
     items = ''.join(f'<li>{html.escape(n)}</li>' for n in d['items'])
-    return ('<section class="proof-row" aria-label="Communities and operators we have worked with"><div class="wrap"><div class="eyebrow">Trusted by communities across five states</div></div>'
+    return ('<section class="proof-row" aria-label="Communities and operators we have worked with"><div class="wrap"><div class="eyebrow">Trusted by communities nationwide</div></div>'
             f'<div class="marquee"><ul class="mq-track">{items}</ul><ul class="mq-track" aria-hidden="true">{items}</ul></div></section>')
 
 def testimonials(group):

@@ -122,7 +122,7 @@ def write_llms(out):
         if h1: posts.append((os.path.basename(f)[:-5], h1.get_text(' ', strip=True), d.get('content', '') if d else ''))
     posts.sort(key=lambda p: p[0])
     lines = ['# The SocialDM', '',
-             '> The SocialDM is a multifamily marketing agency founded in 2019 and headquartered in Phoenix. It markets more than 7,900 apartment homes across five states and helps apartment communities nationwide get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
+             '> The SocialDM is a multifamily marketing agency founded in 2019 and headquartered in Phoenix. It markets more than 7,900 apartment homes across the country and helps apartment communities get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
              'Contact: thesocialdm.com/contact, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
     for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'phoenix-multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]
