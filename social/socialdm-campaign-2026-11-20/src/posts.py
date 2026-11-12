@@ -1,0 +1,66 @@
+import json,re
+B='https://www.thesocialdm.com/blog/'
+G=[
+('20','g-1120-every-reply','Bright editorial graphic. At right, a woman in a white sweater leans against a stone wall holding a coffee cup and reading her phone. At left, the label Reviews and the headline "Every reply is read by the next renter." with three numbered lines: Five stars, no words? Still reply. A complaint? Answer it, calmly. Never confirm who lives there. The SocialDM logo.',
+"""The woman on this graphic is checking her phone with a coffee in hand, which is how many renters read reviews: quickly, between other things. What she is weighing is rarely the original review alone. It is the reply underneath it, because that reply shows how the community responds when someone speaks up.
+
+That is why we treat every review reply as something written for the next renter. A short thank you on a five star rating with no text still shows that someone is paying attention. A complaint deserves a calm, specific answer and an invitation to keep talking privately. And a public reply should never confirm that someone lives at the community or share private details, however tempting it is to set the record straight.
+
+Our guide to responding to apartment reviews has example replies for positive, negative and fake reviews, plus what a reply should never say.
+
+"""+B+'how-to-respond-to-apartment-reviews'),
+('21','g-1121-seen-chosen','Bold typographic graphic with a red band at left listing AI search, Local search, Social. Oversized black letters read SEEN, a red line reads IS NOT THE SAME AS, then CHOSEN split across two lines with CHO in outline. Small text: Showing up gets you looked at. Clear, consistent details get you picked. The SocialDM logo.',
+"""Seen is not the same as chosen. A community can appear in a Google search, a map result or an AI answer and still lose the renter a few seconds later. Showing up earns a look. What happens next depends on whether the details a renter finds are clear, current and the same everywhere they look: hours, pet policy, parking, fees, photos and reviews.
+
+AI assistants work in a similar way. When someone asks for a short list of apartments, the assistant tends to lean on information it can find across several places. When a website, a Google profile and a listing site disagree, that uncertainty helps no one. When they agree, a community becomes easier to describe accurately.
+
+Our article on how AI decides which apartments to recommend goes deeper into what these tools look at and the renter questions behind those recommendations.
+
+"""+B+'how-ai-decides-which-apartments-to-recommend-and-how-to-show-up'),
+('22','g-1122-holiday-useful','Dark photo of a wooden cafe table with two lattes, a croissant and a small jar on a wire tray. Label Holiday social, headline "Make the holiday post useful." and the line "A resident event. A market nearby. The office hours that change this week." The SocialDM logo.',
+"""Coffee, a croissant and a slow morning at the table. The holiday season has its own pace, and a community's social feed can match it without falling back on a generic happy holidays graphic. The posts renters and residents actually stop for this time of year tend to be the useful ones.
+
+A resident event with the date and place clearly stated. A nearby market or coffee shop worth a weekend visit. Office hours that change around the holidays, posted before anyone arrives at a locked door. Each one tells a prospective renter something real about life at the community and gives current residents a reason to keep following along. Holiday content can still be warm and festive. It simply works harder when it also answers a question.
+
+We build multifamily social around how renters decide, and our multifamily marketing page explains how that fits alongside Google profiles and search.
+
+https://www.thesocialdm.com/multifamily-marketing-agency"""),
+('23','g-1123-budget-lines','Photo at left of a hand writing in an open notebook with a pen. At right, the label 2027 planning, the headline "Before the 2027 budget, ask what each line produced." and three numbered lines: Cost per lease, by source. Tours booked. Searches without your name. The SocialDM logo.',
+"""A pen, an open notebook and the 2027 plan taking shape. Budget season tends to start with last year's numbers and a few new ideas. We think it is worth pausing on one question first: what did each line actually produce?
+
+In our view, cost per lease by source, read alongside tour to lease conversion, says more than any single number about where a budget is working. Cost per lead on its own can look good while the leads never tour. Tours booked and visibility on searches that do not include the community's name are useful early signals too, because they tend to move before leases do. A line that cannot be connected to any of those is worth a closer look before it is renewed.
+
+Our article on multifamily marketing metrics explains which numbers tend to predict leases, which ones mostly look good in a report, and how often to review them.
+
+"""+B+'multifamily-marketing-metrics'),
+('24','g-1124-profile-first','Apartment towers and a tree against a deep blue sky, darkened at left. Label AI search, the line "Before it reads your website," and the headline "AI often reads your Google profile." with the note "Hours, categories, photos and reviews travel further than they used to." LocalLift logo.',
+"""Apartment towers against a deep blue sky, and a question that is changing how buildings like these get found. When a renter asks an AI assistant for apartment suggestions, the answer often leans on Google Business Profile information (ratings, hours, categories, photos and a line about the neighborhood), sometimes before anything on the community website.
+
+That makes the Google profile more than a map listing. A wrong primary category, outdated hours, old photos or unanswered reviews can travel into places a property team never sees directly. The good news is that the profile is one of the easiest sources to keep accurate, and regular checks on categories, attributes, photos and review replies help make sure the details that get repeated are the right ones. LocalLift focuses on how communities are discovered across Google Search, Google Maps and AI powered search.
+
+Our article on why AI so often reads the Google profile first explains what that means for apartment communities.
+
+"""+B+'google-business-profile-ai-search-multifamily'),
+('25','g-1125-move-in','Photo of two people unloading moving boxes from a red car outside a home. Below, the label Residents, the headline "Move in day is marketing." and the line "The first week shapes how a resident talks about home." The SocialDM logo.',
+"""Boxes coming out of the car and into a new home. For a property team, move in day can feel like the end of the leasing process. For the resident, it is the beginning of the story they will tell about the community, to friends, on social media and sometimes in a review.
+
+That first week shapes a lot: keys ready on time, a clean home, clear answers about parking, packages and trash, and a quick follow up when something needs fixing. None of it is advertising in the usual sense, yet it often decides how a new resident describes the community. Reviews have become part of how renters discover and judge apartments, so the experience behind them matters as much as the reply.
+
+Our article on why reviews matter for apartment leasing looks at what renters look for in reviews and what thoughtful property teams do about it.
+
+"""+B+'why-reviews-matter-more-than-ever-for-apartment-leasing-in-2026'),
+('26','g-1126-thanksgiving','Warm editorial graphic. At left, hands arranging small pumpkins and gourds in a harvest basket. At right, the label Thanksgiving, Nov. 26, the headline "Grateful for the teams who make a building feel like home." and the line "Leasing teams, maintenance crews and residents. Happy Thanksgiving from all of us." The SocialDM logo.',
+"""Happy Thanksgiving from The SocialDM. The harvest table on this graphic is our small thank you to the people who make apartment communities work every day: leasing teams answering the same questions with patience, maintenance crews who show up when something breaks, and residents who make a building feel like a neighborhood.
+
+We work with communities across the country, and much of what we share here comes from watching those teams do their jobs well. Their attention to detail is what makes good marketing possible, because renters notice the difference between a promise and an experience.
+
+Today we are taking time to be grateful for that, and for everyone who reads and shares these posts. We hope your day is restful and full of good food. We will be back with more on local search, social and AI visibility after the holiday.
+
+https://www.thesocialdm.com"""),
+]
+out=[]
+for d,img,alt,text in G:
+    out.append(dict(date=f'2026-11-{d}T07:00:00',img=f'https://thesocialdm.github.io/locallift-pulses/social/socialdm-campaign-2026-11-20/png/{img}.png',alt=alt,text=text))
+    body=text.rsplit('\n\n',1)[0]
+    print(d,len(body.split()),len(text),'DASH' if re.search(r'[–—]| - |\w-\w',text.split('https')[0]) else 'ok','PHONE' if re.search(r'\d{3}\D\d{3}\D\d{4}',text) else '')
+json.dump(out,open('posts.json','w'),indent=1,ensure_ascii=False)
