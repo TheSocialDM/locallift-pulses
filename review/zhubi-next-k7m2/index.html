@@ -16,440 +16,448 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://thesocialdm.github.io/locallift-pulses/review/zhubi-next-k7m2/images/share.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#0e2430;--ink-2:#3d5562;--ink-3:#6b8290;--line:#dde8f0;--mist:#f5f9fc;--teal:#0b5c61;--teal-2:#0e6f75;--teal-soft:#e2f1f1;--gold:#e9c98f;--gold-soft:#fbf3e3;--radius-lg:24px;--radius-md:16px;--shadow-1:0 1px 2px rgba(14,36,48,.04),0 8px 24px rgba(14,36,48,.06);--shadow-2:0 2px 6px rgba(14,36,48,.05),0 24px 60px rgba(14,48,72,.12)}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>:root{--ink:#1d1d1f;--ink2:#6e6e73;--line:#e3e6ea;--gray:#f5f5f7;--teal:#0b5c61;--teal2:#0e7a80;--tealS:#e2f1f1;--gold:#e9c98f;--goldS:#fbf3e3;--ok:#2fbf7a}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:#fff;color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3{font-family:"Manrope",sans-serif;line-height:1.15;margin:0;letter-spacing:-.01em}
+h1,h2,h3{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;letter-spacing:-.025em;line-height:1.05}
 p{margin:0}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-.eyebrow{display:inline-block;font-family:"Manrope",sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
-.lede{font-size:18px;color:var(--ink-2);margin-top:12px;max-width:660px}
-.sec{padding:56px 0}
-.sec-head{margin-bottom:26px}
-.sec-head h2{font-size:clamp(26px,4vw,36px);margin-top:8px}
-.note{font-size:13.5px;color:var(--ink-3);margin-top:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.conf{background:#1d1d1f;color:#d2d2d7;font-size:12.5px;text-align:center;padding:7px 14px}
+.nav{position:sticky;top:0;z-index:20;padding:10px 12px}
+.nav-in{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border:1px solid var(--line);border-radius:18px;padding:8px 10px 8px 14px}
+.nb{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:17px}
+.nb img{height:36px;width:auto;padding-right:10px;border-right:1px solid var(--line)}
+.nav-r{display:flex;gap:8px}
+.pill-o,.pill-b{display:inline-block;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}
+.pill-o{border:1px solid #c7c7cc;color:var(--ink)}
+.pill-b{background:var(--teal);color:#fff}
+.pill-b.lg{font-size:17px;padding:14px 26px;margin-top:26px}
+@media (max-width:440px){.pill-o{display:none}}
 
-/* top */
-.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-family:"Manrope",sans-serif;font-weight:800;font-size:18px}
-.brand img{height:50px;width:auto;padding-right:12px;border-right:1px solid var(--line)}
-.for{font-size:13px;color:var(--ink-3);text-align:right}
-.conf{background:#0e2430;color:#cfe3e8;font-size:13px;text-align:center;padding:8px 16px}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
 
 /* hero */
-.hero{background:linear-gradient(160deg,#0b5c61,#0e3f52);color:#fff;padding:56px 0 64px}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center}
-.hero .eyebrow{color:#bfe3e1}
-.hero h1{font-size:clamp(34px,6vw,54px);margin-top:10px}
-.hero .lede{color:#dcefee}
-.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-lg);padding:20px;display:flex;gap:16px;align-items:center}
-.hero-card img{width:72px;height:72px;border-radius:18px;object-fit:cover}
-.hero-card b{display:block;font-family:"Manrope",sans-serif;font-size:18px}
-.hero-card span{color:#cfe3e8;font-size:15px}
-.promise{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
-.promise span{background:rgba(255,255,255,.12);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:600}
+.hero{text-align:center;padding:46px 20px 40px;background:radial-gradient(1100px 520px at 50% 100%,#e6f3f3 0%,#fff 62%)}
+.h-eye{font-size:19px;font-weight:600;color:var(--teal)}
+.hero h1{font-size:clamp(56px,11vw,112px);margin-top:6px}
+.h-sub{max-width:640px;margin:16px auto 0;font-size:19px;color:var(--ink2)}
+.h-stage{position:relative;max-width:620px;margin:34px auto 0;height:470px}
+.phone{background:#0e1b22;color:#fff;border-radius:42px;border:8px solid #2b3a42;box-shadow:0 40px 80px rgba(14,36,48,.28),inset 0 0 0 1px rgba(255,255,255,.06);padding:20px 14px 16px;text-align:left}
+.phone.big{position:absolute;left:50%;top:0;transform:translateX(-50%);width:300px;height:470px}
+.ph-top{display:flex;align-items:center;gap:8px;padding:2px 6px 12px;border-bottom:1px solid rgba(255,255,255,.12)}
+.ph-top b{flex:1;font-size:16px}
+.live{width:9px;height:9px;border-radius:50%;background:var(--ok);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,191,122,.6)}70%{box-shadow:0 0 0 8px rgba(47,191,122,0)}100%{box-shadow:0 0 0 0 rgba(47,191,122,0)}}
+.tagS{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:#4a3307;border-radius:999px;padding:3px 9px}
+.feed{list-style:none;margin:0;padding:6px 0 0;height:340px;overflow:hidden}
+.feed li{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:10px;align-items:center;padding:9px 4px;border-bottom:1px solid rgba(255,255,255,.07);animation:inF .5s ease both}
+.feed li i{width:36px;height:36px;border-radius:11px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:12px;color:var(--gold)}
+.feed li b{display:block;font-size:14.5px}
+.feed li small{display:block;font-size:12px;color:#9fbac6}
+.feed li em{font-style:normal;font-size:11px;font-weight:700;color:var(--ok);background:rgba(47,191,122,.14);border-radius:999px;padding:3px 8px;white-space:nowrap}
+@keyframes inF{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.ph-sum{display:flex;align-items:baseline;justify-content:center;gap:8px;padding-top:10px;font-size:13px;color:#cfe3e8}
+.ph-sum b{font-size:30px}
+.chip{position:absolute;z-index:2;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:16px;padding:10px 14px;box-shadow:0 14px 34px rgba(14,36,48,.14);text-align:left;animation:float 6s ease-in-out infinite}
+.chip b{display:block;font-size:17px;color:var(--teal)}
+.chip span{font-size:12.5px;color:var(--ink2)}
+.c1{left:0;top:40px}.c2{right:0;top:150px;animation-delay:-2s}.c3{left:-30px;top:330px;animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-10px)}}
+@media (max-width:640px){.h-stage{height:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.chip{position:static;animation:none;padding:7px 11px;box-shadow:none}.chip b{font-size:14px;display:inline}.chip span{font-size:12px;margin-left:4px}.phone.big{position:relative;left:auto;transform:none;width:290px;height:440px;margin-top:14px;order:9}.feed{height:310px}.job{font-size:13px;padding:9px 10px}.col{padding:12px}}
+.clock-pill{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 12px;margin-top:30px;background:#1d1d1f;color:#fff;border-radius:999px;padding:10px 20px;text-decoration:none;font-size:14px}
+.clock-pill b{color:var(--gold)}.clock-pill i{font-style:normal}
+.clock-pill span{color:#d2d2d7}
 
-/* baseline */
-.base-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
-.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-1)}
-.stat b{display:block;font-family:"Manrope",sans-serif;font-weight:800;font-size:34px;line-height:1;color:var(--teal)}
-.stat span{display:block;margin-top:8px;font-size:15px;color:var(--ink-2)}
-.stat.alt b{color:#8a5a12}
+/* sections */
+.sec{padding:84px 0}
+.sec.gray{background:var(--gray)}
+.big{font-size:clamp(36px,6vw,58px)}
+.lead{font-size:19px;color:var(--ink2);max-width:640px;margin-top:14px}
+.fine{font-size:13px;color:var(--ink2);margin-top:14px}
 
-/* map */
-.map-box{background:var(--mist);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:center}
-.seg{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
-.seg button{font:inherit;font-size:14.5px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink-2);border-radius:999px;padding:9px 14px;cursor:pointer}
-@media (max-width:420px){.seg{gap:6px}.seg button{padding:8px 10px;font-size:13.5px}}
-.seg button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
-.grid49{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;max-width:330px;margin:0 auto;width:100%}
-.grid49 i{aspect-ratio:1;border-radius:50%;background:#d9e4ec;transition:background .35s,transform .35s}
-.grid49 i.on{background:var(--teal);transform:scale(1.06)}
-.grid49 i.home{outline:3px solid var(--gold);outline-offset:2px}
-.map-copy h3{font-size:24px}
-.map-copy .big{font-family:"Manrope",sans-serif;font-weight:800;font-size:44px;color:var(--teal);line-height:1;margin-top:12px}
-.map-copy p{color:var(--ink-2);margin-top:10px}
-.tag{display:inline-block;margin-top:12px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:5px 10px;background:var(--gold-soft);color:#6b4a10}
+/* carousel */
+.car{margin-top:34px}
+.track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 88%;scroll-snap-align:center;background:var(--gray);border-radius:28px;padding:32px 28px;min-height:480px;display:flex;flex-direction:column}
+@media (min-width:900px){.slide{flex-basis:76%}}
+.slide h3{font-size:clamp(22px,2.8vw,30px);text-align:center}
+.slide h3 span{color:var(--ink2);font-weight:600}
+.vis{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:24px}
+.ctrl{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:20px}
+.dots{display:flex;gap:8px;background:#e8e8ed;border-radius:999px;padding:10px 14px}
+.dots button{width:8px;height:8px;border-radius:999px;border:0;padding:0;background:#86868b;cursor:pointer;transition:width .3s}
+.dots button.on{width:28px;background:var(--ink)}
+.pp{width:40px;height:40px;border-radius:50%;border:0;background:#e8e8ed;font-size:11px;cursor:pointer;color:var(--ink)}
+.g49{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;width:min(300px,78vw)}
+.g49 i{aspect-ratio:1;border-radius:50%;background:#d7dde3;transition:background .5s,transform .5s}
+.g49 i.on{background:var(--teal);transform:scale(1.08)}
+.g49 i.home{outline:3px solid var(--gold);outline-offset:2px}
+.g49-l{margin-top:18px;font-size:17px;color:var(--ink2)}.g49-l b{font-size:28px;color:var(--teal)}
+.chat{gap:12px;max-width:440px;width:100%;margin-left:auto;margin-right:auto}
+.chat .q{align-self:flex-end;background:var(--teal);color:#fff;border-radius:20px 20px 4px 20px;padding:12px 16px;font-size:16px;max-width:85%}
+.chat .a{align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:20px 20px 20px 4px;padding:12px 16px;font-size:16px;max-width:90%;min-height:48px}
+.chat small{color:var(--ink2);font-size:12.5px}
+.typing{display:inline-flex;gap:4px;padding:6px 0}.typing i{width:7px;height:7px;border-radius:50%;background:#aeb4ba;animation:ty 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes ty{50%{transform:translateY(-4px);opacity:.5}}
+.bars{width:100%;max-width:520px;align-items:stretch}
+.bars div{display:grid;grid-template-columns:130px minmax(0,1fr) 32px;gap:12px;align-items:center;margin-bottom:14px;font-size:15px}
+.bars i{height:14px;background:#e1e6ea;border-radius:8px;overflow:hidden}
+.bars em{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--teal2));border-radius:8px;transition:width 1.3s cubic-bezier(.2,.7,.2,1)}
+.bars.run em{width:var(--w)}
+.bars b{text-align:right}.bars small{color:var(--ink2);font-size:12.5px;text-align:center}
+@media (max-width:420px){.bars div{grid-template-columns:100px minmax(0,1fr) 26px;font-size:13.5px}}
+.letter .env{position:relative;width:min(320px,80vw);height:220px;background:linear-gradient(160deg,#0b5c61,#0e3f52);border-radius:18px;overflow:hidden}
+.paper{position:absolute;left:24px;right:24px;top:24px;background:#fff;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;transition:transform 1.4s cubic-bezier(.4,0,.2,1)}
+.paper b{font-size:14px}.paper span{height:7px;border-radius:4px;background:#e3e6ea}.paper span.s{width:60%}
+.paper .ok{font-style:normal;font-size:12px;font-weight:700;color:var(--ok);margin-top:6px;opacity:0;transition:opacity .4s}
+.paper{transform:translateY(230px)}.letter.run .paper{transform:none}.letter.run .ok{opacity:1;transition-delay:1.3s}
+.rep .rbars{display:flex;align-items:flex-end;gap:14px;height:220px}
+.rbars i{width:34px;height:0;background:linear-gradient(180deg,var(--teal2),var(--teal));border-radius:9px 9px 4px 4px;transition:height 1.2s cubic-bezier(.2,.7,.2,1)}
+.rep.run .rbars i{height:var(--h)}
+.rep small{margin-top:12px;color:var(--ink2);font-size:12.5px}
 
-/* deliver */
-.cards{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-1)}
-.card h3{font-size:18px}
-.card p{font-size:15.5px;color:var(--ink-2);margin-top:6px}
-.card .when{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;display:block}
+/* closer look */
+.cl{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;margin-top:34px;background:#fff;border-radius:28px;padding:24px}
+.cl-card{background:var(--gray);border-radius:20px;padding:18px}
+.cl-card b{font-size:19px}.cl-card span{color:var(--ink2)}
+.cl-lab{display:block;font-size:12.5px;color:var(--ink2);margin-top:12px}
+.cl-card input{width:100%;margin-top:6px;accent-color:var(--teal);height:30px}
+.steps{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.steps button{display:flex;align-items:center;gap:10px;text-align:left;font:inherit;font-size:15px;font-weight:600;border:0;background:var(--gray);color:var(--ink);border-radius:999px;padding:9px 14px;cursor:pointer;transition:background .3s,color .3s}
+.steps button i{width:22px;height:22px;border-radius:50%;background:#fff;color:var(--teal);display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800;flex:none}
+.steps button.on{background:var(--teal);color:#fff}
+.cl-r{display:flex;justify-content:center}
+.phone.mid{width:290px;height:540px;padding:18px 14px;overflow:hidden}
+.scr{height:100%;animation:inF .5s ease both}
+.scr h5{margin:0 0 12px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#9fbac6}
+.card-d{background:rgba(255,255,255,.08);border-radius:16px;padding:14px;margin-bottom:10px}
+.card-d b{display:block;font-size:15px}.card-d small{display:block;color:#9fbac6;font-size:12.5px;margin-top:2px}
+.card-d .okb{display:inline-block;margin-top:8px;font-size:11px;font-weight:700;color:var(--ok);background:rgba(47,191,122,.14);border-radius:999px;padding:3px 8px}
+.mini49{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:6px 0 12px}.mini49 i{aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.14)}.mini49 i.on{background:var(--gold)}
+.bub{background:rgba(255,255,255,.1);border-radius:16px;padding:12px;font-size:14px;margin-bottom:10px}.bub.me{background:var(--teal2);margin-left:30px}
+@media (min-width:860px){.cl{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);padding:34px}}
 
-/* timeline */
-.tl-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;background:var(--mist);border:1px solid var(--line);border-radius:999px;padding:5px;margin-bottom:18px}
-.tl-tabs button{font:inherit;font-weight:700;font-size:14px;border:0;background:transparent;color:var(--ink-2);border-radius:999px;padding:10px 6px;cursor:pointer}
-.tl-tabs button[aria-selected="true"]{background:var(--teal);color:#fff}
-.tl-panel{border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-1);display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
-.tl-panel[hidden]{display:none!important}
-.tl-panel h3{font-size:22px}
-.tl-col h4{font-family:"Manrope",sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
-.tl-col ul{margin:0;padding-left:20px}
-.tl-col li{margin-bottom:8px;color:var(--ink-2);font-size:16px}
-.tl-col.goal{background:var(--gold-soft);border-radius:var(--radius-md);padding:18px}
-.tl-col.goal h4{color:#6b4a10}
+/* desk */
+.desk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:30px}
+.col{background:var(--gray);border-radius:24px;padding:18px;min-height:300px}
+.col.us{background:linear-gradient(160deg,#0b5c61,#0e3f52);color:#fff}
+.col h4{margin:0 0 12px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
+.job{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-bottom:8px;font-size:14.5px;font-weight:600;animation:inF .45s ease both}
+.col.us .job{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.14);color:#fff}
+.job.keep{background:var(--goldS);border-color:#efdcb6;color:#6b4a10}
+.col.us .job::before{content:"\2713  ";color:var(--gold)}
+.desk-ctl{max-width:560px;margin:22px auto 0;text-align:center}
+.desk-ctl input{width:100%;accent-color:var(--teal);height:32px}
+.desk-ctl p{font-size:17px;color:var(--ink2);margin-top:6px}.desk-ctl b{font-size:28px;color:var(--teal)}
 
-/* scoreboard */
-.score{width:100%;border-collapse:collapse;font-size:15.5px}
-.score th,.score td{text-align:left;padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-.score th{font-family:"Manrope",sans-serif;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);background:var(--mist)}
-.score td:first-child{font-weight:600;color:var(--ink)}
-.score td{color:var(--ink-2)}
-.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-md)}
-.tbl table{min-width:560px}
-
-/* safety */
-.safe{background:linear-gradient(160deg,#0b5c61,#0e3f52);color:#fff;border-radius:var(--radius-lg);padding:28px;display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
-.safe h2{font-size:clamp(24px,3.6vw,32px)}
-.safe p{color:#dcefee}
-.safe ul{margin:0;padding-left:20px;color:#e9f5f4}
-.safe li{margin-bottom:8px}
-
-
-/* how it works */
-.flow{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 16px 26px;box-shadow:var(--shadow-1)}
-.src{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.src > div{position:relative;background:var(--mist);border:1px solid var(--line);border-radius:var(--radius-md);padding:14px 12px 16px;text-align:center}
-.src > div:last-child{grid-column:1 / -1}
-.src b{display:block;font-family:"Manrope",sans-serif;font-size:15.5px}
-.src span{display:block;font-size:13px;color:var(--ink-3);margin-top:3px;line-height:1.35}
-.src i{display:block;width:34px;height:34px;margin:0 auto 8px;border-radius:12px;background:var(--teal-soft);color:var(--teal);font-style:normal;font-weight:800;font-family:"Manrope",sans-serif;line-height:34px;font-size:15px}
-.bus{position:relative;height:4px;width:80%;margin:18px auto 0;background:var(--teal-soft);border-radius:4px}
-.bus::before,.bus::after{content:"";position:absolute;top:-3px;width:10px;height:10px;border-radius:50%;background:var(--teal);animation:inl 2.2s ease-in infinite}
-.bus::before{left:0}.bus::after{right:0;background:var(--gold);animation-name:inr}
-@keyframes inl{0%{left:0;opacity:1}90%{opacity:1}100%{left:calc(50% - 5px);opacity:0}}
-@keyframes inr{0%{right:0;opacity:1}90%{opacity:1}100%{right:calc(50% - 5px);opacity:0}}
-.pipe{position:relative;height:56px;width:4px;margin:0 auto;background:linear-gradient(var(--line),var(--teal-soft));border-radius:4px}
-.pipe::before,.pipe::after{content:"";position:absolute;left:-3px;width:10px;height:10px;border-radius:50%;background:var(--teal);top:-12px;animation:drop 1.8s linear infinite}
-.pipe::after{background:var(--gold);animation-delay:.9s}
-@keyframes drop{0%{top:-4px;opacity:0}15%{opacity:1}85%{opacity:1}100%{top:46px;opacity:0}}
-.hub{position:relative;max-width:420px;margin:0 auto;background:linear-gradient(160deg,#0b5c61,#0e3f52);color:#fff;border-radius:var(--radius-lg);padding:18px;display:flex;gap:14px;align-items:center}
-.hub img{width:58px;height:58px;border-radius:16px;object-fit:cover;position:relative;z-index:1}
-.hub b{display:block;font-family:"Manrope",sans-serif;font-size:17px}
-.hub span{color:#cfe3e8;font-size:14px}
-.hub::before{content:"";position:absolute;inset:-6px;border-radius:30px;border:2px solid rgba(14,111,117,.45);animation:ring 2.4s ease-out infinite}
-@keyframes ring{0%{opacity:.9;transform:scale(.98)}100%{opacity:0;transform:scale(1.06)}}
-.out{max-width:420px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-.out span{background:var(--gold-soft);color:#6b4a10;border:1px solid #efdcb6;border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px}
-@media (min-width:760px){.src{grid-template-columns:repeat(5,minmax(0,1fr))}.src > div:last-child{grid-column:auto}.flow{padding:30px}}
-@media (prefers-reduced-motion:reduce){.pipe::before,.pipe::after,.hub::before,.bus::before,.bus::after{animation:none}}
-
-footer{border-top:1px solid var(--line);padding:30px 0 44px;font-size:13.5px;color:var(--ink-3)}
-footer .brand img{height:62px}
-footer p{margin-top:12px;max-width:720px}
-
-@media (min-width:760px){
-  .hero .wrap{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
-  .base-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .map-box{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);padding:30px}
-  .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .tl-panel{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .safe{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:36px}
-  .brand img{height:60px}
-}
-@media (max-width:520px){.for{display:none}.tl-tabs button{font-size:13px}}
-@media (max-width:640px){.tbl{border:0;overflow:visible}.tbl table{min-width:0}.score thead{display:none}.score,.score tbody,.score tr,.score td{display:block;width:100%}.score tr{border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;padding:12px 14px;margin-bottom:10px}.score td{border:0;padding:3px 0}.score td:nth-child(3){margin-top:6px;font-weight:700;color:var(--teal)}.score td:nth-child(3)::before{content:"Where you start: ";font-weight:600;color:var(--ink-3)}}
-
-/* countdown */
-.clock{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-lg);padding:22px;text-align:center}
-.clock-k,.clock-f{display:block;font-size:14px;color:#cfe3e8}
-.clock-k{font-family:"Manrope",sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px}
-.clock-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
-.clock-row div{background:rgba(255,255,255,.1);border-radius:16px;padding:12px 4px}
-.clock-row b{display:block;font-family:"Manrope",sans-serif;font-weight:800;font-size:40px;line-height:1}
-.clock-row span{font-size:13px;color:#cfe3e8}
-.clock-f{color:var(--gold);font-weight:600}
-
-/* call proof */
-.cp{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;align-items:start}
-.phone{background:#0e2430;color:#fff;border-radius:34px;padding:18px 14px 16px;box-shadow:var(--shadow-2);max-width:380px;width:100%;margin:0 auto;border:6px solid #1c3a48}
-.phone-top{display:flex;align-items:center;gap:8px;padding:2px 6px 12px;border-bottom:1px solid rgba(255,255,255,.12)}
-.phone-top b{font-family:"Manrope",sans-serif;flex:1}
-.dot{width:9px;height:9px;border-radius:50%;background:#3fd18b;box-shadow:0 0 0 0 rgba(63,209,139,.6);animation:pulse 1.8s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(63,209,139,0)}100%{box-shadow:0 0 0 0 rgba(63,209,139,0)}}
-.sample-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:#4a3307;border-radius:999px;padding:3px 9px}
-.feed{list-style:none;margin:0;padding:8px 0 0;min-height:316px}
-.feed li{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 6px;border-bottom:1px solid rgba(255,255,255,.07);animation:in .5s ease both}
-.feed li i{width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-style:normal;font-weight:800;font-family:"Manrope",sans-serif;font-size:13px;color:var(--gold)}
-.feed li b{display:block;font-size:15px}
-.feed li small{display:block;font-size:12.5px;color:#9fbac6}
-.feed li em{font-style:normal;font-size:12px;font-weight:700;color:#3fd18b;background:rgba(63,209,139,.12);border-radius:999px;padding:3px 8px;white-space:nowrap}
-@keyframes in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-.phone-sum{display:flex;align-items:baseline;gap:8px;justify-content:center;padding-top:12px;font-size:14px;color:#cfe3e8}
-.phone-sum b{font-family:"Manrope",sans-serif;font-size:30px;color:#fff}
-.src-bars div{display:grid;grid-template-columns:130px minmax(0,1fr) 34px;gap:10px;align-items:center;margin-bottom:12px;font-size:15px}
-.src-bars i{height:12px;background:var(--teal-soft);border-radius:8px;overflow:hidden}
-.src-bars em{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--teal-2));border-radius:8px;transition:width 1.2s ease}
-.src-bars.go em{width:var(--w)}
-.src-bars b{font-family:"Manrope",sans-serif;text-align:right}
-.ticks{list-style:none;margin:20px 0 0;padding:0}
-.ticks li{position:relative;padding-left:30px;margin-bottom:12px;color:var(--ink-2);font-size:16px}
-.ticks li::before{content:"";position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--teal-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b5c61' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/13px no-repeat}
-.ticks b{color:var(--ink)}
-.incl{margin-top:8px;background:var(--gold-soft);border:1px solid #efdcb6;border-radius:var(--radius-md);padding:14px 16px;color:#6b4a10}
+/* gap */
+.sec.dark{background:#0d1418;color:#fff}
+.sec.dark .fine{color:#a1b6bf}
+.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin-top:34px;text-align:center}
+.vs b{display:block;font-size:clamp(32px,5vw,48px);margin-top:18px}.vs span{color:#a1b6bf;font-size:15px}
+.g49.sm{width:min(240px,40vw);margin:0 auto;gap:6px}
+.sec.dark .g49 i{background:#26343b}.sec.dark .g49 i.on{background:var(--gold)}.sec.dark .g49.lead i.on{background:#e8eef1}
 
 /* break even */
-.be{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-1)}
-.be label{display:block;font-weight:600}
-.be output{display:block;font-family:"Manrope",sans-serif;font-weight:800;font-size:44px;color:var(--teal);margin:6px 0 10px}
-.be input[type=range]{width:100%;accent-color:var(--teal);height:32px}
+.be{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin-top:30px;background:var(--gray);border-radius:28px;padding:26px}
+.be output{display:block;font-size:56px;font-weight:700;letter-spacing:-.03em;color:var(--teal)}
+.be input{width:100%;accent-color:var(--teal);height:32px}
 .be-out{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.be-card{border:1px solid var(--line);border-radius:var(--radius-md);padding:16px;text-align:center}
-.be-card.best{background:var(--teal);border-color:var(--teal);color:#fff}
-.be-card span{display:block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
-.be-card b{display:block;font-family:"Manrope",sans-serif;font-weight:800;font-size:52px;line-height:1.05;margin-top:6px}
-.be-card small{display:block;font-size:14px;line-height:1.35}
-.be-card em{display:block;font-style:normal;font-size:13.5px;margin-top:8px;opacity:.8}
+.be-card{background:#fff;border-radius:20px;padding:18px;text-align:center}
+.be-card.best{background:var(--teal);color:#fff}
+.be-card span{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+.be-card b{display:block;font-size:56px;line-height:1.05;margin-top:6px}
+.be-card small{display:block;font-size:14px;line-height:1.35}.be-card em{display:block;font-style:normal;font-size:13px;margin-top:8px;opacity:.75}
+@media (min-width:860px){.be{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;padding:36px}}
 
-/* links, gap, plans */
-.cards.four{grid-template-columns:minmax(0,1fr)}
-.links{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:18px}
-.lk{display:block;text-decoration:none;color:#fff;background:linear-gradient(160deg,#0b5c61,#0e3f52);border-radius:var(--radius-md);padding:18px 20px;position:relative}
-.lk::after{content:"\2192";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--gold)}
-.lk b{display:block;font-family:"Manrope",sans-serif;font-size:17px}
-.lk span{font-size:14px;color:#cfe3e8}
-.gap{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:center;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px}
-.gap-num b{display:block;font-family:"Manrope",sans-serif;font-weight:800;font-size:40px;color:var(--teal);line-height:1}
-.gap-num.alt b{color:#8a5a12}
-.gap-num span{font-size:15px;color:var(--ink-2)}
-.gap p{color:var(--ink-2)}
-.plans{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
-.pl{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow-1)}
-.pl.best{border:2px solid var(--teal)}
-.pl-badge{position:absolute;top:-12px;left:20px;background:var(--teal);color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 10px}
-.pl-k{font-family:"Manrope",sans-serif;font-weight:800;font-size:19px}
-.pl-p{font-family:"Manrope",sans-serif;font-weight:800;font-size:34px;color:var(--teal);margin-top:6px}
-.pl-p small{font-size:14px;font-weight:600;color:var(--ink-3)}
-.pl-alt{font-size:14px;color:var(--ink-3);margin-top:2px}
-.pl ul{margin:14px 0 0;padding-left:20px;color:var(--ink-2);font-size:15.5px}
-.pl li{margin-bottom:6px}
-.team{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:center;margin-top:20px}
-.team img{border-radius:var(--radius-md)}
-.team p{color:var(--ink-2)}
-.cta{display:inline-block;margin-top:18px;background:var(--gold);color:#3b2a06;font-weight:700;text-decoration:none;border-radius:999px;padding:13px 22px}
-@media (min-width:760px){
-  .cp{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
-  .be{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:center;padding:32px}
-  .cards.four{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .links{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .gap{grid-template-columns:minmax(0,.6fr) minmax(0,.6fr) minmax(0,1.4fr);padding:28px}
-  .plans{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .team{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
-}
-@media (max-width:420px){.src-bars div{grid-template-columns:104px minmax(0,1fr) 28px;font-size:14px}.be-card b{font-size:42px}}
-@media (prefers-reduced-motion:reduce){.dot{animation:none}.feed li{animation:none}.src-bars em{transition:none}}
+/* plans */
+.plans{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-top:30px}
+.pl{position:relative;background:#fff;border-radius:24px;padding:26px}
+.pl.best{box-shadow:0 0 0 2px var(--teal)}
+.pl-badge{position:absolute;top:-11px;left:22px;background:var(--teal);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 10px}
+.pl-k{font-weight:700;font-size:20px}
+.pl-p{font-size:40px;font-weight:700;letter-spacing:-.03em;color:var(--teal);margin-top:4px}
+.pl-alt{font-size:14px;color:var(--ink2)}
+.pl ul{margin:14px 0 0;padding-left:20px;font-size:15.5px;color:#3a3a3c}.pl li{margin-bottom:6px}
+.more{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:22px}
+.more a{display:block;background:#fff;border-radius:20px;padding:18px 22px;text-decoration:none;color:var(--ink);position:relative}
+.more a::after{content:"\2192";position:absolute;right:22px;top:50%;transform:translateY(-50%);color:var(--teal);font-size:22px}
+.more b{display:block;font-size:17px}.more span{color:var(--ink2);font-size:14px}
+@media (min-width:860px){.plans{grid-template-columns:repeat(3,minmax(0,1fr))}.more{grid-template-columns:1fr 1fr}}
+
+/* go */
+.go{background:#0d1418;color:#fff;text-align:center;padding:90px 0}
+.go .h-eye{color:var(--gold)}
+.go .lead{color:#a1b6bf;margin-left:auto;margin-right:auto}
+.cd{display:grid;grid-template-columns:repeat(3,minmax(0,110px));justify-content:center;gap:12px;margin-top:28px}
+.cd div{background:#1c262b;border-radius:20px;padding:16px 6px}
+.cd b{display:block;font-size:46px;line-height:1}.cd span{font-size:13px;color:#a1b6bf}
+
+footer{padding:34px 0 50px;font-size:13px;color:var(--ink2)}
+footer p{margin-top:12px;max-width:720px}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.chip,.live,.typing i{animation:none}.feed li,.job,.scr{animation:none}}
 </style>
 </head>
 <body>
 <div class="conf">Confidential. Prepared for Dr. Ylli Zhubi and Arizona Preferred Surgeons.</div>
-<header class="top"><div class="wrap">
-  <a class="brand" href="#top"><img src="images/socialdm-logo.png" alt="The SocialDM" width="240" height="198">LocalLift</a>
-  <span class="for">Prepared for Dr. Ylli Zhubi</span>
-</div></header>
+<nav class="nav"><div class="nav-in">
+  <a class="nb" href="#top"><img src="images/socialdm-logo.png" alt="The SocialDM" width="240" height="198"><span>LocalLift</span></a>
+  <div class="nav-r"><a class="pill-o" href="#closer">How it works</a><a class="pill-b" href="#go">Pick a time</a></div>
+</div></nav>
 
 <main id="top">
-<section class="hero"><div class="wrap">
-  <div>
-    <span class="eyebrow">Following up on November 3</span>
-    <h1>Everything we talked about, in one place.</h1>
-    <p class="lede">You asked two fair questions: how will I see results, and is it worth it? This page answers both, and adds one new piece we built for you since we met.</p>
-    <div class="promise"><span>New: Call Proof</span><span>Referral Desk</span><span>Your 12 month roadmap</span></div>
-  </div>
-  <div class="clock" aria-live="polite">
-    <span class="clock-k">Your rates and founding offer hold</span>
-    <div class="clock-row"><div><b id="cdD">8</b><span>days</span></div><div><b id="cdH">0</b><span>hours</span></div><div><b id="cdM">0</b><span>minutes</span></div></div>
-    <span class="clock-f">Through Friday, November 20</span>
-  </div>
-</div></section>
 
-<section class="sec"><div class="wrap">
-  <div class="sec-head">
-    <span class="eyebrow">New since we met</span>
-    <h2>Call Proof. See which work makes your phone ring.</h2>
-    <p class="lede">You asked how you will know it is working. Most marketing reports stop at rankings and clicks. With Call Proof you see the calls, and where each one came from: Google Maps, your website, an AI answer, social, or a referring office.</p>
-  </div>
-  <div class="cp">
-    <div class="phone" aria-label="Sample Call Proof feed">
-      <div class="phone-top"><span class="dot"></span><b>Call Proof</b><span class="sample-tag">Sample</span></div>
+<section class="hero">
+  <p class="h-eye rv">Dr. Zhubi, meet LocalLift.</p>
+  <h1 class="rv">See it work.</h1>
+  <p class="h-sub rv">Found on the map. Named by AI. Calls you can trace. Referring offices that remember you. All running in the background, with nothing new for your team to learn.</p>
+  <div class="h-stage rv">
+    <div class="chip c1"><b>Goal: top 3</b><span>on the map near you</span></div>
+    <div class="chip c2"><b>Named</b><span>in an AI answer</span></div>
+    <div class="chip c3"><b>Approved</b><span>letter to a referring office</span></div>
+    <div class="phone big">
+      <div class="ph-top"><span class="live"></span><b>Call Proof</b><span class="tagS">Sample</span></div>
       <ul class="feed" id="feed"></ul>
-      <div class="phone-sum"><span>This week</span><b id="feedCount">0</b><span>first time callers</span></div>
+      <div class="ph-sum"><b id="feedCount">0</b><span>first time callers this week</span></div>
     </div>
-    <div class="cp-copy">
-      <div class="src-bars" id="bars" aria-label="Sample calls by source">
-        <div><span>Google Maps</span><i><em style="--w:72%"></em></i><b>13</b></div>
-        <div><span>Your website</span><i><em style="--w:44%"></em></i><b>8</b></div>
-        <div><span>Referring offices</span><i><em style="--w:28%"></em></i><b>5</b></div>
-        <div><span>AI answers</span><i><em style="--w:17%"></em></i><b>3</b></div>
-        <div><span>Social</span><i><em style="--w:11%"></em></i><b>2</b></div>
+  </div>
+  <a class="clock-pill rv" href="#go"><span>Your rates hold</span><b><i id="cdD">8</i> days <i id="cdH">0</i> hrs</b><span>through Friday, Nov 20</span></a>
+</section>
+
+<section class="sec" id="highlights">
+  <div class="wrap">
+    <h2 class="big rv">Get the highlights.</h2>
+    <div class="car rv" id="car">
+      <div class="track" id="track">
+        <article class="slide">
+          <h3>Show up where patients look.<br><span>The map near your office, lit up week by week.</span></h3>
+          <div class="vis"><div class="g49" id="g49"></div><div class="g49-l"><b id="g49n">1</b> of 49 spots in the top 3</div><small style="color:var(--ink2);font-size:12.5px;margin-top:8px">Sample of the goal we work toward.</small></div>
+        </article>
+        <article class="slide">
+          <h3>Be the name AI gives.<br><span>When patients ask ChatGPT, Gemini or Google's AI.</span></h3>
+          <div class="vis chat">
+            <div class="q">Who is a good colorectal surgeon near Glendale?</div>
+            <div class="a"><span class="typing" id="typing"><i></i><i></i><i></i></span><span id="ans" hidden>One option is <b>Dr. Ylli Zhubi</b> at Arizona Preferred Surgeons, with strong patient reviews.</span></div>
+            <small>Sample of the goal we work toward.</small>
+          </div>
+        </article>
+        <article class="slide">
+          <h3>See your calls, and where they came from.<br><span>Call Proof, new since we met.</span></h3>
+          <div class="vis bars" id="srcBars">
+            <div><span>Google Maps</span><i><em style="--w:72%"></em></i><b>13</b></div>
+            <div><span>Your website</span><i><em style="--w:44%"></em></i><b>8</b></div>
+            <div><span>Referring offices</span><i><em style="--w:28%"></em></i><b>5</b></div>
+            <div><span>AI answers</span><i><em style="--w:17%"></em></i><b>3</b></div>
+            <div><span>Social</span><i><em style="--w:11%"></em></i><b>2</b></div>
+            <small>Sample month. Not your real calls.</small>
+          </div>
+        </article>
+        <article class="slide">
+          <h3>Referring offices that remember you.<br><span>Referral Desk writes the letter. You approve it. It goes out.</span></h3>
+          <div class="vis letter"><div class="env"><div class="paper"><b>Dear Doctor,</b><span></span><span></span><span class="s"></span><em class="ok">Approved by you (sample)</em></div></div></div>
+        </article>
+        <article class="slide">
+          <h3>Know it is working.<br><span>Plain numbers, one short report.</span></h3>
+          <div class="vis rep"><div class="rbars"><i style="--h:30%"></i><i style="--h:38%"></i><i style="--h:47%"></i><i style="--h:55%"></i><i style="--h:66%"></i><i style="--h:78%"></i></div><small>Sample trend for illustration.</small></div>
+        </article>
       </div>
-      <p class="note" style="margin-top:8px">Sample month for illustration. Not your real calls.</p>
-      <ul class="ticks">
-        <li><b>Nothing for your staff to log.</b> Calls are counted by source automatically.</li>
-        <li><b>Private by design.</b> We count calls and where they came from. We never record or listen to patient calls.</li>
-        <li><b>In every report.</b> Calls by source sit next to your map and AI numbers, so you can see which work pays.</li>
-      </ul>
-      <div class="incl"><b>Included</b> on every 6 month and annual plan.</div>
+      <div class="ctrl"><div class="dots" id="dots"></div><button class="pp" id="pp" aria-label="Pause">❚❚</button></div>
     </div>
   </div>
-</div></section>
+</section>
 
-<section class="sec" style="background:var(--mist)"><div class="wrap">
-  <div class="sec-head">
-    <span class="eyebrow">Is it worth it?</span>
-    <h2>Your break even, in new patients.</h2>
-    <p class="lede">You told us you would be happy to break even. Move the slider to what a new surgical patient is typically worth to your practice. Call Proof shows you, week by week, whether you are there.</p>
-  </div>
-  <div class="be">
-    <div class="be-in">
-      <label for="val">Average value of a new surgical patient</label>
-      <output id="valOut">$3,000</output>
-      <input type="range" id="val" min="1000" max="15000" step="500" value="3000">
-      <p class="note">Example only. We set your real number with you in month one.</p>
-    </div>
-    <div class="be-out">
-      <div class="be-card"><span>Visibility, annual</span><b id="beV">1</b><small>new patient a month to break even</small><em>$1,699 a month</em></div>
-      <div class="be-card best"><span>Strategy, annual</span><b id="beS">2</b><small>new patients a month to break even</small><em>$3,500 a month</em></div>
+<section class="sec gray" id="closer">
+  <div class="wrap">
+    <h2 class="big rv">Take a closer look.</h2>
+    <div class="cl rv">
+      <div class="cl-l">
+        <div class="cl-card">
+          <b id="clT">Monday</b> <span id="clD"></span>
+          <label class="cl-lab" for="wk">Move the slider through your week.</label>
+          <input type="range" id="wk" min="0" max="6" step="1" value="0" aria-label="Day of the week">
+        </div>
+        <div class="steps" id="steps"></div>
+      </div>
+      <div class="cl-r"><div class="phone mid"><div class="scr" id="scr"></div></div></div>
     </div>
   </div>
-</div></section>
+</section>
 
-<section class="sec"><div class="wrap">
-  <div class="sec-head">
-    <span class="eyebrow">What you get</span>
-    <h2>Four things working for you every week.</h2>
+<section class="sec" id="time">
+  <div class="wrap">
+    <h2 class="big rv">Your desk, cleared.</h2>
+    <p class="lead rv">Drag to hand the work over. You keep the approvals. We keep it running.</p>
+    <div class="desk rv">
+      <div class="col"><h4>Your team</h4><div id="mine"></div></div>
+      <div class="col us"><h4>LocalLift</h4><div id="ours"></div></div>
+    </div>
+    <div class="desk-ctl rv"><input type="range" id="hand" min="0" max="8" step="1" value="0" aria-label="Hand work to LocalLift"><p><b id="handN">0</b> of 8 jobs handled for you</p></div>
   </div>
-  <div class="cards four">
-    <div class="card"><span class="when">Be found</span><h3>The Profile Rebuild</h3><p>Your profile and listings set up the way patients and AI search read them, so your 4.8 star reviews finally work for you.</p></div>
-    <div class="card"><span class="when">Stay visible</span><h3>Daily Presence</h3><p>Google posts 7 days a week and social posts 3 times a week on Instagram, Facebook and LinkedIn, building your name, not only the hospital's.</p></div>
-    <div class="card"><span class="when">Be named</span><h3>AI Answer Ready</h3><p>Kept current so ChatGPT, Gemini, Perplexity and Google's AI Overviews can find you and name you when patients ask.</p></div>
-    <div class="card"><span class="when">Be referred</span><h3>Referral Desk</h3><p>The CRM question, answered: we run it for you. Your Monday Five, letters you approve, and a referral list that is always yours.</p></div>
-  </div>
-  <div class="links">
-    <a class="lk" href="https://thesocialdm.github.io/locallift-pulses/review/zhubi-preview-k7m2/"><b>See Referral Desk in action</b><span>Your private CRM preview</span></a>
-    <a class="lk" href="https://thesocialdm.github.io/locallift-pulses/review/zhubi-roadmap-k7m2/"><b>See your 12 month roadmap</b><span>Milestones and your weekly scoreboard</span></a>
-  </div>
-</div></section>
+</section>
 
-<section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="gap">
-    <div class="gap-num"><b>1 of 49</b><span>map spots where you show in the top 3 today</span></div>
-    <div class="gap-num alt"><b>69%</b><span>of spots where the leading practice shows in the top 3</span></div>
-    <p>Your 4.8 star reviews are already strong. The gap is how your presence is set up, and that is the part we work on. <span class="note" style="display:block;margin-top:8px">Google Maps scan for "colorectal surgeon", 7 by 7 grid, 5 mile radius, November 1, 2026.</span></p>
+<section class="sec dark" id="gap">
+  <div class="wrap">
+    <h2 class="big rv">Right now, patients see someone else first.</h2>
+    <div class="vs rv">
+      <div><div class="g49 sm" id="gYou"></div><b>1 of 49</b><span>map spots where you show in the top 3</span></div>
+      <div><div class="g49 sm lead" id="gLead"></div><b>69%</b><span>of spots where the leading practice shows in the top 3</span></div>
+    </div>
+    <p class="fine rv">Your 4.8 star reviews are already strong. The gap is how your presence is set up. Google Maps check for "colorectal surgeon" at 49 points around your office, November 1, 2026.</p>
   </div>
-</div></section>
+</section>
 
-<section class="sec" style="background:var(--mist)"><div class="wrap">
-  <div class="sec-head">
-    <span class="eyebrow">Your plan, at a glance</span>
-    <h2>The longer the term, the more comes with it.</h2>
-  </div>
-  <div class="plans">
-    <div class="pl">
-      <span class="pl-k">Visibility</span>
-      <div class="pl-p">$1,699<small> a month, annual</small></div>
-      <p class="pl-alt">$1,899 on 6 months, $2,199 month to month</p>
-      <ul><li>Profile Rebuild and Daily Presence</li><li>AI Answer Ready</li><li>A monthly review with you</li><li>Call Proof on 6 month and annual terms</li><li>Referral Desk included on annual, a $495 a month value</li></ul>
-    </div>
-    <div class="pl best">
-      <span class="pl-badge">Recommended</span>
-      <span class="pl-k">Strategy</span>
-      <div class="pl-p">$3,500<small> a month, annual</small></div>
-      <p class="pl-alt">$3,900 on 6 months, $4,400 month to month</p>
-      <ul><li>Everything in Visibility, with more articles</li><li>Your short weekly report</li><li>Monthly review, plus a quarterly strategy session</li><li>Call Proof on 6 month and annual terms</li><li>Referral Desk included on annual, a $495 a month value</li></ul>
-    </div>
-    <div class="pl">
-      <span class="pl-k">All three surgeons</span>
-      <div class="pl-p">From $7,900</div>
-      <p class="pl-alt">A month on an annual term, plus a one time $7,500 setup, half if partners join within your first 6 months</p>
-      <ul><li>Dr. Lipton and Dr. Villareal added</li><li>One Referral Desk for the practice</li><li>Call Proof across the practice</li></ul>
+<section class="sec" id="worth">
+  <div class="wrap">
+    <h2 class="big rv">Is it worth it?</h2>
+    <p class="lead rv">Slide to what a new surgical patient is typically worth to your practice. Call Proof shows you, week by week, whether you are there.</p>
+    <div class="be rv">
+      <div class="be-in">
+        <output id="valOut">$3,000</output>
+        <input type="range" id="val" min="1000" max="15000" step="500" value="3000" aria-label="Average value of a new surgical patient">
+        <p class="fine">Example only. We set your real number with you in month one.</p>
+      </div>
+      <div class="be-out">
+        <div class="be-card"><span>Visibility, annual</span><b id="beV">1</b><small>new patient a month to break even</small><em>$1,699 a month</em></div>
+        <div class="be-card best"><span>Strategy, annual</span><b id="beS">2</b><small>new patients a month to break even</small><em>$3,500 a month</em></div>
+      </div>
     </div>
   </div>
-  <p class="note">Foundation Fix is $995 one time, credited when you choose a 6 month or annual term, and added on month to month. On the 6 month plan you can walk away at day 90 if you are not seeing progress. Referral Desk is a $495 a month add on for 6 month plans.</p>
-  <div class="team"><img src="images/aps-surgeons.jpg" alt="The three surgeons of Arizona Preferred Surgeons" width="1104" height="710"><p>Start on your own, or bring your partners when you are ready. Everything we build for you carries over.</p></div>
-</div></section>
+</section>
 
-<section class="sec"><div class="wrap">
-  <div class="safe">
-    <div>
-      <span class="eyebrow" style="color:#bfe3e1">Next step</span>
-      <h2 style="margin-top:8px">15 minutes with Michael and Shelby.</h2>
-      <p style="margin-top:12px">We walk through Call Proof, answer anything open, and set your break even number together. If it is a fit, you start before the November 20 rates end.</p>
-      <a class="cta" href="mailto:info@thesocialdm.com?subject=Dr.%20Zhubi%3A%2015%20minute%20call">Pick a time for a call</a>
+<section class="sec gray" id="plans">
+  <div class="wrap">
+    <h2 class="big rv">Which plan is right for you?</h2>
+    <div class="plans rv">
+      <div class="pl">
+        <span class="pl-k">Visibility</span>
+        <div class="pl-p">$1,699</div><p class="pl-alt">a month on an annual term. $1,899 on 6 months, $2,199 month to month.</p>
+        <ul><li>Profile Rebuild and Daily Presence</li><li>AI Answer Ready</li><li>A monthly review with you</li><li>Call Proof on 6 month and annual terms</li><li>Referral Desk included on annual, a $495 a month value</li></ul>
+      </div>
+      <div class="pl best">
+        <span class="pl-badge">Recommended</span>
+        <span class="pl-k">Strategy</span>
+        <div class="pl-p">$3,500</div><p class="pl-alt">a month on an annual term. $3,900 on 6 months, $4,400 month to month.</p>
+        <ul><li>Everything in Visibility, with more articles</li><li>Your short weekly report</li><li>Monthly review, plus a quarterly strategy session</li><li>Call Proof on 6 month and annual terms</li><li>Referral Desk included on annual, a $495 a month value</li></ul>
+      </div>
+      <div class="pl">
+        <span class="pl-k">All three surgeons</span>
+        <div class="pl-p">From $7,900</div><p class="pl-alt">a month on an annual term, plus a one time $7,500 setup, half if partners join within your first 6 months.</p>
+        <ul><li>Dr. Lipton and Dr. Villareal added</li><li>One Referral Desk for the practice</li><li>Call Proof across the practice</li></ul>
+      </div>
     </div>
-    <ul>
-      <li>Your reports start with today's numbers as the starting line.</li>
-      <li>Call Proof counts calls automatically, so your front desk logs nothing.</li>
-      <li>We never record calls or touch your patient records.</li>
-    </ul>
+    <p class="fine rv">Foundation Fix is $995 one time, credited when you choose a 6 month or annual term, and added on month to month. On the 6 month plan you can walk away at day 90 if you are not seeing progress. Referral Desk is a $495 a month add on for 6 month plans and is not available month to month.</p>
+    <div class="more rv">
+      <a href="https://thesocialdm.github.io/locallift-pulses/review/zhubi-preview-k7m2/"><b>Referral Desk, up close</b><span>Your private CRM preview</span></a>
+      <a href="https://thesocialdm.github.io/locallift-pulses/review/zhubi-roadmap-k7m2/"><b>Your 12 month roadmap</b><span>Milestones and your scoreboard</span></a>
+    </div>
   </div>
-</div></section>
+</section>
+
+<section class="go" id="go">
+  <div class="wrap">
+    <p class="h-eye rv">Next step</p>
+    <h2 class="big rv">15 minutes with Michael and Shelby.</h2>
+    <p class="lead rv">We walk through Call Proof, set your break even number together, and answer anything open.</p>
+    <div class="cd rv"><div><b id="cd2D">8</b><span>days</span></div><div><b id="cd2H">0</b><span>hours</span></div><div><b id="cd2M">0</b><span>minutes</span></div></div>
+    <p class="fine rv" style="color:#a1b6bf">Your rates and founding practice offer hold through Friday, November 20.</p>
+    <a class="pill-b lg rv" href="mailto:info@thesocialdm.com?subject=Dr.%20Zhubi%3A%2015%20minute%20call">Pick a time for a call</a>
+    <p class="fine rv" style="color:#a1b6bf;margin-top:22px">We count calls and where they came from. We never record calls or touch your patient records.</p>
+  </div>
+</section>
 </main>
 
 <footer><div class="wrap">
-  <a class="brand" href="#top"><img src="images/socialdm-logo.png" alt="" width="240" height="198">LocalLift</a>
+  <a class="nb" href="#top"><img src="images/socialdm-logo.png" alt="" width="240" height="198"><span>LocalLift</span></a>
   <p>LocalLift™, Call Proof, Referral Desk, this page and its methods are proprietary to The SocialDM. Prepared only for Dr. Ylli Zhubi and Arizona Preferred Surgeons. Please do not copy, share, or reproduce any part of it without written permission.</p>
   <p>© 2026 The SocialDM. All rights reserved.</p>
 </div></footer>
 
 <script>
 (function(){
-  // countdown to end of Friday Nov 20 2026, Phoenix time (UTC-7)
+  var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(i){return document.getElementById(i);}
+  function onView(el,fn,th){if(!('IntersectionObserver' in window)){fn();return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){fn();io.disconnect();}});},{threshold:th||.3});io.observe(el);}
+
+  // reveal on scroll
+  document.querySelectorAll('.rv').forEach(function(el){if(still)el.classList.add('in');else onView(el,function(){el.classList.add('in');},.12);});
+
+  // countdown to end of Fri Nov 20 2026, Phoenix (UTC-7)
   var end=Date.UTC(2026,10,21,6,59,59);
-  function tick(){
-    var ms=Math.max(0,end-Date.now()),m=Math.floor(ms/60000);
-    document.getElementById('cdD').textContent=Math.floor(m/1440);
-    document.getElementById('cdH').textContent=Math.floor(m%1440/60);
-    document.getElementById('cdM').textContent=m%60;
-  }
+  function tick(){var m=Math.floor(Math.max(0,end-Date.now())/60000),d=Math.floor(m/1440),h=Math.floor(m%1440/60);
+    $('cdD').textContent=d;$('cdH').textContent=h;$('cd2D').textContent=d;$('cd2H').textContent=h;$('cd2M').textContent=m%60;}
   tick();setInterval(tick,30000);
 
-  // sample call feed
-  var calls=[
-    ['GM','Google Maps','Tue 9:14 am, 4 min'],
-    ['WS','Your website','Tue 11:02 am, 6 min'],
-    ['RO','Referring office','Wed 8:47 am, 3 min'],
-    ['AI','AI answer','Wed 2:20 pm, 5 min'],
-    ['GM','Google Maps','Thu 10:31 am, 7 min'],
-    ['SO','Social','Fri 9:05 am, 4 min']
+  // hero call feed
+  var calls=[['GM','Google Maps','Tue 9:14 am'],['WS','Your website','Tue 11:02 am'],['RO','Referring office','Wed 8:47 am'],['AI','AI answer','Wed 2:20 pm'],['GM','Google Maps','Thu 10:31 am'],['SO','Social','Fri 9:05 am']];
+  var feed=$('feed'),k=0;
+  function add(c){var li=document.createElement('li');li.innerHTML='<i>'+c[0]+'</i><div><b>'+c[1]+'</b><small>'+c[2]+'</small></div><em>First time</em>';feed.insertBefore(li,feed.firstChild);$('feedCount').textContent=feed.children.length;}
+  function next(){if(k<calls.length){add(calls[k++]);setTimeout(next,1500);}else setTimeout(function(){feed.innerHTML='';$('feedCount').textContent=0;k=0;next();},5000);}
+  if(still)calls.forEach(add);else setTimeout(next,700);
+
+  // grids
+  function grid(el){for(var i=0;i<49;i++){var d=document.createElement('i');if(i===24)d.className='home';el.appendChild(d);}return el.children;}
+  var order=[];for(var r=0;r<7;r++)for(var c=0;c<7;c++)order.push({i:r*7+c,d:Math.abs(r-3)+Math.abs(c-3)+((r*7+c)%3)*.01});
+  order.sort(function(a,b){return a.d-b.d});var rank={};order.forEach(function(o,n){rank[o.i]=n});
+  function light(dots,n){for(var i=0;i<49;i++)dots[i].classList.toggle('on',rank[i]<n);}
+  var hl=grid($('g49'));
+  var you=grid($('gYou'));light(you,1);
+  var lead=grid($('gLead'));
+  // leader: 34 of 49 (about 69%), spread across the grid
+  var lo=[];for(var i=0;i<49;i++)lo.push(i);lo.sort(function(a,b){return ((a*37)%49)-((b*37)%49)});
+  onView($('gLead'),function(){lo.slice(0,34).forEach(function(i,n){setTimeout(function(){lead[i].classList.add('on')},still?0:n*35)});});
+
+  // carousel
+  var track=$('track'),slides=[].slice.call(track.children),dots=$('dots'),cur=0,playing=!still,timer;
+  slides.forEach(function(s,n){var b=document.createElement('button');b.setAttribute('aria-label','Highlight '+(n+1));b.addEventListener('click',function(){go(n);stop();});dots.appendChild(b);});
+  function play(n){
+    var s=slides[n];
+    if(n===0){var steps=[1,6,14,22],j=0;light(hl,1);$('g49n').textContent=1;(function st(){if(cur!==0)return;light(hl,steps[j]);$('g49n').textContent=steps[j];j++;if(j<steps.length)setTimeout(st,900);})();}
+    if(n===1){$('typing').hidden=false;$('ans').hidden=true;setTimeout(function(){$('typing').hidden=true;$('ans').hidden=false;},still?0:1300);}
+    if(n===2){var bb=$('srcBars');bb.classList.remove('run');void bb.offsetWidth;bb.classList.add('run');}
+    if(n===3){var l=s.querySelector('.letter');l.classList.remove('run');void l.offsetWidth;setTimeout(function(){l.classList.add('run')},400);}
+    if(n===4){var r=s.querySelector('.rep');r.classList.remove('run');void r.offsetWidth;setTimeout(function(){r.classList.add('run')},100);}
+  }
+  function go(n){cur=(n+slides.length)%slides.length;track.scrollTo({left:slides[cur].offsetLeft-track.offsetLeft-(track.clientWidth-slides[cur].clientWidth)/2,behavior:still?'auto':'smooth'});[].forEach.call(dots.children,function(d,i){d.classList.toggle('on',i===cur)});play(cur);}
+  function loop(){clearTimeout(timer);if(playing)timer=setTimeout(function(){go(cur+1);loop();},5200);}
+  function stop(){playing=false;clearTimeout(timer);$('pp').textContent='▶';$('pp').setAttribute('aria-label','Play');}
+  $('pp').addEventListener('click',function(){if(playing)stop();else{playing=true;$('pp').textContent='❚❚';$('pp').setAttribute('aria-label','Pause');go(cur+1);loop();}});
+  var st;track.addEventListener('scroll',function(){clearTimeout(st);st=setTimeout(function(){var best=0,bd=1e9;slides.forEach(function(s,i){var d=Math.abs(s.getBoundingClientRect().left+s.clientWidth/2-(track.getBoundingClientRect().left+track.clientWidth/2));if(d<bd){bd=d;best=i}});if(best!==cur){cur=best;[].forEach.call(dots.children,function(d,i){d.classList.toggle('on',i===cur)});play(cur);}},120);});
+  track.addEventListener('touchstart',stop,{passive:true});
+  onView($('car'),function(){go(0);loop();},.3);
+
+  // closer look
+  var days=[
+    ['Monday','Your Monday Five arrives.','<h5>Monday 7:00 am</h5><div class="card-d"><b>Your Monday Five</b><small>Five referring doctors worth a call this week</small></div><div class="card-d"><b>Dr. A, family medicine</b><small>Sent 3 patients last quarter, quiet since</small></div><div class="card-d"><b>Dr. B, internal medicine</b><small>New to the area, not yet on your list</small></div><small style="color:#9fbac6">Sample names</small>'],
+    ['Tuesday','A patient searches. You show up.','<h5>Google Maps</h5><div class="card-d"><b>colorectal surgeon near me</b><small>Glendale, AZ</small></div><div class="mini49" id="m49"></div><div class="card-d"><b>Dr. Ylli Zhubi</b><small>4.8 stars, 74 reviews</small><span class="okb">Top 3 here</span></div><small style="color:#9fbac6">Sample of the goal we work toward</small>'],
+    ['Wednesday','AI names you.','<h5>AI answer</h5><div class="bub me">Who is a good colorectal surgeon near Glendale?</div><div class="bub">One option is <b>Dr. Ylli Zhubi</b> at Arizona Preferred Surgeons, with strong patient reviews.</div><small style="color:#9fbac6">Sample of the goal we work toward</small>'],
+    ['Thursday','The phone rings. Call Proof logs it.','<h5>Call Proof</h5><div class="card-d"><b>Google Maps</b><small>Thu 10:31 am, 7 min</small><span class="okb">First time caller</span></div><div class="card-d"><b>AI answer</b><small>Thu 2:05 pm, 4 min</small><span class="okb">First time caller</span></div><small style="color:#9fbac6">Sample. We never record or listen to calls.</small>'],
+    ['Friday','Letters you approved go out.','<h5>Referral Desk</h5><div class="card-d"><b>Thank you note</b><small>To a referring office, in your name</small><span class="okb">Approved by you</span></div><div class="card-d"><b>Quarterly newsletter</b><small>To every office on your list</small><span class="okb">Scheduled</span></div>'],
+    ['Weekend','Your presence keeps working.','<h5>Daily Presence</h5><div class="card-d"><b>Google post</b><small>Saturday, in your voice</small><span class="okb">Posted</span></div><div class="card-d"><b>Instagram, Facebook, LinkedIn</b><small>Your name, not only the hospital’s</small><span class="okb">Posted</span></div>'],
+    ['Next Monday','Your report shows what worked.','<h5>Weekly report</h5><div class="card-d"><b>Map</b><small>Spots in the top 3, week over week</small></div><div class="card-d"><b>Calls by source</b><small>From Call Proof</small></div><div class="card-d"><b>Referral replies</b><small>Who wrote back</small></div><small style="color:#9fbac6">Sample layout</small>']
   ];
-  var feed=document.getElementById('feed'),count=document.getElementById('feedCount'),k=0;
-  var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function add(c){
-    var li=document.createElement('li');
-    li.innerHTML='<i>'+c[0]+'</i><div><b>'+c[1]+'</b><small>'+c[2]+'</small></div><em>First time caller</em>';
-    feed.insertBefore(li,feed.firstChild);
-    count.textContent=feed.children.length;
-  }
-  function next(){
-    if(k<calls.length){add(calls[k++]);setTimeout(next,1400);}
-    else{setTimeout(function(){feed.innerHTML='';count.textContent=0;k=0;next();},5000);}
-  }
-  var bars=document.getElementById('bars');
-  if(still){calls.forEach(add);bars.classList.add('go');}
-  else if('IntersectionObserver' in window){
-    var started=false;
-    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!started){started=true;next();bars.classList.add('go');}});},{threshold:.3}).observe(feed);
-  } else {next();bars.classList.add('go');}
+  var wk=$('wk'),stepsEl=$('steps');
+  days.forEach(function(d,i){var b=document.createElement('button');b.type='button';b.innerHTML='<i>'+(i+1)+'</i>'+d[0];b.addEventListener('click',function(){wk.value=i;show(i)});stepsEl.appendChild(b);});
+  function show(i){var d=days[i];$('clT').textContent=d[0];$('clD').textContent=d[1];var s=$('scr');s.innerHTML=d[2];s.style.animation='none';void s.offsetWidth;s.style.animation='';[].forEach.call(stepsEl.children,function(b,j){b.classList.toggle('on',j===i)});var m=$('m49');if(m){var md=grid(m);light(md,6);}}
+  wk.addEventListener('input',function(){show(+wk.value)});show(0);
+
+  // desk
+  var jobs=['Post to Google every day','Post to Instagram, Facebook and LinkedIn','Keep your listings correct everywhere','Answer what patients ask online','Track which marketing brings calls','Remember every referring office','Write letters to referring offices','Build a weekly report'];
+  var hand=$('hand');
+  function desk(n){var mine=$('mine'),ours=$('ours');mine.innerHTML='<span class="job keep">Approve what goes out, in a few taps</span>';ours.innerHTML='';jobs.forEach(function(j,i){var e=document.createElement('span');e.className='job';e.textContent=j;(i<n?ours:mine).appendChild(e);});$('handN').textContent=n;}
+  hand.addEventListener('input',function(){desk(+hand.value)});desk(0);
+  onView($('time'),function(){if(still){hand.value=8;desk(8);return;}var n=0;(function s(){if(+hand.value!==n)return;n++;hand.value=n;desk(n);if(n<8)setTimeout(s,420);})();},.35);
 
   // break even
-  var val=document.getElementById('val'),out=document.getElementById('valOut');
-  function be(){
-    var v=+val.value,n1=Math.ceil(1699/v),n2=Math.ceil(3500/v);
-    out.textContent='$'+v.toLocaleString('en-US');
-    document.getElementById('beV').textContent=n1;
-    document.getElementById('beS').textContent=n2;
-    document.querySelector('#beV + small').textContent=(n1===1?'new patient':'new patients')+' a month to break even';
-    document.querySelector('#beS + small').textContent=(n2===1?'new patient':'new patients')+' a month to break even';
-  }
+  var val=$('val');
+  function be(){var v=+val.value,a=Math.ceil(1699/v),b=Math.ceil(3500/v);$('valOut').textContent='$'+v.toLocaleString('en-US');$('beV').textContent=a;$('beS').textContent=b;
+    document.querySelector('#beV + small').textContent=(a===1?'new patient':'new patients')+' a month to break even';document.querySelector('#beS + small').textContent=(b===1?'new patient':'new patients')+' a month to break even';}
   val.addEventListener('input',be);be();
 })();
 </script>
