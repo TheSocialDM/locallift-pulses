@@ -160,8 +160,6 @@ p{margin:0}
 /* gap */
 .sec.dark{background:#0d1418;color:#fff}
 .sec.dark .fine{color:#a1b6bf}
-.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin-top:34px;text-align:center}
-.vs b{display:block;font-size:clamp(32px,5vw,48px);margin-top:18px}.vs span{color:#a1b6bf;font-size:15px}
 .g49.sm{width:min(240px,40vw);margin:0 auto;gap:6px}
 .sec.dark .g49 i{background:#26343b}.sec.dark .g49 i.on{background:var(--gold)}.sec.dark .g49.lead i.on{background:#e8eef1}
 
@@ -203,6 +201,56 @@ p{margin:0}
 footer{padding:34px 0 50px;font-size:13px;color:var(--ink2)}
 footer p{margin-top:12px;max-width:720px}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.chip,.live,.typing i{animation:none}.feed li,.job,.scr{animation:none}}
+.mp{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:30px;align-items:start}
+.mp-map{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:1;max-width:620px;width:100%;margin:0 auto}
+.mp-map img{width:100%;height:100%;object-fit:cover;filter:brightness(.92)}
+.pt{position:absolute;transform:translate(-50%,-50%);width:8.2%;aspect-ratio:1;border-radius:50%;border:2px solid #fff;display:grid;place-items:center;font-weight:800;font-size:clamp(10px,1.9vw,14px);color:#1d1d1f;cursor:pointer;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.25);transition:transform .25s,box-shadow .25s;opacity:0;animation:pop .45s ease forwards}
+.pt.g{background:#2fbf7a;color:#fff}.pt.a{background:#e9c98f}.pt.r{background:#e5675b;color:#fff}
+.pt.home{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 7px rgba(47,191,122,.35)}
+.pt.sel{transform:translate(-50%,-50%) scale(1.3);box-shadow:0 0 0 5px rgba(255,255,255,.65),0 6px 16px rgba(0,0,0,.35);z-index:3}
+@keyframes pop{from{opacity:0;transform:translate(-50%,-50%) scale(.3)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+.pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-150%);background:#1d1d1f;color:#fff;font-size:11px;font-weight:700;border-radius:8px;padding:3px 7px;white-space:nowrap;pointer-events:none;z-index:4}
+.mp-side{display:flex;flex-direction:column;align-items:center;gap:16px}
+.phone.sm{width:300px;min-height:360px;background:#fff;color:#1d1d1f;border-color:#2b3a42}
+.phone.sm .ph-top{border-bottom:1px solid var(--line)}
+.srch{margin:12px 2px;background:#f1f3f4;border-radius:999px;padding:9px 14px;font-size:14px;color:#3c4043}
+.res{list-style:none;margin:0;padding:0}
+.res li{display:flex;gap:10px;align-items:center;padding:10px 4px;border-bottom:1px solid #eef0f2;font-size:14px;animation:inF .4s ease both}
+.res li b{width:24px;height:24px;border-radius:50%;background:#e8eef1;display:grid;place-items:center;font-size:12px;flex:none}
+.res li.me{background:#e9f7f0;border-radius:10px}.res li.me b{background:#2fbf7a;color:#fff}
+.you{margin-top:12px;font-size:14px;color:#3c4043;background:#fbf3e3;border-radius:12px;padding:10px 12px}
+.you b{color:#8a5a12}
+.legend{display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#a1b6bf}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;vertical-align:-1px}
+.vs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;text-align:center}
+.vs b{display:block;font-size:clamp(28px,5vw,46px)}.vs span{color:#a1b6bf;font-size:14px}
+@media (min-width:900px){.mp{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-top:26px;padding-bottom:4px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;font:inherit;font-size:14.5px;font-weight:600;border:0;background:var(--gray);color:var(--ink);border-radius:999px;padding:10px 16px;cursor:pointer}
+.tabs button.on{background:var(--ink);color:#fff}
+.sv{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;margin-top:22px;background:var(--gray);border-radius:28px;padding:26px;align-items:center}
+.sv-dev{display:flex;justify-content:center;animation:inF .5s ease both}
+.sv-info h3{font-size:28px;margin-top:12px}.sv-info p{color:var(--ink2);margin-top:8px}
+.sv-info dl{margin:16px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15px}.sv-info dt{color:var(--ink2)}.sv-info dd{margin:0;font-weight:600}
+@media (min-width:860px){.sv{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);padding:36px}}
+.dv{width:310px;background:#fff;border-radius:38px;border:8px solid #1d1d1f;overflow:hidden;box-shadow:0 30px 60px rgba(14,36,48,.18)}
+.dv-h{display:flex;align-items:center;gap:10px;padding:14px 14px 10px}
+.dv-h img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.dv-h b{display:block;font-size:14px}.dv-h small{display:block;font-size:12px;color:#6e6e73}
+.dv-img{position:relative}.dv-img img{width:100%;aspect-ratio:1;object-fit:cover}
+.dv-img .ov{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(transparent,rgba(8,30,38,.85));color:#fff}
+.dv-img .ov small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#e9c98f;font-weight:700}
+.dv-img .ov b{display:block;font-size:20px;line-height:1.15;margin-top:4px}
+.dv-t{padding:12px 14px 16px;font-size:13.5px;line-height:1.45;color:#1d1d1f}
+.dv-t .btn{display:inline-block;margin-top:10px;background:#1a73e8;color:#fff;border-radius:999px;padding:7px 14px;font-weight:600;font-size:13px}
+.ml{width:min(460px,100%);background:#fff;border-radius:18px;box-shadow:0 30px 60px rgba(14,36,48,.16);overflow:hidden;font-size:14px}
+.ml-h{padding:14px 18px;border-bottom:1px solid var(--line);font-size:13px;color:#6e6e73;line-height:1.6}.ml-h b{color:#1d1d1f}
+.ml-b{padding:18px}
+.ml-b h4{margin:0 0 10px;font-size:18px}
+.ml-row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #f0f2f4}.ml-row span{color:#6e6e73}
+.ml-b .pill{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:3px 8px;background:#e9f7f0;color:#1e8a57}
+.ml-b p{margin:0 0 10px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -290,6 +338,18 @@ footer p{margin-top:12px;max-width:720px}
   </div>
 </section>
 
+<section class="sec" id="samples">
+  <div class="wrap">
+    <h2 class="big rv">See exactly what you get.</h2>
+    <p class="lead rv">Examples of what goes out in your name. We write it, design it and send it. You approve it.</p>
+    <div class="tabs rv" id="sTabs" role="tablist"></div>
+    <div class="sv rv">
+      <div class="sv-dev" id="sDev"></div>
+      <div class="sv-info"><span class="tagS">Sample</span><h3 id="sT"></h3><p id="sW"></p><dl><dt>How often</dt><dd id="sF"></dd><dt>Your part</dt><dd id="sY"></dd></dl></div>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="time">
   <div class="wrap">
     <h2 class="big rv">Your desk, cleared.</h2>
@@ -304,14 +364,29 @@ footer p{margin-top:12px;max-width:720px}
 
 <section class="sec dark" id="gap">
   <div class="wrap">
-    <h2 class="big rv">Right now, patients see someone else first.</h2>
-    <div class="vs rv">
-      <div><div class="g49 sm" id="gYou"></div><b>1 of 49</b><span>map spots where you show in the top 3</span></div>
-      <div><div class="g49 sm lead" id="gLead"></div><b>69%</b><span>of spots where the leading practice shows in the top 3</span></div>
+    <p class="h-eye rv" style="color:var(--gold)">What patients see today</p>
+    <h2 class="big rv">At 48 of 49 spots near you, you are not in the top 3.</h2>
+    <p class="lead rv" style="color:#a1b6bf">Each circle is a real spot on a grid reaching 5 miles out from your office. The number is where you show up when a patient standing there searches Google Maps for "colorectal surgeon". Tap any circle to see what that patient sees.</p>
+    <div class="mp rv">
+      <div class="mp-map" id="mpMap"><img src="images/map.jpg" alt="Street map of the 5 miles around Arizona Preferred Surgeons" width="800" height="800"></div>
+      <div class="mp-side">
+        <div class="phone sm"><div class="ph-top"><b>Google Maps</b><span class="tagS" style="background:#e8eef1;color:#1d1d1f">Real result</span></div>
+          <div class="srch">colorectal surgeon</div>
+          <ol class="res" id="mpRes"></ol>
+          <div class="you" id="mpYou"></div>
+        </div>
+        <div class="legend"><span><i style="background:#2fbf7a"></i>Top 3, patients see you</span><span><i style="background:#e9c98f"></i>4 to 10, patients scroll past you</span><span><i style="background:#e5675b"></i>11 or lower, hard to find</span></div>
+      </div>
     </div>
-    <p class="fine rv">Your 4.8 star reviews are already strong. The gap is how your presence is set up. Google Maps check for "colorectal surgeon" at 49 points around your office, November 1, 2026.</p>
+    <div class="vs rv">
+      <div><b>1&nbsp;of&nbsp;49</b><span>spots where you are in the top 3</span></div>
+      <div><b>34&nbsp;of&nbsp;49</b><span>spots where the leading practice is in the top 3</span></div>
+      <div><b>4.8</b><span>your rating, higher than the leader's 4.3</span></div>
+    </div>
+    <p class="fine rv">Your reviews are not the problem. How your presence is set up is. Google Maps check for "colorectal surgeon" at 49 points around your office, November 1, 2026. Map data © OpenStreetMap contributors.</p>
   </div>
 </section>
+
 
 <section class="sec" id="worth">
   <div class="wrap">
@@ -407,11 +482,6 @@ footer p{margin-top:12px;max-width:720px}
   order.sort(function(a,b){return a.d-b.d});var rank={};order.forEach(function(o,n){rank[o.i]=n});
   function light(dots,n){for(var i=0;i<49;i++)dots[i].classList.toggle('on',rank[i]<n);}
   var hl=grid($('g49'));
-  var you=grid($('gYou'));light(you,1);
-  var lead=grid($('gLead'));
-  // leader: 34 of 49 (about 69%), spread across the grid
-  var lo=[];for(var i=0;i<49;i++)lo.push(i);lo.sort(function(a,b){return ((a*37)%49)-((b*37)%49)});
-  onView($('gLead'),function(){lo.slice(0,34).forEach(function(i,n){setTimeout(function(){lead[i].classList.add('on')},still?0:n*35)});});
 
   // carousel
   var track=$('track'),slides=[].slice.call(track.children),dots=$('dots'),cur=0,playing=!still,timer;
@@ -462,6 +532,45 @@ footer p{margin-top:12px;max-width:720px}
 })();
 </script>
 
+<script>
+(function(){
+  var D=[[5.37, 5.37, 7, ["Center for Colorectal Disease of Arizona", "Colon and Rectal Center of Arizona", "Dr. Neeraj Singh"]], [20.25, 5.37, 7, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [35.12, 5.37, 8, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [50.0, 5.37, 10, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [64.88, 5.37, 10, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [79.75, 5.37, 10, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [94.63, 5.37, 11, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [5.37, 20.26, 5, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "Colon and Rectal Center of Arizona"]], [20.25, 20.26, 6, ["Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona", "Dr. Neeraj Singh"]], [35.12, 20.26, 6, ["Dr. Neeraj Singh", "Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona"]], [50.0, 20.26, 6, ["Dr. Neeraj Singh", "Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona"]], [64.88, 20.26, 7, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [79.75, 20.26, 8, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Dr. Tafadzwa Makarawo"]], [94.63, 20.26, 8, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Dr. Tafadzwa Makarawo"]], [5.37, 35.14, 5, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "Dr. Tafadzwa Makarawo"]], [20.25, 35.14, 7, ["Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona", "Center for Colorectal Disease of Arizona"]], [35.12, 35.14, 6, ["Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona", "Dr. Neeraj Singh"]], [50.0, 35.14, 6, ["Dr. Neeraj Singh", "Colon and Rectal Center of Arizona", "Dr. Tafadzwa Makarawo"]], [64.88, 35.14, 8, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [79.75, 35.14, 8, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [94.63, 35.14, 10, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Dr. Tafadzwa Makarawo"]], [5.37, 50.02, 6, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "Colon and Rectal Center of Arizona"]], [20.25, 50.02, 6, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "Dr. Tafadzwa Makarawo"]], [35.12, 50.02, 7, ["Center for Colorectal Disease of Arizona", "Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona"]], [50.0, 50.02, 3, ["Colon and Rectal Center of Arizona", "Dr. Tafadzwa Makarawo", "Dr. Ylli Zhubi"]], [64.88, 50.02, 7, ["Colon and Rectal Center of Arizona", "Dr. Tafadzwa Makarawo", "Dr. Neeraj Singh"]], [79.75, 50.02, 8, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]], [94.63, 50.02, 9, ["Dr. Neeraj Singh", "Dr. Tafadzwa Makarawo", "McConnell Colorectal Center"]], [5.37, 64.9, 8, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "Dr. P.S. Ramanujam"]], [20.25, 64.9, 10, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "Dr. Tafadzwa Makarawo"]], [35.12, 64.9, 7, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "Dr. Tafadzwa Makarawo"]], [50.0, 64.9, 8, ["Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona", "Center for Colorectal Disease of Arizona"]], [64.88, 64.9, 8, ["Colon and Rectal Center of Arizona", "Dr. Tafadzwa Makarawo", "Dr. Neeraj Singh"]], [79.75, 64.9, 7, ["Dr. Neeraj Singh", "Colon and Rectal Center of Arizona", "Dr. Tafadzwa Makarawo"]], [94.63, 64.9, 6, ["Dr. Neeraj Singh", "Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona"]], [5.37, 79.77, 14, ["Center for Colorectal Disease of Arizona", "Dr. P.S. Ramanujam", "Dr. Hadi Razavi Najafian"]], [20.25, 79.77, 10, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "St. Joseph's Westgate colorectal surgery"]], [35.12, 79.77, 8, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "Colon and Rectal Center of Arizona"]], [50.0, 79.77, 8, ["Center for Colorectal Disease of Arizona", "Colon and Rectal Center of Arizona", "Dr. Tafadzwa Makarawo"]], [64.88, 79.77, 8, ["Colon and Rectal Center of Arizona", "Dr. Tafadzwa Makarawo", "Center for Colorectal Disease of Arizona"]], [79.75, 79.77, 9, ["Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona", "Dr. Neeraj Singh"]], [94.63, 79.77, 8, ["Dr. Tafadzwa Makarawo", "Colon and Rectal Center of Arizona", "Dr. Neeraj Singh"]], [5.37, 94.64, 13, ["Center for Colorectal Disease of Arizona", "St. Joseph's Westgate colorectal surgery", "Hemorrhoid Center of Arizona"]], [20.25, 94.64, 14, ["Center for Colorectal Disease of Arizona", "St. Joseph's Westgate colorectal surgery", "Hemorrhoid Center of Arizona"]], [35.12, 94.64, 13, ["Center for Colorectal Disease of Arizona", "St. Joseph's Westgate colorectal surgery", "Hemorrhoid Center of Arizona"]], [50.0, 94.64, 13, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "St. Joseph's Westgate colorectal surgery"]], [64.88, 94.64, 13, ["Center for Colorectal Disease of Arizona", "Hemorrhoid Center of Arizona", "Colon and Rectal Center of Arizona"]], [79.75, 94.64, 12, ["Dr. Neeraj Singh", "Center for Colorectal Disease of Arizona", "Colon and Rectal Center of Arizona"]], [94.63, 94.64, 14, ["Dr. Neeraj Singh", "McConnell Colorectal Center", "Colon and Rectal Center of Arizona"]]];
+  var map=document.getElementById('mpMap'),res=document.getElementById('mpRes'),you=document.getElementById('mpYou'),btns=[],auto=true,ai=0;
+  D.forEach(function(p,i){var b=document.createElement('button');b.type='button';var r=p[2];b.className='pt '+(r&&r<=3?'g':r&&r<=10?'a':'r')+(i===24?' home':'');b.style.left=p[0]+'%';b.style.top=p[1]+'%';b.style.animationDelay=(i*25)+'ms';b.textContent=r?(r>20?'20+':r):'20+';b.setAttribute('aria-label','Spot '+(i+1)+', you rank '+(r||'20+'));b.addEventListener('click',function(){auto=false;sel(i)});map.appendChild(b);btns.push(b);});
+  var pin=document.createElement('div');pin.className='pin';pin.textContent='Your office';map.appendChild(pin);
+  function sel(i){var p=D[i];btns.forEach(function(b,j){b.classList.toggle('sel',j===i)});res.innerHTML='';p[3].forEach(function(n,k){var li=document.createElement('li');if(n==='Dr. Ylli Zhubi')li.className='me';li.innerHTML='<b>'+(k+1)+'</b><span>'+n+'</span>';li.style.animationDelay=(k*90)+'ms';res.appendChild(li);});
+    var r=p[2];you.innerHTML=(r&&r<=3)?'<b>You are in the top 3 here.</b> This is the one spot where patients see you without scrolling.':'<b>You are #'+(r||'20+')+' here.</b> A patient has to scroll past '+((r||21)-1)+' other listings to find you.';}
+  var tour=[24,10,17,31,44,2];sel(24);
+  setInterval(function(){if(!auto)return;ai=(ai+1)%tour.length;sel(tour[ai]);},3200);
+})();
+
+(function(){
+  var head='<div class="dv-h"><img src="images/zhubi.jpg" alt=""><div><b>Dr. Ylli Zhubi</b><small>Arizona Preferred Surgeons</small></div></div>';
+  var S=[
+   ['Google post','A post on your Google profile, where patients compare surgeons on the map.','7 days a week','Nothing. Approve the month in one tap if you like.',
+    '<div class="dv">'+head+'<div class="dv-img"><img src="images/hallway.jpg" alt=""><div class="ov"><small>Patient question</small><b>What does recovery from robotic colon surgery look like?</b></div></div><div class="dv-t">Most patients ask how soon they can get back to normal life. Here is what to expect, and what to ask at your consult.<br><span class="btn">Call</span></div></div>'],
+   ['Instagram','Your face and your expertise, not only the hospital’s, in front of patients and referring offices.','3 times a week, also on Facebook and LinkedIn','A quick yes on the monthly plan.',
+    '<div class="dv">'+head+'<div class="dv-img"><img src="images/clinic.jpg" alt=""><div class="ov"><small>Turned 45?</small><b>Average risk screening starts at 45. Ask your doctor.</b></div></div><div class="dv-t"><b>Dr. Ylli Zhubi</b> A simple reminder for anyone who just turned 45. Share it with someone who needs to hear it. #ColonHealth #Glendale</div></div>'],
+   ['LinkedIn','Your professional voice, where referring doctors and hospital leaders already are.','3 times a week, with Instagram and Facebook','Approve, or tell us what to change.',
+    '<div class="dv">'+head+'<div class="dv-t" style="padding-top:2px">Three things I wish every primary care office knew about when to send a patient for a colorectal opinion. A short thread for my colleagues in the West Valley.</div><div class="dv-img"><img src="images/zhubi.jpg" alt="" style="object-position:top"><div class="ov"><small>For referring colleagues</small><b>When to refer: three signals worth a call</b></div></div></div>'],
+   ['Weekly report','One short email that tells you if it is working, in plain numbers.','Every Monday on Strategy','Read it in two minutes.',
+    '<div class="ml"><div class="ml-h"><b>LocalLift</b><br>Subject: Your week, Dr. Zhubi</div><div class="ml-b"><h4>Your week at a glance</h4><div class="ml-row"><span>Map spots in the top 3</span><b>Sample</b></div><div class="ml-row"><span>Calls by source</span><b>Sample</b></div><div class="ml-row"><span>Named in AI answers</span><b>Sample</b></div><div class="ml-row"><span>New reviews</span><b>Sample</b></div><div class="ml-row"><span>What we did this week</span><b>Posts, listings, letters</b></div><p style="margin-top:12px;color:#6e6e73">Your real numbers start with your first week, using today as the starting line.</p></div></div>'],
+   ['Monday Five','Five referring doctors worth a personal call this week, and why.','Every Monday','A few calls, if you choose.',
+    '<div class="ml"><div class="ml-h"><b>Referral Desk</b><br>Subject: Your Monday Five</div><div class="ml-b"><div class="ml-row"><span>Dr. A, family medicine</span><span class="pill">Quiet 90 days</span></div><div class="ml-row"><span>Dr. B, internal medicine</span><span class="pill">New to the area</span></div><div class="ml-row"><span>Dr. C, women’s health</span><span class="pill">Sent 3 this quarter</span></div><div class="ml-row"><span>Office manager, Dr. D</span><span class="pill">New in role</span></div><div class="ml-row"><span>Dr. E, GI</span><span class="pill">Replied to newsletter</span></div><p style="margin-top:12px;color:#6e6e73">Sample names.</p></div></div>'],
+   ['Referral letter','A warm note from you to a referring office. Never a sales pitch.','As it fits, on Referral Desk','Read it and tap approve.',
+    '<div class="ml"><div class="ml-h"><b>From</b> Dr. Ylli Zhubi<br><b>To</b> Dr. Elena Marsh, Saguaro Bend Family Practice (fictional)</div><div class="ml-b"><p>Dear Dr. Marsh,</p><p>I wanted to send a brief note to say thank you for the working relationship between our offices this year. It means a great deal to me.</p><p>If your team ever has a question about a colorectal concern, my office is glad to help.</p><p>Warm regards,<br>Dr. Ylli Zhubi</p><span class="pill">Waiting for your approval</span></div></div>'],
+   ['Newsletter','A short, friendly note to every office on your list.','Four times a year','Approve the issue.',
+    '<div class="ml"><div class="ml-h"><b>Subject</b> Colon and Rectal Notes, Winter 2027</div><div class="ml-b"><h4>A short note for referring offices</h4><div class="ml-row"><span>Looking ahead</span><b>March is Colorectal Cancer Awareness Month</b></div><div class="ml-row"><span>Quick reminder</span><b>Average risk screening starts at 45</b></div><div class="ml-row"><span>Our team</span><b>Three surgeons, one Glendale office</b></div><div class="ml-row"><span>Reach us</span><b>602.995.0822</b></div></div></div>'],
+   ['Call Proof','Every tracked call and where it came from, so you can see what pays.','Weekly on Strategy, in your monthly review on Visibility','Nothing. Your front desk logs nothing.',
+    '<div class="ml"><div class="ml-h"><b>Call Proof</b><br>Subject: Calls by source, this week</div><div class="ml-b"><div class="ml-row"><span>Google Maps</span><b>4</b></div><div class="ml-row"><span>Your website</span><b>2</b></div><div class="ml-row"><span>Referring offices</span><b>2</b></div><div class="ml-row"><span>Other</span><b>1</b></div><p style="margin-top:12px;color:#6e6e73">Sample week. We never record or listen to calls.</p></div></div>']
+  ];
+  var tabs=document.getElementById('sTabs');
+  S.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s[0];b.addEventListener('click',function(){show(i)});tabs.appendChild(b);});
+  function show(i){var s=S[i];[].forEach.call(tabs.children,function(b,j){b.classList.toggle('on',j===i)});var d=document.getElementById('sDev');d.innerHTML=s[4];d.style.animation='none';void d.offsetWidth;d.style.animation='';document.getElementById('sT').textContent=s[0];document.getElementById('sW').textContent=s[1];document.getElementById('sF').textContent=s[2];document.getElementById('sY').textContent=s[3];}
+  show(0);
+})();
+
+</script>
 <!-- protect -->
 <style>
 .wm{position:fixed;inset:0;z-index:9998;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22420%22%20height%3D%22260%22%3E%3Ctext%20x%3D%22210%22%20y%3D%22130%22%20text-anchor%3D%22middle%22%20transform%3D%22rotate%28-24%20210%20130%29%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22%230e2430%22%20fill-opacity%3D%220.07%22%3EPrepared%20for%20Dr.%20Ylli%20Zhubi%20%C2%B7%20The%20SocialDM%3C/text%3E%3C/svg%3E");background-repeat:repeat}
