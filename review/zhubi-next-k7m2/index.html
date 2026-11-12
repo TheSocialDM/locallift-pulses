@@ -251,13 +251,39 @@ footer p{margin-top:12px;max-width:720px}
 .ml-row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #f0f2f4}.ml-row span{color:#6e6e73}
 .ml-b .pill{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:3px 8px;background:#e9f7f0;color:#1e8a57}
 .ml-b p{margin:0 0 10px;line-height:1.5}
+.ai{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;margin-top:30px;align-items:start}
+.ai-l{display:flex;flex-direction:column;align-items:center;gap:14px}
+.ai-tabs{display:flex;gap:6px;background:#1c262b;border-radius:999px;padding:5px}
+.ai-tabs button{font:inherit;font-size:14px;font-weight:600;border:0;border-radius:999px;padding:8px 14px;background:transparent;color:#a1b6bf;cursor:pointer}
+.ai-tabs button.on{background:#fff;color:#1d1d1f}
+.ai-ph{width:320px;min-height:470px;background:#fff;color:#1d1d1f;border-color:#2b3a42;padding:18px 16px}
+.ai-top{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.ai-q{margin:14px 0 12px auto;background:#f1f3f4;border-radius:18px 18px 4px 18px;padding:10px 14px;font-size:14px;max-width:85%;min-height:40px}
+.ai-a{font-size:13.5px;line-height:1.45;color:#3c4043}
+.ai-a .doc{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid #eef0f2;animation:inF .4s ease both}
+.ai-a .doc b{width:24px;height:24px;border-radius:50%;background:#e8eef1;display:grid;place-items:center;font-size:12px;flex:none}
+.ai-a .doc span{font-weight:600;color:#1d1d1f}.ai-a .doc small{display:block;font-weight:400;color:#6e6e73;font-size:12px}
+.ai-miss{margin-top:14px;background:#fdecea;color:#a1271b;border-radius:12px;padding:10px 12px;font-size:14px;opacity:0;transition:opacity .4s}
+.ai-miss.show{opacity:1}
+.ai-r{display:flex;flex-direction:column;gap:12px}
+.score{background:#1c262b;border-radius:20px;padding:16px 18px}
+.score span{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#a1b6bf}
+.score b{display:block;font-size:40px;line-height:1.1;margin-top:4px}.score b.red{color:#e5675b}
+.score small{color:#a1b6bf;font-size:14px}
+.quote{background:#fbf3e3;color:#3b2a06;border-radius:20px;padding:18px;font-size:17px;font-weight:600;line-height:1.4}
+.quote span{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a5a12;margin-bottom:8px}
+.quote small{display:block;margin-top:10px;font-size:14px;font-weight:400;color:#6b4a10}
+@media (min-width:900px){.ai{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.three{margin-top:24px;background:#fbf3e3;color:#3b2a06;border-radius:20px;padding:20px 22px}
+.three b{display:block;font-size:22px;margin-bottom:6px}
+.three p{color:#6b4a10;font-size:15.5px}
 </style>
 </head>
 <body>
 <div class="conf">Confidential. Prepared for Dr. Ylli Zhubi and Arizona Preferred Surgeons.</div>
 <nav class="nav"><div class="nav-in">
   <a class="nb" href="#top"><img src="images/socialdm-logo.png" alt="The SocialDM" width="240" height="198"><span>LocalLift</span></a>
-  <div class="nav-r"><a class="pill-o" href="#closer">How it works</a><a class="pill-b" href="#go">Pick a time</a></div>
+  <div class="nav-r"><a class="pill-o" href="#ai">Ask AI</a><a class="pill-b" href="#go">Pick a time</a></div>
 </div></nav>
 
 <main id="top">
@@ -277,6 +303,31 @@ footer p{margin-top:12px;max-width:720px}
     </div>
   </div>
   <a class="clock-pill rv" href="#go"><span>Your rates hold</span><b><i id="cdD">8</i> days <i id="cdH">0</i> hrs</b><span>through Friday, Nov 20</span></a>
+</section>
+
+<section class="sec dark" id="ai">
+  <div class="wrap">
+    <p class="h-eye rv" style="color:var(--gold)">We asked AI from your waiting room</p>
+    <h2 class="big rv">Patients ask AI now. Today, it names someone else.</h2>
+    <p class="lead rv" style="color:#a1b6bf">The question patients actually type, asked from your office address on November 12, 2026. Real answers, nothing staged.</p>
+    <div class="ai rv">
+      <div class="ai-l">
+        <div class="ai-tabs" id="aiTabs"></div>
+        <div class="phone ai-ph"><div class="ai-top"><span id="aiName">ChatGPT</span><span class="tagS" style="background:#e8eef1;color:#1d1d1f">Real answer</span></div>
+          <div class="ai-q" id="aiQ"></div>
+          <div class="ai-a" id="aiA"></div>
+          <div class="ai-miss" id="aiMiss">Dr. Zhubi: <b>not named</b></div>
+        </div>
+      </div>
+      <div class="ai-r">
+        <div class="score"><span>ChatGPT</span><b>4 of 9</b><small>spots around you that name you. Not at your own office.</small></div>
+        <div class="score"><span>Gemini</span><b class="red">0 of 9</b><small>spots that name you. Not once.</small></div>
+        <div class="score"><span>Google AI Mode</span><b>2 of 9</b><small>spots that name you, and never in the top 3.</small></div>
+        <div class="quote"><span>What ChatGPT told the patient</span>"Make sure the surgeon is board-certified specifically in Colon and Rectal Surgery, not just general surgery."<small>Your Google profile category reads only "Surgeon" (checked November 12). Where Google AI Mode does name you, it calls your practice "general and specialty surgical". To AI, that reads like general surgery, not a colorectal specialist.</small></div>
+      </div>
+    </div>
+    <p class="fine rv">Question: "best colorectal surgeon in Glendale AZ". Checked on ChatGPT, Gemini and Google AI Mode at 9 points within 3 miles of your office, November 12, 2026. Answers shortened to the doctors named.</p>
+  </div>
 </section>
 
 <section class="sec" id="highlights">
@@ -378,6 +429,7 @@ footer p{margin-top:12px;max-width:720px}
         <div class="legend"><span><i style="background:#2fbf7a"></i>Top 3, patients see you</span><span><i style="background:#e9c98f"></i>4 to 10, patients scroll past you</span><span><i style="background:#e5675b"></i>11 or lower, hard to find</span></div>
       </div>
     </div>
+    <div class="three rv"><b>Is #3 good? Only at your front door.</b><p>Your office is the one spot where you reach the top 3, and even there two other listings sit above you. Less than 2 miles away you drop to #6, #7 and #8. And from that same office, ChatGPT, Gemini and Google AI Mode name other surgeons, not you.</p></div>
     <div class="vs rv">
       <div><b>1&nbsp;of&nbsp;49</b><span>spots where you are in the top 3</span></div>
       <div><b>34&nbsp;of&nbsp;49</b><span>spots where the leading practice is in the top 3</span></div>
@@ -505,7 +557,7 @@ footer p{margin-top:12px;max-width:720px}
   // closer look
   var days=[
     ['Monday','Your Monday Five arrives.','<h5>Monday 7:00 am</h5><div class="card-d"><b>Your Monday Five</b><small>Five referring doctors worth a call this week</small></div><div class="card-d"><b>Dr. A, family medicine</b><small>Sent 3 patients last quarter, quiet since</small></div><div class="card-d"><b>Dr. B, internal medicine</b><small>New to the area, not yet on your list</small></div><small style="color:#9fbac6">Sample names</small>'],
-    ['Tuesday','A patient searches. You show up.','<h5>Google Maps</h5><div class="card-d"><b>colorectal surgeon near me</b><small>Glendale, AZ</small></div><div class="mini49" id="m49"></div><div class="card-d"><b>Dr. Ylli Zhubi</b><small>4.8 stars, 74 reviews</small><span class="okb">Top 3 here</span></div><small style="color:#9fbac6">Sample of the goal we work toward</small>'],
+    ['Tuesday','A patient searches. You show up.','<h5>Google Maps</h5><div class="card-d"><b>colorectal surgeon near me</b><small>Glendale, AZ</small></div><div class="mini49" id="m49"></div><div class="card-d"><b>Dr. Ylli Zhubi</b><small>4.8 stars, 75 reviews</small><span class="okb">Top 3 here</span></div><small style="color:#9fbac6">Sample of the goal we work toward</small>'],
     ['Wednesday','AI names you.','<h5>AI answer</h5><div class="bub me">Who is a good colorectal surgeon near Glendale?</div><div class="bub">One option is <b>Dr. Ylli Zhubi</b> at Arizona Preferred Surgeons, with strong patient reviews.</div><small style="color:#9fbac6">Sample of the goal we work toward</small>'],
     ['Thursday','The phone rings. Call Proof logs it.','<h5>Call Proof</h5><div class="card-d"><b>Google Maps</b><small>Thu 10:31 am, 7 min</small><span class="okb">First time caller</span></div><div class="card-d"><b>AI answer</b><small>Thu 2:05 pm, 4 min</small><span class="okb">First time caller</span></div><small style="color:#9fbac6">Sample. We never record or listen to calls.</small>'],
     ['Friday','Letters you approved go out.','<h5>Referral Desk</h5><div class="card-d"><b>Thank you note</b><small>To a referring office, in your name</small><span class="okb">Approved by you</span></div><div class="card-d"><b>Quarterly newsletter</b><small>To every office on your list</small><span class="okb">Scheduled</span></div>'],
@@ -568,6 +620,29 @@ footer p{margin-top:12px;max-width:720px}
   S.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.textContent=s[0];b.addEventListener('click',function(){show(i)});tabs.appendChild(b);});
   function show(i){var s=S[i];[].forEach.call(tabs.children,function(b,j){b.classList.toggle('on',j===i)});var d=document.getElementById('sDev');d.innerHTML=s[4];d.style.animation='none';void d.offsetWidth;d.style.animation='';document.getElementById('sT').textContent=s[0];document.getElementById('sW').textContent=s[1];document.getElementById('sF').textContent=s[2];document.getElementById('sY').textContent=s[3];}
   show(0);
+})();
+
+</script>
+<script>
+(function(){
+  var Q='best colorectal surgeon in Glendale AZ';
+  var A=[
+    ['ChatGPT',[['Dr. Tafadzwa Makarawo','Colon & Rectal Center of Arizona'],['Dr. Neeraj Singh','Colon and Rectal Care Center of Phoenix'],['Dr. Helen Hall','Banner Health']]],
+    ['Gemini',[['Dr. Neeraj Singh','Colon & Rectal Care Center of Phoenix'],['Dr. Adrienne Forstner-Barthell','Colon and Rectal Center of Arizona'],['Dr. Elizabeth McConnell','McConnell Colorectal Center']]],
+    ['Google AI Mode',[['Dr. Neeraj Singh','Colon & Rectal Care Center of Phoenix'],['Dr. Elizabeth McConnell','Beardsley Surgery Center'],['Dr. Helen Chang Hall','Banner Health'],['Dr. Aisha Akhtar','MyColonDoc']]]
+  ];
+  var tabs=document.getElementById('aiTabs'),cur=0,auto=true,tm=[];
+  A.forEach(function(a,i){var b=document.createElement('button');b.type='button';b.textContent=a[0];b.addEventListener('click',function(){auto=false;run(i)});tabs.appendChild(b);});
+  function clear(){tm.forEach(clearTimeout);tm=[];}
+  function run(i){clear();cur=i;var a=A[i];[].forEach.call(tabs.children,function(b,j){b.classList.toggle('on',j===i)});
+    document.getElementById('aiName').textContent=a[0];var q=document.getElementById('aiQ'),ans=document.getElementById('aiA'),miss=document.getElementById('aiMiss');
+    q.textContent='';ans.innerHTML='';miss.classList.remove('show');
+    var k=0;(function t(){if(k<=Q.length){q.textContent=Q.slice(0,k++);tm.push(setTimeout(t,35));}else{
+      a[1].forEach(function(d,n){tm.push(setTimeout(function(){var e=document.createElement('div');e.className='doc';e.innerHTML='<b>'+(n+1)+'</b><div><span>'+d[0]+'</span><small>'+d[1]+'</small></div>';ans.appendChild(e);},400+n*450));});
+      tm.push(setTimeout(function(){miss.classList.add('show')},500+a[1].length*450));
+      tm.push(setTimeout(function(){if(auto)run((cur+1)%A.length)},2600+a[1].length*450));}})();}
+  var started=false,el=document.getElementById('ai');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!started){started=true;run(0)}})},{threshold:.25}).observe(el);}else run(0);
 })();
 
 </script>
