@@ -278,6 +278,14 @@ footer p{margin-top:12px;max-width:720px}
 .three b{display:block;font-size:22px;margin-bottom:6px}
 .three p{color:#6b4a10;font-size:15.5px}
 </style>
+<style>
+.cp-note{max-width:640px;margin:26px auto 0;padding:0 22px;text-align:center;font-size:16px;line-height:1.5;color:#4a5560}
+.cp-note b{color:#1d1d1f}
+.tk{display:inline-block;animation:tkf .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes tkf{0%{transform:translateY(-35%);opacity:0}100%{transform:none;opacity:1}}
+#cdS,#cd2S{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.tk{animation:none}}
+</style>
 </head>
 <body>
 <div class="conf">Confidential. Prepared for Dr. Ylli Zhubi and Arizona Preferred Surgeons.</div>
@@ -302,7 +310,8 @@ footer p{margin-top:12px;max-width:720px}
       <div class="ph-sum"><b id="feedCount">0</b><span>first time callers this week</span></div>
     </div>
   </div>
-  <a class="clock-pill rv" href="#go"><span>Your rates hold</span><b><i id="cdD">8</i> days <i id="cdH">0</i> hrs</b><span>through Friday, Nov 20</span></a>
+  <p class="cp-note rv"><b>Call Proof is our call tracking.</b> Calls still ring straight to your office. You see how many new calls came in each week and where they came from, such as Google Maps, your website, an AI answer, social or a referring office. Nothing changes for your front desk, and we never record or listen to calls.</p>
+  <a class="clock-pill rv" href="#go"><span>Your rates hold</span><b><i id="cdD">8</i>d <i id="cdH">0</i>h <i id="cdM">0</i>m <i id="cdS">0</i>s</b><span>through Friday, Nov 20</span></a>
 </section>
 
 <section class="sec dark" id="ai">
@@ -348,7 +357,7 @@ footer p{margin-top:12px;max-width:720px}
           </div>
         </article>
         <article class="slide">
-          <h3>See your calls, and where they came from.<br><span>Call Proof, new since we met.</span></h3>
+          <h3>See your calls, and where they came from.<br><span>Call Proof, our call tracking, new since we met.</span></h3>
           <div class="vis bars" id="srcBars">
             <div><span>Google Maps</span><i><em style="--w:72%"></em></i><b>13</b></div>
             <div><span>Your website</span><i><em style="--w:44%"></em></i><b>8</b></div>
@@ -492,7 +501,7 @@ footer p{margin-top:12px;max-width:720px}
     <p class="h-eye rv">Next step</p>
     <h2 class="big rv">15 minutes with Michael and Shelby.</h2>
     <p class="lead rv">We walk through Call Proof, set your break even number together, and answer anything open.</p>
-    <div class="cd rv"><div><b id="cd2D">8</b><span>days</span></div><div><b id="cd2H">0</b><span>hours</span></div><div><b id="cd2M">0</b><span>minutes</span></div></div>
+    <div class="cd rv"><div><b id="cd2D">8</b><span>days</span></div><div><b id="cd2H">0</b><span>hours</span></div><div><b id="cd2M">0</b><span>minutes</span></div><div><b id="cd2S">0</b><span>seconds</span></div></div>
     <p class="fine rv" style="color:#a1b6bf">Your rates and founding practice offer hold through Friday, November 20.</p>
     <a class="pill-b lg rv" href="mailto:info@thesocialdm.com?subject=Dr.%20Zhubi%3A%2015%20minute%20call">Pick a time for a call</a>
     <p class="fine rv" style="color:#a1b6bf;margin-top:22px">We count calls and where they came from. We never record calls or touch your patient records.</p>
@@ -517,9 +526,11 @@ footer p{margin-top:12px;max-width:720px}
 
   // countdown to end of Fri Nov 20 2026, Phoenix (UTC-7)
   var end=Date.UTC(2026,10,21,6,59,59);
-  function tick(){var m=Math.floor(Math.max(0,end-Date.now())/60000),d=Math.floor(m/1440),h=Math.floor(m%1440/60);
-    $('cdD').textContent=d;$('cdH').textContent=h;$('cd2D').textContent=d;$('cd2H').textContent=h;$('cd2M').textContent=m%60;}
-  tick();setInterval(tick,30000);
+  function setT(id,v){var el=$(id);if(!el)return;v=String(v);if(el.textContent!==v){el.textContent=v;el.classList.remove('tk');void el.offsetWidth;el.classList.add('tk');}}
+  function tick(){var s=Math.floor(Math.max(0,end-Date.now())/1000),m=Math.floor(s/60),d=Math.floor(m/1440),h=Math.floor(m%1440/60),mm=m%60,ss=s%60;
+    var p=function(n){return n<10?'0'+n:''+n;};
+    setT('cdD',d);setT('cdH',h);setT('cdM',p(mm));setT('cdS',p(ss));setT('cd2D',d);setT('cd2H',h);setT('cd2M',p(mm));setT('cd2S',p(ss));}
+  tick();setInterval(tick,1000);
 
   // hero call feed
   var calls=[['GM','Google Maps','Tue 9:14 am'],['WS','Your website','Tue 11:02 am'],['RO','Referring office','Wed 8:47 am'],['AI','AI answer','Wed 2:20 pm'],['GM','Google Maps','Thu 10:31 am'],['SO','Social','Fri 9:05 am']];
