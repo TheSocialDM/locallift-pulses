@@ -10,7 +10,7 @@ INDEXNOW_KEY = '7c2f9e41b85a4d6e9f03a1d2c4b6e8f0'
 ORG_ID = SITE + '/#organization'
 SOCIAL = ['https://www.instagram.com/the.socialdm/', 'https://www.facebook.com/thesocialdm',
           'https://www.tiktok.com/@thesocialdm', 'https://www.youtube.com/@thesocialdm',
-          'https://www.linkedin.com/company/thesocialdm', 'https://clutch.co/profile/socialdm']
+          'https://www.linkedin.com/company/thesocialdm', 'https://clutch.co/profile/socialdm', 'https://www.google.com/maps?cid=16697970813285611247']
 ORG = {'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'alternateName': ['TheSocialDM', 'The Social DM'], 'url': SITE + '/',
        'logo': SITE + '/icon-512.png', 'foundingDate': '2019', 'telephone': '+1-602-753-6807',
        'address': {'@type': 'PostalAddress', 'streetAddress': '3104 E Camelback Rd #2161', 'addressLocality': 'Phoenix',

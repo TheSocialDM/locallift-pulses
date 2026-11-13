@@ -53,7 +53,7 @@ def testimonials(group):
                       f'<figcaption><b>{html.escape(r["name"])}</b><span>{html.escape(r["role"])} &middot; {"Google review" if r.get("source","google")=="google" else "Client testimonial"}</span></figcaption></figure>')
     cards = ''.join(card(r) for r in rs)
     head = (f'<div class="wrap tm-head"><div><div class="eyebrow">What clients say</div><h2 class="h2">Rated {d["rating"]:.1f} on Google.</h2></div>'
-            f'<p class="tm-note">From {d["count"]} Google reviews of The SocialDM.</p></div>')
+            f'<p class="tm-note">From <a href="https://www.google.com/maps?cid=16697970813285611247" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">{d["count"]} Google reviews of The SocialDM</a>.</p></div>')
     if len(rs) < 3:
         return f'<section class="block proof-tm" style="padding-top:0">{head}<div class="wrap tm-static">{cards}</div></section>'
     reps = max(1, -(-8 // len(rs)))            # repeat short lists so the loop never shows a gap on wide screens
