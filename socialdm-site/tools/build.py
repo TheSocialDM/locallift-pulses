@@ -476,7 +476,8 @@ ANS = ANSWERS
 
 # ---------- production plumbing ----------
 if PROD:
-    open(OUT + '/_redirects', 'w').write('''/new-page /real-estate 301
+    open(OUT + '/_redirects', 'w').write('''/ig /?utm_source=instagram&utm_medium=social&utm_campaign=bio 302
+/new-page /real-estate 301
 /home / 301
 /apartment-seo-blog-hub /blog 301
 /services-1 /multifamily-marketing-agency 301
