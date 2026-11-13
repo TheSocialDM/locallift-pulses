@@ -51,6 +51,12 @@ META = {
                        'Research from The SocialDM on how renters find apartment communities across social media, Google Search, Google Maps and AI answers.', 'page', None),
  '2026-multifamily-visibility-report': ('The 2026 Multifamily Visibility Report | The SocialDM',
                        'How apartment communities and lease ups are discovered across social media, Google Search, Google Maps and AI search in 2026, from The SocialDM.', 'article', None),
+ 'results': ('Results and Case Studies | Apartment Lease Ups | The SocialDM',
+             'Real apartment lease up results from The SocialDM: Montage in Tigard, Oregon and Huxley Scottsdale, with leasing, Google Maps and AI visibility numbers.', 'results', None),
+ 'montage-case-study': ('Montage Lease Up Case Study | Tigard, OR | The SocialDM',
+             'How The SocialDM marketed Montage, a new 183 home community in Tigard, Oregon, from the planning stage: 82.5% leased seven months after opening.', 'casestudy', 'montage'),
+ 'huxley-case-study': ('Huxley Scottsdale Lease Up Case Study | The SocialDM',
+             'How The SocialDM took over marketing for Huxley Scottsdale mid lease up after its sale to Pillar Communities: 52% leased at takeover, 88% by Nov 2026.', 'casestudy', 'huxley'),
 }
 
 # service pages with a local area instead of the default United States
@@ -59,7 +65,48 @@ AREA = {'phoenix-multifamily-marketing-agency': [{'@type': 'City', 'name': c} fo
 LINKS = [('/', 'Home'), ('/multifamily-marketing-agency', 'Multifamily marketing'), ('/apartment-google-business-profile-management', 'Google Business Profile management'), ('/phoenix-multifamily-marketing-agency', 'Phoenix multifamily marketing agency'), ('https://www.localliftnow.com/', 'LocalLift'),
          ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/med-spa', 'Med Spa'), ('/hair-salon', 'Hair Salons'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Portfolios'),
          ('/blog', 'Market Intelligence blog'), ('/research-insights', 'Research and Insights'),
-         ('/2026-multifamily-visibility-report', '2026 Multifamily Visibility Report'), ('/answers', 'Answers'), ('/about', 'About'), ('/contact', 'Contact')]
+         ('/2026-multifamily-visibility-report', '2026 Multifamily Visibility Report'), ('/answers', 'Answers'), ('/results', 'Results'), ('/montage-case-study', 'Montage case study'), ('/huxley-case-study', 'Huxley Scottsdale case study'), ('/about', 'About'), ('/contact', 'Contact')]
+
+
+# case study pages: Article (case study) about the community, plus the client reviews on the page
+CASES = {
+ 'montage': {'headline': 'Montage: found before the doors opened', 'date': '2026-11-13', 'image': '/case-studies/montage/og.jpg',
+             'about': {'@type': 'ApartmentComplex', 'name': 'Montage', 'numberOfAccommodationUnits': 183,
+                       'address': {'@type': 'PostalAddress', 'addressLocality': 'Tigard', 'addressRegion': 'OR', 'addressCountry': 'US'}},
+             'client': 'FORE Property Company'},
+ 'huxley': {'headline': 'Huxley Scottsdale: new owner, half leased, our move', 'date': '2026-11-13', 'image': '/case-studies/huxley/og.jpg',
+            'about': {'@type': 'ApartmentComplex', 'name': 'Huxley Scottsdale', 'numberOfAccommodationUnits': 192,
+                      'address': {'@type': 'PostalAddress', 'addressLocality': 'Scottsdale', 'addressRegion': 'AZ', 'addressCountry': 'US'}},
+            'client': 'Pillar Communities'},
+}
+
+def case_blocks(key, canon, desc, soup):
+    c = CASES[key]
+    img = SITE + c['image']
+    reviews = []
+    for fig in soup.select('.kc figure.kc-tq, .kc blockquote'):
+        bq = fig if fig.name == 'blockquote' else fig.find('blockquote')
+        cap = fig.find('figcaption') if fig.name == 'figure' else fig.find_next_sibling('p')
+        if not bq or not cap: continue
+        if fig.name == 'figure' and fig.get('aria-hidden'): continue
+        if fig.name == 'blockquote' and fig.find_parent('figure'): continue
+        who = cap.get_text(' ', strip=True)
+        name, _, role = who.partition(', ')
+        body = bq.get_text(' ', strip=True).strip('\u201c\u201d"')
+        reviews.append({'@type': 'Review', 'reviewBody': body,
+                        'author': {'@type': 'Person', 'name': name, 'jobTitle': role.rsplit(', ', 1)[0] if ', ' in role else role,
+                                   'worksFor': {'@type': 'Organization', 'name': role.rsplit(', ', 1)[-1]}},
+                        'itemReviewed': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM'}})
+    art = {'@context': 'https://schema.org', '@type': 'Article', 'articleSection': 'Case study', 'genre': 'Case study',
+           'headline': c['headline'], 'description': desc, 'url': canon, 'mainEntityOfPage': canon, 'image': img,
+           'datePublished': c['date'], 'dateModified': c['date'], 'about': c['about'],
+           'mentions': {'@type': 'Organization', 'name': c['client']},
+           'author': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM'},
+           'publisher': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'logo': {'@type': 'ImageObject', 'url': SITE + '/icon-512.png'}}}
+    blocks = [art]
+    if reviews:
+        blocks.append({'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'url': SITE + '/', 'review': reviews})
+    return blocks, img
 
 def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False) + '</script>'
 
@@ -84,10 +131,14 @@ def run(out):
             t = re.sub(r'<title>.*?</title>', f'<title>{html.escape(title)}</title>', t, count=1, flags=re.S)
             t = re.sub(r'<meta name="description"[^>]*>\s*', '', t)
             head = f'<meta name="description" content="{html.escape(desc)}">'
+            soup0 = BeautifulSoup(t, 'html.parser')
+            cs_blocks, og_img = (case_blocks(svc, canon, desc, soup0) if kind == 'casestudy' else ([], SITE + '/og-image.png'))
+            if kind == 'results':
+                og_img = SITE + '/case-studies/montage/og.jpg'
             if 'property="og:title"' not in t:
-                head += (f'<meta property="og:type" content="{"article" if kind == "article" else "website"}"><meta property="og:site_name" content="The SocialDM">'
+                head += (f'<meta property="og:type" content="{"article" if kind in ("article", "casestudy") else "website"}"><meta property="og:site_name" content="The SocialDM">'
                          f'<meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}">'
-                         f'<meta property="og:url" content="{canon}"><meta property="og:image" content="{SITE}/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">')
+                         f'<meta property="og:url" content="{canon}"><meta property="og:image" content="{og_img}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">')
             blocks = []
             if kind in ('home', 'about', 'contact'):
                 blocks.append(ORG)
@@ -101,6 +152,12 @@ def run(out):
                 blocks.append({'@context': 'https://schema.org', '@type': 'Article', 'headline': 'The 2026 Multifamily Visibility Report', 'url': canon,
                                'description': desc, 'author': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM'},
                                'publisher': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'logo': {'@type': 'ImageObject', 'url': SITE + '/icon-512.png'}}})
+            blocks += cs_blocks
+            if kind == 'results':
+                blocks.append({'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Results and case studies', 'url': canon, 'description': desc,
+                               'publisher': {'@id': ORG_ID}, 'mainEntity': {'@type': 'ItemList', 'itemListElement': [
+                                   {'@type': 'ListItem', 'position': 1, 'url': SITE + '/montage-case-study', 'name': 'Montage lease up case study'},
+                                   {'@type': 'ListItem', 'position': 2, 'url': SITE + '/huxley-case-study', 'name': 'Huxley Scottsdale lease up case study'}]}})
             soup = BeautifulSoup(t, 'html.parser')
             qa = [(d.find('summary').get_text(' ', strip=True), d.find('p').get_text(' ', strip=True))
                   for d in soup.select('.faq details') if d.find('summary') and d.find('p')]
@@ -127,6 +184,9 @@ def write_llms(out):
     for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'phoenix-multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]
         lines.append(f'- [{title.split(" | ")[0]}]({SITE}/{stem}): {desc}')
+    lines += ['', '## Results and case studies', f'- [Results]({SITE}/results): {META["results"][1]}']
+    for stem in ['montage-case-study', 'huxley-case-study']:
+        lines.append(f'- [{META[stem][0].split(" | ")[0]}]({SITE}/{stem}): {META[stem][1]}')
     lines += ['', '## Research', f'- [The 2026 Multifamily Visibility Report]({SITE}/2026-multifamily-visibility-report): {META["2026-multifamily-visibility-report"][1]}',
               f'- [Market Intelligence blog]({SITE}/blog): Research and field notes on how renters find apartments.', '', '## Articles']
     answers = []
