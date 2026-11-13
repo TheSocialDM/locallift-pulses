@@ -92,6 +92,7 @@ def case_blocks(key, canon, desc, soup):
         if fig.name == 'blockquote' and fig.find_parent('figure'): continue
         who = cap.get_text(' ', strip=True)
         name, _, role = who.partition(', ')
+        if ' ' in name: continue  # unnamed attribution (role only), not a person review
         body = bq.get_text(' ', strip=True).strip('\u201c\u201d"')
         reviews.append({'@type': 'Review', 'reviewBody': body,
                         'author': {'@type': 'Person', 'name': name, 'jobTitle': role.rsplit(', ', 1)[0] if ', ' in role else role,
