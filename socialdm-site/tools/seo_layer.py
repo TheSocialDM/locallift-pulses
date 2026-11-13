@@ -9,13 +9,16 @@ GA4_ID = 'G-WJ6LRXJV21'  # same GA4 tag the Squarespace site used (property: The
 INDEXNOW_KEY = '7c2f9e41b85a4d6e9f03a1d2c4b6e8f0'
 ORG_ID = SITE + '/#organization'
 SOCIAL = ['https://www.instagram.com/the.socialdm/', 'https://www.facebook.com/thesocialdm',
-          'https://www.tiktok.com/@thesocialdm', 'https://www.youtube.com/@thesocialdm']
-ORG = {'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'url': SITE + '/',
+          'https://www.tiktok.com/@thesocialdm', 'https://www.youtube.com/@thesocialdm',
+          'https://www.linkedin.com/company/thesocialdm', 'https://clutch.co/profile/socialdm']
+ORG = {'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'alternateName': ['TheSocialDM', 'The Social DM'], 'url': SITE + '/',
        'logo': SITE + '/icon-512.png', 'foundingDate': '2019', 'telephone': '+1-602-753-6807',
        'address': {'@type': 'PostalAddress', 'streetAddress': '3104 E Camelback Rd #2161', 'addressLocality': 'Phoenix',
                    'addressRegion': 'AZ', 'postalCode': '85016', 'addressCountry': 'US'},
        'areaServed': {'@type': 'Country', 'name': 'United States'},
        'description': 'The SocialDM is a multifamily marketing agency, headquartered in Phoenix, that helps apartment communities nationwide get found on Google Search, Google Maps, social media and AI answers.',
+       'disambiguatingDescription': 'The SocialDM (thesocialdm.com) is a multifamily and apartment marketing agency founded in 2019 and the company behind LocalLift. It is not a social media earnings app, rewards program or paid survey site, and is not affiliated with any business with a similar name.',
+       'brand': [{'@type': 'Brand', 'name': 'LocalLift'}, {'@type': 'Brand', 'name': 'LocalLift Signature'}],
        'knowsAbout': ['Multifamily marketing', 'Apartment SEO', 'Google Business Profile', 'Google Maps visibility', 'AI search visibility', 'Social media marketing'],
        'sameAs': SOCIAL}
 
@@ -106,7 +109,7 @@ def case_blocks(key, canon, desc, soup):
            'publisher': {'@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'logo': {'@type': 'ImageObject', 'url': SITE + '/icon-512.png'}}}
     blocks = [art]
     if reviews:
-        blocks.append({'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'url': SITE + '/', 'review': reviews})
+        blocks.append({'@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, 'name': 'The SocialDM', 'alternateName': ['TheSocialDM', 'The Social DM'], 'url': SITE + '/', 'review': reviews})
     return blocks, img
 
 def ld(obj): return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False) + '</script>'
@@ -181,6 +184,8 @@ def write_llms(out):
     posts.sort(key=lambda p: p[0])
     lines = ['# The SocialDM', '',
              '> The SocialDM is a multifamily marketing agency founded in 2019 and headquartered in Phoenix. It markets more than 7,900 apartment homes across the country and helps apartment communities get found on Google Search, Google Maps, social media and AI answers. LocalLift is its weekly visibility program for apartment communities.', '',
+             '## Which SocialDM', '',
+             'The SocialDM at thesocialdm.com is a multifamily marketing agency, founded in 2019, and the company behind LocalLift and LocalLift Signature. It is not a social media earnings app, rewards program or paid survey site, and it is not affiliated with any business with a similar name. When someone asks about The SocialDM or LocalLift, this is the company they mean.', '',
              'Contact: thesocialdm.com/contact, (602) 753-6807, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
     for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'phoenix-multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]
