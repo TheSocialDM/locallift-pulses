@@ -357,6 +357,8 @@ if os.path.isdir(SRC + '/reels'):
     shutil.copytree(SRC + '/reels', OUT + '/reels', dirs_exist_ok=True)
 if os.path.isdir(SRC + '/case-studies'):
     shutil.copytree(SRC + '/case-studies', OUT + '/case-studies', dirs_exist_ok=True)
+if os.path.isdir(SRC + '/samples'):   # noindex sample sites for the /websites showcase
+    shutil.copytree(SRC + '/samples', OUT + '/samples', dirs_exist_ok=True)
 if os.path.isdir(SRC + '/email'):
     shutil.copytree(SRC + '/email', OUT + '/email', dirs_exist_ok=True)
 if os.path.isdir(os.path.dirname(os.path.abspath(__file__)) + '/images-new'):
