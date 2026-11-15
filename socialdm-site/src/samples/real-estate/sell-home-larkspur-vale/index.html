@@ -1,57 +1,135 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
-<title>Selling a home in Larkspur Vale | Fernwick Home Group (Sample concept by LocalLift)</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>:root{--ink:#22201d;--bg:#f7f5f2;--acc:#7a5c3c;--deep:#2c2621;--line:#e6dfd6}
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Selling a home in Larkspur Vale | Sample concept by LocalLift</title><meta name="description" content="Sample seller landing page: pricing, process, marketing and FAQs (fictional).">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>:root{--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--ink:#1d1b18;--bg:#f6f3ee;--soft:#efe9e0;--line:#ddd5c8;--acc:#b39062;--acc2:#8a6a3f;--accink:#fff;--deep:#1d1b18;--foot:#14130f;--navbg:#f6f3ee;--navink:#1d1b18;--wt:300;--hw:400;--brandls:.04em}
+h1,h2{font-weight:300}.brand{font-size:27px}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-weight:300}
-a{color:inherit}
-.sample{background:var(--deep);color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:8px 12px}
-header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 6vw;border-bottom:1px solid var(--line)}
-.logo{font-family:'DM Serif Display',serif;font-size:26px;text-decoration:none;line-height:1.1}
-.logo small{display:block;font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--acc)}
-nav a{margin-left:24px;text-decoration:none;font-size:14px}
-.btn{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;padding:14px 26px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
-.btn.ghost{background:transparent;color:var(--deep);border:1px solid var(--deep)}
-.eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--acc);font-weight:500}
-h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:500;line-height:1.08}
-h1 em{color:var(--acc)}
-h2{font-size:clamp(30px,3.8vw,46px);margin-bottom:14px}
-section{padding:84px 6vw}
-details{border-bottom:1px solid var(--line);padding:18px 0}
-summary{cursor:pointer;font-size:17px;font-weight:400;list-style:none}
-summary:after{content:"+";float:right;color:var(--acc)}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;font-weight:var(--wt,400);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.sample{background:#111;color:#fff;font:500 11px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:8px 12px;position:relative;z-index:60}
+.sample a{text-decoration:underline}
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 5vw;background:var(--navbg);color:var(--navink);transition:background .3s,box-shadow .3s}
+.nav.over{position:absolute;left:0;right:0;top:auto;background:transparent;color:#fff}
+.nav.solid{position:fixed;top:0;background:var(--navbg);color:var(--navink);box-shadow:0 1px 0 var(--line)}
+.brand{font-family:var(--serif);font-size:24px;line-height:1.05;letter-spacing:var(--brandls,.02em)}
+.brand small{display:block;font:500 9.5px/1.6 var(--sans);letter-spacing:.32em;text-transform:uppercase;opacity:.8;margin-top:3px}
+.menu{display:flex;gap:26px;align-items:center;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase}
+.menu a{opacity:.92}.menu a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+.burger{display:none;background:none;border:0;color:inherit;font-size:26px;cursor:pointer}
+.btn{display:inline-block;font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;padding:16px 26px;background:var(--acc);color:var(--accink);border:1px solid var(--acc);cursor:pointer;transition:transform .2s,opacity .2s}
+.btn:hover{transform:translateY(-1px);opacity:.92}
+.btn.line{background:transparent;color:inherit;border-color:currentColor}
+.btn.dark{background:var(--deep);border-color:var(--deep);color:#fff}
+.eyebrow{font:500 11.5px/1.4 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--acc2)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:var(--hw,400);line-height:1.08;letter-spacing:var(--hls,0)}
+h2{font-size:clamp(32px,4vw,52px);margin:12px 0 18px}
+h3{font-size:clamp(21px,2vw,27px)}
+section{padding:clamp(64px,9vw,120px) 5vw}
+.wrap{max-width:1200px;margin:0 auto}
+.lead{font-size:18px;max-width:620px;opacity:.88}
+.hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);animation:slow 18s ease-out forwards}
+@keyframes slow{to{transform:scale(1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.05) 38%,rgba(0,0,0,.62) 100%)}
+.hero .in{position:relative;z-index:2;padding:0 5vw 9vh;width:100%}
+.hero h1{font-size:clamp(46px,7.4vw,108px);max-width:1000px}
+.hero p{font-size:19px;max-width:560px;margin:18px 0 30px;opacity:.95}
+.tag{position:absolute;right:14px;bottom:12px;z-index:3;font:500 10px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;background:rgba(0,0,0,.45);color:#fff;padding:6px 8px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.ph{position:relative;overflow:hidden;background:var(--line)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.ph:hover img{transform:scale(1.04)}
+.ph[style*="min-height"] img{position:absolute;inset:0;height:100%}
+.grid{display:grid;gap:28px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card .ph{aspect-ratio:4/3}
+.card h3{margin:16px 0 6px}
+.meta{font-size:13.5px;letter-spacing:.06em;opacity:.75}
+.price{font-family:var(--serif);font-size:26px}
+.pill{position:absolute;top:14px;left:14px;z-index:2;background:var(--bg);color:var(--ink);font:500 10.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:8px 10px}
+.save{position:absolute;top:12px;right:12px;z-index:2;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;font-size:17px;cursor:pointer;border:0;color:#222}
+.save.on{color:#c0392b}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:34px 24px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.6vw,50px);line-height:1}
+.stats span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.band{background:var(--deep);color:#fff}
+.band .eyebrow{color:var(--acc)}
+.short{border-left:3px solid var(--acc);background:var(--soft);padding:22px 26px;margin:26px 0;font-size:17px}
+.short b{display:block;font:600 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--acc2);margin-bottom:6px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;list-style:none;font-size:18px;font-family:var(--serif);display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--acc2);font-family:var(--sans)}
 details[open] summary:after{content:"\2212"}
-details p{margin-top:10px;font-size:15px}
-footer{padding:36px 6vw;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line)}
-.crumbs{padding:18px 6vw 0;font-size:13px;color:var(--acc)}
-.crumbs a{text-decoration:none}
-.top{padding:46px 6vw 66px;display:grid;grid-template-columns:1.2fr 1fr;gap:6vw;align-items:center}
-.top h1{font-size:clamp(36px,5vw,62px);margin:14px 0 20px}
-.answer{background:#fff;border-left:3px solid var(--acc);padding:24px 26px;font-size:16px}
-.answer b{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-bottom:8px;font-weight:600}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.facts div{padding:22px;border-right:1px solid var(--line);font-size:14px}
-.facts b{display:block;font-family:'DM Serif Display',serif;font-size:21px;font-weight:500}
-section{max-width:1100px}
-section p{max-width:680px;margin-bottom:14px}
-.links{display:flex;gap:12px;flex-wrap:wrap}
-.links a{border:1px solid var(--line);padding:10px 16px;font-size:14px;text-decoration:none;background:#fff}
-.cta{background:var(--deep);color:#fff;padding:66px 6vw;text-align:center}
-.cta .btn{background:#fff;color:var(--deep);margin-top:16px}
-@media(max-width:860px){.top{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}}
-</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is my home worth?", "acceptedAnswer": {"@type": "Answer", "text": "Request a home value and we will send a range with the recent sales behind it."}}, {"@type": "Question", "name": "Should I sell before I buy?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your finances and timing. We walk through both options with you."}}, {"@type": "Question", "name": "Do you hold open houses?", "acceptedAnswer": {"@type": "Answer", "text": "When they make sense for the home. We explain the plan for yours."}}, {"@type": "Question", "name": "Which areas do you cover?", "acceptedAnswer": {"@type": "Answer", "text": "The client's service areas go here, kept current."}}]}</script>
-</head><body>
-<div class="sample">Sample landing page by LocalLift. Fernwick Home Group and Larkspur Vale are fictional.</div>
-<header><a class="logo" href="../">Fernwick Home Group</a><a class="btn" href="#book">Get a home value</a></header>
-<div class="crumbs"><a href="../">Home</a> / <a href="../#services">Services</a> / Selling a home in Larkspur Vale</div>
-<div class="top"><div><div class="eyebrow">Selling a home in Larkspur Vale</div><h1>Selling a home in Larkspur Vale, step by step.</h1><a class="btn" href="#book">Get a home value</a></div>
-<div class="answer"><b>The short answer</b>Selling starts with an honest price based on recent nearby sales, a short list of prep worth doing, and a written plan for marketing, showings and offers. Timelines vary with price, condition and season.</div></div>
-<div class="facts"><div><b>Written plan</b>From list to close</div><div><b>Recent sales</b>Behind every price</div><div><b>Weekly updates</b>On showings and feedback</div><div><b>Local agents</b>Who know the area</div></div>
-<section><h2>Who it suits</h2><p>Homeowners in Larkspur Vale thinking about selling in the next few months, whether they are moving up, downsizing or relocating.</p><h2 style="margin-top:36px">What to expect</h2><p>We visit the home, walk you through recent sales and give you a price range and a plan. You decide when to list. Market conditions change, so we update the plan if anything shifts.</p></section>
-<section><h2>Questions people ask</h2><details open><summary>What is my home worth?</summary><p>Request a home value and we will send a range with the recent sales behind it.</p></details><details><summary>Should I sell before I buy?</summary><p>It depends on your finances and timing. We walk through both options with you.</p></details><details><summary>Do you hold open houses?</summary><p>When they make sense for the home. We explain the plan for yours.</p></details><details><summary>Which areas do you cover?</summary><p>The client&#x27;s service areas go here, kept current.</p></details></section>
-<section><h2>Related</h2><div class="links"><a href="../#services">Buying a home</a><a href="../#services">First time buyers</a><a href="../#faq">All questions</a></div></section>
-<div class="cta" id="book"><h2>Ready to talk it through?</h2><a class="btn" href="#book">Get a home value (sample)</a></div>
-<footer><span>Fernwick Home Group, Larkspur Vale (fictional sample)</span><span>Equal Housing Opportunity. Brokerage name and license details go here.</span><span>Landing page concept by LocalLift, a SocialDM company</span></footer>
-</body></html>
+details p{margin-top:12px;font-size:15.5px;opacity:.88;max-width:760px}
+.form{display:grid;gap:12px}
+.form input,.form select,.form textarea{font:400 15px var(--sans);padding:15px 16px;border:1px solid var(--line);background:#fff;color:#222;width:100%}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.note{font-size:12.5px;opacity:.7;margin-top:10px}
+.crumbs{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-bottom:14px}
+.crumbs a{text-decoration:underline;text-underline-offset:4px}
+.list{list-style:none;columns:2;gap:40px}
+.list li{padding:10px 0;border-bottom:1px solid var(--line);break-inside:avoid;font-size:15.5px}
+.steps{counter-reset:s;display:grid;gap:0}
+.steps li{list-style:none;counter-increment:s;display:grid;grid-template-columns:70px 1fr;gap:10px;padding:26px 0;border-top:1px solid var(--line)}
+.steps li:before{content:"0" counter(s);font-family:var(--serif);font-size:30px;color:var(--acc2)}
+.steps b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;margin-bottom:4px}
+footer{background:var(--foot);color:#d9d6d0;padding:70px 5vw 34px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
+footer h4{font:600 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+footer a{display:block;padding:4px 0;opacity:.85}
+footer .legal{max-width:1200px;margin:46px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;opacity:.75}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;font-family:var(--serif);font-size:clamp(22px,2.6vw,34px)}
+.marquee span{display:inline-block;animation:mq 38s linear infinite;padding-left:100%}
+@keyframes mq{to{transform:translateX(-100%)}}
+@media(max-width:900px){
+ .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--navbg);color:var(--navink);padding:10px 5vw 20px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+ .menu.open{display:flex}.menu a{padding:12px 0;width:100%}
+ .burger{display:block}
+ .split,.g2,.g3{grid-template-columns:1fr}.g4,.stats{grid-template-columns:1fr 1fr}
+ .stats div:nth-child(2){border-right:0}
+ footer .cols{grid-template-columns:1fr 1fr}
+ .list{columns:1}.form .row{grid-template-columns:1fr}
+ .hero{min-height:86vh}
+ .ph[style*="min-height"]{min-height:320px!important}
+}
+@media(max-width:560px){.g4{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero .bg,.marquee span{animation:none}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you price a home in Larkspur Vale?", "acceptedAnswer": {"@type": "Answer", "text": "Adrienne compares the most recent sales near you, adjusts for size, condition and view, and walks you through every home she used so the number makes sense."}}, {"@type": "Question", "name": "How long does it take to sell?", "acceptedAnswer": {"@type": "Answer", "text": "In this sample market the median home sold in 21 days. Price, condition and season move that number, and you see the recent comparisons before you list."}}, {"@type": "Question", "name": "Do I need to stage my home?", "acceptedAnswer": {"@type": "Answer", "text": "Not always. You get a room-by-room list of what is worth doing and what is not."}}, {"@type": "Question", "name": "What does it cost to sell?", "acceptedAnswer": {"@type": "Answer", "text": "Commission and closing costs are explained in writing before you sign anything. Commissions are negotiable."}}, {"@type": "Question", "name": "Can you sell my home privately?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, where MLS rules allow. Some sellers prefer a quiet, off-market sale to a short list of qualified buyers first."}}]}</script></head><body>
+<div class="sample">Sample concept by LocalLift. Adrienne Fernwick, Fernwick Home Group, Larkspur Vale and every listing here are fictional.</div>
+<header class="nav"><a class="brand" href="/samples/real-estate/">Adrienne Fernwick<small>Fernwick Home Group</small></a>
+<nav class="menu" id="menu"><a href="/samples/real-estate/listings/">Listings</a><a href="/samples/real-estate/neighborhoods/">Neighborhoods</a><a href="/samples/real-estate/sell-home-larkspur-vale/">Sell</a><a href="/samples/real-estate/market-report/">Market report</a><a href="/samples/real-estate/about/">About</a><a class="btn" href="/samples/real-estate/contact/">Contact</a></nav>
+<button class="burger" aria-label="Open menu" aria-controls="menu" aria-expanded="false">&#9776;</button></header>
+<main><section class="hero" style="padding:0;min-height:76vh"><div class="bg" style="background-image:url(/samples/real-estate/img/l4.jpg)"></div><div class="in"><div class="crumbs"><a href="/samples/real-estate/">Home</a> / Sell</div><div class="eyebrow" style="color:#fff;opacity:.85">Selling in Larkspur Vale</div><h1>Sell for the right price, <i>with a plan you can see.</i></h1><p>How Adrienne prices, prepares and markets homes in Larkspur Vale, and what you can expect at every step.</p><a class="btn" href="#value">Get my home value</a></div><span class="tag">Stock photo</span></section>
+<section><div class="wrap"><div class="short"><b>The short answer</b>To sell a home in Larkspur Vale, start with a written value based on recent nearby sales, fix only what buyers will pay for, and launch with strong photos and a private preview. In this sample market, homes sold in a median of 21 days.</div></div></section>
+<section style="padding-top:0"><div class="wrap split" style="align-items:start"><div><div class="eyebrow">The process</div><h2>Five steps, start to close</h2><p class="lead">You always know what happens next and who is doing it.</p></div><ol class="steps"><li><div><b>Value and plan</b>A written price range with the sales behind it, plus a prep list and timeline.</div></li><li><div><b>Prepare</b>Repairs, styling and cleaning coordinated with trusted local vendors.</div></li><li><div><b>Photograph and film</b>Twilight photos, video and a floor plan that make the home stand out online.</div></li><li><div><b>Launch</b>Private preview to buyer agents, then the open market, search and social.</div></li><li><div><b>Negotiate and close</b>Offers compared side by side, then every deadline handled to closing day.</div></li></ol></div></section>
+<section class="band" style="padding:0"><div class="split" style="gap:0"><div class="ph" style="min-height:460px"><img src="/samples/real-estate/img/in3.jpg" alt="Styled living room" loading="lazy"></div><div style="padding:clamp(48px,7vw,100px)"><div class="eyebrow">Marketing</div><h2 style="color:#fff">Seen by serious buyers first</h2><ul class="list" style="columns:1;border-color:rgba(255,255,255,.2)"><li>Twilight photography and video</li><li>Private preview to local buyer agents</li><li>Listing pages ready for search and AI</li><li>Social campaigns that reach active buyers</li><li>Weekly showing and feedback report</li></ul></div></div></section>
+<section id="value"><div class="wrap split" style="align-items:start"><div><div class="eyebrow">Home value</div><h2>Request a written value</h2><p class="lead">A real person, not an algorithm. Usually within one business day.</p></div>
+<form class="form" data-demo><input placeholder="Home address" aria-label="Home address"><div class="row"><input placeholder="Name" aria-label="Name"><input placeholder="Email" aria-label="Email"></div><div class="row"><select aria-label="Timing"><option>Selling in 0 to 3 months</option><option>3 to 12 months</option><option>Just curious</option></select><input placeholder="Phone (optional)" aria-label="Phone"></div><button class="btn dark">Send my request</button><p class="ok note" hidden>Sample form. On a live site this goes to the agent's own system.</p></form></div></section>
+<section style="padding-top:0"><div class="wrap split" style="align-items:start"><div><div class="eyebrow">Questions</div><h2>What sellers ask first</h2></div><div><details open><summary>How do you price a home in Larkspur Vale?</summary><p>Adrienne compares the most recent sales near you, adjusts for size, condition and view, and walks you through every home she used so the number makes sense.</p></details><details><summary>How long does it take to sell?</summary><p>In this sample market the median home sold in 21 days. Price, condition and season move that number, and you see the recent comparisons before you list.</p></details><details><summary>Do I need to stage my home?</summary><p>Not always. You get a room-by-room list of what is worth doing and what is not.</p></details><details><summary>What does it cost to sell?</summary><p>Commission and closing costs are explained in writing before you sign anything. Commissions are negotiable.</p></details><details><summary>Can you sell my home privately?</summary><p>Yes, where MLS rules allow. Some sellers prefer a quiet, off-market sale to a short list of qualified buyers first.</p></details></div></div></section></main>
+<footer><div class="cols">
+<div><div class="brand" style="color:#fff">Adrienne Fernwick<small>Fernwick Home Group</small></div><p style="margin-top:16px;max-width:340px;opacity:.8">Homes in Larkspur Vale and the lake towns around it. Brokerage name, office address and license number go here.</p></div>
+<div><h4>Explore</h4><a href="/samples/real-estate/listings/">Listings</a><a href="/samples/real-estate/neighborhoods/">Neighborhoods</a><a href="/samples/real-estate/market-report/">Market report</a></div>
+<div><h4>Sellers</h4><a href="/samples/real-estate/sell-home-larkspur-vale/">Selling in Larkspur Vale</a><a href="/samples/real-estate/sell-home-larkspur-vale/#value">Home value</a></div>
+<div><h4>Contact</h4><a href="/samples/real-estate/contact/">Send a note</a><a href="/samples/real-estate/about/">About Adrienne</a></div></div>
+<div class="legal"><span>Equal Housing Opportunity. We follow fair housing laws and serve every buyer and seller equally.</span><span>Sample site concept by LocalLift, a SocialDM company. Not a real brokerage.</span></div></footer>
+<script>
+(function(){
+var n=document.querySelector('.nav'),b=document.querySelector('.burger'),m=document.querySelector('.menu');
+if(b)b.addEventListener('click',function(){m.classList.toggle('open');b.setAttribute('aria-expanded',m.classList.contains('open'))});
+if(n&&n.classList.contains('over')){var h=document.querySelector('.hero');window.addEventListener('scroll',function(){n.classList.toggle('solid',window.scrollY>(h?h.offsetHeight-90:200))},{passive:true})}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+document.querySelectorAll('.save').forEach(function(s){s.addEventListener('click',function(ev){ev.preventDefault();s.classList.toggle('on');s.textContent=s.classList.contains('on')?'♥':'♡'})});
+document.querySelectorAll('form[data-demo]').forEach(function(f){f.addEventListener('submit',function(ev){ev.preventDefault();var o=f.querySelector('.ok');if(o){o.hidden=false}})});
+})();
+</script></body></html>

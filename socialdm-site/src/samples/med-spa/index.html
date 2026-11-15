@@ -1,119 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Ourelle Skin Studio | Med Spa in Larkspur Vale (Sample concept by LocalLift)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#2b2622;--sand:#f6f1ea;--clay:#c9a98a;--rose:#8a5f50;--deep:#3d332c;--line:#e4d9cc}
+<title>Ourelle Skin Studio | Med spa in Larkspur Vale | Sample concept by LocalLift</title><meta name="description" content="Sample med spa website concept (fictional).">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--ink:#2a2422;--bg:#fbf7f3;--soft:#f3eae2;--line:#e8dccf;--acc:#c48f7a;--acc2:#a06a55;--accink:#fff;--deep:#3a2c27;--foot:#2a201c;--navbg:#fbf7f3;--navink:#2a2422;--wt:400;--hw:300}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Jost,system-ui,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;font-weight:300}
-a{color:inherit}
-.sample{background:var(--deep);color:#f6f1ea;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:8px 12px}
-header{display:flex;justify-content:space-between;align-items:center;padding:22px 6vw;border-bottom:1px solid var(--line)}
-.logo{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;letter-spacing:.04em}
-.logo small{display:block;font-family:Jost;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:400;color:var(--rose)}
-nav a{margin-left:26px;text-decoration:none;font-size:14px;letter-spacing:.06em}
-.btn{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;padding:14px 28px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border:0}
-.btn.ghost{background:transparent;color:var(--deep);border:1px solid var(--deep)}
-.hero{display:grid;grid-template-columns:1.1fr 1fr;min-height:78vh}
-.hero .copy{padding:9vh 6vw;display:flex;flex-direction:column;justify-content:center;gap:26px}
-.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose)}
-h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(42px,6vw,76px);line-height:1.02}
-h1 em{color:var(--rose)}
-.hero p{max-width:460px;font-size:17px}
-.visual{background:#d9bfa6 url(hero.jpg) center/cover no-repeat;position:relative;overflow:hidden}
-.visual span{position:absolute;bottom:14px;left:14px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(43,38,34,.55);padding:5px 8px}
-.trust{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
-.trust div{padding:26px 22px;border-right:1px solid var(--line);font-size:14px}
-.trust b{display:block;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600}
-section{padding:90px 6vw}
-h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.1;margin-bottom:14px}
-.lead{max-width:560px;margin-bottom:44px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.card{background:var(--sand);padding:34px 26px;display:flex;flex-direction:column;gap:12px;min-height:250px}
-.card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600}
-.card a{margin-top:auto;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start;background:#fff}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;font-weight:var(--wt,400);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.sample{background:#111;color:#fff;font:500 11px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:8px 12px;position:relative;z-index:60}
+.sample a{text-decoration:underline}
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 5vw;background:var(--navbg);color:var(--navink);transition:background .3s,box-shadow .3s}
+.nav.over{position:absolute;left:0;right:0;top:auto;background:transparent;color:#fff}
+.nav.solid{position:fixed;top:0;background:var(--navbg);color:var(--navink);box-shadow:0 1px 0 var(--line)}
+.brand{font-family:var(--serif);font-size:24px;line-height:1.05;letter-spacing:var(--brandls,.02em)}
+.brand small{display:block;font:500 9.5px/1.6 var(--sans);letter-spacing:.32em;text-transform:uppercase;opacity:.8;margin-top:3px}
+.menu{display:flex;gap:26px;align-items:center;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase}
+.menu a{opacity:.92}.menu a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+.burger{display:none;background:none;border:0;color:inherit;font-size:26px;cursor:pointer}
+.btn{display:inline-block;font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;padding:16px 26px;background:var(--acc);color:var(--accink);border:1px solid var(--acc);cursor:pointer;transition:transform .2s,opacity .2s}
+.btn:hover{transform:translateY(-1px);opacity:.92}
+.btn.line{background:transparent;color:inherit;border-color:currentColor}
+.btn.dark{background:var(--deep);border-color:var(--deep);color:#fff}
+.eyebrow{font:500 11.5px/1.4 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--acc2)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:var(--hw,400);line-height:1.08;letter-spacing:var(--hls,0)}
+h2{font-size:clamp(32px,4vw,52px);margin:12px 0 18px}
+h3{font-size:clamp(21px,2vw,27px)}
+section{padding:clamp(64px,9vw,120px) 5vw}
+.wrap{max-width:1200px;margin:0 auto}
+.lead{font-size:18px;max-width:620px;opacity:.88}
+.hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);animation:slow 18s ease-out forwards}
+@keyframes slow{to{transform:scale(1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.05) 38%,rgba(0,0,0,.62) 100%)}
+.hero .in{position:relative;z-index:2;padding:0 5vw 9vh;width:100%}
+.hero h1{font-size:clamp(46px,7.4vw,108px);max-width:1000px}
+.hero p{font-size:19px;max-width:560px;margin:18px 0 30px;opacity:.95}
+.tag{position:absolute;right:14px;bottom:12px;z-index:3;font:500 10px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;background:rgba(0,0,0,.45);color:#fff;padding:6px 8px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
+.ph{position:relative;overflow:hidden;background:var(--line)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.ph:hover img{transform:scale(1.04)}
+.ph[style*="min-height"] img{position:absolute;inset:0;height:100%}
+.grid{display:grid;gap:28px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card .ph{aspect-ratio:4/3}
+.card h3{margin:16px 0 6px}
+.meta{font-size:13.5px;letter-spacing:.06em;opacity:.75}
+.price{font-family:var(--serif);font-size:26px}
+.pill{position:absolute;top:14px;left:14px;z-index:2;background:var(--bg);color:var(--ink);font:500 10.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:8px 10px}
+.save{position:absolute;top:12px;right:12px;z-index:2;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;font-size:17px;cursor:pointer;border:0;color:#222}
+.save.on{color:#c0392b}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:34px 24px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.6vw,50px);line-height:1}
+.stats span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.band{background:var(--deep);color:#fff}
+.band .eyebrow{color:var(--acc)}
+.short{border-left:3px solid var(--acc);background:var(--soft);padding:22px 26px;margin:26px 0;font-size:17px}
+.short b{display:block;font:600 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--acc2);margin-bottom:6px}
 details{border-bottom:1px solid var(--line);padding:20px 0}
-summary{cursor:pointer;font-size:17px;font-weight:400;list-style:none}
-summary:after{content:"+";float:right;color:var(--rose)}
+summary{cursor:pointer;list-style:none;font-size:18px;font-family:var(--serif);display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--acc2);font-family:var(--sans)}
 details[open] summary:after{content:"\2212"}
-details p{margin-top:12px;font-size:15px}
-.area{background:var(--deep);color:#f6f1ea;text-align:center}
-.area .lead{margin:0 auto 32px}
-.area .btn{background:#f6f1ea;color:var(--deep)}
-footer{padding:40px 6vw;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line)}
-@media(max-width:860px){.hero,.split{grid-template-columns:1fr}.visual{min-height:280px}.trust,.grid{grid-template-columns:1fr 1fr}nav{display:none}}
-</style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Ourelle Skin Studio (sample concept)","description":"Sample concept site by LocalLift. Not a real business.","areaServed":"Larkspur Vale"}
-</script>
-</head>
-<body>
-<div class="sample">Sample concept by LocalLift. Ourelle Skin Studio and Larkspur Vale are fictional.</div>
-<header>
-  <div class="logo">Ourelle<small>Skin Studio</small></div>
-  <nav><a href="#services">Treatments</a><a href="#faq">Questions</a><a href="botox-larkspur-vale/">Botox in Larkspur Vale</a><a href="#visit">Visit</a></nav>
-  <a class="btn" href="#visit">Book a consult</a>
-</header>
+details p{margin-top:12px;font-size:15.5px;opacity:.88;max-width:760px}
+.form{display:grid;gap:12px}
+.form input,.form select,.form textarea{font:400 15px var(--sans);padding:15px 16px;border:1px solid var(--line);background:#fff;color:#222;width:100%}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.note{font-size:12.5px;opacity:.7;margin-top:10px}
+.crumbs{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-bottom:14px}
+.crumbs a{text-decoration:underline;text-underline-offset:4px}
+.list{list-style:none;columns:2;gap:40px}
+.list li{padding:10px 0;border-bottom:1px solid var(--line);break-inside:avoid;font-size:15.5px}
+.steps{counter-reset:s;display:grid;gap:0}
+.steps li{list-style:none;counter-increment:s;display:grid;grid-template-columns:70px 1fr;gap:10px;padding:26px 0;border-top:1px solid var(--line)}
+.steps li:before{content:"0" counter(s);font-family:var(--serif);font-size:30px;color:var(--acc2)}
+.steps b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;margin-bottom:4px}
+footer{background:var(--foot);color:#d9d6d0;padding:70px 5vw 34px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
+footer h4{font:600 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+footer a{display:block;padding:4px 0;opacity:.85}
+footer .legal{max-width:1200px;margin:46px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;opacity:.75}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;font-family:var(--serif);font-size:clamp(22px,2.6vw,34px)}
+.marquee span{display:inline-block;animation:mq 38s linear infinite;padding-left:100%}
+@keyframes mq{to{transform:translateX(-100%)}}
+@media(max-width:900px){
+ .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--navbg);color:var(--navink);padding:10px 5vw 20px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+ .menu.open{display:flex}.menu a{padding:12px 0;width:100%}
+ .burger{display:block}
+ .split,.g2,.g3{grid-template-columns:1fr}.g4,.stats{grid-template-columns:1fr 1fr}
+ .stats div:nth-child(2){border-right:0}
+ footer .cols{grid-template-columns:1fr 1fr}
+ .list{columns:1}.form .row{grid-template-columns:1fr}
+ .hero{min-height:86vh}
+ .ph[style*="min-height"]{min-height:320px!important}
+}
+@media(max-width:560px){.g4{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero .bg,.marquee span{animation:none}}
 
-<div class="hero">
-  <div class="copy">
-    <div class="eyebrow">Med spa in Larkspur Vale</div>
-    <h1>Look like yourself, <em>rested.</em></h1>
-    <p>Injectables, laser and skin treatments planned around your face, your goals and your timeline. Every visit starts with a real conversation, not a menu.</p>
-    <div><a class="btn" href="#visit">Book a consult</a> &nbsp; <a class="btn ghost" href="#services">See treatments</a></div>
-  </div>
-  <div class="visual" role="img" aria-label="Provider giving a facial treatment"><span>Stock photo. Client photos go here.</span></div>
-</div>
-
-<div class="trust">
-  <div><b>Medical director</b>Every plan reviewed by a licensed provider</div>
-  <div><b>Consult first</b>No treatment on the first visit unless you want it</div>
-  <div><b>Clear pricing</b>Your quote in writing before anything starts</div>
-  <div><b>Aftercare</b>We reach out two weeks after every treatment</div>
-</div>
-
-<section id="services">
-  <div class="eyebrow">Treatments</div>
-  <h2>What we do, explained simply</h2>
-  <p class="lead">Each treatment gets its own page so you can read what it is, who it suits and what to expect before you ever pick up the phone.</p>
-  <div class="grid">
-    <div class="card"><h3>Botox&reg; and Dysport&reg;</h3><p>Soften expression lines, like forehead lines and crow's feet.</p><a href="botox-larkspur-vale/">Read more &rarr;</a></div>
-    <div class="card"><h3>Dermal fillers</h3><p>Restore volume in lips, cheeks and under the eyes.</p><a href="#visit">Ask about it &rarr;</a></div>
-    <div class="card"><h3>Laser and light</h3><p>Target sunspots, redness and uneven tone.</p><a href="#visit">Ask about it &rarr;</a></div>
-    <div class="card"><h3>Facials and peels</h3><p>Professional skin care for glow and texture.</p><a href="#visit">Ask about it &rarr;</a></div>
-  </div>
-</section>
-
-<section class="split" id="faq">
-  <div>
-    <div class="eyebrow">Real answers</div>
-    <h2>Questions people ask before they book</h2>
-    <p>Plain answers to what people ask before their first visit.</p>
-  </div>
-  <div>
-    <details open><summary>Is the first visit just a consultation?</summary><p>Yes. Your first visit is a conversation about your goals with a licensed provider. You can choose to be treated the same day, but you never have to.</p></details>
-    <details><summary>How long do results from Botox last?</summary><p>For most people, about three to four months. Your provider will tell you what to expect for your own plan. Results vary from person to person.</p></details>
-    <details><summary>Who performs the treatments?</summary><p>Licensed medical providers working under a medical director. You will always know who is treating you.</p></details>
-    <details><summary>Do you offer payment plans?</summary><p>Ask at your consult. Pricing is always given to you in writing before treatment starts.</p></details>
-  </div>
-</section>
-
-<section class="area" id="visit">
-  <div class="eyebrow" style="color:var(--clay)">Visit</div>
-  <h2>Book your consult in Larkspur Vale</h2>
-  <p class="lead">Online booking, call or text. Booking buttons connect to the client's own booking system.</p>
-  <a class="btn" href="#visit">Book a consult (sample)</a>
-</section>
-
-<footer>
-  <span>Ourelle Skin Studio, Larkspur Vale (fictional sample)</span>
-  <span>Site concept by LocalLift, a SocialDM company. Botox and Dysport are registered trademarks of their owners.</span>
-</footer>
-</body>
-</html>
+.svc{display:block;background:#fff;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.08)}
+.svc .ph{aspect-ratio:4/3}.svc div.t{padding:22px 22px 26px}.svc h3{margin-bottom:6px}.svc p{font-size:14.5px;opacity:.8}
+.svc .more{display:block;margin-top:14px;font:500 11.5px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--acc2)}
+.menu-t{width:100%;border-collapse:collapse}.menu-t td{padding:16px 0;border-bottom:1px solid var(--line);vertical-align:top}.menu-t td:last-child{text-align:right;font-family:var(--serif);font-size:19px;white-space:nowrap;padding-left:20px}
+.menu-t small{display:block;font-size:13px;opacity:.7}
+.bookbar{display:grid;grid-template-columns:repeat(4,1fr) auto;background:#fff;max-width:900px;box-shadow:0 20px 50px rgba(0,0,0,.25);color:#222}
+.bookbar label{display:block;padding:12px 18px;border-right:1px solid #eee;font:500 10.5px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#777}
+.bookbar input,.bookbar select{display:block;border:0;font:400 15px var(--sans);color:#222;padding:4px 0 0;width:100%;background:none}
+.prov{display:grid;grid-template-columns:160px 1fr;gap:26px;align-items:center}.prov .ph{aspect-ratio:1;border-radius:50%}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.badges span{border:1px solid var(--line);padding:8px 12px;font-size:12.5px;letter-spacing:.06em}
+.alert{background:var(--soft);border:1px solid var(--line);padding:16px 20px;font-size:14.5px}
+@media(max-width:900px){.bookbar{grid-template-columns:1fr 1fr}.bookbar .btn{grid-column:span 2}.prov{grid-template-columns:100px 1fr}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "name": "Ourelle Skin Studio (sample)", "description": "Fictional sample med spa site by LocalLift."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who performs treatments at Ourelle?", "acceptedAnswer": {"@type": "Answer", "text": "Every injectable and laser treatment is performed by a licensed provider. Provider names and credentials are listed in our Providers section and confirmed at your consult."}}, {"@type": "Question", "name": "Do I need a consult first?", "acceptedAnswer": {"@type": "Answer", "text": "Yes for injectables and lasers. A consult is a conversation about goals, safety and options, not a commitment."}}, {"@type": "Question", "name": "How much does Botox cost?", "acceptedAnswer": {"@type": "Answer", "text": "Pricing depends on the areas treated. Current pricing is shown at booking and confirmed at your consult."}}, {"@type": "Question", "name": "Is there downtime?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the treatment. Each treatment page lists typical downtime, and your provider confirms it for you."}}]}</script></head><body>
+<div class="sample">Sample concept by LocalLift. Ourelle Skin Studio, its providers and Larkspur Vale are fictional.</div>
+<header class="nav over"><a class="brand" href="/samples/med-spa/">Ourelle<small>Skin Studio</small></a>
+<nav class="menu" id="menu"><a href="/samples/med-spa/#treatments">Treatments</a><a href="/samples/med-spa/botox-larkspur-vale/">Botox</a><a href="/samples/med-spa/#pricing">Pricing</a><a href="/samples/med-spa/#providers">Providers</a><a href="/samples/med-spa/#faq">Questions</a><a class="btn" href="/samples/med-spa/#book">Book a consult</a></nav>
+<button class="burger" aria-label="Open menu" aria-controls="menu" aria-expanded="false">&#9776;</button></header>
+<main><section class="hero" style="padding:0"><div class="bg" style="background-image:url(/samples/med-spa/img/hero.jpg)"></div><div class="in"><div class="eyebrow" style="color:#fff;opacity:.9">Medical aesthetics &nbsp;&middot;&nbsp; Larkspur Vale</div>
+<h1>Skin that looks like <i>you, rested.</i></h1><p>Botox, fillers, lasers and facials planned by licensed providers, with natural results as the goal.</p><a class="btn" href="#book">Book a consult</a> &nbsp; <a class="btn line" href="#treatments">See treatments</a></div><span class="tag">Stock photo. Client photos go here.</span></section>
+<div class="stats wrap"><div><b>Licensed</b><span>Provider on every treatment</span></div><div><b>Consult</b><span>Before any injectable</span></div><div><b>Clear</b><span>Pricing shown at booking</span></div><div><b>Follow up</b><span>Two-week check-in</span></div></div>
+<section id="treatments"><div class="wrap"><div class="eyebrow">Treatments</div><h2>Every treatment has its own page</h2><p class="lead">So people can read what it is, who it suits and what to expect, and so search engines and AI assistants can quote it.</p><div class="grid g3" style="margin-top:34px"><a class="svc reveal" href="/samples/med-spa/botox-larkspur-vale/"><div class="ph"><img src="/samples/med-spa/img/t2.jpg" alt="Botox and Dysport" loading="lazy"></div><div class="t"><h3>Botox and Dysport</h3><p>Softer expression lines in a quick visit.</p><span class="more">Learn more &rarr;</span></div></a><a class="svc reveal" href="/samples/med-spa/#book"><div class="ph"><img src="/samples/med-spa/img/t5.jpg" alt="Dermal fillers" loading="lazy"></div><div class="t"><h3>Dermal fillers</h3><p>Restore volume with a natural look.</p><span class="more">Learn more &rarr;</span></div></a><a class="svc reveal" href="/samples/med-spa/#book"><div class="ph"><img src="/samples/med-spa/img/t1.jpg" alt="HydraFacial" loading="lazy"></div><div class="t"><h3>HydraFacial</h3><p>Deep cleanse and hydration, little to no downtime.</p><span class="more">Learn more &rarr;</span></div></a><a class="svc reveal" href="/samples/med-spa/#book"><div class="ph"><img src="/samples/med-spa/img/t3.jpg" alt="Laser and light" loading="lazy"></div><div class="t"><h3>Laser and light</h3><p>Tone, texture and sun spots.</p><span class="more">Learn more &rarr;</span></div></a><a class="svc reveal" href="/samples/med-spa/#book"><div class="ph"><img src="/samples/med-spa/img/t6.jpg" alt="Chemical peels" loading="lazy"></div><div class="t"><h3>Chemical peels</h3><p>Brighter, smoother skin.</p><span class="more">Learn more &rarr;</span></div></a><a class="svc reveal" href="/samples/med-spa/#pricing"><div class="ph"><img src="/samples/med-spa/img/t4.jpg" alt="Membership" loading="lazy"></div><div class="t"><h3>Membership</h3><p>Monthly care with member pricing.</p><span class="more">Learn more &rarr;</span></div></a></div></div></section>
+<section class="band" style="padding:0"><div class="split" style="gap:0"><div class="ph" style="min-height:520px"><img src="/samples/med-spa/img/room.jpg" alt="Calm treatment room" loading="lazy"></div><div style="padding:clamp(48px,7vw,100px)"><div class="eyebrow">The Ourelle way</div><h2 style="color:#fff">A plan, <i>not a pitch.</i></h2>
+<ol class="steps" style="border-color:rgba(255,255,255,.2)"><li><div><b>Consult</b>Your goals, history and what is realistic.</div></li><li><div><b>Plan</b>A written plan with pricing before anything starts.</div></li><li><div><b>Treat</b>Licensed providers, calm rooms, no rush.</div></li><li><div><b>Check in</b>A follow up to see how it settled.</div></li></ol></div></div></section>
+<section id="pricing"><div class="wrap split" style="align-items:start"><div><div class="eyebrow">Pricing</div><h2>Know the price before you book</h2><p class="lead">Clear starting prices build trust and answer the first question people ask.</p><p class="note">Prices on this sample are placeholders.</p></div><table class="menu-t"><tr><td>Botox<small>Per unit, total shown at booking</small></td><td>from $XX</td></tr><tr><td>Lip filler<small>One syringe</small></td><td>from $XXX</td></tr><tr><td>HydraFacial<small>Signature, 60 minutes</small></td><td>$XXX</td></tr><tr><td>Laser facial<small>Single session</small></td><td>from $XXX</td></tr><tr><td>Ourelle membership<small>Monthly facial plus member pricing</small></td><td>$XX / mo</td></tr></table></div></section>
+<section id="providers" style="padding-top:0"><div class="wrap"><div class="eyebrow">Providers</div><h2>Who treats you</h2><div class="prov reveal" style="margin-top:26px"><div class="ph"><img src="/samples/med-spa/img/prov.jpg" alt="Provider portrait (stock photo stand in)" loading="lazy"></div><div><h3>Provider name, credentials</h3><p style="opacity:.85;margin-top:8px">Real provider bios with license type, training and years in practice go here. Credentials up front are what make a med spa site credible to patients and to AI.</p><div class="badges"><span>License type</span><span>Training</span><span>Years in practice</span></div></div></div></div></section>
+<section id="faq" style="padding-top:0"><div class="wrap split" style="align-items:start"><div><div class="eyebrow">Questions</div><h2>What people ask first</h2></div><div><details open><summary>Who performs treatments at Ourelle?</summary><p>Every injectable and laser treatment is performed by a licensed provider. Provider names and credentials are listed in our Providers section and confirmed at your consult.</p></details><details><summary>Do I need a consult first?</summary><p>Yes for injectables and lasers. A consult is a conversation about goals, safety and options, not a commitment.</p></details><details><summary>How much does Botox cost?</summary><p>Pricing depends on the areas treated. Current pricing is shown at booking and confirmed at your consult.</p></details><details><summary>Is there downtime?</summary><p>It depends on the treatment. Each treatment page lists typical downtime, and your provider confirms it for you.</p></details></div></div></section>
+<section id="book" class="band" style="text-align:center"><div class="wrap"><div class="eyebrow">Book</div><h2 style="color:#fff">Start with a consult</h2><p class="lead" style="margin:0 auto 26px">Buttons connect to the booking system the studio already uses.</p><a class="btn" href="#book">Book a consult (sample)</a></div></section></main>
+<footer><div class="cols"><div><div class="brand" style="color:#fff">Ourelle<small>Skin Studio</small></div><p style="margin-top:16px;max-width:340px;opacity:.8">Medical aesthetics in Larkspur Vale. Address, hours and medical director details go here.</p></div><div><h4>Treatments</h4><a href="/samples/med-spa/botox-larkspur-vale/">Botox</a><a href="/samples/med-spa/#treatments">Fillers</a><a href="/samples/med-spa/#treatments">Facials</a></div><div><h4>Studio</h4><a href="/samples/med-spa/#providers">Providers</a><a href="/samples/med-spa/#pricing">Pricing</a></div><div><h4>Visit</h4><a href="/samples/med-spa/#book">Book a consult</a><a href="/samples/med-spa/#faq">Questions</a></div></div>
+<div class="legal"><span>Treatments are performed by licensed providers. Results vary. Prices shown are sample placeholders.</span><span>Sample site concept by LocalLift, a SocialDM company. Not a real business.</span></div></footer>
+<script>
+(function(){
+var n=document.querySelector('.nav'),b=document.querySelector('.burger'),m=document.querySelector('.menu');
+if(b)b.addEventListener('click',function(){m.classList.toggle('open');b.setAttribute('aria-expanded',m.classList.contains('open'))});
+if(n&&n.classList.contains('over')){var h=document.querySelector('.hero');window.addEventListener('scroll',function(){n.classList.toggle('solid',window.scrollY>(h?h.offsetHeight-90:200))},{passive:true})}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+document.querySelectorAll('.save').forEach(function(s){s.addEventListener('click',function(ev){ev.preventDefault();s.classList.toggle('on');s.textContent=s.classList.contains('on')?'♥':'♡'})});
+document.querySelectorAll('form[data-demo]').forEach(function(f){f.addEventListener('submit',function(ev){ev.preventDefault();var o=f.querySelector('.ok');if(o){o.hidden=false}})});
+})();
+</script></body></html>
