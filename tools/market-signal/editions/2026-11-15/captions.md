@@ -23,7 +23,7 @@ More options tend to mean more comparing before anyone books a tour.
 
 Federal price data does not show a national slowdown: the rent index rose 0.2% in October. Local markets can still move on their own, and where one softens, we think the shortlist stage may change first.
 
-Our view: a softer market may stretch the shortlist stage. A renter might check four communities on Google Maps instead of two, read further into the reviews, and ask an AI assistant which places offer the most for the money. When several options look affordable, the details a renter can trust may carry more weight than the price alone, such as recent photos and reviews that get a reply.
+Our view: a softer market may stretch that stage. A renter might check four communities on Google Maps instead of two, read further into the reviews, and ask an AI assistant which places offer the most for the money. When several options look affordable, the details a renter can trust may carry more weight than the price alone, such as recent photos and reviews that get a reply.
 
 For a marketing team, that may make the shortlist stage worth as much attention as the ad budget.
 
