@@ -20,7 +20,8 @@ if(q.cc)parts.push("cc="+e(q.cc));if(q.bcc)parts.push("bcc="+e(q.bcc));if(q.s)pa
 var href="mailto:"+(q.to||"")+(parts.length?"?"+parts.join("&"):"");
 var go=document.getElementById("go"),m=document.getElementById("m"),cp=document.getElementById("cp");go.href=href;
 if(q.s){document.getElementById("s").textContent=q.s;document.title=q.s;}
-var WRAP=function(h){return '<div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;color:#000;background:transparent">'+h+"</div>";};
+/* Nov 15 2026: strip any style, class or background the HQ card carried, so every report email pastes the same, with no grey shading. */
+var WRAP=function(h){return '<div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;color:#000;background:transparent">'+String(h).replace(/\s(style|class|bgcolor|id)="[^"]*"/gi,"")+"</div>";};
 function copy(done){
  if(!(q.t||q.h)){done(false);return;}
  try{if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write&&q.h){navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([WRAP(q.h)],{type:"text/html"}),"text/plain":new Blob([q.t||""],{type:"text/plain"})})]).then(function(){done(true);},function(){done(fb());});return;}}catch(x){}
