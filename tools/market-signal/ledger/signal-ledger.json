@@ -121,6 +121,11 @@
      "at": "2026-11-08 07:30 MST",
      "by": "Q (weekly build No. 03)",
      "change": "Retried. NMHC's press release search surfaced only the July 2026 survey page; the NMHC data table link returned rows only through October 2023. October 2026 figures still not readable on NMHC's own page; still held, retry next week."
+    },
+    {
+     "at": "2026-11-15 07:09 MST",
+     "by": "Q (weekly build No. 04)",
+     "change": "Retried. NMHC's quarterly survey index lists the October 2026 survey (10/22/2026) but its page refused the unattended fetch; the April and July 2026 press releases read fine, the October one is not yet readable on NMHC's own page. Still held; retry next week."
     }
    ]
   },
@@ -181,6 +186,11 @@
      "at": "2026-11-08 07:30 MST",
      "by": "Q (weekly build No. 03)",
      "change": "No checkpoint due this week (Apartment List November data estimated late November). Michael's No. 02 post still not placed in Metricool; Mon Nov 16 now has no LinkedIn post on his profile."
+    },
+    {
+     "at": "2026-11-15 07:09 MST",
+     "by": "Q (weekly build No. 04)",
+     "change": "No checkpoint due yet (Apartment List November data estimated late November). No change."
     }
    ]
   },
@@ -204,7 +214,8 @@
      "date": "Mid to late November 2026",
      "date_status": "Estimated",
      "owner": "LocalLift research desk",
-     "outcome": "Pending"
+     "outcome": "Pending",
+     "last_checked": "2026-11-15"
     },
     {
      "indicator": "Yardi Matrix Phoenix report, next edition: asking rent change year over year (negative 2.1% in September)",
@@ -237,6 +248,67 @@
      "at": "2026-11-08 07:25 MST",
      "by": "Independent editor",
      "change": "LocalLift caption rewritten to a resident review angle with a different statistic (San Francisco and Austin) so it no longer overlaps Michael's; Pillar hook and closing question changed and last week's line removed; Michael opener, closer and question varied from No. 02 and hedged; Melanie graphic note neutralized, '8.2%' label pulled inside the margin, sans numerals instead of slashed zero mono, footnotes enlarged; Michael stat shown as '2.4%' with 'Below zero' label."
+    },
+    {
+     "at": "2026-11-15 07:09 MST",
+     "by": "Q (weekly build No. 04)",
+     "change": "Checkpoint check: Yardi Matrix's blog lists no October 2026 national or Phoenix multifamily report as of Nov 15 (latest national is September, Oct 19; latest Phoenix is September, Oct 5). Both checkpoints stay Pending (estimated window not yet passed); recheck next week."
+    }
+   ]
+  },
+  {
+   "id": "MS-004",
+   "edition": "No. 04",
+   "status": "Built Nov 15, 2026; posts queued (Melanie Nov 17, LocalLift Nov 18, Pillar Nov 19); Michael's post sent to Metricool for his approval, Mon Nov 23 7:41 AM (his LinkedIn already has posts every day Nov 16 to 21)",
+   "logged": "2026-11-15",
+   "finding": "BLS Consumer Price Index, Phoenix area (Phoenix-Mesa-Scottsdale), released Nov 10, 2026: the rent of primary residence index fell 1.4% over the two months August to October 2026 (232.172 in October from 235.508 in August, not seasonally adjusted); shelter fell 1.2%. Earlier 2026 two month changes: +0.4% (to April), negative 0.2% (to June), +0.2% (to August). No 12 month change for October 2026 is published because October 2025 data were not collected (2025 lapse in appropriations). Seattle area rent index rose 1.0% over the same two months. National rent index rose 0.2% in October (seasonally adjusted).",
+   "source": "U.S. Bureau of Labor Statistics, Consumer Price Index, Phoenix area and Seattle area, October 2026 (Nov 10, 2026); Phoenix April, June and August 2026 releases; national CPI October 2026 (Nov 10, 2026)",
+   "url": "https://www.bls.gov/regions/west/news-release/consumerpriceindex_phoenix.htm",
+   "url_note": "Current page URL serves the newest release; dated archive https://www.bls.gov/regions/west/news-release/2026/consumerpriceindex_phoenix_20261110.htm. Seattle: https://www.bls.gov/regions/west/news-release/consumerpriceindex_seattle.htm. National: https://www.bls.gov/news.release/archives/cpi_11102026.htm",
+   "verification": "All figures read on bls.gov pages by the builder and confirmed by an independent fact checker (Jun to Aug +0.2% also recomputed from index levels 235.143 and 235.508). BLS rent factsheet: most rents in the sample are continuing rents.",
+   "local_evidence": "Phoenix area and Seattle area are both verified this week (BLS local CPI). Limitation: one two month reading, not seasonally adjusted, small local sample (BLS says local indexes are more volatile), covers all rented homes not only professionally managed apartments, and no year over year comparison for October.",
+   "interpretation": "Because the CPI rent index follows rents paid on existing leases as well as new ones, a 1.4% two month drop may suggest that softer Phoenix area pricing is reaching residents already in place, not only advertised rents, while Seattle moved the other way. This may make a community's own rent roll as important to watch as asking rent reports; it does not by itself justify a pricing change.",
+   "confidence": "Low",
+   "confidence_reason": "A single two month, not seasonally adjusted reading from a small local sample that BLS describes as volatile; no 12 month comparison available; earlier 2026 periods were small and mixed in direction.",
+   "checkpoints": [
+    {
+     "indicator": "BLS Phoenix area CPI, two months ending December 2026: does rent of primary residence fall again (negative 1.4% Aug to Oct)?",
+     "date": "2027-01-13",
+     "date_status": "Confirmed (scheduled in the BLS October release)",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    },
+    {
+     "indicator": "BLS Seattle area CPI, two months ending December 2026: does the rent index keep rising (+1.0% Aug to Oct)?",
+     "date": "2027-01-13",
+     "date_status": "Confirmed (scheduled in the BLS Seattle release)",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    },
+    {
+     "indicator": "Yardi Matrix national report, October 2026: Phoenix renewal rent growth (negative 2.4% in September)",
+     "date": "Late November 2026",
+     "date_status": "Estimated",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    }
+   ],
+   "outcome": "Pending",
+   "revisions": [
+    {
+     "at": "2026-11-15 07:09 MST",
+     "by": "Q (builder)",
+     "change": "First draft: one finding (Phoenix area rent index down 1.4% Aug to Oct, Seattle up 1.0%), four sections, two graphics, four captions."
+    },
+    {
+     "at": "2026-11-15 07:09 MST",
+     "by": "Independent fact checker",
+     "change": "All figures matched BLS. Fixes: next checkpoint now the confirmed Jan 13, 2027 date; LocalLift comparison of one month national vs two month Phoenix removed; national source link switched to the dated archive; 'Phoenix' scoped to 'Phoenix area' in Melanie's hook and graphic headline."
+    },
+    {
+     "at": "2026-11-15 07:09 MST",
+     "by": "Independent editor",
+     "change": "Melanie overclaim softened (rent roll 'may deserve as much attention' instead of showing it first); LocalLift post no longer reuses Melanie's statistic and no longer overlaps Michael's angle; Pillar hook and close rewritten (no repeat of No. 03, pricing guardrail added); Michael opener changed, check 2 replaced (was a repeat of No. 03), 'X, not Y' line on his graphic removed; graphics re-rendered."
     }
    ]
   }

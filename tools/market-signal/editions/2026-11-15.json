@@ -1,0 +1,67 @@
+{
+ "slug": "2026-11-15-no04",
+ "issue": "04",
+ "finding_id": "MS-004",
+ "finding": "BLS Consumer Price Index, Phoenix area (Phoenix-Mesa-Scottsdale), released Nov 10, 2026: the rent of primary residence index fell 1.4% over the two months August to October 2026 (232.172 in October from 235.508 in August, not seasonally adjusted); shelter fell 1.2%. Earlier 2026 two month changes: +0.4% (to April), negative 0.2% (to June), +0.2% (to August). No 12 month change for October 2026 is published because October 2025 data were not collected (2025 lapse in appropriations). Seattle area rent index rose 1.0% over the same two months. National rent index rose 0.2% in October (seasonally adjusted).",
+ "sections": {
+  "signal": "BLS's Phoenix area consumer price index (released Nov 10, 2026) shows the rent of primary residence index down 1.4% over the two months August to October 2026, not seasonally adjusted, after +0.4%, negative 0.2% and +0.2% in the earlier 2026 two month periods; shelter fell 1.2%. Nationally, the rent index rose 0.2% in October (seasonally adjusted).",
+  "local_reality": "Phoenix area: verified, as above. Seattle area: the BLS rent index rose 1.0% over the same two months. Limitation: one reading, small local samples that BLS calls volatile, not seasonally adjusted, all rented homes rather than apartments only, and no 12 month change for October because October 2025 data were not collected.",
+  "operator_decision": {
+   "question": "Are the rents your residents pay moving the same way as the rents you advertise?",
+   "examine": "Average in place rent change August to October on the community's own rent roll, split by new leases and renewals; how much each concession reduces effective rent; leasing mix by floor plan; nearby communities' advertised rents and specials. A metro index alone does not justify a pricing change."
+  },
+  "watch": [
+   {
+    "indicator": "BLS Phoenix area CPI, two months ending December 2026: does rent of primary residence fall again (negative 1.4% Aug to Oct)?",
+    "date": "2027-01-13",
+    "date_status": "Confirmed (scheduled in the BLS October release)",
+    "owner": "LocalLift research desk"
+   },
+   {
+    "indicator": "BLS Seattle area CPI, two months ending December 2026: does the rent index keep rising (+1.0% Aug to Oct)?",
+    "date": "2027-01-13",
+    "date_status": "Confirmed (scheduled in the BLS Seattle release)",
+    "owner": "LocalLift research desk"
+   },
+   {
+    "indicator": "Yardi Matrix national report, October 2026: Phoenix renewal rent growth (negative 2.4% in September)",
+    "date": "Late November 2026",
+    "date_status": "Estimated",
+    "owner": "LocalLift research desk"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "name": "U.S. Bureau of Labor Statistics, Consumer Price Index, Phoenix area, October 2026",
+   "date": "Nov 10, 2026",
+   "url": "https://www.bls.gov/regions/west/news-release/consumerpriceindex_phoenix.htm"
+  },
+  {
+   "name": "U.S. Bureau of Labor Statistics, Consumer Price Index, Seattle area, October 2026",
+   "date": "Nov 10, 2026",
+   "url": "https://www.bls.gov/regions/west/news-release/consumerpriceindex_seattle.htm"
+  },
+  {
+   "name": "U.S. Bureau of Labor Statistics, Consumer Price Index, October 2026",
+   "date": "Nov 10, 2026",
+   "url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm"
+  },
+  {
+   "name": "BLS Phoenix area CPI, April, June and August 2026 releases",
+   "date": "May 12, Jul 14, Sep 11, 2026",
+   "url": "https://www.bls.gov/regions/west/news-release/2026/"
+  }
+ ],
+ "posts": "see 2026-11-15/captions.md",
+ "interpretation": "Because the CPI rent index follows rents paid on existing leases as well as new ones, a 1.4% two month drop may suggest that softer Phoenix area pricing is reaching residents already in place, not only advertised rents, while Seattle moved the other way. This may make a community's own rent roll as important to watch as asking rent reports; it does not by itself justify a pricing change.",
+ "confidence": "Low",
+ "confidence_reason": "A single two month, not seasonally adjusted reading from a small local sample that BLS describes as volatile; no 12 month comparison available; earlier 2026 periods were small and mixed in direction.",
+ "held": [
+  "MS-H01 NMHC October 2026 survey (still not readable on NMHC's page)"
+ ],
+ "photos": {
+  "melanie": "Pexels 18194032, Papago Park Hole in the Rock view over Phoenix",
+  "michael": "Pexels 30151768, mid century apartments with palms (tagged Los Angeles; street sign and plate blurred)"
+ }
+}
