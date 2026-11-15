@@ -26,7 +26,7 @@ LISTINGS = [
 
 HOODS = [
     ('heron-point', 'Heron Point', 'water', 'Lakefront streets, boat slips and long evening light.'),
-    ('old-mill-district', 'Old Mill District', 'street', 'Brick lofts, the Saturday market and everything on foot.'),
+    ('old-mill-district', 'Old Mill District', 'loft', 'Brick lofts, the Saturday market and everything on foot.'),
     ('larkspur-heights', 'Larkspur Heights', 'dusk', 'Hillside homes with valley views and quiet cul-de-sacs.'),
     ('willow-bend', 'Willow Bend', 'l6', 'Tree-lined streets, big yards and the river trail.'),
 ]
@@ -103,7 +103,7 @@ def home():
              ('sell-home-larkspur-vale/', 'in1', 'Selling', 'How to sell a home in Larkspur Vale, step by step'),
              ('neighborhoods/heron-point/', 'water', 'Neighborhoods', 'Living on the lake in Heron Point: docks, trails and what homes cost')]
     ph = ''.join(f'<a class="post reveal" href="{B}{h}"><div class="ph"><img src="{I}{im}.jpg" alt="" loading="lazy"></div><div class="eyebrow" style="margin-top:16px">{e}</div><h3>{t}</h3><span class="meta">READ &rarr;</span></a>' for h, im, e, t in posts)
-    gram = ''.join(f'<div class="ph"><img src="{I}{k}.jpg" alt="" loading="lazy"></div>' for k in ['in2', 'resort', 'in3', 'l7', 'in4', 'sunset'])
+    gram = ''.join(f'<div class="ph"><img src="{I}{k}.jpg" alt="" loading="lazy"></div>' for k in ['in6', 'l9', 'in4', 'l7', 'in7', 'sunset'])
     body = f"""
 <section class="hero" style="padding:0"><div class="bg" style="background-image:url({I}hero.jpg)"></div>
 <div class="in"><div class="eyebrow" style="color:#fff;opacity:.85">Larkspur Vale &nbsp;&middot;&nbsp; Lake towns &nbsp;&middot;&nbsp; Luxury homes</div>
@@ -152,7 +152,7 @@ def listings():
 
 def listing_detail():
     l = LISTINGS[0]
-    gal = ''.join(f'<div class="ph"><img src="{I}{k}.jpg" alt="Interior photo {i+1}" loading="lazy"></div>' for i, k in enumerate(['in1', 'in2', 'in3', 'in5']))
+    gal = ''.join(f'<div class="ph"><img src="{I}{k}.jpg" alt="Interior photo {i+1}" loading="lazy"></div>' for i, k in enumerate(['in1', 'in6', 'in5', 'in7']))
     feats = ['Infinity edge pool and spa', 'Private dock with boat lift', 'Chef kitchen with butler pantry', 'Primary suite with lake views',
              'Three car garage', 'Whole home generator', 'Wine room', 'Guest suite with private entry', 'Smart lighting and shades', 'Built 2019']
     fl = ''.join(f'<li>{f}</li>' for f in feats)
@@ -195,7 +195,7 @@ HOOD_DETAIL = {
         faqs=[('How much do homes in Heron Point cost?', 'Over the last 12 months the median sale was about $2.1M in this sample. Waterfront homes with docks sell at the top of that range.'),
               ('Do all Heron Point homes have lake access?', 'Most lots have a private dock or deeded access. Interior streets may not, so check each listing.'),
               ('Are there rules about docks and boats?', 'The lake association sets dock and wake rules. Ask for the current rules before you make an offer.')]),
-    'old-mill-district': dict(img='street', lede='The Old Mill District is the historic heart of Larkspur Vale. Brick mill buildings became lofts, the granary became a market hall, and almost everything is a short walk.',
+    'old-mill-district': dict(img='loft', lede='The Old Mill District is the historic heart of Larkspur Vale. Brick mill buildings became lofts, the granary became a market hall, and almost everything is a short walk.',
         glance=[('Median sale price', '$840K'), ('Days on market', '17'), ('Homes sold, 12 months', '71'), ('Walk to market', 'Yes')],
         life=['Saturday farmers market in the Granary Hall', 'Restaurants, coffee and galleries along Mill Street', 'Riverfront park and amphitheater', 'Lofts, townhomes and restored 1920s homes'],
         faqs=[('What kinds of homes are in the Old Mill District?', 'Converted lofts, newer townhomes and restored older homes on small lots.'),
@@ -220,7 +220,7 @@ def neighborhoods():
         body = f"""<section class="hero" style="padding:0;min-height:70vh"><div class="bg" style="background-image:url({I}{d['img']}.jpg)"></div><div class="in"><div class="crumbs" style="opacity:.9"><a href="{B}">Home</a> / <a href="{B}neighborhoods/">Neighborhoods</a> / {n}</div><div class="eyebrow" style="color:#fff;opacity:.85">Neighborhood guide</div><h1>Living in {nm}</h1></div><span class="tag">Stock photo</span></section>
 <section><div class="wrap"><div class="short"><b>The short answer</b>{d['lede']}</div></div>
 <div class="stats wrap" style="margin-top:30px">{gl}</div><p class="note wrap">Sample figures for a fictional town. A live guide updates these from the MLS each month.</p></section>
-<section style="padding-top:0"><div class="wrap split"><div class="reveal"><div class="eyebrow">Everyday life</div><h2>What it is like</h2><ul class="list" style="columns:1">{lf}</ul></div><div class="ph reveal" style="aspect-ratio:4/5"><img src="{I}{'resort' if s=='heron-point' else 'in5'}.jpg" alt="" loading="lazy"></div></div></section>
+<section style="padding-top:0"><div class="wrap split"><div class="reveal"><div class="eyebrow">Everyday life</div><h2>What it is like</h2><ul class="list" style="columns:1">{lf}</ul></div><div class="ph reveal" style="aspect-ratio:4/5"><img src="{I}{'shore' if s=='heron-point' else 'in4'}.jpg" alt="" loading="lazy"></div></div></section>
 <section style="padding-top:0"><div class="wrap"><div class="eyebrow">Homes in {n}</div><h2>On the market</h2><div class="grid g4" style="margin-top:24px">{hl}</div></div></section>
 <section style="padding-top:0"><div class="wrap split" style="align-items:start"><div><div class="eyebrow">Questions</div><h2>Buying in {nm}</h2></div><div>{faq_html(d['faqs'])}<p class="note" style="margin-top:18px">School boundaries change. Confirm with the school district before you buy.</p></div></div></section>"""
         P('neighborhoods/' + s, f'Living in {nm}, Larkspur Vale', f'Sample neighborhood guide for {n} (fictional).', body, schema=[faq_schema(d['faqs'])], over=False, extra_css=SEARCH_CSS)
@@ -272,7 +272,7 @@ def market():
 
 
 def about():
-    body = f"""<section><div class="wrap split"><div class="ph reveal" style="aspect-ratio:4/5"><img src="{I}agent.jpg" alt="Portrait (stock photo stand in)"></div>
+    body = f"""<section><div class="wrap split"><div class="ph reveal" style="aspect-ratio:4/5"><img src="{I}agent.jpg" alt="Portrait (stock photo stand in)" style="object-position:center 20%"></div>
 <div><div class="crumbs"><a href="{B}">Home</a> / About</div><div class="eyebrow">About</div><h2>Adrienne Fernwick</h2><p class="lead">Adrienne started selling homes in Larkspur Vale in 2006 after a decade in architecture. She still reads a floor plan before a price sheet, and her clients say it shows.</p>
 <p style="margin-top:18px;opacity:.88">Today she leads Fernwick Home Group, a small team that handles every detail of a sale or purchase, from pre-listing repairs to the final walkthrough. She serves on the Larkspur Lake Trust board and spends Saturdays at the Granary market.</p>
 <p style="margin-top:28px"><a class="btn dark" href="{B}contact/">Work with Adrienne</a></p></div></div></section>
