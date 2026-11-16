@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1c1712">
+<title>LocalLift Live · Montage · Staff preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e8;--ink:#1c1712;--mut:#6a6157;--card:#fff;--line:#e6ddcf;--acc:#b46e26;--acc2:#8f531b;--good:#3f6b4e}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "DM Sans",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:Manrope,system-ui,sans-serif;margin:0;letter-spacing:-.01em;line-height:1.15}
+.app{max-width:520px;margin:0 auto;padding-bottom:calc(30px + env(safe-area-inset-bottom))}
+.pv{background:#1c1712;color:#e8dcc8;font-size:13px;text-align:center;padding:7px 12px}
+header{position:relative;background:#1c1712 url(../hero.jpg) center/cover;color:#fff;padding:calc(16px + env(safe-area-inset-top)) 18px 18px}
+header:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.35),rgba(20,15,10,.85))}
+header>*{position:relative}
+.logo{height:26px;filter:brightness(0) invert(1)}
+.hi{margin-top:26px;font:800 26px/1.15 Manrope,system-ui,sans-serif}
+.tip{margin-top:6px;font-size:15px;color:#efe6d8}
+main{padding:14px 16px 0;display:grid;gap:12px}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.big button{border:0;border-radius:20px;padding:18px 12px;min-height:112px;font:800 17px Manrope,system-ui,sans-serif;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.big svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:1.8}
+.cap{background:var(--ink);color:#fff}.rev{background:var(--acc);color:#fff}
+.big small{font:500 13px "DM Sans",system-ui,sans-serif;opacity:.85}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px 16px}
+.lbl{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--mut);margin-bottom:8px}
+.lbl b{font-weight:700;color:var(--ink);font-size:15px}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.chip{border:1px solid var(--line);background:#fbf8f2;border-radius:14px;padding:12px;min-height:56px;text-align:left;font:700 15px "DM Sans",system-ui,sans-serif;color:var(--ink);cursor:pointer}
+.chip span{display:block;font-weight:400;font-size:13px;color:var(--mut)}
+.chip:active{background:#f1e4d2}
+.say{margin:0;font-size:15.5px}.say li{margin:6px 0}
+ul.say{padding-left:18px}
+.cal{display:grid;gap:0}
+.ev{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}.ev:first-child{border-top:0;padding-top:2px}
+.d{align-self:start;text-align:center;border-radius:12px;background:#f1e4d2;padding:5px 0;font:800 18px/1.05 Manrope,system-ui,sans-serif;color:var(--acc2)}.d small{display:block;font:700 11.5px "DM Sans",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.ev b{display:block;font-size:15px}.ev span{font-size:13.5px;color:var(--mut)}
+.ev.ours .d{background:var(--ink);color:#fff}
+.add{margin-top:8px;width:100%;border:1px dashed #cdbfa9;background:none;border-radius:12px;padding:11px;font:700 14px "DM Sans",system-ui,sans-serif;color:var(--acc2);cursor:pointer;min-height:44px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.stats div{background:#fbf8f2;border-radius:14px;padding:10px 4px}.stats b{display:block;font:800 24px Manrope,system-ui,sans-serif}.stats span{font-size:12.5px;color:var(--mut);line-height:1.25;display:block}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px}
+summary{font-weight:700;cursor:pointer;min-height:24px}
+.src{font-size:13px;color:var(--mut);margin-top:8px}
+.sheet{position:fixed;inset:0;background:rgba(20,15,10,.55);display:none;align-items:flex-end;justify-content:center;z-index:9}
+.sheet.on{display:flex}
+.box{background:var(--bg);width:100%;max-width:520px;border-radius:22px 22px 0 0;padding:20px 18px calc(22px + env(safe-area-inset-bottom));display:grid;gap:10px;max-height:88vh;overflow:auto}
+.box h3{font-size:20px}
+.box input,.box select{font:16px "DM Sans",system-ui,sans-serif;width:100%;padding:12px;border-radius:12px;border:1px solid #d8d0bf;background:#fff;min-height:46px}
+.btn{border:0;border-radius:99px;padding:14px;font:800 16px Manrope,system-ui,sans-serif;cursor:pointer;min-height:50px;width:100%}
+.p{background:var(--ink);color:#fff}.g{background:transparent;border:1px solid #cdbfa9;color:var(--ink)}
+.msg{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;font-size:15px}
+.ok{color:var(--good);font-weight:700}
+.thumbs{display:flex;gap:6px;flex-wrap:wrap}.thumbs img,.thumbs video{width:72px;height:72px;object-fit:cover;border-radius:10px}
+button:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="pv">Preview of the staff home screen · nothing is uploaded or sent from this preview</div>
+  <header>
+    <img class="logo" src="../logo-white.png" alt="Montage">
+    <div class="hi" id="hi">Good morning</div>
+    <div class="tip" id="tip"></div>
+  </header>
+  <main>
+    <div class="big">
+      <button class="cap" id="bCap"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></svg>Capture<small>Photo or video to LocalLift</small></button>
+      <button class="rev" id="bRev"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>Get a review<small>Text the Google link</small></button>
+    </div>
+
+    <section class="card">
+      <div class="lbl"><b>Tap when it happens</b><span>sends the review ask</span></div>
+      <div class="chips">
+        <button class="chip" data-m="movein">Move in<span>Welcome home</span></button>
+        <button class="chip" data-m="renew">Renewal<span>Thank them</span></button>
+        <button class="chip" data-m="work">Work order done<span>Fixed and closed</span></button>
+        <button class="chip" data-m="event">Resident event<span>After the fun</span></button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="lbl"><b>Today's talk track</b><span>checked Nov 10</span></div>
+      <ul class="say">
+        <li><b>Special:</b> select 2 bedrooms have price drops, 2 months free and a $1,000 Look &amp; Lease, through Nov 30.</li>
+        <li><b>Roommates:</b> 2 bedroom C4 from $2,210, about $1,105 each.</li>
+        <li><b>1 bedrooms</b> from $1,805.</li>
+        <li><b>Reviews:</b> rated 4.7 on Google, the highest in our comp set.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="lbl"><b>Coming up near Montage</b><span>Nov and Dec</span></div>
+      <div class="cal" id="cal"></div>
+      <button class="add" id="bAdd">+ Add a resident event</button>
+    </section>
+
+    <section class="card">
+      <div class="lbl"><b>This week</b><span>from your taps</span></div>
+      <div class="stats"><div><b id="sA">0</b><span>review asks (practice)</span></div><div><b id="sC">0</b><span>photos and videos (practice)</span></div><div><b>34</b><span>Google reviews, 4.7</span></div></div>
+    </section>
+
+    <details>
+      <summary>For managers: score and rivals</summary>
+      <p class="src">Visibility Index 70 (Nov 13). The Steward has 35 reviews to our 34. AI assistants named Montage in 39 of 96 renter answers. Full detail stays in the Score and Rivals tabs.</p>
+    </details>
+  </main>
+</div>
+
+<div class="sheet" id="sh"><div class="box" id="box"></div></div>
+
+<script>
+{
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const LINK='moveinlocal.com/review/montage';
+const TIPS=["The best review ask is the one sent while the moment is still warm.","A closed work order is a small win for a resident. Say so, then ask.","One review a week keeps you ahead. Small and steady wins.","Use the resident's first name. People answer people.","Every tour is a first impression. Greet like they already live here.","Renewals are a vote of confidence. Thank them out loud, then ask.","Snap the moment, we will make it look great."];
+const now=new Date();const h=now.getHours();
+$('hi').textContent=(h<12?'Good morning':h<17?'Good afternoon':'Good evening')+', team';
+$('tip').textContent=TIPS[(now.getDate())%TIPS.length];
+const EV=[
+ ['Nov','20','ZooLights opens','Oregon Zoo, runs through Jan 3',0],
+ ['Nov','21','Last Beaverton Farmers Market','Saturday market, last day of the season',0],
+ ['Nov','22','Holiday Sip and Shop','Willamette Valley Vineyards, Lake Oswego',0],
+ ['Nov','30','Special ends','2 months free on select 2 bedrooms',1],
+ ['Dec','12','ScanFair','Dec 12 and 13',0]];
+let ours=[];
+const drawCal=()=>{const M={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};const key=e=>(M[e[0]]<10?M[e[0]]+12:M[e[0]])*40+Number(e[1]);$('cal').innerHTML=[...EV,...ours].sort((a,b)=>key(a)-key(b)).map(e=>`<div class="ev ${e[4]?'ours':''}"><div class="d"><small>${e[0]}</small>${e[1]}</div><div><b>${esc(e[2])}</b><span>${esc(e[3])}</span></div></div>`).join('')};
+drawCal();
+let asks=0,caps=0;
+const MOM={movein:'welcome home to Montage! If you have a minute, we would love a quick review of your move in on our Montage Google profile.',renew:'thank you for renewing with us! If you have a minute, we would love a quick review on our Montage Google profile.',work:'your service request is all set. If you have a minute, we would love a quick review on our Montage Google profile.',event:'thanks for joining our resident event! If you have a minute, we would love a quick review on our Montage Google profile.',any:'thank you for being part of Montage. If you have a minute, we would love a quick review on our Montage Google profile.'};
+const sh=$('sh'),box=$('box');
+const open=html=>{box.innerHTML=html;sh.classList.add('on')};
+const close=()=>sh.classList.remove('on');
+sh.addEventListener('click',e=>{if(e.target===sh)close()});
+const ask=m=>open(`<h3>Send a review ask</h3><input id="nm" placeholder="Resident first name" autocomplete="off"><input id="ph" placeholder="Mobile number (optional)" inputmode="tel"><div class="msg" id="mg"></div><button class="btn p" id="send">Send from my phone</button><button class="btn g" id="cx">Cancel</button>`,m);
+let cur='any';
+const txt=()=>`Hi ${($('nm')&&$('nm').value.trim())||'there'}, ${MOM[cur]} Thank you! The Montage team\n\n${LINK}`;
+const showAsk=m=>{cur=m;ask();$('mg').textContent=txt();$('nm').addEventListener('input',()=>$('mg').textContent=txt())};
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>showAsk(b.dataset.m)));
+$('bRev').addEventListener('click',()=>showAsk('any'));
+$('bCap').addEventListener('click',()=>open(`<h3>Capture for LocalLift</h3><select id="ty"><option>Local spot</option><option>Resident event</option><option>Amenity</option><option>New look or update</option></select><input id="fl" type="file" accept="image/*,video/*" capture="environment" multiple><div class="thumbs" id="th"></div><input id="nt" placeholder="Add a note (optional), like the spot's name"><button class="btn p" id="up">Send to LocalLift</button><button class="btn g" id="cx">Cancel</button>`));
+$('bAdd').addEventListener('click',()=>open(`<h3>Add a resident event</h3><input id="en" placeholder="Event name, like Pizza and Paint"><input id="ed" type="date"><button class="btn p" id="addok">Add to the calendar</button><button class="btn g" id="cx">Cancel</button>`));
+box.addEventListener('change',e=>{if(e.target.id==='fl'){$('th').innerHTML=[...e.target.files].slice(0,6).map(f=>f.type.startsWith('video')?`<video src="${URL.createObjectURL(f)}" muted></video>`:`<img src="${URL.createObjectURL(f)}" alt="">`).join('')}});
+box.addEventListener('click',e=>{const id=e.target.id;
+ if(id==='cx')close();
+ if(id==='send'){asks++;$('sA').textContent=asks;box.innerHTML='<h3>Ready to send</h3><p>In the live app, this opens your phone\'s Messages with the text filled in. You tap Send. This preview does not open Messages.</p><p class="ok">Preview: counted as 1 practice ask.</p><button class="btn p" id="cx">Done</button>'}
+ if(id==='up'){const n=($('fl').files||[]).length;if(!n){$('fl').focus();return}caps+=n;$('sC').textContent=caps;box.innerHTML=`<h3>Ready for LocalLift (preview)</h3><p class="ok">${n} file${n>1?'s':''} picked.</p><p>In the live app these go straight to LocalLift. We design them, write the caption and schedule the post. In this preview nothing is uploaded.</p><button class="btn p" id="cx">Done</button>`}
+ if(id==='addok'){const n=$('en').value.trim(),d=$('ed').value;if(!n||!d)return;const dt=new Date(d+'T12:00');ours.push([dt.toLocaleString('en-US',{month:'short'}),String(dt.getDate()),n,'Resident event, added by your team',1]);drawCal();close()}
+});
+}
+</script>
+</body>
+</html>
