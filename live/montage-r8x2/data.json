@@ -10,7 +10,10 @@
       "tone": "warn",
       "title": "New 1 star review about upkeep",
       "body": "A resident left a 1 star review about grounds maintenance on Nov 12. A reply was posted on Nov 13. Your rating now reads 4.7 on 34 reviews.",
-      "action": "Invite this resident to talk with the office, and keep asking every resident at the usual moments."
+      "action": "Invite this resident to talk with the office, and keep asking every resident at the usual moments.",
+      "who": "Sean M.",
+      "link": "https://maps.google.com/maps?cid=967661996940431943",
+      "linkLabel": "Open Montage's reviews on Google"
     },
     {
       "src": "Rival watch · map scan",
@@ -162,5 +165,42 @@
     "opened": 0,
     "through": "Nov 16"
   },
-  "shortLink": "moveinlocal.com/review/montage"
+  "shortLink": "moveinlocal.com/review/montage",
+  "talk": {
+    "checked": "Nov 16",
+    "checkedIso": "2026-11-16",
+    "offer": "Select 2 bedrooms: 2 months free plus a $1,000 Look & Lease, through Nov 30.",
+    "prices": [
+      [
+        "$1,105",
+        "each, roommates on a 2 bed"
+      ],
+      [
+        "$1,805",
+        "1 bedrooms from"
+      ],
+      [
+        "4.7★",
+        "top rating in our comp set"
+      ]
+    ]
+  },
+  "followups": [
+    {
+      "title": "Reach out to Sean M.",
+      "body": "A 1 star review about grounds upkeep came in on Nov 12, and a reply is posted. A quick call or note from the office can help.",
+      "due": "This week"
+    },
+    {
+      "title": "Special ends Nov 30",
+      "body": "2 months free on select 2 bedrooms. Mention it on every tour this week and next.",
+      "due": "Nov 30"
+    },
+    {
+      "title": "ZooLights opens Nov 20",
+      "body": "A good holiday tip for prospects and residents. Snap a photo if your team goes.",
+      "due": "Nov 20"
+    }
+  ],
+  "occupancy": null
 }
