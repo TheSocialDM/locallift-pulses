@@ -202,5 +202,50 @@
       "due": "Nov 20"
     }
   ],
-  "occupancy": null
+  "occupancy": null,
+  "snapIdeas": {
+    "month": "November",
+    "items": [
+      [
+        "Cozy in the Sky Lounge",
+        "Fireplace on, a mug and a blanket. Warm shots win on rainy days.",
+        "Amenity"
+      ],
+      [
+        "Rain on the big windows",
+        "Shoot a cozy home from inside while it rains. Oversized windows make it.",
+        "Amenity"
+      ],
+      [
+        "Coffee station moment",
+        "A latte at the rec room coffee bar, steam and all.",
+        "Amenity"
+      ],
+      [
+        "Matcha run to TANAKA",
+        "Japanese bakery and matcha on SW Bridgeport Rd.",
+        "Local spot"
+      ],
+      [
+        "Mochi donuts at Mikiko",
+        "New at Bridgeport Village. Grab a box shot.",
+        "Local spot"
+      ],
+      [
+        "Cooper Mountain Ale Works",
+        "Downtown Tigard pub. A cozy table shot works.",
+        "Local spot"
+      ],
+      [
+        "Last Beaverton Farmers Market",
+        "Nov 21 is the last market of the season.",
+        "Event"
+      ],
+      [
+        "ZooLights opens",
+        "Nov 20 at the Oregon Zoo, through Jan 3. Lights at night.",
+        "Event"
+      ]
+    ]
+  }
 }
