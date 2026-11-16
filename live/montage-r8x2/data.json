@@ -274,6 +274,12 @@
         "tip": "Their 1 beds start lower. On 2 beds, our 2 months free plus $1,000 is the bigger special.",
         "vs": [
           [
+            "2 bed special",
+            "Up to 6 weeks free",
+            "2 mo free + $1,000",
+            "us"
+          ],
+          [
             "1 bed from",
             "$1,515",
             "$1,805",
@@ -286,12 +292,6 @@
             "them"
           ],
           [
-            "2 bed special",
-            "Up to 6 weeks free",
-            "2 months free + $1,000 (select 2 beds)",
-            "us"
-          ],
-          [
             "Deposit",
             "$500",
             "$400",
@@ -299,8 +299,8 @@
           ],
           [
             "Pet rent",
-            "$50 a month",
-            "$35 a month",
+            "$50/mo",
+            "$35/mo",
             "us"
           ],
           [
@@ -311,8 +311,8 @@
           ],
           [
             "Parking",
-            "$150 to $175 a month",
-            "Ask the office",
+            "$150 to $175/mo",
+            "Ask office",
             "ask"
           ]
         ]
@@ -335,8 +335,14 @@
         "tip": "They do not post how much is free. Ask what they were quoted. Expect them to pitch their solar electricity credit.",
         "vs": [
           [
-            "1 bed",
-            "$1,949 (one plan)",
+            "2 bed special",
+            "Free rent, amount not posted",
+            "2 mo free + $1,000",
+            "ask"
+          ],
+          [
+            "1 bed from",
+            "$1,949",
             "$1,805",
             "us"
           ],
@@ -347,21 +353,27 @@
             "them"
           ],
           [
-            "Special",
-            "Free rent, amount not posted",
-            "2 months free + $1,000 (select 2 beds)",
-            "ask"
-          ],
-          [
             "Deposit",
             "$400",
             "$400",
             "even"
           ],
           [
-            "Pets",
-            "Varies, call",
-            "$35 a month, $300 deposit",
+            "Pet rent",
+            "Not posted",
+            "$35/mo",
+            "ask"
+          ],
+          [
+            "Pet deposit",
+            "Not posted",
+            "$300",
+            "ask"
+          ],
+          [
+            "Parking",
+            "Not posted",
+            "Ask office",
             "ask"
           ]
         ]
@@ -384,6 +396,12 @@
         "tip": "Higher rents in Lake Oswego. On 2 beds, our 2 months free plus $1,000 is still the bigger special.",
         "vs": [
           [
+            "2 bed special",
+            "Up to 6 weeks free + 1 perk",
+            "2 mo free + $1,000",
+            "us"
+          ],
+          [
             "1 bed from",
             "$2,194",
             "$1,805",
@@ -396,12 +414,6 @@
             "us"
           ],
           [
-            "2 bed special",
-            "Up to 6 weeks free + one perk",
-            "2 months free + $1,000 (select 2 beds)",
-            "us"
-          ],
-          [
             "Deposit",
             "$500",
             "$400",
@@ -409,8 +421,8 @@
           ],
           [
             "Pet rent",
-            "$55 a month",
-            "$35 a month",
+            "$55/mo",
+            "$35/mo",
             "us"
           ],
           [
@@ -421,8 +433,8 @@
           ],
           [
             "Parking",
-            "$185 to $235 a month",
-            "Ask the office",
+            "$185 to $235/mo",
+            "Ask office",
             "ask"
           ]
         ]
