@@ -1,15 +1,15 @@
 {
   "property": "Montage",
   "city": "Tigard, Oregon",
-  "updated": "2026-11-16T05:43:55-07:00",
-  "updatedLabel": "Nov 16, 5:43 am Phoenix time",
+  "updated": "2026-11-16T05:54:36-07:00",
+  "updatedLabel": "Nov 16, 5:54 am Phoenix time",
   "feed": [
     {
       "src": "Google reviews",
       "date": "Nov 12",
       "tone": "warn",
       "title": "New 1 star review about upkeep",
-      "body": "A resident left a 1 star review about grounds maintenance on Nov 12. A reply was posted on Nov 13. Your rating now reads 4.7 on 34 reviews.",
+      "body": "A resident left a 1 star review about property maintenance on Nov 12. A reply was posted on Nov 13. Your rating now reads 4.7 on 34 reviews.",
       "action": "Invite this resident to talk with the office, and keep asking every resident at the usual moments.",
       "who": "Sean M.",
       "link": "https://maps.google.com/maps?cid=967661996940431943",
@@ -29,7 +29,7 @@
       "tone": "good",
       "title": "Named in 39 of 96 renter answers",
       "body": "Up from 34 on Nov 6. The Steward was named in 34. All three assistants leave you out on Lake Oswego, the Nike campus and Washington Square questions.",
-      "action": "Our Google posts keep naming those areas."
+      "action": ""
     },
     {
       "src": "Google Maps · map scan",
@@ -44,7 +44,7 @@
       "date": "Nov 10 to 16",
       "tone": "info",
       "title": "2 visits to your guide",
-      "body": "Both visits came on Nov 11. No Call, Tour or Apply taps yet. The guide went live Nov 10.",
+      "body": "Both visits came on Nov 11. No Call, Tour or Apply taps yet.",
       "action": ""
     }
   ],
@@ -188,7 +188,7 @@
   "followups": [
     {
       "title": "Reach out to Sean M.",
-      "body": "A 1 star review about grounds upkeep came in on Nov 12, and a reply is posted. A quick call or note from the office can help.",
+      "body": "A 1 star review about property upkeep came in on Nov 12, and a reply is posted. A quick call or note from the office can help.",
       "due": "This week"
     },
     {
