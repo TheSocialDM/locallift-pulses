@@ -4,155 +4,182 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1c1712">
-<title>LocalLift Live · Montage · Staff preview</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#2a1d14">
+<title>LocalLift Live · Montage · Preview</title>
 <style>
-:root{--bg:#f6f1e8;--ink:#1c1712;--mut:#6a6157;--card:#fff;--line:#e6ddcf;--acc:#b46e26;--acc2:#8f531b;--good:#3f6b4e}
-*{box-sizing:border-box;min-width:0}
-html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "DM Sans",system-ui,sans-serif;-webkit-text-size-adjust:100%}
-h1,h2,h3{font-family:Manrope,system-ui,sans-serif;margin:0;letter-spacing:-.01em;line-height:1.15}
-.app{max-width:520px;margin:0 auto;padding-bottom:calc(30px + env(safe-area-inset-bottom))}
-.pv{background:#1c1712;color:#e8dcc8;font-size:13px;text-align:center;padding:7px 12px}
-header{position:relative;background:#1c1712 url(../hero.jpg) center/cover;color:#fff;padding:calc(16px + env(safe-area-inset-top)) 18px 18px}
-header:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.35),rgba(20,15,10,.85))}
-header>*{position:relative}
-.logo{height:26px;filter:brightness(0) invert(1)}
-.hi{margin-top:26px;font:800 26px/1.15 Manrope,system-ui,sans-serif}
-.tip{margin-top:6px;font-size:15px;color:#efe6d8}
-main{padding:14px 16px 0;display:grid;gap:12px}
-.big{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.big button{border:0;border-radius:20px;padding:18px 12px;min-height:112px;font:800 17px Manrope,system-ui,sans-serif;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
-.big svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:1.8}
-.cap{background:var(--ink);color:#fff}.rev{background:var(--acc);color:#fff}
-.big small{font:500 13px "DM Sans",system-ui,sans-serif;opacity:.85}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px 16px}
-.lbl{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--mut);margin-bottom:8px}
-.lbl b{font-weight:700;color:var(--ink);font-size:15px}
-.chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.chip{border:1px solid var(--line);background:#fbf8f2;border-radius:14px;padding:12px;min-height:56px;text-align:left;font:700 15px "DM Sans",system-ui,sans-serif;color:var(--ink);cursor:pointer}
-.chip span{display:block;font-weight:400;font-size:13px;color:var(--mut)}
-.chip:active{background:#f1e4d2}
-.say{margin:0;font-size:15.5px}.say li{margin:6px 0}
-ul.say{padding-left:18px}
-.cal{display:grid;gap:0}
-.ev{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}.ev:first-child{border-top:0;padding-top:2px}
-.d{align-self:start;text-align:center;border-radius:12px;background:#f1e4d2;padding:5px 0;font:800 18px/1.05 Manrope,system-ui,sans-serif;color:var(--acc2)}.d small{display:block;font:700 11.5px "DM Sans",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em}
-.ev b{display:block;font-size:15px}.ev span{font-size:13.5px;color:var(--mut)}
-.ev.ours .d{background:var(--ink);color:#fff}
-.add{margin-top:8px;width:100%;border:1px dashed #cdbfa9;background:none;border-radius:12px;padding:11px;font:700 14px "DM Sans",system-ui,sans-serif;color:var(--acc2);cursor:pointer;min-height:44px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
-.stats div{background:#fbf8f2;border-radius:14px;padding:10px 4px}.stats b{display:block;font:800 24px Manrope,system-ui,sans-serif}.stats span{font-size:12.5px;color:var(--mut);line-height:1.25;display:block}
-details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px}
-summary{font-weight:700;cursor:pointer;min-height:24px}
-.src{font-size:13px;color:var(--mut);margin-top:8px}
-.sheet{position:fixed;inset:0;background:rgba(20,15,10,.55);display:none;align-items:flex-end;justify-content:center;z-index:9}
+:root{--bg:#f3ece2;--ink:#21170f;--mut:#7a6d60;--card:#fffdf9;--cu:#b46e26;--cu2:#e0a463;--es:#2a1d14;--sage:#6f8a6a;--rose:#c4583f;--line:rgba(60,40,20,.08)}
+*{box-sizing:border-box;min-width:0;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+.app{max-width:520px;margin:0 auto;padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+.pv{font-size:12.5px;text-align:center;color:#8b7d6f;padding:8px 12px 0}
+.top{position:relative;margin:10px 12px 0;border-radius:30px;overflow:hidden;min-height:250px;color:#fff;background:#2a1d14 url(../hero.jpg) center/cover;padding:20px;display:flex;flex-direction:column;justify-content:space-between}
+.top:before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(42,29,20,.15) 0%,rgba(42,29,20,.55) 45%,rgba(180,110,38,.88) 100%)}
+.top>*{position:relative}
+.trow{display:flex;justify-content:space-between;align-items:center}
+.logo{height:22px;filter:brightness(0) invert(1)}
+.me{background:rgba(255,255,255,.18);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:99px;padding:6px 12px;font-size:13px;font-weight:600}
+.date{font-size:13px;font-weight:600;letter-spacing:.02em;opacity:.9;text-transform:uppercase}
+.hi{font-size:34px;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:2px 0 6px}
+.tip{font-size:15px;opacity:.95;max-width:32ch}
+main{padding:14px 12px 0;display:grid;gap:12px}
+.h2{font-size:22px;font-weight:800;letter-spacing:-.02em;margin:10px 4px -2px}
+.w{background:var(--card);border-radius:24px;padding:16px;box-shadow:0 1px 0 var(--line),0 8px 24px rgba(60,40,20,.06)}
+.wt{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px}
+.wt b{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.wt span{font-size:12.5px;color:var(--mut);font-weight:600}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.act{border:0;border-radius:26px;padding:16px;min-height:128px;color:#fff;text-align:left;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;font:inherit;box-shadow:0 10px 24px rgba(60,40,20,.18);transition:transform .15s}
+.act:active{transform:scale(.97)}
+.act .ic{width:42px;height:42px;border-radius:14px;background:rgba(255,255,255,.18);display:grid;place-items:center}
+.act svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.act b{display:block;font-size:20px;font-weight:800;letter-spacing:-.01em}
+.act small{font-size:13px;opacity:.85}
+.a1{background:linear-gradient(145deg,#4a3324,#1f150e)}
+.a2{background:linear-gradient(145deg,#e0a463,#b46e26 55%,#8f531b)}
+.moms{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.mom{border:0;background:none;padding:0;cursor:pointer;font:inherit;color:var(--ink);display:grid;justify-items:center;gap:6px;font-size:12.5px;font-weight:600;text-align:center;min-height:44px}
+.mom i{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;transition:transform .15s}
+.mom:active i{transform:scale(.92)}
+.mom svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.c1{background:linear-gradient(145deg,#e0a463,#b46e26)}.c2{background:linear-gradient(145deg,#8fa889,#5f7a5a)}.c3{background:linear-gradient(145deg,#6b5546,#3b2a1e)}.c4{background:linear-gradient(145deg,#e08a6c,#c4583f)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ring{position:relative;width:96px;height:96px;margin:2px auto 6px}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:26px;font-weight:800}
+.cen{text-align:center;font-size:13.5px;color:var(--mut);line-height:1.3}
+.big{font-size:46px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.stars{color:var(--cu);font-size:18px;letter-spacing:2px;margin:4px 0}
+.vs{font-size:13.5px;color:var(--mut);line-height:1.35}
+.vs b{color:var(--ink)}
+.talk{background:linear-gradient(160deg,#2a1d14,#4a3324);color:#fff}
+.talk .wt span{color:#d8c5b0}
+.offer{font-size:24px;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:2px 0 12px}
+.offer em{font-style:normal;color:var(--cu2)}
+.pr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pr div{background:rgba(255,255,255,.08);border-radius:16px;padding:10px}
+.pr b{display:block;font-size:20px;font-weight:800}.pr span{font-size:12px;color:#d8c5b0;line-height:1.25;display:block}
+.alert{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.alert i{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:#f6e2db}
+.alert i svg{width:20px;height:20px;stroke:var(--rose);fill:none;stroke-width:2.2;stroke-linecap:round}
+.alert b{display:block;font-size:16px}.alert p{margin:2px 0 0;font-size:14.5px;color:#4d4239}
+.do{margin-top:6px;font-size:14px;font-weight:700;color:var(--cu)}
+.rail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 6px;margin:0 -4px}
+.rail::-webkit-scrollbar{display:none}
+.ev{flex:0 0 150px;scroll-snap-align:start;background:var(--card);border-radius:22px;padding:14px;box-shadow:0 1px 0 var(--line),0 6px 18px rgba(60,40,20,.06)}
+.ev .d{display:inline-block;border-radius:12px;padding:4px 9px;font-size:12px;font-weight:800;color:#fff;background:var(--cu);margin-bottom:8px}
+.ev.ours .d{background:var(--es)}
+.ev b{display:block;font-size:15px;line-height:1.2}.ev span{font-size:12.5px;color:var(--mut);line-height:1.25;display:block;margin-top:4px}
+.ev .d{color:#fff;margin-top:0}
+.ev.add{display:grid;place-items:center;text-align:center;border:2px dashed #d6c4ae;box-shadow:none;background:transparent;cursor:pointer;color:var(--cu);font:700 14px -apple-system,system-ui,sans-serif}
+.feed{display:grid;gap:12px}
+.fi .src{font-size:12.5px;font-weight:700;color:var(--mut);display:flex;justify-content:space-between;margin-bottom:4px}
+.fi b{font-size:17px}.fi p{margin:4px 0 0;font-size:14.5px;color:#4d4239}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+.score{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center}
+.bar{display:grid;grid-template-columns:86px 1fr 28px;gap:8px;align-items:center;font-size:13.5px;margin:7px 0}
+.bar i{height:10px;border-radius:5px;background:#efe5d8;overflow:hidden;display:block}.bar i:after{content:"";display:block;height:100%;width:var(--w);border-radius:5px;background:linear-gradient(90deg,#e0a463,#b46e26)}
+.bar em{font-style:normal;text-align:right;font-weight:700}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile b{display:block;font-size:28px;font-weight:800;letter-spacing:-.02em}.tile span{display:block;font-size:14px;font-weight:600}.tile small{display:block;font-size:12.5px;color:var(--mut)}
+.rv{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:10px 0;border-top:1px solid var(--line);align-items:center}
+.rv:first-of-type{border-top:0}
+.rv b{font-size:15px}.rv small{color:var(--mut);font-size:12.5px}.rv .n{font-weight:800;font-size:15px;text-align:right}
+.rv i{grid-column:1/-1;height:6px;border-radius:3px;background:#efe5d8;overflow:hidden;display:block}.rv i:after{content:"";display:block;height:100%;width:var(--w);background:#cdb79d;border-radius:3px}
+.rv.you b{color:var(--cu)}.rv.you i:after{background:linear-gradient(90deg,#e0a463,#b46e26)}
+nav{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));width:min(92%,440px);background:rgba(255,253,249,.8);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border-radius:30px;box-shadow:0 10px 30px rgba(60,40,20,.18),inset 0 0 0 1px rgba(255,255,255,.6);display:grid;grid-template-columns:repeat(4,1fr);padding:6px;z-index:5}
+nav button{border:0;background:none;font:600 11.5px -apple-system,system-ui,sans-serif;color:#7a6d60;border-radius:24px;padding:7px 2px;min-height:52px;cursor:pointer;display:grid;justify-items:center;gap:2px}
+nav svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+nav button[aria-selected=true]{background:linear-gradient(145deg,#c98a42,#9a5c1f);color:#fff}
+.sheet{position:fixed;inset:0;background:rgba(30,20,12,.5);display:none;align-items:flex-end;justify-content:center;z-index:9}
 .sheet.on{display:flex}
-.box{background:var(--bg);width:100%;max-width:520px;border-radius:22px 22px 0 0;padding:20px 18px calc(22px + env(safe-area-inset-bottom));display:grid;gap:10px;max-height:88vh;overflow:auto}
-.box h3{font-size:20px}
-.box input,.box select{font:16px "DM Sans",system-ui,sans-serif;width:100%;padding:12px;border-radius:12px;border:1px solid #d8d0bf;background:#fff;min-height:46px}
-.btn{border:0;border-radius:99px;padding:14px;font:800 16px Manrope,system-ui,sans-serif;cursor:pointer;min-height:50px;width:100%}
-.p{background:var(--ink);color:#fff}.g{background:transparent;border:1px solid #cdbfa9;color:var(--ink)}
-.msg{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;font-size:15px}
-.ok{color:var(--good);font-weight:700}
-.thumbs{display:flex;gap:6px;flex-wrap:wrap}.thumbs img,.thumbs video{width:72px;height:72px;object-fit:cover;border-radius:10px}
-button:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.box{background:var(--bg);width:100%;max-width:520px;border-radius:28px 28px 0 0;padding:20px 18px calc(22px + env(safe-area-inset-bottom));display:grid;gap:10px;max-height:88vh;overflow:auto}
+.box h3{margin:0;font-size:22px;font-weight:800;letter-spacing:-.02em}
+.box input,.box select{font:16px -apple-system,system-ui,sans-serif;width:100%;padding:13px;border-radius:14px;border:1px solid #e0d4c4;background:#fff;min-height:48px}
+.btn{border:0;border-radius:99px;padding:15px;font:700 17px -apple-system,system-ui,sans-serif;cursor:pointer;min-height:52px;width:100%}
+.p{background:linear-gradient(145deg,#c98a42,#9a5c1f);color:#fff}.g{background:transparent;border:1px solid #d6c4ae;color:var(--ink)}
+.msg{background:#fff;border-radius:16px;padding:12px;font-size:15px;white-space:pre-line}
+.ok{color:#4f6b4a;font-weight:700}
+.thumbs{display:flex;gap:6px;flex-wrap:wrap}.thumbs img,.thumbs video{width:72px;height:72px;object-fit:cover;border-radius:12px}
+button:focus-visible{outline:3px solid var(--cu2);outline-offset:2px}
+@media(prefers-reduced-motion:no-preference){.view>*{animation:up .35s ease both}.view>*:nth-child(2){animation-delay:.04s}.view>*:nth-child(3){animation-delay:.08s}.view>*:nth-child(4){animation-delay:.12s}@keyframes up{from{opacity:0;transform:translateY(8px)}}}
 </style>
 </head>
 <body>
 <div class="app">
-  <div class="pv">Preview of the staff home screen · nothing is uploaded or sent from this preview</div>
-  <header>
-    <img class="logo" src="../logo-white.png" alt="Montage">
-    <div class="hi" id="hi">Good morning</div>
-    <div class="tip" id="tip"></div>
+  <div class="pv">Preview · try every button, nothing is uploaded or sent</div>
+  <header class="top">
+    <div class="trow"><img class="logo" src="../logo-white.png" alt="Montage"><span class="me">LocalLift Live</span></div>
+    <div><div class="date" id="date"></div><div class="hi" id="hi">Good morning</div><div class="tip" id="tip"></div></div>
   </header>
-  <main>
-    <div class="big">
-      <button class="cap" id="bCap"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></svg>Capture<small>Photo or video to LocalLift</small></button>
-      <button class="rev" id="bRev"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>Get a review<small>Text the Google link</small></button>
-    </div>
-
-    <section class="card">
-      <div class="lbl"><b>Tap when it happens</b><span>sends the review ask</span></div>
-      <div class="chips">
-        <button class="chip" data-m="movein">Move in<span>Welcome home</span></button>
-        <button class="chip" data-m="renew">Renewal<span>Thank them</span></button>
-        <button class="chip" data-m="work">Work order done<span>Fixed and closed</span></button>
-        <button class="chip" data-m="event">Resident event<span>After the fun</span></button>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="lbl"><b>Today's talk track</b><span>checked Nov 10</span></div>
-      <ul class="say">
-        <li><b>Special:</b> select 2 bedrooms have price drops, 2 months free and a $1,000 Look &amp; Lease, through Nov 30.</li>
-        <li><b>Roommates:</b> 2 bedroom C4 from $2,210, about $1,105 each.</li>
-        <li><b>1 bedrooms</b> from $1,805.</li>
-        <li><b>Reviews:</b> rated 4.7 on Google, the highest in our comp set.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <div class="lbl"><b>Coming up near Montage</b><span>Nov and Dec</span></div>
-      <div class="cal" id="cal"></div>
-      <button class="add" id="bAdd">+ Add a resident event</button>
-    </section>
-
-    <section class="card">
-      <div class="lbl"><b>This week</b><span>from your taps</span></div>
-      <div class="stats"><div><b id="sA">0</b><span>review asks (practice)</span></div><div><b id="sC">0</b><span>photos and videos (practice)</span></div><div><b>34</b><span>Google reviews, 4.7</span></div></div>
-    </section>
-
-    <details>
-      <summary>For managers: score and rivals</summary>
-      <p class="src">Visibility Index 70 (Nov 13). The Steward has 35 reviews to our 34. AI assistants named Montage in 39 of 96 renter answers. Full detail stays in the Score and Rivals tabs.</p>
-    </details>
-  </main>
+  <main class="view" id="view"></main>
 </div>
-
+<nav role="tablist">
+  <button role="tab" data-v="home" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Home</button>
+  <button role="tab" data-v="today" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21h4"/></svg>Updates</button>
+  <button role="tab" data-v="score" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M5 20V11M12 20V4M19 20v-6"/></svg>Score</button>
+  <button role="tab" data-v="rivals" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19c1-3 3-4 5-4s4 1 5 4M11 19c1-3 3-4 5-4s4 1 5 4"/></svg>Rivals</button>
+</nav>
 <div class="sheet" id="sh"><div class="box" id="box"></div></div>
-
 <script>
 {
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const LINK='moveinlocal.com/review/montage';
-const TIPS=["The best review ask is the one sent while the moment is still warm.","A closed work order is a small win for a resident. Say so, then ask.","One review a week keeps you ahead. Small and steady wins.","Use the resident's first name. People answer people.","Every tour is a first impression. Greet like they already live here.","Renewals are a vote of confidence. Thank them out loud, then ask.","Snap the moment, we will make it look great."];
-const now=new Date();const h=now.getHours();
+const TIPS=["The best review ask is the one sent while the moment is still warm.","A closed work order is a small win for a resident. Say so, then ask.","One review a week keeps you ahead. Small and steady wins.","Use the resident's first name. People answer people.","Every tour is a first impression. Greet like they already live here.","Renewals are a vote of confidence. Thank them out loud, then ask.","Snap the moment. We will make it look great."];
+const now=new Date(),h=now.getHours();
+$('date').textContent=now.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
 $('hi').textContent=(h<12?'Good morning':h<17?'Good afternoon':'Good evening')+', team';
-$('tip').textContent=TIPS[(now.getDate())%TIPS.length];
-const EV=[
- ['Nov','20','ZooLights opens','Oregon Zoo, runs through Jan 3',0],
- ['Nov','21','Last Beaverton Farmers Market','Saturday market, last day of the season',0],
- ['Nov','22','Holiday Sip and Shop','Willamette Valley Vineyards, Lake Oswego',0],
- ['Nov','30','Special ends','2 months free on select 2 bedrooms',1],
- ['Dec','12','ScanFair','Dec 12 and 13',0]];
-let ours=[];
-const drawCal=()=>{const M={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};const key=e=>(M[e[0]]<10?M[e[0]]+12:M[e[0]])*40+Number(e[1]);$('cal').innerHTML=[...EV,...ours].sort((a,b)=>key(a)-key(b)).map(e=>`<div class="ev ${e[4]?'ours':''}"><div class="d"><small>${e[0]}</small>${e[1]}</div><div><b>${esc(e[2])}</b><span>${esc(e[3])}</span></div></div>`).join('')};
-drawCal();
-let asks=0,caps=0;
-const MOM={movein:'welcome home to Montage! If you have a minute, we would love a quick review of your move in on our Montage Google profile.',renew:'thank you for renewing with us! If you have a minute, we would love a quick review on our Montage Google profile.',work:'your service request is all set. If you have a minute, we would love a quick review on our Montage Google profile.',event:'thanks for joining our resident event! If you have a minute, we would love a quick review on our Montage Google profile.',any:'thank you for being part of Montage. If you have a minute, we would love a quick review on our Montage Google profile.'};
+$('tip').textContent=TIPS[now.getDate()%TIPS.length];
+const EV=[['Nov 20','ZooLights opens','Oregon Zoo, through Jan 3',0,460],['Nov 21','Last Beaverton Farmers Market','Last market of the season',0,461],['Nov 22','Holiday Sip and Shop','Willamette Valley Vineyards, Lake Oswego',0,462],['Nov 30','Special ends','2 months free, select 2 bedrooms',1,470],['Dec 12','ScanFair','Dec 12 and 13',0,492]];
+let ours=[],asks=0,caps=0,D=null;
+const MOMS={movein:['Move in','c1','<path d="M3 11l9-7 9 7v9H3z"/><path d="M10 21v-6h4v6"/>','welcome home to Montage! If you have a minute, we would love a quick review of your move in on our Montage Google profile.'],renew:['Renewal','c2','<path d="M20 12a8 8 0 1 1-3-6.2"/><path d="M20 4v5h-5"/>','thank you for renewing with us! If you have a minute, we would love a quick review on our Montage Google profile.'],work:['Work order','c3','<path d="M14 6a4 4 0 0 0-5 5l-6 6 2 2 6-6a4 4 0 0 0 5-5l-2 2-2-2z"/>','your service request is all set. If you have a minute, we would love a quick review on our Montage Google profile.'],event:['Event','c4','<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>','thanks for joining our resident event! If you have a minute, we would love a quick review on our Montage Google profile.'],any:['Get a review','c1','','thank you for being part of Montage. If you have a minute, we would love a quick review on our Montage Google profile.']};
+const ring=(v,max,col)=>{const r=40,c=2*Math.PI*r,p=Math.min(v/max,1);return `<svg viewBox="0 0 96 96"><circle cx="48" cy="48" r="${r}" stroke="#efe5d8" stroke-width="10" fill="none"/><circle cx="48" cy="48" r="${r}" stroke="${col}" stroke-width="10" fill="none" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p)}"/></svg>`};
+const evs=()=>[...EV,...ours].sort((a,b)=>a[4]-b[4]);
+const V={
+home:()=>`
+<div class="acts">
+ <button class="act a1" id="bCap"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></svg></span><span><b>Capture</b><small>Photo or video to LocalLift</small></span></button>
+ <button class="act a2" data-m="any"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></span><span><b>Get a review</b><small>Text the Google link</small></span></button>
+</div>
+<section class="w"><div class="wt"><b>Tap when it happens</b><span>Sends the review ask</span></div>
+ <div class="moms">${['movein','renew','work','event'].map(k=>`<button class="mom" data-m="${k}"><i class="${MOMS[k][1]}"><svg viewBox="0 0 24 24">${MOMS[k][2]}</svg></i>${MOMS[k][0]}</button>`).join('')}</div></section>
+<div class="duo">
+ <section class="w"><div class="wt"><b>Reviews</b><span>Google</span></div><div class="big">4.7</div><div class="stars" aria-label="4.7 stars">★★★★★</div><div class="vs"><b>34 reviews.</b> The Steward has 35. <b>One more ties it.</b></div></section>
+ <section class="w"><div class="wt"><b>This week</b><span>Goal 1</span></div><div class="ring">${ring(asks,1,'#b46e26')}<b>${asks}</b></div><div class="cen">practice review asks</div></section>
+</div>
+<section class="w talk"><div class="wt"><b>Today's talk track</b><span>Checked Nov 10</span></div>
+ <div class="offer">Select 2 bedrooms: <em>2 months free</em> plus a $1,000 Look &amp; Lease, through Nov 30.</div>
+ <div class="pr"><div><b>$1,105</b><span>each, roommates on a 2 bed</span></div><div><b>$1,805</b><span>1 bedrooms from</span></div><div><b>4.7★</b><span>top rating in our comp set</span></div></div></section>
+${D&&D.feed&&D.feed[0]?`<section class="w alert"><i><svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg></i><div><b>${esc(D.feed[0].title)}</b><p>${esc(D.feed[0].body)}</p>${D.feed[0].action?`<div class="do">${esc(D.feed[0].action)}</div>`:''}</div></section>`:''}
+<div class="h2">Coming up near Montage</div>
+<div class="rail">${evs().map(e=>`<div class="ev ${e[3]?'ours':''}"><span class="d">${esc(e[0])}</span><b>${esc(e[1])}</b><span>${esc(e[2])}</span></div>`).join('')}<button class="ev add" id="bAdd">+ Add a resident event</button></div>
+<section class="w"><div class="wt"><b>Captures (practice)</b><span>This week</span></div><div class="vs"><b style="font-size:28px">${caps}</b> practice photos and videos. In the live app we design them, write the captions and schedule the posts.</div></section>`,
+today:()=>`<div class="h2">Updates</div><div class="feed">${(D?D.feed:[]).map(f=>`<section class="w fi"><div class="src"><span><i class="dot" style="background:${f.tone==='warn'?'#c4583f':f.tone==='good'?'#6f8a6a':'#b46e26'}"></i>${esc(f.src)}</span><span>${esc(f.date)}</span></div><b>${esc(f.title)}</b><p>${esc(f.body)}</p>${f.action?`<div class="do">${esc(f.action)}</div>`:''}</section>`).join('')}</div>`,
+score:()=>D?`<div class="h2">Visibility score</div><section class="w"><div class="score"><div class="ring" style="width:120px;height:120px;margin:0">${ring(D.score.index,100,'#b46e26')}<b style="font-size:34px">${D.score.index}</b></div><div><div class="wt" style="margin:0"><b>${D.score.index===D.score.prev?'Level with last week':'Moved from '+D.score.prev}</b></div><div class="vs">${esc(D.score.date)}</div></div></div>${D.score.parts.map(p=>`<div class="bar"><span>${esc(p[0])}</span><i style="--w:${p[1]}%"></i><em>${p[1]}</em></div>`).join('')}</section><div class="tiles">${D.tiles.map(t=>`<section class="w tile"><b>${esc(t[0])}</b><span>${esc(t[1])}</span><small>${esc(t[2])}</small></section>`).join('')}</div>`:'',
+rivals:()=>{if(!D)return'';const mx=Math.max(...D.rivals.rows.map(r=>r[2]));return `<div class="h2">Rivals</div><section class="w"><div class="wt"><b>Google reviews</b><span>${esc(D.rivals.date)}</span></div>${D.rivals.rows.map(r=>`<div class="rv ${r[0].includes('(you)')?'you':''}"><div><b>${esc(r[0])}</b><br><small>${esc(r[1])}★ · ${r[0].startsWith('Willow')?'reviews read Oct 9, not on the Nov 13 scan':'top 20 at '+r[4]+' of 49 map points'}</small></div><div class="n">${r[2]}</div><i style="--w:${Math.round(r[2]/mx*100)}%"></i></div>`).join('')}<p class="vs" style="margin:10px 0 0">${esc(D.rivals.note)}</p></section>`}
+};
+let cur='home';
+const show=k=>{cur=k;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===k));$('view').innerHTML=V[k]();if(k!=='home')scrollTo({top:document.querySelector('.top').offsetHeight-10})};
+document.querySelector('nav').addEventListener('click',e=>{const b=e.target.closest('button');if(b)show(b.dataset.v)});
 const sh=$('sh'),box=$('box');
-const open=html=>{box.innerHTML=html;sh.classList.add('on')};
-const close=()=>sh.classList.remove('on');
+const open=html=>{box.innerHTML=html;sh.classList.add('on')};const close=()=>{sh.classList.remove('on');show(cur)};
 sh.addEventListener('click',e=>{if(e.target===sh)close()});
-const ask=m=>open(`<h3>Send a review ask</h3><input id="nm" placeholder="Resident first name" autocomplete="off"><input id="ph" placeholder="Mobile number (optional)" inputmode="tel"><div class="msg" id="mg"></div><button class="btn p" id="send">Send from my phone</button><button class="btn g" id="cx">Cancel</button>`,m);
-let cur='any';
-const txt=()=>`Hi ${($('nm')&&$('nm').value.trim())||'there'}, ${MOM[cur]} Thank you! The Montage team\n\n${LINK}`;
-const showAsk=m=>{cur=m;ask();$('mg').textContent=txt();$('nm').addEventListener('input',()=>$('mg').textContent=txt())};
-document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>showAsk(b.dataset.m)));
-$('bRev').addEventListener('click',()=>showAsk('any'));
-$('bCap').addEventListener('click',()=>open(`<h3>Capture for LocalLift</h3><select id="ty"><option>Local spot</option><option>Resident event</option><option>Amenity</option><option>New look or update</option></select><input id="fl" type="file" accept="image/*,video/*" capture="environment" multiple><div class="thumbs" id="th"></div><input id="nt" placeholder="Add a note (optional), like the spot's name"><button class="btn p" id="up">Send to LocalLift</button><button class="btn g" id="cx">Cancel</button>`));
-$('bAdd').addEventListener('click',()=>open(`<h3>Add a resident event</h3><input id="en" placeholder="Event name, like Pizza and Paint"><input id="ed" type="date"><button class="btn p" id="addok">Add to the calendar</button><button class="btn g" id="cx">Cancel</button>`));
-box.addEventListener('change',e=>{if(e.target.id==='fl'){$('th').innerHTML=[...e.target.files].slice(0,6).map(f=>f.type.startsWith('video')?`<video src="${URL.createObjectURL(f)}" muted></video>`:`<img src="${URL.createObjectURL(f)}" alt="">`).join('')}});
+let m='any';
+const txt=()=>`Hi ${($('nm')&&$('nm').value.trim())||'there'}, ${MOMS[m][3]} Thank you! The Montage team\n\n${LINK}`;
+$('view').addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;
+ if(t.dataset.m){m=t.dataset.m;open(`<h3>${MOMS[m][0]}</h3><input id="nm" placeholder="Resident first name" autocomplete="off"><input id="ph" placeholder="Mobile number (optional)" inputmode="tel"><div class="msg" id="mg"></div><button class="btn p" id="send">Send from my phone</button><button class="btn g" id="cx">Cancel</button>`);$('mg').textContent=txt();$('nm').addEventListener('input',()=>$('mg').textContent=txt())}
+ if(t.id==='bCap')open(`<h3>Capture for LocalLift</h3><select id="ty"><option>Local spot</option><option>Resident event</option><option>Amenity</option><option>New look or update</option></select><input id="fl" type="file" accept="image/*,video/*" capture="environment" multiple><div class="thumbs" id="th"></div><input id="nt" placeholder="Add a note (optional), like the spot's name"><button class="btn p" id="up">Send to LocalLift</button><button class="btn g" id="cx">Cancel</button>`);
+ if(t.id==='bAdd')open(`<h3>Add a resident event</h3><input id="en" placeholder="Event name, like Pizza and Paint"><input id="ed" type="date"><button class="btn p" id="addok">Add to the calendar</button><button class="btn g" id="cx">Cancel</button>`);
+});
+box.addEventListener('change',e=>{if(e.target.id==='fl')$('th').innerHTML=[...e.target.files].slice(0,6).map(f=>f.type.startsWith('video')?`<video src="${URL.createObjectURL(f)}" muted></video>`:`<img src="${URL.createObjectURL(f)}" alt="">`).join('')});
 box.addEventListener('click',e=>{const id=e.target.id;
  if(id==='cx')close();
- if(id==='send'){asks++;$('sA').textContent=asks;box.innerHTML='<h3>Ready to send</h3><p>In the live app, this opens your phone\'s Messages with the text filled in. You tap Send. This preview does not open Messages.</p><p class="ok">Preview: counted as 1 practice ask.</p><button class="btn p" id="cx">Done</button>'}
- if(id==='up'){const n=($('fl').files||[]).length;if(!n){$('fl').focus();return}caps+=n;$('sC').textContent=caps;box.innerHTML=`<h3>Ready for LocalLift (preview)</h3><p class="ok">${n} file${n>1?'s':''} picked.</p><p>In the live app these go straight to LocalLift. We design them, write the caption and schedule the post. In this preview nothing is uploaded.</p><button class="btn p" id="cx">Done</button>`}
- if(id==='addok'){const n=$('en').value.trim(),d=$('ed').value;if(!n||!d)return;const dt=new Date(d+'T12:00');ours.push([dt.toLocaleString('en-US',{month:'short'}),String(dt.getDate()),n,'Resident event, added by your team',1]);drawCal();close()}
+ if(id==='send'){asks++;box.innerHTML='<h3>Ready to send</h3><p>In the live app this opens your phone\'s Messages with the text filled in, and you tap Send. This preview does not open Messages.</p><p class="ok">Counted as 1 practice ask.</p><button class="btn p" id="cx">Done</button>'}
+ if(id==='up'){const n=($('fl').files||[]).length;if(!n)return;caps+=n;box.innerHTML=`<h3>Ready for LocalLift (preview)</h3><p class="ok">${n} file${n>1?'s':''} picked.</p><p>In the live app these go straight to LocalLift. We design them, write the caption and schedule the post. In this preview nothing is uploaded.</p><button class="btn p" id="cx">Done</button>`}
+ if(id==='addok'){const n=$('en').value.trim(),d=$('ed').value;if(!n||!d)return;const dt=new Date(d+'T12:00'),mo=dt.getMonth();ours.push([dt.toLocaleString('en-US',{month:'short'})+' '+dt.getDate(),n,'Resident event, added by your team',1,(mo<9?mo+13:mo+1)*40+dt.getDate()]);close()}
 });
+show('home');
+fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{D=j;show(cur)}).catch(()=>{});
 }
 </script>
 </body>
