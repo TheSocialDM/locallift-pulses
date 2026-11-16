@@ -1,0 +1,157 @@
+{
+  "property": "Montage",
+  "city": "Tigard, Oregon",
+  "updated": "2026-11-15T20:39:12-07:00",
+  "updatedLabel": "Nov 15, 8:39 pm Phoenix time",
+  "feed": [
+    {
+      "src": "Google reviews",
+      "date": "Nov 12",
+      "tone": "warn",
+      "title": "New 1 star review about upkeep",
+      "body": "A resident left a 1 star review about grounds maintenance on Nov 12. A reply was posted on Nov 13. Your rating now reads 4.7 on 34 reviews.",
+      "action": "Invite this resident to talk with the office, and keep asking happy residents for reviews."
+    },
+    {
+      "src": "Rival watch · map scan",
+      "date": "Nov 13",
+      "tone": "info",
+      "title": "The Steward leads by one review",
+      "body": "The Steward has 35 Google reviews to your 34. You lead on rating, 4.7 to 4.6. You are level on the map, inside the top 20 at 26 of 49 points each.",
+      "action": "Ask for a review at every move in and every closed work order."
+    },
+    {
+      "src": "AI answers · weekly panel",
+      "date": "Nov 13",
+      "tone": "good",
+      "title": "Named in 39 of 96 renter answers",
+      "body": "Up from 34 on Nov 6. The Steward was named in 34. All three assistants leave you out on Lake Oswego, the Nike campus and Washington Square questions.",
+      "action": "Our Google posts keep naming those areas."
+    },
+    {
+      "src": "Google Maps · map scan",
+      "date": "Nov 13",
+      "tone": "good",
+      "title": "1st at your front door",
+      "body": "For \"apartments for rent tigard or\", you rank 1st at your door and inside the top 20 at 26 of 49 points, including all 21 points east. West of Highway 217 is where we are working to grow your reach.",
+      "action": ""
+    },
+    {
+      "src": "MoveInLocal guide · last 7 days",
+      "date": "Nov 9 to 15",
+      "tone": "info",
+      "title": "2 visits to your guide",
+      "body": "Both visits came on Nov 11. No Call, Tour or Apply taps yet. The guide went live Nov 10.",
+      "action": ""
+    }
+  ],
+  "score": {
+    "index": 70,
+    "prev": 70,
+    "date": "Nov 13 Weekly Pulse",
+    "parts": [
+      [
+        "Reputation",
+        78
+      ],
+      [
+        "Search",
+        73
+      ],
+      [
+        "Map",
+        73
+      ],
+      [
+        "Website",
+        68
+      ],
+      [
+        "AI answers",
+        57
+      ]
+    ]
+  },
+  "tiles": [
+    [
+      "4.7",
+      "Google rating",
+      "34 reviews, newest Nov 12"
+    ],
+    [
+      "1st",
+      "At your front door",
+      "Google Maps, Nov 13"
+    ],
+    [
+      "39 of 96",
+      "AI answers name you",
+      "Panel of Nov 13"
+    ],
+    [
+      "26 of 49",
+      "Map points in top 20",
+      "Scan of Nov 13"
+    ]
+  ],
+  "rivals": {
+    "date": "Nov 13 map scan",
+    "rows": [
+      [
+        "Mercato Grove",
+        "4.4",
+        87,
+        0,
+        4
+      ],
+      [
+        "The Overland",
+        "4.0",
+        61,
+        18,
+        43
+      ],
+      [
+        "The Steward",
+        "4.6",
+        35,
+        1,
+        26
+      ],
+      [
+        "Montage (you)",
+        "4.7",
+        34,
+        1,
+        26
+      ],
+      [
+        "Willow Apartments",
+        "4.5",
+        21,
+        0,
+        0
+      ],
+      [
+        "Pacific Ridge",
+        "3.1",
+        10,
+        0,
+        1
+      ]
+    ],
+    "note": "Willow's review count was read Oct 9; it did not appear on the Nov 13 scan."
+  },
+  "ask": {
+    "title": "This week: ask for one review",
+    "moments": [
+      "At every move in",
+      "When a work order is closed"
+    ],
+    "points": [
+      "The Steward has 35 Google reviews to our 34. We are rated 4.7 to its 4.6.",
+      "Ask in person, then send the link the same day.",
+      "One a week is the target."
+    ]
+  }
+}
