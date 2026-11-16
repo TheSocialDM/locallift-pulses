@@ -271,7 +271,51 @@
           ]
         ],
         "fees": "$50 application, $500 deposit, pets $300 deposit plus $50 a month, parking $150 to $175 a month, utilities and trash billed on top",
-        "tip": "Their 1 beds start lower. On 2 beds, our 2 months free plus $1,000 is the bigger special."
+        "tip": "Their 1 beds start lower. On 2 beds, our 2 months free plus $1,000 is the bigger special.",
+        "vs": [
+          [
+            "1 bed from",
+            "$1,515",
+            "$1,805",
+            "them"
+          ],
+          [
+            "2 bed from",
+            "$2,131",
+            "$2,210",
+            "them"
+          ],
+          [
+            "2 bed special",
+            "Up to 6 weeks free",
+            "2 months free + $1,000 (select 2 beds)",
+            "us"
+          ],
+          [
+            "Deposit",
+            "$500",
+            "$400",
+            "us"
+          ],
+          [
+            "Pet rent",
+            "$50 a month",
+            "$35 a month",
+            "us"
+          ],
+          [
+            "Pet deposit",
+            "$300",
+            "$300",
+            "even"
+          ],
+          [
+            "Parking",
+            "$150 to $175 a month",
+            "Ask the office",
+            "ask"
+          ]
+        ]
       },
       {
         "name": "The Steward",
@@ -288,7 +332,39 @@
           ]
         ],
         "fees": "$400 deposit, pet fees vary (call), utilities paid separately",
-        "tip": "They do not post how much is free. Ask what they were quoted. Expect them to pitch their solar electricity credit."
+        "tip": "They do not post how much is free. Ask what they were quoted. Expect them to pitch their solar electricity credit.",
+        "vs": [
+          [
+            "1 bed",
+            "$1,949 (one plan)",
+            "$1,805",
+            "us"
+          ],
+          [
+            "2 bed from",
+            "$1,899",
+            "$2,210",
+            "them"
+          ],
+          [
+            "Special",
+            "Free rent, amount not posted",
+            "2 months free + $1,000 (select 2 beds)",
+            "ask"
+          ],
+          [
+            "Deposit",
+            "$400",
+            "$400",
+            "even"
+          ],
+          [
+            "Pets",
+            "Varies, call",
+            "$35 a month, $300 deposit",
+            "ask"
+          ]
+        ]
       },
       {
         "name": "Mercato Grove",
@@ -305,8 +381,75 @@
           ]
         ],
         "fees": "$50 application, $500 deposit, pets $300 deposit plus $55 a month, parking $185 to $235 a month",
-        "tip": "Higher rents in Lake Oswego. On 2 beds, our 2 months free plus $1,000 is still the bigger special."
+        "tip": "Higher rents in Lake Oswego. On 2 beds, our 2 months free plus $1,000 is still the bigger special.",
+        "vs": [
+          [
+            "1 bed from",
+            "$2,194",
+            "$1,805",
+            "us"
+          ],
+          [
+            "2 bed from",
+            "$2,450",
+            "$2,210",
+            "us"
+          ],
+          [
+            "2 bed special",
+            "Up to 6 weeks free + one perk",
+            "2 months free + $1,000 (select 2 beds)",
+            "us"
+          ],
+          [
+            "Deposit",
+            "$500",
+            "$400",
+            "us"
+          ],
+          [
+            "Pet rent",
+            "$55 a month",
+            "$35 a month",
+            "us"
+          ],
+          [
+            "Pet deposit",
+            "$300",
+            "$300",
+            "even"
+          ],
+          [
+            "Parking",
+            "$185 to $235 a month",
+            "Ask the office",
+            "ask"
+          ]
+        ]
       }
-    ]
+    ],
+    "us": {
+      "special": "Select 2 beds: 2 months free plus $1,000 Look & Lease, ends Nov 30",
+      "from": [
+        [
+          "$1,805",
+          "1 bed"
+        ],
+        [
+          "$2,210",
+          "2 bed"
+        ]
+      ],
+      "pets": "$35 a month pet rent, $300 deposit, no pet fee, up to 3 pets, no weight limits",
+      "showoff": [
+        "Pool and spa",
+        "Sky lounge",
+        "Golf simulator game room",
+        "Dog park and indoor pet spa",
+        "Guest suite for visiting family",
+        "Private garage with direct hallway access",
+        "EV charging"
+      ]
+    }
   }
 }

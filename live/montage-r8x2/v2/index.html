@@ -10,7 +10,7 @@
 :root{--bg:#f3ece2;--ink:#21170f;--mut:#7a6d60;--card:#fffdf9;--cu:#b46e26;--cu2:#e0a463;--es:#2a1d14;--sage:#6f8a6a;--rose:#c4583f;--line:rgba(60,40,20,.08)}
 *{box-sizing:border-box;min-width:0;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;-webkit-text-size-adjust:100%}
-.app{max-width:520px;margin:0 auto;padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+.app{max-width:520px;margin:0 auto;padding-bottom:calc(180px + env(safe-area-inset-bottom))}
 .pv{font-size:12.5px;text-align:center;color:#8b7d6f;padding:8px 12px 0}
 .top{position:relative;margin:10px 12px 0;border-radius:30px;overflow:hidden;min-height:250px;color:#fff;background:#2a1d14 url(../hero.jpg) center/cover;padding:20px;display:flex;flex-direction:column;justify-content:space-between}
 .top:before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(42,29,20,.15) 0%,rgba(42,29,20,.55) 45%,rgba(180,110,38,.88) 100%)}
@@ -92,7 +92,7 @@ nav svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stro
 nav button[aria-selected=true]{background:linear-gradient(145deg,#c98a42,#9a5c1f);color:#fff}
 .sheet{position:fixed;inset:0;background:rgba(30,20,12,.5);display:none;align-items:flex-end;justify-content:center;z-index:9}
 .sheet.on{display:flex}
-.box{background:var(--bg);width:100%;max-width:520px;border-radius:28px 28px 0 0;padding:20px 18px calc(22px + env(safe-area-inset-bottom));display:grid;gap:10px;max-height:88vh;overflow:auto}
+.box{background:var(--bg);width:100%;max-width:520px;border-radius:28px 28px 0 0;padding:20px 18px calc(40px + env(safe-area-inset-bottom));display:grid;gap:10px;max-height:88vh;overflow:auto}
 .box h3{margin:0;font-size:22px;font-weight:800;letter-spacing:-.02em}
 .box input,.box select{font:16px -apple-system,system-ui,sans-serif;width:100%;padding:13px;border-radius:14px;border:1px solid #e0d4c4;background:#fff;min-height:48px}
 .btn{border:0;border-radius:99px;padding:15px;font:700 17px -apple-system,system-ui,sans-serif;cursor:pointer;min-height:52px;width:100%}
@@ -136,6 +136,12 @@ button:focus-visible{outline:3px solid var(--cu2);outline-offset:2px}
 .rvl .top2{display:flex;justify-content:space-between;align-items:baseline;gap:8px}.rvl .top2 b{font-size:17px}.rvl .top2 span{font-size:12px;color:#7a6d60;font-weight:600}
 .rvl .sp{margin-top:6px;font-size:14.5px;font-weight:700;color:#8f531b;line-height:1.3}.rvl .pz{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.rvl .pz span{background:#fff;border-radius:10px;padding:4px 8px;font-size:12.5px;color:#4d4239}.rvl .pz b{color:#21170f}
 .rvl .more{font-size:13.5px;color:#4d4239;line-height:1.4;margin-top:8px}.rvl .tip2{margin-top:8px;background:#2a1d14;color:#ffe2b8;border-radius:12px;padding:8px 10px;font-size:13.5px;font-weight:600;line-height:1.35}.rvl .hint{font-size:12px;color:#8f531b;font-weight:700;margin-top:6px}.rvl[open] .hint{display:none}
+.hh{margin-top:10px;border-radius:14px;overflow:hidden;background:#fff}.hh .r{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:8px 10px;font-size:12.5px;line-height:1.25;border-top:1px solid var(--line);align-items:center}.hh .r:first-child{border-top:0;background:#2a1d14;color:#ffe2b8;font-weight:800;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase}
+.hh .r span:first-child{font-weight:700;color:#4d4239}.hh .r.us{background:#eef5ec}.hh .r.them{background:#fbeee9}.hh .r.us span:last-child{font-weight:800;color:#3f6339}.hh .r.them span:nth-child(2){font-weight:800;color:#a3462f}
+.wn{display:inline-block;font-size:10.5px;font-weight:800;border-radius:6px;padding:1px 5px;margin-left:4px;vertical-align:1px}.wn.us{background:#5f7a5a;color:#fff}.wn.them{background:#c4583f;color:#fff}.wn.ask{background:#e0a463;color:#2a1d14}
+.tourbtn{position:fixed;right:max(16px,calc(50% - 244px));bottom:calc(92px + env(safe-area-inset-bottom));z-index:6;border:0;border-radius:99px;padding:14px 20px;font:800 16px -apple-system,system-ui,sans-serif;color:#fff;background:linear-gradient(145deg,#4a3324,#1f150e);box-shadow:0 10px 24px rgba(30,20,12,.35);cursor:pointer;min-height:52px;display:flex;gap:8px;align-items:center}
+.tm h4{margin:6px 0 4px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#9a5c1f}.chips{display:flex;gap:8px;flex-wrap:wrap}.chips button{border:1px solid #d6c4ae;background:#fff;border-radius:99px;padding:10px 14px;font:700 14px -apple-system,system-ui,sans-serif;color:#2a1d14;cursor:pointer;min-height:44px}.chips button[aria-pressed=true]{background:#2a1d14;color:#fff;border-color:#2a1d14}
+.so{display:flex;flex-wrap:wrap;gap:6px}.so span{background:#fff;border-radius:10px;padding:6px 9px;font-size:13.5px;font-weight:600}
 .tg{display:inline-block;font-size:11.5px;font-weight:800;border-radius:8px;padding:2px 7px;margin-bottom:4px;color:#fff}.t1{background:#b46e26}.t2{background:#5f7a5a}.t3{background:#c4583f}
 </style>
 </head>
@@ -148,6 +154,7 @@ button:focus-visible{outline:3px solid var(--cu2);outline-offset:2px}
   </header>
   <main class="view" id="view"></main>
 </div>
+<button class="tourbtn" id="bTour" aria-label="Tour mode for walk ins">🗝️ Tour</button>
 <nav role="tablist">
   <button role="tab" data-v="home" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Home</button>
   <button role="tab" data-v="social" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></svg>Social</button>
@@ -190,6 +197,9 @@ const mineCard=()=>{const T=D&&D.team,lc=s=>String(s).toLowerCase(),row=T&&me?T.
  if(!me)return hl+`<section class="w"><div class="wt"><b>Your review asks this month</b></div><div class="vs" style="margin-bottom:10px">Add your first name once. Every scan of your QR code counts for you.</div><button class="btn p" id="bMe">Add my name</button></section>`;
  return hl+`<section class="w"><div class="wt"><b>Your review asks this month</b><span>${T?esc(T.month)+' · updated '+esc(T.updated):'Updates every morning'}</span></div><div class="mine"><div><b>${row?row[1]:0}</b><span>residents opened Google from your code</span></div><div><b>${sh.length?sh.length:(T&&T.named?(T.named[me]||0):0)}</b><span>reviews that name you</span></div></div>${T&&T.total!=null?`<div class="vs" style="margin-top:10px">Team: <b>${T.total}</b> this month</div>`:''}<button class="gl" id="bMe" style="border:0;background:none;padding:0;font:inherit;font-weight:700;color:#8f531b;cursor:pointer;margin-top:8px">Not ${esc(me)}? Change name</button></section>`};
 const nowKey=(()=>{const mo=now.getMonth();return (mo<9?mo+13:mo+1)*40+now.getDate()})();
+const WL={us:'Montage',them:'Them',ask:'Ask',even:''};
+const hh=c=>`<div class="hh"><div class="r"><span>Compare</span><span>${esc(c.name.replace(/^The /,''))}</span><span>Montage</span></div>${c.vs.map(v=>`<div class="r ${v[3]}"><span>${esc(v[0])}${WL[v[3]]?`<i class="wn ${v[3]}">${WL[v[3]]}</i>`:''}</span><span>${esc(v[1])}</span><span>${esc(v[2])}</span></div>`).join('')}</div>`;
+const tour=(k)=>{if(!D||!D.compete)return;const C=D.compete,U=C.us,it=C.items.find(x=>x.name===k);open(`<div class="tm"><h3>🗝️ Tour mode</h3><div class="say"><small>Today's offer</small><b>${esc(U.special)}</b></div><div class="pr" style="margin-top:8px;grid-template-columns:repeat(${U.from.length},1fr)">${U.from.map(f=>`<div style="background:#fff;border-radius:14px;padding:10px"><b style="display:block;font-size:20px">${esc(f[0])}</b><span style="font-size:12px;color:#7a6d60">${esc(f[1])} from</span></div>`).join('')}</div><h4>Did they mention another place?</h4><div class="chips">${C.items.map(x=>`<button data-tour="${esc(x.name)}" aria-pressed="${x.name===k}">${esc(x.name.replace(/^The /,''))}</button>`).join('')}</div>${it?hh(it)+`<div class="tip2" style="margin-top:8px">💬 ${esc(it.tip)}</div>`:''}<h4>Pets?</h4><div class="vs" style="font-size:14.5px">${esc(U.pets)}</div><h4>Show off on the walk</h4><div class="so">${U.showoff.map(x=>`<span>${esc(x)}</span>`).join('')}</div><p class="vs" style="margin:10px 0 0">Prices and specials checked ${C.checkedIso===today?'today':esc(C.checked)} on each community's website.</p><button class="btn p" id="cx" style="margin-top:10px">Done</button></div>`)};
 const evs=()=>{const l=[...EV,...ours].filter(e=>e[4]>=nowKey).sort((a,b)=>a[4]-b[4]);return l.length?l:[['Soon','Add your next resident event','Tap + to add it','',0]]};
 const V={
 home:()=>`
@@ -208,7 +218,7 @@ ${mineCard()}
 ${D&&D.talk?`<section class="w talk"><div class="wt"><b>Today's talk track</b><span>${chk(D.talk)}</span></div>
  <div class="offer">${esc(D.talk.offer).replace('2 months free','<em>2 months free</em>')}</div>
  <div class="pr">${D.talk.prices.map(p=>`<div><b>${esc(p[0])}</b><span>${esc(p[1])}</span></div>`).join('')}</div></section>`:''}
-${D&&D.compete?`<section class="w"><div class="wt"><b>Know the competition</b><span>${D.compete.checkedIso===today?'Checked today':'Checked '+esc(D.compete.checked)}</span></div><div class="cmp">${D.compete.items.map(c=>`<details class="rvl"><summary><div class="top2"><b>${esc(c.name)}</b><span>${esc(c.where)}</span></div><div class="sp">${esc(c.special)}</div><div class="pz">${c.from.map(f=>`<span>${esc(f[1])} <b>${esc(f[0])}</b></span>`).join('')}</div><div class="hint">Tap for fees and what to say ›</div></summary><div class="more"><b>Fees:</b> ${esc(c.fees)}</div><div class="tip2">💬 ${esc(c.tip)}</div></details>`).join('')}</div><div class="vs" style="margin-top:10px">From each community's own website. Prices are the lowest listed and change daily.</div></section>`:''}
+${D&&D.compete?`<section class="w"><div class="wt"><b>Know the competition</b><span>${D.compete.checkedIso===today?'Checked today':'Checked '+esc(D.compete.checked)}</span></div><div class="cmp">${D.compete.items.map(c=>`<details class="rvl"><summary><div class="top2"><b>${esc(c.name)}</b><span>${esc(c.where)}</span></div><div class="sp">${esc(c.special)}</div><div class="pz">${c.from.map(f=>`<span>${esc(f[1])} <b>${esc(f[0])}</b></span>`).join('')}</div><div class="hint">${c.vs?`Montage wins ${c.vs.filter(v=>v[3]==='us').length} of ${c.vs.length}. `:''}Tap to compare ›</div></summary>${c.vs?hh(c):''}<div class="more"><b>Their fees:</b> ${esc(c.fees)}</div><div class="tip2">💬 ${esc(c.tip)}</div></details>`).join('')}</div><div class="vs" style="margin-top:10px">From each community's own website. Prices are the lowest listed and change daily.</div></section>`:''}
 ${D&&D.followups&&D.followups.length?`<section class="w"><div class="wt"><b>Follow ups</b><span>${D.followups.length} to do</span></div>${D.followups.map((f,i)=>`<label class="fu"><input type="checkbox" data-fu="${i}" ${done[i]?'checked':''}><span><b>${esc(f.title)}</b><small>${esc(f.body)}</small></span><em>${esc(f.due)}</em></label>`).join('')}</section>`:''}
 ${D&&D.feed&&D.feed[0]?`<section class="w alert"><i><svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg></i><div><b>${esc(D.feed[0].title)}</b>${D.feed[0].who?`<p><b style="font-size:14.5px;display:inline">${esc(D.feed[0].who)}</b> · ${esc(D.feed[0].date)}</p>`:''}<p>${esc(D.feed[0].body)}</p>${D.feed[0].action?`<div class="do">${esc(D.feed[0].action)}</div>`:''}${D.feed[0].link?`<a class="gl" href="${esc(D.feed[0].link)}" target="_blank" rel="noopener">${esc(D.feed[0].linkLabel||'Open on Google')} ›</a>`:''}</div></section>`:''}
 <div class="h2">Coming up near Montage</div>
@@ -235,6 +245,7 @@ document.querySelector('nav').addEventListener('click',e=>{const b=e.target.clos
 const sh=$('sh'),box=$('box');
 const open=html=>{box.innerHTML=html;sh.classList.add('on')};const close=()=>{sh.classList.remove('on');show(cur)};
 sh.addEventListener('click',e=>{if(e.target===sh)close()});
+$('bTour').addEventListener('click',()=>tour(''));
 let m='any';
 const txt=()=>`Hi ${($('nm')&&$('nm').value.trim())||'there'}, ${MOMS[m][3]} Thank you!\nThe Montage team\n\n${LINK}`;
 $('view').addEventListener('change',e=>{if(e.target.dataset.fu!==undefined)done[e.target.dataset.fu]=e.target.checked});
@@ -251,6 +262,7 @@ const showQr=()=>{asks++;box.innerHTML=`<h3 style="text-align:center">Scan to re
 box.addEventListener('change',e=>{if(e.target.id==='fl')$('th').innerHTML=[...e.target.files].slice(0,6).map(f=>f.type.startsWith('video')?`<video src="${URL.createObjectURL(f)}" muted></video>`:`<img src="${URL.createObjectURL(f)}" alt="">`).join('')});
 box.addEventListener('click',e=>{const id=e.target.id;
  if(id==='cx')close();
+ if(e.target.dataset.tour!==undefined){const k=e.target.dataset.tour;tour(e.target.getAttribute('aria-pressed')==='true'?'':k);return}
  if(e.target.dataset.e){petE=e.target.dataset.e;box.querySelectorAll('.emo button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.e===petE));return}
  if(id==='petok'){const n=$('pn').value.trim().slice(0,24);if(!n)return;const ok=$('pok').checked,f=$('pf').files&&$('pf').files[0];pet={name:n,e:petE,owner:$('po').value.trim().replace(/[^A-Za-z -]/g,'').slice(0,20),mon:MON};if(f)petImg=URL.createObjectURL(f);try{localStorage.setItem('ll-pet',JSON.stringify(pet))}catch(x){}box.innerHTML=`<h3>👑 All hail ${esc(n)}!</h3><p style="margin:0;font-size:16px">${esc(MON)}'s Pet of the Month and our new <b>${esc(ptitle(pet))}</b>. ${petE}</p>`+(ok?`<p>${f?'In the live app the photo goes to TheSocialDM and we turn it into a post.':'Add a photo next time and TheSocialDM turns it into a post.'} In this preview nothing is uploaded.</p>`:`<p>It shows here in the app. Nothing goes on social media until the owner says yes.</p>`)+'<button class="btn p" id="cx">Done</button>';return}
  if(id==='occok'){const o=parseFloat($('oc').value),g=parseFloat($('og').value)||95;if(!(o>0&&o<=100))return;occ=[o,g,new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'})];close()}
