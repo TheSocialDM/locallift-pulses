@@ -479,5 +479,55 @@
       "cta": "See dates and tickets ›",
       "url": "https://oregonzoo.org/lights"
     }
+  ],
+  "shots": [
+    {
+      "img": "lounge",
+      "title": "Rainy day by the big windows",
+      "tag": "Cozy",
+      "tip": "On a rainy day, shoot from inside toward the glass. Overhead lights off so the windows glow."
+    },
+    {
+      "img": "lobby",
+      "title": "Cozy in the lounge",
+      "tag": "Cozy",
+      "tip": "Blanket, mug, soft light. Get low and shoot across the sofas."
+    },
+    {
+      "img": "game",
+      "title": "Game night",
+      "tag": "Amenity",
+      "tip": "Cue ball mid roll, window seat to the side. Hands only is perfect."
+    },
+    {
+      "img": "gym",
+      "title": "Morning workout",
+      "tag": "Amenity",
+      "tip": "Early light, rack in focus. A 5 second slow pan makes a great reel."
+    },
+    {
+      "img": "bar",
+      "title": "Clubroom coffee bar glow",
+      "tag": "Amenity",
+      "tip": "Shoot at dusk with the shelves lit. Add a latte on the counter."
+    },
+    {
+      "img": "living",
+      "title": "Model home, holiday ready",
+      "tag": "Home",
+      "tip": "Throw blanket, a flameless candle, a small tree. Stand in the doorway, phone at chest height."
+    },
+    {
+      "img": "kitchen",
+      "title": "Kitchen details",
+      "tag": "Home",
+      "tip": "Close ups sell: the pendant light, the counter, a bowl of fruit."
+    },
+    {
+      "img": "outside",
+      "title": "Montage at golden hour",
+      "tag": "Outside",
+      "tip": "Last hour before sunset. Stand across the street to fit the whole building."
+    }
   ]
 }
