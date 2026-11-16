@@ -106,7 +106,7 @@ const standalone=window.navigator.standalone||matchMedia('(display-mode: standal
 const upd=()=>`<p class="upd">Updated ${esc(D.updatedLabel)} · refreshes every morning</p>`;
 const install=()=>(standalone||hideI())?'':`<div class="install"><button class="x" aria-label="Hide" data-a="hideI">×</button><b>Put this on your home screen</b>On iPhone, tap the Share button at the bottom of Safari, then tap Add to Home Screen, then Add.</div>`;
 const myCount=()=>{let w=[];try{w=JSON.parse(ls.get('llSent')||'[]')}catch(e){}const since=Date.now()-7*864e5;return w.filter(t=>t>since).length};
-const link=()=>{if(!S.k)S.k=Math.random().toString(36).slice(2,8);return D.shortLink||'thesocialdm.co/montage-review'};
+const link=()=>{if(!S.k)S.k=Math.random().toString(36).slice(2,8);return D.shortLink||'moveinlocal.com/review/montage'};
 const words=()=>{const n=(S.name||'').trim();return `Hi ${n||'there'}, ${MOM[mom][1]} Thank you! ${me()} at Montage`};
 const msg=()=>`${words()}\n\n${link()}`;
 const A=()=>D.asks||{};
@@ -116,7 +116,7 @@ const V={
   <div class="chips">${Object.entries(MOM).map(([k,m])=>`<button class="chip" data-m="${k}" aria-pressed="${k===mom}">${m[0]}</button>`).join('')}</div>
   <label for="nm">Resident first name (optional)</label><input id="nm" autocomplete="off" value="${esc(S.name)}">
   <label for="ph">Mobile number (optional)</label><input id="ph" type="tel" inputmode="tel" autocomplete="off" value="${esc(S.ph)}">
-  <div class="msg" id="msg">${esc(words())}</div><div class="lcard"><img src="logo-umber.png" alt=""><div><b>Review Montage on Google</b><span>thesocialdm.co/montage-review · opens Google</span></div></div>
+  <div class="msg" id="msg">${esc(words())}</div><div class="lcard"><img src="logo-umber.png" alt=""><div><b>Review Montage on Google</b><span>moveinlocal.com/review/montage · opens Google</span></div></div>
   <button class="btn p" data-a="own">Send from my phone</button>
   <button class="btn s" data-a="office">Copy for the office number</button>
   <div class="note" id="sendnote">Ask everyone at these moments, not only residents you expect to be happy. That is Google's rule, and it keeps your rating honest.</div></div>
