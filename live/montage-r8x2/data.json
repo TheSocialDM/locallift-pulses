@@ -10,7 +10,7 @@
       "tone": "warn",
       "title": "New 1 star review about upkeep",
       "body": "A resident left a 1 star review about grounds maintenance on Nov 12. A reply was posted on Nov 13. Your rating now reads 4.7 on 34 reviews.",
-      "action": "Invite this resident to talk with the office, and keep asking happy residents for reviews."
+      "action": "Invite this resident to talk with the office, and keep asking every resident at the usual moments."
     },
     {
       "src": "Rival watch · map scan",
@@ -153,5 +153,13 @@
       "Ask in person, then send the link the same day.",
       "One a week is the target."
     ]
+  },
+  "teamCodeHash": "a1ee53ceb13d31b4abbf2708d1e9deb2d62465cdfb47d5a62b3b0a1b18d90ad2",
+  "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJBWKnXW4NlVQRR5JHlnXTbQ0",
+  "trackBase": "https://thesocialdm.github.io/locallift-pulses/live/r/montage/",
+  "asks": {
+    "sent": null,
+    "opened": null,
+    "through": ""
   }
 }

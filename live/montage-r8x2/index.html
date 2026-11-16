@@ -13,6 +13,8 @@
 <title>LocalLift Live · Montage</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FC39M4P67G"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FC39M4P67G');</script>
 <style>
 :root{--bg:#f6f1e8;--ink:#1c1712;--mut:#6a6157;--card:#fff;--line:#e6ddcf;--acc:#b46e26;--acc2:#8f531b;--good:#3f6b4e;--warn:#a84a3b;--info:#2f5b78}
 *{box-sizing:border-box;min-width:0}
@@ -20,10 +22,11 @@ html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "DM Sans"
 h1,h2,h3{font-family:Manrope,system-ui,sans-serif;margin:0;letter-spacing:-.01em;line-height:1.15}
 .app{max-width:560px;margin:0 auto;min-height:100vh;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
 .hero{position:relative;height:230px;background:#1c1712 url(hero.jpg) center/cover;color:#fff;padding:calc(18px + env(safe-area-inset-top)) 18px 18px;display:flex;flex-direction:column;justify-content:flex-end}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.25),rgba(20,15,10,.82))}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,10,.3),rgba(20,15,10,.85))}
 .hero>*{position:relative}
-.brand{position:absolute;top:calc(14px + env(safe-area-inset-top));left:18px;font:800 13px Manrope,system-ui,sans-serif;letter-spacing:.02em;background:rgba(0,0,0,.45);padding:6px 11px;border-radius:99px}
-.hero h1{font-size:30px;font-weight:800}.hero p{margin:4px 0 0;font-size:14px;color:#efe6d8}
+.brand{position:absolute;top:calc(14px + env(safe-area-inset-top));left:18px;font:800 13px Manrope,system-ui,sans-serif;background:rgba(0,0,0,.45);padding:6px 11px;border-radius:99px}
+.who{position:absolute;top:calc(14px + env(safe-area-inset-top));right:18px;font-size:13px;background:rgba(0,0,0,.45);padding:6px 11px;border-radius:99px}
+.hero img{width:210px;max-width:70%;height:auto;display:block}.hero p{margin:8px 0 0;font-size:14px;color:#efe6d8}
 main{padding:16px}
 .upd{font-size:13px;color:var(--mut);margin:0 0 12px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px 16px;margin-bottom:12px}
@@ -43,49 +46,102 @@ main{padding:16px}
 .bar em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums}
 table{width:100%;border-collapse:collapse;font-size:14.5px}th,td{padding:9px 4px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left;white-space:normal}
 th{font-weight:500;color:var(--mut);font-size:13px}tr.you td{font-weight:700;color:var(--acc2)}
-.chip{display:inline-block;background:#f1e4d2;color:var(--acc2);border-radius:99px;padding:6px 12px;font-size:14px;margin:4px 6px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}
+.chip{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:99px;padding:9px 14px;font:500 14.5px "DM Sans",system-ui,sans-serif;min-height:42px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+label{display:block;font-size:14px;color:var(--mut);margin:12px 0 5px}
+input{width:100%;font:16px "DM Sans",system-ui,sans-serif;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);min-height:46px}
+input:focus,button:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.msg{background:#f3ece1;border-radius:14px;padding:12px 14px;font-size:15px;margin-top:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.btn{display:block;width:100%;border:0;border-radius:99px;padding:14px;font:800 15.5px Manrope,system-ui,sans-serif;min-height:50px;cursor:pointer;margin-top:10px;text-align:center;text-decoration:none}
+.p{background:var(--ink);color:#fff}.s{background:#fff;color:var(--ink);border:1px solid var(--ink)}
+.note{font-size:13px;color:var(--mut);margin-top:10px}
 ul{margin:8px 0 0;padding-left:18px}li{margin:5px 0;font-size:15px}
-nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
 nav div{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
 nav button{background:none;border:0;font:500 13px "DM Sans",system-ui,sans-serif;color:var(--mut);padding:10px 4px 12px;min-height:56px;cursor:pointer}
 nav button svg{display:block;margin:0 auto 3px;width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
 nav button[aria-selected=true]{color:var(--acc2);font-weight:700}
-button:focus-visible{outline:2px solid var(--acc);outline-offset:-2px}
 .install{background:#1c1712;color:#f4ede2;border-radius:18px;padding:14px 16px;margin-bottom:12px;font-size:14px}
-.install b{display:block;font:800 15px Manrope,system-ui,sans-serif;margin-bottom:3px}.install button{float:right;background:none;border:0;color:#cdbfa9;font-size:20px;line-height:1;cursor:pointer;min-width:44px;min-height:44px;margin:-12px -12px 0 0}
+.install b{display:block;font:800 15px Manrope,system-ui,sans-serif;margin-bottom:3px}.x{float:right;background:none;border:0;color:#cdbfa9;font-size:22px;line-height:1;cursor:pointer;min-width:44px;min-height:44px;margin:-12px -12px 0 0}
 .foot{font-size:13px;color:var(--mut);text-align:center;margin:18px 0 6px}
+.lock,.tip{position:fixed;inset:0;z-index:20;display:flex;align-items:flex-end;justify-content:center;background:rgba(20,15,10,.55)}
+.lock{background:#1c1712 url(hero.jpg) center/cover;align-items:center}
+.lock:before{content:"";position:absolute;inset:0;background:rgba(20,15,10,.78)}
+.sheet{position:relative;width:min(100%,560px);background:var(--bg);border-radius:24px 24px 0 0;padding:22px 20px calc(22px + env(safe-area-inset-bottom))}
+.lock .sheet{border-radius:24px;margin:16px;width:min(calc(100% - 32px),440px)}
+.sheet img{width:180px;display:block;margin:0 auto 14px}
+.sheet h2{font-size:22px;margin-bottom:6px}.tipq{font:800 21px/1.3 Manrope,system-ui,sans-serif;margin:8px 0}
+.err{color:var(--warn);font-size:14px;margin-top:8px;min-height:20px}
+@media(prefers-reduced-motion:no-preference){.tip .sheet{animation:up .35s ease both}@keyframes up{from{transform:translateY(40px);opacity:0}}}
 </style>
 </head>
 <body>
 <div class="app">
-  <header class="hero"><span class="brand">LocalLift Live</span><h1>Montage</h1><p>Tigard, Oregon · what changed and what to do</p></header>
+  <header class="hero"><span class="brand">LocalLift Live</span><span class="who" id="who" hidden></span><img src="logo-white.png" alt="Montage"><p>Tigard, Oregon · what changed and what to do</p></header>
   <main id="view"><p class="upd">Loading…</p></main>
 </div>
 <nav><div role="tablist">
   <button role="tab" data-v="today" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Today</button>
+  <button role="tab" data-v="ask" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>Get reviews</button>
   <button role="tab" data-v="score" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>Score</button>
   <button role="tab" data-v="rivals" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19c1-3 3-4 5-4s4 1 5 4M11 19c1-3 3-4 5-4s4 1 5 4"/></svg>Rivals</button>
-  <button role="tab" data-v="ask" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>Reviews</button>
 </div></nav>
+<div id="ov"></div>
 <script>
 {
-let D=null,cur='today';
-const v=document.getElementById('view');
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let hideInstall=false;try{hideInstall=localStorage.getItem('llInstall')==='0'}catch(e){}
+let D=null,cur='today',mom='movein',S={};
+const $=id=>document.getElementById(id),v=$('view'),ov=$('ov');
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ls={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,x)=>{try{localStorage.setItem(k,x)}catch(e){}}};
+const today=new Date().toLocaleDateString('en-CA');
+const TIPS=["The best review ask is the one sent while the moment is still warm. Send it before you leave the apartment.","A closed work order is a small win for a resident. Say so, then ask.","One review a week keeps you ahead. Small and steady beats a big push.","Use the resident's first name. People answer people, not systems.","Every tour is a first impression. Greet like they already live here.","Ask everyone at the same moments. That keeps it fair, and it is Google's rule.","Renewals are a vote of confidence. Thank them out loud, then ask.","Answer every review, good or hard, within a day. Future renters read the replies.","Walk the property for five minutes before you open your inbox.","A hard review is feedback, not a verdict. Reply with calm and an invitation to talk.","Name a nearby favorite spot when you tour. Renters choose the neighborhood too.","Text the review link the same day. An ask without a link rarely lands.","Celebrate a teammate's win today. Good teams earn good reviews.","Check in three days after move in, fix anything fast, and ask for the review at that visit.","Smile on the phone. Residents hear it.","Small touches get mentioned in reviews: a clean entry, a quick reply, a remembered name.","Before a resident event, decide who will send the review asks after it.","The first five minutes of a tour decide the rest. Lead with what they told you matters.","Close the loop on every service request with a quick text: done, and how did we do?","Your reviews are the first thing renters read about this team. Make today worth writing about."];
+const MOM={movein:['Move in','welcome home to Montage! If you have a minute, would you share how your move in went on Google?'],work:['Work order done','your service request is all set. If you have a minute, would you share your experience with Montage on Google?'],renew:['Renewal','thank you for renewing with us! Would you share your experience at Montage on Google?'],event:['Resident event','thanks for joining us at our resident event! If you have a minute, would you share your experience at Montage on Google?'],any:['Anytime','thank you for being part of Montage. If you have a minute, would you share your experience on Google?']};
+const sha=async s=>{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')};
+const me=()=>ls.get('llName')||'';
+const sid=()=>{let x=ls.get('llSid');if(!x){x='st'+Math.random().toString(36).slice(2,7);ls.set('llSid',x)}return x};
+const hideI=()=>ls.get('llInstall')==='0';
 const standalone=window.navigator.standalone||matchMedia('(display-mode: standalone)').matches;
-const install=()=>(standalone||hideInstall)?'':`<div class="install"><button aria-label="Hide" id="hideI">×</button><b>Put this on your home screen</b>On iPhone, tap the Share button at the bottom of Safari, then tap Add to Home Screen, then Add.</div>`;
 const upd=()=>`<p class="upd">Updated ${esc(D.updatedLabel)} · refreshes every morning</p>`;
+const install=()=>(standalone||hideI())?'':`<div class="install"><button class="x" aria-label="Hide" data-a="hideI">×</button><b>Put this on your home screen</b>On iPhone, tap the Share button at the bottom of Safari, then tap Add to Home Screen, then Add.</div>`;
+const myCount=()=>{let w=[];try{w=JSON.parse(ls.get('llSent')||'[]')}catch(e){}const since=Date.now()-7*864e5;return w.filter(t=>t>since).length};
+const link=()=>{if(!S.k)S.k=Math.random().toString(36).slice(2,8);return `${D.trackBase}?m=${mom}&k=${S.k}`};
+const msg=()=>{const n=(S.name||'').trim();return `Hi ${n||'there'}, ${MOM[mom][1]}\n${link()}\nThank you! ${me()} at Montage`};
+const A=()=>D.asks||{};
 const V={
  today:()=>install()+upd()+D.feed.map(f=>`<div class="card ${esc(f.tone)}"><div class="src"><b><span class="dot"></span>${esc(f.src)}</b><span>${esc(f.date)}</span></div><h3>${esc(f.title)}</h3><p>${esc(f.body)}</p>${f.action?`<div class="do">${esc(f.action)}</div>`:''}</div>`).join(''),
+ ask:()=>`<div class="card"><h3>Send a review ask</h3><p>Pick the moment, add their name, and send.</p>
+  <div class="chips">${Object.entries(MOM).map(([k,m])=>`<button class="chip" data-m="${k}" aria-pressed="${k===mom}">${m[0]}</button>`).join('')}</div>
+  <label for="nm">Resident first name (optional)</label><input id="nm" autocomplete="off" value="${esc(S.name)}">
+  <label for="ph">Mobile number (optional)</label><input id="ph" type="tel" inputmode="tel" autocomplete="off" value="${esc(S.ph)}">
+  <div class="msg" id="msg">${esc(msg())}</div>
+  <button class="btn p" data-a="own">Send from my phone</button>
+  <button class="btn s" data-a="office">Copy for the office number</button>
+  <div class="note" id="sendnote">Ask everyone at these moments, not only residents you expect to be happy. That is Google's rule, and it keeps your rating honest.</div></div>
+  <div class="card"><div class="src"><b>Review asks</b><span>last 7 days</span></div>
+  <div class="tiles" style="margin:6px 0 0"><div class="tile"><b>${myCount()}</b><span>Sent from this phone</span></div><div class="tile"><b>${A().sent!=null?A().sent:'Soon'}</b><span>Sent by the team</span><small>${A().through?esc(A().through):'Starts with the next morning update'}</small></div><div class="tile"><b>${A().opened!=null?A().opened:'Soon'}</b><span>Links opened</span></div><div class="tile"><b>${esc(D.tiles[0][0])}</b><span>Google rating</span><small>${esc(D.tiles[0][2])}</small></div></div></div>
+  <div class="card"><h3>${esc(D.ask.title)}</h3><ul>${D.ask.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`,
  score:()=>upd()+`<div class="card"><div class="src"><b>LocalLift Visibility Index™</b><span>${esc(D.score.date)}</span></div><div class="big"><b>${D.score.index}</b><span>${D.score.index===D.score.prev?'level with last week':(D.score.index>D.score.prev?'up ':'down ')+Math.abs(D.score.index-D.score.prev)+' from last week'}</span></div>${D.score.parts.map(p=>`<div class="bar"><span>${esc(p[0])}</span><i style="--w:${p[1]}%"></i><em>${p[1]}</em></div>`).join('')}</div><div class="tiles">${D.tiles.map(t=>`<div class="tile"><b>${esc(t[0])}</b><span>${esc(t[1])}</span><small>${esc(t[2])}</small></div>`).join('')}</div>`,
- rivals:()=>upd()+`<div class="card"><div class="src"><b>Your comp set</b><span>${esc(D.rivals.date)}</span></div><table><thead><tr><th>Community</th><th>Rating</th><th>Reviews</th><th>Top 3</th><th>Top 20</th></tr></thead><tbody>${D.rivals.rows.map(r=>`<tr class="${r[0].includes('(you)')?'you':''}"><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td></tr>`).join('')}</tbody></table><p class="upd" style="margin:10px 0 0">Top 3 and Top 20 count map points out of 49. ${esc(D.rivals.note)}</p></div>`,
- ask:()=>upd()+`<div class="card"><h3>${esc(D.ask.title)}</h3><p style="margin-top:6px">Ask at two moments only, so nobody has to remember:</p>${D.ask.moments.map(m=>`<span class="chip">${esc(m)}</span>`).join('')}<ul>${D.ask.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`
+ rivals:()=>upd()+`<div class="card"><div class="src"><b>Your comp set</b><span>${esc(D.rivals.date)}</span></div><table><thead><tr><th>Community</th><th>Rating</th><th>Reviews</th><th>Top 3</th><th>Top 20</th></tr></thead><tbody>${D.rivals.rows.map(r=>`<tr class="${r[0].includes('(you)')?'you':''}"><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td></tr>`).join('')}</tbody></table><p class="upd" style="margin:10px 0 0">Top 3 and Top 20 count map points out of 49. ${esc(D.rivals.note)}</p></div>`
 };
-const show=k=>{cur=k;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===k));v.innerHTML=V[k]()+'<p class="foot">LocalLift Live by The SocialDM · private link for the Montage team</p>';scrollTo(0,0);};
-document.querySelector('nav').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&D)show(b.dataset.v)});
-v.addEventListener('click',e=>{if(e.target.id==='hideI'){hideInstall=true;try{localStorage.setItem('llInstall','0')}catch(x){}show(cur)}});
-fetch('data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{D=j;show('today')}).catch(()=>{v.innerHTML='<p class="upd">Could not load the latest data. Check your connection and reopen the app.</p>'});
+const show=k=>{cur=k;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===k));v.innerHTML=V[k]()+'<p class="foot">LocalLift Live by The SocialDM · for the Montage team</p>';scrollTo(0,0);};
+const refreshMsg=()=>{const m=$('msg');if(m)m.textContent=msg()};
+const logSent=how=>{let w=[];try{w=JSON.parse(ls.get('llSent')||'[]')}catch(e){}w.push(Date.now());ls.set('llSent',JSON.stringify(w.slice(-200)));try{gtag('event','review_ask_sent',{property:'montage',moment:mom,sender:how,staff_id:sid(),ask_id:S.k})}catch(e){}S.k=null};
+const tip=()=>{if(ls.get('llTip')===today)return;const i=Math.floor(Date.now()/864e5)%TIPS.length;ov.innerHTML=`<div class="tip"><div class="sheet"><div class="src"><b>${(h=>h<12?'Good morning':h<17?'Good afternoon':'Good evening')(new Date().getHours())}${me()?', '+esc(me()):''}</b><span>Tip of the day</span></div><p class="tipq">${esc(TIPS[i])}</p><button class="btn p" data-a="tipok">Let's go</button></div></div>`};
+const lock=(err,nm)=>{ov.innerHTML=`<div class="lock"><form class="sheet" id="lf"><img src="logo-umber.png" alt="Montage"><h2>Welcome to LocalLift Live</h2><p class="note" style="margin:0">For the Montage team. Your manager has the team code.</p><label for="ln">Your first name</label><input id="ln" autocomplete="given-name" value="${esc(nm||me())}" required><label for="lc">Team code</label><input id="lc" inputmode="numeric" autocomplete="one-time-code" required><div class="err">${esc(err||'')}</div><button class="btn p" type="submit">Open</button></form></div>`};
+const start=()=>{$('who').hidden=false;$('who').textContent=me();show('today');tip()};
+document.querySelector('nav').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&D&&ls.get('llTeam')===D.teamCodeHash)show(b.dataset.v)});
+document.addEventListener('input',e=>{if(e.target.id==='nm'){S.name=e.target.value;refreshMsg()}if(e.target.id==='ph')S.ph=e.target.value});
+document.addEventListener('submit',async e=>{if(e.target.id!=='lf')return;e.preventDefault();const n=$('ln').value.trim(),c=$('lc').value.trim();if(!n)return;const h=await sha('montage:'+c);if(h===D.teamCodeHash){ls.set('llTeam',h);ls.set('llName',n);ov.innerHTML='';start()}else lock('That code did not match. Ask your manager for the current code.',n)});
+document.addEventListener('click',async e=>{const t=e.target.closest('[data-a],[data-m]');if(!t)return;
+ if(t.dataset.m){mom=t.dataset.m;document.querySelectorAll('[data-m]').forEach(c=>c.setAttribute('aria-pressed',c.dataset.m===mom));refreshMsg();return}
+ const a=t.dataset.a;
+ if(a==='hideI'){ls.set('llInstall','0');show(cur)}
+ if(a==='tipok'){ls.set('llTip',today);ov.innerHTML=''}
+ if(a==='own'){const body=encodeURIComponent(msg()),num=(S.ph||'').replace(/[^0-9+]/g,'');const ios=/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);logSent('own');location.href=`sms:${num}${ios?'&':'?'}body=${body}`;setTimeout(()=>show('ask'),800)}
+ if(a==='office'){const text=msg();try{await navigator.clipboard.writeText(text);logSent('office');$('sendnote').textContent='Copied. Paste it into your office texting (RentCafe, Yardi or the office phone) and send.';setTimeout(()=>show('ask'),2500)}catch(x){$('sendnote').textContent='Copy did not work on this device. Press and hold the message above to copy it.'}}
+});
+fetch('data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{D=j;if(ls.get('llTeam')===D.teamCodeHash&&me())start();else lock(ls.get('llTeam')?'The team code has changed. Ask your manager for the new one.':'')}).catch(()=>{v.innerHTML='<p class="upd">Could not load the latest data. Check your connection and reopen the app.</p>'});
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
 }
 </script>
