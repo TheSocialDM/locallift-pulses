@@ -36,8 +36,8 @@ META = {
                'A multifamily marketing agency focused on apartment SEO, Google Maps, reviews, social and AI visibility, so renters find your community before they compare.', 'service', 'Multifamily marketing and apartment SEO'),
  'apartment-google-business-profile-management': ('Google Business Profile Management for Apartments | The SocialDM',
                'Google Business Profile management for apartment communities nationwide: an active profile, every review answered and a listing that stays accurate.', 'service', 'Google Business Profile management for apartment communities'),
- 'phoenix-multifamily-marketing-agency': ('Phoenix Multifamily Marketing Agency | The SocialDM',
-               'Apartment marketing for the Valley from a national agency headquartered in Phoenix and Scottsdale. Google, reviews, social and AI, reported weekly.', 'service', 'Phoenix multifamily marketing'),
+ 'phoenix-multifamily-marketing-agency': ('Phoenix Apartment and Multifamily Marketing Agency | The SocialDM',
+               'The SocialDM is an apartment marketing agency in Phoenix and Scottsdale. Google Maps, reviews, social and AI visibility for Valley communities, reported weekly.', 'service', 'Phoenix multifamily marketing'),
  'medical': ('Medical Practice Marketing and SEO | The SocialDM',
              'AI ready SEO, Google Business Profile care, careful review management and clear service pages that help medical practices become the trusted local choice.', 'service', 'Medical practice marketing and SEO'),
  'real-estate': ('Real Estate Marketing for Agents and Teams | The SocialDM',
@@ -65,7 +65,7 @@ META = {
 # service pages with a local area instead of the default United States
 AREA = {'phoenix-multifamily-marketing-agency': [{'@type': 'City', 'name': c} for c in ('Phoenix', 'Scottsdale', 'Chandler', 'Tempe', 'Glendale')] + [{'@type': 'State', 'name': 'Arizona'}]}
 
-LINKS = [('/', 'Home'), ('/multifamily-marketing-agency', 'Multifamily marketing'), ('/apartment-google-business-profile-management', 'Google Business Profile management'), ('/phoenix-multifamily-marketing-agency', 'Phoenix multifamily marketing agency'), ('https://www.localliftnow.com/', 'LocalLift'),
+LINKS = [('/', 'Home'), ('/multifamily-marketing-agency', 'Multifamily marketing'), ('/apartment-google-business-profile-management', 'Google Business Profile management'), ('/phoenix-multifamily-marketing-agency', 'Phoenix apartment marketing agency'), ('https://www.localliftnow.com/', 'LocalLift'),
          ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/med-spa', 'Med Spa'), ('/hair-salon', 'Hair Salons'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Portfolios'),
          ('/blog', 'Market Intelligence blog'), ('/research-insights', 'Research and Insights'),
          ('/2026-multifamily-visibility-report', '2026 Multifamily Visibility Report'), ('/answers', 'Answers'), ('/results', 'Results'), ('/montage-case-study', 'Montage case study'), ('/huxley-case-study', 'Huxley Scottsdale case study'), ('/about', 'About'), ('/contact', 'Contact')]
