@@ -1,8 +1,8 @@
 {
   "property": "Montage",
   "city": "Tigard, Oregon",
-  "updated": "2026-11-16T05:54:36-07:00",
-  "updatedLabel": "Nov 16, 5:54 am Phoenix time",
+  "updated": "2026-11-16T06:01:53-07:00",
+  "updatedLabel": "Nov 16, 6:01 am Phoenix time",
   "feed": [
     {
       "src": "Google reviews",
@@ -36,7 +36,7 @@
       "date": "Nov 13",
       "tone": "good",
       "title": "1st at your front door",
-      "body": "For \"apartments for rent tigard or\", you rank 1st at your door and inside the top 20 at 26 of 49 points, including all 21 points east. West of Highway 217 is where we are working to grow your reach.",
+      "body": "For \"apartments for rent tigard or\", you rank 1st at your door and inside the top 20 at 26 of 49 points, including all 21 points east. West of Highway 217 is where you have the most room to grow.",
       "action": ""
     },
     {
@@ -169,7 +169,7 @@
   "talk": {
     "checked": "Nov 16",
     "checkedIso": "2026-11-16",
-    "offer": "Select 2 bedrooms: 2 months free plus a $1,000 Look & Lease, through Nov 30.",
+    "offer": "Select 2 bedrooms: 2 months free plus a $1,000 Look & Lease bonus, through Nov 30.",
     "prices": [
       [
         "$1,105",
@@ -193,7 +193,7 @@
     },
     {
       "title": "Special ends Nov 30",
-      "body": "2 months free on select 2 bedrooms. Mention it on every tour this week and next.",
+      "body": "2 months free on select 2 bedrooms. Mention it on every tour through Nov 30.",
       "due": "Nov 30"
     },
     {
