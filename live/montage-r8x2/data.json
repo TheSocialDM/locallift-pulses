@@ -1,8 +1,8 @@
 {
   "property": "Montage",
   "city": "Tigard, Oregon",
-  "updated": "2026-11-15T20:39:12-07:00",
-  "updatedLabel": "Nov 15, 8:39 pm Phoenix time",
+  "updated": "2026-11-16T05:43:55-07:00",
+  "updatedLabel": "Nov 16, 5:43 am Phoenix time",
   "feed": [
     {
       "src": "Google reviews",
@@ -38,7 +38,7 @@
     },
     {
       "src": "MoveInLocal guide · last 7 days",
-      "date": "Nov 9 to 15",
+      "date": "Nov 10 to 16",
       "tone": "info",
       "title": "2 visits to your guide",
       "body": "Both visits came on Nov 11. No Call, Tour or Apply taps yet. The guide went live Nov 10.",
@@ -158,9 +158,9 @@
   "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJBWKnXW4NlVQRR5JHlnXTbQ0",
   "trackBase": "https://thesocialdm.github.io/locallift-pulses/live/r/montage/",
   "asks": {
-    "sent": null,
-    "opened": null,
-    "through": ""
+    "sent": 0,
+    "opened": 0,
+    "through": "Nov 16"
   },
   "shortLink": "moveinlocal.com/review/montage"
 }
