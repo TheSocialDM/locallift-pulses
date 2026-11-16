@@ -247,5 +247,66 @@
         "Event"
       ]
     ]
+  },
+  "compete": {
+    "checked": "Nov 16",
+    "checkedIso": "2026-11-16",
+    "items": [
+      {
+        "name": "The Overland",
+        "where": "Tigard Triangle",
+        "special": "Up to 6 weeks free on select homes and lease terms",
+        "from": [
+          [
+            "$1,408",
+            "studio"
+          ],
+          [
+            "$1,515",
+            "1 bed"
+          ],
+          [
+            "$2,131",
+            "2 bed"
+          ]
+        ],
+        "fees": "$50 application, $500 deposit, pets $300 deposit plus $50 a month, parking $150 to $175 a month, utilities and trash billed on top",
+        "tip": "Their 1 beds start lower. On 2 beds, our 2 months free plus $1,000 is the bigger special."
+      },
+      {
+        "name": "The Steward",
+        "where": "Tigard Triangle",
+        "special": "Free rent on qualifying new leases (amount not posted)",
+        "from": [
+          [
+            "$1,949",
+            "1 bed"
+          ],
+          [
+            "$1,899",
+            "2 bed"
+          ]
+        ],
+        "fees": "$400 deposit, pet fees vary (call), utilities paid separately",
+        "tip": "They do not post how much is free. Ask what they were quoted. Expect them to pitch their solar power savings."
+      },
+      {
+        "name": "Mercato Grove",
+        "where": "Lake Oswego",
+        "special": "Up to 6 weeks free plus one perk: $1,000 move in credit, 6 months free garage parking, or 6 months free storage plus a $300 gift card",
+        "from": [
+          [
+            "$2,194",
+            "1 bed"
+          ],
+          [
+            "$2,450",
+            "2 bed"
+          ]
+        ],
+        "fees": "$50 application, $500 deposit, pets $300 deposit plus $55 a month, parking $185 to $235 a month",
+        "tip": "Higher rents in Lake Oswego. On 2 beds, our 2 months free plus $1,000 is still the bigger special."
+      }
+    ]
   }
 }
