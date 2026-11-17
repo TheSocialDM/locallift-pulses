@@ -1,0 +1,7 @@
+<!doctype html><meta charset=utf-8><title>vt</title><pre id=o>running</pre><script>
+const H='https://hook.us2.make.com/kano60wsrbnwssabjecihkpftrr3h8lm',o=document.getElementById('o');
+(async()=>{try{const r=await fetch(H,{method:'POST',body:new URLSearchParams({action:'link',folder:'Montage Apartments',fname:'zz-test-delete-me.mp4'})});const j=await r.json();o.textContent='link ok '+!!j.link;
+const blob=new Blob([new Uint8Array(200000)],{type:'video/mp4'});
+await new Promise((res,rej)=>{const x=new XMLHttpRequest();x.open('POST',j.link);x.setRequestHeader('Content-Type','application/octet-stream');x.onload=()=>{o.textContent+='\nupload '+x.status+' '+x.responseText.slice(0,200);res()};x.onerror=()=>{o.textContent+='\nupload NETWORK ERROR';rej()};x.send(blob)});
+o.textContent+='\nDONE'}catch(e){o.textContent+='\nERR '+e}})();
+</script>
