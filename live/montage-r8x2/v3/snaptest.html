@@ -1,0 +1,5 @@
+<!doctype html><meta name="robots" content="noindex"><body><p id="s">sending</p><script>
+(async()=>{const r=await fetch('../shots/lounge.jpg');const bl=await r.blob();const b64=await new Promise(res=>{const fr=new FileReader();fr.onload=()=>res(fr.result.split(',')[1]);fr.readAsDataURL(bl)});
+const fd=new FormData();fd.append('property','Montage');fd.append('tag','Amenity');fd.append('staff','Q test');fd.append('note','End to end test from Q, ignore');fd.append('taken','Nov 17 test');fd.append('fname','montage-test.jpg');fd.append('img',b64);
+try{await fetch('https://hook.us2.make.com/seqkhkibj2qjpqt5mrvq1m7s5mdix8xv',{method:'POST',mode:'no-cors',body:fd});document.getElementById('s').textContent='sent '+b64.length}catch(e){document.getElementById('s').textContent='fail '+e}})();
+</script>
