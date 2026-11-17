@@ -306,8 +306,10 @@ const get=k=>{try{return localStorage.getItem(k)}catch(x){return null}};
 const open_=()=>{document.body.classList.remove('gated');const e=g();if(e)e.style.display='none'};
 const shut=(msg)=>{document.body.classList.add('gated');const e=g();if(e)e.style.display='flex';if(msg)document.getElementById('gmsg').textContent=msg;try{document.getElementById('gn').value=get('ll-me')||''}catch(x){}};
 window.__llHash=null;
+try{const q0=new URLSearchParams(location.search);if(q0.get('invite')){const base=new URL('./',location.href).href,ic=new URL('../',location.href).href;const m={name:'LocalLift Live · Montage',short_name:'LocalLift Live',start_url:location.href,scope:base,display:'standalone',background_color:'#000000',theme_color:'#1c1712',icons:[{src:ic+'icon-192.png',sizes:'192x192',type:'image/png'},{src:ic+'icon-512.png',sizes:'512x512',type:'image/png',purpose:'any'}]};const l=document.querySelector('link[rel=manifest]');if(l)l.href='data:application/manifest+json,'+encodeURIComponent(JSON.stringify(m))}}catch(x){}
 fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{window.__llHash=j.teamCodeHash||null;const have=get(K);
  if(!window.__llHash){open_();return}
+ try{const q=new URLSearchParams(location.search),inv=q.get('invite');if(inv&&inv.length>=16&&window.__llHash.indexOf(inv)===0){localStorage.setItem(K,window.__llHash);const n=(q.get('n')||'').replace(/[^A-Za-z' ]/g,'').slice(0,20);if(n&&!get('ll-me'))localStorage.setItem('ll-me',n);if(have!==window.__llHash){location.reload();return}open_();return}}catch(x){}
  if(have===window.__llHash){open_();return}
  if(have){try{WIPE.concat([K]).forEach(k=>localStorage.removeItem(k))}catch(x){};shut('The team code has changed. Your saved notes were cleared from this phone. Ask your manager for the new code.')}else shut()
 }).catch(()=>{if(get(K))open_();else shut('Connect to the internet to sign in.')});
