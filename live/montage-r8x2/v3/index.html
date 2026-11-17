@@ -250,6 +250,31 @@ nav{background:rgba(28,28,30,.96)!important;border:.5px solid rgba(255,255,255,.
 .kadd{border-color:#48484a;color:#f2f2f7}.kadd.on{background:#2f7d55;border-color:#2f7d55}
 .tf input,.tf textarea{background:#2c2c2e;border-color:#48484a;color:#f2f2f7}.tlog{background:#2c2c2e;color:#d1d1d6}
 }
+
+/* How to hold it animation, Nov 17 2026 */
+.hold{padding:12px 14px 10px}.hold .hhd{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}.hold .hhd b{font-size:16px}.hold .hhd span{font-size:12px;color:var(--mut)}
+.hold .stage{position:relative;height:150px;border-radius:12px;background:#f6efe5;overflow:hidden}
+.hold svg{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .4s}.hold svg.on{opacity:1}
+.hold .sk{fill:none;stroke:#2a1d14;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.hold .ac{stroke:#b46e26}.hold .ok{stroke:#1f6b45}.hold .no{stroke:#c4583f}.hold .ph{fill:#2a1d14}.hold .dash{stroke-dasharray:6 7;animation:hdash 1s linear infinite}
+.hold .cap{margin:8px 0 0;font-size:14.5px;line-height:1.35;min-height:5.6em}.hold .cap b{display:block;font-size:15.5px;color:var(--ink)}
+.hold .dots{display:flex;gap:0;justify-content:center;margin-top:6px}.hold .dots button{width:44px;height:44px;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center}.hold .dots i{width:8px;height:8px;border-radius:50%;background:#d6c4ae}.hold .dots button[aria-current=true] i{background:#9a5a1c;width:22px;border-radius:4px}
+@keyframes hdash{to{stroke-dashoffset:-13}}
+@keyframes hpop{0%,40%{transform:scale(0)}60%{transform:scale(1.25)}75%,100%{transform:scale(1)}}
+@keyframes hback{0%,10%{transform:translateX(0)}70%,100%{transform:translateX(-58px)}}
+@keyframes hframe{0%,10%{transform:scale(.62)}70%,100%{transform:scale(1)}}
+@keyframes hninja{0%{transform:translateX(0)}100%{transform:translateX(150px)}}
+@keyframes hlegA{0%,100%{transform:rotate(9deg)}50%{transform:rotate(-7deg)}}@keyframes htrail{from{stroke-dashoffset:164}to{stroke-dashoffset:0}}
+@keyframes hlegB{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(9deg)}}
+@keyframes hshake{0%,100%{transform:translateY(0)}25%{transform:translateY(-5px)}75%{transform:translateY(5px)}}
+.hold .on .pop{transform-box:fill-box;transform-origin:center;animation:hpop 1.6s ease forwards}
+.hold .on .back{animation:hback 3.2s ease-in-out forwards}
+.hold .on .frame{transform-box:fill-box;transform-origin:center;animation:hframe 3.2s ease-in-out forwards}
+.hold .on .ninja{animation:hninja 3.6s linear forwards}
+.hold .on .la{transform-box:fill-box;transform-origin:top left;animation:hlegA 1.2s ease-in-out infinite}.hold .trail{stroke-dasharray:164;stroke-dashoffset:164;stroke-width:2.5}.hold .on .trail{animation:htrail 3.6s linear forwards}.hold .lbl{font:700 11px -apple-system,system-ui,sans-serif}.hold .no2{fill:#a33a24}.hold .ok2{fill:#1f6b45}
+.hold .on .lb{transform-box:fill-box;transform-origin:top right;animation:hlegB 1.2s ease-in-out infinite}
+.hold .on .shake{animation:hshake .25s linear infinite}
+@media (prefers-reduced-motion:reduce){.hold *{animation:none!important}.hold .trail{stroke-dashoffset:0}}
+@media (prefers-color-scheme:dark){.hold .stage{background:#2c2c2e}.hold .sk{stroke:#f2f2f7}.hold .ac{stroke:#e0a463}.hold .ok{stroke:#7fd1a0}.hold .no{stroke:#ff8a73}.hold .ph{fill:#f2f2f7}.hold .dots i{background:#48484a}.hold .no2{fill:#ff8a73}.hold .ok2{fill:#7fd1a0}.hold .dots button[aria-current=true] i{background:#e0a463}}
 </style>
 </head>
 <body>
@@ -410,6 +435,28 @@ ${D&&D.compete?`<section class="w dark"><div class="wt"><b>🎯 Know the competi
 `,
 social:()=>`<div class="lt">Social</div>
 <button class="act a1 snapw" id="bCap"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></svg></span><span><b>Snap for Social</b><small>Photo or video. TheSocialDM turns it into a post</small></span></button>
+<section class="w hold" id="hold"><div class="hhd"><b>📱 How to hold it</b><span id="hst">Tap a dot to pause</span></div><div class="stage"><svg class="on" viewBox="0 0 320 150" aria-hidden="true">
+<path class="sk" d="M10 140 H310"/>
+<circle class="sk" cx="70" cy="38" r="10"/><path class="sk" d="M70 48 V96 M70 96 L60 138 M70 96 L80 138 M70 62 L94 66 M70 70 L94 70"/>
+<rect class="ph" x="94" y="58" width="7" height="16" rx="2"/>
+<path class="sk ac dash" d="M104 66 H218"/>
+<path class="sk" d="M222 140 V44 H292 V140 M236 58 h12 M262 58 h12 M236 80 h12 M262 80 h12 M236 102 h12 M262 102 h12 M252 140 v-20 h16 v20"/>
+<g class="pop"><circle class="sk ok" cx="160" cy="40" r="15"/><path class="sk ok" d="M152 40 l6 6 l11 -12"/></g>
+</svg><svg viewBox="0 0 320 150" aria-hidden="true">
+<path class="sk" d="M10 140 H310"/>
+<path class="sk" d="M214 140 V50 H286 V140 M228 64 h12 M258 64 h12 M228 88 h12 M258 88 h12 M244 140 v-18 h16 v18"/>
+<rect class="sk ac frame" x="196" y="30" width="108" height="118" rx="6"/>
+<g class="back"><circle class="sk" cx="150" cy="38" r="10"/><path class="sk" d="M150 48 V96 M150 96 L140 138 M150 96 L160 138 M150 62 L174 66 M150 70 L174 70"/><rect class="ph" x="174" y="58" width="7" height="16" rx="2"/><path class="sk ac" d="M140 120 l-14 0 m6 -6 l-6 6 l6 6"/></g>
+<g class="pop" style="animation-delay:1.4s"><circle class="sk" cx="48" cy="40" r="13"/><path class="sk" d="M57 49 l10 10 M42 40 h12 M48 34 v12"/><path class="sk no" d="M30 22 l40 40"/></g>
+</svg><svg viewBox="0 0 320 150" aria-hidden="true">
+<path class="sk" d="M10 140 H310"/>
+<path class="sk no shake" d="M22 20 l8 -6 l8 6 l8 -6 l8 6 l8 -6"/><text x="32" y="38" class="lbl no2">shaky</text>
+<path class="sk ok" d="M238 16 q16 -2 32 0 t32 0"/><text x="248" y="38" class="lbl ok2">smooth</text>
+<path class="sk ok trail" d="M58 82 H222"/>
+<g class="ninja"><circle class="sk" cx="40" cy="58" r="10"/><path class="sk" d="M40 68 L36 100"/>
+<g class="la"><path class="sk" d="M36 100 L50 116 L46 138"/></g><g class="lb"><path class="sk" d="M36 100 L24 116 L30 138"/></g>
+<path class="sk" d="M38 76 L56 80 M38 84 L56 84"/><rect class="ph" x="56" y="74" width="7" height="16" rx="2"/></g>
+</svg></div><p class="cap" id="hcap"></p><div class="dots" id="hdots"><button aria-current="true" aria-label="Photo tip 1"><i></i></button><button aria-current="false" aria-label="Photo tip 2"><i></i></button><button aria-current="false" aria-label="Video tip"><i></i></button></div></section>
 <div class="h2s">Shot ideas<span>Tap one, then snap it</span></div>
 <div class="shots">${(D&&D.shots||[]).map((x,i)=>`<button class="shot" data-shot="${i}"><img src="../shots/${esc(x.img)}.jpg" alt="${esc(x.title)}" loading="lazy"><span class="stag">${esc(x.tag)}</span><b>${esc(x.title)}</b></button>`).join('')}</div>
 ${D&&D.snapIdeas?`<div class="h2s">Around town<span>${esc(D.snapIdeas.month)}</span></div><section class="w list">${D.snapIdeas.items.filter(i=>i[2]!=='Amenity').map(i=>`<div class="li"><i>${i[2]==='Event'?'🎟️':'📍'}</i><span><b>${esc(i[0])}</b><small>${esc(i[1])}</small></span></div>`).join('')}</section>`:''}
@@ -446,7 +493,13 @@ rivals:()=>{if(!D)return'';const mx=Math.max(...D.rivals.rows.map(r=>r[2]));retu
 let cur='today';
 let railT=null,railHold=0;
 const railGo=()=>{clearInterval(railT);const r=document.querySelector('.rail');if(!r)return;const mark=()=>{const cards=[...r.querySelectorAll('.ev')];const x=r.getBoundingClientRect().left+20;let best=null,bd=1e9;cards.forEach(c=>{const d=Math.abs(c.getBoundingClientRect().left-x);if(d<bd){bd=d;best=c}});cards.forEach(c=>c.classList.toggle('flash',c===best))};mark();r.addEventListener('scroll',()=>{clearTimeout(r._t);r._t=setTimeout(mark,120)},{passive:true});['pointerdown','touchstart','wheel'].forEach(ev=>r.addEventListener(ev,()=>{railHold=Date.now()+8000},{passive:true}));if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;railT=setInterval(()=>{if(Date.now()<railHold||document.hidden)return;const step=162;const end=r.scrollLeft+r.clientWidth>=r.scrollWidth-4;r.scrollTo({left:end?0:r.scrollLeft+step,behavior:'smooth'})},2600)};
-const show=k=>{cur=k;document.body.dataset.v=k;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===k));$('view').innerHTML=V[k]();railGo();badge();if(k!=='today')scrollTo({top:document.querySelector('.top').offsetHeight-10})};
+
+const HOLDC=[['Eye level or chest high','Keep it level for people, rooms and buildings. Food and flat lays are the one time to shoot straight down.'],['Zoom with your feet','Take a few steps back to fit it all in. Pinch zoom can make photos blurry.'],['Video: the ninja walk','Knees soft, slow heel to toe steps, both hands on the phone, elbows tucked in. Smooth beats fast.']];
+let holdI=0,holdT=null,holdP=false;try{holdP=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(x){}
+const holdGo=i=>{const h=document.getElementById('hold');if(!h)return;holdI=i;const sv=h.querySelectorAll('.stage svg');sv.forEach((x,k)=>{x.classList.remove('on');if(k===i){void x.getBBox;x.offsetWidth;x.classList.add('on');x.querySelectorAll('*').forEach(n=>{n.style.animationName='none';n.offsetWidth;n.style.animationName=''})}});h.querySelectorAll('#hdots button').forEach((b,k)=>{b.setAttribute('aria-current',k===i);b.setAttribute('aria-pressed',k===i&&holdP)});const st=document.getElementById('hst');if(st)st.textContent=holdP?'Paused. Tap the dot again to play':'Tap a dot to pause';const c=HOLDC[i];document.getElementById('hcap').innerHTML='<b>'+c[0]+'</b>'+c[1]};
+const holdRun=()=>{clearInterval(holdT);if(!document.getElementById('hold'))return;holdGo(holdI);if(!holdP)holdT=setInterval(()=>{if(!document.getElementById('hold')){clearInterval(holdT);return}holdGo((holdI+1)%3)},4200)};
+document.addEventListener('click',e=>{const b=e.target.closest('#hdots button');if(!b)return;const i=[...b.parentNode.children].indexOf(b);holdP=(i===holdI)?!holdP:true;holdI=i;holdRun()});
+const show=k=>{cur=k;document.body.dataset.v=k;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===k));$('view').innerHTML=V[k]();holdRun();railGo();badge();if(k!=='today')scrollTo({top:document.querySelector('.top').offsetHeight-10})};
 document.querySelector('nav').addEventListener('click',e=>{const b=e.target.closest('button');if(b)show(b.dataset.v)});
 const sh=$('sh'),box=$('box');
 const open=html=>{box.innerHTML=html;sh.classList.add('on')};const close=()=>{sh.classList.remove('on');show(cur)};
