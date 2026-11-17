@@ -126,3 +126,60 @@ To every agent and title rep who trusted us with their name and their market thi
 We hope today is unhurried, full of good food and better company.
 
 #HappyThanksgiving #Grateful
+
+## 2026-11-27 | signature-vr-2026-11-27.png | Want a shortcut? Free AI Visibility Report: https://localliftsignature.com/?utm_source=facebook&utm_campaign=vr_profile
+The quietest Friday of the year is a good day for a little homework.
+
+Open Google and search the way a buyer would: best real estate agent in [your neighborhood]. Read the AI answer at the top, if one shows up. Then try a couple of other neighborhoods you work.
+
+Notice whose names come up, and what the answer seems to lean on: reviews, profiles, articles, posts.
+
+You do not have to fix anything today. Just look.
+
+Want a shortcut? The free AI Visibility Report checks Google's AI for you. Link in the first comment.
+
+#RealEstateAgent #AISearch #RealtorTips #GoogleAI #RealEstateMarketing
+
+## 2026-11-28 | signature-vr-2026-11-28.png | none
+It is Small Business Saturday, and most agents are small businesses too.
+
+So today, shop one place you would send a new neighbor to. The coffee counter that knows your order. The hardware store that still gives advice. The bookshop with the good window.
+
+If you post about it, tag them and say why you love it. It helps them, and it shows people the neighborhood through your eyes.
+
+Where are you shopping today?
+
+#SmallBusinessSaturday #ShopLocal #RealtorLife #NeighborhoodLove #AgentLife
+
+## 2026-11-29 | signature-vr-2026-11-29.png | none
+The last Sunday of November.
+
+Leftovers in the fridge, a blanket on the couch, and a December calendar that can wait until tomorrow.
+
+We think the best plans for a busy month start with one slow afternoon. What are you doing with yours?
+
+#SundayAfternoon #RealtorLife #SlowSunday #AgentLife #RealEstateAgent
+
+## 2026-11-30 | signature-vr-2026-11-30.png | See what Google's AI says about agents in your area, free: https://localliftsignature.com/?utm_source=facebook&utm_campaign=vr_profile
+Every inbox is full of deals today. Here is a free upgrade instead: rewrite the description on your Google Business Profile.
+
+Many agent descriptions read like a bio: years in the business, awards, a slogan. A stronger one answers the questions a stranger actually has. Who do you help? Where? With what kind of move?
+
+Here is an example we made up to show the idea (not a real agent):
+Before: Dedicated Realtor committed to excellence.
+After: I help families buy and sell in Old Town and the east side, especially first homes and downsizing moves.
+
+Plain, specific words are easier for people to understand, and they give search tools something clear to work with.
+
+What would yours say?
+
+#GoogleBusinessProfile #RealEstateAgent #RealtorTips #CyberMonday #RealEstateMarketing
+
+## 2026-12-01 | signature-vr-2026-12-01.png | none
+Today is Giving Tuesday.
+
+Agents and title reps know their communities up close: the schools, the shelters, the food banks, the teams that need new jerseys.
+
+If there is a local cause you support, share it in the comments so others can find it too. We would love to see who you are championing this season.
+
+#GivingTuesday #GiveLocal #Community #RealtorLife

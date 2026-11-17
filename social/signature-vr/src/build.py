@@ -107,6 +107,12 @@ POSTS = {
  '2026-11-24': (B, dict(img=8293778, eb='Past clients', fs=112, h='Your best December list<br><i>is the one you already have.</i>', p='A short note only you could write. No market update, no ask.')),
  '2026-11-25': (C, dict(img=3184465, pos='30% center', eb='LocalLift Signature<br>$199 a month', fs=100, top=790, h='You sell homes.<br><i>We handle the visibility.</i>', p='12 local topics a month, made for Instagram, Facebook, LinkedIn and Google Business Profile.')),
  '2026-11-26': (E, dict(eb='Happy Thanksgiving', h='<i>Thank you.</i>', p='To every agent and title rep who trusted us with their name and their market this year.')),
+ '2026-11-27': (C, dict(img=5668471, eb='Quiet Friday<br>homework', fs=110, h='Search yourself<br><i>like a buyer would.</i>', p='Ask Google for the best agent in your neighborhood and read the AI answer at the top, if one shows up.')),
+ '2026-11-28': (A, dict(img=19418844, eb='Small Business Saturday', fs=104, h='Shop the places<br><i>you would recommend.</i>', p='The coffee counter, the hardware store, the bookshop with the good window.')),
+ '2026-11-29': (B, dict(img=9969158, pos='center 25%', eb='Sunday', h='December can wait<br><i>until tomorrow.</i>', p='One slow afternoon first.')),
+ '2026-11-30': (D, dict(img=8850629, eb='Google Business Profile', fs=110, ph=420, pos='center 40%', h='Your description<br><i>is not a bio.</i>',
+     card=ex_card([('Before', 'Dedicated Realtor committed to excellence.'), ('After', 'I help families buy and sell in Old Town and the east side, especially first homes and downsizing moves.')]))),
+ '2026-12-01': (C, dict(img=6995221, pos='center', eb='Giving Tuesday', fs=130, h='Give where<br><i>you live.</i>', p='Share a local cause you support so others can find it too.')),
 }
 
 async def main(only=None):
