@@ -280,6 +280,12 @@ nav{background:rgba(28,28,30,.96)!important;border:.5px solid rgba(255,255,255,.
 .shot.wide{grid-column:1/-1;aspect-ratio:16/9}
 @media (prefers-color-scheme:dark){.alert i{background:#2c2c2e}}
 </style>
+<style>
+#sch{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:8px;background:rgba(28,20,14,.92);color:#fff;border-radius:99px;padding:9px 16px 9px 12px;font:700 14px/1.2 -apple-system,system-ui,sans-serif;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.35);pointer-events:none;opacity:0;transition:opacity .35s}
+#sch.on{opacity:1}#sch .hd{font-size:20px;display:inline-block;animation:schh 1.4s ease-in-out infinite}#sch .ar{display:inline-block;animation:scha 1.4s ease-in-out infinite}
+@keyframes schh{0%,100%{transform:translateY(6px)}50%{transform:translateY(-6px)}}@keyframes scha{0%,100%{transform:translateY(-2px);opacity:.5}50%{transform:translateY(3px);opacity:1}}
+@media (prefers-reduced-motion:reduce){#sch .hd,#sch .ar{animation:none}}
+</style>
 </head>
 <body>
 <div class="app">
@@ -635,6 +641,21 @@ else if(h==='rivals')nav('tourv');
 window.addEventListener('hashchange',()=>DL(location.hash.slice(1)));
 fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{const bad=x=>/review|resident|\b[A-Z][a-z]+ [A-Z]\.|star/i.test(JSON.stringify(x));if(j.feed)j.feed=j.feed.filter(x=>!(x.src||'').match(/review/i)&&!bad(x));if(j.followups)j.followups=j.followups.filter(x=>!bad(x));D=j;show(cur);setTimeout(()=>DL(location.hash.slice(1)),60)}).catch(()=>{});
 }
+</script>
+<div id="sch" aria-hidden="true"><span class="hd">👆</span>Swipe up for more<span class="ar">↓</span></div>
+<script>
+(function(){
+const H=document.getElementById('sch');let used=false,last=null;
+const tgt=()=>{const sh=document.getElementById('sh'),b=document.getElementById('box');return(sh&&sh.classList.contains('on')&&b)?b:document.scrollingElement};
+const more=t=>t.scrollHeight-t.clientHeight-t.scrollTop>80;
+const check=()=>{const t=tgt();if(t!==last){last=t;used=false}H.classList.toggle('on',!used&&more(t))};
+const onScroll=e=>{const t=tgt();if((e.target===t||(t===document.scrollingElement&&e.target===document))&&t.scrollTop>30){used=true;H.classList.remove('on')}};
+document.addEventListener('scroll',onScroll,true);
+const mo=new MutationObserver(()=>{last=tgt();used=false;setTimeout(check,350)});
+const start=()=>{['sh','box','view'].forEach(id=>{const el=document.getElementById(id);if(el)mo.observe(el,{childList:true,attributes:id==='sh',attributeFilter:id==='sh'?['class']:undefined})});setTimeout(check,900)};
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+window.addEventListener('resize',check);
+})();
 </script>
 </body>
 </html>
