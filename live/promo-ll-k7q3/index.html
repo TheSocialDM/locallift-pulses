@@ -77,4 +77,11 @@ const shut=()=>{ov.classList.remove('on');document.body.style.overflow=''};
 document.getElementById('ovx').addEventListener('click',shut);ov.addEventListener('click',e=>{if(e.target===ov)shut()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')shut()});
 </script>
+<script>
+(function(){try{if(sessionStorage.getItem('llseen'))return;sessionStorage.setItem('llseen','1')}catch(e){}
+var u=navigator.userAgent||'',d=/iPhone/.test(u)?'iPhone':/iPad/.test(u)?'iPad':/Android/.test(u)?'Android phone':/Macintosh/.test(u)?'Mac':/Windows/.test(u)?'Windows PC':'Other';
+var r='';try{r=document.referrer?new URL(document.referrer).hostname:''}catch(e){}
+var f=new FormData();f.append('page','prospect');f.append('device',d);f.append('ref',r);f.append('ua',u.slice(0,200));
+try{fetch('https://hook.us2.make.com/9td8bf7ujy84lveekesra4uxs9xagpyv',{method:'POST',mode:'no-cors',body:f,keepalive:true})}catch(e){}})();
+</script>
 </body></html>
