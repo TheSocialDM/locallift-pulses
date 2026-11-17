@@ -31,7 +31,7 @@ You probably say this kind of thing on showings. The difference is whether it ev
 What do you tell every buyer about your favorite neighborhood?
 
 #RealEstateAgent #NeighborhoodExpert #AISearch"""),
-('2026-12-01','michael-shad-2026-12-01-review-credit.png','ms-1201-review-credit',"Curious whose name AI tools connect to your reviews? Start with a free report",RPT,
+('2026-12-01','michael-shad-2026-12-01-review-credit.png','ms-1201-review-credit',"Who does Google's AI name when buyers near you ask? A free report shows you",RPT,
 """A five star review with your team's name on it can leave your own name out entirely.
 
 Many agents work under a team or a brokerage brand. When a happy client sits down to leave a review, they often end up on the team's Google profile or the brokerage page and write something like "Great experience with the Copper Lane Team." (Example name only.)
@@ -74,7 +74,7 @@ So when you look at your tour booking, picture two visitors: a renter on a phone
 Can a renter book a tour on your website without talking to anyone?
 
 #Multifamily #PropTech #AISearch"""),
-('2026-12-04','michael-shad-2026-12-04-listing.png','ms-1204-listing',"A free report on what AI tools say when buyers in your area ask for an agent",RPT,
+('2026-12-04','michael-shad-2026-12-04-listing.png','ms-1204-listing',"A free report on which agents Google's AI names in your area",RPT,
 """Your listing description has a new kind of reader.
 
 Some home search sites now let buyers type a full sentence instead of clicking through filters. Zillow added this kind of search in 2023, so a buyer can type something like "3 bedroom home with a fenced yard and a home office." (Example search.)
@@ -88,7 +88,7 @@ One line to keep in mind: describe the home, not who it's for. "Fenced yard" is 
 What feature do buyers ask about that rarely makes it into listing descriptions?
 
 #RealEstateAgent #ListingTips #AISearch"""),
-('2026-12-05','michael-shad-2026-12-05-languages.png','ms-1205-languages',"Find out how AI tools describe you to buyers, with a free report",RPT,
+('2026-12-05','michael-shad-2026-12-05-languages.png','ms-1205-languages',"See whether Google's AI names you, plus three fixes, in a free report",RPT,
 """A buyer may pick an agent by language before they pick a single home.
 
 If you work with clients in Spanish, Portuguese or French, that matters more than it might seem. A question like "Spanish speaking real estate agent near me" is very specific, and AI tools tend to answer it with agents whose pages say so clearly.
