@@ -618,7 +618,22 @@ box.addEventListener('click',e=>{const id=e.target.id;
  if(id==='addok'){const n=$('en').value.trim(),d=$('ed').value;if(!n||!d)return;const dt=new Date(d+'T12:00'),mo=dt.getMonth();ours.push([dt.toLocaleString('en-US',{month:'short'})+' '+dt.getDate(),n,'Resident event, added by your team',1,(mo<9?mo+13:mo+1)*40+dt.getDate()]);close()}
 });
 show('today');
-fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{const bad=x=>/review|resident|\b[A-Z][a-z]+ [A-Z]\.|star/i.test(JSON.stringify(x));if(j.feed)j.feed=j.feed.filter(x=>!(x.src||'').match(/review/i)&&!bad(x));if(j.followups)j.followups=j.followups.filter(x=>!bad(x));D=j;show(cur)}).catch(()=>{});
+
+const DL=h=>{if(!h)return;try{close()}catch(e){}const nav=v=>{const b=document.querySelector('nav button[data-v='+v+']');if(b)b.click()};const clk=q=>{const b=document.querySelector(q);if(b)b.click()};
+const later=f=>setTimeout(f,120);
+if(h==='today')nav('today');
+else if(h==='kit'){nav('today');later(()=>clk('#bKit'))}
+else if(h==='tour'){nav('today');later(()=>clk('#bTour2'))}
+else if(h==='reviews')nav('reviews');
+else if(['movein','renew','work','event'].includes(h)){nav('reviews');later(()=>clk('[data-m='+h+']'))}
+else if(h==='qr'){nav('reviews');later(()=>{clk('[data-m=movein]');later(()=>clk('#qr'))})}
+else if(h==='snap'){nav('social');later(()=>clk('#bCap'))}
+else if(h==='shoot'){nav('social');later(()=>{const e=document.getElementById('hold');if(e)e.scrollIntoView({block:'start'})})}
+else if(h==='desk'){nav('tourv');later(()=>clk('#bDesk'))}
+else if(h==='rivals')nav('tourv');
+};
+window.addEventListener('hashchange',()=>DL(location.hash.slice(1)));
+fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{const bad=x=>/review|resident|\b[A-Z][a-z]+ [A-Z]\.|star/i.test(JSON.stringify(x));if(j.feed)j.feed=j.feed.filter(x=>!(x.src||'').match(/review/i)&&!bad(x));if(j.followups)j.followups=j.followups.filter(x=>!bad(x));D=j;show(cur);setTimeout(()=>DL(location.hash.slice(1)),60)}).catch(()=>{});
 }
 </script>
 </body>
