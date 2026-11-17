@@ -284,8 +284,38 @@ nav{background:rgba(28,28,30,.96)!important;border:.5px solid rgba(255,255,255,.
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="LocalLift Live">
 <link rel="apple-touch-icon" href="../icon-180.png">
+<style>
+#gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#1c1712 url(../hero.jpg) center/cover;font-family:inherit}
+#gate:before{content:"";position:absolute;inset:0;background:rgba(20,15,10,.8)}
+#gate form{position:relative;background:#fffaf3;color:#2a1d14;border-radius:24px;padding:22px 20px;width:min(calc(100% - 32px),420px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+#gate img{width:160px;display:block;margin:0 auto 12px}#gate h2{margin:0 0 4px;font-size:22px;text-align:center}#gate p{margin:0 0 10px;font-size:14px;color:#4d4239;text-align:center;line-height:1.4}
+#gate label{display:block;font-size:13.5px;font-weight:700;margin:12px 0 5px;color:#4d4239}#gate input{width:100%;box-sizing:border-box;font:inherit;font-size:17px;padding:12px 14px;border:1px solid #d9c9b4;border-radius:14px;background:#fff;color:#2a1d14}
+#gate button{width:100%;margin-top:16px;border:0;border-radius:99px;padding:14px;font:inherit;font-size:16px;font-weight:800;background:#5f340e;color:#fff;cursor:pointer;min-height:50px}
+#gate .err{color:#a3321f;font-size:14px;font-weight:700;margin-top:10px;text-align:center;min-height:1em}#gate .sec{font-size:12.5px;color:#6e6155;margin-top:12px}
+body.gated .app{visibility:hidden}
+</style>
 </head>
-<body>
+<body class="gated">
+<div id="gate"><form id="gf" autocomplete="off"><img src="../logo-umber.png" alt="Montage"><h2>Welcome to LocalLift Live</h2><p id="gmsg">For the Montage team. Your manager has the team code.</p><label for="gn">Your first name</label><input id="gn" autocomplete="given-name" required><label for="gc">Team code</label><input id="gc" inputmode="numeric" autocomplete="one-time-code" required><div class="err" id="gerr"></div><button type="submit">Open</button><p class="sec">🔒 Private to your team. Your tour notes stay on this phone.</p></form></div>
+<script>
+(function(){
+const K='ll-team',WIPE=['ll-log','ll-curt','ll-deskmail','ll-pet','ll-me','ll-caps','ll-heard','ll-seenchg'];
+const g=()=>document.getElementById('gate');
+const sha=async t=>{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')};
+const get=k=>{try{return localStorage.getItem(k)}catch(x){return null}};
+const open_=()=>{document.body.classList.remove('gated');const e=g();if(e)e.style.display='none'};
+const shut=(msg)=>{document.body.classList.add('gated');const e=g();if(e)e.style.display='flex';if(msg)document.getElementById('gmsg').textContent=msg;try{document.getElementById('gn').value=get('ll-me')||''}catch(x){}};
+window.__llHash=null;
+fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{window.__llHash=j.teamCodeHash||null;const have=get(K);
+ if(!window.__llHash){open_();return}
+ if(have===window.__llHash){open_();return}
+ if(have){try{WIPE.concat([K]).forEach(k=>localStorage.removeItem(k))}catch(x){};shut('The team code has changed. Your saved notes were cleared from this phone. Ask your manager for the new code.')}else shut()
+}).catch(()=>{if(get(K))open_();else shut('Connect to the internet to sign in.')});
+document.addEventListener('submit',async e=>{if(e.target.id!=='gf')return;e.preventDefault();const n=document.getElementById('gn').value.trim(),c=document.getElementById('gc').value.trim();if(!n||!c)return;
+ if(!window.__llHash){document.getElementById('gerr').textContent='Still loading. Try again in a moment.';return}
+ const h=await sha('montage:'+c);if(h===window.__llHash){try{localStorage.setItem(K,h);localStorage.setItem('ll-me',n)}catch(x){};location.reload()}else document.getElementById('gerr').textContent='That code did not match. Ask your manager for the current code.'},true);
+})();
+</script>
 <div class="app">
   <div class="pv">Preview · QR codes and uploads are live. Texts and emails are practice only and do not send.</div>
   <header class="top">
