@@ -1,533 +1,575 @@
 {
-  "property": "Montage",
-  "city": "Tigard, Oregon",
-  "updated": "2026-11-16T06:01:53-07:00",
-  "updatedLabel": "Nov 16, 6:01 am Phoenix time",
-  "feed": [
-    {
-      "src": "Google reviews",
-      "date": "Nov 12",
-      "tone": "warn",
-      "title": "New 1 star review about upkeep",
-      "body": "A resident left a 1 star review about property maintenance on Nov 12. A reply was posted on Nov 13. Your rating now reads 4.7 on 34 reviews.",
-      "action": "Invite this resident to talk with the office, and keep asking every resident at the usual moments.",
-      "who": "Sean M.",
-      "link": "https://maps.google.com/maps?cid=967661996940431943",
-      "linkLabel": "Open Montage's reviews on Google"
-    },
-    {
-      "src": "Rival watch · map scan",
-      "date": "Nov 13",
-      "tone": "info",
-      "title": "The Steward leads by one review",
-      "body": "The Steward has 35 Google reviews to your 34. You lead on rating, 4.7 to 4.6. You are level on the map, inside the top 20 at 26 of 49 points each.",
-      "action": "Ask for a review at every move in and every closed work order."
-    },
-    {
-      "src": "AI answers · weekly panel",
-      "date": "Nov 13",
-      "tone": "good",
-      "title": "Named in 39 of 96 renter answers",
-      "body": "Up from 34 on Nov 6. The Steward was named in 34. All three assistants leave you out on Lake Oswego, the Nike campus and Washington Square questions.",
-      "action": ""
-    },
-    {
-      "src": "Google Maps · map scan",
-      "date": "Nov 13",
-      "tone": "good",
-      "title": "1st at your front door",
-      "body": "For \"apartments for rent tigard or\", you rank 1st at your door and inside the top 20 at 26 of 49 points, including all 21 points east. West of Highway 217 is where you have the most room to grow.",
-      "action": ""
-    },
-    {
-      "src": "MoveInLocal guide · last 7 days",
-      "date": "Nov 10 to 16",
-      "tone": "info",
-      "title": "2 visits to your guide",
-      "body": "Both visits came on Nov 11. No Call, Tour or Apply taps yet.",
-      "action": ""
-    }
-  ],
-  "score": {
-    "index": 70,
-    "prev": 70,
-    "date": "Nov 13 Weekly Pulse",
-    "parts": [
-      [
-        "Reputation",
-        78
-      ],
-      [
-        "Search",
-        73
-      ],
-      [
-        "Map",
-        73
-      ],
-      [
-        "Website",
-        68
-      ],
-      [
-        "AI answers",
-        57
-      ]
-    ]
+ "property": "Montage",
+ "city": "Tigard, Oregon",
+ "updated": "2026-11-16T06:01:53-07:00",
+ "updatedLabel": "Nov 16, 6:01 am Phoenix time",
+ "feed": [
+  {
+   "src": "Google reviews",
+   "date": "Nov 12",
+   "tone": "warn",
+   "title": "New 1 star review about upkeep",
+   "body": "A resident left a 1 star review about property maintenance on Nov 12. A reply was posted on Nov 13. Your rating now reads 4.7 on 34 reviews.",
+   "action": "Invite this resident to talk with the office, and keep asking every resident at the usual moments.",
+   "who": "Sean M.",
+   "link": "https://maps.google.com/maps?cid=967661996940431943",
+   "linkLabel": "Open Montage's reviews on Google"
   },
-  "tiles": [
-    [
-      "4.7",
-      "Google rating",
-      "34 reviews, newest Nov 12"
-    ],
-    [
-      "1st",
-      "At your front door",
-      "Google Maps, Nov 13"
-    ],
-    [
-      "39 of 96",
-      "AI answers name you",
-      "Panel of Nov 13"
-    ],
-    [
-      "26 of 49",
-      "Map points in top 20",
-      "Scan of Nov 13"
-    ]
-  ],
-  "rivals": {
-    "date": "Nov 13 map scan",
-    "rows": [
-      [
-        "Mercato Grove",
-        "4.4",
-        87,
-        0,
-        4
-      ],
-      [
-        "The Overland",
-        "4.0",
-        61,
-        18,
-        43
-      ],
-      [
-        "The Steward",
-        "4.6",
-        35,
-        1,
-        26
-      ],
-      [
-        "Montage (you)",
-        "4.7",
-        34,
-        1,
-        26
-      ],
-      [
-        "Willow Apartments",
-        "4.5",
-        21,
-        0,
-        0
-      ],
-      [
-        "Pacific Ridge",
-        "3.1",
-        10,
-        0,
-        1
-      ]
-    ],
-    "note": "Willow's review count was read Oct 9; it did not appear on the Nov 13 scan."
+  {
+   "src": "Rival watch · map scan",
+   "date": "Nov 13",
+   "tone": "info",
+   "title": "The Steward leads by one review",
+   "body": "The Steward has 35 Google reviews to your 34. You lead on rating, 4.7 to 4.6. You are level on the map, inside the top 20 at 26 of 49 points each.",
+   "action": "Ask for a review at every move in and every closed work order."
   },
-  "ask": {
-    "title": "This week: ask for one review",
-    "moments": [
-      "At every move in",
-      "When a work order is closed"
-    ],
-    "points": [
-      "The Steward has 35 Google reviews to our 34. We are rated 4.7 to its 4.6.",
-      "Ask in person, then send the link the same day.",
-      "One a week is the target."
-    ]
+  {
+   "src": "AI answers · weekly panel",
+   "date": "Nov 13",
+   "tone": "good",
+   "title": "Named in 39 of 96 renter answers",
+   "body": "Up from 34 on Nov 6. The Steward was named in 34. All three assistants leave you out on Lake Oswego, the Nike campus and Washington Square questions.",
+   "action": ""
   },
-  "teamCodeHash": "a1ee53ceb13d31b4abbf2708d1e9deb2d62465cdfb47d5a62b3b0a1b18d90ad2",
-  "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJBWKnXW4NlVQRR5JHlnXTbQ0",
-  "trackBase": "https://thesocialdm.github.io/locallift-pulses/live/r/montage/",
-  "asks": {
-    "sent": 0,
-    "opened": 0,
-    "through": "Nov 16"
+  {
+   "src": "Google Maps · map scan",
+   "date": "Nov 13",
+   "tone": "good",
+   "title": "1st at your front door",
+   "body": "For \"apartments for rent tigard or\", you rank 1st at your door and inside the top 20 at 26 of 49 points, including all 21 points east. West of Highway 217 is where you have the most room to grow.",
+   "action": ""
   },
-  "shortLink": "moveinlocal.com/review/montage",
-  "talk": {
-    "checked": "Nov 16",
-    "checkedIso": "2026-11-16",
-    "offer": "Select 2 bedrooms: 2 months free plus a $1,000 Look & Lease bonus, through Nov 30.",
-    "prices": [
-      [
-        "$1,105",
-        "each, roommates on a 2 bed"
-      ],
-      [
-        "$1,805",
-        "1 bedroom from"
-      ],
-      [
-        "4.7★",
-        "top rating in our comp set"
-      ]
-    ]
-  },
-  "followups": [
-    {
-      "title": "Reach out to Sean M.",
-      "body": "A 1 star review about property upkeep came in on Nov 12, and a reply is posted. A quick call or note from the office can help.",
-      "due": "This week"
-    }
-  ],
-  "occupancy": null,
-  "snapIdeas": {
-    "month": "November",
-    "items": [
-      [
-        "Cozy in the Sky Lounge",
-        "Fireplace on, a mug and a blanket. Warm shots win on rainy days.",
-        "Amenity"
-      ],
-      [
-        "Rain on the big windows",
-        "Shoot a cozy home from inside while it rains. Oversized windows make it.",
-        "Amenity"
-      ],
-      [
-        "Coffee station moment",
-        "A latte at the rec room coffee bar, steam and all.",
-        "Amenity"
-      ],
-      [
-        "Matcha run to TANAKA",
-        "Japanese bakery and matcha on SW Bridgeport Rd.",
-        "Local spot"
-      ],
-      [
-        "Mochi donuts at Mikiko",
-        "New at Bridgeport Village. Grab a box shot.",
-        "Local spot"
-      ],
-      [
-        "Cooper Mountain Ale Works",
-        "Downtown Tigard pub. A cozy table shot works.",
-        "Local spot"
-      ],
-      [
-        "Last Beaverton Farmers Market",
-        "Nov 21 is the last market of the season.",
-        "Event"
-      ],
-      [
-        "ZooLights opens",
-        "Nov 20 at the Oregon Zoo, through Jan 3. Lights at night.",
-        "Event"
-      ]
-    ]
-  },
-  "compete": {
-    "checked": "Nov 16",
-    "checkedIso": "2026-11-16",
-    "items": [
-      {
-        "name": "The Overland",
-        "where": "Tigard Triangle",
-        "special": "Up to 6 weeks free on select homes and lease terms",
-        "from": [
-          [
-            "$1,408",
-            "studio"
-          ],
-          [
-            "$1,515",
-            "1 bed"
-          ],
-          [
-            "$2,131",
-            "2 bed"
-          ]
-        ],
-        "fees": "$50 application, $500 deposit, pets $300 deposit plus $50 a month, parking $150 to $175 a month, utilities and trash billed on top",
-        "tip": "Their 1 beds start lower. On 2 beds, our 2 months free plus $1,000 is the bigger special.",
-        "vs": [
-          [
-            "2 bed special",
-            "Up to 6 weeks free",
-            "2 mo free + $1,000",
-            "us"
-          ],
-          [
-            "1 bed from",
-            "$1,515",
-            "$1,805",
-            "them"
-          ],
-          [
-            "2 bed from",
-            "$2,131",
-            "$2,210",
-            "them"
-          ],
-          [
-            "Deposit",
-            "$500",
-            "$400",
-            "us"
-          ],
-          [
-            "Pet rent",
-            "$50/mo",
-            "$35/mo",
-            "us"
-          ],
-          [
-            "Pet deposit",
-            "$300",
-            "$300",
-            "even"
-          ],
-          [
-            "Parking",
-            "$150 to $175/mo",
-            "Ask office",
-            "ask"
-          ]
-        ]
-      },
-      {
-        "name": "The Steward",
-        "where": "Tigard Triangle",
-        "special": "Free rent on qualifying new leases (amount not posted)",
-        "from": [
-          [
-            "$1,949",
-            "1 bed plan"
-          ],
-          [
-            "$1,899",
-            "2 bed"
-          ]
-        ],
-        "fees": "$400 deposit, pet fees vary (call), utilities paid separately",
-        "tip": "They do not post how much is free. Ask what they were quoted. Expect them to pitch their solar electricity credit.",
-        "vs": [
-          [
-            "2 bed special",
-            "Free rent, amount not posted",
-            "2 mo free + $1,000",
-            "ask"
-          ],
-          [
-            "1 bed from",
-            "$1,949",
-            "$1,805",
-            "us"
-          ],
-          [
-            "2 bed from",
-            "$1,899",
-            "$2,210",
-            "them"
-          ],
-          [
-            "Deposit",
-            "$400",
-            "$400",
-            "even"
-          ],
-          [
-            "Pet rent",
-            "Not posted",
-            "$35/mo",
-            "ask"
-          ],
-          [
-            "Pet deposit",
-            "Not posted",
-            "$300",
-            "ask"
-          ],
-          [
-            "Parking",
-            "Not posted",
-            "Ask office",
-            "ask"
-          ]
-        ]
-      },
-      {
-        "name": "Mercato Grove",
-        "where": "Lake Oswego",
-        "special": "Up to 6 weeks free plus one perk: $1,000 move in credit, 6 months free garage parking, or 6 months free storage and bike parking plus a $300 gift card",
-        "from": [
-          [
-            "$2,194",
-            "1 bed"
-          ],
-          [
-            "$2,450",
-            "2 bed"
-          ]
-        ],
-        "fees": "$50 application, $500 deposit, pets $300 deposit plus $55 a month, parking $185 to $235 a month",
-        "tip": "Higher rents in Lake Oswego. On 2 beds, our 2 months free plus $1,000 is still the bigger special.",
-        "vs": [
-          [
-            "2 bed special",
-            "Up to 6 weeks free + 1 perk",
-            "2 mo free + $1,000",
-            "us"
-          ],
-          [
-            "1 bed from",
-            "$2,194",
-            "$1,805",
-            "us"
-          ],
-          [
-            "2 bed from",
-            "$2,450",
-            "$2,210",
-            "us"
-          ],
-          [
-            "Deposit",
-            "$500",
-            "$400",
-            "us"
-          ],
-          [
-            "Pet rent",
-            "$55/mo",
-            "$35/mo",
-            "us"
-          ],
-          [
-            "Pet deposit",
-            "$300",
-            "$300",
-            "even"
-          ],
-          [
-            "Parking",
-            "$185 to $235/mo",
-            "Ask office",
-            "ask"
-          ]
-        ]
-      }
-    ],
-    "us": {
-      "special": "Select 2 beds: 2 months free plus $1,000 Look & Lease, ends Nov 30",
-      "from": [
-        [
-          "$1,805",
-          "1 bed"
-        ],
-        [
-          "$2,210",
-          "2 bed"
-        ]
-      ],
-      "pets": "$35 a month pet rent, $300 deposit, no pet fee, up to 3 pets, no weight limits",
-      "showoff": [
-        "Pool and spa",
-        "Sky lounge",
-        "Golf simulator game room",
-        "Dog park and indoor pet spa",
-        "Guest suite for visiting family",
-        "Private garage with direct hallway access",
-        "EV charging"
-      ],
-      "specialShort": "2 months free plus a $1,000 Look & Lease bonus",
-      "ends": "Nov 30"
-    }
-  },
-  "uploadUrl": "https://www.dropbox.com/request/5jba6nzqcoah1k3zcdap",
-  "reminders": [
-    {
-      "where": "talk",
-      "emoji": "🎁",
-      "fx": "wig",
-      "title": "2 months free ends Nov 30",
-      "body": "On select 2 bedrooms, plus the $1,000 Look & Lease bonus. Mention it on every tour so nobody misses it.",
-      "iso": "2026-11-30",
-      "cta": "Open Tour mode ›",
-      "act": "tour"
-    },
-    {
-      "where": "events",
-      "emoji": "🦒",
-      "fx": "spark",
-      "title": "ZooLights opens Friday, Nov 20",
-      "body": "The Oregon Zoo lights up for the holidays, Nov 20 to Jan 3. Tickets are required and some nights are closed, so send residents to the zoo's dates page. Mention it on tours, and snap a photo if your team goes.",
-      "iso": "2026-11-20",
-      "until": "2027-01-03",
-      "cta": "See dates and tickets ›",
-      "url": "https://oregonzoo.org/lights"
-    }
-  ],
-  "shots": [
-    {
-      "img": "lounge",
-      "title": "Rainy day by the big windows",
-      "tag": "Cozy",
-      "tip": "On a rainy day, shoot from inside toward the glass. Overhead lights off so the windows glow."
-    },
-    {
-      "img": "lobby",
-      "title": "Cozy in the lounge",
-      "tag": "Cozy",
-      "tip": "Blanket, mug, soft light. Get low and shoot across the sofas."
-    },
-    {
-      "img": "game",
-      "title": "Game night",
-      "tag": "Amenity",
-      "tip": "Cue ball mid roll, window seat to the side. Hands only is perfect."
-    },
-    {
-      "img": "gym",
-      "title": "Morning workout",
-      "tag": "Amenity",
-      "tip": "Early light, rack in focus. A 5 second slow pan makes a great reel."
-    },
-    {
-      "img": "bar",
-      "title": "Clubroom coffee bar glow",
-      "tag": "Amenity",
-      "tip": "Shoot at dusk with the shelves lit. Add a latte on the counter."
-    },
-    {
-      "img": "living",
-      "title": "Model home, holiday ready",
-      "tag": "Home",
-      "tip": "Throw blanket, a flameless candle, a small tree. Stand in the doorway, phone at chest height."
-    },
-    {
-      "img": "kitchen",
-      "title": "Kitchen details",
-      "tag": "Home",
-      "tip": "Close ups sell: the pendant light, the counter, a bowl of fruit."
-    },
-    {
-      "img": "outside",
-      "title": "Montage at golden hour",
-      "tag": "Outside",
-      "tip": "Last hour before sunset. Stand across the street to fit the whole building."
-    }
+  {
+   "src": "MoveInLocal guide · last 7 days",
+   "date": "Nov 10 to 16",
+   "tone": "info",
+   "title": "2 visits to your guide",
+   "body": "Both visits came on Nov 11. No Call, Tour or Apply taps yet.",
+   "action": ""
+  }
+ ],
+ "score": {
+  "index": 70,
+  "prev": 70,
+  "date": "Nov 13 Weekly Pulse",
+  "parts": [
+   [
+    "Reputation",
+    78
+   ],
+   [
+    "Search",
+    73
+   ],
+   [
+    "Map",
+    73
+   ],
+   [
+    "Website",
+    68
+   ],
+   [
+    "AI answers",
+    57
+   ]
   ]
+ },
+ "tiles": [
+  [
+   "4.7",
+   "Google rating",
+   "34 reviews, newest Nov 12"
+  ],
+  [
+   "1st",
+   "At your front door",
+   "Google Maps, Nov 13"
+  ],
+  [
+   "39 of 96",
+   "AI answers name you",
+   "Panel of Nov 13"
+  ],
+  [
+   "26 of 49",
+   "Map points in top 20",
+   "Scan of Nov 13"
+  ]
+ ],
+ "rivals": {
+  "date": "Nov 13 map scan",
+  "rows": [
+   [
+    "Mercato Grove",
+    "4.4",
+    87,
+    0,
+    4
+   ],
+   [
+    "The Overland",
+    "4.0",
+    61,
+    18,
+    43
+   ],
+   [
+    "The Steward",
+    "4.6",
+    35,
+    1,
+    26
+   ],
+   [
+    "Montage (you)",
+    "4.7",
+    34,
+    1,
+    26
+   ],
+   [
+    "Willow Apartments",
+    "4.5",
+    21,
+    0,
+    0
+   ],
+   [
+    "Pacific Ridge",
+    "3.1",
+    10,
+    0,
+    1
+   ]
+  ],
+  "note": "Willow's review count was read Oct 9; it did not appear on the Nov 13 scan."
+ },
+ "ask": {
+  "title": "This week: ask for one review",
+  "moments": [
+   "At every move in",
+   "When a work order is closed"
+  ],
+  "points": [
+   "The Steward has 35 Google reviews to our 34. We are rated 4.7 to its 4.6.",
+   "Ask in person, then send the link the same day.",
+   "One a week is the target."
+  ]
+ },
+ "teamCodeHash": "a1ee53ceb13d31b4abbf2708d1e9deb2d62465cdfb47d5a62b3b0a1b18d90ad2",
+ "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJBWKnXW4NlVQRR5JHlnXTbQ0",
+ "trackBase": "https://thesocialdm.github.io/locallift-pulses/live/r/montage/",
+ "asks": {
+  "sent": 0,
+  "opened": 0,
+  "through": "Nov 16"
+ },
+ "shortLink": "moveinlocal.com/review/montage",
+ "talk": {
+  "checked": "Nov 16",
+  "checkedIso": "2026-11-16",
+  "offer": "Select 2 bedrooms: 2 months free plus a $1,000 Look & Lease bonus, through Nov 30.",
+  "prices": [
+   [
+    "$1,105",
+    "each, roommates on a 2 bed"
+   ],
+   [
+    "$1,805",
+    "1 bedroom from"
+   ],
+   [
+    "4.7★",
+    "top rating in our comp set"
+   ]
+  ]
+ },
+ "followups": [
+  {
+   "title": "Reach out to Sean M.",
+   "body": "A 1 star review about property upkeep came in on Nov 12, and a reply is posted. A quick call or note from the office can help.",
+   "due": "This week"
+  }
+ ],
+ "occupancy": null,
+ "snapIdeas": {
+  "month": "November",
+  "items": [
+   [
+    "Cozy in the Sky Lounge",
+    "Fireplace on, a mug and a blanket. Warm shots win on rainy days.",
+    "Amenity"
+   ],
+   [
+    "Rain on the big windows",
+    "Shoot a cozy home from inside while it rains. Oversized windows make it.",
+    "Amenity"
+   ],
+   [
+    "Coffee station moment",
+    "A latte at the rec room coffee bar, steam and all.",
+    "Amenity"
+   ],
+   [
+    "Matcha run to TANAKA",
+    "Japanese bakery and matcha on SW Bridgeport Rd.",
+    "Local spot"
+   ],
+   [
+    "Mochi donuts at Mikiko",
+    "New at Bridgeport Village. Grab a box shot.",
+    "Local spot"
+   ],
+   [
+    "Cooper Mountain Ale Works",
+    "Downtown Tigard pub. A cozy table shot works.",
+    "Local spot"
+   ],
+   [
+    "Last Beaverton Farmers Market",
+    "Nov 21 is the last market of the season.",
+    "Event"
+   ],
+   [
+    "ZooLights opens",
+    "Nov 20 at the Oregon Zoo, through Jan 3. Lights at night.",
+    "Event"
+   ]
+  ]
+ },
+ "compete": {
+  "checked": "Nov 16",
+  "checkedIso": "2026-11-16",
+  "items": [
+   {
+    "name": "The Overland",
+    "where": "Tigard Triangle",
+    "special": "Up to 6 weeks free on select homes and lease terms",
+    "from": [
+     [
+      "$1,408",
+      "studio"
+     ],
+     [
+      "$1,515",
+      "1 bed"
+     ],
+     [
+      "$2,131",
+      "2 bed"
+     ]
+    ],
+    "fees": "$50 application, $500 deposit, pets $300 deposit plus $50 a month, parking $150 to $175 a month, utilities and trash billed on top",
+    "tip": "Their 1 beds start lower. On select 2 bedrooms, our 2 months free plus $1,000 through Nov 30 is the bigger special.",
+    "vs": [
+     [
+      "2 bed special",
+      "Up to 6 weeks free",
+      "2 mo free + $1,000",
+      "us"
+     ],
+     [
+      "1 bed from",
+      "$1,515",
+      "$1,805",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$2,131",
+      "$2,210",
+      "them"
+     ],
+     [
+      "Deposit",
+      "$500",
+      "$400",
+      "us"
+     ],
+     [
+      "Pet rent",
+      "$50/mo",
+      "$35/mo",
+      "us"
+     ],
+     [
+      "Pet deposit",
+      "$300",
+      "$300",
+      "even"
+     ],
+     [
+      "Parking",
+      "$150 to $175/mo",
+      "Ask office",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest total monthly price listed (equals base rent), on a 15 month lease.",
+    "url": "https://www.greystar.com/the-overland-tigard-or/p_19056",
+    "feesChecked": "Nov 16"
+   },
+   {
+    "name": "The Steward",
+    "where": "Tigard Triangle",
+    "special": "No special posted on their site (checked Nov 16)",
+    "from": [
+     [
+      "$1,699",
+      "1 bed"
+     ],
+     [
+      "$1,899",
+      "2 bed"
+     ]
+    ],
+    "fees": "$400 deposit, pet fees vary (call), utilities paid separately",
+    "tip": "Their 1 and 2 bedrooms start lower on base rent. Lead with our special on select 2 bedrooms: 2 months free plus $1,000 through Nov 30. If they mention a quote from The Steward, ask what it was.",
+    "vs": [
+     [
+      "2 bed special",
+      "None posted",
+      "2 mo free + $1,000",
+      "us"
+     ],
+     [
+      "1 bed from",
+      "$1,699",
+      "$1,805",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,899",
+      "$2,210",
+      "them"
+     ],
+     [
+      "Deposit",
+      "$400",
+      "$400",
+      "even"
+     ],
+     [
+      "Pet rent",
+      "Not posted",
+      "$35/mo",
+      "ask"
+     ],
+     [
+      "Pet deposit",
+      "Not posted",
+      "$300",
+      "ask"
+     ],
+     [
+      "Parking",
+      "Not posted",
+      "Ask office",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest base rent listed. Lease term not shown.",
+    "url": "https://bethesteward.com/floorplans/",
+    "feesChecked": "Nov 16"
+   },
+   {
+    "name": "Mercato Grove",
+    "where": "Lake Oswego",
+    "special": "Up to 6 weeks free plus one perk: $1,000 move in credit, 6 months free garage parking, or 6 months free storage and bike parking plus a $300 gift card",
+    "from": [
+     [
+      "$1,999",
+      "1 bed"
+     ],
+     [
+      "$2,450",
+      "2 bed"
+     ]
+    ],
+    "fees": "$50 application, $500 deposit, pets $300 deposit plus $55 a month, parking $185 to $235 a month",
+    "tip": "Higher rents in Lake Oswego. Against their special, our 2 months free plus $1,000 on select 2 bedrooms through Nov 30 is still the bigger offer.",
+    "vs": [
+     [
+      "2 bed special",
+      "Up to 6 weeks free + 1 perk",
+      "2 mo free + $1,000",
+      "us"
+     ],
+     [
+      "1 bed from",
+      "$1,999",
+      "$1,805",
+      "us"
+     ],
+     [
+      "2 bed from",
+      "$2,450",
+      "$2,210",
+      "us"
+     ],
+     [
+      "Deposit",
+      "$500",
+      "$400",
+      "us"
+     ],
+     [
+      "Pet rent",
+      "$55/mo",
+      "$35/mo",
+      "us"
+     ],
+     [
+      "Pet deposit",
+      "$300",
+      "$300",
+      "even"
+     ],
+     [
+      "Parking",
+      "$185 to $235/mo",
+      "Ask office",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest price listed, on a 12 month lease.",
+    "url": "https://www.greystar.com/mercato-grove-apartments-lake-oswego-or/p_17860",
+    "feesChecked": "Nov 16"
+   }
+  ],
+  "us": {
+   "special": "Select 2 beds: 2 months free plus $1,000 Look & Lease, ends Nov 30",
+   "from": [
+    [
+     "$1,805",
+     "1 bed"
+    ],
+    [
+     "$2,210",
+     "2 bed"
+    ]
+   ],
+   "pets": "$35 a month pet rent, $300 deposit, no pet fee, up to 3 pets, no weight limits",
+   "showoff": [
+    "Pool and spa",
+    "Sky lounge",
+    "Golf simulator game room",
+    "Dog park and indoor pet spa",
+    "Guest suite for visiting family",
+    "Private garage with direct hallway access",
+    "EV charging"
+   ],
+   "specialShort": "2 months free plus a $1,000 Look & Lease bonus",
+   "ends": "Nov 30",
+   "basis": "Lease terms differ and Montage's term is not posted. Confirm the term with the office before quoting a difference."
+  },
+  "changes": [
+   {
+    "id": "2026-11-16-steward-1bed",
+    "rival": "The Steward",
+    "row": "1 bed from",
+    "from": "$1,949",
+    "to": "$1,699",
+    "flip": true,
+    "verified": "Nov 16",
+    "verifiedIso": "2026-11-16",
+    "src": "bethesteward.com",
+    "headline": "The Steward's 1 beds now start at $1,699",
+    "detail": "New lowest plan: 1 Bedroom-C, 700 sq ft. Now $106 under our 1 bed on base rent.",
+    "say": "Their 1 bedroom does start a little lower right now on base rent. On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, and pet rent here is just $35. Want to see both side by side?",
+    "fromLabel": "Lowest was"
+   },
+   {
+    "id": "2026-11-16-mercato-1bed",
+    "rival": "Mercato Grove",
+    "row": "1 bed from",
+    "from": "$2,194",
+    "to": "$1,999",
+    "flip": false,
+    "verified": "Nov 16",
+    "verifiedIso": "2026-11-16",
+    "src": "greystar.com",
+    "headline": "Mercato Grove's 1 beds now start at $1,999",
+    "detail": "New lowest plan: C3, 603 sq ft, 12 month lease. Our $1,805 still starts lower.",
+    "say": "Their 1 bedrooms now start at $1,999. Ours start at $1,805, with a $400 deposit instead of $500.",
+    "fromLabel": "Lowest was"
+   }
+  ]
+ },
+ "uploadUrl": "https://www.dropbox.com/request/5jba6nzqcoah1k3zcdap",
+ "reminders": [
+  {
+   "where": "talk",
+   "emoji": "🎁",
+   "fx": "wig",
+   "title": "2 months free ends Nov 30",
+   "body": "On select 2 bedrooms, plus the $1,000 Look & Lease bonus. Mention it on every tour so nobody misses it.",
+   "iso": "2026-11-30",
+   "cta": "Open Tour mode ›",
+   "act": "tour"
+  },
+  {
+   "where": "events",
+   "emoji": "🦒",
+   "fx": "spark",
+   "title": "ZooLights opens Friday, Nov 20",
+   "body": "The Oregon Zoo lights up for the holidays, Nov 20 to Jan 3. Tickets are required and some nights are closed, so send residents to the zoo's dates page. Mention it on tours, and snap a photo if your team goes.",
+   "iso": "2026-11-20",
+   "until": "2027-01-03",
+   "cta": "See dates and tickets ›",
+   "url": "https://oregonzoo.org/lights"
+  }
+ ],
+ "shots": [
+  {
+   "img": "lounge",
+   "title": "Rainy day by the big windows",
+   "tag": "Cozy",
+   "tip": "On a rainy day, shoot from inside toward the glass. Overhead lights off so the windows glow."
+  },
+  {
+   "img": "lobby",
+   "title": "Cozy in the lounge",
+   "tag": "Cozy",
+   "tip": "Blanket, mug, soft light. Get low and shoot across the sofas."
+  },
+  {
+   "img": "game",
+   "title": "Game night",
+   "tag": "Amenity",
+   "tip": "Cue ball mid roll, window seat to the side. Hands only is perfect."
+  },
+  {
+   "img": "gym",
+   "title": "Morning workout",
+   "tag": "Amenity",
+   "tip": "Early light, rack in focus. A 5 second slow pan makes a great reel."
+  },
+  {
+   "img": "bar",
+   "title": "Clubroom coffee bar glow",
+   "tag": "Amenity",
+   "tip": "Shoot at dusk with the shelves lit. Add a latte on the counter."
+  },
+  {
+   "img": "living",
+   "title": "Model home, holiday ready",
+   "tag": "Home",
+   "tip": "Throw blanket, a flameless candle, a small tree. Stand in the doorway, phone at chest height."
+  },
+  {
+   "img": "kitchen",
+   "title": "Kitchen details",
+   "tag": "Home",
+   "tip": "Close ups sell: the pendant light, the counter, a bowl of fruit."
+  },
+  {
+   "img": "outside",
+   "title": "Montage at golden hour",
+   "tag": "Outside",
+   "tip": "Last hour before sunset. Stand across the street to fit the whole building."
+  }
+ ]
 }
