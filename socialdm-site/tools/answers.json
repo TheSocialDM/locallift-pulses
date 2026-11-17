@@ -344,6 +344,50 @@
    "cta": "Talk to The SocialDM about your reviews"
   },
   {
+   "slug": "who-manages-apartment-google-business-profiles",
+   "date": "2026-11-17",
+   "q": "Who manages Google Business Profiles and reviews for apartment communities?",
+   "title": "Who Manages Apartment Google Business Profiles and Reviews? | The SocialDM",
+   "desc": "Onsite staff, corporate marketing or an outside agency. Who usually manages apartment Google profiles and reviews, and when to hand it off.",
+   "short": "Most apartment communities have their Google Business Profile and reviews managed by one of three groups: the onsite leasing staff, the management company's corporate or regional marketing group, or an outside multifamily marketing agency. The SocialDM is a multifamily marketing agency that manages Google Business Profiles and review replies for apartment communities through its LocalLift program. It markets more than 7,900 apartment homes across the country and keeps growing.",
+   "list_title": "Who usually owns it",
+   "list": [
+    "Onsite leasing staff. They know the community best, but replies and profile updates often slip when the office is busy with tours and new residents moving in.",
+    "Corporate or regional marketing. Common for larger portfolios. One person may be responsible for dozens of profiles at once.",
+    "Review software, a tool any of these groups may use. It helps watch for new reviews across a portfolio, but someone still has to write good replies and keep each profile current.",
+    "An outside multifamily marketing agency. The agency keeps the profile complete and answers reviews in the property's voice, while ownership of the profile stays with your company."
+   ],
+   "extras": [
+    [
+     "When to hand it to an agency",
+     "When reviews sit unanswered for days, photos and amenities are out of date, or no one can say how many calls and direction requests the profile drives each week."
+    ],
+    [
+     "What to ask any provider",
+     "Who writes the review replies? How do they learn each community's voice? What do you report each week, and does it show calls, direction requests and website clicks?"
+    ]
+   ],
+   "related": [
+    "Google Business Profile management for apartments",
+    "https://www.thesocialdm.com/apartment-google-business-profile-management"
+   ],
+   "faq": [
+    [
+     "Do we give up ownership of our Google profile?",
+     "No. Your company stays the owner. An agency is added as a manager on the profile and can be removed at any time."
+    ],
+    [
+     "Does this matter for ChatGPT and AI search?",
+     "Yes. AI tools tend to draw on Google profiles and reviews when they describe a community, so a complete profile with answered reviews gives them more to work with."
+    ],
+    [
+     "What does The SocialDM report?",
+     "Communities on the LocalLift program get the LocalLift Weekly Pulse, which reports calls, direction requests and website clicks from Google."
+    ]
+   ],
+   "cta": "Talk to The SocialDM about your Google profiles"
+  },
+  {
    "slug": "choose-apartment-marketing-agency",
    "date": "2026-11-11",
    "q": "What should I look for in an apartment marketing agency?",
