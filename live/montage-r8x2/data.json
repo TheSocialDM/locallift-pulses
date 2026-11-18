@@ -1,8 +1,8 @@
 {
  "property": "Montage",
  "city": "Tigard, Oregon",
- "updated": "2026-11-17T05:45:37-07:00",
- "updatedLabel": "Nov 17, 5:45 am Phoenix time",
+ "updated": "2026-11-18T05:45:12-07:00",
+ "updatedLabel": "Nov 18, 5:45 am Phoenix time",
  "feed": [
   {
    "src": "Google reviews",
@@ -41,10 +41,10 @@
   },
   {
    "src": "MoveInLocal guide · last 7 days",
-   "date": "Nov 11 to 17",
+   "date": "Nov 12 to 18",
    "tone": "info",
-   "title": "6 visits to your guide",
-   "body": "2 visits came on Nov 11 and 4 on Nov 16. No Call, Tour or Apply taps yet.",
+   "title": "4 visits to your guide",
+   "body": "All 4 came on Nov 16. No Call, Tour or Apply taps yet.",
    "action": ""
   }
  ],
@@ -162,17 +162,17 @@
  "trackBase": "https://thesocialdm.github.io/locallift-pulses/live/r/montage/",
  "asks": {
   "sent": 0,
-  "opened": 1,
-  "through": "Nov 17"
+  "opened": 3,
+  "through": "Nov 18"
  },
  "shortLink": "moveinlocal.com/review/montage",
  "talk": {
-  "checked": "Nov 17",
-  "checkedIso": "2026-11-17",
+  "checked": "Nov 18",
+  "checkedIso": "2026-11-18",
   "offer": "Select 2 bedrooms: 2 months free plus a $1,000 Look & Lease bonus, through Nov 30.",
   "prices": [
    [
-    "$1,105",
+    "$1,115",
     "each, roommates on a 2 bed"
    ],
    [
@@ -239,8 +239,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 17",
-  "checkedIso": "2026-11-17",
+  "checked": "Nov 18",
+  "checkedIso": "2026-11-18",
   "items": [
    {
     "name": "The Overland",
@@ -278,7 +278,7 @@
      [
       "2 bed from",
       "$2,061",
-      "$2,210",
+      "$2,230",
       "them"
      ],
      [
@@ -313,7 +313,7 @@
    {
     "name": "The Steward",
     "where": "Tigard Triangle",
-    "special": "No special posted on their site (checked Nov 17)",
+    "special": "No special posted on their site (checked Nov 18)",
     "from": [
      [
       "$1,699",
@@ -342,7 +342,7 @@
      [
       "2 bed from",
       "$1,899",
-      "$2,210",
+      "$2,230",
       "them"
      ],
      [
@@ -406,7 +406,7 @@
      [
       "2 bed from",
       "$2,450",
-      "$2,210",
+      "$2,230",
       "us"
      ],
      [
@@ -434,7 +434,7 @@
       "ask"
      ]
     ],
-    "basis": "Their prices: lowest price listed on their own site. Lease term not shown.",
+    "basis": "Their prices: lowest base rent, read Nov 17. Lease term not shown. On Nov 18 their site showed total monthly price with required fees instead, from $2,260 for a 1 bed and $3,310 for a 2 bed.",
     "url": "https://mercatogrove.com/floorplans/",
     "feesChecked": "Nov 16"
    }
@@ -447,7 +447,7 @@
      "1 bed"
     ],
     [
-     "$2,210",
+     "$2,230",
      "2 bed"
     ]
    ],
