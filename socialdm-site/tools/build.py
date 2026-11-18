@@ -498,6 +498,8 @@ if PROD:
 /cuvee /apartment-seo-blog-hub/cuvee-apartments-westgate-glendale 301
 /cuvee-blog/* /blog 301
 /cuvee-blog /blog 301
+/blog/apartment-lease-up-* /blog/apartment-lease-up-marketing 301
+/blog/apartment-lease-up /blog/apartment-lease-up-marketing 301
 /blog/tag/* /blog 301
 /blog/category/* /blog 301
 ''')
