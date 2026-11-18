@@ -306,14 +306,16 @@
       "ask"
      ]
     ],
-    "basis": "Their prices: lowest base rent listed on their own site. Lease term not shown, and other fees apply on top.",
+    "basis": "Their prices: lowest base rent for a 12 month lease on their own site. Other fees apply on top.",
     "url": "https://www.livetheoverland.com/floorplans",
-    "feesChecked": "Nov 16"
+    "feesChecked": "Nov 16",
+    "checked": "Nov 18",
+    "checkedIso": "2026-11-18"
    },
    {
     "name": "The Steward",
     "where": "Tigard Triangle",
-    "special": "No special posted on their site (checked Nov 18)",
+    "special": "Free rent on qualifying new leases (amount not posted, ask what they were quoted)",
     "from": [
      [
       "$1,699",
@@ -325,13 +327,13 @@
      ]
     ],
     "fees": "$400 deposit, pet fees vary (call), utilities paid separately",
-    "tip": "Their 1 and 2 bedrooms start lower on base rent. Lead with our special on select 2 bedrooms: 2 months free plus $1,000 through Nov 30. If they mention a quote from The Steward, ask what it was.",
+    "tip": "They now post free rent on qualifying new leases but no amount. Ask what they were quoted, then compare it with our 2 months free plus $1,000 on select 2 bedrooms through Nov 30. Their 1 and 2 bedrooms start lower on base rent.",
     "vs": [
      [
       "2 bed special",
-      "None posted",
+      "Free rent, amount not posted",
       "2 mo free + $1,000",
-      "us"
+      "ask"
      ],
      [
       "1 bed from",
@@ -372,40 +374,42 @@
     ],
     "basis": "Their prices: lowest base rent listed. Lease term not shown.",
     "url": "https://bethesteward.com/floorplans/",
-    "feesChecked": "Nov 16"
+    "feesChecked": "Nov 16",
+    "checked": "Nov 18",
+    "checkedIso": "2026-11-18"
    },
    {
     "name": "Mercato Grove",
     "where": "Lake Oswego",
-    "special": "Up to 6 weeks free plus one perk: $1,000 move in credit, 6 months free garage parking, or 6 months free storage and bike parking plus a $300 gift card (read Nov 16)",
+    "special": "No special posted on their site",
     "from": [
      [
-      "$1,999",
+      "$2,260",
       "1 bed"
      ],
      [
-      "$2,450",
+      "$3,310",
       "2 bed"
      ]
     ],
     "fees": "$50 application, $500 deposit, pets $300 deposit plus $55 a month, parking $185 to $235 a month",
-    "tip": "Higher rents in Lake Oswego. Against their special, our 2 months free plus $1,000 on select 2 bedrooms through Nov 30 is still the bigger offer.",
+    "tip": "Higher rents in Lake Oswego, and no special posted today. Our 1 and 2 bedrooms start lower, and we have 2 months free plus $1,000 on select 2 bedrooms through Nov 30.",
     "vs": [
      [
       "2 bed special",
-      "Up to 6 weeks free + 1 perk",
+      "Nothing posted",
       "2 mo free + $1,000",
       "us"
      ],
      [
       "1 bed from",
-      "$1,999",
+      "$2,260",
       "$1,805",
       "us"
      ],
      [
       "2 bed from",
-      "$2,450",
+      "$3,310",
       "$2,230",
       "us"
      ],
@@ -434,9 +438,11 @@
       "ask"
      ]
     ],
-    "basis": "Their prices: lowest base rent, read Nov 17. Lease term not shown. On Nov 18 their site showed total monthly price with required fees instead, from $2,260 for a 1 bed and $3,310 for a 2 bed.",
-    "url": "https://mercatogrove.com/floorplans/",
-    "feesChecked": "Nov 16"
+    "basis": "Their prices: lowest base rent for a 12 month lease on greystar.com (base rent and total match on that listing).",
+    "url": "https://www.greystar.com/mercato-grove-apartments-lake-oswego-or/p_17860",
+    "feesChecked": "Nov 16",
+    "checked": "Nov 18",
+    "checkedIso": "2026-11-18"
    }
   ],
   "us": {
@@ -467,6 +473,36 @@
   },
   "changes": [
    {
+    "id": "2026-11-18-steward-special",
+    "rival": "The Steward",
+    "row": "2 bed special",
+    "from": "nothing posted",
+    "to": "Free rent, amount not posted",
+    "fromLabel": "Was",
+    "flip": false,
+    "verified": "Nov 18",
+    "verifiedIso": "2026-11-18",
+    "src": "bethesteward.com",
+    "headline": "The Steward now posts free rent on qualifying new leases",
+    "detail": "No amount is posted. Verified Nov 18 on bethesteward.com.",
+    "say": "They do have free rent on some new leases. What did they quote you? On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30."
+   },
+   {
+    "id": "2026-11-18-mercato-special",
+    "rival": "Mercato Grove",
+    "row": "2 bed special",
+    "from": "Up to 6 weeks free + 1 perk",
+    "to": "nothing posted",
+    "fromLabel": "Was",
+    "flip": false,
+    "verified": "Nov 18",
+    "verifiedIso": "2026-11-18",
+    "src": "greystar.com",
+    "headline": "Mercato Grove no longer posts a special",
+    "detail": "No special on greystar.com or mercatogrove.com today. Lowest 1 bed now $2,260, 2 bed $3,310 base rent, 12 months.",
+    "say": "On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, and our 1 bedrooms start at $1,805."
+   },
+   {
     "id": "2026-11-16-steward-1bed",
     "rival": "The Steward",
     "row": "1 bed from",
@@ -479,21 +515,6 @@
     "headline": "The Steward's 1 beds now start at $1,699",
     "detail": "New lowest plan: 1 Bedroom-C, 700 sq ft. Now $106 under our 1 bed on base rent.",
     "say": "Their 1 bedroom does start a little lower right now on base rent. On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, and pet rent here is just $35. Want to see both side by side?",
-    "fromLabel": "Lowest was"
-   },
-   {
-    "id": "2026-11-16-mercato-1bed",
-    "rival": "Mercato Grove",
-    "row": "1 bed from",
-    "from": "$2,194",
-    "to": "$1,999",
-    "flip": false,
-    "verified": "Nov 16",
-    "verifiedIso": "2026-11-16",
-    "src": "greystar.com",
-    "headline": "Mercato Grove's 1 beds now start at $1,999",
-    "detail": "New lowest plan: C3, 603 sq ft, 12 month lease. Our $1,805 still starts lower.",
-    "say": "Their 1 bedrooms now start at $1,999. Ours start at $1,805, with a $400 deposit instead of $500.",
     "fromLabel": "Lowest was"
    }
   ]
@@ -578,5 +599,18 @@
    "tag": "Outside",
    "tip": "Last hour before sunset. Stand across the street to fit the whole building."
   }
- ]
+ ],
+ "notice": {
+  "id": "2026-11-18-showoff",
+  "until": "2026-11-25",
+  "emoji": "🗝️",
+  "title": "Tap what you show on the walk",
+  "points": [
+   "In Tour mode, tap each amenity as you show it (pool and spa, sky lounge, golf simulator and the rest). It turns green with a ✓.",
+   "Everything you tap lands on your desk list, so your My day email now says what you showed them.",
+   "Rival prices and specials now show the day each one was checked."
+  ],
+  "act": "tour",
+  "cta": "Try it in Tour mode"
+ }
 }
