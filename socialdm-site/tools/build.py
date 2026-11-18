@@ -509,8 +509,11 @@ if PROD:
     open(OUT + '/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
     items = ''.join(f'<item><title>{html.escape(p["title"])}</title><link>{SITE}/blog/{p["slug"]}</link><guid>{SITE}/blog/{p["slug"]}</guid><pubDate>{datetime.datetime.strptime(p["iso"],"%Y-%m-%d").strftime("%a, %d %b %Y 12:00:00 -0700")}</pubDate><description>{html.escape(p["excerpt"][:300])}</description></item>' for p in posts[:50])
     open(OUT + '/blog/rss.xml', 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>The SocialDM Market Intelligence</title><link>{SITE}/blog</link><description>How renters find apartments now.</description>{items}</channel></rss>\n')
+_slugs404 = json.dumps(sorted({os.path.basename(x)[:-5] for x in glob.glob(OUT + '/blog/*.html')}, key=len, reverse=True))
+# safety net: a blog link with junk glued on the end (punctuation, text, %20, a pasted line) lands on the real post
+_fix404 = '<script>(function(){var s=' + _slugs404 + ';var p=decodeURIComponent(location.pathname).toLowerCase().replace(/^\\/blog\\//,"");if(p===decodeURIComponent(location.pathname).toLowerCase())return;for(var i=0;i<s.length;i++){if(p.indexOf(s[i])===0){location.replace("/blog/"+s[i]+location.search);return;}}})();</script>'
 main404 = f'<main><section class="hero pg-hero"><div class="wrap"><div class="eyebrow">Page not found</div><h1>This page <span>moved.</span></h1><div class="ctas"><a class="btn btn-light" href="{link("blog",0)}">Read the latest</a><a class="btn btn-line" href="{link("index",0)}">Back home</a></div></div></section></main>'
-open(OUT + '/404.html', 'w').write(shell('Page not found | The SocialDM', 'This page moved.', '/404', 0, main404))
+open(OUT + '/404.html', 'w').write(shell('Page not found | The SocialDM', 'This page moved.', '/404', 0, main404 + _fix404))
 
 if PROD:
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
