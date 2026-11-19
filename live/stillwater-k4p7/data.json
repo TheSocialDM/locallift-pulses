@@ -1,0 +1,560 @@
+{
+ "property": "Stillwater Lakes",
+ "city": "Kissimmee, Florida",
+ "updated": "2026-11-19T15:30:00-07:00",
+ "updatedLabel": "Nov 19, 3:30 pm Phoenix time",
+ "rv": {
+  "rating": "4.2",
+  "count": "19",
+  "vs": "Cielo View has 73. Every ask closes the gap."
+ },
+ "feed": [
+  {
+   "src": "Google reviews",
+   "date": "Nov 18",
+   "tone": "good",
+   "title": "New 5 star review on Google",
+   "who": "Naim A.",
+   "body": "A 5 star rating with no written comment. A reply is already posted. You are now at 4.2 on 19 reviews.",
+   "link": "https://www.google.com/maps/place/?q=place_id:ChIJGZqrt8yF3YgRWj6tQbKwhxY",
+   "linkLabel": "Open Stillwater Lakes reviews on Google"
+  },
+  {
+   "src": "Rival watch · their own sites",
+   "date": "Nov 19",
+   "tone": "info",
+   "title": "Cielo View is posting two months free",
+   "body": "Read today on cieloviewapts.com: \"Two Months FREE For a Limited Time!\" Their 1 beds start at $1,499 base rent ($1,628 with WiFi and mandatory fees). Lease term not shown."
+  },
+  {
+   "src": "Weekly Pulse · Google Maps",
+   "date": "Nov 13",
+   "tone": "info",
+   "title": "Top 20 at 6 of 49 map points",
+   "body": "Up from 3 on Nov 6, and 7th at your front door on \"apartments for rent kissimmee\". Every new review helps here."
+  },
+  {
+   "src": "Weekly Pulse · AI answers",
+   "date": "Nov 13",
+   "tone": "good",
+   "title": "AI answers name you in 21 of 96",
+   "body": "ChatGPT 9, Gemini 9 and Perplexity 3. You were the first pick in 5 of them, up from 3."
+  }
+ ],
+ "score": {
+  "index": 60,
+  "prev": 61,
+  "date": "Nov 13 Weekly Pulse",
+  "parts": [
+   [
+    "Reputation",
+    56
+   ],
+   [
+    "Search",
+    79
+   ],
+   [
+    "Map",
+    41
+   ],
+   [
+    "Website",
+    84
+   ],
+   [
+    "AI answers",
+    41
+   ]
+  ]
+ },
+ "tiles": [
+  [
+   "4.2",
+   "Google rating",
+   "19 reviews, newest Nov 18"
+  ],
+  [
+   "7th",
+   "At your front door",
+   "Google Maps, Nov 13"
+  ],
+  [
+   "21 of 96",
+   "AI answers name you",
+   "Panel of Nov 13"
+  ],
+  [
+   "6 of 49",
+   "Map points in top 20",
+   "Scan of Nov 13"
+  ]
+ ],
+ "rivals": {
+  "date": "Nov 13 map scan",
+  "rows": [
+   [
+    "Verano",
+    "4.7",
+    561,
+    3,
+    42
+   ],
+   [
+    "Heritage Key Villas",
+    "4.5",
+    366,
+    9,
+    45
+   ],
+   [
+    "The Jamison",
+    "4.2",
+    254,
+    29,
+    45
+   ],
+   [
+    "Mosaic at Lake Toho",
+    "4.5",
+    184,
+    24,
+    49
+   ],
+   [
+    "Cielo View",
+    "4.9",
+    73,
+    20,
+    38
+   ],
+   [
+    "Stillwater Lakes (you)",
+    "4.1",
+    18,
+    0,
+    6
+   ]
+  ],
+  "note": "Review counts and ranks as the Nov 13 map scan read them. Your live count is now 19 at 4.2."
+ },
+ "ask": {
+  "title": "This week: ask for one review",
+  "moments": [
+   "At every move in",
+   "When a work order is closed"
+  ],
+  "points": [
+   "Cielo View has 73 Google reviews to our 19. Each new review moves our average more than theirs.",
+   "Ask in person, then send the link the same day.",
+   "One a week is the target."
+  ]
+ },
+ "teamCodeHash": "7116660e97aa9129150759fd2974d69619291bbcaf7b5dd62a61200ab2c82ea9",
+ "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJGZqrt8yF3YgRWj6tQbKwhxY",
+ "trackBase": "https://moveinlocal.com/review/stillwater-lakes/",
+ "asks": {
+  "sent": 0,
+  "opened": 0,
+  "through": "Nov 19"
+ },
+ "shortLink": "moveinlocal.com/review/stillwater-lakes",
+ "talk": {
+  "checked": "Nov 19",
+  "checkedIso": "2026-11-19",
+  "offer": "2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2.",
+  "prices": [
+   [
+    "$1,486",
+    "studio from"
+   ],
+   [
+    "$1,552",
+    "1 bedroom from"
+   ],
+   [
+    "$1,902",
+    "2 bedroom from"
+   ]
+  ]
+ },
+ "followups": [],
+ "occupancy": null,
+ "snapIdeas": {
+  "month": "November",
+  "items": [
+   [
+    "Golden hour at the pool",
+    "Last hour before sunset, palms and loungers in the frame.",
+    "Amenity"
+   ],
+   [
+    "Fireplace lounge, cozy night",
+    "Fireplace on, warm lamps, shoot across the sofas.",
+    "Amenity"
+   ],
+   [
+    "Coffee at the café",
+    "A cup at the entertainment kitchen, steam and all.",
+    "Amenity"
+   ],
+   [
+    "Pond walk at sunrise",
+    "Calm water and the walking path. Slow pan for a reel.",
+    "Amenity"
+   ],
+   [
+    "Kissimmee Lakefront Park",
+    "Sunset over Lake Toho.",
+    "Local spot"
+   ],
+   [
+    "Abracadabra Ice Cream Factory",
+    "Downtown Kissimmee scoop shop on Main St. A cone close up works.",
+    "Local spot"
+   ],
+   [
+    "Kissimmee tree lighting",
+    "Nov 28 at City Hall, 6:30 to 9:30 pm.",
+    "Event"
+   ],
+   [
+    "Festival of Lights Parade",
+    "Dec 12 in downtown Kissimmee, parade at 7:30 pm.",
+    "Event"
+   ]
+  ]
+ },
+ "compete": {
+  "checked": "Nov 19",
+  "checkedIso": "2026-11-19",
+  "items": [
+   {
+    "name": "Cielo View",
+    "where": "Kissimmee, about 2.2 miles",
+    "special": "Two months free for a limited time",
+    "from": [
+     [
+      "$1,499",
+      "1 bed"
+     ],
+     [
+      "$1,874",
+      "2 bed"
+     ]
+    ],
+    "fees": "Their posted totals include WiFi and mandatory fees: 1 bed from $1,628, 2 bed from $2,003. Deposit and pet fees not posted.",
+    "tip": "New community (2025) with 73 Google reviews. They have 1 and 2 bedrooms only. We have studios, townhomes, a $350 deposit, and an extra $1,200 off move in in Buildings 1 and 2.",
+    "vs": [
+     [
+      "Special",
+      "Two months free",
+      "2 mo free + $1,200 Bldgs 1, 2",
+      "ask"
+     ],
+     [
+      "Studio from",
+      "None offered",
+      "$1,486",
+      "us"
+     ],
+     [
+      "1 bed from",
+      "$1,499",
+      "$1,552",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,874",
+      "$1,902",
+      "them"
+     ],
+     [
+      "Deposit",
+      "Not posted",
+      "$350",
+      "ask"
+     ],
+     [
+      "Pet rent",
+      "Not posted",
+      "$20/mo",
+      "ask"
+     ],
+     [
+      "Pet fee",
+      "Not posted",
+      "$200",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest base rent on their own site. Lease term not shown. Ask what term they were quoted.",
+    "url": "https://cieloviewapts.com/floorplans/",
+    "feesChecked": "Nov 19",
+    "checked": "Nov 19",
+    "checkedIso": "2026-11-19"
+   },
+   {
+    "name": "The Jamison",
+    "where": "Kissimmee",
+    "special": "No special posted on their listing",
+    "from": [
+     [
+      "$1,640",
+      "studio"
+     ],
+     [
+      "$1,524",
+      "1 bed"
+     ],
+     [
+      "$1,849",
+      "2 bed"
+     ]
+    ],
+    "fees": "Monthly mandatory costs are added on top of base rent: their totals start at $1,640 for a 1 bed and $1,965 for a 2 bed. Deposit and pet fees not read yet.",
+    "tip": "Their 1 and 2 bedrooms start lower on base rent, but their totals with monthly fees start at $1,640 and $1,965. Ask what total they were quoted. No special is posted today.",
+    "vs": [
+     [
+      "Special",
+      "Nothing posted",
+      "2 mo free + $1,200 Bldgs 1, 2",
+      "us"
+     ],
+     [
+      "Studio from",
+      "$1,640",
+      "$1,486",
+      "us"
+     ],
+     [
+      "1 bed from",
+      "$1,524",
+      "$1,552",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,849",
+      "$1,902",
+      "them"
+     ],
+     [
+      "Deposit",
+      "Not posted",
+      "$350",
+      "ask"
+     ],
+     [
+      "Pet rent",
+      "Not posted",
+      "$20/mo",
+      "ask"
+     ],
+     [
+      "Pet fee",
+      "Not posted",
+      "$200",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest base rent on greystar.com. Mandatory monthly costs are added on top.",
+    "url": "https://www.greystar.com/the-jamison-kissimmee-fl/p_16895",
+    "feesChecked": "Nov 19",
+    "checked": "Nov 19",
+    "checkedIso": "2026-11-19"
+   },
+   {
+    "name": "Mosaic at Lake Toho",
+    "where": "Kissimmee",
+    "special": "Up to 8 weeks free on select plans, new 13+ month leases",
+    "from": [
+     [
+      "$1,299",
+      "studio"
+     ],
+     [
+      "$1,448",
+      "1 bed"
+     ],
+     [
+      "$1,710",
+      "2 bed"
+     ]
+    ],
+    "fees": "$500 deposit, 18 month lease on the posted prices. Pet fees not posted.",
+    "tip": "Their posted prices are on an 18 month lease and start lower. Our deposit is $350 to their $500, and our special is 2 months free plus $1,200 off move in in Buildings 1 and 2.",
+    "vs": [
+     [
+      "Special",
+      "Up to 8 weeks free, select plans",
+      "2 mo free + $1,200 Bldgs 1, 2",
+      "ask"
+     ],
+     [
+      "Studio from",
+      "$1,299",
+      "$1,486",
+      "them"
+     ],
+     [
+      "1 bed from",
+      "$1,448",
+      "$1,552",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,710",
+      "$1,902",
+      "them"
+     ],
+     [
+      "Deposit",
+      "$500",
+      "$350",
+      "us"
+     ],
+     [
+      "Pet rent",
+      "Not posted",
+      "$20/mo",
+      "ask"
+     ],
+     [
+      "Pet fee",
+      "Not posted",
+      "$200",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest rent on an 18 month lease on their own site.",
+    "url": "https://www.advenirliving.com/laketoho/kissimmee/mosaic-at-lake-toho/conventional/",
+    "feesChecked": "Nov 19",
+    "checked": "Nov 19",
+    "checkedIso": "2026-11-19"
+   }
+  ],
+  "us": {
+   "special": "2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2",
+   "from": [
+    [
+     "$1,552",
+     "1 bed"
+    ],
+    [
+     "$1,902",
+     "2 bed"
+    ],
+    [
+     "$1,486",
+     "studio"
+    ]
+   ],
+   "pets": "$20 a month pet rent per pet, $200 one time pet fee per pet, no pet deposit, up to 3 pets, no weight limits, some breed restrictions, PetScreening required",
+   "showoff": [
+    "Resort style pool",
+    "Grand clubhouse and fireplace lounge",
+    "Game room and club room",
+    "Café with free coffee",
+    "Fitness center",
+    "Coworking hub and private offices",
+    "Two dog parks and pet wash",
+    "Pond and walking path",
+    "Courtyard with grills",
+    "Package lockers",
+    "EV charging",
+    "Garages for rent"
+   ],
+   "specialShort": "2 months free (50% off 4 months on a 15 month lease)",
+   "ends": "no end date posted",
+   "basis": "Our special is on a 15 month lease. Lease terms differ by community, so confirm the term before quoting a difference."
+  },
+  "changes": []
+ },
+ "uploadUrl": "https://www.dropbox.com/request/8q56wzvp1qlgbasz0b5t",
+ "dbxFolder": "Stillwater Lakes",
+ "reminders": [
+  {
+   "where": "events",
+   "emoji": "🎄",
+   "fx": "spark",
+   "title": "Kissimmee tree lighting, Saturday, Nov 28",
+   "body": "City Hall, 6:30 to 9:30 pm, free. Mention it on tours, and snap a photo if your team goes.",
+   "iso": "2026-11-28",
+   "cta": "See the city's page ›",
+   "url": "https://www.kissimmee.gov/Parks-Recreation-Events/Events-Festivals/Tree-Lighting-Ceremony"
+  }
+ ],
+ "shots": [
+  {
+   "img": "pool",
+   "title": "Golden hour at the pool",
+   "tag": "Amenity",
+   "tip": "Last hour before sunset. Stand at the far end so the clubhouse and palms fit. Keep residents out of the frame.",
+   "wide": true
+  },
+  {
+   "img": "lounge",
+   "title": "Cozy by the fireplace",
+   "tag": "Cozy",
+   "tip": "Fireplace on, lamps warm, overhead lights off. Get low and shoot across the sofas."
+  },
+  {
+   "img": "lobby",
+   "title": "Stone wall lounge",
+   "tag": "Cozy",
+   "tip": "A mug and a book on the table. Shoot from the doorway at chest height."
+  },
+  {
+   "img": "bar",
+   "title": "Café coffee moment",
+   "tag": "Amenity",
+   "tip": "A latte on the counter with the pendants glowing behind it."
+  },
+  {
+   "img": "gym",
+   "title": "Morning workout",
+   "tag": "Amenity",
+   "tip": "Early light, equipment in focus. A 5 second slow pan makes a great reel."
+  },
+  {
+   "img": "cowork",
+   "title": "Work from home, done right",
+   "tag": "Amenity",
+   "tip": "Laptop open, coffee beside it. Hands only is perfect."
+  },
+  {
+   "img": "living",
+   "title": "Model home, holiday ready",
+   "tag": "Home",
+   "tip": "Throw blanket, a flameless candle, a small tree. Stand in the doorway, phone at chest height."
+  },
+  {
+   "img": "kitchen",
+   "title": "Kitchen details",
+   "tag": "Home",
+   "tip": "Close ups sell: the counters, the beams, a bowl of fruit."
+  },
+  {
+   "img": "outside",
+   "title": "Stillwater Lakes from above",
+   "tag": "Outside",
+   "tip": "Only our own photos from above. On the ground, shoot the pond and buildings at golden hour."
+  }
+ ],
+ "notice": {
+  "id": "2026-11-19-welcome",
+  "until": "2026-11-26",
+  "emoji": "👋",
+  "title": "Welcome to LocalLift Live",
+  "points": [
+   "Today's talk track, rival prices and objections and answers update every morning.",
+   "Start a tour from the Tour tab and tap what you show. It all lands on Send my day to my desk.",
+   "Ask for a Google review at every move in and closed work order. Show the QR code, it takes under 30 seconds."
+  ],
+  "act": "tour",
+  "cta": "Open Tour mode ›"
+ }
+}
