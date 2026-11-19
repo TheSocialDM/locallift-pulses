@@ -279,6 +279,27 @@ nav{background:rgba(28,28,30,.96)!important;border:.5px solid rgba(255,255,255,.
 @media (prefers-color-scheme:dark){.hold .stage{background:#2c2c2e}.hold .sk{stroke:#f2f2f7}.hold .ac{stroke:#e0a463}.hold .ok{stroke:#7fd1a0}.hold .no{stroke:#ff8a73}.hold .ph{fill:#f2f2f7}.hold .dots i{background:#48484a}.hold .no2{fill:#ff8a73}.hold .ok2{fill:#7fd1a0}.hold .dots button[aria-current=true] i{background:#e0a463}}
 .shot.wide{grid-column:1/-1;aspect-ratio:16/9}
 @media (prefers-color-scheme:dark){.alert i{background:#2c2c2e}}
+
+.sheet.ra-on{align-items:center;padding:16px;z-index:60}.sheet.ra-on .box{max-height:92vh}
+.sheet.ra-on .box{background:#241912!important;color:#f6ead9;border-radius:26px;max-width:440px;padding:0 0 18px;gap:0;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.ra-top{background:linear-gradient(135deg,#8a1f14,#b0402a);padding:12px 16px;border-radius:26px 26px 0 0;display:flex;align-items:center;gap:12px}
+.ra-flag{font-size:30px;animation:raw 1.2s ease-in-out infinite;transform-origin:20% 90%}
+@keyframes raw{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+@media (prefers-reduced-motion:reduce){.ra-flag{animation:none}}
+.ra-top b{display:block;font-size:19px;color:#fff;line-height:1.2}.ra-top small{display:block;font-size:13px;color:#ffe3dc;margin-top:2px}
+.ra-in{padding:12px 16px 0;display:grid;gap:9px}
+.ra-k{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#e9d6bd;font-weight:800}
+.ra-h{font-size:19px;line-height:1.25;color:#fff;font-weight:800;margin:0}
+.ra-n{display:flex;align-items:center;gap:10px;font-size:15px;color:#e9d6bd}.ra-n s{opacity:.85}.ra-n strong{font-size:21px;color:#fff}
+.ra-pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;border:1px solid rgba(246,234,217,.35);border-radius:99px;padding:4px 10px;color:#f6ead9;width:max-content}
+.ra-pill:before{content:'';width:8px;height:8px;border-radius:50%;background:#e5533d}.ra-pill.us:before{background:#3fb06a}
+.ra-say{background:rgba(255,255,255,.07);border-left:3px solid #c98a4a;border-radius:12px;padding:9px 11px;font-size:14px;line-height:1.45;color:#f6ead9}
+.ra-say b{display:block;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#f6ead9;margin-bottom:3px}
+.ra-more{display:grid;gap:6px}.ra-more button{display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left;background:rgba(255,255,255,.05);border:1px solid rgba(246,234,217,.18);border-radius:12px;padding:8px 11px;color:#f6ead9;font:inherit;font-size:13px;line-height:1.3;cursor:pointer}
+.ra-more span{flex:1;min-width:0}.ra-more button span{display:block}.ra-more em{font-style:normal;color:#e9d6bd;font-size:13px;flex-shrink:0;text-align:right;max-width:46%}
+.ra-go{background:#f6ead9;color:#241912;border:0;border-radius:14px;padding:13px;font:inherit;font-size:16px;font-weight:800;cursor:pointer}
+.ra-ok{background:transparent;color:#f6ead9;border:1px solid rgba(246,234,217,.35);border-radius:14px;padding:11px;font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.ra-dir{font-size:12px;font-weight:800;color:#f6ead9;white-space:nowrap}.ra-note{display:block;margin-top:8px;font-size:12.5px;color:#cdb9a1}.ra-src{font-size:12.5px;color:#cdb9a1;text-align:center;margin:0}
 </style>
 <style>
 #sch{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:8px;background:rgba(28,20,14,.92);color:#fff;border-radius:99px;padding:9px 16px 9px 12px;font:700 14px/1.2 -apple-system,system-ui,sans-serif;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.35);pointer-events:none;opacity:0;transition:opacity .35s}
@@ -563,7 +584,23 @@ box.addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return
  if(t.id==='snapSend'){snapSend();return}
  if(t.id==='snapVid'){vidSend();return}
 });
-const open=html=>{box.innerHTML=html;sh.classList.add('on')};const close=()=>{sh.classList.remove('on');show(cur)};
+
+const RA=()=>{const all=((D&&D.compete&&D.compete.changes)||[]).slice();if(!all.length)return null;const top=all.reduce((m,c)=>c.verifiedIso>m?c.verifiedIso:m,'');const l=all.filter(c=>c.verifiedIso===top).sort((a,b)=>(b.flip?1:0)-(a.flip?1:0));return{day:top,l}};
+const raBd=t=>String(t||'').replace(/(\d) beds\b/g,'$1 bedrooms').replace(/(\d) bed\b/g,'$1 bedroom');
+const raNum=t=>{const m=String(t||'').replace(/,/g,'').match(/\$(\d+)/);return m?+m[1]:null};
+const raDir=c=>{const a=raNum(c.from),b=raNum(c.to);if(a==null||b==null||a===b)return'';return b>a?' <span class="ra-dir">▲ up</span>':' <span class="ra-dir">▼ down</span>'};
+const raShow=force=>{const r=RA();if(!r)return;let k='';try{k=localStorage.getItem('lldemo-ralert')||''}catch(x){}if(!force&&k===r.day)return;try{localStorage.setItem('lldemo-ralert',r.day)}catch(x){}const c=r.l[0],n=r.l.length,srcs=[...new Set(r.l.map(x=>x.src))].join(', ');
+box.innerHTML=`<div class="ra-top"><span class="ra-flag" aria-hidden="true">🚩</span><span><b>${n>1?n+' rival moves today':'A rival moved today'}</b><small>Checked this morning, ${esc(c.verified)}. Know it before your first tour.</small></span></div>
+<div class="ra-in"><span class="ra-k">${esc(c.rival)}</span><h3 class="ra-h">${esc(raBd(c.headline))}</h3>
+<div class="ra-n"><span>${esc(c.fromLabel||'Was')}</span><s>${esc(c.from)}</s><span>→</span><strong>${esc(c.to)}</strong>${raDir(c)}</div>
+<span class="ra-pill ${c.flip?'':'us'}">${c.flip?'Now lower than ours':'We are still ahead here'}</span>
+<div class="ra-say"><b>If a prospect brings it up, say</b>${esc(c.say)}<small class="ra-note">Base rent compared. Confirm our lease term with the office before quoting a difference.</small></div>
+${n>1?`<div class="ra-more">${r.l.slice(1).map(x=>`<button data-goriv="${esc(x.rival)}" data-cid="${esc(x.id)}" data-ra="1"><span>${esc(raBd(x.headline))}</span><em>${esc(x.from)} → ${esc(x.to)}${raDir(x)} ›</em></button>`).join('')}</div>`:''}
+<button class="ra-go" data-goriv="${esc(c.rival)}" data-cid="${esc(c.id)}" data-ra="1">See the head to head ›</button>
+<button class="ra-ok" id="raOk">Got it, I'm ready</button>
+<p class="ra-src">Read today on ${esc(srcs)}. Shows once a day when a rival changes.</p></div>`;sh.classList.add('on','ra-on');box.scrollTop=0};
+document.addEventListener('click',e=>{if(e.target.closest('#raOk')){sh.classList.remove('on','ra-on');show(cur);return}if(e.target.closest('[data-ra]'))sh.classList.remove('on','ra-on')},true);
+const open=html=>{sh.classList.remove('ra-on');box.innerHTML=html;sh.classList.add('on')};const close=()=>{sh.classList.remove('on','ra-on');show(cur)};
 sh.addEventListener('click',e=>{if(e.target===sh)close()});
 $('bTour').addEventListener('click',()=>tour(''));
 document.addEventListener('click',e=>{const s=e.target.closest('[data-seen]');if(s){markSeen(s.dataset.seen);show(cur);return}const g=e.target.closest('[data-goriv]');if(!g)return;markSeen(g.dataset.cid);show('tourv');const r=[...document.querySelectorAll('.rvl')].find(x=>x.dataset.riv===g.dataset.goriv);if(r){r.classList.add('open');r.setAttribute('aria-expanded','true');setTimeout(()=>{r.scrollIntoView({behavior:'smooth',block:'center'});r.querySelectorAll('.r.cg').forEach(x=>x.classList.add('pulse'))},80)}});
@@ -637,9 +674,10 @@ else if(h==='snap'){nav('social');later(()=>clk('#bCap'))}
 else if(h==='shoot'){nav('social');later(()=>{const e=document.getElementById('hold');if(e)e.scrollIntoView({block:'start'})})}
 else if(h==='desk'){nav('tourv');later(()=>clk('#bDesk'))}
 else if(h==='rivals')nav('tourv');
+else if(h==='alert'){nav('today');later(()=>raShow(true))}
 };
 window.addEventListener('hashchange',()=>DL(location.hash.slice(1)));
-fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{const bad=x=>/review|resident|\b[A-Z][a-z]+ [A-Z]\.|star/i.test(JSON.stringify(x));if(j.feed)j.feed=j.feed.filter(x=>!(x.src||'').match(/review/i)&&!bad(x));if(j.followups)j.followups=j.followups.filter(x=>!bad(x));D=j;show(cur);setTimeout(()=>DL(location.hash.slice(1)),60)}).catch(()=>{});
+fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{const bad=x=>/review|resident|\b[A-Z][a-z]+ [A-Z]\.|star/i.test(JSON.stringify(x));if(j.feed)j.feed=j.feed.filter(x=>!(x.src||'').match(/review/i)&&!bad(x));if(j.followups)j.followups=j.followups.filter(x=>!bad(x));D=j;show(cur);setTimeout(()=>{const h=location.hash.slice(1);if(h)DL(h);else raShow(false)},60)}).catch(()=>{});
 }
 </script>
 <div id="sch" aria-hidden="true"><span class="hd">👆</span>Swipe up for more<span class="ar">↓</span></div>
