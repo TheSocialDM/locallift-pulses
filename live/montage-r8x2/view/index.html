@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>LocalLift Live · iPhone and desktop</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#1c1410;font:15px/1.4 -apple-system,system-ui,sans-serif;color:#f6ead9;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+.bar{display:flex;gap:6px;background:#2c2018;border:1px solid #4a3828;border-radius:99px;padding:5px;margin:18px 0 6px}
+.bar button{border:0;background:transparent;color:#f6ead9;font:700 15px -apple-system,system-ui,sans-serif;padding:10px 20px;border-radius:99px;cursor:pointer}
+.bar button[aria-pressed=true]{background:#f6ead9;color:#241912}
+.hint{font-size:13px;color:#cdb9a1;margin:0 0 14px}
+.stage{flex:1;display:flex;align-items:flex-start;justify-content:center;width:100%;padding:0 16px 24px}
+.phone{width:410px;height:860px;border-radius:58px;background:#000;padding:12px;box-shadow:0 0 0 2px #3a3a3c,0 30px 70px rgba(0,0,0,.5);position:relative}
+.phone:before{content:'';position:absolute;top:22px;left:50%;transform:translateX(-50%);width:110px;height:30px;background:#000;border-radius:20px;z-index:2}
+.phone iframe{width:386px;height:836px;border:0;border-radius:46px;background:#fff;display:block}
+.desk{width:min(1280px,96vw);background:#e9e5e0;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.desk .chrome{height:38px;background:#d9d4ce;display:flex;align-items:center;gap:8px;padding:0 14px}
+.desk .chrome i{width:12px;height:12px;border-radius:50%;display:block}.desk .url{margin-left:14px;flex:1;max-width:520px;height:24px;border-radius:7px;background:#f4f1ed;color:#5a4a3c;font-size:12.5px;display:flex;align-items:center;padding:0 10px}
+.desk iframe{width:100%;height:min(780px,calc(100vh - 150px));border:0;display:block;background:#fff}
+[hidden]{display:none!important}
+</style></head><body>
+<div class="bar" role="group" aria-label="Choose a device"><button id="bP" aria-pressed="true">📱 iPhone</button><button id="bD" aria-pressed="false">🖥️ Desktop</button></div>
+<p class="hint">Same app, same link, live data. Tap anything inside.</p>
+<div class="stage">
+<div class="phone" id="P"><iframe id="fP" title="LocalLift Live on iPhone" src="../demo/#alert"></iframe></div>
+<div class="desk" id="Dk" hidden><div class="chrome"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">live.thesocialdm.com/montage</span></div><iframe id="fD" title="LocalLift Live on a computer" data-src="../demo/#alert"></iframe></div>
+</div>
+<script>
+const P=document.getElementById('P'),Dk=document.getElementById('Dk'),fD=document.getElementById('fD'),bP=document.getElementById('bP'),bD=document.getElementById('bD');
+function set(d){const desk=d==='desk';P.hidden=desk;Dk.hidden=!desk;bP.setAttribute('aria-pressed',!desk);bD.setAttribute('aria-pressed',desk);if(desk&&!fD.src)fD.src=fD.dataset.src;try{history.replaceState(null,'',desk?'#desktop':'#iphone')}catch(e){}}
+bP.onclick=()=>set('phone');bD.onclick=()=>set('desk');if(location.hash==='#desktop')set('desk');
+</script></body></html>
