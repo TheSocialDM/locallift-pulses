@@ -289,7 +289,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 <ol class="steps3"><li class="s1">In Safari, tap <b>Share</b>. On newer iPhones, tap <b>&bull;&bull;&bull;</b> first.</li><li class="s2">Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li><li class="s3">Open <b>SocialDM</b> from your home screen.</li></ol></div></div>
 <div class="grid">
 <div class="card c8"><h2>Your milestones</h2><p class="why">Every step counts. Here's what you've already earned.</p><div class="badges" id="badges"></div></div>
-<div class="card c4 reg"><h2>Register a doctor</h2><p class="why">Know a doctor who should be on AI and Google? Send Michael the name and he'll follow up.</p>
+<div class="card c4 reg"><h2>Register a doctor</h2><p class="why">Know a doctor who should be on AI and Google? Send us the name and we'll follow up.</p>
 <label for="rgN">Doctor or practice</label><input id="rgN" autocomplete="off">
 <label for="rgW">How you know them</label><textarea id="rgW"></textarea>
 <div class="row"><button class="blue" id="rgGo">Register this doctor</button></div></div>
@@ -317,7 +317,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 <label for="zn">Plus practices like him you introduce <b id="znN"></b></label><input type="range" id="zn" min="0" max="10" value="2" step="1">
 </div>
 <div class="stats z3" style="border-bottom:0"><div><span class="k">Every month</span><b class="gg" id="zMo"></b><small id="zRate"></small></div><div><span class="k">Your first year</span><b id="zY1"></b><small>with bonuses</small></div><div><span class="k">Over 3 years</span><b id="zY3"></b><small>if they stay</small></div></div>
-<p class="k" style="margin:0"><span id="zNote">Dr. Gupta at list prices, before any annual discount. Michael sets his final quote.</span> Each added practice at Strategy annual, $3,900 a month. 18% on every annual account once you have 3.</p></div>
+<p class="k" style="margin:0"><span id="zNote">Dr. Gupta at list prices, before any annual discount. The SocialDM sets his final quote.</span> Each added practice at Strategy annual, $3,900 a month. 18% on every annual account once you have 3.</p></div>
 <div class="card c5"><h2>Signed and paying</h2><div id="signed"></div></div>
 </div>
 <div class="tools"><input id="q" type="search" placeholder="Find a doctor or practice" aria-label="Find a doctor or practice"><div class="chips" id="chips"></div></div>
@@ -361,7 +361,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 </div>
 <h3 style="margin:16px 0 6px;font-size:15px">Every monthly plan includes</h3>
 <ul class="inc"><li>Google Business posts 7 days a week</li><li>Social posts 3 times a week on Instagram, Facebook and LinkedIn</li><li>AI visibility tracking</li><li>Referral Desk, our managed CRM</li><li>A website landing page</li><li>A short weekly report</li><li>Call Proof call tracking on 6 month and annual plans</li></ul>
-<p class="why" style="margin:10px 0 0">Prices are 6 month list. Annual runs a little lower, month to month a little higher. Michael sets every final quote. Open the door with the free AI scan, and show the sample doctor desk.</p></div>
+<p class="why" style="margin:10px 0 0">Prices are 6 month list. Annual runs a little lower, month to month a little higher. The SocialDM sets every final quote. Open the door with the free AI scan, and show the sample doctor desk.</p></div>
 <div class="grid">
 <div class="card c8"><h2>Objections</h2><div id="objs"></div></div>
 <div class="card c4"><h2>Share kit</h2><div class="kit">
@@ -371,7 +371,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 <a href="https://localliftsignature.com">localliftsignature.com <span>For Realtors</span></a>
 </div>
 <h2 style="margin-top:22px">House rules</h2>
-<p class="why" style="margin-top:6px">Never show your pay to a doctor. Show the sample desk, never another client's page. Bring Michael in once they say yes.</p></div>
+<p class="why" style="margin-top:6px">Never show your pay to a doctor. Show the sample desk, never another client's page. Bring The SocialDM in once they say yes.</p></div>
 </div>
 </section>
 
@@ -403,8 +403,8 @@ const SCOL=["#94a3b8","#7dd3fc","#3b82f6","#a78bfa","#34d399"];
 const ODDS=[.1,.2,.4,.6,.85];
 const SIGNED=[];
 const DEALS=[
- {id:"gupta",who:"Dr. Gupta",org:"Mountain View Headache & Spine Institute, pain management, Mesa, Peoria and Phoenix",st:0,plan:"grp",term:"annual",act:"We audited his practice in August",next:"It's been a while. Send him a short check in and offer a 10 minute call with Michael Shad. A client safe copy of his audit is ready when you want it.",
-  opts:"Plans for a practice his size: Visibility $1,899, Strategy $3,900, or the practice plan at $8,500 a month. Michael sets the final quote.",
+ {id:"gupta",who:"Dr. Gupta",org:"Mountain View Headache & Spine Institute, pain management, Mesa, Peoria and Phoenix",st:0,plan:"grp",term:"annual",act:"We audited his practice in August",next:"It's been a while. Send him a short check in and offer a 10 minute call with The SocialDM. A client safe copy of his audit is ready when you want it.",
+  opts:"Plans for a practice his size: Visibility $1,899, Strategy $3,900, or the practice plan at $8,500 a month. The SocialDM sets the final quote.",
   mails:[{d:"Aug 6",by:"ll",s:"His practice audit",st:"Ready, not sent",b:"Our August audit of his practice: 4.7 stars on 305 Google reviews, yet he showed up in only 2 of 12 top local searches, ChatGPT did not name him, 10 phone numbers were listed under his name, and his BBB page showed an F."}]}];
 const PAST=false;
 const ACTIVE=DEALS.filter(d=>!d.lost);
@@ -428,7 +428,7 @@ const h=new Date().getHours();$("greet").textContent=(h<12?"Good morning":h<17?"
 const sLines={sLikely:[likely,"a month if Dr. Gupta signs the practice plan"],sTable:[table,"your first year if he signs annual"],sOut:[outT,"your first year for each Strategy practice you introduce"]};
 $("goCnt").textContent=ACTIVE.length+" open";
 Object.entries(sLines).forEach(([k,[v,t]])=>{$(k).textContent=usd(v);$(k+"S").textContent=t});
-const EV=[{i:0,t:"Practice audit",n:"Dr. Gupta",s:"Gupta audit",c:"#a78bfa"},{i:1,t:"Kickoff",n:"Michael Shad",s:"Kickoff",c:"#22d3ee"},
+const EV=[{i:0,t:"Practice audit",n:"Dr. Gupta",s:"Gupta audit",c:"#a78bfa"},{i:1,t:"Kickoff",n:"The SocialDM",s:"Kickoff",c:"#22d3ee"},
  {i:16,t:"App live",n:"Natalie",s:"App live",c:"#34d399"}];
 const HD=["Jul 31","Aug 7","Aug 14","Aug 21","Aug 28","Sep 4","Sep 11","Sep 18","Sep 25","Oct 2","Oct 9","Oct 16","Oct 23","Oct 30","Nov 6","Nov 13","Nov 20"].map(d=>"Week of "+d+", 2026");
 const HT=HD.map(()=>likely),HL=HD.map(()=>0);
@@ -437,7 +437,7 @@ requestAnimationFrame(()=>{$("tierBar").style.width=Math.max(2,Math.min(100,annu
 
 
 let REMS=[
- {id:"r1",who:"Dr. Gupta",t:"No touch since August. Send the check in text and offer a call with Michael Shad.",due:"today",dl:"This week",deal:"gupta"}];
+ {id:"r1",who:"Dr. Gupta",t:"No touch since August. Send the check in text and offer a call with The SocialDM.",due:"today",dl:"This week",deal:"gupta"}];
 const drawRems=()=>{$("remCount").textContent=REMS.length?REMS.length+" open":"";
  $("rems").innerHTML=REMS.map(r=>`<div class="item"><div class="top"><div><h3>${r.who}</h3><p class="why">${r.t}</p></div><span class="due ${r.due}">${r.dl}</span></div><div class="row"><button class="ghost" data-got="${r.deal}">What they got</button><button class="ghost" data-rem="${r.id}" data-a="later">Tomorrow</button><button data-rem="${r.id}" data-a="done">Done</button></div></div>`).join("")||`<p class="why">You're all caught up.</p>`;
  updBadge()};
@@ -455,9 +455,9 @@ let unread=0;
 const updBadge=()=>{const n=openA().length;$("badge").textContent=n;$("badge").hidden=!n;$("bell").setAttribute("aria-label",n?`Alerts, ${n} open`:"Alerts")};
 
 const TASKS=[
- {t:"Check in: Dr. Gupta",w:`If his practice signs the practice plan on annual, that pays you ${usd(y1("grp"))} your first year.`,m:"Hi Dr. Gupta, it's Natalie. Back in August we ran a check on how patients find your practice online, and a few things stood out, like local searches where you weren't showing up. Would a 10 minute call with Michael Shad be worth it to walk you through it?"},
+ {t:"Check in: Dr. Gupta",w:`If his practice signs the practice plan on annual, that pays you ${usd(y1("grp"))} your first year.`,m:"Hi Dr. Gupta, it's Natalie. Back in August we ran a check on how patients find your practice online, and a few things stood out, like local searches where you weren't showing up. Would a 10 minute call with The SocialDM be worth it to walk you through it?"},
  {t:"Line up your next intro",w:"Lead with a free AI scan around their office. It opens the door, and the result does the selling.",m:"Hi Dr. [name], it's Natalie. Can I run a free AI scan around your office? It shows whether Google and ChatGPT name your practice when patients nearby look for a doctor. You get a private page with the results, no strings."},
- {t:"Send Michael one name",w:"Think of one doctor you already know. One name is all it takes to start.",m:"Hi Michael, it's Natalie. One doctor who might want the free AI scan: [name, practice, city]."}];
+ {t:"Send us one name",w:"Think of one doctor you already know. One name is all it takes to start.",m:"Hi SocialDM team, it's Natalie. One doctor who might want the free AI scan: [name, practice, city]."}];
 const DAY=new Date().toLocaleDateString("en-CA");
 let TD=new Set((store.get("rephqN_td")||{})[DAY]||[]);
 $("tasks").innerHTML=TASKS.map((x,i)=>`<div class="item tdo" id="td${i}"><button class="chk" data-td="${i}" aria-pressed="false" aria-label="Mark done: ${x.t}"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button><div class="body"><h3>${x.t}</h3><p class="why">${x.w}</p><div class="msg" id="m${i}">${x.m}</div><div class="row"><button class="blue" data-copy="m${i}">Copy message</button></div></div></div>`).join("");
@@ -484,7 +484,7 @@ $("rgGo").addEventListener("click",()=>{const n=$("rgN").value.trim(),w=$("rgW")
  location.href="mailto:info@thesocialdm.com?subject="+encodeURIComponent("Register a doctor: "+n+" (Natalie)")+"&body="+encodeURIComponent("Doctor or practice: "+n+"\nHow I know them: "+(w||"(not added)")+"\n\nSent from Rep HQ.");
  toast("Opening your email. Tap send.")});
 {const ios=/iphone|ipad|ipod/i.test(navigator.userAgent),standalone=matchMedia("(display-mode: standalone)").matches||navigator.standalone;if(ios&&!standalone)$("install").hidden=false}
-const TIPS=["Lead with Strategy on the annual plan when it fits. It pays you about twice what Visibility does every month.", "Follow up within a day of an open. Interest fades fast.", "Ask who signs before the meeting, so the right person is in the room.", "Three active annual clients move every annual account you have to 18%.", "Show the sample desk, never another client's page.", "Ask what one new patient is worth to them. Let them do the math.", "Text, then email. A short text gets read first.", "Offer the free AI scan before you talk about price.", "Ask the doctor to search their own specialty on their phone. Let them see who shows up.", "Write down the exact words a doctor uses for their problem. Use them back.", "Ask who handles their marketing today. That person can be your best ally.", "End every meeting with a date for the next step.", "A no today is often a not yet. Keep the door open and check back in 30 days.", "Bring one example, not ten. One clear story beats a long list.", "Ask about their busiest and slowest months. It tells you when they feel the gap.", "Register a doctor the day you meet them, so nothing slips.", "Ask which hospital or group they refer to most. It points you to your next intro.", "Let Michael run the numbers. Your job is the introduction and the trust.", "Before a meeting, open \"What they got\" so you know every email they have seen.", "Thank them for their time in writing the same day."];
+const TIPS=["Lead with Strategy on the annual plan when it fits. It pays you about twice what Visibility does every month.", "Follow up within a day of an open. Interest fades fast.", "Ask who signs before the meeting, so the right person is in the room.", "Three active annual clients move every annual account you have to 18%.", "Show the sample desk, never another client's page.", "Ask what one new patient is worth to them. Let them do the math.", "Text, then email. A short text gets read first.", "Offer the free AI scan before you talk about price.", "Ask the doctor to search their own specialty on their phone. Let them see who shows up.", "Write down the exact words a doctor uses for their problem. Use them back.", "Ask who handles their marketing today. That person can be your best ally.", "End every meeting with a date for the next step.", "A no today is often a not yet. Keep the door open and check back in 30 days.", "Bring one example, not ten. One clear story beats a long list.", "Ask about their busiest and slowest months. It tells you when they feel the gap.", "Register a doctor the day you meet them, so nothing slips.", "Ask which hospital or group they refer to most. It points you to your next intro.", "Let The SocialDM run the numbers. Your job is the introduction and the trust.", "Before a meeting, open \"What they got\" so you know every email they have seen.", "Thank them for their time in writing the same day."];
 const DAYN=(()=>{const d=new Date();return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5)})();
 $("tip").textContent=TIPS[DAYN%TIPS.length];
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState!=="visible")return;const d=new Date();if(Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5)!==DAYN)location.reload()});
@@ -522,10 +522,10 @@ const openGot=id=>{alertsOpen=false;const d=DEALS.find(x=>x.id===id);if(!d)retur
  <div class="row">${m.url?`<a class="btn blue" href="${m.url}">Open ${esc(m.link)}</a>`:""}<button class="ghost" data-show="${d.id}|${d.mails.length-1-i}">Show on screen</button><button class="ghost" data-copy="mb${i}">Copy</button></div></div>`).join(""):`<p class="why" style="margin-top:14px">Nothing sent yet. Once LocalLift or you email this practice, it shows here the same day.</p>`}
  `)};
 const OBT=[
- {q:"It's too expensive.",h:"Turn price into his own math",a:"Fair. Ask yourself what one new pain patient is worth to you in a year. How many new patients a month would cover the plan?",w:"Let him do the math out loud. Then hand pricing to Michael Shad."},
+ {q:"It's too expensive.",h:"Turn price into his own math",a:"Fair. Ask yourself what one new pain patient is worth to you in a year. How many new patients a month would cover the plan?",w:"Let him do the math out loud. Then hand pricing to The SocialDM."},
  {q:"I'm too busy for this.",h:"Their pain is your pitch",a:"That's exactly why it's done for you. You approve, LocalLift runs it, and you get one short weekly report. Your time stays with patients.",w:"Short and calm. Then stop talking."},
- {q:"I need to talk to my partners.",h:"Get the signers in the room",a:"Makes sense. Want me to set 10 minutes with Michael Shad so everyone who signs hears it once?",w:"Get every decision maker on the same short call."},
- {q:"Will I get my money back?",h:"You are not locked in",a:"You're not locked in. On the 6 month plan you can walk away at day 90, and you get a report every week. Michael can walk you through exactly how that works.",w:"Never promise a refund or a guarantee. Point to day 90 and the weekly report, then hand it to Michael."}];
+ {q:"I need to talk to my partners.",h:"Get the signers in the room",a:"Makes sense. Want me to set 10 minutes with The SocialDM so everyone who signs hears it once?",w:"Get every decision maker on the same short call."},
+ {q:"Will I get my money back?",h:"You are not locked in",a:"You're not locked in. On the 6 month plan you can walk away at day 90, and you get a report every week. The SocialDM team can walk you through exactly how that works.",w:"Never promise a refund or a guarantee. Point to day 90 and the weekly report, then hand it to The SocialDM."}];
 $("obTop").innerHTML=OBT.map((o,i)=>`<button class="oq" data-ob="${i}">"${o.q}"<small>${o.h}</small></button>`).join("");
 const openOb=i=>{const o=OBT[i];openSheet(`<div class="top"><div><h2 id="shT">"${esc(o.q)}"</h2><p class="why">${esc(o.h)}</p></div><button class="ghost" data-close>Close</button></div><div class="say" id="obA" style="margin-top:12px;font-size:17px">${esc(o.a)}</div><p class="why" style="margin:10px 0 0">${esc(o.w)}</p><div class="row" style="margin-top:12px"><button class="blue" data-copy="obA">Copy answer</button></div>`)};
 const openShow=(id,i)=>{const d=DEALS.find(x=>x.id===id),m=d.mails[i];
@@ -642,10 +642,10 @@ const OBJ=[
  ["Just send me some info.","Happy to. So I send the right thing, is the bigger goal more new patients or more referrals from other offices?","Keeps the conversation going."],
  ["I never got that email.","No problem, I have it right here. Let me show you.","Tap What they got, then Show on screen."],
  ["Can we do month to month?","You can. Annual has a lower monthly rate than month to month, so it's the better value.","Steers to annual without pressure."],
- ["Have you worked with doctors?","Medicine is our newest line. The system behind it already runs for more than 7,900 homes across the country, and every practice works directly with Michael.","Honest, and turns new into an advantage."],
+ ["Have you worked with doctors?","Medicine is our newest line. The system behind it already runs for more than 7,900 homes across the country, and every practice works directly with our team.","Honest, and turns new into an advantage."],
  ["Is this HIPAA safe?","We never touch patient records or patient forms. Referral Desk works with offices and doctors only.","Short and exact. Then move on."],
  ["I don't have time for marketing.","That's the point. It's done for you. You approve, we run it, and you get one short report.","Their pain is your pitch."],
- ["I need to talk to my partners.","Makes sense. Want me to set a 10 minute call with Michael so everyone hears it once?","Gets the signer in the room."],
+ ["I need to talk to my partners.","Makes sense. Want me to set a 10 minute call with The SocialDM so everyone hears it once?","Gets the signer in the room."],
  ["Does AI search even matter?","Patients now ask ChatGPT and Google for a doctor near them. Want to see whether you're the one it names?","Offer the free check. Let the result sell."]];
 $("objs").innerHTML=OBJ.map((o,i)=>`<details><summary>"${o[0]}"</summary><div class="say" id="o${i}">${o[1]}</div><p class="why" style="margin:8px 0 0">${o[2]}</p><div class="row" style="margin-bottom:14px"><button class="ghost" data-copy="o${i}">Copy answer</button></div></details>`).join("");
 
