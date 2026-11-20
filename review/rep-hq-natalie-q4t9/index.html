@@ -240,6 +240,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 .reg textarea{min-height:80px;resize:vertical}
 .toast{position:fixed;left:50%;bottom:100px;transform:translateX(-50%);background:#0d0d10;color:#f4f4f6;padding:12px 18px;border-radius:18px;font-weight:600;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:40;max-width:min(92vw,420px);text-align:center}.toast.on{opacity:1}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.offer .ofg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.offer .ofg>div{border:1px solid var(--line,#e5e7eb);border-radius:16px;padding:12px}.offer .ofg .rec{border-color:#2f6bff;box-shadow:0 0 0 1px #2f6bff inset}.offer .ofg b{display:block}.offer .pr{display:block;font-weight:700;font-size:15px;color:#2f6bff;margin:2px 0 4px}.offer .ofg p{margin:0;font-size:13.5px;color:var(--mute,#6b7280)}.offer .inc{margin:0;padding-left:18px;font-size:14.5px;line-height:1.7}
 </style>
 </head>
 <body>
@@ -351,6 +352,16 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 <section id="v-playbook" hidden>
 <h1>Playbook</h1>
 <p class="sub">What doctors say, what to say back, and what to share.</p>
+<div class="card offer" style="margin-bottom:16px"><h2>What every doctor gets</h2><p class="why" style="margin:2px 0 12px">The same plans and the same pay for every partner. Know these and you can answer almost anything.</p>
+<div class="ofg">
+<div><b>Foundation Fix</b><span class="pr">$995 one time</span><p>We clean up their Google profile, listings and site basics. Credited to month one if they join a plan.</p></div>
+<div><b>Visibility</b><span class="pr">$1,899 a month</span><p>One doctor. Built to show up on Google and AI search near the office.</p></div>
+<div class="rec"><b>Strategy</b><span class="pr">$3,900 a month</span><p>One doctor, more reach and more content. Pays you about twice what Visibility does.</p></div>
+<div><b>Practice plan</b><span class="pr">$8,500 a month</span><p>Two or more doctors, plus a $7,500 setup.</p></div>
+</div>
+<h3 style="margin:16px 0 6px;font-size:15px">Every monthly plan includes</h3>
+<ul class="inc"><li>Google Business posts 7 days a week</li><li>Social posts 3 times a week on Instagram, Facebook and LinkedIn</li><li>AI visibility tracking</li><li>Referral Desk, our managed CRM</li><li>A website landing page</li><li>A short weekly report</li><li>Call Proof call tracking on 6 month and annual plans</li></ul>
+<p class="why" style="margin:10px 0 0">Prices are 6 month list. Annual runs a little lower, month to month a little higher. Michael sets every final quote. Open the door with the free AI scan, and show the sample doctor desk.</p></div>
 <div class="grid">
 <div class="card c8"><h2>Objections</h2><div id="objs"></div></div>
 <div class="card c4"><h2>Share kit</h2><div class="kit">
@@ -558,7 +569,7 @@ drawRems();drawFeed();
  if(MODE==="Home screen app"&&!store.get("rephqN_installed"))store.set("rephqN_installed",1);
  let away=0;document.addEventListener("visibilitychange",()=>{if(document.hidden){away=Date.now();track("left Rep HQ","after "+Math.round((Date.now()-T0)/1000)+" seconds")}else if(away&&Date.now()-away>20*60e3)track("came back to Rep HQ","",0)});
  addEventListener("hashchange",()=>track("viewed "+({today:"Today",pipeline:"Pipeline",earn:"Earnings",playbook:"Playbook"}[curTab()])+" tab"));
- const SN={zp:"Dr. Gupta calculator: plan",zn:"Dr. Gupta calculator: more practices",sV:"Earnings calculator: Visibility practices",sS:"Earnings calculator: Strategy practices",sP:"Earnings calculator: group practices",term:"Earnings calculator: term"};const slid={};
+ const SN={zp:"Dr. Gupta calculator: plan",zn:"Dr. Gupta calculator: more practices",sV:"Earnings calculator: Visibility practices",sS:"Earnings calculator: Strategy practices",sP:"Earnings calculator: practice plans",term:"Earnings calculator: term"};const slid={};
  Object.keys(SN).forEach(id=>$(id)?.addEventListener("change",()=>{const g=id[0]==="z"?"z":"e";if(!slid[g]){slid[g]=1;track("played with the pay sliders",SN[id])}}));
  document.addEventListener("click",e=>{const t=e.target.closest("button,a");if(!t)return;
   if(t.dataset.td!=null){const i=+t.dataset.td;if(TD.has(i))track("checked off a move",TASKS[i].t,1);return}
