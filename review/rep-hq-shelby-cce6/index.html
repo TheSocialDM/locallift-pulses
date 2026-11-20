@@ -589,7 +589,7 @@ drawRems();drawFeed();
 }
 const WEL=[{deal:"zhubi",who:"Dr. Ylli Zhubi",why:PAST?"Check in this week. One text keeps it moving.":"His founding rates end today. One text could close it.",m:TASKS[0].m}];
 const openWelcome=()=>{alertsOpen=false;openSheet(`<div class="top"><div><h2 id="shT">Welcome back, Shelby</h2><p class="why">Here's where your deals stand and who to check in with today.</p></div><button class="ghost" data-wclose>Later</button></div>
- <div class="mom"><div><b>2</b><span>doctors you introduced</span></div><div><b>2</b><span>meetings held</span></div><div><b>${usd(table)}</b><span>a month if all three surgeons sign</span></div></div>
+ <div class="mom"><div><b>2</b><span>doctors you introduced</span></div><div><b>2</b><span>meetings held</span></div><div><b>${usd(y1("zg","annual"))}</b><span>your first year if all three surgeons sign</span></div></div>
  ${WEL.map((x,i)=>`<div class="ci"><div class="top"><div><h3>Check in with ${x.who}</h3><p class="why" style="margin:2px 0 0">${x.why}</p></div></div><div class="msg" id="w${i}">${esc(x.m)}</div><div class="row"><button class="blue" data-copy="w${i}">Copy text</button><button class="ghost" data-got="${x.deal}">What they got</button></div></div>`).join("")}
  <div class="row" style="margin-top:16px"><button class="blue" data-wclose>Let's go</button></div>`);$("sheet").classList.add("welcome")};
 let seen=false;try{seen=sessionStorage.getItem("rephq_w")==="1"}catch(e){}
