@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cuvee and Huxley AI Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a confident agency field report, plain and specific, written for an owner
+   IDEA: an answer card a renter sees, checked line by line against the property's own website
+   PICTURE: two scorecards (Cuvee, Huxley) with a light per fact, plus the rank each earned
+   COLOUR and TYPE: SocialDM night indigo, iris and mist, one lime accent; Hanken Grotesk
+   LAYOUT: finding and scorecards first, then sources of error, then the side by side */
+:root{color-scheme:dark;--bg:#0A0914;--band:#14112E;--card:#1E1A4D;--line:#2E2A66;--ink:#F3F4FF;--soft:#B4C3F0;--iris:#4B4FB8;--sky:#7A8FE2;--lime:#C6F24E;--amber:#F2B84E;--red:#F27B6B}
+:root[data-theme=light],:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.55 "Hanken Grotesk",system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(28px,4vw,60px) max(5vw,16px)}
+.wrap{max-width:1180px;margin:0 auto}
+.alt{background:var(--band)}
+h1{font-size:clamp(30px,4.4vw,50px);line-height:1.05;margin:10px 0 14px;text-wrap:balance;font-weight:800}
+h2{font-size:clamp(24px,3vw,34px);line-height:1.1;margin:0 0 10px;text-wrap:balance;font-weight:800}
+h3{font-size:19px;margin:0 0 6px}
+p{margin:0 0 12px;max-width:70ch;color:var(--soft)}
+p strong,li strong{color:var(--ink)}
+.kick{color:var(--lime);font-weight:700;font-size:15px}
+.meta{font-size:14px;color:var(--soft)}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin-top:18px}
+.nav a{color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:9px 12px;font-size:14px;font-weight:600}
+.nav a:hover,.nav a:focus-visible{border-color:var(--lime);outline:none}
+html{scroll-padding-top:24px}
+.hero{background:linear-gradient(160deg,#0A0914 0%,#1E1A4D 100%)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.score{background:var(--card);border:1px solid var(--line);padding:20px}
+.score .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.big{font-size:clamp(40px,6vw,60px);font-weight:800;line-height:1;color:var(--lime)}
+.big small{font-size:20px;color:var(--soft);font-weight:600}
+.facts{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
+.facts li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:10px;align-items:start;font-size:15px;color:var(--soft)}
+.dot{width:14px;height:14px;margin-top:4px}
+.ok{background:var(--lime)}.warn{background:var(--amber)}.bad{background:var(--red)}
+.rank{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:15px}
+.rank b{color:var(--ink)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--soft);margin-top:14px}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.legend i{width:12px;height:12px;display:inline-block}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sky);font-weight:700;font-size:14px}
+td{color:var(--soft)}td:first-child{color:var(--ink);font-weight:600}
+td.us{color:var(--ink)}
+.tag{font-size:13px;font-weight:700;padding:2px 7px;display:inline-block;white-space:nowrap}
+.t-ok{background:var(--lime);color:#0A0914}.t-bad{background:var(--red);color:#0A0914}.t-warn{background:var(--amber);color:#0A0914}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.card{background:var(--card);border:1px solid var(--line);padding:18px}
+.card .n{font-size:34px;font-weight:800;color:var(--lime);line-height:1}
+.card p{font-size:15px;margin:8px 0 0}
+ol.steps{padding-left:22px;color:var(--soft);max-width:75ch}
+ol.steps li{margin-bottom:10px}
+.vs th:nth-child(3),.vs td:nth-child(3){background:rgba(75,79,184,.18)}
+.vs th:nth-child(3){color:var(--lime)}
+.note{font-size:13.5px;color:var(--soft);margin-top:12px}
+.callout{border-left:4px solid var(--lime);background:var(--card);padding:16px 18px;margin-top:18px}
+.callout p{margin:0;color:var(--ink)}
+footer{border-top:1px solid var(--line)}
+footer a{color:var(--sky)}
+@media(max-width:820px){.grid2,.cards{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){table{font-size:13.5px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--sky);font-weight:700}.stack td:empty{display:none}}
+@media print{.nav{display:none}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+
+<header class="band hero">
+<div class="wrap">
+<div class="kick">The SocialDM · LocalLift · Prepared for Pillar Communities</div>
+<h1>ChatGPT gets Cuvee and Huxley mostly right today. The listing sites are the real risk.</h1>
+<p>We checked both communities on November 20, 2026, the way a renter would: we asked ChatGPT about each one and compared every fact in its answer with the property's own website that same day. This page explains what Birdeye's free scan showed, what we found, where wrong answers come from, and how our work compares with what Birdeye sells.</p>
+<div class="grid2" style="margin-top:22px">
+<div class="score">
+<div class="top"><h3>Cuvee Apartments, Glendale</h3><div class="big">6<small> of 7 facts right</small></div></div>
+<ul class="facts" id="cuvee"></ul>
+<div class="rank">Asked for the best luxury apartments near Westgate, ChatGPT named <b>Cuvee #2 of 5</b>, called "Best resort-style amenities".</div>
+</div>
+<div class="score">
+<div class="top"><h3>Huxley Scottsdale</h3><div class="big">6<small> of 7 facts right</small></div></div>
+<ul class="facts" id="huxley"></ul>
+<div class="rank">Asked for the best luxury apartments in North Scottsdale near Scottsdale Quarter and the Loop 101, ChatGPT showed <b>Huxley on its map but left it out of its written top 5</b>. That is the gap to close.</div>
+</div>
+</div>
+<div class="legend"><span><i class="ok"></i>Matches the website</span><span><i class="warn"></i>Came from a listing site, not the website</span><span><i class="bad"></i>Does not match the website</span></div>
+<nav class="nav" aria-label="Sections"><a href="#birdeye">Birdeye's scan</a><a href="#sources">Where wrong facts come from</a><a href="#ours">What we already do</a><a href="#side">Side by side</a><a href="#ask">Before you sign</a><a href="#next">Next steps</a></nav>
+</div>
+</header>
+
+<section class="band alt" id="birdeye">
+<div class="wrap">
+<h2>Birdeye's free scan is a starting point, not a diagnosis</h2>
+<p>The Cuvee screenshot Birdeye sent showed <strong>67% visibility, 40% accuracy and 75% sentiment</strong>, on ChatGPT only. It comes from Birdeye's free AI Visibility Checker, which anyone can run by entering a business name, website and location. Results for Gemini and Perplexity were locked in the free scan.</p>
+<div class="cards">
+<div class="card"><div class="n">?</div><h3>Which questions</h3><p>The scan does not show the questions it asked, how many it asked, or which communities appeared instead.</p></div>
+<div class="card"><div class="n">?</div><h3>Which facts were wrong</h3><p>"40% accuracy" with no list of the wrong facts gives your team nothing to fix.</p></div>
+<div class="card"><div class="n">17</div><h3>Days old</h3><p>Birdeye's email is dated November 3. AI answers and specials can change week to week. Today the Cuvee website shows 11 weeks free, while several listing sites still show 10.</p></div>
+</div>
+<div class="callout"><p>Our read: the accuracy problem is real across the industry, so we do not dismiss it. But a score alone does not fix anything. The fix is making every place AI reads say the same thing as your website, every week.</p></div>
+</div>
+</section>
+
+<section class="band" id="sources">
+<div class="wrap">
+<h2>Where wrong answers come from: the listing sites disagree with your websites</h2>
+<p>AI assistants pull from the big listing sites as well as your website. When those sites show old specials, old rents or the wrong pet rule, that is what a renter can be told. Here is what the listings showed when we checked on November 20.</p>
+<div class="scroll">
+<table class="stack">
+<thead><tr><th>Community</th><th>Fact</th><th>Your website today</th><th>What the listing sites show</th></tr></thead>
+<tbody id="conflicts"></tbody>
+</table>
+</div>
+<p class="note">Listing values were read from the listing pages and search results on November 20, 2026. Most of these values come from listing accounts or the property software feed, which is why one cleanup pass can correct many at once.</p>
+</div>
+</section>
+
+<section class="band alt" id="ours">
+<div class="wrap">
+<h2>What we already do for Cuvee and Huxley</h2>
+<p>Birdeye sells software your team has to run. With us, our team does the work, and each website is read against its Google listing every week.</p>
+<div class="cards">
+<div class="card"><div class="n">5</div><h3>Site Read checks since Oct 20</h3><p>Every week we read each website and its Google listing for specials, prices, fees, pet rules and hours, alternating a full read and a specials check.</p></div>
+<div class="card"><div class="n">13</div><h3>Website issues flagged on Nov 17</h3><p>7 for Cuvee and 6 for Huxley, each written up.</p></div>
+<div class="card"><div class="n">2</div><h3>Full website audits built Nov 2</h3><p>A designed audit for each community, built as part of the Pillar portfolio review.</p></div>
+<div class="card"><div class="n">Daily</div><h3>Review Desk</h3><p>Every new Google review gets a reply drafted in the community's voice.</p></div>
+<div class="card"><div class="n">Weekly</div><h3>Market Survey</h3><p>Competitor rents, specials and fees around each community, so pricing decisions use current market data.</p></div>
+<div class="card"><div class="n">Nov 20</div><h3>Google profile baseline</h3><p>We checked each Google profile's tour booking link against the website on November 20 and will flag what drifts from here.</p></div>
+</div>
+</div>
+</section>
+
+<section class="band" id="side">
+<div class="wrap">
+<h2>Side by side: what Birdeye will pitch, what you have today, and what we propose</h2>
+<p>Birdeye's property management pitch is a set of AI "coworkers": one for AI search, reviews, listings, social, pages, marketing automation and a chatbot, one for resident surveys, insights, competitor tracking, ticketing and reporting, plus texting. Here is how that lines up.</p>
+<div class="scroll">
+<table class="stack vs">
+<thead><tr><th>Area</th><th>Birdeye</th><th>The SocialDM and LocalLift</th></tr></thead>
+<tbody id="vs"></tbody>
+</table>
+</div>
+<p class="note">We could not find prices on Birdeye's public site. The Birdeye figures on this page are third party estimates from 2026 pricing reviews; confirm any quote in writing.</p>
+</div>
+</section>
+
+<section class="band alt" id="ask">
+<div class="wrap">
+<h2>Five questions to ask Birdeye before signing anything</h2>
+<ol class="steps">
+<li><strong>What is the price per community, and the onboarding fee per community?</strong> Third party reviews report $299 to $449 per location per month, plus an estimated $500 to $1,500 per location to onboard.</li>
+<li><strong>What are the term, the cancellation notice and the renewal fee?</strong> Third party pricing reviews report 12 month auto renewing contracts, 90 days written notice, and a renewal "Innovation Fee" of about 8%.</li>
+<li><strong>Who does the work each week?</strong> Software that flags a wrong fact still needs someone to fix the website, the listing and the Google profile.</li>
+<li><strong>How are review requests sent?</strong> Google's policy does not allow asking only satisfied residents for reviews. One of Birdeye's own apartment case studies describes routing unsatisfied residents to management and satisfied ones to review sites. Ask how their setup stays inside Google's rules.</li>
+<li><strong>Which AI engines and how many questions are included?</strong> Their AI search product is billed by the number of questions checked, per community, per engine, and by how often they run.</li>
+</ol>
+</div>
+</section>
+
+<section class="band" id="next">
+<div class="wrap">
+<h2>What we recommend next</h2>
+<ol class="steps">
+<li><strong>Add Cuvee and Huxley to our weekly AI Shortlist and fact tracking.</strong> Each week we would log what ChatGPT and Gemini say about each community, check every fact against the website, and flag anything that drifts. This is the same program our LocalLift communities have.</li>
+<li><strong>Listing accuracy cleanup.</strong> One pass to bring the specials, rents, pet rules and phone numbers on the major listing sites in line with each website, then a weekly watch.</li>
+<li><strong>Close the Huxley gap.</strong> Huxley shows on ChatGPT's map for North Scottsdale but not in its written picks. Our answer coverage work puts specific, consistent facts everywhere AI reads, which improves the odds Huxley is named in the written answer. No one can guarantee placement.</li>
+</ol>
+<div class="callout"><p>Bottom line: Birdeye found a real industry problem with a free scan. We already check both communities against their websites every week. The next step is adding the weekly AI tracking and listing cleanup, without new software for your team to run.</p></div>
+</div>
+</section>
+
+<footer class="band">
+<div class="wrap">
+<p class="meta">Prepared by The SocialDM and LocalLift. Website facts read live on livecuvee.com and huxleyscottsdale.com on November 20, 2026. AI answers collected the same day from ChatGPT, signed out, no personalization.</p>
+<p class="meta">Birdeye sources: <a href="https://birdeye.com/ai-visibility-checker/">Birdeye AI Visibility Checker</a>, <a href="https://birdeye.com/sg/real-estate/property-management/">Birdeye for property management</a>, <a href="https://support.birdeye.com/en/articles/13714993-what-are-search-ai-prompts">Search AI prompts</a>, <a href="https://birdeye.com/case-studies/redstone-residential/">Redstone case study</a>, <a href="https://contractortoolstack.com/software/birdeye/pricing/">Contractor ToolStack pricing review</a>, <a href="https://skillmammoth.com/blog/birdeye-pricing">Skill Mammoth pricing review</a>. Google policy: <a href="https://support.google.com/contributionpolicy/answer/7400114">Google prohibited and restricted content</a>, <a href="https://www.seroundtable.com/google-review-guidelines-update-34201.html">Search Engine Roundtable</a>.</p>
+</div>
+</footer>
+
+<script>
+{
+const cuvee=[["ok","Starting rent: $1,294"],["ok","Two bedroom start: $1,650"],["ok","Special: 11 weeks free plus 6 months free parking"],["ok","Pets: 2 per home, 60 lb limit, $250 deposit, $250 fee, $35 a month"],["ok","Amenities: two pools, two story gym, rooftop, dog park, pet spa"],["ok","Location: by Westgate and State Farm Stadium"],["warn","Phone: led with (833) 775-4597, a listing site number not on the website (it also gave 602-807-4882, which is on the site)"]];
+const huxley=[["ok","Starting rent: $1,664"],["bad","Two bedroom start: said $2,260, website starts at $2,500"],["ok","Special: 11 weeks free on select lease terms"],["ok","Pets: 2 per home, no weight limit, $250 deposit, $250 fee, $50 a month per pet"],["ok","Amenities: pool and spa, fitness and yoga, rooftop deck, dog park, pet spa, work from home offices"],["ok","Location: Raintree Drive and the Loop 101"],["ok","Phone: (480) 771-8082"]];
+const li=a=>a.map(([c,t])=>`<li><span class="dot ${c}" aria-hidden="true"></span><span>${t}</span></li>`).join('');
+document.getElementById('cuvee').innerHTML=li(cuvee);
+document.getElementById('huxley').innerHTML=li(huxley);
+const conflicts=[
+["Cuvee","Special","11 weeks free plus 6 months free parking","RentCafe, ForRent and ApartmentSearch: 10 weeks free. Point2Homes: 50% off rent for 5 months"],
+["Cuvee","Starting rent","$1,294","Zillow and HotPads: from $1,585 (HotPads says the listing was last updated over 4 months ago)"],
+["Cuvee","Pet rule","Dogs allowed up to 60 lb (breed restrictions apply), with a separate large dog area in the dog park","Zillow: large dogs are not allowed"],
+["Cuvee","Phone","Three different numbers are shown on the website itself","Four more on listing sites"],
+["Huxley","Special","11 weeks free on select lease terms","ForRent: 8 weeks free and $1,000. Point2Homes: up to 50% off for 5 months or 10 weeks free"],
+["Huxley","Starting rent","$1,664","ForRent: from $1,723"],
+["Huxley","Pet rent","$50 a month per pet","Zillow: $35 a month for cats"],
+["Huxley","Phone","(480) 771-8082 (footer also shows 480-302-6501)","Apartments.com: (623) 400-3794"],
+["Huxley","Website itself","Floor plans list studios, but headings say one and two bedrooms only; one footer phone link is labeled with Cuvee's name","Not a listing issue: fix on the website"]];
+document.getElementById('conflicts').innerHTML=conflicts.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
+const vs=[
+["AI search","Tracks visibility, accuracy and sentiment scores in its software, billed by questions checked","Proposed: weekly AI Shortlist, what assistants say, each fact checked against your live website, with the fix (not yet running for Cuvee or Huxley)"],
+["Wrong facts","Free scan shows an accuracy score only; ask whether the paid version lists the wrong facts","With AI tracking added: names the wrong fact and where it came from, and hands your team the exact change"],
+["Listings","Software that syncs business details to directories","Proposed: listing accuracy cleanup on specials, rents, pet rules and phones, judged against your website, then a weekly watch"],
+["Website","Builds pages; we found no check of your existing website's facts (confirm with Birdeye)","Site Read every week plus full audits, with each issue written up for your team"],
+["Google profile","Profile and post tools your team runs","Tour booking link checked against the website (baseline set Nov 20), plus the Google listing read inside each Site Read"],
+["Reviews","Review requests, monitoring and reply tools","Review Desk: replies drafted daily in each community's voice, inside Google's rules"],
+["Social","Social posting tool (reported on higher tiers by third party reviews)","Social content made by our team where it is part of your plan"],
+["Market data","Competitor tracking in its customer experience module","Weekly Market Survey: competitor rents, specials and fees"],
+["Who does the work","Your team, inside their software","Our team; you approve what matters"],
+["Price","About $299 to $449 per community per month (third party reports), plus an estimated $500 to $1,500 onboarding per community","Site Read, Review Desk and Market Survey already running at both communities, with website audits built Nov 2; AI tracking and listing cleanup quoted separately"],
+["Contract","Reported 12 month auto renewal, 90 days written notice, about 8% renewal fee","Nothing new to sign to keep today's work"]];
+document.getElementById('vs').innerHTML=vs.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td class="us">${r[2]}</td></tr>`).join('');
+}
+</script>
+</body>
+</html>
