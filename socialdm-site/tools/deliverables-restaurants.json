@@ -1,0 +1,66 @@
+{
+ "heading": "What&rsquo;s inside, for restaurants",
+ "title": "The same system, built for how guests choose where to eat.",
+ "items": [
+  {
+   "icon": "pulse",
+   "name": "Weekly Pulse",
+   "cadence": "Weekly",
+   "text": "A one page read on how your restaurant showed up this week, and the one thing to do next."
+  },
+  {
+   "icon": "trend",
+   "name": "Lift Score",
+   "cadence": "Weekly",
+   "text": "One number that shows whether your restaurant is getting easier to find in your area."
+  },
+  {
+   "icon": "spark",
+   "name": "AI Shortlist",
+   "cadence": "Weekly",
+   "text": "Know whether AI assistants recommend you when people ask where to eat, and who they name instead."
+  },
+  {
+   "icon": "target",
+   "name": "Map Reach",
+   "cadence": "Weekly",
+   "text": "Where your restaurant appears in Google Maps across the neighborhoods your guests come from."
+  },
+  {
+   "icon": "globe",
+   "name": "Site Read",
+   "cadence": "Weekly",
+   "text": "Make sure Google and AI tools describe your menu, hours and services correctly."
+  },
+  {
+   "icon": "calendar",
+   "name": "Daily Presence",
+   "cadence": "Every week",
+   "text": "Fresh posts that show off your food, drinks and specials, written in your voice."
+  },
+  {
+   "icon": "tag",
+   "name": "Market Survey",
+   "cadence": "Monthly",
+   "text": "See what nearby restaurants are doing before it costs you a table."
+  },
+  {
+   "icon": "message",
+   "name": "Review Desk",
+   "cadence": "Ongoing",
+   "text": "Review replies in your voice that turn happy guests into proof for the next one."
+  },
+  {
+   "icon": "chart",
+   "name": "Snapshot",
+   "cadence": "Monthly",
+   "text": "Calls, menu clicks and direction requests from Google, in plain language."
+  },
+  {
+   "icon": "play",
+   "name": "ClearView",
+   "cadence": "Monthly",
+   "text": "Your social report: what posted, what people engaged with and what changes next."
+  }
+ ]
+}

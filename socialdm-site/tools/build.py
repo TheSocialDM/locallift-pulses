@@ -37,7 +37,7 @@ POST_SLUGS = {p['fullUrl'].split('/blog/')[1] for p in d['posts']}
 PAGE_MAP = {'': 'index', '/': 'index', '/contact': 'contact', '/about': 'about', '/locallift': 'locallift', '/blog': 'blog',
   '/research-insights': 'research-insights', '/multifamily-marketing-agency': 'multifamily-marketing-agency',
   '/apartment-seo-for-multifamily-communities': 'apartment-seo-for-multifamily-communities', '/medical': 'medical',
-  '/hospitality': 'hospitality', '/enterprise': 'enterprise', '/new-page': 'real-estate', '/real-estate': 'real-estate', '/med-spa': 'med-spa', '/hair-salon': 'hair-salon',
+  '/hospitality': 'hospitality', '/enterprise': 'enterprise', '/new-page': 'real-estate', '/real-estate': 'real-estate', '/med-spa': 'med-spa', '/hair-salon': 'hair-salon', '/restaurants': 'restaurants',
   '/2026-multifamily-visibility-report': '2026-multifamily-visibility-report', '/montage-tigard': 'montage-tigard',
   '/pillar-communities': 'pillar-communities', '/home': 'index'}
 

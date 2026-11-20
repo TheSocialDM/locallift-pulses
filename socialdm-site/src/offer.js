@@ -8,7 +8,7 @@ if(/^(contact|thank-you|privacy|terms)$/.test(page))return;
 var KEY="sdmOffer",now=Date.now();
 try{var v=localStorage.getItem(KEY);if(v==="done"||(v&&now-+v<30*864e5))return}catch(e){}
 var icon=(PROD?"/":BASE)+"logo.png";
-var pre=/real-estate/.test(page)?"Real Estate":/medical/.test(page)?"Medical":/med-spa/.test(page)?"Med Spa":/hair-salon/.test(page)?"Hair Salon":/hospitality/.test(page)?"Hospitality":/enterprise/.test(page)?"Portfolios":/multifamily|locallift|apartment/.test(page)?"Multifamily":"";
+var pre=/real-estate/.test(page)?"Real Estate":/medical/.test(page)?"Medical":/med-spa/.test(page)?"Med Spa":/hair-salon/.test(page)?"Hair Salon":/restaurants/.test(page)?"Restaurant":/hospitality/.test(page)?"Hospitality":/enterprise/.test(page)?"Portfolios":/multifamily|locallift|apartment/.test(page)?"Multifamily":"";
 var OPTS=["Multifamily","Real Estate","Medical","Med Spa","Hair Salon","Hospitality","Portfolios","Other"];
 var css=".sdmo-bg{position:fixed;inset:0;z-index:60;background:rgba(6,5,16,.62);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);display:grid;place-items:center;padding:16px;opacity:0;transition:opacity .35s}"+
 ".sdmo-bg.in{opacity:1}"+

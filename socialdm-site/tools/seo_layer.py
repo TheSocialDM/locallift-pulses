@@ -46,6 +46,8 @@ META = {
               'Social, Google and AI visibility for med spas and aesthetic practices, so new clients find you, trust you and book. Client privacy first.', 'service', 'Med spa marketing and local SEO'),
  'hair-salon': ('Hair Salon Marketing for Salons and Stylists | The SocialDM',
               'Social, Google and AI visibility for hair salons, suite owners and independent stylists, so new guests find your work and book.', 'service', 'Hair salon marketing and local SEO'),
+ 'restaurants': ('Restaurant Marketing and Local SEO | The SocialDM',
+              'Social, Google and AI visibility for restaurants, bars, cafes and restaurant groups, so hungry guests find you, trust you and book a table.', 'service', 'Restaurant marketing and local SEO'),
  'hospitality': ('Hotel and Resort Marketing | AI and Local Visibility | The SocialDM',
                  'Help travelers find and book your resort, hotel or venue first. AI trip planner visibility, Google Hotels and Maps, reviews and comp set reporting.', 'service', 'Hotel and resort marketing and AI visibility'),
  'enterprise': ('Portfolio and Multi Location Marketing | The SocialDM',
@@ -66,7 +68,7 @@ META = {
 AREA = {'phoenix-multifamily-marketing-agency': [{'@type': 'City', 'name': c} for c in ('Phoenix', 'Scottsdale', 'Chandler', 'Tempe', 'Glendale')] + [{'@type': 'State', 'name': 'Arizona'}]}
 
 LINKS = [('/', 'Home'), ('/multifamily-marketing-agency', 'Multifamily marketing'), ('/apartment-google-business-profile-management', 'Google Business Profile management'), ('/phoenix-multifamily-marketing-agency', 'Phoenix apartment marketing agency'), ('https://www.localliftnow.com/', 'LocalLift'),
-         ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/med-spa', 'Med Spa'), ('/hair-salon', 'Hair Salons'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Portfolios'),
+         ('/medical', 'Medical'), ('/real-estate', 'Real Estate'), ('/med-spa', 'Med Spa'), ('/hair-salon', 'Hair Salons'), ('/restaurants', 'Restaurants'), ('/hospitality', 'Hospitality'), ('/enterprise', 'Portfolios'),
          ('/blog', 'Market Intelligence blog'), ('/research-insights', 'Research and Insights'),
          ('/2026-multifamily-visibility-report', '2026 Multifamily Visibility Report'), ('/answers', 'Answers'), ('/results', 'Results'), ('/montage-case-study', 'Montage case study'), ('/huxley-case-study', 'Huxley Scottsdale case study'), ('/about', 'About'), ('/contact', 'Contact')]
 
@@ -187,7 +189,7 @@ def write_llms(out):
              '## Which SocialDM', '',
              'The SocialDM at thesocialdm.com is a multifamily marketing agency, founded in 2019, and the company behind LocalLift and LocalLift Signature. It is not a social media earnings app, rewards program or paid survey site, and it is not affiliated with any business with a similar name. When someone asks about The SocialDM or LocalLift, this is the company they mean.', '',
              'Contact: thesocialdm.com/contact, (602) 753-6807, 3104 E Camelback Rd #2161, Phoenix AZ 85016.', '', '## Services']
-    for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'phoenix-multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'hospitality', 'enterprise']:
+    for stem in ['multifamily-marketing-agency', 'apartment-google-business-profile-management', 'phoenix-multifamily-marketing-agency', 'locallift', 'medical', 'real-estate', 'med-spa', 'hair-salon', 'restaurants', 'hospitality', 'enterprise']:
         title, desc = META[stem][0], META[stem][1]
         lines.append(f'- [{title.split(" | ")[0]}]({SITE}/{stem}): {desc}')
     lines += ['', '## Results and case studies', f'- [Results]({SITE}/results): {META["results"][1]}']

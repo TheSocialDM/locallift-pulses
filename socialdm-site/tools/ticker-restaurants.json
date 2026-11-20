@@ -1,0 +1,65 @@
+{
+ "heading": "Built for restaurants and bars",
+ "items": [
+  {
+   "icon": "star",
+   "name": "",
+   "text": "Independent Restaurants"
+  },
+  {
+   "icon": "spark",
+   "name": "",
+   "text": "Restaurant Groups"
+  },
+  {
+   "icon": "pin",
+   "name": "",
+   "text": "Bars and Lounges"
+  },
+  {
+   "icon": "calendar",
+   "name": "",
+   "text": "Cafes and Coffee"
+  },
+  {
+   "icon": "message",
+   "name": "",
+   "text": "Brunch Spots"
+  },
+  {
+   "icon": "trend",
+   "name": "",
+   "text": "Fine Dining"
+  },
+  {
+   "icon": "users",
+   "name": "",
+   "text": "Fast Casual"
+  },
+  {
+   "icon": "flag",
+   "name": "",
+   "text": "Breweries"
+  },
+  {
+   "icon": "send",
+   "name": "",
+   "text": "Pizzerias"
+  },
+  {
+   "icon": "building",
+   "name": "",
+   "text": "Taquerias"
+  },
+  {
+   "icon": "key",
+   "name": "",
+   "text": "Wine Bars"
+  },
+  {
+   "icon": "star",
+   "name": "",
+   "text": "Private Events"
+  }
+ ]
+}
