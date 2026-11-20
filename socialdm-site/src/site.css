@@ -325,3 +325,9 @@ h1,h2,h3{letter-spacing:-.035em}
 
 main{overflow-x:clip}
 @media (max-width:600px){.pillrow{gap:12px 20px;margin-top:40px;padding:0 8px}.pillrow span{font-size:11px;letter-spacing:.12em;padding:0}.pillrow span+span::before{display:none}}
+/* Long dropdowns: open wide in two columns so every item fits on iPad and laptop screens, and scroll inside if a window is still too short */
+.menu:has(>a:nth-child(8)){grid-template-columns:repeat(2,minmax(232px,1fr));min-width:500px;column-gap:4px}
+.menu{max-height:calc(100vh - 100px);max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.dd::after{content:"";position:absolute;left:-18px;right:-18px;top:100%;height:18px;display:none}
+.dd.open::after{display:block}
+@media (hover:hover){.dd:hover::after{display:block}}
