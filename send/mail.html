@@ -14,7 +14,9 @@ a.b{background:#2f6fed;color:#fff}button{background:#fff;color:#2f6fed;box-shado
    and that same tap copies the email with its named link. */
 (function(){
 var q={};location.hash.slice(1).split("&").forEach(function(p){if(!p)return;var i=p.indexOf("=");q[decodeURIComponent(p.slice(0,i))]=decodeURIComponent(p.slice(i+1));});
-if(!q.t&&q.h){var tmp=document.createElement("div");tmp.innerHTML=q.h;tmp.querySelectorAll("a[href]").forEach(function(a){if(a.textContent.trim()!==a.href)a.textContent=a.textContent+" ("+a.href+")";});tmp.querySelectorAll("br").forEach(function(b){b.replaceWith("\n");});tmp.querySelectorAll("p,div,li").forEach(function(b){b.append("\n\n");});q.t=tmp.textContent.replace(/\n{3,}/g,"\n\n").trim();}
+if(!q.t&&q.h){var tmp=document.createElement("div");tmp.innerHTML=q.h;tmp.querySelectorAll("a[href]").forEach(function(a){/* Nov 20 2026: link name only, never a raw URL */});tmp.querySelectorAll("br").forEach(function(b){b.replaceWith("\n");});tmp.querySelectorAll("p,div,li").forEach(function(b){b.append("\n\n");});q.t=tmp.textContent.replace(/\n{3,}/g,"\n\n").trim();}
+/* Nov 20 2026, Michael: client emails never paste with a long raw link. */
+if(q.t)q.t=q.t.replace(/\s*\((https?:\/\/[^)\s]+)\)/g,"");
 var e=encodeURIComponent,parts=[];
 if(q.cc)parts.push("cc="+e(q.cc));if(q.bcc)parts.push("bcc="+e(q.bcc));if(q.s)parts.push("subject="+e(q.s));
 var href="mailto:"+(q.to||"")+(parts.length?"?"+parts.join("&"):"");
@@ -24,6 +26,8 @@ if(q.s){document.getElementById("s").textContent=q.s;document.title=q.s;}
 var WRAP=function(h){return '<div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;color:#000;background:transparent">'+String(h).replace(/\s(style|class|bgcolor|id)="[^"]*"/gi,"")+"</div>";};
 function copy(done){
  if(!(q.t||q.h)){done(false);return;}
+ /* Rich copy first, inside the tap, so Mail always gets the named clickable link. */
+ if(q.h&&fb()){done(true);return;}
  try{if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write&&q.h){navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([WRAP(q.h)],{type:"text/html"}),"text/plain":new Blob([q.t||""],{type:"text/plain"})})]).then(function(){done(true);},function(){done(fb());});return;}}catch(x){}
  done(fb());
 }
