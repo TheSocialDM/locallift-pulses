@@ -1,41 +1,38 @@
 {
  "property": "Montage",
  "city": "Tigard, Oregon",
- "updated": "2026-11-19T05:45:41-07:00",
- "updatedLabel": "Nov 19, 5:45 am Phoenix time",
+ "updated": "2026-11-20T05:48:19-07:00",
+ "updatedLabel": "Nov 20, 5:48 am Phoenix time",
  "feed": [
   {
+   "src": "Your site · montagetigard.com",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "Your 2 beds now start at $2,150",
+   "body": "Read today on montagetigard.com: Two Bedroom C1 is now $2,150 (was $2,250, 2 left), so roommates split it at $1,075 each. One Bedroom A1 is now $1,795 (1 left). The banner now says price drops plus 2 months free plus $1,000 Look & Lease on select 2 bedrooms, offer ends Nov 30.",
+   "action": "Lead every 2 bedroom tour and call with the new $2,150 and the offer through Nov 30."
+  },
+  {
    "src": "Rival watch · their own sites",
-   "date": "Nov 19",
+   "date": "Nov 20",
    "tone": "info",
-   "title": "Mercato Grove's 1 beds now start at $1,682",
-   "body": "Read today on greystar.com: their lowest 1 bed is now $1,682 (plan C3, 12 month lease, available Dec 17), below our $1,805. Their 2 beds now start at $3,050. Still no special posted.",
-   "action": "On tours, lead with our 2 bedrooms and the 2 months free plus $1,000 on select 2 bedrooms through Nov 30."
+   "title": "Mercato Grove's 1 beds are back above ours",
+   "body": "Read today on greystar.com: their lowest 1 bed is now $2,055 (plan B5, 12 month lease, available now), above our $1,795. Their 2 beds now start at $3,463. No special posted.",
+   "action": "Our 1 and 2 bedrooms both start lower than Mercato Grove today."
   },
   {
-   "src": "Google reviews",
-   "date": "Nov 12",
-   "tone": "warn",
-   "title": "New 1 star review about upkeep",
-   "body": "A resident left a 1 star review about property maintenance on Nov 12. A reply was posted on Nov 13. Your rating now reads 4.7 on 34 reviews.",
-   "action": "Invite this resident to talk with the office, and keep asking every resident at the usual moments.",
-   "who": "Sean M.",
-   "link": "https://maps.google.com/maps?cid=967661996940431943",
-   "linkLabel": "Open Montage's reviews on Google"
-  },
-  {
-   "src": "Rival watch · map scan",
-   "date": "Nov 13",
+   "src": "MoveInLocal guide · last 7 days",
+   "date": "Nov 14 to 20",
    "tone": "info",
-   "title": "The Steward leads by one review",
-   "body": "The Steward has 35 Google reviews to your 34. You lead on rating, 4.7 to 4.6. You are level on the map, inside the top 20 at 26 of 49 points each.",
-   "action": "Ask for a review at every move in and every closed work order."
+   "title": "4 visits to your guide",
+   "body": "All 4 came on Nov 16. No Call, Tour or Apply taps yet.",
+   "action": ""
   },
   {
    "src": "AI answers · weekly panel",
    "date": "Nov 13",
    "tone": "good",
-   "title": "Named in 39 of 96 renter answers",
+   "title": "Named in 39 of 96 AI answers",
    "body": "Up from 34 on Nov 6. The Steward was named in 34. All three assistants leave you out on Lake Oswego, the Nike campus and Washington Square questions.",
    "action": ""
   },
@@ -48,12 +45,15 @@
    "action": ""
   },
   {
-   "src": "MoveInLocal guide · last 7 days",
-   "date": "Nov 13 to 19",
-   "tone": "info",
-   "title": "4 visits to your guide",
-   "body": "All 4 came on Nov 16. No Call, Tour or Apply taps yet.",
-   "action": ""
+   "src": "Google reviews",
+   "date": "Nov 12",
+   "tone": "warn",
+   "title": "New 1 star review about upkeep",
+   "body": "A resident left a 1 star review about property maintenance on Nov 12. A reply was posted on Nov 13. Your rating now reads 4.7 on 34 reviews.",
+   "action": "Invite this resident to talk with the office, and keep asking every resident at the usual moments.",
+   "who": "Sean M.",
+   "link": "https://maps.google.com/maps?cid=967661996940431943",
+   "linkLabel": "Open Montage's reviews on Google"
   }
  ],
  "score": {
@@ -171,20 +171,20 @@
  "asks": {
   "sent": 0,
   "opened": 3,
-  "through": "Nov 19"
+  "through": "Nov 20"
  },
  "shortLink": "moveinlocal.com/review/montage",
  "talk": {
-  "checked": "Nov 19",
-  "checkedIso": "2026-11-19",
+  "checked": "Nov 20",
+  "checkedIso": "2026-11-20",
   "offer": "Select 2 bedrooms: 2 months free plus a $1,000 Look & Lease bonus, through Nov 30.",
   "prices": [
    [
-    "$1,115",
+    "$1,075",
     "each, roommates on a 2 bed"
    ],
    [
-    "$1,805",
+    "$1,795",
     "1 bedroom from"
    ],
    [
@@ -193,13 +193,7 @@
    ]
   ]
  },
- "followups": [
-  {
-   "title": "Reach out to Sean M.",
-   "body": "A 1 star review about property upkeep came in on Nov 12, and a reply is posted. A quick call or note from the office can help.",
-   "due": "Today"
-  }
- ],
+ "followups": [],
  "occupancy": null,
  "snapIdeas": {
   "month": "November",
@@ -247,8 +241,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 19",
-  "checkedIso": "2026-11-19",
+  "checked": "Nov 20",
+  "checkedIso": "2026-11-20",
   "items": [
    {
     "name": "The Overland",
@@ -256,7 +250,7 @@
     "special": "Up to 6 weeks free on select homes and lease terms",
     "from": [
      [
-      "$1,473",
+      "$1,505",
       "studio"
      ],
      [
@@ -280,13 +274,13 @@
      [
       "1 bed from",
       "$1,467",
-      "$1,805",
+      "$1,795",
       "them"
      ],
      [
       "2 bed from",
       "$2,075",
-      "$2,230",
+      "$2,150",
       "them"
      ],
      [
@@ -317,8 +311,8 @@
     "basis": "Their prices: lowest base rent for a 12 month lease on their own site. Other fees apply on top.",
     "url": "https://www.livetheoverland.com/floorplans",
     "feesChecked": "Nov 16",
-    "checked": "Nov 19",
-    "checkedIso": "2026-11-19"
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
    },
    {
     "name": "The Steward",
@@ -346,13 +340,13 @@
      [
       "1 bed from",
       "$1,699",
-      "$1,805",
+      "$1,795",
       "them"
      ],
      [
       "2 bed from",
       "$1,899",
-      "$2,230",
+      "$2,150",
       "them"
      ],
      [
@@ -383,8 +377,8 @@
     "basis": "Their prices: lowest base rent listed. Lease term not shown.",
     "url": "https://bethesteward.com/floorplans/",
     "feesChecked": "Nov 16",
-    "checked": "Nov 19",
-    "checkedIso": "2026-11-19"
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
    },
    {
     "name": "Mercato Grove",
@@ -392,16 +386,16 @@
     "special": "No special posted on their site",
     "from": [
      [
-      "$1,682",
+      "$2,055",
       "1 bed"
      ],
      [
-      "$3,050",
+      "$3,463",
       "2 bed"
      ]
     ],
     "fees": "$50 application, $500 deposit, pets $300 deposit plus $55 a month, parking $185 to $235 a month",
-    "tip": "No special posted today. Their lowest 1 bed is now $1,682, under our $1,805, but their 2 beds start at $3,050 and ours at $2,230, plus 2 months free and $1,000 on select 2 bedrooms through Nov 30.",
+    "tip": "No special posted today. Our 1 bedrooms start at $1,795 to their $2,055, and our 2 bedrooms at $2,150 to their $3,463, plus 2 months free and $1,000 on select 2 bedrooms through Nov 30.",
     "vs": [
      [
       "2 bed special",
@@ -411,14 +405,14 @@
      ],
      [
       "1 bed from",
-      "$1,682",
-      "$1,805",
-      "them"
+      "$2,055",
+      "$1,795",
+      "us"
      ],
      [
       "2 bed from",
-      "$3,050",
-      "$2,230",
+      "$3,463",
+      "$2,150",
       "us"
      ],
      [
@@ -449,19 +443,19 @@
     "basis": "Their prices: lowest base rent for a 12 month lease on greystar.com (base rent and total match on that listing).",
     "url": "https://www.greystar.com/mercato-grove-apartments-lake-oswego-or/p_17860",
     "feesChecked": "Nov 16",
-    "checked": "Nov 19",
-    "checkedIso": "2026-11-19"
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
    }
   ],
   "us": {
    "special": "Select 2 beds: 2 months free plus $1,000 Look & Lease, ends Nov 30",
    "from": [
     [
-     "$1,805",
+     "$1,795",
      "1 bed"
     ],
     [
-     "$2,230",
+     "$2,150",
      "2 bed"
     ]
    ],
@@ -481,34 +475,34 @@
   },
   "changes": [
    {
-    "id": "2026-11-19-mercato-1bed",
+    "id": "2026-11-20-mercato-1bed",
     "rival": "Mercato Grove",
     "row": "1 bed from",
-    "from": "$2,260",
-    "to": "$1,682",
-    "fromLabel": "Lowest was",
-    "flip": true,
-    "verified": "Nov 19",
-    "verifiedIso": "2026-11-19",
-    "src": "greystar.com",
-    "headline": "Mercato Grove's 1 beds now start at $1,682",
-    "detail": "Plan C3, 603 sq ft, 12 month lease, available Dec 17. Now $123 under our 1 bed on base rent.",
-    "say": "Their 1 bedroom does start lower right now. Our 2 bedrooms start at $2,230 to their $3,050, and select 2 bedrooms have 2 months free plus $1,000 through Nov 30. Want to see both side by side?"
-   },
-   {
-    "id": "2026-11-19-mercato-2bed",
-    "rival": "Mercato Grove",
-    "row": "2 bed from",
-    "from": "$3,310",
-    "to": "$3,050",
+    "from": "$1,682",
+    "to": "$2,055",
     "fromLabel": "Lowest was",
     "flip": false,
-    "verified": "Nov 19",
-    "verifiedIso": "2026-11-19",
+    "verified": "Nov 20",
+    "verifiedIso": "2026-11-20",
     "src": "greystar.com",
-    "headline": "Mercato Grove's 2 beds now start at $3,050",
-    "detail": "New lowest plan: F2, 1,016 sq ft, 12 month lease. Still above our $2,230.",
-    "say": "Our 2 bedrooms start at $2,230, and select 2 bedrooms have 2 months free plus $1,000 through Nov 30."
+    "headline": "Mercato Grove's 1 beds now start at $2,055",
+    "detail": "Plan B5, 590 sq ft, 12 month lease, available now. The C3 home that was $1,682 now lists at $2,241. Our 1 bed from $1,795 is lower again.",
+    "say": "Our 1 bedrooms start at $1,795, and select 2 bedrooms have 2 months free plus $1,000 through Nov 30. Want to see both side by side?"
+   },
+   {
+    "id": "2026-11-20-mercato-2bed",
+    "rival": "Mercato Grove",
+    "row": "2 bed from",
+    "from": "$3,050",
+    "to": "$3,463",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "verified": "Nov 20",
+    "verifiedIso": "2026-11-20",
+    "src": "greystar.com",
+    "headline": "Mercato Grove's 2 beds now start at $3,463",
+    "detail": "Plan F1, 1,075 sq ft, 12 month lease, available now. Our 2 beds start at $2,150.",
+    "say": "Our 2 bedrooms start at $2,150, and select 2 bedrooms have 2 months free plus $1,000 through Nov 30."
    },
    {
     "id": "2026-11-19-overland-2bed",
@@ -522,7 +516,7 @@
     "verifiedIso": "2026-11-19",
     "src": "livetheoverland.com",
     "headline": "The Overland's 2 beds now start at $2,075",
-    "detail": "Two Bedroom A, base rent for a 12 month lease. Still under our $2,230 on base rent.",
+    "detail": "Two Bedroom A, base rent for a 12 month lease. Still under our $2,150 on base rent.",
     "say": "Their 2 bedroom base rent starts a little lower. On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, a $400 deposit and $35 pet rent."
    },
    {
@@ -552,8 +546,8 @@
     "verifiedIso": "2026-11-18",
     "src": "greystar.com",
     "headline": "Mercato Grove no longer posts a special",
-    "detail": "No special on greystar.com or mercatogrove.com today. Lowest 1 bed now $2,260, 2 bed $3,310 base rent, 12 months.",
-    "say": "On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, and our 1 bedrooms start at $1,805."
+    "detail": "No special on greystar.com or mercatogrove.com when read on Nov 18.",
+    "say": "On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, and our 1 bedrooms start at $1,795."
    },
    {
     "id": "2026-11-16-steward-1bed",
@@ -566,7 +560,7 @@
     "verifiedIso": "2026-11-16",
     "src": "bethesteward.com",
     "headline": "The Steward's 1 beds now start at $1,699",
-    "detail": "New lowest plan: 1 Bedroom-C, 700 sq ft. Now $106 under our 1 bed on base rent.",
+    "detail": "New lowest plan: 1 Bedroom-C, 700 sq ft. Now $96 under our 1 bed on base rent.",
     "say": "Their 1 bedroom does start a little lower right now on base rent. On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, and pet rent here is just $35. Want to see both side by side?",
     "fromLabel": "Lowest was"
    }

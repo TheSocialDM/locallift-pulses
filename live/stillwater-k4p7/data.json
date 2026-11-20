@@ -1,8 +1,8 @@
 {
  "property": "Stillwater Lakes",
  "city": "Kissimmee, Florida",
- "updated": "2026-11-19T15:30:00-07:00",
- "updatedLabel": "Nov 19, 3:30 pm Phoenix time",
+ "updated": "2026-11-20T05:48:19-07:00",
+ "updatedLabel": "Nov 20, 5:48 am Phoenix time",
  "rv": {
   "rating": "4.2",
   "count": "19",
@@ -21,10 +21,17 @@
   },
   {
    "src": "Rival watch · their own sites",
-   "date": "Nov 19",
+   "date": "Nov 20",
    "tone": "info",
    "title": "Cielo View is posting two months free",
-   "body": "Read today on cieloviewapts.com: \"Two Months FREE For a Limited Time!\" Their 1 beds start at $1,499 base rent ($1,628 with WiFi and mandatory fees). Lease term not shown."
+   "body": "Still posted on cieloviewapts.com on Nov 20: \"Two Months FREE For a Limited Time!\" Their 1 beds start at $1,499 base rent ($1,628 with WiFi and mandatory fees). Lease term not shown."
+  },
+  {
+   "src": "MoveInLocal guide · last 7 days",
+   "date": "Nov 14 to 20",
+   "tone": "info",
+   "title": "4 visits to your guide",
+   "body": "2 on Nov 16, 1 on Nov 18 and 1 on Nov 19. One Apply tap on Nov 16."
   },
   {
    "src": "Weekly Pulse · Google Maps",
@@ -156,12 +163,12 @@
  "asks": {
   "sent": 0,
   "opened": 0,
-  "through": "Nov 19"
+  "through": "Nov 20"
  },
  "shortLink": "moveinlocal.com/review/stillwater-lakes",
  "talk": {
-  "checked": "Nov 19",
-  "checkedIso": "2026-11-19",
+  "checked": "Nov 20",
+  "checkedIso": "2026-11-20",
   "offer": "2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2.",
   "prices": [
    [
@@ -226,8 +233,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 19",
-  "checkedIso": "2026-11-19",
+  "checked": "Nov 20",
+  "checkedIso": "2026-11-20",
   "items": [
    {
     "name": "Cielo View",
@@ -292,8 +299,8 @@
     "basis": "Their prices: lowest base rent on their own site. Lease term not shown. Ask what term they were quoted.",
     "url": "https://cieloviewapts.com/floorplans/",
     "feesChecked": "Nov 19",
-    "checked": "Nov 19",
-    "checkedIso": "2026-11-19"
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
    },
    {
     "name": "The Jamison",
@@ -362,8 +369,8 @@
     "basis": "Their prices: lowest base rent on greystar.com. Mandatory monthly costs are added on top.",
     "url": "https://www.greystar.com/the-jamison-kissimmee-fl/p_16895",
     "feesChecked": "Nov 19",
-    "checked": "Nov 19",
-    "checkedIso": "2026-11-19"
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
    },
    {
     "name": "Mosaic at Lake Toho",
@@ -375,11 +382,11 @@
       "studio"
      ],
      [
-      "$1,448",
+      "$1,443",
       "1 bed"
      ],
      [
-      "$1,710",
+      "$1,704",
       "2 bed"
      ]
     ],
@@ -400,13 +407,13 @@
      ],
      [
       "1 bed from",
-      "$1,448",
+      "$1,443",
       "$1,552",
       "them"
      ],
      [
       "2 bed from",
-      "$1,710",
+      "$1,704",
       "$1,902",
       "them"
      ],
@@ -432,8 +439,8 @@
     "basis": "Their prices: lowest rent on an 18 month lease on their own site.",
     "url": "https://www.advenirliving.com/laketoho/kissimmee/mosaic-at-lake-toho/conventional/",
     "feesChecked": "Nov 19",
-    "checked": "Nov 19",
-    "checkedIso": "2026-11-19"
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
    }
   ],
   "us": {
@@ -471,7 +478,38 @@
    "ends": "no end date posted",
    "basis": "Our special is on a 15 month lease. Lease terms differ by community, so confirm the term before quoting a difference."
   },
-  "changes": []
+  "changes": [
+   {
+    "id": "2026-11-20-mosaic-1bed",
+    "rival": "Mosaic at Lake Toho",
+    "row": "1 bed from",
+    "from": "$1,448",
+    "to": "$1,443",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "verified": "Nov 20",
+    "verifiedIso": "2026-11-20",
+    "src": "advenirliving.com",
+    "headline": "Mosaic's 1 beds now start at $1,443",
+    "detail": "Broadway (A1), 668 sq ft, on an 18 month lease. Was $1,448. Still under our $1,552.",
+    "say": "Their posted prices are on an 18 month lease. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
+   },
+   {
+    "id": "2026-11-20-mosaic-2bed",
+    "rival": "Mosaic at Lake Toho",
+    "row": "2 bed from",
+    "from": "$1,710",
+    "to": "$1,704",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "verified": "Nov 20",
+    "verifiedIso": "2026-11-20",
+    "src": "advenirliving.com",
+    "headline": "Mosaic's 2 beds now start at $1,704",
+    "detail": "Beaumont (B1), 966 sq ft, on an 18 month lease. Was $1,710. Still under our $1,902.",
+    "say": "Their posted prices are on an 18 month lease. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
+   }
+  ]
  },
  "uploadUrl": "https://www.dropbox.com/request/8q56wzvp1qlgbasz0b5t",
  "dbxFolder": "Stillwater Lakes",
