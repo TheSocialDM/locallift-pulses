@@ -557,7 +557,9 @@ drawRems();drawFeed();
  const ua=navigator.userAgent,DEV=/iPhone/.test(ua)?"iPhone":/iPad/.test(ua)?"iPad":/Android/.test(ua)?"Android":/Mac/.test(ua)?"Mac":/Windows/.test(ua)?"Windows":"Other";
  const curTab=()=>VIEWS2.includes(location.hash.slice(1))?location.hash.slice(1):"today";
  const VIEWS2=["today","pipeline","earn","playbook"];
- window.track=(event,detail="",alert=0)=>{try{const b=new URLSearchParams({event,detail:String(detail).slice(0,140),rep:REP,tab:curTab(),device:DEV,mode:MODE,secs:Math.round((Date.now()-T0)/1000),sid:SID,ua:ua.slice(0,180),alert:alert?"1":"0"});
+ let ME=false;try{if(/[?&]me=1/.test(location.search))localStorage.setItem("rephq_me","1");ME=localStorage.getItem("rephq_me")==="1"}catch(e){}
+ const LIVE=location.hostname==="thesocialdm.github.io"&&!ME;
+ window.track=(event,detail="",alert=0)=>{if(!LIVE)return;try{const b=new URLSearchParams({event,detail:String(detail).slice(0,140),rep:REP,tab:curTab(),device:DEV,mode:MODE,secs:Math.round((Date.now()-T0)/1000),sid:SID,ua:ua.slice(0,180),alert:alert?"1":"0"});
   fetch(HOOK,{method:"POST",mode:"no-cors",body:b,keepalive:true}).catch(()=>{})}catch(e){}};
  const today=new Date().toLocaleDateString("en-CA"),last=store.get("rephq_lastopen");
  track(MODE==="Home screen app"&&!store.get("rephq_installed")?"opened Rep HQ from her home screen":"opened Rep HQ",last?"last open "+last:"first open on this device",last!==today);store.set("rephq_lastopen",today);
