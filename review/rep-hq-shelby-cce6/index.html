@@ -176,6 +176,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 .zs{display:grid;gap:6px;margin-top:16px}.zs label{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#c4c4cc;font-size:14px}.zs label b{color:#fff}
 .zs input{width:100%;accent-color:#7c5cff;height:44px}.tick{display:flex;justify-content:space-between;font-size:12px;color:#8e8e98;margin:-6px 0 10px}
 [hidden]{display:none!important}
+.brand span{white-space:nowrap}.mv b{white-space:nowrap}.mv .et{white-space:nowrap}.feed .f button{align-self:center}
 .tdo{display:flex;gap:14px;align-items:flex-start}.tdo .body{flex:1}
 .chk{flex:none;width:34px;height:34px;min-height:34px;padding:0;border-radius:50%;background:transparent;border:2.5px solid var(--line);display:grid;place-items:center;margin-top:2px;transition:background .25s,border-color .25s,transform .2s}
 .chk svg{width:18px;height:18px}.chk path{stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;stroke-dashoffset:24}
@@ -215,7 +216,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 <div class="wrap">
 <header>
 <svg class="mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="#0d0d10"/><circle cx="17" cy="17" r="10" fill="none" stroke="#4c9dff" stroke-width="3.2"/><circle cx="17" cy="17" r="4.5" fill="none" stroke="#34d399" stroke-width="3.2"/></svg>
-<div class="brand"><b>Rep HQ</b><span>LocalLift partner · Shelby Raabe</span></div>
+<div class="brand"><b>Rep HQ</b><span>Partner · Shelby Raabe</span></div>
 <nav class="seg" aria-label="Sections"><a href="#today">Today</a><a href="#pipeline">Pipeline</a><a href="#earn">Earnings</a><a href="#playbook">Playbook</a></nav>
 <span class="streak" id="streak" title="Days in a row you checked off a move"><svg viewBox="0 0 24 24" fill="#ff7a59" aria-hidden="true"><path d="M12 2c1 4 5 5.5 5 11a5 5 0 0 1-10 0c0-2.5 1.2-4 2.5-5 .2 2 1.2 3 2.3 3C11 8 11 5 12 2z"/></svg><span id="streakN">0</span></span><button class="bell" id="bell" aria-label="Alerts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg><span class="badge" id="badge">0</span></button>
 </header>
@@ -227,7 +228,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 <div class="card objtop"><div class="top"><div><h2>Objections you'll hear today</h2><p class="why">Tap one to see what to say. Built for Dr. Zhubi.</p></div></div><div class="ob" id="obTop"></div></div>
 <div class="grid" style="margin:0 0 16px">
 <div class="card c8"><div class="top"><div><h2>Today's moves</h2><p class="why">Each one has the message written for you. Tap the circle when it's done.</p></div></div>
-<div class="prog"><svg viewBox="0 0 56 56" aria-hidden="true"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#2f6bff"/></linearGradient></defs><circle class="bg" cx="28" cy="28" r="24"/><circle class="fg" id="progFg" cx="28" cy="28" r="24" stroke-dasharray="150.8" stroke-dashoffset="150.8"/></svg><div><b id="progN">0 of 3 done</b><span id="progS">Every move you check off is logged for Michael.</span></div></div>
+<div class="prog"><svg viewBox="0 0 56 56" aria-hidden="true"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#2f6bff"/></linearGradient></defs><circle class="bg" cx="28" cy="28" r="24"/><circle class="fg" id="progFg" cx="28" cy="28" r="24" stroke-dasharray="150.8" stroke-dashoffset="150.8"/></svg><div><b id="progN">0 of 3 done</b><span id="progS">Every move you check off counts toward your streak.</span></div></div>
 <div id="tasks"></div></div>
 <div class="card c4"><h2>Quote of the day</h2><p class="quote" id="quote"></p><div class="qby" id="qby"></div><p class="why" style="margin-top:14px"><b style="color:var(--ink)">Tip:</b> <span id="tip"></span></p>
 </div>
@@ -247,13 +248,13 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 </div>
 
 
-<div class="card install" id="install" hidden style="margin-top:16px"><svg class="ap" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#ffffff2e"/><path d="M22 10v16M15 17l7-7 7 7M13 24v8h18v-8" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h2>Put Rep HQ on your home screen</h2><p class="why" style="margin:2px 0 0">In Safari, tap the Share button, then Add to Home Screen. It opens like an app, and your reminders find you there.</p></div></div>
+<div class="card install" id="install" hidden style="margin-top:16px"><svg class="ap" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#ffffff2e"/><path d="M22 10v16M15 17l7-7 7 7M13 24v8h18v-8" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h2>Put Rep HQ on your home screen</h2><p class="why" style="margin:2px 0 0">In Safari, tap the Share button, then Add to Home Screen. It opens like an app, one tap from your home screen.</p></div></div>
 <div class="grid">
 <div class="card c8"><h2>Your milestones</h2><p class="why">Every step counts. Here's what you've already earned.</p><div class="badges" id="badges"></div></div>
-<div class="card c4 reg"><h2>Register a doctor</h2><p class="why">Know a doctor who should be on AI and Google? Lock in your credit now. Michael confirms within one business day.</p>
+<div class="card c4 reg"><h2>Register a doctor</h2><p class="why">Know a doctor who should be on AI and Google? Send Michael the name and he'll follow up.</p>
 <label for="rgN">Doctor or practice</label><input id="rgN" autocomplete="off">
 <label for="rgW">How you know them</label><textarea id="rgW"></textarea>
-<div class="row"><button class="blue" id="rgGo">Register and lock my credit</button></div></div>
+<div class="row"><button class="blue" id="rgGo">Register this doctor</button></div></div>
 </div>
 <div class="grid">
 <div class="card show-client"><div class="top"><div><h2>Show a client</h2><p class="why">Open our live sites right in front of them.</p></div></div><div class="sites">
@@ -278,7 +279,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 <label for="zn">Plus practices like him you introduce <b id="znN"></b></label><input type="range" id="zn" min="0" max="10" value="2" step="1">
 </div>
 <div class="stats z3" style="border-bottom:0"><div><span class="k">Every month</span><b class="gg" id="zMo"></b><small id="zRate"></small></div><div><span class="k">Your first year</span><b id="zY1"></b><small>with bonuses</small></div><div><span class="k">Over 3 years</span><b id="zY3"></b><small>if they stay</small></div></div>
-<p class="k" style="margin:0">Dr. Zhubi at his founding annual rates. Each added practice at Strategy annual, $3,900 a month. 18% on every annual account once you have 3.</p></div>
+<p class="k" style="margin:0"><span id="zNote">Dr. Zhubi at his founding annual rates.</span> Each added practice at Strategy annual, $3,900 a month. 18% on every annual account once you have 3.</p></div>
 <div class="card c5"><h2>Signed and paying</h2><div id="signed"></div></div>
 </div>
 <div class="tools"><input id="q" type="search" placeholder="Find a doctor or practice" aria-label="Find a doctor or practice"><div class="chips" id="chips"></div></div>
@@ -287,7 +288,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 
 <section id="v-earn" hidden>
 <h1>See what you could make</h1>
-<p class="sub">Move the sliders. Annual plans pay you the most, every month and every year. Prices shown are annual list prices. Month to month runs higher.</p>
+<p class="sub">Move the sliders. Annual plans pay you the most, every month and every year. Prices shown are 6 month list prices. Annual runs a little lower, month to month a little higher.</p>
 <div class="grid">
 <div class="card c5 sl">
 <div><label for="sV">Visibility practices <span>$1,899 a month each</span></label><input type="range" id="sV" min="0" max="10" value="2"><output id="oV"></output></div>
@@ -304,7 +305,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 <div class="fig chart"><svg id="curve" role="img" aria-label="Earnings over 36 months by term"></svg><div class="tipbox" id="curveTip" hidden></div></div>
 <div class="legend"><span><i style="background:#8b5cf6"></i>Annual</span><span><i style="background:#3b82f6"></i>6 months</span><span><i style="background:#8e8e98"></i>Month to month</span></div>
 </div>
-<div class="card"><h2>Same practices, three terms</h2><p class="k" style="margin:0 0 10px">Three years of pay for the mix above, all at annual list prices. Month to month prices run higher, so its real pay is a little more than shown.</p><div class="terms" id="terms"></div></div>
+<div class="card"><h2>Same practices, three terms</h2><p class="k" style="margin:0 0 10px">Three years of pay for the mix above, all at 6 month list prices, so you can compare terms side by side.</p><div class="terms" id="terms"></div></div>
 <div class="card"><h2>How you're paid</h2>
 <p style="margin:6px 0 0">Month to month pays 10%. Six months pays 12%. Annual pays 15%, and 18% on every annual account once you have 3 active annual clients. Signing bonuses come on annual only: $500 Visibility, $1,000 Strategy, $2,000 Group, paid in two halves after the 2nd and 6th payment. Group plans add 10% of the $7,500 setup. Paid by the 15th, every month the client pays.</p></div>
 </div>
@@ -326,7 +327,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 </div>
 </section>
 
-<p class="note">Shelby's real deals as of Nov 20, 2026. Emails marked "send not confirmed" are being checked. List prices and partner terms as of November 2026, subject to change. Confidential, for LocalLift partners only.</p>
+<p class="note">Shelby's real deals. Emails marked "send not confirmed" are being checked. List prices and partner terms as of November 2026, subject to change. Confidential, for LocalLift partners only.</p>
 </div>
 
 <nav class="tab" aria-label="Sections">
@@ -360,7 +361,7 @@ const DEALS=[
   opts:"Options he has: Visibility $1,699, Strategy $3,500, or all three surgeons $7,900 a month, annual.",
   mails:[{d:"Nov 3",by:"ll",s:"Thank you, and your plan",st:"Sent",b:"Thank you note after the Nov 3 meeting, with his two page plan sheet: Foundation Fix, Visibility, Strategy and practice plans, founding rates held through Friday, Nov 20."},
    {d:"Nov 13",by:"ll",s:"Dr. Zhubi, see it work",st:"Ready, send not confirmed",link:"his See it work page",url:ZPAGE,b:"A private page showing how he shows up in AI answers and on the map near his office, with samples, Call Proof and his plans."},
-   {d:"Nov 17",by:"ll",s:"Dr. Zhubi, your rates hold through Friday",st:"Ready, send not confirmed",link:"his tracked page",url:"https://www.send.co/a/dr-zhubi-see-it-work-tHZXyZ1u",b:"A short nudge that his founding rates hold through Friday, with a tracked link to his page so we can see when he opens it."}]},
+   {d:"Nov 17",by:"ll",s:"Dr. Zhubi, your rates hold through Friday",st:"Ready, send not confirmed",link:Date.now()>Date.parse("2026-11-21T14:15:00Z")?"his See it work page":"his tracked page",url:Date.now()>Date.parse("2026-11-21T14:15:00Z")?ZPAGE:"https://www.send.co/a/dr-zhubi-see-it-work-tHZXyZ1u",b:"A short nudge that his founding rates hold through Friday, with a tracked link to his page so we can see when he opens it."}]},
  {id:"singh",who:"Dr. Neeraj Singh",org:"Colon & Rectal Care Center of Phoenix, Glendale",st:3,lost:true,plan:"sd",term:"annual",act:"Said no on Oct 25",next:"If Dr. Zhubi doesn't sign, LocalLift keeps him warm with 4 short value emails starting Nov 24. Nothing for you to do.",
   mails:[{d:"Oct 1",by:"ll",s:"Your proposal, Dr. Singh",st:"Sent",b:"His proposal: Done For You at $7,900 a month or Glendale Start at $4,700, pricing held through Oct 15. Your copy was sent the same day."},
    {d:"Oct 6",by:"ll",s:"A quick finding on your Medicare growth",st:"Drafted, send not confirmed",b:"A day 5 follow up with a one page competitive snapshot."}]}];
@@ -389,11 +390,11 @@ $("goCnt").textContent=ACTIVE.length+" open";
 Object.entries(sLines).forEach(([k,[v,t]])=>{$(k).textContent=usd(v);$(k+"S").textContent=t});
 const EV=[{i:3,t:"Lunch meeting",n:"Dr. Neeraj Singh",s:"Singh lunch",c:"#22d3ee"},{i:3,t:"Proposal sent",n:"Dr. Neeraj Singh",s:"Singh proposal",c:"#a78bfa"},
  {i:7,t:"Said no",n:"Dr. Neeraj Singh",s:"",c:"#f87171"},{i:7,t:"Intro",n:"Dr. Ylli Zhubi",s:"Zhubi intro",c:"#7dd3fc"},
- {i:8,t:"First meeting",n:"Dr. Ylli Zhubi",s:"Zhubi meeting",c:"#22d3ee"},{i:9,t:"See it work page",n:"Dr. Ylli Zhubi",s:"Zhubi page",c:"#a78bfa"},
+ {i:8,t:"First meeting",n:"Dr. Ylli Zhubi",s:"Zhubi meeting",c:"#22d3ee"},{i:10,t:"See it work page",n:"Dr. Ylli Zhubi",s:"Zhubi page",c:"#a78bfa"},
  {i:11,t:PAST?"Rates ended Nov 20":"Rates end today",n:"Dr. Ylli Zhubi",s:"Zhubi deadline",c:"#fbbf24"}];
 const HD=["Sep 4","Sep 11","Sep 18","Sep 25","Oct 2","Oct 9","Oct 16","Oct 23","Oct 30","Nov 6","Nov 13","Nov 20"].map(d=>"Week of "+d+", 2026");
 const HT=[0,0,0,1185,1185,1185,1185,1185,1185,1185,1185,table],HL=[0,0,0,705,705,705,705,0,likely,likely,likely,likely];
-$("moves").innerHTML=`<span class="k">Latest moves</span>`+EV.slice(-4).reverse().map(e=>`<span class="mv"><i style="background:${e.c}"></i>${e.t}: <b>${e.n}</b> <span class="k">${HD[e.i].replace(", 2026","")}</span></span>`).join("");
+$("moves").innerHTML=`<span class="k">Latest moves</span>`+EV.slice(-4).reverse().map(e=>`<span class="mv"><i style="background:${e.c}"></i><span class="et">${e.t}:</span> <b>${e.n}</b> <span class="k">${HD[e.i].replace(", 2026","")}</span></span>`).join("");
 requestAnimationFrame(()=>{$("tierBar").style.width=Math.max(2,Math.min(100,annualActive/3*100))+"%";area("hist",HD,[{n:"On the table",c:"#8b5cf6",v:HT},{n:"Likely next",c:"#3b82f6",v:HL}],{fmt:short,xl:[[0,"Sep"],[4,"Oct"],[9,"Nov"],[11,"Now"]],ev:EV})});
 
 
@@ -421,32 +422,32 @@ const TASKS=[
  {t:"Rates end today: Dr. Zhubi",w:"His founding rates hold through today. Visibility annual pays you $3,558 your first year. Strategy annual pays you $7,300.",m:"Hi Dr. Zhubi, it's Shelby. Quick reminder that your founding rates hold through today. Would a 10 minute call with Michael this afternoon help you decide?"},
  {t:"Ask about his partners",w:"One plan for all three surgeons pays you up to $16,970 your first year.",m:"Dr. Zhubi, one more thought. If Dr. Lipton and Dr. Villareal join within 6 months, the practice plan covers all three of you and the setup fee is cut in half. Worth a quick look together?"},
  {t:"Line up your next intro",w:"Lead with a free AI scan around their office. It opens the door, and the result does the selling.",m:"Hi Dr. [name], it's Shelby. Can I run a free AI scan around your office? It shows whether Google and ChatGPT name your practice when patients nearby look for a doctor. You get a private page with the results, no strings."}];
-if(PAST)TASKS[0]={t:"Check in: Dr. Zhubi",w:"Visibility annual pays you $3,558 your first year. Strategy annual pays you $7,300.",m:"Hi Dr. Zhubi, it's Shelby. Just checking in on the LocalLift plan. Would a 10 minute call with Michael this week help you decide?"};
-const DAY=new Date().toISOString().slice(0,10);
+if(PAST)TASKS[0]={t:"Check in: Dr. Zhubi",w:"A short, friendly check in keeps the deal moving.",m:"Hi Dr. Zhubi, it's Shelby. Just checking in on the LocalLift plan. Would a 10 minute call with Michael this week help you decide?"};
+const DAY=new Date().toLocaleDateString("en-CA");
 let TD=new Set((store.get("rephq_td")||{})[DAY]||[]);
 $("tasks").innerHTML=TASKS.map((x,i)=>`<div class="item tdo" id="td${i}"><button class="chk" data-td="${i}" aria-pressed="false" aria-label="Mark done: ${x.t}"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button><div class="body"><h3>${x.t}</h3><p class="why">${x.w}</p><div class="msg" id="m${i}">${x.m}</div><div class="row"><button class="blue" data-copy="m${i}">Copy message</button></div></div></div>`).join("");
-const CHEERS=["Nice. That's a move.","Done. Momentum looks good on you.","Checked off. Logged for Michael.","That's how deals close.","One more in the books."];
+const CHEERS=["Nice. That's a move.","Done. Momentum looks good on you.","Checked off.","That's how deals close.","One more in the books."];
 const confetti=(el)=>{if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const r=el.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,C=["#34d399","#2f6bff","#7c5cff","#0ea5e9","#fbbf24","#f472b6"];
  for(let i=0;i<26;i++){const d=document.createElement("i");d.className="burst";d.style.left=cx+"px";d.style.top=cy+"px";d.style.background=C[i%C.length];document.body.appendChild(d);
   const a=Math.random()*Math.PI*2,v=60+Math.random()*90;d.animate([{transform:"translate(0,0) rotate(0)",opacity:1},{transform:`translate(${Math.cos(a)*v}px,${Math.sin(a)*v+40}px) rotate(${Math.random()*540}deg)`,opacity:0}],{duration:900+Math.random()*400,easing:"cubic-bezier(.2,.8,.2,1)"}).onfinish=()=>d.remove()}};
 const drawProg=()=>{const n=TD.size,t=TASKS.length;TASKS.forEach((_,i)=>{const on=TD.has(i);$("td"+i).classList.toggle("done",on);$("td"+i).querySelector(".chk").setAttribute("aria-pressed",on)});
- $("progN").textContent=n===t?"All "+t+" done today":n+" of "+t+" done";$("progS").textContent=n===t?"Day complete. That's how pipelines grow.":"Every move you check off is logged for Michael.";
+ $("progN").textContent=n===t?"All "+t+" done today":n+" of "+t+" done";$("progS").textContent=n===t?"Day complete. That's how pipelines grow.":"Every move you check off counts toward your streak.";
  $("progFg").style.strokeDashoffset=150.8*(1-n/t)};
 const saveTD=()=>{const all=store.get("rephq_td")||{};all[DAY]=[...TD];store.set("rephq_td",all);drawStreak()};
 const drawStreak=()=>{const all=store.get("rephq_td")||{};let n=0;const d=new Date();if(!(all[DAY]||[]).length)d.setDate(d.getDate()-1);
- for(;;){const k=d.toISOString().slice(0,10);if((all[k]||[]).length){n++;d.setDate(d.getDate()-1)}else break}
+ for(;;){const k=d.toLocaleDateString("en-CA");if((all[k]||[]).length){n++;d.setDate(d.getDate()-1)}else break}
  $("streakN").textContent=n;$("streak").setAttribute("aria-label",n+" day streak")};
 document.addEventListener("click",e=>{const b=e.target.closest("[data-td]");if(!b)return;const i=+b.dataset.td;
  if(TD.has(i))TD.delete(i);else{TD.add(i);confetti(b);toast(TD.size===TASKS.length?"All done today. Day complete!":CHEERS[Math.floor(Math.random()*CHEERS.length)]);if(TD.size===TASKS.length)setTimeout(()=>confetti($("progFg")),250)}
  saveTD();drawProg()});
 drawProg();drawStreak();
-const QUOTES=[["Make a customer, not a sale.","Katherine Barchetti"],["Approach each customer with the idea of helping him or her solve a problem or achieve a goal, not of selling a product or service.","Brian Tracy"],["Success is the sum of small efforts, repeated day in and day out.","Robert Collier"],["People don't buy what you do; they buy why you do it.","Simon Sinek"],["Don't watch the clock; do what it does. Keep going.","Sam Levenson"],["Opportunities don't happen. You create them.","Chris Grosser"],["You don't close a sale; you open a relationship.","Patricia Fripp"],["Every sale has five basic obstacles: no need, no money, no hurry, no desire, no trust.","Zig Ziglar"],["The best way to sell yourself to others is first to sell the others to yourself.","Napoleon Hill"]];
+const QUOTES=[["You can have everything in life you want, if you will just help enough other people get what they want.","Zig Ziglar"],["Whatever the mind of man can conceive and believe, it can achieve.","Napoleon Hill"],["Approach each customer with the idea of helping him or her solve a problem or achieve a goal, not of selling a product or service.","Brian Tracy"],["People don't buy what you do; they buy why you do it.","Simon Sinek"],["You don't close a sale; you open a relationship.","Patricia Fripp"],["Every sale has five basic obstacles: no need, no money, no hurry, no desire, no trust.","Zig Ziglar"]];
 {const q=QUOTES[Math.floor(Date.now()/864e5)%QUOTES.length];$("quote").textContent=q[0];$("qby").textContent=q[1]}
 const BADGES=[["First intro","Dr. Singh, Sep",1,'<path d="M4 12h12M12 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'],["First meeting","Lunch, Sep 30",1,'<path d="M7 4v4M17 4v4M4 10h16M5 6h14v14H5z" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linejoin="round"/>'],["2 doctors in","Singh and Zhubi",1,'<circle cx="9" cy="9" r="3.2" stroke="currentColor" stroke-width="2.2" fill="none"/><circle cx="16" cy="10" r="2.6" stroke="currentColor" stroke-width="2.2" fill="none"/><path d="M3 19c1-3.5 3.5-5 6-5s5 1.5 6 5M15 15c2 0 4 1 5 4" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"/>'],["First yes","Your first check",0,'<path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'],["18% club","3 annual clients",0,'<path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>']];
 $("badges").innerHTML=BADGES.map(b=>`<div class="bd ${b[2]?"on":""}"><i>${b[3]?`<svg viewBox="0 0 24 24">${b[3]}</svg>`:""}</i><b>${b[0]}</b><span>${b[2]?b[1]:"Next: "+b[1].toLowerCase()}</span></div>`).join("");
 $("rgGo").addEventListener("click",()=>{const n=$("rgN").value.trim(),w=$("rgW").value.trim();if(!n){toast("Add the doctor or practice name first");$("rgN").focus();return}
  location.href="mailto:info@thesocialdm.com?subject="+encodeURIComponent("Register a doctor: "+n+" (Shelby)")+"&body="+encodeURIComponent("Doctor or practice: "+n+"\nHow I know them: "+(w||"(not added)")+"\n\nSent from Rep HQ.");
- toast("Opening your email. Send it to lock your credit.")});
+ toast("Opening your email. Tap send.")});
 {const ios=/iphone|ipad|ipod/i.test(navigator.userAgent),standalone=matchMedia("(display-mode: standalone)").matches||navigator.standalone;if(ios&&!standalone)$("install").hidden=false}
 const TIPS=["Lead with Strategy on the annual plan. It pays you about twice Visibility every month.","Follow up within a day of an open. Interest fades fast.","Ask who signs before the meeting, so the right person is in the room.","Three annual clients move every annual account you have to 18%.","Show the sample desk, never another client's page.","Ask what one new patient is worth to them. Let them do the math."];
 $("tip").textContent=TIPS[new Date().getDate()%TIPS.length];
@@ -488,6 +489,7 @@ const OBT=[
  {q:"I'm too busy for this.",h:"Their pain is your pitch",a:"That's exactly why it's done for you. You approve, LocalLift runs it, and you get one short weekly report. Your time stays with patients.",w:"Short and calm. Then stop talking."},
  {q:"I need to talk to my partners.",h:"Get the signers in the room",a:"Makes sense. If Dr. Lipton and Dr. Villareal join within 6 months, the $7,500 practice setup is cut in half. Want me to set 10 minutes with Michael so everyone hears it once?",w:"The half setup is a real reason to decide together, and soon."},
  {q:"Will I get my money back?",h:"You are not locked in",a:"You're not locked in. On the 6 month plan you can walk away at day 90, and you get a report every week. Michael can walk you through exactly how that works.",w:"Never promise a refund or a guarantee. Point to day 90 and the weekly report, then hand it to Michael."}];
+if(PAST){OBT[0].a="Fair. You told us you'd be happy to break even. How many new patients a month would cover the plan for you?";$("zNote").textContent="Dr. Zhubi at the annual rates on his plan sheet, if Michael extends them."}
 $("obTop").innerHTML=OBT.map((o,i)=>`<button class="oq" data-ob="${i}">"${o.q}"<small>${o.h}</small></button>`).join("");
 const openOb=i=>{const o=OBT[i];openSheet(`<div class="top"><div><h2 id="shT">"${esc(o.q)}"</h2><p class="why">${esc(o.h)}</p></div><button class="ghost" data-close>Close</button></div><div class="say" id="obA" style="margin-top:12px;font-size:17px">${esc(o.a)}</div><p class="why" style="margin:10px 0 0">${esc(o.w)}</p><div class="row" style="margin-top:12px"><button class="blue" data-copy="obA">Copy answer</button></div>`)};
 const openShow=(id,i)=>{const d=DEALS.find(x=>x.id===id),m=d.mails[i];
@@ -507,9 +509,9 @@ document.addEventListener("click",async e=>{
  if(e.target.closest("[data-close]")){closeSheet();return}
  if(e.target.closest("[data-closeshow]")){closeShow();return}
  const sh=e.target.closest("[data-show]");if(sh){const [id,i]=sh.dataset.show.split("|");openShow(id,+i);return}
- const ad=e.target.closest("[data-adone]");if(ad){DONE.add(ad.dataset.adone);store.set("rephq_done",[...DONE]);updBadge();openAlerts();toast("Checked off. Logged for Michael.");return}
+ const ad=e.target.closest("[data-adone]");if(ad){DONE.add(ad.dataset.adone);store.set("rephq_done",[...DONE]);updBadge();openAlerts();toast("Checked off.");return}
  if(e.target.closest("[data-wclose]")){closeSheet();return}
- const r=e.target.closest("[data-rem]");if(r){const it=REMS.find(x=>x.id===r.dataset.rem);REMS=REMS.filter(x=>x!==it);drawRems();($("rems").querySelector("button")||$("remCount")).focus?.();toast(r.dataset.a==="done"?"Nice. Logged for Michael.":"Moved to tomorrow");return}
+ const r=e.target.closest("[data-rem]");if(r){const it=REMS.find(x=>x.id===r.dataset.rem);REMS=REMS.filter(x=>x!==it);drawRems();($("rems").querySelector("button")||$("remCount")).focus?.();toast(r.dataset.a==="done"?"Nice. Done.":"Hidden for now");return}
  const c=e.target.closest("[data-copy]");if(c){const el=$(c.dataset.copy);
   try{await navigator.clipboard.writeText(el.textContent);toast("Copied")}catch(err){const rg=document.createRange();rg.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(rg);toast("Selected. Tap Copy.")}}});
 
@@ -532,7 +534,7 @@ const CHARTS={};
 const area=(id,labels,series,opt={})=>{const prev=CHARTS[id];CHARTS[id]={labels,series,opt,hi:prev&&prev.touched&&prev.hi<labels.length?prev.hi:(opt.ev?null:labels.length-1),touched:prev&&prev.touched};drawArea(id)};
 const drawArea=id=>{const st=CHARTS[id];if(!st)return;const sv=$(id),W=sv.clientWidth,H=sv.clientHeight;if(!W)return;
  const {labels,series,opt}=st,n=labels.length,L=opt.axis&&W>=520?54:4,T=34,B=opt.xl?28:4;
- const mx=Math.max(1,...series.flatMap(s=>s.v))*1.08,X=i=>L+i/(n-1)*(W-L-4),Y=v=>T+(H-T-B)*(1-v/mx);
+ const mx=Math.max(1,...series.flatMap(s=>s.v))*1.08,X=i=>L+i/(n-1)*(W-L-12),Y=v=>T+(H-T-B)*(1-v/mx);
  let g="<defs>"+series.map((s,j)=>`<linearGradient id="${id}g${j}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${s.c}" stop-opacity=".38"/><stop offset="1" stop-color="${s.c}" stop-opacity="0"/></linearGradient>`).join("")+"</defs>";
  g+=`<text x="${L}" y="14" font-size="13" fill="#8e8e98">${opt.fmt(mx/1.08)}</text>`;
  if(opt.axis&&W>=520)for(let i=1;i<=3;i++){const v=mx/1.08*i/4;g+=`<line x1="${L}" x2="${W-4}" y1="${Y(v)}" y2="${Y(v)}" stroke="#ffffff10"/><text x="${L-8}" y="${Y(v)+4}" text-anchor="end" font-size="12" fill="#6e6e78">${opt.fmt(v)}</text>`}
@@ -544,7 +546,7 @@ const drawArea=id=>{const st=CHARTS[id];if(!st)return;const sv=$(id),W=sv.client
   const w=e.s.length*6.6+18;let bx=Math.min(Math.max(x-w/2,L),W-w-4);if(e.s&&W>=520&&st.hi==null&&bx+w+6<prevL){const by=Math.max(T-26,y-40);g+=`<line x1="${x}" x2="${x}" y1="${by+22}" y2="${y-7}" stroke="${e.c}" stroke-opacity=".6"/><rect x="${bx}" y="${by}" width="${w}" height="22" rx="11" fill="${e.c}" fill-opacity=".18" stroke="${e.c}" stroke-opacity=".7"/><text x="${bx+w/2}" y="${by+15}" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">${e.s}</text>`;prevL=bx}})}
  sv.innerHTML=g;st.X=X;st.L=L;
  const tip=$(id+"Tip");if(i==null){tip.hidden=true;return}const evs=(opt.ev||[]).filter(e=>e.i===i);
- tip.innerHTML=`<div class="d">${labels[i]}</div>`+series.map(s=>`<div class="r"><span><i style="background:${s.c}"></i>${s.n}</span><b>${opt.fmt(s.v[i],1)}</b></div>`).join("")+(evs.length?`<div class="ev">${evs.map(e=>`<div><i style="background:${e.c}"></i>${e.t}: <b>${e.n}</b></div>`).join("")}</div>`:"");
+ tip.innerHTML=`<div class="d">${labels[i]}</div>`+series.map(s=>`<div class="r"><span><i style="background:${s.c}"></i>${s.n}</span><b>${opt.fmt(s.v[i],1)}</b></div>`).join("")+(evs.length?`<div class="ev">${evs.map(e=>`<div><i style="background:${e.c}"></i><span class="et">${e.t}:</span> <b>${e.n}</b></div>`).join("")}</div>`:"");
  tip.hidden=false;const tw=tip.offsetWidth,th=tip.offsetHeight;let x=W<520?Math.min(Math.max(0,X(i)-tw/2),W-tw):X(i)+16;if(W>=520&&x+tw>W)x=X(i)-tw-16;if(x<0)x=0;tip.style.left=x+"px";tip.style.top=(opt.ev?Math.max(T+8,H-B-th-6):T+8)+"px"};
 const hover=id=>{const sv=$(id);const mv=e=>{const st=CHARTS[id];if(!st||!st.X)return;const r=sv.getBoundingClientRect(),x=e.clientX-r.left,n=st.labels.length;
  st.hi=Math.max(0,Math.min(n-1,Math.round((x-st.L)/(r.width-st.L-4)*(n-1))));st.touched=1;drawArea(id)};
@@ -571,11 +573,11 @@ const OBJ=[
  ["We already have an agency.","Great, keep them. We work alongside them on the AI side. What do you love about them? And do they get you named when patients ask ChatGPT for a doctor?","Never knock the agency. Find the gap."],
  ["Just send me some info.","Happy to. So I send the right thing, is the bigger goal more new patients or more referrals from other offices?","Keeps the conversation going."],
  ["I never got that email.","No problem, I have it right here. Let me show you.","Tap What they got, then Show on screen."],
- ["Can we do month to month?","You can. Annual has a lower monthly rate than month to month and includes Referral Desk, so it's the better value.","Steers to annual without pressure."],
+ ["Can we do month to month?","You can. Annual has a lower monthly rate than month to month, so it's the better value.","Steers to annual without pressure."],
  ["Have you worked with doctors?","Medicine is our newest line. The system behind it already runs for more than 7,900 homes across the country, and founding practices get founding rates and work directly with Michael.","Honest, and turns new into an advantage."],
  ["Is this HIPAA safe?","We never touch patient records or patient forms. Referral Desk works with offices and doctors only.","Short and exact. Then move on."],
  ["I don't have time for marketing.","That's the point. It's done for you. You approve, we run it, and you get one short report.","Their pain is your pitch."],
- ["I need to talk to my partners.","Makes sense. Want me to set a 15 minute call with Michael so everyone hears it once?","Gets the signer in the room."],
+ ["I need to talk to my partners.","Makes sense. Want me to set a 10 minute call with Michael so everyone hears it once?","Gets the signer in the room."],
  ["Does AI search even matter?","Patients now ask ChatGPT and Google for a doctor near them. Want to see whether you're the one it names?","Offer the free check. Let the result sell."]];
 $("objs").innerHTML=OBJ.map((o,i)=>`<details><summary>"${o[0]}"</summary><div class="say" id="o${i}">${o[1]}</div><p class="why" style="margin:8px 0 0">${o[2]}</p><div class="row" style="margin-bottom:14px"><button class="ghost" data-copy="o${i}">Copy answer</button></div></details>`).join("");
 
