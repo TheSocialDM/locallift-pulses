@@ -202,7 +202,33 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 .bd b{display:block;font-size:13px}.bd span{font-size:12px;color:var(--mute)}
 .bd.on i{background:linear-gradient(135deg,#2f6bff,#7c5cff);color:#fff;box-shadow:0 6px 18px #2f6bff55}
 .bd.on.gold i{background:linear-gradient(135deg,#34d399,#0ea5e9)}
-.install{display:flex;gap:14px;align-items:center;background:linear-gradient(135deg,#2f6bff,#7c5cff);color:#fff}
+.install{display:flex;gap:20px;align-items:center;background:linear-gradient(135deg,#2f6bff,#7c5cff);color:#fff}
+.ph{flex:none;width:120px;height:236px;border-radius:26px;background:#0d0d10;padding:7px;box-shadow:0 10px 30px #0006}
+.scr{position:relative;width:100%;height:100%;border-radius:20px;overflow:hidden;background:#f4f4f6}
+.scr>div{position:absolute;inset:0;opacity:0;animation:fr 9s infinite}
+.f1{animation-delay:0s!important}.f2{animation-delay:3s!important}.f3{animation-delay:6s!important}
+@keyframes fr{0%{opacity:0}4%,30%{opacity:1}34%,100%{opacity:0}}
+.url{margin:10px 8px 6px;background:#e4e4e8;border-radius:8px;font-size:7px;color:#555;padding:4px 6px;text-align:center}
+.pg{padding:4px 8px;display:grid;gap:5px}.pg i{display:block;height:34px;border-radius:7px;background:#dfe5f3}.pg i:first-child{background:#0d0d10;height:46px}
+.bar{position:absolute;left:0;right:0;bottom:0;height:34px;background:#fff;display:flex;justify-content:space-around;align-items:center;border-top:1px solid #ddd}
+.bar span{width:14px;height:3px;background:#bbb;border-radius:2px}.bar .sh{width:22px;height:22px;background:none;display:grid;place-items:center}
+.bar svg{width:16px;height:16px;fill:none;stroke:#0a66d8;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.tap{position:absolute;width:26px;height:26px;border-radius:50%;background:#0a66d855;border:2px solid #0a66d8;animation:tp 3s infinite}
+.t1{left:40px;bottom:4px}.t2{left:70px;top:148px}
+@keyframes tp{0%,35%{transform:scale(1.6);opacity:0}50%{transform:scale(1);opacity:1}70%,100%{transform:scale(.8);opacity:0}}
+.f2{background:#0007}.sheetm{position:absolute;left:5px;right:5px;bottom:5px;background:#fff;border-radius:12px;padding:4px 0}
+.ro{font-size:8px;color:#222;padding:8px 10px;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:center}.ro:first-child{border-top:0}
+.ro.hi{background:#e1edff}.ro svg{width:12px;height:12px;fill:none;stroke:#222;stroke-width:2}
+.f3{background:linear-gradient(160deg,#1e3a8a,#7c5cff)}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:30px 8px}
+.grid4 i{display:block;aspect-ratio:1;border-radius:7px;background:#ffffff40}
+.grid4 .me{display:flex;flex-direction:column;align-items:center;gap:3px;animation:popin 3s infinite}.grid4 img{width:100%;border-radius:7px}.grid4 span{font-size:6px;color:#fff;font-weight:600;white-space:nowrap}
+@keyframes popin{0%,15%{transform:scale(0)}30%{transform:scale(1.25)}40%,100%{transform:scale(1)}}
+.f3 .me{animation-delay:6s}
+.steps3{margin:0;padding-left:20px;display:grid;gap:6px;font-size:15px}.steps3 li{opacity:.6;animation:hl 9s infinite}.steps3 b{color:#fff}
+.steps3 .s2{animation-delay:3s}.steps3 .s3{animation-delay:6s}
+@keyframes hl{0%{opacity:.6}4%,30%{opacity:1;font-weight:600}34%,100%{opacity:.6}}
+@media(prefers-reduced-motion:reduce){.f1{opacity:1!important}.steps3 li{opacity:1}}
+@media(max-width:420px){.install{flex-direction:column;align-items:flex-start}.ph{align-self:center}}
 .install .why{color:#ffffffcc}.install h2{color:#fff}
 .install svg.ap{width:44px;height:44px;flex:none}
 .reg label{display:block;font-weight:600;font-size:14px;margin:12px 0 6px}
@@ -248,7 +274,14 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 </div>
 
 
-<div class="card install" id="install" hidden style="margin-top:16px"><svg class="ap" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#ffffff2e"/><path d="M22 10v16M15 17l7-7 7 7M13 24v8h18v-8" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h2>Put Rep HQ on your home screen</h2><p class="why" style="margin:2px 0 0">In Safari, tap the Share button, then Add to Home Screen. It opens like an app, one tap from your home screen.</p></div></div>
+<div class="card install" id="install" hidden style="margin-top:16px">
+<div class="ph" aria-hidden="true"><div class="scr">
+<div class="f1"><div class="url">thesocialdm.github.io</div><div class="pg"><i></i><i></i><i></i></div><div class="bar"><span></span><span class="sh"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M5 13v7h14v-7"/></svg></span><span></span></div><div class="tap t1"></div></div>
+<div class="f2"><div class="sheetm"><div class="ro">Copy</div><div class="ro">Add to Favorites</div><div class="ro hi"><b>Add to Home Screen</b><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg></div><div class="ro">Find on Page</div></div><div class="tap t2"></div></div>
+<div class="f3"><div class="grid4"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b class="me"><img src="icon-192.png" alt=""><span>Rep HQ</span></b></div></div>
+</div></div>
+<div class="ib"><h2>Put Rep HQ on your home screen</h2><p class="why" style="margin:2px 0 10px">Takes 10 seconds. Then it opens like an app.</p>
+<ol class="steps3"><li class="s1">In Safari, tap <b>Share</b>. On newer iPhones, tap <b>&bull;&bull;&bull;</b> first.</li><li class="s2">Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li><li class="s3">Open <b>Rep HQ</b> from your home screen.</li></ol></div></div>
 <div class="grid">
 <div class="card c8"><h2>Your milestones</h2><p class="why">Every step counts. Here's what you've already earned.</p><div class="badges" id="badges"></div></div>
 <div class="card c4 reg"><h2>Register a doctor</h2><p class="why">Know a doctor who should be on AI and Google? Send Michael the name and he'll follow up.</p>
@@ -516,6 +549,36 @@ document.addEventListener("click",async e=>{
   try{await navigator.clipboard.writeText(el.textContent);toast("Copied")}catch(err){const rg=document.createRange();rg.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(rg);toast("Selected. Tap Copy.")}}});
 
 drawRems();drawFeed();
+{const HOOK="https://hook.us2.make.com/5xxmpb7yrvezcpa4x44oggu1hlfbn0lp";
+ const qs=new URLSearchParams(location.search);if(qs.get("me")==="michael")store.set("rephq_me","michael");
+ const REP=store.get("rephq_me")==="michael"?"Michael test":"Shelby";
+ const SID=Math.random().toString(36).slice(2,9),T0=Date.now();
+ const MODE=(matchMedia("(display-mode: standalone)").matches||navigator.standalone)?"Home screen app":"Browser";
+ const ua=navigator.userAgent,DEV=/iPhone/.test(ua)?"iPhone":/iPad/.test(ua)?"iPad":/Android/.test(ua)?"Android":/Mac/.test(ua)?"Mac":/Windows/.test(ua)?"Windows":"Other";
+ const curTab=()=>VIEWS2.includes(location.hash.slice(1))?location.hash.slice(1):"today";
+ const VIEWS2=["today","pipeline","earn","playbook"];
+ window.track=(event,detail="",alert=0)=>{try{const b=new URLSearchParams({event,detail:String(detail).slice(0,140),rep:REP,tab:curTab(),device:DEV,mode:MODE,secs:Math.round((Date.now()-T0)/1000),sid:SID,ua:ua.slice(0,180),alert:alert?"1":"0"});
+  fetch(HOOK,{method:"POST",mode:"no-cors",body:b,keepalive:true}).catch(()=>{})}catch(e){}};
+ const today=new Date().toLocaleDateString("en-CA"),last=store.get("rephq_lastopen");
+ track(MODE==="Home screen app"&&!store.get("rephq_installed")?"opened Rep HQ from her home screen":"opened Rep HQ",last?"last open "+last:"first open on this device",last!==today);store.set("rephq_lastopen",today);
+ if(MODE==="Home screen app"&&!store.get("rephq_installed"))store.set("rephq_installed",1);
+ let away=0;document.addEventListener("visibilitychange",()=>{if(document.hidden){away=Date.now();track("left Rep HQ","after "+Math.round((Date.now()-T0)/1000)+" seconds")}else if(away&&Date.now()-away>20*60e3)track("came back to Rep HQ","",0)});
+ addEventListener("hashchange",()=>track("viewed "+({today:"Today",pipeline:"Pipeline",earn:"Earnings",playbook:"Playbook"}[curTab()])+" tab"));
+ const SN={zp:"Dr. Zhubi calculator: plan",zn:"Dr. Zhubi calculator: more practices",sV:"Earnings calculator: Visibility practices",sS:"Earnings calculator: Strategy practices",sP:"Earnings calculator: group practices",term:"Earnings calculator: term"};const slid={};
+ Object.keys(SN).forEach(id=>$(id)?.addEventListener("change",()=>{const g=id[0]==="z"?"z":"e";if(!slid[g]){slid[g]=1;track("played with the pay sliders",SN[id])}}));
+ document.addEventListener("click",e=>{const t=e.target.closest("button,a");if(!t)return;
+  if(t.dataset.td!=null){const i=+t.dataset.td;if(TD.has(i))track("checked off a move",TASKS[i].t,1);return}
+  if(t.dataset.copy){const c=t.dataset.copy;const lbl=/^m\d+$/.test(c)?TASKS[+c.slice(1)]?.t:/^mb\d+$/.test(c)?"email: "+(t.closest(".mail")?.querySelector("b")?.textContent||""):/^w\d+$/.test(c)?"check in text to "+WEL[+c.slice(1)].who:"an objection answer";track("copied a message",lbl||"",1);return}
+  if(t.dataset.got){track("opened What they got",(DEALS.find(d=>d.id===t.dataset.got)||{}).who||"");return}
+  if(t.dataset.show){const [id,i]=t.dataset.show.split("|");const d=DEALS.find(x=>x.id===id);track("showed an email on screen",d.who+": "+d.mails[+i].s,1);return}
+  if(t.dataset.ob){track("opened an objection",OBT[+t.dataset.ob].q.replace(/"/g,""));return}
+  if(t.dataset.adone){track("checked off an alert",t.closest(".item")?.querySelector("h3")?.textContent||"");return}
+  if(t.dataset.rem){track(t.dataset.a==="done"?"marked a reminder done":"pushed a reminder to later",t.closest(".item")?.querySelector("h3")?.textContent||"",t.dataset.a==="done");return}
+  if(t.id==="bell"){track("opened alerts");return}
+  if(t.id==="rgGo"){const n=$("rgN").value.trim();if(n)track("registered a doctor",n,1);return}
+  if(t.tagName==="A"&&/^https?:/.test(t.href)&&(t.getAttribute("href")||"#")[0]!=="#"&&t.hostname!==location.hostname){track("opened a link",(t.querySelector("b")||t).textContent.trim().slice(0,60)+" ("+t.hostname+")",1);return}});
+ document.addEventListener("toggle",e=>{if(e.target.open)track("opened an objection",e.target.querySelector("summary").textContent.replace(/"/g,""))},true);
+}
 const WEL=[{deal:"zhubi",who:"Dr. Ylli Zhubi",why:PAST?"Check in this week. One text keeps it moving.":"His founding rates end today. One text could close it.",m:TASKS[0].m}];
 const openWelcome=()=>{alertsOpen=false;openSheet(`<div class="top"><div><h2 id="shT">Welcome back, Shelby</h2><p class="why">Here's where your deals stand and who to check in with today.</p></div><button class="ghost" data-wclose>Later</button></div>
  <div class="mom"><div><b>2</b><span>doctors you introduced</span></div><div><b>2</b><span>meetings held</span></div><div><b>${usd(table)}</b><span>a month if all three surgeons sign</span></div></div>
