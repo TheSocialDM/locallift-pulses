@@ -31,7 +31,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "DM Sans",-app
 h1,h2,h3,.big,.mid,.brand b{font-family:Manrope,-apple-system,system-ui,sans-serif}
 .wrap{max-width:1180px;margin:0 auto;padding:0 max(4vw,16px) 120px}
 header{display:flex;align-items:center;gap:12px;padding:20px 0 12px;position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.mark{width:34px;height:34px;flex:none}
+.mark{width:34px;height:34px;flex:none;border-radius:10px;display:block}
 .brand b{display:block;font-size:17px;letter-spacing:-.02em}.brand span{font-size:13px;color:var(--mute)}
 .seg{margin-left:auto;display:flex;background:var(--card);border-radius:980px;padding:4px;gap:2px;box-shadow:0 1px 2px #0000000f}
 .seg a,.tab a{text-decoration:none;color:var(--ink);font-weight:600;font-size:14px}
@@ -241,7 +241,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 <body>
 <div class="wrap">
 <header>
-<svg class="mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="#0d0d10"/><circle cx="17" cy="17" r="10" fill="none" stroke="#4c9dff" stroke-width="3.2"/><circle cx="17" cy="17" r="4.5" fill="none" stroke="#34d399" stroke-width="3.2"/></svg>
+<img class="mark" src="sdm-icon-180.png" alt="The SocialDM" style="object-fit:cover">
 <div class="brand"><b>SocialDM</b><span>Partner · Shelby Raabe</span></div>
 <nav class="seg" aria-label="Sections"><a href="#today">Today</a><a href="#pipeline">Pipeline</a><a href="#earn">Earnings</a><a href="#playbook">Playbook</a></nav>
 <span class="streak" id="streak" title="Days in a row you checked off a move"><svg viewBox="0 0 24 24" fill="#ff7a59" aria-hidden="true"><path d="M12 2c1 4 5 5.5 5 11a5 5 0 0 1-10 0c0-2.5 1.2-4 2.5-5 .2 2 1.2 3 2.3 3C11 8 11 5 12 2z"/></svg><span id="streakN">0</span></span><button class="bell" id="bell" aria-label="Alerts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg><span class="badge" id="badge">0</span></button>
