@@ -126,7 +126,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 .kit a{display:flex;justify-content:space-between;gap:10px;padding:14px 0;border-top:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:600}.kit a:first-child{border-top:0}.kit a span{color:var(--mute);font-weight:400;font-size:14px}
 .note{font-size:13px;color:var(--mute);margin-top:24px}
 .scrim{position:fixed;inset:0;background:#0007;z-index:20;display:flex;align-items:flex-end;justify-content:center}
-.sheet{background:var(--card);width:min(720px,100%);max-height:88vh;overflow:auto;border-radius:28px 28px 0 0;padding:10px 22px calc(24px + env(safe-area-inset-bottom));animation:up .3s cubic-bezier(.2,.8,.2,1)}
+.sheet{background:var(--card);width:min(720px,100%);max-height:88vh;max-height:88dvh;overflow:auto;border-radius:28px 28px 0 0;padding:10px 22px calc(24px + env(safe-area-inset-bottom));animation:up .3s cubic-bezier(.2,.8,.2,1)}
 @media(min-width:761px){.scrim{align-items:center}.sheet{border-radius:28px;max-height:84vh}}
 @keyframes up{from{transform:translateY(40px);opacity:0}}
 .grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:4px auto 12px}
@@ -166,6 +166,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 .sites b{font-size:14px}.sites span{font-size:13px;opacity:.85}.sites i{position:absolute;top:10px;right:14px;font-style:normal;opacity:.9}
 .welcome{background:#0f0f11;color:#f4f4f6;border:1px solid #ffffff1a;position:relative;overflow:hidden}
 .welcome::before{content:"";position:absolute;inset:-60% -20% auto auto;width:80%;height:160%;background:radial-gradient(closest-side,#2f6bff55,transparent 70%);pointer-events:none}
+.wcard .mom b{font-size:clamp(16px,4.6vw,24px);white-space:nowrap}.wcard{margin:0 0 16px;animation:up .35s cubic-bezier(.2,.8,.2,1)}.wcard[hidden]{display:none}
 .welcome h2{color:#fff;font-size:28px;margin:0}.welcome .why{color:#a1a1aa}.welcome .grab{background:#ffffff33}
 .mom{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}
 .mom div{background:#ffffff10;border:1px solid #ffffff1a;border-radius:16px;padding:12px}.mom b{display:block;font:800 clamp(18px,5.4vw,24px) var(--head);white-space:nowrap;color:#fff}.mom span{font-size:12px;color:#a1a1aa}
@@ -253,6 +254,7 @@ summary::after{content:"+";color:var(--blue);font-size:22px;line-height:1}detail
 </header>
 
 <section id="v-today">
+<div id="wcard" hidden></div>
 <h1 id="greet">Good morning, Natalie.</h1>
 <p class="sub">Here is your money, who to touch today, and what LocalLift has ready for you.</p>
 
@@ -512,9 +514,9 @@ drawDeals();
 $("chips").addEventListener("click",e=>{const b=e.target.closest("button");if(b){filt=b.dataset.f;drawDeals()}});
 $("q").addEventListener("input",e=>{qv=e.target.value.trim().toLowerCase();drawDeals()});
 
-let lastFocus=null;
-const openSheet=html=>{$("sheet").classList.remove("welcome");if($("scrim").hidden)lastFocus=document.activeElement;$("sheet").innerHTML=`<div class="grab"></div>`+html;$("scrim").hidden=false;document.body.style.overflow="hidden";$("sheet").querySelector("button")?.focus()};
-const closeSheet=()=>{alertsOpen=false;$("scrim").hidden=true;document.body.style.overflow="";lastFocus?.focus?.()};
+let lastFocus=null;const FINE=matchMedia("(pointer:fine)").matches;
+const openSheet=html=>{$("sheet").classList.remove("welcome");if($("scrim").hidden)lastFocus=document.activeElement;$("sheet").innerHTML=`<div class="grab"></div>`+html;$("scrim").hidden=false;document.body.style.overflow="hidden";if(FINE)$("sheet").querySelector("button")?.focus()};
+const closeSheet=()=>{alertsOpen=false;$("scrim").hidden=true;document.body.style.overflow="";if(FINE)lastFocus?.focus?.()};
 const openGot=id=>{alertsOpen=false;const d=DEALS.find(x=>x.id===id);if(!d)return;
  const mails=d.mails.slice().reverse();
  openSheet(`<div class="top"><div><h2 id="shT">What's ready for ${esc(d.who)}</h2><p class="why">${esc(d.org)} · ${d.lost?"Said no":STAGES[d.st]}</p></div><button class="ghost" data-close>Close</button></div>
@@ -546,7 +548,7 @@ document.addEventListener("click",async e=>{
  if(e.target.closest("[data-closeshow]")){closeShow();return}
  const sh=e.target.closest("[data-show]");if(sh){const [id,i]=sh.dataset.show.split("|");openShow(id,+i);return}
  const ad=e.target.closest("[data-adone]");if(ad){DONE.add(ad.dataset.adone);store.set("rephqN_done",[...DONE]);updBadge();openAlerts();toast("Checked off.");return}
- if(e.target.closest("[data-wclose]")){closeSheet();return}
+ if(e.target.closest("[data-wclose]")){$("wcard").hidden=true;return}
  const r=e.target.closest("[data-rem]");if(r){const it=REMS.find(x=>x.id===r.dataset.rem);REMS=REMS.filter(x=>x!==it);drawRems();($("rems").querySelector("button")||$("remCount")).focus?.();toast(r.dataset.a==="done"?"Nice. Done.":"Hidden for now");return}
  const c=e.target.closest("[data-copy]");if(c){const el=$(c.dataset.copy);
   try{await navigator.clipboard.writeText(el.textContent);toast("Copied")}catch(err){const rg=document.createRange();rg.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(rg);toast("Selected. Tap Copy.")}}});
@@ -585,10 +587,10 @@ drawRems();drawFeed();
  document.addEventListener("toggle",e=>{if(e.target.open)track("opened an objection",e.target.querySelector("summary").textContent.replace(/"/g,""))},true);
 }
 const WEL=[{deal:"gupta",who:"Dr. Gupta",why:"It has been a while since August. One text can restart it.",m:TASKS[0].m}];
-const openWelcome=()=>{alertsOpen=false;openSheet(`<div class="top"><div><h2 id="shT">Welcome, Natalie</h2><p class="why">Here's your partner app: your deal, your pay, and who to check in with today.</p></div><button class="ghost" data-wclose>Later</button></div>
+const openWelcome=()=>{const W=$("wcard");W.className="card welcome wcard";W.innerHTML=(`<div class="top"><div><h2 id="wT">Welcome, Natalie</h2><p class="why">Here's your partner app: your deal, your pay, and who to check in with today.</p></div><button class="ghost" data-wclose>Later</button></div>
  <div class="mom"><div><b>1</b><span>doctor you brought in</span></div><div><b>1</b><span>practice audit done</span></div><div><b>${usd(y1("grp","annual"))}</b><span>your first year if he signs annual</span></div></div>
  ${WEL.map((x,i)=>`<div class="ci"><div class="top"><div><h3>Check in with ${x.who}</h3><p class="why" style="margin:2px 0 0">${x.why}</p></div></div><div class="msg" id="w${i}">${esc(x.m)}</div><div class="row"><button class="blue" data-copy="w${i}">Copy text</button><button class="ghost" data-got="${x.deal}">What they got</button></div></div>`).join("")}
- <div class="row" style="margin-top:16px"><button class="blue" data-wclose>Let's go</button></div>`);$("sheet").classList.add("welcome")};
+ <div class="row" style="margin-top:16px"><button class="blue" data-wclose>Let's go</button></div>`);W.hidden=false};
 let seen=false;try{seen=sessionStorage.getItem("rephqN_w")==="1"}catch(e){}
 if(!seen){setTimeout(()=>{if($("scrim").hidden&&location.hash.slice(1)!=="playbook"){openWelcome();try{sessionStorage.setItem("rephqN_w","1")}catch(e){}}},700)}
 
