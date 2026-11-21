@@ -1,14 +1,42 @@
 {
  "property": "Stillwater Lakes",
  "city": "Kissimmee, Florida",
- "updated": "2026-11-20T05:48:19-07:00",
- "updatedLabel": "Nov 20, 5:48 am Phoenix time",
+ "updated": "2026-11-21T05:47:35-07:00",
+ "updatedLabel": "Nov 21, 5:47 am Phoenix time",
  "rv": {
   "rating": "4.2",
   "count": "19",
-  "vs": "Cielo View has 73. Every ask closes the gap."
+  "vs": "Cielo View has 75. Every ask closes the gap."
  },
  "feed": [
+  {
+   "src": "Rival watch · their own sites",
+   "date": "Nov 21",
+   "tone": "info",
+   "title": "Cielo View is posting two months free",
+   "body": "Still posted on cieloviewapts.com on Nov 21: \"Two Months FREE For a Limited Time!\" Their 1 beds start at $1,499 base rent ($1,628 with WiFi and mandatory fees). Lease term not shown."
+  },
+  {
+   "src": "MoveInLocal guide · last 7 days",
+   "date": "Nov 15 to 21",
+   "tone": "info",
+   "title": "4 visits to your guide",
+   "body": "2 on Nov 16, 1 on Nov 18 and 1 on Nov 19. One Apply tap on Nov 16."
+  },
+  {
+   "src": "Weekly Pulse · Google Maps",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "5th at your front door",
+   "body": "Up from 7th on Nov 13 on \"apartments for rent kissimmee\". Inside the top 20 at 4 of 49 map points (6 on Nov 13). Every new review helps here."
+  },
+  {
+   "src": "Weekly Pulse · AI answers",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "AI answers name you in 22 of 96",
+   "body": "ChatGPT 9, Gemini 8 and Perplexity 5. 13 of them recommend you, and you are listed first in 8."
+  },
   {
    "src": "Google reviews",
    "date": "Nov 18",
@@ -18,44 +46,16 @@
    "body": "A 5 star rating with no written comment. A reply is already posted. You are now at 4.2 on 19 reviews.",
    "link": "https://www.google.com/maps/place/?q=place_id:ChIJGZqrt8yF3YgRWj6tQbKwhxY",
    "linkLabel": "Open Stillwater Lakes reviews on Google"
-  },
-  {
-   "src": "Rival watch · their own sites",
-   "date": "Nov 20",
-   "tone": "info",
-   "title": "Cielo View is posting two months free",
-   "body": "Still posted on cieloviewapts.com on Nov 20: \"Two Months FREE For a Limited Time!\" Their 1 beds start at $1,499 base rent ($1,628 with WiFi and mandatory fees). Lease term not shown."
-  },
-  {
-   "src": "MoveInLocal guide · last 7 days",
-   "date": "Nov 14 to 20",
-   "tone": "info",
-   "title": "4 visits to your guide",
-   "body": "2 on Nov 16, 1 on Nov 18 and 1 on Nov 19. One Apply tap on Nov 16."
-  },
-  {
-   "src": "Weekly Pulse · Google Maps",
-   "date": "Nov 13",
-   "tone": "info",
-   "title": "Top 20 at 6 of 49 map points",
-   "body": "Up from 3 on Nov 6, and 7th at your front door on \"apartments for rent kissimmee\". Every new review helps here."
-  },
-  {
-   "src": "Weekly Pulse · AI answers",
-   "date": "Nov 13",
-   "tone": "good",
-   "title": "AI answers name you in 21 of 96",
-   "body": "ChatGPT 9, Gemini 9 and Perplexity 3. You were the first pick in 5 of them, up from 3."
   }
  ],
  "score": {
-  "index": 60,
-  "prev": 61,
-  "date": "Nov 13 Weekly Pulse",
+  "index": 62,
+  "prev": 60,
+  "date": "Nov 20 Weekly Pulse",
   "parts": [
    [
     "Reputation",
-    56
+    61
    ],
    [
     "Search",
@@ -67,7 +67,7 @@
    ],
    [
     "Website",
-    84
+    87
    ],
    [
     "AI answers",
@@ -82,68 +82,68 @@
    "19 reviews, newest Nov 18"
   ],
   [
-   "7th",
+   "5th",
    "At your front door",
-   "Google Maps, Nov 13"
+   "Google Maps, Nov 20"
   ],
   [
-   "21 of 96",
+   "22 of 96",
    "AI answers name you",
-   "Panel of Nov 13"
+   "Panel of Nov 20"
   ],
   [
-   "6 of 49",
+   "4 of 49",
    "Map points in top 20",
-   "Scan of Nov 13"
+   "Scan of Nov 20"
   ]
  ],
  "rivals": {
-  "date": "Nov 13 map scan",
+  "date": "Nov 20 map scan",
   "rows": [
    [
     "Verano",
     "4.7",
-    561,
-    3,
-    42
+    566,
+    19,
+    45
    ],
    [
     "Heritage Key Villas",
     "4.5",
-    366,
-    9,
-    45
+    369,
+    4,
+    44
    ],
    [
     "The Jamison",
     "4.2",
-    254,
+    255,
     29,
-    45
+    43
    ],
    [
     "Mosaic at Lake Toho",
     "4.5",
     184,
-    24,
+    21,
     49
    ],
    [
     "Cielo View",
     "4.9",
-    73,
-    20,
-    38
+    75,
+    17,
+    35
    ],
    [
     "Stillwater Lakes (you)",
-    "4.1",
-    18,
+    "4.2",
+    19,
     0,
-    6
+    4
    ]
   ],
-  "note": "Review counts and ranks as the Nov 13 map scan read them. Your live count is now 19 at 4.2."
+  "note": "Review counts and ranks as the Nov 20 map scan read them."
  },
  "ask": {
   "title": "This week: ask for one review",
@@ -152,7 +152,7 @@
    "When a work order is closed"
   ],
   "points": [
-   "Cielo View has 73 Google reviews to our 19. Each new review moves our average more than theirs.",
+   "Cielo View has 75 Google reviews to our 19. Each new review moves our average more than theirs.",
    "Ask in person, then send the link the same day.",
    "One a week is the target."
   ]
@@ -163,12 +163,12 @@
  "asks": {
   "sent": 0,
   "opened": 0,
-  "through": "Nov 20"
+  "through": "Nov 21"
  },
  "shortLink": "moveinlocal.com/review/stillwater-lakes",
  "talk": {
-  "checked": "Nov 20",
-  "checkedIso": "2026-11-20",
+  "checked": "Nov 21",
+  "checkedIso": "2026-11-21",
   "offer": "2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2.",
   "prices": [
    [
@@ -233,8 +233,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 20",
-  "checkedIso": "2026-11-20",
+  "checked": "Nov 21",
+  "checkedIso": "2026-11-21",
   "items": [
    {
     "name": "Cielo View",
@@ -251,7 +251,7 @@
      ]
     ],
     "fees": "Their posted totals include WiFi and mandatory fees: 1 bed from $1,628, 2 bed from $2,003. Deposit and pet fees not posted.",
-    "tip": "New community (2025) with 73 Google reviews. They have 1 and 2 bedrooms only. We have studios, townhomes, a $350 deposit, and an extra $1,200 off move in in Buildings 1 and 2.",
+    "tip": "New community (2025) with 75 Google reviews. They have 1 and 2 bedrooms only. We have studios, townhomes, a $350 deposit, and an extra $1,200 off move in in Buildings 1 and 2.",
     "vs": [
      [
       "Special",
@@ -299,8 +299,8 @@
     "basis": "Their prices: lowest base rent on their own site. Lease term not shown. Ask what term they were quoted.",
     "url": "https://cieloviewapts.com/floorplans/",
     "feesChecked": "Nov 19",
-    "checked": "Nov 20",
-    "checkedIso": "2026-11-20"
+    "checked": "Nov 21",
+    "checkedIso": "2026-11-21"
    },
    {
     "name": "The Jamison",
@@ -369,8 +369,8 @@
     "basis": "Their prices: lowest base rent on greystar.com. Mandatory monthly costs are added on top.",
     "url": "https://www.greystar.com/the-jamison-kissimmee-fl/p_16895",
     "feesChecked": "Nov 19",
-    "checked": "Nov 20",
-    "checkedIso": "2026-11-20"
+    "checked": "Nov 21",
+    "checkedIso": "2026-11-21"
    },
    {
     "name": "Mosaic at Lake Toho",
@@ -382,11 +382,11 @@
       "studio"
      ],
      [
-      "$1,443",
+      "$1,445",
       "1 bed"
      ],
      [
-      "$1,704",
+      "$1,700",
       "2 bed"
      ]
     ],
@@ -407,13 +407,13 @@
      ],
      [
       "1 bed from",
-      "$1,443",
+      "$1,445",
       "$1,552",
       "them"
      ],
      [
       "2 bed from",
-      "$1,704",
+      "$1,700",
       "$1,902",
       "them"
      ],
@@ -439,8 +439,8 @@
     "basis": "Their prices: lowest rent on an 18 month lease on their own site.",
     "url": "https://www.advenirliving.com/laketoho/kissimmee/mosaic-at-lake-toho/conventional/",
     "feesChecked": "Nov 19",
-    "checked": "Nov 20",
-    "checkedIso": "2026-11-20"
+    "checked": "Nov 21",
+    "checkedIso": "2026-11-21"
    }
   ],
   "us": {
@@ -479,6 +479,36 @@
    "basis": "Our special is on a 15 month lease. Lease terms differ by community, so confirm the term before quoting a difference."
   },
   "changes": [
+   {
+    "id": "2026-11-21-mosaic-2bed",
+    "rival": "Mosaic at Lake Toho",
+    "row": "2 bed from",
+    "from": "$1,704",
+    "to": "$1,700",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "verified": "Nov 21",
+    "verifiedIso": "2026-11-21",
+    "src": "advenirliving.com",
+    "headline": "Mosaic's 2 beds now start at $1,700",
+    "detail": "Beaumont (B1), 966 sq ft, on an 18 month lease. Was $1,704. Still under our $1,902.",
+    "say": "Their posted prices are on an 18 month lease. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
+   },
+   {
+    "id": "2026-11-21-mosaic-1bed",
+    "rival": "Mosaic at Lake Toho",
+    "row": "1 bed from",
+    "from": "$1,443",
+    "to": "$1,445",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "verified": "Nov 21",
+    "verifiedIso": "2026-11-21",
+    "src": "advenirliving.com",
+    "headline": "Mosaic's 1 beds now start at $1,445",
+    "detail": "Broadway (A1), 668 sq ft, on an 18 month lease. Was $1,443. Still under our $1,552.",
+    "say": "Their posted prices are on an 18 month lease. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
+   },
    {
     "id": "2026-11-20-mosaic-1bed",
     "rival": "Mosaic at Lake Toho",
