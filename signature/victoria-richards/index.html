@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Victoria Richards · Sample Signature Profile</title>
+<meta name="description" content="A sample LocalLift Signature profile. Your own link in bio, live in 48 hours or sooner.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#050505;--mute:#6B6B6B;--line:#E8E8E8;--gold:#C8A96B;--gold2:#7A5F2C;--soft:#F5F5F5}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--soft);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{font-family:"Inter Tight",Inter,system-ui,sans-serif;margin:0;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit}
+.bar{background:#050505;color:#E6E6E6;font-size:13px;padding:10px 16px;text-align:center;border-bottom:2px solid var(--gold)}
+.bar b{color:var(--gold)}.bar a{color:#fff;font-weight:700;white-space:nowrap}
+.pf{max-width:480px;margin:0 auto;padding:16px 14px 40px;display:grid;gap:14px}
+.pfh{background:#050505;color:#fff;border-radius:22px;padding:26px 22px;text-align:center}
+.pfh img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);display:block;margin:0 auto 12px}
+.pfh h1{font-size:30px}.br{color:var(--gold);font-weight:700;font-size:15px;margin-top:6px}.ar{color:#A3A3A3;font-size:14px;margin-top:2px}
+.pfb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:18px}
+.pfb button{background:#141414;color:#fff;border:1px solid #2a2a2a;border-radius:14px;padding:10px 4px;font:600 13px Inter,system-ui,sans-serif;cursor:pointer;min-height:58px;display:grid;place-items:center;gap:2px}
+.pfb svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.8}
+.btn{font:600 15px Inter,system-ui,sans-serif;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);padding:11px 16px;min-height:46px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#000}
+.wide{display:grid;gap:8px;margin-top:10px}.wide .btn{width:100%}.wide .ln{background:none;color:#fff;border-color:#444}
+.c{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+.c h2{font-size:21px;margin-bottom:4px}.sub{color:var(--mute);font-size:14px;margin:0 0 12px}
+.lsti{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:12px}.lsti:first-of-type{margin-top:0}
+.lsti img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--soft)}
+.lb{padding:12px;display:grid;gap:4px}.pr{font:800 22px/1 "Inter Tight",Inter,sans-serif}
+.st{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:#050505;color:var(--gold);padding:3px 9px;border-radius:999px;width:max-content}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}.row .btn{font-size:14px;min-height:40px;padding:8px 14px}
+form{display:grid;gap:10px}label{display:grid;gap:4px;font-size:13px;color:var(--mute)}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:10px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chips{display:flex;gap:8px}.chips button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font:inherit;font-size:14px;cursor:pointer}.chips button.on{background:#050505;color:#fff;border-color:#050505}
+.cons{font-size:12px;color:var(--mute);margin:0}.ck{display:flex;gap:8px;align-items:flex-start;font-size:13px}.ck input{width:18px;height:18px;flex:none;margin-top:2px}
+.ohb{background:#050505;color:#fff;border-radius:12px;padding:10px 12px;font-size:14px;margin-bottom:12px}.ohb b{color:var(--gold)}
+.done{display:none;padding:14px;border-radius:12px;background:#E7EFEA;font-size:14px}
+.wk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.wk img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;background:var(--soft)}
+.cta{background:#050505;color:#fff;border-radius:18px;padding:22px;text-align:center}.cta h2{font-size:24px}.cta p{color:#BDBDBD;font-size:14px;margin:8px 0 14px}
+.ft{text-align:center;font-size:12px;color:var(--mute);line-height:1.6}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#050505;color:#fff;padding:12px 16px;border-radius:12px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s;max-width:92vw;text-align:center;z-index:9}.toast.show{opacity:1}
+[hidden]{display:none!important}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+</style></head><body>
+<div class="bar"><b>Sample profile.</b> Victoria is a sample agent. Your own profile is live in 48 hours or sooner. <a href="https://localliftsignature.com/#pricing">Get yours</a></div>
+<main class="pf">
+  <section class="pfh">
+    <img src="https://localliftsignature.com/victoria.jpg" alt="Victoria Richards">
+    <h1>Victoria Richards</h1>
+    <div class="br">REALTOR® · Sonoran Crest Realty</div>
+    <div class="ar">Scottsdale homes, bought and sold with care</div>
+    <div class="pfb">
+      <button data-m="call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</button>
+      <button data-m="text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>Text</button>
+      <button data-m="email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</button>
+      <button data-m="book"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Book</button>
+    </div>
+    <div class="wide"><a class="btn gold" id="vcf" href="#" download="Victoria-Richards.vcf">Save Victoria to my contacts</a><button class="btn ln" data-m="site">Visit Victoria's website</button></div>
+  </section>
+
+  <section class="c">
+    <h2>My homes</h2><p class="sub">Sample listings.</p>
+    <div class="lsti"><img src="https://images.pexels.com/photos/28122111/pexels-photo-28122111.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Sample listing, desert modern entry"><div class="lb"><span class="st">For sale</span><span class="pr">$1,185,000</span><span>7421 E Sample Ln, Scottsdale · 4&nbsp;bd · 3&nbsp;ba · 2,640&nbsp;sq&nbsp;ft</span><span style="font-size:13px;color:var(--mute)">Listed by Sonoran Crest Realty</span><div class="row"><button class="btn gold" data-ask="7421 E Sample Ln">Ask about this home</button><button class="btn" data-ask="7421 E Sample Ln" data-tour="1">Book a tour</button></div></div></div>
+    <div class="lsti"><img src="https://images.pexels.com/photos/21235708/pexels-photo-21235708.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Sample listing, home exterior"><div class="lb"><span class="st">Open house Sat 11 am to 2 pm</span><span class="pr">$849,000</span><span>5310 N Sample Dr, Scottsdale · 3&nbsp;bd · 2&nbsp;ba · 1,910&nbsp;sq&nbsp;ft</span><span style="font-size:13px;color:var(--mute)">Listed by Sonoran Crest Realty</span><div class="row"><button class="btn gold" data-ask="5310 N Sample Dr">Ask about this home</button><button class="btn" data-ask="5310 N Sample Dr" data-tour="1">Book a tour</button></div></div></div>
+    <form id="askF" novalidate hidden style="margin-top:14px">
+      <h3 id="askT">Ask about this home</h3>
+      <div class="two"><label>Name<input id="aN" autocomplete="name"></label><label>Phone or email<input id="aC"></label></div>
+      <label>Message<textarea id="aM" rows="2"></textarea></label>
+      <label class="ck"><input type="checkbox"> Yes, Victoria Richards may text me about this home. Consent is not required. Msg and data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help.</label>
+      <p class="cons">Victoria may reply about this home by email or phone. Victoria never sells your information.</p>
+      <button class="btn gold" type="submit">Send to Victoria</button>
+      <div class="done" role="status">Sample profile, so nothing was sent. On your own profile, this goes straight to you.</div>
+    </form>
+  </section>
+
+  <section class="c">
+    <h2>What's my home worth?</h2><p class="sub">Victoria prepares your price range personally from recent nearby sales. No obligation. This is not an appraisal.</p>
+    <form id="valF" novalidate>
+      <label>Home address<input id="vA" autocomplete="street-address"></label>
+      <div class="two"><label>Bedrooms<select><option>2</option><option selected>3</option><option>4</option><option>5+</option></select></label><label>Bathrooms<select><option>1</option><option selected>2</option><option>3</option><option>4+</option></select></label></div>
+      <label>Updates since you bought (optional)<textarea rows="2" placeholder="New kitchen, pool resurfaced, roof 2023"></textarea></label>
+      <div class="two"><label>Name<input id="vN" autocomplete="name"></label><label>Email<input id="vE" type="email" autocomplete="email"></label></div>
+      <p class="cons">Victoria may contact you about your home by email. Victoria never sells your information.</p>
+      <button class="btn gold" type="submit">Get my price range</button>
+      <div class="done" role="status">Sample profile, so nothing was sent. On your own profile, this goes straight to you.</div>
+    </form>
+  </section>
+
+  <section class="c" id="oh">
+    <h2>Open house check in</h2>
+    <div class="ohb">Open house: <b>5310 N Sample Dr</b> · Sat 11 am to 2 pm (sample)</div>
+    <form id="ohF" novalidate>
+      <div class="two"><label>Name<input id="oN" autocomplete="name"></label><label>Phone<input id="oP" type="tel" autocomplete="tel"></label></div>
+      <label>Email<input id="oE" type="email" autocomplete="email"></label>
+      <div><div style="font-size:13px;color:var(--mute);margin-bottom:6px">Are you working with an agent?</div><div class="chips" id="ag"><button type="button" aria-pressed="false">Yes</button><button type="button" aria-pressed="false">No</button></div></div>
+      <label class="ck"><input type="checkbox"> Yes, Victoria Richards may text me about homes. Consent is not required to check in. Msg and data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help.</label>
+      <p class="cons">Victoria may follow up by email or phone about this home. Victoria never sells your information.</p>
+      <button class="btn gold" type="submit">Check in</button>
+      <div class="done" role="status">Sample profile, so nothing was sent. On your own profile, check ins go straight to you.</div>
+    </form>
+  </section>
+
+  <section class="c">
+    <h2>This week from Victoria</h2><p class="sub">New posts every week.</p>
+    <div class="wk" id="wk">
+      <img src="https://thesocialdm.github.io/locallift-pulses/signature/sample-week/2026-11-23_market.jpg" alt="This week's market post">
+      <img src="https://thesocialdm.github.io/locallift-pulses/signature/sample-week/2026-11-23_corner.jpg" alt="This week's community post">
+      <img src="https://thesocialdm.github.io/locallift-pulses/signature/sample-week/2026-11-23_seller.jpg" alt="This week's tip post">
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Want a page like this?</h2>
+    <p>Every Signature agent gets one link for their Instagram bio, business card and yard signs. It shows your posts, your homes and every way to reach you. Live in 48 hours or sooner after you sign up.</p>
+    <a class="btn gold" href="https://localliftsignature.com/#pricing">See Signature</a>
+  </section>
+
+  <div class="ft">Victoria Richards, REALTOR® · <b>Sonoran Crest Realty</b> (sample agent and brokerage)<br>Equal Housing Opportunity · <a href="https://localliftsignature.com/privacy/">Privacy</a><br>A LocalLift Signature profile by The SocialDM</div>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+var toast=function(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('show')},3600)};
+var msg={call:"Sample profile. On your own profile, this calls you.",text:"Sample profile. On your own profile, this texts you.",email:"Sample profile. On your own profile, this emails you.",book:"Sample profile. On your own profile, this opens your booking calendar.",site:"Sample profile. On your own profile, this opens your website."};
+document.querySelectorAll('[data-m]').forEach(function(b){b.addEventListener('click',function(){toast(msg[b.dataset.m])})});
+var vcard='BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Victoria Richards (Sample)\r\nORG:Sonoran Crest Realty\r\nTITLE:REALTOR\r\nTEL;TYPE=CELL:+14805550142\r\nEMAIL:victoria@example.com\r\nURL:https://localliftsignature.com/victoria-richards\r\nEND:VCARD\r\n';
+$('#vcf').href='data:text/vcard;charset=utf-8,'+encodeURIComponent(vcard);
+$('#vcf').addEventListener('click',function(){toast('Sample contact card. On your own profile, visitors save you in one tap.')});
+document.addEventListener('click',function(e){var b=e.target.closest('[data-ask]');if(!b)return;var f=$('#askF');f.hidden=false;f.querySelector('.done').style.display='none';$('#askT').textContent=(b.dataset.tour?'Book a tour: ':'Ask about ')+b.dataset.ask;$('#aM').value=b.dataset.tour?'I would like to tour '+b.dataset.ask+'. These times work for me:':'Hi Victoria, I have a question about '+b.dataset.ask+'.';f.scrollIntoView({behavior:'smooth',block:'center'})});
+$('#ag').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)})});
+function need(ids){for(var i=0;i<ids.length;i++){if(!$(ids[i]).value.trim()){$(ids[i]).focus();toast('Please fill in this field.');return false}}return true}
+function done(f){f.querySelector('.done').style.display='block'}
+['#askF','#valF','#ohF'].forEach(function(id){$(id).addEventListener('input',function(){this.querySelector('.done').style.display='none'})});
+$('#askF').addEventListener('submit',function(e){e.preventDefault();if(need(['#aN','#aC']))done(this)});
+$('#valF').addEventListener('submit',function(e){e.preventDefault();if(!need(['#vA','#vN']))return;if($('#vE').value.indexOf('@')<0){toast('Add a valid email.');return}done(this)});
+$('#ohF').addEventListener('submit',function(e){e.preventDefault();if(!need(['#oN']))return;if(!$('#oP').value.trim()&&$('#oE').value.indexOf('@')<0){toast('Add a phone or email.');return}done(this)});
+if(location.hash==='#oh'){setTimeout(function(){$('#oh').scrollIntoView()},200)}
+var base='https://thesocialdm.github.io/locallift-pulses/signature/sample-week/';
+fetch(base+'week.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(w){
+  if(!w||!w.posts||!w.posts.length)return;var box=$('#wk');box.innerHTML='';
+  w.posts.slice(0,3).forEach(function(p){var i=document.createElement('img');var s=p.img||'';i.src=/^https?:/.test(s)?s:base+s.replace(/^\.?\//,'');i.alt=p.alt||'This week\'s post';i.onerror=function(){this.style.display='none'};box.appendChild(i)});
+}).catch(function(){});
+})();
+</script>
+</body></html>
