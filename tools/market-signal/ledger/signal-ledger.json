@@ -83,6 +83,11 @@
      "at": "2026-11-08 07:30 MST",
      "by": "Q (weekly build No. 03)",
      "change": "No checkpoint due this week (RealPage Q4 update estimated late January 2027). Outcome stays Pending."
+    },
+    {
+     "at": "2026-11-22 07:10 MST",
+     "by": "Q (weekly build No. 05)",
+     "change": "No checkpoint due (RealPage Q4 update estimated late January 2027). No change."
     }
    ]
   },
@@ -126,6 +131,11 @@
      "at": "2026-11-15 07:09 MST",
      "by": "Q (weekly build No. 04)",
      "change": "Retried. NMHC's quarterly survey index lists the October 2026 survey (10/22/2026) but its page refused the unattended fetch; the April and July 2026 press releases read fine, the October one is not yet readable on NMHC's own page. Still held; retry next week."
+    },
+    {
+     "at": "2026-11-22 07:10 MST",
+     "by": "Q (weekly build No. 05)",
+     "change": "Retried. NMHC's quarterly survey listing shows the October 2026 survey (10/22/2026) and a historical data file 'as of October 2026', but the October survey page refused the unattended fetch. NMHC's July 2026 release read fine (Market Tightness 57, Sales Volume 46, Equity 44, Debt 46). Still held; retry next week."
     }
    ]
   },
@@ -191,6 +201,11 @@
      "at": "2026-11-15 07:09 MST",
      "by": "Q (weekly build No. 04)",
      "change": "No checkpoint due yet (Apartment List November data estimated late November). No change."
+    },
+    {
+     "at": "2026-11-22 07:10 MST",
+     "by": "Q (weekly build No. 05)",
+     "change": "Apartment List November data (December report) not yet published as of Nov 22; checkpoint stays Pending (estimated late November). RealPage and Census checkpoints not yet due."
     }
    ]
   },
@@ -214,8 +229,9 @@
      "date": "Mid to late November 2026",
      "date_status": "Estimated",
      "owner": "LocalLift research desk",
-     "outcome": "Pending",
-     "last_checked": "2026-11-15"
+     "outcome": "Too early",
+     "last_checked": "2026-11-22",
+     "evidence": "Yardi's October 2026 national report appears to be out (BDC Network summary Nov 17, 2026, citing it: U.S. advertised rents $1,777, +1.4% year over year), but Yardi's own report pages and press release could not be read from the build environment on Nov 22, so the Phoenix renewal figure is not verified. Secondary coverage gives no Phoenix or renewal figure. Retry next week."
     },
     {
      "indicator": "Yardi Matrix Phoenix report, next edition: asking rent change year over year (negative 2.1% in September)",
@@ -253,6 +269,11 @@
      "at": "2026-11-15 07:09 MST",
      "by": "Q (weekly build No. 04)",
      "change": "Checkpoint check: Yardi Matrix's blog lists no October 2026 national or Phoenix multifamily report as of Nov 15 (latest national is September, Oct 19; latest Phoenix is September, Oct 5). Both checkpoints stay Pending (estimated window not yet passed); recheck next week."
+    },
+    {
+     "at": "2026-11-22 07:10 MST",
+     "by": "Q (weekly build No. 05)",
+     "change": "Yardi October national checkpoint graded Too early: report exists per secondary coverage, Phoenix renewal figure not readable on Yardi's own pages Nov 22. Phoenix report checkpoint still Pending (latest on Yardi's blog is September, Oct 5)."
     }
    ]
   },
@@ -290,7 +311,9 @@
      "date": "Late November 2026",
      "date_status": "Estimated",
      "owner": "LocalLift research desk",
-     "outcome": "Pending"
+     "outcome": "Too early",
+     "last_checked": "2026-11-22",
+     "evidence": "Yardi's October 2026 national report appears to be out (BDC Network summary Nov 17, 2026, citing it: U.S. advertised rents $1,777, +1.4% year over year), but Yardi's own report pages and press release could not be read from the build environment on Nov 22, so the Phoenix renewal figure is not verified. Secondary coverage gives no Phoenix or renewal figure. Retry next week."
     }
    ],
    "outcome": "Pending",
@@ -309,6 +332,99 @@
      "at": "2026-11-15 07:09 MST",
      "by": "Independent editor",
      "change": "Melanie overclaim softened (rent roll 'may deserve as much attention' instead of showing it first); LocalLift post no longer reuses Melanie's statistic and no longer overlaps Michael's angle; Pillar hook and close rewritten (no repeat of No. 03, pricing guardrail added); Michael opener changed, check 2 replaced (was a repeat of No. 03), 'X, not Y' line on his graphic removed; graphics re-rendered."
+    },
+    {
+     "at": "2026-11-22 07:10 MST",
+     "by": "Q (weekly build No. 05)",
+     "change": "Yardi October national checkpoint graded Too early: report exists per secondary coverage, Phoenix renewal figure not readable on Yardi's own pages Nov 22. Phoenix report checkpoint still Pending (latest on Yardi's blog is September, Oct 5)."
+    },
+    {
+     "at": "2026-11-22 07:10 MST",
+     "by": "Q (weekly build No. 05)",
+     "change": "BLS checkpoints confirmed for Jan 13, 2027; not yet due."
+    }
+   ]
+  },
+  {
+   "id": "MS-H02",
+   "edition": "Held, not published",
+   "status": "Held: secondary coverage only",
+   "logged": "2026-11-22",
+   "finding": "Yardi Matrix National Multifamily Report, October 2026: per BDC Network (Nov 17, 2026), U.S. advertised rents rose $1 to $1,777 in October, the first October increase since 2022, and year over year growth rose to 1.4%.",
+   "source": "BDC Network MFPRO+ Research, Nov 17, 2026, summarizing Yardi Matrix (https://www.bdcnetwork.com/multifamily-pro/mfpro-research/news/55419664/multifamily-market-remains-steady-in-october); Yardi press release 'Multifamily market reclaims October rent growth, Yardi Matrix says' surfaced in search but could not be read",
+   "verification": "Not verified on Yardi's own page; Yardi blog, report and press release pages refused the unattended fetch Nov 22.",
+   "interpretation": "None recorded. Nothing is interpreted until verified.",
+   "confidence": "n/a",
+   "checkpoints": [
+    {
+     "indicator": "Read Yardi's October 2026 national report or press release on Yardi's own page, including the Phoenix renewal figure",
+     "date": "Before Edition 06",
+     "date_status": "Internal deadline",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    }
+   ],
+   "outcome": "Pending",
+   "revisions": [
+    {
+     "at": "2026-11-22 07:10 MST",
+     "by": "Q (weekly build No. 05)",
+     "change": "Logged as held: secondary only."
+    }
+   ]
+  },
+  {
+   "id": "MS-005",
+   "edition": "No. 05",
+   "status": "Built Nov 22, 2026; Melanie Market Signal post loaded in Metricool for Thu Nov 26 8:11 AM (optional approval) with daily posts through Dec 2; Pillar page versions queued for Michael; LocalLift page Mon Nov 30; Michael's post in Metricool for approval Tue Dec 1 7:41 AM",
+   "logged": "2026-11-22",
+   "finding": "U.S. Census Bureau and HUD, New Residential Construction, October 2026 (CB26-187, Nov 18, 2026): starts in buildings with five or more units at a seasonally adjusted annual rate of 433,000, up 25.5% from revised September (345,000; plus or minus 50.6%) and up 22.0% from October 2025 (355,000; plus or minus 52.3%), neither significant. Permits for 5+ units 475,000, down 5.2% from September (501,000) and 0.4% from a year earlier. 5+ completions 362,000, up 9.0% from September (plus or minus 38.2%), down 9.0% from October 2025 (398,000; plus or minus 32.5%). Year to date January to October 2026, not seasonally adjusted 5+ starts 364,500 vs 336,600, up 8.3% (plus or minus 12.8%). West region total starts 228,000, down 11.6% from 258,000 (plus or minus 16.1%); West single family starts 184,000, up 7.0% from 172,000 (plus or minus 21.0%).",
+   "source": "U.S. Census Bureau and HUD, New Residential Construction, October 2026 (CB26-187), Nov 18, 2026",
+   "url": "https://www.census.gov/construction/nrc/pdf/newresconst_202610.pdf",
+   "verification": "Read on the Census PDF Nov 20 (Industry Scout) and Nov 22 by the builder and again by an independent fact checker; every figure matched.",
+   "local_evidence": "Yardi Matrix Phoenix Multifamily Market Report, September 2026 (Oct 5, 2026): 24,400 apartments under construction in Phoenix and 9,149 completed in 2026 through July (read on Yardi's blog by builder and fact checker Nov 22). Limitation: Census publishes no metro starts in this release; the West region figure covers all housing types; the Yardi pipeline is from the September report.",
+   "interpretation": "October's jump in apartment starts is within Census's margin of error and permits, the earlier signal, slipped, so it may be noise. If starts do hold up, new supply typically reaches lease up in roughly two years, which may add competition around 2028 in a Phoenix market still absorbing 24,400 units under construction; the West's lower total starts with higher single family starts may mean fewer multiunit starts regionally.",
+   "confidence": "Low",
+   "confidence_reason": "Single month; every change cited is within the Census margin of error; national data with only a regional (West, all housing) and a Phoenix pipeline (Yardi, September) lens; lease up timing is a general rule of thumb.",
+   "checkpoints": [
+    {
+     "indicator": "Census November 2026 New Residential Construction: do 5+ unit starts stay above 400,000 annual rate, and do 5+ permits recover above 500,000?",
+     "date": "2026-12-17",
+     "date_status": "Confirmed (stated in the October release)",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    },
+    {
+     "indicator": "Census West region total starts, November 2026: still below the year earlier level while single family rises?",
+     "date": "2026-12-17",
+     "date_status": "Confirmed",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    },
+    {
+     "indicator": "Yardi Matrix Phoenix report, next edition: units under construction (24,400 in September report)",
+     "date": "December 2026",
+     "date_status": "Estimated",
+     "owner": "LocalLift research desk",
+     "outcome": "Pending"
+    }
+   ],
+   "outcome": "Pending",
+   "revisions": [
+    {
+     "at": "2026-11-22 07:10 MST",
+     "by": "Q (weekly build No. 05)",
+     "change": "Entry created."
+    },
+    {
+     "at": "2026-11-22 07:00 MST",
+     "by": "Independent fact checker",
+     "change": "All Census figures and Yardi 24,400 confirmed. Fixes applied: permits given year over year as well as month over month to match the starts comparison; margin of error wording made exact; lease up timing hedged to 'often, roughly two years, depending on the project'; LocalLift hook no longer says 'every'; completions opener attributed to Census estimates and the September rise disclosed; West inference stated as resting on point estimates; Yardi Phoenix first comment link moved to Yardi's own page. Flag: themultifamilydesk.com links could not be opened from the cloud."
+    },
+    {
+     "at": "2026-11-22 07:00 MST",
+     "by": "Independent editor",
+     "change": "LocalLift post rewritten to a neighborhood search angle (was the same new vs established comparison as Michael's); Michael's post reworded to avoid repeating his No. 04 phrasing; Thanksgiving line, hashtags and closing questions varied; contrast taglines removed; Pillar hooks and closers varied; graphics: footnote contrast raised, Michael layout spacing fixed."
     }
    ]
   }
