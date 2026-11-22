@@ -926,6 +926,50 @@
     ]
    ],
    "cta": "Talk to The SocialDM about your marketing"
+  },
+  {
+   "slug": "microsoft-copilot-apartment-community",
+   "date": "2026-11-22",
+   "q": "Does Microsoft Copilot recommend apartment communities?",
+   "title": "Does Microsoft Copilot Recommend Apartments? | The SocialDM",
+   "desc": "Yes. Microsoft Copilot answers renter questions and cites websites as sources. Here is what that means for apartment communities, and how The SocialDM reports it.",
+   "short": "Yes. Microsoft Copilot answers questions like \"apartments near my new job\" and cites the websites it used as sources. It is built into Windows, Edge and Microsoft 365, so many renters meet it at work. Microsoft now reports how often a website is cited in Copilot answers, and From the end of November 2026, The SocialDM reports that for the apartment communities we market, next to Google and ChatGPT.",
+   "list_title": "What helps a community get cited",
+   "list": [
+    "A website that states the facts renters ask about in plain words: floor plans, pets, parking, fees and the neighborhood.",
+    "The same facts on the website, the Google listing and other listings, so AI assistants find one consistent answer.",
+    "Pages search engines can read and index quickly, including when prices and specials change.",
+    "Clear answers to the questions renters type, written the way they ask them."
+   ],
+   "extras": [
+    [
+     "Why Copilot matters for apartments",
+     "Copilot sits inside the tools people use at work every day: Windows, Edge and Microsoft 365. When someone relocating for a job asks it where to live, the communities it cites are the ones that person sees first in the answer."
+    ],
+    [
+     "What we report",
+     "From the end of November 2026, the LocalLift Weekly Pulse shows how often Microsoft Copilot cited the community's website and which pages it used. These are mentions, not clicks, so we show them next to the website visits and leads the site received."
+    ]
+   ],
+   "faq": [
+    [
+     "Does Microsoft Copilot recommend apartment communities?",
+     "Yes. Copilot answers renter questions and lists the websites it used as sources, so a community's own website can be cited in the answer."
+    ],
+    [
+     "Is Copilot the same as ChatGPT?",
+     "No. Copilot is Microsoft's assistant, built into Windows, Edge and Microsoft 365. It is a separate product with its own answers, so a community can show up in one and not the other."
+    ],
+    [
+     "Can you see how often Copilot cites our website?",
+     "Yes. Microsoft reports how often a website is cited in Copilot answers and which pages were used. From the end of November 2026 we include it in the LocalLift Weekly Pulse."
+    ],
+    [
+     "Does a Copilot mention mean a lead?",
+     "Not by itself. A citation means Copilot used your website in an answer. We show it next to the website visits and leads your site actually received."
+    ]
+   ],
+   "cta": "Talk to The SocialDM about AI visibility"
   }
  ]
 }
