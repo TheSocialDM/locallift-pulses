@@ -48,7 +48,7 @@ def B(d):  # full bleed, dark gradient
 <div class=h style="font-size:{d.get('fs',128)}px;color:{PAPER};margin-top:26px">{d['h']}</div>
 <div class=p style="color:#e8e2d8;margin-top:28px;max-width:860px">{d.get('p','')}</div></div>
 <img class=logo src={LL} style="position:absolute;left:68px;bottom:48px">
-<div class=url style="position:absolute;right:72px;bottom:66px;color:{PAPER}">LOCALLIFTSIGNATURE.COM</div></div>"""
+{'' if d.get('nourl') else '<div class=url style="position:absolute;right:72px;bottom:66px;color:'+PAPER+'">LOCALLIFTSIGNATURE.COM</div>'}</div>"""
 
 def C(d):  # ink background, framed photo
     return f"""<div style="height:1350px;background:{INK};position:relative">
@@ -113,6 +113,12 @@ POSTS = {
  '2026-11-30': (D, dict(img=8850629, eb='Google Business Profile', fs=110, ph=420, pos='center 40%', h='Your description<br><i>is not a bio.</i>',
      card=ex_card([('Before', 'Dedicated Realtor committed to excellence.'), ('After', 'I help families buy and sell in Old Town and the east side, especially first homes and downsizing moves.')]))),
  '2026-12-01': (C, dict(img=6995221, pos='center', eb='Giving Tuesday', fs=130, h='Give where<br><i>you live.</i>', p='Share a local cause you support so others can find it too.')),
+ '2026-12-02': (D, dict(img=6787048, eb='Google reviews', fs=112, ph=360, pos='center 45%', h='Reply to every review.<br><i>Strangers are reading.</i>',
+     card=ex_card([('Review', '&ldquo;She made my first purchase feel calm.&rdquo;'), ('Reply', '&ldquo;Thank you, Dana. Watching you get the keys to the bungalow on Maple was the best part of my October.&rdquo;')], tag='EXAMPLE, NOT A REAL REVIEW'))),
+ '2026-12-03': (A, dict(img=712321, eb='Listing in December', pos='55%', fs=104, ph=680, h='Decorate for the photos,<br><i>not the party.</i>', p='One or two pieces per room, clear counters, and every light on before the photographer arrives.')),
+ '2026-12-04': (B, dict(img=6054110, pos='center', nourl=1, eb='Begins tonight at sundown', fs=150, h='Happy<br><i>Hanukkah.</i>', p='Eight nights of light, good food and good company.')),
+ '2026-12-05': (C, dict(img=4402584, pos='center', eb='LocalLift Signature<br>$199 a month', fs=112, top=800, h='Your January posts,<br><i>handled.</i>', p='12 local topics a month, made for Instagram, Facebook, LinkedIn and Google Business Profile.')),
+ '2026-12-06': (A, dict(img=5618068, pos='60%', ph=700, eb='Sunday', fs=104, h='Flour on the counter.<br><i>Nothing to sign.</i>', p='Bake the one recipe you only make once a year.')),
 }
 
 async def main(only=None):

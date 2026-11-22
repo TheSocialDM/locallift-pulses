@@ -183,3 +183,55 @@ Agents and title reps know their communities up close: the schools, the shelters
 If there is a local cause you support, share it in the comments so others can find it too. We would love to see who you are championing this season.
 
 #GivingTuesday #GiveLocal #Community #RealtorLife
+## 2026-12-02 | signature-vr-2026-12-02.png | See what Google's AI says about agents in your area, free: https://localliftsignature.com/?utm_source=facebook&utm_campaign=vr_profile
+Every Google review has two audiences: the person who wrote it, and every stranger who reads it later.
+
+Your reply is the part strangers remember. A quick thank you is fine. A reply that mentions the street, the move or the moment is better, because it shows people how you treat clients before they ever call.
+
+Here is an example we made up to show the idea (not a real review):
+Review: "She made my first purchase feel calm."
+Reply: "Thank you, Dana. Watching you get the keys to the bungalow on Maple was the best part of my October."
+
+Keep replies short, warm and free of private details about the sale.
+
+How many of your reviews have a reply right now?
+
+#GoogleReviews #GoogleBusinessProfile #RealEstateAgent #RealtorTips #RealEstateMarketing
+
+## 2026-12-03 | signature-vr-2026-12-03.png | none
+Listing in December? Decorate for the photos, not the party.
+
+A tree and a wreath can make a home feel warm. Ten boxes of decorations can hide the fireplace, the windows and the floor space buyers are trying to picture.
+
+A simple guide to share with sellers: one or two pieces per room, clear counters, and every light on before the photographer arrives. That way the photos still look right if the listing is live in January.
+
+What is the one decoration you tell sellers to keep?
+
+#ListingTips #HomeStaging #RealEstateAgent #SellingInWinter #RealtorLife
+
+## 2026-12-04 | signature-vr-2026-12-04.png | none
+Happy Hanukkah to everyone celebrating, starting tonight at sundown.
+
+Wishing you eight nights of light, good food and the people you love around the table.
+
+#HappyHanukkah #Hanukkah #FestivalOfLights
+
+## 2026-12-05 | signature-vr-2026-12-05.png | Free AI Visibility Report. It checks what Google's AI says about agents in your area: https://localliftsignature.com/?utm_source=facebook&utm_campaign=vr_profile
+A quick December question: what are you posting the first week of January?
+
+January has a way of arriving before the posting plan does. LocalLift Signature takes that off your list: 12 original, locally researched topics a month, adapted for Instagram, Facebook, LinkedIn and Google Business Profile, with your branding and your brokerage details on every post.
+
+$199 a month, fully managed. You keep the client conversations. We handle the research, the writing and the design.
+
+Not sure where you stand today? The free AI Visibility Report checks what Google's AI says about agents in your area. Link in the first comment.
+
+#RealEstateMarketing #RealtorMarketing #LocalLiftSignature #NewYearPlanning
+
+## 2026-12-06 | signature-vr-2026-12-06.png | none
+Sunday plan: flour on the counter, music on, nothing to sign.
+
+The first weekend of December is a good one for baking the thing you only make once a year. Bonus points if a neighbor ends up with a plate of it.
+
+What is the one recipe that means the holidays have started at your house?
+
+#SundayBaking #HolidayBaking #RealtorLife #SlowSunday #AgentLife
