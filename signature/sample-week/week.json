@@ -1,5 +1,5 @@
 {
- "date": "2026-11-16",
+ "date": "2026-11-23",
  "data_note": "Market posts show their source and data date.",
  "month_label": "November 2026",
  "posts": [
@@ -7,70 +7,78 @@
    "key": "market",
    "day": "Monday",
    "label": "Market Update",
-   "img": "2026-11-16_market.jpg",
-   "google_img": "2026-11-16_market_photo.jpg",
-   "alt": "Scottsdale market update post: homes sold a week faster",
-   "caption": "Scottsdale single family homes sold a week faster. In October, single family homes spent 75 days on the market, down from 82 a year ago, while 1,480 homes were for sale, about even with a year ago. Same choice for buyers, a quicker pace. Source: Phoenix REALTORS, ARMLS data, October 2026. #ScottsdaleAZ #ScottsdaleRealEstate",
-   "google": "<b>Scottsdale market, October 2026.</b> Single family homes spent 75 days on the market, down from 82 a year ago, with 1,480 homes for sale, about even with a year ago. Thinking about a move? Ask me what it means for your street. Source: Phoenix REALTORS, ARMLS data."
+   "img": "2026-11-23_market.jpg",
+   "google_img": "2026-11-23_market_photo.jpg",
+   "alt": "Scottsdale market update post: condo buyers have more choice",
+   "caption": "Condo buyers in Scottsdale have more choice. In October, townhouses and condos had 6.6 months of supply, up from 5.5 a year ago, and 1,127 townhouses and condos were for sale, 12% more than a year ago. More options means more room to compare. Source: Phoenix REALTORS, ARMLS data, October 2026. #ScottsdaleAZ #ScottsdaleRealEstate",
+   "google": "<b>Scottsdale condos, October 2026.</b> Townhouses and condos had 6.6 months of supply, up from 5.5 a year ago, with 1,127 for sale, 12% more than a year ago. Thinking about a condo? Ask me what it means for your search. Source: Phoenix REALTORS, ARMLS data."
   },
   {
    "key": "corner",
    "day": "Wednesday",
    "label": "Community Spotlight",
-   "img": "2026-11-16_corner.jpg",
-   "google_img": "2026-11-16_corner_photo.jpg",
-   "alt": "Christmas at the Princess opens Nov 20 post",
-   "caption": "The Princess holiday season starts Friday. Christmas at the Princess opens Friday, Nov 20, at the Fairmont Scottsdale Princess and runs nightly through Jan 2. It's a ticketed event, so book ahead. Who's going? #ScottsdaleAZ #ChristmasAtThePrincess",
-   "google": "<b>Christmas at the Princess opens Nov 20.</b> The Fairmont Scottsdale Princess holiday event runs nightly from Friday, Nov 20, through Jan 2. Tickets required. Thinking about a move? Ask me about homes in North Scottsdale."
+   "img": "2026-11-23_corner.jpg",
+   "google_img": "2026-11-23_corner_photo.jpg",
+   "alt": "Scottsdale Tree Lighting Spectacular on Saturday, Nov 28 post",
+   "caption": "Scottsdazzle starts Saturday. The Tree Lighting Spectacular runs Nov 28 from 7 to 9 pm at 7135 E Camelback Rd and kicks off the season in Scottsdale. Who's going? #ScottsdaleAZ #Scottsdazzle",
+   "google": "<b>Scottsdale Tree Lighting Spectacular, Saturday, Nov 28.</b> The tree lighting runs from 7 to 9 pm at 7135 E Camelback Rd and kicks off Scottsdazzle. Thinking about a move? Ask me about homes in Scottsdale."
   },
   {
    "key": "smart",
    "day": "Friday",
-   "label": "Buyer Tip",
-   "img": "2026-11-16_buyer.jpg",
-   "google_img": "2026-11-16_buyer_photo.jpg",
-   "alt": "Pick three must haves buyer tip post",
-   "caption": "Buying soon? Pick three must haves and write them down before your first tour. Then score every home on the same three. Clear priorities make yes easier. #ScottsdaleAZ #HomeBuyingTips",
-   "google": "<b>Buying in Scottsdale? Pick three must haves.</b> Write them down before your first tour, then score every home on the same three. Clear priorities make yes easier."
+   "label": "Seller Tip",
+   "img": "2026-11-23_seller.jpg",
+   "google_img": "2026-11-23_seller_photo.jpg",
+   "alt": "Selling this season? Decorate light seller tip post",
+   "caption": "Selling this season? Decorate light. Keep decor simple and neutral so photos and showings keep the focus on the home. A few touches feel warm. Too many hide the rooms buyers came to see. #ScottsdaleAZ #HomeSellingTips",
+   "google": "<b>Selling in Scottsdale this season? Decorate light.</b> Keep decor simple and neutral so photos and showings keep the focus on the home."
   }
  ],
  "tiles": [
   {
    "key": "questions",
-   "img": "2026-11-09_market.jpg",
-   "alt": "Scottsdale market update post: fewer contracts, prices still up"
+   "img": "2026-11-16_market.jpg",
+   "alt": "Scottsdale market update post: homes sold a week faster"
   },
   {
    "key": "lesson",
-   "img": "2026-11-09_seller.jpg",
-   "alt": "Price it right from day one seller tip post"
+   "img": "2026-11-16_buyer.jpg",
+   "alt": "Pick three must haves buyer tip post"
   }
  ],
  "brief": {
   "stats": [
    [
-    "75 days",
-    "Days on market, single family, Oct 2026, down from 82 a year ago"
+    "6.6 months",
+    "Supply of townhouses and condos, Oct 2026, up from 5.5 a year ago"
    ],
    [
-    "1,480",
-    "Single family homes for sale, Oct 2026, about even with a year ago"
+    "1,127",
+    "Townhouses and condos for sale, Oct 2026, up 12% from a year ago"
    ]
   ],
-  "line": "Scottsdale single family homes sold about a week faster in October than a year ago, with about the same number for sale.",
-  "say": "“In October, Scottsdale single family homes sold about a week faster than a year ago, with about the same number for sale.”",
+  "line": "Scottsdale condo and townhouse buyers had more homes to choose from in October than a year ago.",
+  "say": "“In October, Scottsdale had 6.6 months of condo and townhouse supply, up from 5.5 a year ago, so buyers have more room to compare.”",
   "src": "Market numbers from Phoenix REALTORS, ARMLS data through Oct 2026.",
-  "headline": "Sold a week faster."
+  "headline": "Condo buyers have more choice."
  },
- "float": "Scottsdale single family homes sold a week faster in October than a year ago.",
+ "float": "Scottsdale condo buyers had more choice in October: 6.6 months of supply, up from 5.5 a year ago.",
  "feed": [
+  {
+   "img": "2026-11-23_seller.jpg",
+   "alt": "Selling this season? Decorate light seller tip post"
+  },
+  {
+   "img": "2026-11-23_corner.jpg",
+   "alt": "Scottsdale Tree Lighting Spectacular on Saturday, Nov 28 post"
+  },
+  {
+   "img": "2026-11-23_market.jpg",
+   "alt": "Scottsdale market update post: condo buyers have more choice"
+  },
   {
    "img": "2026-11-16_buyer.jpg",
    "alt": "Pick three must haves buyer tip post"
-  },
-  {
-   "img": "2026-11-16_corner.jpg",
-   "alt": "Christmas at the Princess opens Nov 20 post"
   },
   {
    "img": "2026-11-16_market.jpg",
@@ -91,14 +99,6 @@
   {
    "img": "2026-11-02_seller.jpg",
    "alt": "Your front door is the first showing seller tip post"
-  },
-  {
-   "img": "2026-11-02_market.jpg",
-   "alt": "Scottsdale market update post: buyers paid 96% of asking"
-  },
-  {
-   "img": "master_a.jpg",
-   "alt": "Desert modern, done right post"
   }
  ]
 }
