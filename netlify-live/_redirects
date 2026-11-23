@@ -4,4 +4,5 @@
 /montage       /montage-r8x2/v3/  301
 /stillwater    /stillwater-k4p7/v3/  301
 /view          /montage-r8x2/view/  301
+/meet/montage/:name  https://thesocialdm.github.io/locallift-pulses/team/montage/leasing/?by=:name&src=link  302
 /*             https://thesocialdm.github.io/locallift-pulses/live/:splat  200

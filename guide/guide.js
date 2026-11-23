@@ -17,7 +17,7 @@ var css='.llg{position:fixed;right:14px;bottom:14px;z-index:9999;font:15px/1.45 
 '.llg-tip b{color:'+C+'}'+
 '.llg-p{position:absolute;right:0;bottom:104px;width:min(320px,calc(100vw - 28px));max-height:calc(100vh - 124px);max-height:calc(100dvh - 124px);overflow-y:auto;overscroll-behavior:contain;background:#fff;border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.3);overflow:hidden;display:none}'+
 '.llg.on .llg-p{display:block}.llg.on .llg-tip{display:none}'+
-'.llg-v{position:relative;width:100%;height:min(400px,calc(100vh - 340px));height:min(400px,calc(100dvh - 340px));min-height:170px;background:#111 center/cover;display:grid;place-items:center;color:#fff;text-align:center}'+
+'.llg-v{position:relative;overflow:hidden;width:100%;height:min(400px,calc(100vh - 340px));height:min(400px,calc(100dvh - 340px));min-height:170px;background:#111 center/cover;display:grid;place-items:center;color:#fff;text-align:center}'+
 '.llg-v video{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}'+
 '.llg-v .ph{padding:20px}.llg-v .ph b{display:block;font:700 40px Montserrat,Inter,sans-serif;width:84px;height:84px;line-height:84px;border-radius:50%;background:'+C+';margin:0 auto 12px}'+
 '.llg-h{padding:12px 14px 4px;font-size:14px}.llg-h small{display:block;color:#6a6e75;font-size:11.5px}'+
@@ -35,6 +35,13 @@ document.body.appendChild(w);
 var pv=w.querySelector('.llg-v video');
 w.querySelector('.llg-b').addEventListener('click',function(){var on=w.classList.toggle('on');if(pv){if(on){pv.currentTime=0;pv.muted=false;pv.play().catch(function(){})}else pv.pause()}});
 w.querySelector('.llg-x').addEventListener('click',function(){w.classList.remove('on');if(pv)pv.pause()});
+
+/* data-vw: width share of the video frame that holds the person (e.g. 0.42 for a portrait framed inside a 16:9 file). Zooms just enough to hide side bars, never more. */
+var VW=parseFloat(d.vw||0);
+function fit(v,box,base){if(!VW||!v.videoWidth)return;var A=v.videoWidth/v.videoHeight,C=box.clientWidth/Math.max(1,box.clientHeight),sc=Math.max(1,(C/A)/VW)*(base||1);v.style.transform='scale('+sc.toFixed(3)+')';v.style.transformOrigin='50% 35%';v.style.objectPosition='50% 50%'}
+if(VW){var bvv=w.querySelector('.llg-b video'),bbx=w.querySelector('.llg-b'),pbx=w.querySelector('.llg-v');
+function refit(){if(bvv)fit(bvv,bbx,1.02);if(pv)fit(pv,pbx,1.01)}
+[bvv,pv].forEach(function(x){if(x)x.addEventListener('loadedmetadata',refit)});addEventListener('resize',refit);w.querySelector('.llg-b').addEventListener('click',function(){setTimeout(refit,30)});refit()}
 var tip=w.querySelector('.llg-tip'),INTRO=tip.innerHTML,bv=w.querySelector('.llg-b video');
 var CAP=(d.captions||'').split('|').map(function(x){return x.trim()}).filter(Boolean);
 function esc(t){return t.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
