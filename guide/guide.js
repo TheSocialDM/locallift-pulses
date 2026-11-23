@@ -7,16 +7,16 @@
 var s=document.currentScript;if(!s)return;var d=s.dataset;
 var C=d.color||'#C8241D',N=d.name||'Ava',P=d.property||'',PRO=d.pro||'your leasing pro',V=d.video||'',POS=d.poster||'',FACE=d.face||POS;
 var css='.llg{position:fixed;right:14px;bottom:14px;z-index:9999;font:15px/1.45 Inter,system-ui,sans-serif;color:#111}'+
-'.llg-b{width:74px;height:74px;border-radius:50%;border:3px solid '+C+';background:#111 center/cover;box-shadow:0 10px 30px rgba(0,0,0,.3);cursor:pointer;position:relative;overflow:hidden;padding:0;display:grid;place-items:center;color:#fff;font:700 28px Montserrat,Inter,sans-serif}'+
+'.llg-b{width:92px;height:92px;border-radius:50%;border:3px solid '+C+';background:#111 center/cover;box-shadow:0 10px 30px rgba(0,0,0,.3);cursor:pointer;position:relative;overflow:hidden;padding:0;display:grid;place-items:center;color:#fff;font:700 28px Montserrat,Inter,sans-serif}'+
 '.llg-b video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}'+
 '.llg-b::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:3px solid '+C+';animation:llgp 2.2s ease-out infinite}'+
 '@keyframes llgp{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.35);opacity:0}}'+
 '@media(prefers-reduced-motion:reduce){.llg-b::after{animation:none}}'+
-'.llg-tip{position:absolute;right:84px;bottom:18px;background:#fff;border-radius:14px;padding:8px 12px;box-shadow:0 8px 24px rgba(0,0,0,.18);white-space:nowrap;font-size:13px}'+
+'.llg-tip{position:absolute;right:102px;bottom:28px;background:#fff;border-radius:14px;padding:8px 12px;box-shadow:0 8px 24px rgba(0,0,0,.18);white-space:nowrap;font-size:13px}'+
 '.llg-tip b{color:'+C+'}'+
-'.llg-p{position:absolute;right:0;bottom:86px;width:min(320px,calc(100vw - 28px));background:#fff;border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.3);overflow:hidden;display:none}'+
+'.llg-p{position:absolute;right:0;bottom:104px;width:min(320px,calc(100vw - 28px));background:#fff;border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.3);overflow:hidden;display:none}'+
 '.llg.on .llg-p{display:block}.llg.on .llg-tip{display:none}'+
-'.llg-v{position:relative;aspect-ratio:9/12;background:#111 center/cover;display:grid;place-items:center;color:#fff;text-align:center}'+
+'.llg-v{position:relative;aspect-ratio:4/5;background:#111 center/cover;display:grid;place-items:center;color:#fff;text-align:center}'+
 '.llg-v video{width:100%;height:100%;object-fit:cover;display:block}'+
 '.llg-v .ph{padding:20px}.llg-v .ph b{display:block;font:700 40px Montserrat,Inter,sans-serif;width:84px;height:84px;line-height:84px;border-radius:50%;background:'+C+';margin:0 auto 12px}'+
 '.llg-h{padding:12px 14px 4px;font-size:14px}.llg-h small{display:block;color:#6a6e75;font-size:11.5px}'+
