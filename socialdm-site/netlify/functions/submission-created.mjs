@@ -2,8 +2,10 @@
 // Spam that Netlify catches never reaches this function, so it never gets an auto reply.
 // Forwards the verified lead to Make, which logs it in Airtable (Leads) and sends the
 // confirmation from info@. Extra checks below flag obvious junk so it is logged but not answered.
-const HOOK = "https://hook.us2.make.com/iohhty0efvjr39dni63w6nzco3wqp3t4";
-const KEY = process.env.MAKE_FORM_SECRET || "d2b37a54193ac6ddab7c09feb321550357c1f1b2";
+// Webhook address and key live ONLY in Netlify secret environment variables (production).
+// Never put them back in this file: this repo is public.
+const HOOK = process.env.MAKE_FORM_HOOK;
+const KEY = process.env.MAKE_FORM_SECRET;
 
 function flags(d) {
   const f = [];
@@ -18,6 +20,7 @@ function flags(d) {
 
 export const handler = async (event) => {
   try {
+    if (!HOOK || !KEY) { console.log("relay not configured"); return { statusCode: 200, body: "not configured" }; }
     const p = JSON.parse(event.body || "{}").payload || {};
     if (p.form_name !== "contact") return { statusCode: 200, body: "skip" };
     const d = p.data || {};
