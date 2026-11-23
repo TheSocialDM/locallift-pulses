@@ -5,7 +5,7 @@
      data-tour="url" data-offer="url" data-call="tel:+1..." data-color="#C8241D" defer></script> */
 (function(){
 var s=document.currentScript;if(!s)return;var d=s.dataset;
-var C=d.color||'#C8241D',N=d.name||'Ava',P=d.property||'',PRO=d.pro||'your leasing pro',V=d.video||'',POS=d.poster||'';
+var C=d.color||'#C8241D',N=d.name||'Ava',P=d.property||'',PRO=d.pro||'your leasing pro',V=d.video||'',POS=d.poster||'',FACE=d.face||POS;
 var css='.llg{position:fixed;right:14px;bottom:14px;z-index:9999;font:15px/1.45 Inter,system-ui,sans-serif;color:#111}'+
 '.llg-b{width:74px;height:74px;border-radius:50%;border:3px solid '+C+';background:#111 center/cover;box-shadow:0 10px 30px rgba(0,0,0,.3);cursor:pointer;position:relative;overflow:hidden;padding:0;display:grid;place-items:center;color:#fff;font:700 28px Montserrat,Inter,sans-serif}'+
 '.llg-b video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}'+
@@ -25,11 +25,11 @@ var css='.llg{position:fixed;right:14px;bottom:14px;z-index:9999;font:15px/1.45 
 '.llg-x{position:absolute;top:8px;right:8px;z-index:2;width:30px;height:30px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:16px;cursor:pointer}';
 var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 var w=document.createElement('div');w.className='llg';
-var vid=V?'<video src="'+V+'" playsinline'+(POS?' poster="'+POS+'"':'')+'></video>':'<div class="ph"><b>'+N.charAt(0)+'</b>Hi, I\'m '+N+', your AI tour guide'+(P?' for '+P:'')+'.</div>';
+var vid=V?'<video src="'+V+'" playsinline'+(POS?' poster="'+POS+'"':'')+'></video>':POS?'<img src="'+POS+'" alt="'+N+', your tour guide" style="width:100%;height:100%;object-fit:cover;display:block">':'<div class="ph"><b>'+N.charAt(0)+'</b>Hi, I\'m '+N+', your AI tour guide'+(P?' for '+P:'')+'.</div>';
 var links='';if(d.tour)links+='<a class="m" href="'+d.tour+'" target="_blank" rel="noopener">Book my tour</a>';if(d.offer)links+='<a href="'+d.offer+'" target="_blank" rel="noopener">Today\'s offer</a>';if(d.call)links+='<a href="'+d.call+'">Call '+PRO+'</a>';
 w.innerHTML='<div class="llg-p" role="dialog" aria-label="'+N+', AI tour guide"><button class="llg-x" aria-label="Close">×</button><div class="llg-v">'+vid+'</div><div class="llg-h"><b>'+N+'</b>, your tour guide'+(P?' at '+P:'')+'<small>AI guide. Your leasing pro is '+PRO+'.</small></div><div class="llg-a">'+links+'</div></div>'+
 '<div class="llg-tip">Hi! I\'m <b>'+N+'</b>, your tour guide</div>'+
-'<button class="llg-b" aria-label="Open '+N+', your AI tour guide"'+(POS?' style="background-image:url(\''+POS+'\')"':'')+'>'+(V?'<video src="'+V+'" muted playsinline autoplay loop'+(POS?' poster="'+POS+'"':'')+'></video>':N.charAt(0))+'</button>';
+'<button class="llg-b" aria-label="Open '+N+', your AI tour guide"'+(FACE?' style="background-image:url(\''+FACE+'\');background-size:cover;background-position:center"':'')+'>'+(V?'<video src="'+V+'" muted playsinline autoplay loop'+(POS?' poster="'+POS+'"':'')+'></video>':(FACE?'':N.charAt(0)))+'</button>';
 document.body.appendChild(w);
 var pv=w.querySelector('.llg-v video');
 w.querySelector('.llg-b').addEventListener('click',function(){var on=w.classList.toggle('on');if(pv){if(on){pv.currentTime=0;pv.muted=false;pv.play().catch(function(){})}else pv.pause()}});
