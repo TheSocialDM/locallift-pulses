@@ -1,8 +1,8 @@
 {
  "property": "Stillwater Lakes",
  "city": "Kissimmee, Florida",
- "updated": "2026-11-22T05:47:23-07:00",
- "updatedLabel": "Nov 22, 5:47 am Phoenix time",
+ "updated": "2026-11-23T05:50:00-07:00",
+ "updatedLabel": "Nov 23, 5:50 am Phoenix time",
  "rv": {
   "rating": "4.2",
   "count": "19",
@@ -11,17 +11,18 @@
  "feed": [
   {
    "src": "Rival watch · their own sites",
-   "date": "Nov 22",
+   "date": "Nov 23",
    "tone": "info",
-   "title": "Cielo View is posting two months free",
-   "body": "Still posted on cieloviewapts.com on Nov 22: \"Two Months FREE For a Limited Time!\" Their 1 beds start at $1,499 base rent ($1,628 with WiFi and mandatory fees). Lease term not shown."
+   "title": "The Jamison's fees are now on the board",
+   "body": "Read today on greystar.com: The Jamison asks a $500 deposit, a $75 application fee, a $250 admin fee, $25 a month pet rent and a $350 pet fee. No special posted. Mosaic now starts at $1,442 and $1,693 on an 18 month lease, and Cielo View still posts two months free.",
+   "action": "When The Jamison comes up, compare totals and move in costs: our deposit is $350."
   },
   {
    "src": "MoveInLocal guide · last 7 days",
-   "date": "Nov 16 to 22",
+   "date": "Nov 17 to 23",
    "tone": "info",
-   "title": "4 visits to your guide",
-   "body": "2 on Nov 16, 1 on Nov 18 and 1 on Nov 19. One Apply tap on Nov 16."
+   "title": "2 visits to your guide",
+   "body": "1 on Nov 18 and 1 on Nov 19. No Call, Tour or Apply taps this week."
   },
   {
    "src": "Weekly Pulse · Google Maps",
@@ -163,12 +164,12 @@
  "asks": {
   "sent": 0,
   "opened": 0,
-  "through": "Nov 22"
+  "through": "Nov 23"
  },
  "shortLink": "moveinlocal.com/review/stillwater-lakes",
  "talk": {
-  "checked": "Nov 22",
-  "checkedIso": "2026-11-22",
+  "checked": "Nov 23",
+  "checkedIso": "2026-11-23",
   "offer": "2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2.",
   "prices": [
    [
@@ -233,8 +234,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 22",
-  "checkedIso": "2026-11-22",
+  "checked": "Nov 23",
+  "checkedIso": "2026-11-23",
   "items": [
    {
     "name": "Cielo View",
@@ -299,8 +300,8 @@
     "basis": "Their prices: lowest base rent on their own site. Lease term not shown. Ask what term they were quoted.",
     "url": "https://cieloviewapts.com/floorplans/",
     "feesChecked": "Nov 19",
-    "checked": "Nov 22",
-    "checkedIso": "2026-11-22"
+    "checked": "Nov 23",
+    "checkedIso": "2026-11-23"
    },
    {
     "name": "The Jamison",
@@ -320,8 +321,8 @@
       "2 bed"
      ]
     ],
-    "fees": "Monthly mandatory costs are added on top of base rent: their totals start at $1,640 for a 1 bed and $1,965 for a 2 bed. Deposit and pet fees not read yet.",
-    "tip": "Their 1 and 2 bedrooms start lower on base rent, but their totals with monthly fees start at $1,640 and $1,965. Ask what total they were quoted. No special is posted today.",
+    "fees": "Monthly mandatory costs are added on top of base rent: their totals start at $1,640 for a 1 bed and $1,965 for a 2 bed. $500 deposit, $75 application, $250 admin fee, pets $25 a month plus a $350 pet fee, garage $150 a month.",
+    "tip": "Their 1 and 2 bedrooms start lower on base rent, but their totals with monthly fees start at $1,640 and $1,965. Ask what total they were quoted. No special is posted today. Our deposit is $350 to their $500, and our pet rent and pet fee are lower too.",
     "vs": [
      [
       "Special",
@@ -349,28 +350,28 @@
      ],
      [
       "Deposit",
-      "Not posted",
+      "$500",
       "$350",
-      "ask"
+      "us"
      ],
      [
       "Pet rent",
-      "Not posted",
+      "$25/mo",
       "$20/mo",
-      "ask"
+      "us"
      ],
      [
       "Pet fee",
-      "Not posted",
+      "$350",
       "$200",
-      "ask"
+      "us"
      ]
     ],
     "basis": "Their prices: lowest base rent on greystar.com. Mandatory monthly costs are added on top.",
     "url": "https://www.greystar.com/the-jamison-kissimmee-fl/p_16895",
-    "feesChecked": "Nov 19",
-    "checked": "Nov 22",
-    "checkedIso": "2026-11-22"
+    "feesChecked": "Nov 23",
+    "checked": "Nov 23",
+    "checkedIso": "2026-11-23"
    },
    {
     "name": "Mosaic at Lake Toho",
@@ -382,20 +383,20 @@
       "studio"
      ],
      [
-      "$1,443",
+      "$1,442",
       "1 bed"
      ],
      [
-      "$1,696",
+      "$1,693",
       "2 bed"
      ]
     ],
     "fees": "$500 deposit, 18 month lease on the posted prices. Pet fees not posted.",
-    "tip": "Their posted prices start lower, and the lease term isn't shown, so ask what term they were quoted. Our deposit is $350 to their $500, and our special is 2 months free plus $1,200 off move in in Buildings 1 and 2.",
+    "tip": "Their posted prices start lower on an 18 month lease, so ask what term they were quoted. Our deposit is $350 to their $500, and our special is 2 months free plus $1,200 off move in in Buildings 1 and 2.",
     "vs": [
      [
       "Special",
-      "Up to 8 weeks free, select plans",
+      "Up to 8 weeks free, conditions apply",
       "2 mo free + $1,200 Bldgs 1, 2",
       "ask"
      ],
@@ -407,13 +408,13 @@
      ],
      [
       "1 bed from",
-      "$1,443",
+      "$1,442",
       "$1,552",
       "them"
      ],
      [
       "2 bed from",
-      "$1,696",
+      "$1,693",
       "$1,902",
       "them"
      ],
@@ -436,11 +437,11 @@
       "ask"
      ]
     ],
-    "basis": "Their prices: lowest posted rent on their own site. Lease term not shown on Nov 22 (earlier reads showed 18 months). Ask what term they were quoted.",
+    "basis": "Their prices: lowest posted rent on their own site, on an 18 month lease (shown again on Nov 23). Ask what term they were quoted.",
     "url": "https://www.advenirliving.com/laketoho/kissimmee/mosaic-at-lake-toho/conventional/",
     "feesChecked": "Nov 19",
-    "checked": "Nov 22",
-    "checkedIso": "2026-11-22"
+    "checked": "Nov 23",
+    "checkedIso": "2026-11-23"
    }
   ],
   "us": {
@@ -479,6 +480,36 @@
    "basis": "Our special is on a 15 month lease. Lease terms differ by community, so confirm the term before quoting a difference."
   },
   "changes": [
+   {
+    "id": "2026-11-23-mosaic-2bed",
+    "rival": "Mosaic at Lake Toho",
+    "row": "2 bed from",
+    "from": "$1,696",
+    "to": "$1,693",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "verified": "Nov 23",
+    "verifiedIso": "2026-11-23",
+    "src": "advenirliving.com",
+    "headline": "Mosaic's 2 beds now start at $1,693",
+    "detail": "Beaumont (B1), 966 sq ft, 18 month lease. Was $1,696. Still under our $1,902.",
+    "say": "Their posted prices are on an 18 month lease, so ask what term they were quoted. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
+   },
+   {
+    "id": "2026-11-23-mosaic-1bed",
+    "rival": "Mosaic at Lake Toho",
+    "row": "1 bed from",
+    "from": "$1,443",
+    "to": "$1,442",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "verified": "Nov 23",
+    "verifiedIso": "2026-11-23",
+    "src": "advenirliving.com",
+    "headline": "Mosaic's 1 beds now start at $1,442",
+    "detail": "Broadway (A1), 668 sq ft, 18 month lease. Was $1,443. Still under our $1,552.",
+    "say": "Their posted prices are on an 18 month lease, so ask what term they were quoted. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
+   },
    {
     "id": "2026-11-22-mosaic-2bed",
     "rival": "Mosaic at Lake Toho",

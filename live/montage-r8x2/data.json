@@ -1,24 +1,24 @@
 {
  "property": "Montage",
  "city": "Tigard, Oregon",
- "updated": "2026-11-22T05:47:23-07:00",
- "updatedLabel": "Nov 22, 5:47 am Phoenix time",
+ "updated": "2026-11-23T05:50:00-07:00",
+ "updatedLabel": "Nov 23, 5:50 am Phoenix time",
  "feed": [
   {
    "src": "Rival watch · their own sites",
-   "date": "Nov 22",
+   "date": "Nov 23",
    "tone": "info",
-   "title": "The Overland's 2 beds now start at $2,046",
-   "body": "Read today on livetheoverland.com: Two Bedroom A base rent is $2,046 for a 12 month lease, down from $2,075. Their special is still up to 6 weeks free. Mercato Grove ($2,055 and $3,345, no special) and The Steward ($1,699 and $1,899) are unchanged.",
+   "title": "The Overland's 2 beds now start at $2,031",
+   "body": "Read today on livetheoverland.com: Two Bedroom A base rent is $2,031 for a 12 month lease, down from $2,046. Their special is still up to 6 weeks free. Mercato Grove ($2,055 and $3,345, no special) and The Steward ($1,699 and $1,899) are unchanged. The Overland's and Mercato Grove's posted fees match Nov 16.",
    "action": "On select 2 bedrooms, lead with our 2 months free plus $1,000 through Nov 30."
   },
   {
    "src": "MoveInLocal guide · last 7 days",
-   "date": "Nov 16 to 22",
-   "tone": "info",
-   "title": "6 visits to your guide",
-   "body": "4 came on Nov 16, 1 on Nov 20 and 1 on Nov 21. No Call, Tour or Apply taps yet.",
-   "action": ""
+   "date": "Nov 17 to 23",
+   "tone": "good",
+   "title": "First Call and Tour taps from your guide",
+   "body": "4 visits to your guide: 1 on Nov 20, 2 on Nov 21 and 1 on Nov 22. On Nov 22 there was one Call tap and one Tour tap on the roommate 2 bedroom guide.",
+   "action": "If a roommate pair calls or books a tour this week, lead with the $2,150 2 bedroom, $1,075 each."
   },
   {
    "src": "Your site · montagetigard.com",
@@ -170,13 +170,13 @@
  "trackBase": "https://thesocialdm.github.io/locallift-pulses/live/r/montage/",
  "asks": {
   "sent": 0,
-  "opened": 3,
-  "through": "Nov 22"
+  "opened": 2,
+  "through": "Nov 23"
  },
  "shortLink": "moveinlocal.com/review/montage",
  "talk": {
-  "checked": "Nov 22",
-  "checkedIso": "2026-11-22",
+  "checked": "Nov 23",
+  "checkedIso": "2026-11-23",
   "offer": "Select 2 bedrooms: 2 months free plus a $1,000 Look & Lease bonus, through Nov 30.",
   "prices": [
    [
@@ -236,8 +236,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 22",
-  "checkedIso": "2026-11-22",
+  "checked": "Nov 23",
+  "checkedIso": "2026-11-23",
   "items": [
    {
     "name": "The Overland",
@@ -253,11 +253,11 @@
       "1 bed"
      ],
      [
-      "$2,046",
+      "$2,031",
       "2 bed"
      ]
     ],
-    "fees": "$50 application, $500 deposit, pets $300 deposit plus $50 a month, parking $150 to $175 a month, utilities and trash billed on top",
+    "fees": "$50 application, $500 deposit, pets $300 deposit plus $50 a month, parking $150 to $175 a month, garage $165 a month, utilities and trash billed on top",
     "tip": "Their 1 and 2 beds start lower on base rent. On select 2 bedrooms, our 2 months free plus $1,000 through Nov 30 is the bigger special.",
     "vs": [
      [
@@ -274,7 +274,7 @@
      ],
      [
       "2 bed from",
-      "$2,046",
+      "$2,031",
       "$2,150",
       "them"
      ],
@@ -305,9 +305,9 @@
     ],
     "basis": "Their prices: lowest base rent for a 12 month lease on their own site. Other fees apply on top.",
     "url": "https://www.livetheoverland.com/floorplans",
-    "feesChecked": "Nov 16",
-    "checked": "Nov 22",
-    "checkedIso": "2026-11-22"
+    "feesChecked": "Nov 23",
+    "checked": "Nov 23",
+    "checkedIso": "2026-11-23"
    },
    {
     "name": "The Steward",
@@ -372,8 +372,8 @@
     "basis": "Their prices: lowest base rent listed. Lease term not shown.",
     "url": "https://bethesteward.com/floorplans/",
     "feesChecked": "Nov 16",
-    "checked": "Nov 22",
-    "checkedIso": "2026-11-22"
+    "checked": "Nov 23",
+    "checkedIso": "2026-11-23"
    },
    {
     "name": "Mercato Grove",
@@ -437,9 +437,9 @@
     ],
     "basis": "Their prices: lowest base rent for a 12 month lease on greystar.com (base rent and total match on that listing).",
     "url": "https://www.greystar.com/mercato-grove-apartments-lake-oswego-or/p_17860",
-    "feesChecked": "Nov 16",
-    "checked": "Nov 22",
-    "checkedIso": "2026-11-22"
+    "feesChecked": "Nov 23",
+    "checked": "Nov 23",
+    "checkedIso": "2026-11-23"
    }
   ],
   "us": {
@@ -469,6 +469,21 @@
    "basis": "Lease terms differ and Montage's term is not posted. Confirm the term with the office before quoting a difference."
   },
   "changes": [
+   {
+    "id": "2026-11-23-overland-2bed",
+    "rival": "The Overland",
+    "row": "2 bed from",
+    "from": "$2,046",
+    "to": "$2,031",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "verified": "Nov 23",
+    "verifiedIso": "2026-11-23",
+    "src": "livetheoverland.com",
+    "headline": "The Overland's 2 beds now start at $2,031",
+    "detail": "Two Bedroom A, base rent for a 12 month lease, 3 available. Was $2,046. Under our $2,150 on base rent.",
+    "say": "Their 2 bedroom base rent starts a little lower. On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, a $400 deposit and $35 pet rent."
+   },
    {
     "id": "2026-11-22-overland-2bed",
     "rival": "The Overland",
@@ -573,21 +588,6 @@
     "headline": "Mercato Grove no longer posts a special",
     "detail": "No special on greystar.com or mercatogrove.com when read on Nov 18.",
     "say": "On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, and our 1 bedrooms start at $1,795."
-   },
-   {
-    "id": "2026-11-16-steward-1bed",
-    "rival": "The Steward",
-    "row": "1 bed from",
-    "from": "$1,949",
-    "to": "$1,699",
-    "flip": true,
-    "verified": "Nov 16",
-    "verifiedIso": "2026-11-16",
-    "src": "bethesteward.com",
-    "headline": "The Steward's 1 beds now start at $1,699",
-    "detail": "New lowest plan: 1 Bedroom-C, 700 sq ft. Now $96 under our 1 bed on base rent.",
-    "say": "Their 1 bedroom does start a little lower right now on base rent. On select 2 bedrooms we have 2 months free plus $1,000 through Nov 30, and pet rent here is just $35. Want to see both side by side?",
-    "fromLabel": "Lowest was"
    }
   ]
  },
