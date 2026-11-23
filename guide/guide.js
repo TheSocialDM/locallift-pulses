@@ -14,10 +14,10 @@ var css='.llg{position:fixed;right:14px;bottom:14px;z-index:9999;font:15px/1.45 
 '@media(prefers-reduced-motion:reduce){.llg-b::after{animation:none}}'+
 '.llg-tip{position:absolute;right:102px;bottom:28px;background:#fff;border-radius:14px;padding:8px 12px;box-shadow:0 8px 24px rgba(0,0,0,.18);white-space:nowrap;font-size:13px}'+
 '.llg-tip b{color:'+C+'}'+
-'.llg-p{position:absolute;right:0;bottom:104px;width:min(320px,calc(100vw - 28px));background:#fff;border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.3);overflow:hidden;display:none}'+
+'.llg-p{position:absolute;right:0;bottom:104px;width:min(320px,calc(100vw - 28px));max-height:calc(100vh - 124px);max-height:calc(100dvh - 124px);overflow-y:auto;overscroll-behavior:contain;background:#fff;border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.3);overflow:hidden;display:none}'+
 '.llg.on .llg-p{display:block}.llg.on .llg-tip{display:none}'+
-'.llg-v{position:relative;aspect-ratio:4/5;background:#111 center/cover;display:grid;place-items:center;color:#fff;text-align:center}'+
-'.llg-v video{width:100%;height:100%;object-fit:cover;object-position:50% 35%;display:block}'+
+'.llg-v{position:relative;width:100%;height:min(400px,calc(100vh - 340px));height:min(400px,calc(100dvh - 340px));min-height:170px;background:#111 center/cover;display:grid;place-items:center;color:#fff;text-align:center}'+
+'.llg-v video{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}'+
 '.llg-v .ph{padding:20px}.llg-v .ph b{display:block;font:700 40px Montserrat,Inter,sans-serif;width:84px;height:84px;line-height:84px;border-radius:50%;background:'+C+';margin:0 auto 12px}'+
 '.llg-h{padding:12px 14px 4px;font-size:14px}.llg-h small{display:block;color:#6a6e75;font-size:11.5px}'+
 '.llg-a{display:grid;gap:6px;padding:8px 14px 14px}.llg-a a{display:block;text-align:center;text-decoration:none;font-weight:600;border-radius:999px;padding:10px;border:1px solid #e5e5e5;color:#111}'+
@@ -25,7 +25,7 @@ var css='.llg{position:fixed;right:14px;bottom:14px;z-index:9999;font:15px/1.45 
 '.llg-x{position:absolute;top:8px;right:8px;z-index:2;width:30px;height:30px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:16px;cursor:pointer}';
 var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 var w=document.createElement('div');w.className='llg';
-var vid=V?'<video src="'+V+'" playsinline'+(POS?' poster="'+POS+'"':'')+'></video>':POS?'<img src="'+POS+'" alt="'+N+', your tour guide" style="width:100%;height:100%;object-fit:cover;display:block">':'<div class="ph"><b>'+N.charAt(0)+'</b>Hi, I\'m '+N+', your AI tour guide'+(P?' for '+P:'')+'.</div>';
+var vid=V?'<video src="'+V+'" playsinline'+(POS?' poster="'+POS+'"':'')+'></video>':POS?'<img src="'+POS+'" alt="'+N+', your tour guide" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block">':'<div class="ph"><b>'+N.charAt(0)+'</b>Hi, I\'m '+N+', your AI tour guide'+(P?' for '+P:'')+'.</div>';
 var links='';if(d.tour)links+='<a class="m" href="'+d.tour+'" target="_blank" rel="noopener">'+(d.l1||'Book my tour')+'</a>';if(d.offer)links+='<a href="'+d.offer+'" target="_blank" rel="noopener">'+(d.l2||'Today\'s offer')+'</a>';if(d.call)links+='<a href="'+d.call+'">'+(d.l3||('Call '+PRO))+'</a>';
 w.innerHTML='<div class="llg-p" role="dialog" aria-label="'+N+', AI tour guide"><button class="llg-x" aria-label="Close">×</button><div class="llg-v">'+vid+'</div><div class="llg-h"><b>'+N+'</b>, '+ROLE+(P?' at '+P:'')+'<small>'+(SUB||('AI guide. Your leasing pro is '+PRO+'.'))+'</small></div><div class="llg-a">'+links+'</div></div>'+
 '<div class="llg-tip">Hi! I\'m <b>'+N+'</b>, '+ROLE+'</div>'+
