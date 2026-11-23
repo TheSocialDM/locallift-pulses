@@ -52,6 +52,17 @@ a{color:inherit}
 .ft{text-align:center;font-size:12px;color:var(--mute);line-height:1.7;padding:6px 16px}
 .ft img{height:16px;margin-bottom:8px}
 .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 16px;border-radius:12px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s;max-width:92vw;text-align:center;z-index:9}.toast.show{opacity:1}
+.opt{background:#fff;border-radius:20px;padding:20px;margin:0 14px;border:1px solid var(--line)}
+.opt .k{font:700 11px Montserrat,sans-serif;letter-spacing:.16em;color:#7e4815;text-transform:uppercase}
+.opt h2{font-size:20px;margin:6px 0 6px}
+.opt .now{background:var(--soft);border-radius:12px;padding:10px 12px;font-size:14px;margin:0 0 12px}.opt .now b{color:#7e4815}
+.opt form{display:grid;gap:8px}
+.opt input[type=email]{font:16px Inter,system-ui,sans-serif;border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-height:48px;width:100%;background:#fff;color:var(--ink)}
+.opt input[type=email]:focus{outline:3px solid var(--cu);outline-offset:1px}
+.opt .fine{font-size:12px;color:var(--mute);margin:8px 0 0}
+.opt .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.opt .done{display:none;text-align:center;padding:6px 0}.opt.ok form,.opt.ok .fine{display:none}.opt.ok .done{display:block}
+.opt .done svg{width:44px;height:44px;stroke:var(--cu);fill:none;stroke-width:2}
 a:focus-visible,button:focus-visible{outline:3px solid var(--cu);outline-offset:2px}
 </style></head><body>
 <main class="pf">
@@ -72,6 +83,19 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--cu);outline-offset:
       <button class="btn" id="share" type="button">Send this to a roommate</button>
       <a class="btn" href="https://www.montagetigard.com/" target="_blank" rel="noopener">Visit montagetigard.com</a>
     </div>
+  </section>
+
+  <section class="opt" id="opt">
+    <div class="k">Specials by email</div>
+    <h2 id="optH">Get new specials from the Montage team</h2>
+    <p class="now" id="optNow"><b>Right now:</b> <span id="optSp">2 months free on select 2 bedrooms</span></p>
+    <form id="optF" novalidate>
+      <label class="hp" aria-hidden="true">Leave this empty<input type="text" name="website" id="optHp" tabindex="-1" autocomplete="off"></label>
+      <input type="email" id="optE" name="email" placeholder="Your email" autocomplete="email" inputmode="email" required aria-label="Your email">
+      <button class="btn cu" type="submit" id="optB">Send me specials</button>
+    </form>
+    <p class="fine">We email you only when the special changes. Unsubscribe any time.</p>
+    <div class="done" role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-6.5"/></svg><h2 style="margin-top:6px">You are on the list</h2><p class="sub" id="optDone" style="margin:4px 0 0">Check your inbox for a welcome email. We will email you when the special changes.</p></div>
   </section>
 
   <section class="offer" id="offer" data-end="2026-11-30">
@@ -134,6 +158,21 @@ var v='BEGIN:VCARD\r\nVERSION:3.0\r\nFN:'+(window.llBy?window.llBy+', Montage Le
 var o=$('#offer'),end=new Date(o.dataset.end+'T23:59:59-08:00');if(Date.now()>end){o.querySelector('h2').textContent='Ask about this month\'s specials';o.querySelector('p').textContent='Specials change often. The leasing team will share what is available today.'}
 $('#vcf').href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v);
 $('#share').addEventListener('click',function(){var d={title:'Montage in Tigard',text:'Take a look at Montage with me.',url:url};if(navigator.share){navigator.share(d).catch(function(){})}else{navigator.clipboard.writeText(url).then(function(){toast('Link copied. Paste it in a text.')},function(){toast(url)})}});
+})();
+
+(function(){
+var HOOK='https://hook.us2.make.com/tkhcp1kaohuobw2hqvc8ae1751qn7mac';
+var by=window.llBy||'',box=document.getElementById('opt');
+if(by){document.getElementById('optH').textContent='Get new specials from '+by;document.getElementById('optDone').textContent='Check your inbox for a welcome email. '+by+' will email you when the special changes.'}
+var o=document.querySelector('#offer h2');if(o)document.getElementById('optSp').textContent=o.textContent;
+fetch('../../../live/montage-r8x2/data.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){var t=d&&d.talk;if(t&&t.offer&&!/no special/i.test(t.offer))document.getElementById('optSp').textContent=t.offer}).catch(function(){});
+document.getElementById('optF').addEventListener('submit',function(e){e.preventDefault();var em=document.getElementById('optE'),v=(em.value||'').trim();
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){em.focus();em.setCustomValidity('Enter an email like name@example.com');em.reportValidity();em.setCustomValidity('');return}
+if(document.getElementById('optHp').value){box.classList.add('ok');return}
+var b=document.getElementById('optB');b.disabled=true;b.textContent='Sending';
+var dv=/iPhone/.test(navigator.userAgent)?'iPhone':/iPad/.test(navigator.userAgent)?'iPad':/Android/.test(navigator.userAgent)?'Android':'Computer';
+var f=new URLSearchParams({email:v,agent:by,property:'Montage',ua:navigator.userAgent,device:dv,src:new URLSearchParams(location.search).get('src')||'direct'});
+fetch(HOOK,{method:'POST',mode:'no-cors',body:f}).then(function(){box.classList.add('ok')},function(){b.disabled=false;b.textContent='Send me specials';var t=document.getElementById('toast');t.textContent='That did not go through. Try again in a moment.';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},3200)})});
 })();
 </script>
 <script src="../../../guide/guide.js?v=3" data-captions="Hi, I'm Mia, your tour guide.|Welcome!|Everything you need is right here.|Book your tour,|see today's special,|or tap to call our leasing team.|I can't wait to show you around!" data-name="Mia" data-vw="0.42" data-video="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-v1/media__3/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-4c57d71d-db8c-4382-81e1-89c4093dbe6c.mp4?Expires=2110802013&amp;Key-Pair-Id=K2ZDLYDZI2R1DF&amp;Signature=JriNK2HLtVmmYLXN7L32nhC71ALCgOJKam~6CKTux-2hTXtPoN3CU8FZ4P1J4EJpzV6sWb9rfJYN83KQDblKOy0zGKKywZ9h0czVYRSxoOAHC0QhVhn5lJjyY9Sg5QJ9eUPkT-8Wq8V91ueF4tJ3UJ2BiaTi7AplQ55ipNYMPNyXyvaN9XlkfEyRqpOBoTd3p3Hc~ymWaURGH4wePNLN4mbx3cfRAgj-ASyPpizqyZjqytsQHBfoQKtHQtTHgG~7X0wfPiT1Ynfz-cBAOMhN4KNXQrlHOYO2QgNxrehIzEvLnHYx6OrwYi9kMg6J0zFU2U5yLj~bqnAIb~n~0qM3LQ__" data-face="../../../guide/mia-face.jpg" data-poster="../../../guide/mia-poster.jpg" data-property="Montage" data-pro="the leasing team" data-sub="AI guide. Calls and tours are handled by the Montage leasing team." data-l3="Call the leasing team" data-tour="https://www.montagetigard.com/scheduletour" data-offer="https://www.montagetigard.com/floorplans" data-l2="See current specials" data-call="tel:+19713977861" data-color="#b46e26" defer></script>
