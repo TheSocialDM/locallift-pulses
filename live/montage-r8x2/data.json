@@ -767,9 +767,41 @@
      "new",
      "New"
     ],
-    "h": "Selling points to use on tours",
+    "h": "Use these on every tour",
     "b": "Pool and spa, sky lounge, golf simulator game room, dog park and indoor pet spa, guest suite, private garages with direct hallway access, and EV charging. Deposit is $400 vs $500 at The Overland and Mercato Grove. Pet rent is $35 a month vs $50 at The Overland and $55 at Mercato Grove, with no pet fee and up to 3 pets.",
-    "src": "Montage and rival websites · checked 11/23"
+    "src": "Montage and rival websites · checked 11/23",
+    "cmp": {
+     "cols": [
+      "Montage",
+      "Overland",
+      "Mercato"
+     ],
+     "rows": [
+      [
+       "Deposit",
+       "$400",
+       "$500",
+       "$500"
+      ],
+      [
+       "Pet rent",
+       "$35",
+       "$50",
+       "$55"
+      ]
+     ]
+    },
+    "chips": [
+     "Pool and spa",
+     "Sky lounge",
+     "Golf simulator",
+     "Dog park",
+     "Indoor pet spa",
+     "Guest suite",
+     "Private garages",
+     "EV charging"
+    ],
+    "note": "No pet fee and up to 3 pets. The Steward also asks a $400 deposit."
    },
    {
     "lab": "SPECIALS WATCH",
@@ -780,7 +812,29 @@
     ],
     "h": "Your 2 months free ends Nov 30",
     "b": "Montage: select 2 bedrooms get 2 months free plus a $1,000 Look and Lease bonus. The Overland: up to 6 weeks free. The Steward: free rent, amount not posted. Mercato Grove: no special posted.",
-    "src": "Each community’s website · checked 11/23"
+    "src": "Each community’s website · checked 11/23",
+    "list": [
+     [
+      "Montage",
+      "2 months free plus a $1,000 Look and Lease bonus on select 2 bedrooms, ends Nov 30",
+      "me"
+     ],
+     [
+      "The Overland",
+      "Up to 6 weeks free on select homes",
+      ""
+     ],
+     [
+      "The Steward",
+      "Free rent, amount not posted",
+      ""
+     ],
+     [
+      "Mercato Grove",
+      "No special posted",
+      ""
+     ]
+    ]
    },
    {
     "lab": "WHERE LEADS COME FROM",
@@ -810,9 +864,24 @@
      "m",
      "Measured"
     ],
-    "h": "552 direction requests, 479 website clicks, 59 call taps",
+    "h": "What your Google listing drove",
     "b": "Renters saw your Google listing 4,239 times.",
-    "src": "Google listing · Oct 24 to Nov 20 (Google publishes about 5 days late)"
+    "src": "Google listing · Oct 24 to Nov 20 (Google publishes about 5 days late)",
+    "stats": [
+     [
+      "552",
+      "Direction requests"
+     ],
+     [
+      "479",
+      "Website clicks"
+     ],
+     [
+      "59",
+      "Call taps"
+     ]
+    ],
+    "note": "Seen 4,239 times by renters."
    },
    {
     "lab": "AI ANSWERS",
@@ -820,9 +889,23 @@
      "s",
      "Signal"
     ],
-    "h": "AI assistants name Montage in 36 of 96 answers",
+    "h": "AI assistants name Montage",
     "b": "ChatGPT sent 43 website visits and 1 lead in 4 weeks.",
-    "src": "AI answer panel 11/20 · website visits Oct 26 to Nov 22"
+    "src": "AI answer panel 11/20 · website visits Oct 26 to Nov 22",
+    "stats": [
+     [
+      "36",
+      "of 96 AI answers name you"
+     ],
+     [
+      "43",
+      "Visits from ChatGPT"
+     ],
+     [
+      "1",
+      "Lead from ChatGPT"
+     ]
+    ]
    }
   ],
   "ex": [

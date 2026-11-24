@@ -338,6 +338,24 @@ nav{background:rgba(28,28,30,.96)!important;border:.5px solid rgba(255,255,255,.
 .chg .pill.us{background:rgba(52,199,89,.16);color:#5fd38a}.chg .pill.them{background:rgba(255,69,58,.16);color:#ff6961}
 .chg .bt .go3{background:#e0a463;color:#1d140d}.chg .bt .ok3{background:#2c2c2e;color:#f5f5f7}
 .chg .cmini{background:#2c2c2e;border-color:#3a3a3c}}
+
+/* ===== Market cards, phone readable (Nov 23 2026) ===== */
+.ak h4{font-size:18px!important;letter-spacing:-.02em;line-height:1.25!important;margin:6px 0 10px!important;color:#1d1d1f}
+.akl{font-size:12px!important}.aks{font-size:12px!important;color:#86868b!important;margin-top:10px!important}
+.ak .akn{font-size:14px!important;color:#6e6e73!important;margin:10px 0 0!important}
+.akst{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}@media (max-width:350px){.akst b{font-size:20px!important}.akst span{font-size:12px!important}}
+.akst div{background:#f5f5f7;border-radius:14px;padding:12px 10px}.akst b{display:block;font-size:24px;letter-spacing:-.03em;color:#1d1d1f;line-height:1.1}.akst span{display:block;font-size:13px;color:#6e6e73;margin-top:3px;line-height:1.3}
+.akli{display:grid;gap:0;border-radius:14px;overflow:hidden;background:#f5f5f7}
+.akli div{display:grid;gap:2px;padding:11px 12px;border-top:1px solid #e8e8ed}.akli div:first-child{border-top:0}
+.akli b{font-size:13px;color:#6e6e73;font-weight:700}.akli span{font-size:15.5px;color:#1d1d1f;line-height:1.35}
+.akli div.me{background:#faf1e6}.akli div.me b{color:#b46e26}.akli div.me span{font-weight:700}
+.akx{display:grid;gap:0;border-radius:14px;overflow:hidden;background:#f5f5f7;margin-top:10px}
+.akx span,.akli div,.akli b,.akli span{border-radius:0!important}.akx span{padding:10px 8px;font-size:15px;color:#1d1d1f;text-align:center;border-top:1px solid #e8e8ed}
+.akx span.h{border-top:0;font-size:12px;font-weight:700;color:#6e6e73;padding:9px 6px}.akx span.h.me{color:#b46e26}
+.akx>span:first-child{border-top:0}.akx span.l{text-align:left;font-size:13.5px;color:#6e6e73;font-weight:600;padding-left:12px}
+.akx span.me{font-weight:800;background:#faf1e6}.akx span.h.me{background:#faf1e6}
+.akch{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.akch span{background:#fff;border:1px solid #e3e3e8;border-radius:99px;padding:7px 11px;font-size:14px;color:#1d1d1f;font-weight:600}
+@media (prefers-color-scheme:dark){.akp.m{background:rgba(52,199,89,.16)!important;color:#5fd38a!important}.akp.s{background:rgba(10,132,255,.18)!important;color:#64b5ff!important}.ak h4{color:#f5f5f7}.akst div,.akli,.akx{background:#2c2c2e}.akst b,.akli span,.akx span,.akch span{color:#f5f5f7}.akst span,.akli b,.akx span.h,.akx span.l,.ak .akn{color:#a1a1a6!important}.akli div,.akx span{border-color:#3a3a3c}.akli div.me,.akx span.me,.akx span.h.me{background:#3a2c1f}.akli div.me b,.akx span.h.me{color:#e0a463}.akch span{background:#2c2c2e;border-color:#3a3a3c}}
 </style>
 <style>
 #gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#1c1712 url(../hero.jpg) center/cover;font-family:inherit}
@@ -654,7 +672,7 @@ ${n>1?`<div class="ra-more">${r.l.slice(1).map(x=>`<button data-goriv="${esc(x.r
 document.addEventListener('click',e=>{if(e.target.closest('#raOk')){sh.classList.remove('on','ra-on');show(cur);return}if(e.target.closest('[data-ra]'))sh.classList.remove('on','ra-on')},true);
 const gateUp=()=>{const g=document.getElementById('gate');return !!(g&&getComputedStyle(g).display!=='none'&&g.offsetParent)};
 const raTry=(n=0)=>{try{const r=RA();if(!r||r.day!==dkey(Date.now()))return;let k='';try{k=localStorage.getItem('lldemo-ralert')||''}catch(x){}if(k===r.day)return;if(document.visibilityState!=='visible'||sh.classList.contains('on')||gateUp()){clearTimeout(window.__raT);if(n<400)window.__raT=setTimeout(()=>raTry(n+1),1500);return}raShow(false)}catch(x){}};
-const APPV='2026-11-23k';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
+const APPV='2026-11-23l';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
 const verCheck=()=>fetch('no-version.txt?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.text():'').then(v=>{v=(v||'').trim();if(v&&v!==APPV&&!busy()){let t='';try{t=sessionStorage.getItem('lldemo-rl')||''}catch(x){}if(t===v)return false;try{sessionStorage.setItem('lldemo-rl',v)}catch(x){}location.reload();return true}return false}).catch(()=>false);
 const liveCheck=()=>{if(document.visibilityState!=='visible')return;verCheck().then(rl=>{if(rl)return;raTry();fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{if(!D||j.updated===D.updated)return;D=j;const ae=document.activeElement;if(!sh.classList.contains('on')&&!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))show(cur);raTry()}).catch(()=>{})})};
 document.addEventListener('visibilitychange',liveCheck);window.addEventListener('pageshow',e=>{if(e.persisted)liveCheck()});window.addEventListener('focus',liveCheck);setInterval(liveCheck,10*60*1000);
@@ -1050,7 +1068,11 @@ const st=document.createElement('style');st.textContent=`
 const esc2=x=>String(x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const tbl=(h,r)=>'<div class="akr">'+h.map(x=>`<span class="h">${x}</span>`).join('')+r.map(x=>x.map((c,i)=>`<span class="${x[0]==='Montage'?'me':''}">${c}</span>`).join('')).join('')+'</div>';
 const rows=k=>k.t==='rivals'?tbl(HX.rvh,HX.rv):k.t==='src'?tbl(HX.srh,HX.sr):'';
-const card=k=>`<section class="ak"><div class="akl ${k.c==='warn'?'wn':''}"><span>${k.lab}</span><span class="akp ${k.p[0]}">${k.p[1]}</span></div><h4>${k.h}</h4>${k.b?`<p>${k.b}</p>`:''}${rows(k)}${k.more?`<p style="margin-top:6px">${k.more}</p>`:''}<span class="aks">${k.src}</span></section>`;
+const chipsH=k=>k.chips?`<div class="akch">${k.chips.map(c=>`<span>${esc2(c)}</span>`).join('')}</div>`:'';
+const cmpH=k=>k.cmp?`<div class="akx" style="grid-template-columns:minmax(0,1.1fr) repeat(${k.cmp.cols.length},minmax(0,1fr))"><span></span>${k.cmp.cols.map((c,i)=>`<span class="h${i?'':' me'}">${esc2(c)}</span>`).join('')}${k.cmp.rows.map(r=>r.map((c,i)=>`<span class="${i===0?'l':i===1?'me':''}">${esc2(c)}</span>`).join('')).join('')}</div>`:'';
+const listH=k=>k.list?`<div class="akli">${k.list.map(r=>`<div class="${r[2]==='me'?'me':''}"><b>${esc2(r[0])}</b><span>${esc2(r[1])}</span></div>`).join('')}</div>`:'';
+const statH=k=>k.stats?`<div class="akst">${k.stats.map(s=>`<div><b>${esc2(s[0])}</b><span>${esc2(s[1])}</span></div>`).join('')}</div>`:'';
+const card=k=>{const rich=k.chips||k.cmp||k.list||k.stats;return `<section class="ak"><div class="akl ${k.c==='warn'?'wn':''}"><span>${k.lab}</span><span class="akp ${k.p[0]}">${k.p[1]}</span></div><h4>${k.h}</h4>${statH(k)}${listH(k)}${cmpH(k)}${chipsH(k)}${k.note?`<p class="akn">${esc2(k.note)}</p>`:''}${!rich&&k.b?`<p>${k.b}</p>`:''}${rows(k)}${k.more?`<p class="akn">${k.more}</p>`:''}<span class="aks">${k.src}</span></section>`};
 let allOpen=false;
 const askBox=()=>`<section class="ak" id="akBox"><div class="akh">${I('spark')}Ask about Montage</div><form class="akf" id="akF"><input id="akIn" placeholder="Why are tours not signing?" autocomplete="off" aria-label="Ask about Montage"><button>Ask</button></form><div class="akc">${exOf().map(x=>`<button type="button" data-ak="${x.k}" class="${x.k==='why'?'hot':''}">${esc2(x.q)}</button>`).join('')}</div></section>`;
 const intel=()=>{const cs=HX.cards;return `<div class="lt" style="font-size:22px;margin-top:22px">Market intel</div>`+askBox()+cs.slice(0,allOpen?cs.length:2).map(card).join('')+(allOpen?'':`<button class="akmore" data-akall="1">See all ${cs.length} market cards ›</button>`)};
