@@ -32,6 +32,10 @@ s=s.replace("<div class=\"mcsay\">Hi, I'm Mia! Want to book a tour with ${esc(me
 # Today hero: a little room between the logo row and the date line
 if 'id="lltopgap"' not in s:
     s=s.replace('</head>','<style id="lltopgap">.top .trow{margin-bottom:8px}</style></head>',1)
+# no gate flash: when the link carries a code or this phone is already signed in, start with the gate hidden.
+# shut() still shows it (inline display:flex) if the code turns out to be wrong or removed.
+if 'id="llnoflash"' not in s:
+    s=s.replace('</head>','<script id="llnoflash">try{var q=new URLSearchParams(location.search),on=q.get("p")||q.get("invite");for(var i=0;!on&&i<localStorage.length;i++){var k=localStorage.key(i);if(/-invited$/.test(k)&&localStorage.getItem(k))on=1}if(on)document.write("<style id=llnoflashcss>#gate{display:none}</style>")}catch(e){}</script></head>',1)
 if len(sys.argv)>2:
     s=re.sub(r"const APPV='[^']*'",f"const APPV='{sys.argv[2]}'",s)
     open(p.replace('index.html','version.txt'),'w').write(sys.argv[2]+'\n')
