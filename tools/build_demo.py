@@ -1,23 +1,26 @@
 """Build the prospect demo (live/<app>/demo/) from the real staff app (v3).
 Nothing in the demo sends: no gate, no analytics, no activity alerts, no uploads,
 separate lldemo- storage, resident names hidden, deep links (#kit #tour ...) kept.
-Usage: python3 tools/build_demo.py live/montage-r8x2"""
+Usage: python3 tools/build_demo.py live/montage-r8x2   (or live/stillwater-k4p7)"""
 import re,sys,pathlib
 app=pathlib.Path(sys.argv[1]); s=(app/'v3/index.html').read_text()
+PRE=re.search(r"const K='([a-z]+)-team'",s).group(1)   # ll (Montage) or llsw (Stillwater)
+DPRE={'ll':'lldemo'}.get(PRE,PRE+'demo')   # separate demo storage per property
+HINTBG='rgba(28,20,14,.92)' if PRE=='ll' else 'rgba(10,29,34,.92)'
 def must(old,new,count=1):
     global s
     assert old in s, 'missing: '+old[:70]; s=s.replace(old,new,count)
-must('<title>LocalLift Live · Montage</title>','<meta name="robots" content="noindex">\n<title>LocalLift Live · Montage · live demo</title>')
+s,_n=re.subn(r'<title>(LocalLift Live · [^<]*)</title>',r'<meta name="robots" content="noindex">\n<title>\1 · live demo</title>',s,count=1);assert _n==1
 s=re.sub(r'<link rel="manifest"[^>]*>\s*','',s)
 s=re.sub(r'<meta name="(apple-mobile-web-app-capable|mobile-web-app-capable|apple-mobile-web-app-title)"[^>]*>\s*','',s)
 s=re.sub(r'<link rel="apple-touch-icon"[^>]*>\s*','',s)
 must('<body class="gated">','<body>')
 s=re.sub(r'<div id="gate">.*?</div>\s*(?=<script>)','',s,count=1,flags=re.S)
-s=re.sub(r"<script>\s*\(function\(\)\{\s*const K='ll-team'.*?</script>\s*",'',s,count=1,flags=re.S)
-assert 'll-team' not in s
+s=re.sub(r"<script>\s*\(function\(\)\{\s*const K='"+PRE+r"-team'.*?</script>\s*",'',s,count=1,flags=re.S)
+assert PRE+'-team' not in s
 s=re.sub(r'<script async src="https://www.googletagmanager.com/gtag/js[^"]*"></script>\s*','',s)
 s=s.replace("gtag('config','G-FC39M4P67G',{send_page_view:false});","")
-s=re.sub(r"(['\"`])ll-",r"\1lldemo-",s)
+s=re.sub(r"(['\"`])"+PRE+"-",r"\g<1>"+DPRE+"-",s)
 s=re.sub(r'class="pv">[^<]*','class="pv">Live demo · Tap anything. Nothing here posts, uploads or sends on its own.',s,count=1)
 must("fetch(SNAPHOOK,{method:'POST',mode:'no-cors',body:fd});","await new Promise(r=>setTimeout(r,700));")
 must("const vidPost=(a)=>fetch(VIDHOOK,{method:'POST',body:new URLSearchParams(a)});","const vidPost=(a)=>Promise.resolve({json:()=>Promise.resolve({link:'demo'})});")
@@ -25,7 +28,7 @@ s=re.sub(r"await new Promise\(\(res,rej\)=>\{const x=new XMLHttpRequest\(\);x\.o
  "for(let p=10;p<=100;p+=15){b.textContent='Sending... '+p+'%';await new Promise(r=>setTimeout(r,160))}",s,count=1,flags=re.S)
 assert 'x.open(' not in s
 # activity alert script -> swipe hint
-hint=r'''<div id="sch" aria-hidden="true" style="position:fixed;left:50%;bottom:calc(150px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:8px;background:rgba(28,20,14,.92);color:#fff;border-radius:99px;padding:9px 16px 9px 12px;font:700 14px/1.2 -apple-system,system-ui,sans-serif;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.35);pointer-events:none;opacity:0;transition:opacity .35s">Swipe up for more ↓</div>
+hint=r'''<div id="sch" aria-hidden="true" style="position:fixed;left:50%;bottom:calc(150px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:8px;background:'''+HINTBG+r''';color:#fff;border-radius:99px;padding:9px 16px 9px 12px;font:700 14px/1.2 -apple-system,system-ui,sans-serif;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.35);pointer-events:none;opacity:0;transition:opacity .35s">Swipe up for more ↓</div>
 <script>
 (function(){const H=document.getElementById('sch');let used=false,last=null;
 const tgt=()=>{const sh=document.getElementById('sh'),b=document.getElementById('box');return(sh&&sh.classList.contains('on')&&b)?b:document.scrollingElement};
