@@ -389,8 +389,8 @@ nav{background:rgba(28,28,30,.96)!important;border:.5px solid rgba(255,255,255,.
 <link rel="manifest" href="manifest.json">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="LocalLift Live">
-<link rel="apple-touch-icon" href="../icon-180.png">
+<meta name="apple-mobile-web-app-title" content="Montage Live">
+<link rel="apple-touch-icon" href="../icon-180.png?v=m2">
 <style>
 #gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#1c1712 url(../hero.jpg) center/cover;font-family:inherit}
 #gate:before{content:"";position:absolute;inset:0;background:rgba(20,15,10,.8)}
@@ -413,16 +413,25 @@ const get=k=>{try{return localStorage.getItem(k)}catch(x){return null}};
 const open_=()=>{document.body.classList.remove('gated');const e=g();if(e)e.style.display='none'};
 const shut=(msg)=>{document.body.classList.add('gated');const e=g();if(e)e.style.display='flex';if(msg)document.getElementById('gmsg').textContent=msg;try{document.getElementById('gn').value=get('ll-me')||''}catch(x){}};
 window.__llHash=null;
-try{const q0=new URLSearchParams(location.search);if(q0.get('invite')){const base=new URL('./',location.href).href,ic=new URL('../',location.href).href;const m={name:'LocalLift Live · Montage',short_name:'LocalLift Live',start_url:location.href,scope:base,display:'standalone',background_color:'#000000',theme_color:'#1c1712',icons:[{src:ic+'icon-192.png',sizes:'192x192',type:'image/png'},{src:ic+'icon-512.png',sizes:'512x512',type:'image/png',purpose:'any'}]};const l=document.querySelector('link[rel=manifest]');if(l){const ios=/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);if(ios)l.remove();else l.href='data:application/manifest+json,'+encodeURIComponent(JSON.stringify(m))}}}catch(x){}
-fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{window.__llHash=j.teamCodeHash||null;const have=get(K);
- if(!window.__llHash){open_();return}
- try{const q=new URLSearchParams(location.search),inv=q.get('invite');if(inv&&inv.length>=16&&window.__llHash.indexOf(inv)===0){localStorage.setItem(K,window.__llHash);const n=(q.get('n')||'').replace(/[^A-Za-z' ]/g,'').slice(0,20);if(n&&!get('ll-me'))localStorage.setItem('ll-me',n);if(have!==window.__llHash){try{localStorage.setItem('ll-invited','1')}catch(x){};location.reload();return}open_();return}}catch(x){}
- if(have===window.__llHash){open_();return}
- if(have){try{WIPE.concat([K]).forEach(k=>localStorage.removeItem(k))}catch(x){};shut('The team code has changed. Your saved notes were cleared from this phone. Ask your manager for the new code.')}else shut()
+try{const q0=new URLSearchParams(location.search);if(q0.get('invite')||q0.get('p')){const base=new URL('./',location.href).href,ic=new URL('../',location.href).href;const m={name:'LocalLift Live · Montage',short_name:'Montage Live',start_url:location.href,scope:base,display:'standalone',background_color:'#000000',theme_color:'#1c1712',icons:[{src:ic+'icon-192.png?v=m2',sizes:'192x192',type:'image/png'},{src:ic+'icon-512.png?v=m2',sizes:'512x512',type:'image/png',purpose:'any'}]};const l=document.querySelector('link[rel=manifest]');if(l){const ios=/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);if(ios)l.remove();else l.href='data:application/manifest+json,'+encodeURIComponent(JSON.stringify(m))}}}catch(x){}
+const PQ=(()=>{try{return (new URLSearchParams(location.search).get('p')||'').replace(/[^a-f0-9]/gi,'').toLowerCase()}catch(x){return ''}})();
+const getAcc=()=>fetch('../access.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()});
+const okH=(h,team,acc)=>!!h&&((!!team&&h===team&&!acc.staffOnly)||(acc.staff||[]).indexOf(h)>-1);
+const lockOut=()=>{try{WIPE.concat([K]).forEach(k=>localStorage.removeItem(k))}catch(x){};shut('This phone no longer has access to LocalLift Live. If that is a mistake, ask your manager for a new link.')};
+const showNote=(h,acc)=>{try{const L=(acc.notes||[]).filter(n=>n&&n.id&&(n.to==='all'||(Array.isArray(n.to)&&n.to.indexOf(h)>-1))&&(!n.until||new Date().toISOString().slice(0,10)<=n.until)&&!get('ll-note-'+n.id));if(!L.length)return;const n=L[0];const d=document.createElement('div');d.id='llnote';d.setAttribute('role','dialog');d.innerHTML='<div class="nbx"><p class="nk">Message from The SocialDM</p><h3></h3><p class="nb"></p><button type="button">Got it</button></div>';d.querySelector('h3').textContent=n.title||'';d.querySelector('.nb').textContent=n.body||'';d.querySelector('button').onclick=()=>{try{localStorage.setItem('ll-note-'+n.id,'1')}catch(x){};d.remove()};const st=document.createElement('style');st.textContent='#llnote{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center;font-family:-apple-system,system-ui,sans-serif}#llnote .nbx{background:#fff;color:#1c1c1e;width:100%;max-width:520px;border-radius:22px 22px 0 0;padding:22px 22px 28px;box-sizing:border-box}#llnote .nk{margin:0;font:600 12px/1 -apple-system,system-ui,sans-serif;letter-spacing:.6px;text-transform:uppercase;color:#1a73e8}#llnote h3{margin:8px 0 6px;font:700 21px/1.25 -apple-system,system-ui,sans-serif}#llnote .nb{margin:0 0 18px;font:400 16px/1.45 -apple-system,system-ui,sans-serif;color:#3a3a3c;white-space:pre-line}#llnote button{width:100%;min-height:48px;border:0;border-radius:14px;background:#1a73e8;color:#fff;font:700 16px -apple-system,system-ui,sans-serif}@media(prefers-color-scheme:dark){#llnote .nbx{background:#1c1c1e;color:#fff}#llnote .nb{color:#d1d1d6}}';document.head.appendChild(st);document.body.appendChild(d)}catch(x){}};
+Promise.all([fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()),getAcc().catch(()=>({}))]).then(async([j,acc])=>{window.__llHash=j.teamCodeHash||null;window.__llAcc=acc;const have=get(K);
+ if(!window.__llHash&&!(acc.staff||[]).length){open_();return}
+ const q=new URLSearchParams(location.search),nm=(q.get('n')||'').replace(/[^A-Za-z' ]/g,'').slice(0,20);
+ if(PQ.length>=10){const h=await sha('montage:p:'+PQ);if((acc.staff||[]).indexOf(h)>-1){try{localStorage.setItem(K,h);if(nm&&!get('ll-me'))localStorage.setItem('ll-me',nm)}catch(x){}if(have!==h){try{localStorage.setItem('ll-invited','1')}catch(x){};location.reload();return}open_();showNote(h,acc);return}}
+ try{const inv=q.get('invite');if(!acc.staffOnly&&inv&&inv.length>=16&&window.__llHash&&window.__llHash.indexOf(inv)===0){localStorage.setItem(K,window.__llHash);if(nm&&!get('ll-me'))localStorage.setItem('ll-me',nm);if(have!==window.__llHash){try{localStorage.setItem('ll-invited','1')}catch(x){};location.reload();return}open_();showNote(window.__llHash,acc);return}}catch(x){}
+ if(okH(have,window.__llHash,acc)){open_();showNote(have,acc);return}
+ if(have)lockOut();else shut()
 }).catch(()=>{if(get(K))open_();else shut('Connect to the internet to sign in.')});
+const reCheck=()=>{const have=get(K);if(!have||document.visibilityState!=='visible')return;Promise.all([fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()),getAcc()]).then(([j,acc])=>{window.__llAcc=acc;if(!okH(have,j.teamCodeHash||null,acc))lockOut()}).catch(()=>{})};
+setInterval(reCheck,300000);document.addEventListener('visibilitychange',reCheck);
 document.addEventListener('submit',async e=>{if(e.target.id!=='gf')return;e.preventDefault();const n=document.getElementById('gn').value.trim(),c=document.getElementById('gc').value.trim();if(!n||!c)return;
  if(!window.__llHash){document.getElementById('gerr').textContent='Still loading. Try again in a moment.';return}
- const h=await sha('montage:'+c);if(h===window.__llHash){try{localStorage.setItem(K,h);localStorage.setItem('ll-me',n)}catch(x){};location.reload()}else document.getElementById('gerr').textContent='That code did not match. Ask your manager for the current code.'},true);
+ const h0=await sha('montage:'+c),hp=await sha('montage:p:'+c.toLowerCase()),A=window.__llAcc||{},h=((A.staff||[]).indexOf(hp)>-1)?hp:h0;if((h===h0&&h0===window.__llHash&&!A.staffOnly)||h===hp){try{localStorage.setItem(K,h);localStorage.setItem('ll-me',n)}catch(x){};location.reload()}else document.getElementById('gerr').textContent='That code did not match. Ask your manager for the current code.'},true);
 })();
 </script>
 <div class="app">
@@ -757,7 +766,7 @@ ${n>1?`<div class="ra-more">${r.l.slice(1).map(x=>`<button data-goriv="${esc(x.r
 document.addEventListener('click',e=>{if(e.target.closest('#raOk')){sh.classList.remove('on','ra-on');show(cur);return}if(e.target.closest('[data-ra]'))sh.classList.remove('on','ra-on')},true);
 const gateUp=()=>{const g=document.getElementById('gate');return !!(g&&getComputedStyle(g).display!=='none'&&g.offsetParent)};
 const raTry=(n=0)=>{try{const r=RA();if(!r||r.day!==dkey(Date.now()))return;let k='';try{k=localStorage.getItem('ll-ralert')||''}catch(x){}if(k===r.day)return;if(document.visibilityState!=='visible'||sh.classList.contains('on')||gateUp()){clearTimeout(window.__raT);if(n<400)window.__raT=setTimeout(()=>raTry(n+1),1500);return}raShow(false)}catch(x){}};
-const APPV='2026-11-24e';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
+const APPV='2026-11-24f';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
 const verCheck=()=>fetch('version.txt?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.text():'').then(v=>{v=(v||'').trim();if(v&&v!==APPV&&!busy()){let t='';try{t=sessionStorage.getItem('ll-rl')||''}catch(x){}if(t===v)return false;try{sessionStorage.setItem('ll-rl',v)}catch(x){}location.reload();return true}return false}).catch(()=>false);
 const liveCheck=()=>{if(document.visibilityState!=='visible')return;verCheck().then(rl=>{if(rl)return;raTry();fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{if(!D||j.updated===D.updated)return;D=j;const ae=document.activeElement;if(!sh.classList.contains('on')&&!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))show(cur);raTry()}).catch(()=>{})})};
 document.addEventListener('visibilitychange',liveCheck);window.addEventListener('pageshow',e=>{if(e.persisted)liveCheck()});window.addEventListener('focus',liveCheck);setInterval(liveCheck,10*60*1000);
