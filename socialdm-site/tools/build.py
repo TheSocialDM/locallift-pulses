@@ -371,7 +371,7 @@ c = c.replace('var here=(location.pathname.split("/").pop()||"index.html");',
 function L(h){if(/^(https?:|mailto:|#)/.test(h))return h;if(PROD)return "/"+h.replace(/\\.html$/,"").replace(/^index$/,"");return BASE+h}
 var here=(location.pathname.split("/").pop()||"index.html");if(here.indexOf(".")<0)here+=".html";''')
 c = re.sub(r'href="\'\+x\[1\]\+\'"', 'href="\'+L(x[1])+\'"', c)
-for pg in ['index.html','contact.html','locallift.html','blog.html']:
+for pg in ['index.html','contact.html','locallift.html','blog.html','privacy.html','terms.html']:
     c = c.replace(f'href="{pg}"', f'href="\'+L("{pg}")+\'"')
 c = c.replace('src="logo.png"', 'src="\'+(PROD?"/":BASE)+\'logo.png"')
 c = c.replace('new Date().getFullYear()+\' The SocialDM. LocalLift', 'new Date().getFullYear()+\' The SocialDM. LocalLift')

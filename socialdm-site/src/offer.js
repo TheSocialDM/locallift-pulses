@@ -49,7 +49,7 @@ function open(){if(shown)return;shown=true;try{if(localStorage.getItem(KEY)!=="d
   '<input name="company" placeholder="Business or property name" autocomplete="organization" aria-label="Business or property name">'+
   '<select name="interest" required aria-label="Type of business"><option value="">Type of business</option>'+OPTS.map(function(o){return '<option'+(o===pre?" selected":"")+'>'+o+'</option>'}).join("")+'</select>'+
   '<button class="sdmo-go" type="submit">Get my free report</button>'+
-  '<p class="fine">We only use your details to send your report. No spam.</p></form>'+
+  '<p class="fine">We only use your details to send your report. No spam. <a href="/privacy" style="color:inherit;text-decoration:underline">Privacy</a></p></form>'+
   '<button class="no" type="button">No thanks</button></div></div>');
  document.body.appendChild(bg);document.body.classList.add("sdmo-open");
  requestAnimationFrame(function(){bg.classList.add("in")});
