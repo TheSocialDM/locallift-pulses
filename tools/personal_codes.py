@@ -8,6 +8,8 @@ Usage: python3 tools/personal_codes.py live/montage-r8x2 montage ll-"""
 import sys,re
 app,salt,pre=sys.argv[1],sys.argv[2],sys.argv[3]
 p=app+'/v3/index.html';s=open(p).read()
+if 'const PQ=' in s and "sha('"+salt+":p:'" in s:
+    print('already patched for salt',salt);sys.exit(0)
 start=s.index("fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{window.__llHash")
 end=s.index("document.addEventListener('submit',async e=>{if(e.target.id!=='gf')return;",start)
 new=r"""const PQ=(()=>{try{return (new URLSearchParams(location.search).get('p')||'').replace(/[^a-f0-9]/gi,'').toLowerCase()}catch(x){return ''}})();

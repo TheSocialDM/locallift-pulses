@@ -1,0 +1,734 @@
+{
+ "property": "Lura",
+ "city": "Las Vegas, Nevada",
+ "updated": "2026-11-24T16:30:00-07:00",
+ "updatedLabel": "Nov 24, 4:30 pm Phoenix time",
+ "rv": {
+  "rating": "4.8",
+  "count": "125",
+  "vs": "Spectra Paradise has 187. Every ask closes the gap."
+ },
+ "feed": [
+  {
+   "src": "Lura website · checked today",
+   "date": "Nov 24",
+   "tone": "good",
+   "title": "Today's offer: 2 months free",
+   "body": "luravegas.com shows 2 months free rent on a 12 month lease plus up to $2,000 in Look and Lease savings. Move in by Dec 28. It lists one bedrooms from $1,558 a month in effective rent with the offer.",
+   "action": "Lead with the move in date. Ask when they want to move, then show the homes that fit before Dec 28."
+  },
+  {
+   "src": "Rival watch · their own sites",
+   "date": "Nov 24",
+   "tone": "info",
+   "title": "Rivals are running big specials too",
+   "body": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15. Jade: up to 8 weeks free on base rent. Flatiron LV: 1 month free on select move in ready homes.",
+   "action": "Ask what total monthly price and lease term they were quoted, then compare it with ours on the same terms."
+  },
+  {
+   "src": "Weekly Pulse · Google Maps",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "1st at your front door",
+   "body": "On \"apartments for rent las vegas\" you are 1st at your door and 3rd a mile south. Inside the top 20 at 12 of 49 map points."
+  },
+  {
+   "src": "Weekly Pulse · AI answers",
+   "date": "Nov 20",
+   "tone": "info",
+   "title": "AI answers name you in 10 of 96",
+   "body": "ChatGPT 2, Gemini 7 and Perplexity 1. 6 of them recommend you, and you are listed first in 3."
+  },
+  {
+   "src": "Google reviews",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "4.8 stars on 125 reviews",
+   "body": "Two new five star reviews after the Nov 13 read, both answered within a day. 122 of 125 reviews have a reply.",
+   "link": "https://www.google.com/maps/place/?q=place_id:ChIJMzzN35zFyIARsGOoHvQgI58",
+   "linkLabel": "Open Lura reviews on Google"
+  }
+ ],
+ "score": {
+  "index": 65,
+  "prev": 64,
+  "date": "Nov 20 Weekly Pulse",
+  "parts": [
+   [
+    "Reputation",
+    100
+   ],
+   [
+    "Search",
+    81
+   ],
+   [
+    "Map",
+    14
+   ],
+   [
+    "Website",
+    96
+   ],
+   [
+    "AI answers",
+    33
+   ]
+  ]
+ },
+ "tiles": [
+  [
+   "4.8",
+   "Google rating",
+   "125 reviews, read Nov 20"
+  ],
+  [
+   "1st",
+   "At your front door",
+   "Google Maps, Nov 20"
+  ],
+  [
+   "10 of 96",
+   "AI answers name you",
+   "Panel of Nov 20"
+  ],
+  [
+   "12 of 49",
+   "Map points in top 20",
+   "Scan of Nov 20"
+  ]
+ ],
+ "rivals": {
+  "date": "Nov 20 map scan",
+  "rows": [
+   [
+    "Spectra Paradise",
+    "4.5",
+    187,
+    12,
+    25
+   ],
+   [
+    "Hidden Cove",
+    "4.3",
+    220,
+    8,
+    33
+   ],
+   [
+    "Royal Palms",
+    "4.3",
+    179,
+    6,
+    17
+   ],
+   [
+    "The Onyx",
+    "4.7",
+    144,
+    6,
+    17
+   ],
+   [
+    "Lura (you)",
+    "4.8",
+    125,
+    2,
+    12
+   ]
+  ],
+  "note": "Review counts and ranks as the Nov 20 map scan read them."
+ },
+ "ask": {
+  "title": "This week: ask for one review",
+  "moments": [
+   "At every move in",
+   "When a work order is closed"
+  ],
+  "points": [
+   "Spectra Paradise has 187 Google reviews to our 125. Our 4.8 rating is higher, so every new review widens the lead.",
+   "Ask in person, then send the link the same day.",
+   "One a week is the target."
+  ]
+ },
+ "teamCodeHash": "90219b858e07b4ef9cd34b01e65e8c9c4bb660ef580e0271d5fb84dcab0c3be7",
+ "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJMzzN35zFyIARsGOoHvQgI58",
+ "trackBase": "https://moveinlocal.com/review/lura/",
+ "asks": {
+  "sent": 0,
+  "opened": 0,
+  "through": "Nov 24"
+ },
+ "shortLink": "moveinlocal.com/review/lura",
+ "talk": {
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24",
+  "offer": "2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28.",
+  "prices": [
+   [
+    "$1,770",
+    "1 bedroom from"
+   ],
+   [
+    "$2,743",
+    "2 bedroom from"
+   ],
+   [
+    "$3,195",
+    "penthouse from"
+   ]
+  ]
+ },
+ "followups": [],
+ "occupancy": null,
+ "snapIdeas": {
+  "month": "November",
+  "items": [
+   [
+    "Sky Lounge at dusk",
+    "The Strip lights coming on behind the windows. Shoot from the back of the room.",
+    "Amenity"
+   ],
+   [
+    "Pool deck, golden hour",
+    "Last light on the water and loungers. Keep residents out of the frame.",
+    "Amenity"
+   ],
+   [
+    "Firepit lounge night",
+    "Fire on, string lights glowing, a slow pan for a reel.",
+    "Amenity"
+   ],
+   [
+    "Coworking at The Hive",
+    "Laptop open and a coffee beside it. Hands only is perfect.",
+    "Amenity"
+   ],
+   [
+    "Walk to the Strip",
+    "The Harmon Bridge at night, shot from our side. A short walking clip works great.",
+    "Amenity"
+   ],
+   [
+    "National Finals Rodeo",
+    "Dec 3 to 12 at the Thomas and Mack Center.",
+    "Event"
+   ],
+   [
+    "City holiday tree lighting",
+    "Dec 4 at the Las Vegas Civic Center, 5 pm, tree lit at 6:10 pm.",
+    "Event"
+   ]
+  ]
+ },
+ "compete": {
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24",
+  "items": [
+   {
+    "name": "Jade",
+    "where": "W Twain Ave, near Valley View",
+    "special": "Up to 8 weeks free on base rent, restrictions apply",
+    "from": [
+     [
+      "$1,480",
+      "1 bed"
+     ],
+     [
+      "$1,855",
+      "2 bed"
+     ]
+    ],
+    "fees": "Monthly charges are added on top of base rent: their own fee list shows a 1 bed at $1,480 to $1,510 reaching $1,854 to $1,884 a month. Deposit and pet fees not read.",
+    "tip": "Their 1 bed base rent starts lower, but their monthly charges add about $375. Ask what total they were quoted. Lura has the Sky Lounge with Strip views, free gated garage parking and a walk to the Strip over the Harmon Bridge.",
+    "vs": [
+     [
+      "Special",
+      "Up to 8 weeks free",
+      "2 months free + up to $2,000",
+      "ask"
+     ],
+     [
+      "1 bed from",
+      "$1,480",
+      "$1,770",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,855",
+      "$2,743",
+      "them"
+     ],
+     [
+      "Google rating",
+      "4.3 (229)",
+      "4.8 (125)",
+      "us"
+     ],
+     [
+      "Deposit",
+      "Not posted",
+      "$500",
+      "ask"
+     ],
+     [
+      "Pet rent",
+      "Not posted",
+      "$50/mo",
+      "ask"
+     ],
+     [
+      "Pet fee",
+      "Not posted",
+      "$500",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest base rent on mark-taylor.com. The 2 bed price is a listed plan with a waitlist. Monthly charges are added on top.",
+    "url": "https://www.mark-taylor.com/apartments/nv/las-vegas/jade-apartments/floor-plans",
+    "feesChecked": "Nov 24",
+    "checked": "Nov 24",
+    "checkedIso": "2026-11-24"
+   },
+   {
+    "name": "Ainsley at The Collective",
+    "where": "Paradise Rd, east of the Strip",
+    "special": "Up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply",
+    "from": [
+     [
+      "$1,326",
+      "1 bed"
+     ],
+     [
+      "$1,843",
+      "2 bed"
+     ]
+    ],
+    "fees": "Studios from $1,251 base rent. Their all in monthly price adds utilities and set charges: 1 bed from $1,383, 2 bed from $1,900. $250 deposit plus a $250 refundable security deposit, $60 application, $300 admin fee, $250 cleaning fee. Pets $50 a month plus a $300 pet fee.",
+    "tip": "Their rents start lower and their special is bigger, but they add a $300 admin fee and a $250 cleaning fee at move in. Ask for their total and lease term. Our pet fee is higher, so lead with the walk to the Strip, free gated garage parking and our 4.8 rating.",
+    "vs": [
+     [
+      "Special",
+      "Up to 10 weeks free + $1,000 gift card",
+      "2 months free + up to $2,000",
+      "ask"
+     ],
+     [
+      "1 bed from",
+      "$1,326",
+      "$1,770",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,843",
+      "$2,743",
+      "them"
+     ],
+     [
+      "Google rating",
+      "4.6 (244)",
+      "4.8 (125)",
+      "us"
+     ],
+     [
+      "Deposit",
+      "$250 + $250 refundable",
+      "$500",
+      "even"
+     ],
+     [
+      "Pet rent",
+      "$50/mo",
+      "$50/mo",
+      "even"
+     ],
+     [
+      "Pet fee",
+      "$300",
+      "$500",
+      "them"
+     ]
+    ],
+    "basis": "Their prices: lowest base rent on elysianliving.com. Their all in monthly price adds utilities and fees.",
+    "url": "https://www.elysianliving.com/property/ainsley-at-the-collective/floor-plans",
+    "feesChecked": "Nov 24",
+    "checked": "Nov 24",
+    "checkedIso": "2026-11-24"
+   },
+   {
+    "name": "Flatiron LV",
+    "where": "W Nevso Dr, by the Palms",
+    "special": "1 month free on select move in ready homes, restrictions apply",
+    "from": [],
+    "fees": "Prices did not load on their site for today's check. Ask what they were quoted.",
+    "tip": "They are the closest new build, by the Palms. Their posted offer is 1 month free on select homes, ours is 2 months free plus up to $2,000 in Look and Lease savings. Ask which home and term they were quoted.",
+    "vs": [
+     [
+      "Special",
+      "1 month free, select homes",
+      "2 months free + up to $2,000",
+      "us"
+     ],
+     [
+      "1 bed from",
+      "Ask",
+      "$1,770",
+      "ask"
+     ],
+     [
+      "2 bed from",
+      "Ask",
+      "$2,743",
+      "ask"
+     ],
+     [
+      "Google rating",
+      "4.2 (282)",
+      "4.8 (125)",
+      "us"
+     ]
+    ],
+    "basis": "Their special: read on flatironlv.com today. Their floor plan prices did not load for our check.",
+    "url": "https://www.flatironlv.com/",
+    "feesChecked": "Nov 24",
+    "checked": "Nov 24",
+    "checkedIso": "2026-11-24"
+   }
+  ],
+  "us": {
+   "special": "2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28",
+   "from": [
+    [
+     "$1,770",
+     "1 bed"
+    ],
+    [
+     "$2,743",
+     "2 bed"
+    ]
+   ],
+   "pets": "$50 a month pet rent per pet, $500 one time pet fee per pet, no pet deposit, up to 3 pets, no weight limits, some breed restrictions, PetScreening profile required",
+   "showoff": [
+    "Walk to the Strip over the Harmon Bridge",
+    "Sky Lounge with Strip views",
+    "Free gated garage parking",
+    "Resort style pool",
+    "Firepit lounge and BBQ grills",
+    "24/7 athletic center",
+    "The Hive coworking",
+    "Clubhouse and TV lounge",
+    "EV charging",
+    "24/7 package lockers",
+    "10 foot ceilings",
+    "Full size washer and dryer"
+   ],
+   "specialShort": "2 months free on a 12 month lease",
+   "ends": "Dec 28 move in",
+   "basis": "Our offer is on a 12 month lease. Lease terms differ by community, so confirm the term before quoting a difference."
+  },
+  "changes": []
+ },
+ "uploadUrl": "https://www.dropbox.com/request/gqd6ulyc7cx2btz3lhxj",
+ "dbxFolder": "Lura Apartments",
+ "reminders": [
+  {
+   "where": "events",
+   "emoji": "🤠",
+   "fx": "spark",
+   "title": "National Finals Rodeo starts Thursday, Dec 3",
+   "body": "Dec 3 to 12 at the Thomas and Mack Center. Expect busy evenings in town. Mention it on tours.",
+   "iso": "2026-12-03",
+   "cta": "See the event page ›",
+   "url": "https://travelnevada.com/events/32227/national-finals-rodeo-las-vegas"
+  }
+ ],
+ "shots": [
+  {
+   "img": "outside",
+   "title": "Strip lights at night",
+   "tag": "Amenity",
+   "tip": "Lights low inside, city lit outside. Shoot from the back of the room so the windows fill the frame.",
+   "wide": true
+  },
+  {
+   "img": "lounge",
+   "title": "Sky Lounge with a view",
+   "tag": "Amenity",
+   "tip": "Late afternoon light. Get low across the chairs and keep the windows in the shot."
+  },
+  {
+   "img": "club",
+   "title": "Clubhouse glow",
+   "tag": "Cozy",
+   "tip": "Overhead lights off, lamps on. A coffee on the table adds life."
+  },
+  {
+   "img": "cowork",
+   "title": "Work from home, done right",
+   "tag": "Amenity",
+   "tip": "Laptop open, coffee beside it. Hands only is perfect."
+  },
+  {
+   "img": "gym",
+   "title": "Morning workout",
+   "tag": "Amenity",
+   "tip": "Early light, equipment in focus. A 5 second slow pan makes a great reel."
+  },
+  {
+   "img": "living",
+   "title": "Model home, holiday ready",
+   "tag": "Home",
+   "tip": "Throw blanket, a flameless candle, a small tree. Stand in the doorway, phone at chest height."
+  },
+  {
+   "img": "kitchen",
+   "title": "Kitchen details",
+   "tag": "Home",
+   "tip": "Close ups sell: quartz counters, the backsplash, a bowl of fruit."
+  }
+ ],
+ "notice": {
+  "id": "2026-11-24-welcome",
+  "until": "2026-12-01",
+  "emoji": "👋",
+  "title": "Welcome to LocalLift Live",
+  "points": [
+   "Today's talk track, rival prices and objections and answers update every morning.",
+   "Start a tour from the Tour tab and tap what you show. It all lands on Send my day to my desk.",
+   "Ask for a Google review at every move in and closed work order. Show the QR code, it takes under 30 seconds."
+  ],
+  "act": "tour",
+  "cta": "Open Tour mode ›"
+ },
+ "market": {
+  "rvh": [
+   "Community",
+   "1 bed from",
+   "2 bed from"
+  ],
+  "rv": [
+   [
+    "Lura",
+    "$1,770",
+    "$2,743"
+   ],
+   [
+    "Jade",
+    "$1,480",
+    "$1,855"
+   ],
+   [
+    "Ainsley at The Collective",
+    "$1,326",
+    "$1,843"
+   ],
+   [
+    "Flatiron LV",
+    "Ask",
+    "Ask"
+   ]
+  ],
+  "srh": [
+   "Source",
+   "Visits",
+   "Leads"
+  ],
+  "sr": [],
+  "pts": [
+   "Our offer: 2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28.",
+   "Jade and Ainsley list lower starting base rents, and both add monthly charges on top, so ask what total and term they were quoted.",
+   "Our 4.8 Google rating is the highest of the rivals here. Lead with the walk to the Strip and free gated garage parking."
+  ],
+  "cards": [
+   {
+    "lab": "WHERE WE STAND OUT",
+    "p": [
+     "new",
+     "New"
+    ],
+    "h": "Use these on every tour",
+    "b": "Walk to the Strip over the Harmon Bridge, Sky Lounge with Strip views, free gated garage parking, resort style pool, firepit lounge and BBQ grills, 24/7 athletic center, The Hive coworking, clubhouse and TV lounge, EV charging, 24/7 package lockers, 10 foot ceilings, full size washer and dryer.",
+    "src": "Lura and rival websites · checked 11/24",
+    "cmp": {
+     "cols": [
+      "Lura",
+      "Jade",
+      "Ainsley"
+     ],
+     "rows": [
+      [
+       "Google rating",
+       "4.8 (125)",
+       "4.3 (229)",
+       "4.6 (244)"
+      ],
+      [
+       "Deposit",
+       "$500",
+       "Not posted",
+       "$250 + $250"
+      ],
+      [
+       "Pet fee",
+       "$500",
+       "Not posted",
+       "$300"
+      ]
+     ]
+    },
+    "chips": [
+     "Walk to the Strip over the Harmon Bridge",
+     "Sky Lounge with Strip views",
+     "Free gated garage parking",
+     "Resort style pool",
+     "Firepit lounge and BBQ grills",
+     "24/7 athletic center",
+     "The Hive coworking",
+     "Clubhouse and TV lounge"
+    ],
+    "note": "Lura has the walk to the Strip over the Harmon Bridge and free gated garage parking. Ask rivals what parking costs."
+   },
+   {
+    "lab": "SPECIALS WATCH",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "All 3 rivals post a special too",
+    "b": "Lura: 2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28. Ainsley: up to 10 weeks free plus a $1,000 gift card, move in by dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Flatiron LV: 1 month free on select move in ready homes, restrictions apply.",
+    "src": "Each community’s website · checked 11/24",
+    "list": [
+     [
+      "Lura",
+      "2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28",
+      "me"
+     ],
+     [
+      "Ainsley at The Collective",
+      "Up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply",
+      ""
+     ],
+     [
+      "Jade",
+      "Up to 8 weeks free on base rent, restrictions apply",
+      ""
+     ],
+     [
+      "Flatiron LV",
+      "1 month free on select move in ready homes, restrictions apply",
+      ""
+     ]
+    ]
+   },
+   {
+    "lab": "PRICE CHECK",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Jade and Ainsley list lower starting rents",
+    "t": "rivals",
+    "src": "Each community’s website · checked 11/24",
+    "more": "Base rents. Jade adds about $375 in monthly charges on a 1 bed, and Ainsley adds utilities and set charges plus admin and cleaning fees, so ask what total and term they were quoted. Flatiron LV prices did not load for today’s check."
+   },
+   {
+    "lab": "GOOGLE REVIEWS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Our 4.8 beats every rival on this page",
+    "b": "Our rating is 4.8 from 125 Google reviews. Ainsley is at 4.6 (244), Jade 4.3 (229) and Flatiron LV 4.2 (282).",
+    "src": "Google map scan · Nov 20",
+    "stats": [
+     [
+      "4.8",
+      "Our Google rating"
+     ],
+     [
+      "125",
+      "Our reviews"
+     ],
+     [
+      "187",
+      "Spectra Paradise reviews"
+     ]
+    ],
+    "note": "Rivals have more reviews. Every review we ask for keeps our lead and closes the count gap."
+   },
+   {
+    "lab": "AI ANSWERS",
+    "p": [
+     "s",
+     "Signal"
+    ],
+    "h": "AI assistants name Lura",
+    "b": "Named in 10 of 96 answers to renter questions.",
+    "src": "AI answer panel · Nov 20",
+    "stats": [
+     [
+      "10",
+      "of 96 AI answers name you"
+     ]
+    ]
+   }
+  ],
+  "ex": [
+   {
+    "k": "edge",
+    "q": "Where do we stand out against rivals?",
+    "a": "From the Lura website: Walk to the Strip over the Harmon Bridge, Sky Lounge with Strip views, free gated garage parking, resort style pool, firepit lounge and BBQ grills, 24/7 athletic center, The Hive coworking, clubhouse and TV lounge, EV charging, 24/7 package lockers, 10 foot ceilings, full size washer and dryer.<ul><li>Google rating: 4.8 on 125 reviews, the highest of the communities on this page.</li><li>Free gated garage parking and a walk to the Strip over the Harmon Bridge.</li><li>Pets: $50 a month and a $500 pet fee, no weight limits, up to 3 pets.</li></ul>",
+    "s": "Lura and rival websites · checked 11/24"
+   },
+   {
+    "k": "ops",
+    "q": "Who showed the tour? Pending service requests?",
+    "a": "Tour agents and service requests live in your property management system, which is not connected to this app. Tours you log in Tour mode are on your desk list.",
+    "s": "LocalLift Live"
+   },
+   {
+    "k": "why",
+    "q": "Why are tours not signing?",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Jade and Ainsley list lower starting base rents. 1 beds: Ainsley $1,326, Jade $1,480, ours $1,770.</li><li>Ainsley posts up to 10 weeks free plus a $1,000 gift card, and Jade up to 8 weeks free.</li></ul>What wins them back: 2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28, the walk to the Strip, free garage parking, our 4.8 rating and a total cost check (both add monthly charges on top of base rent).",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "specials",
+    "q": "What specials are rivals running?",
+    "a": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Flatiron LV: 1 month free on select move in ready homes, restrictions apply. Lura: 2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "rivals",
+    "q": "Who are we up against?",
+    "a": "Jade on W Twain Ave (1 beds from $1,480, up to 8 weeks free), Ainsley at The Collective on Paradise Rd (1 beds from $1,326, up to 10 weeks free plus a gift card) and Flatiron LV by the Palms (1 month free on select homes). Lura 1 beds start at $1,770.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "price",
+    "q": "Are we priced right?",
+    "a": "1 bed from: Lura $1,770, Jade $1,480, Ainsley $1,326.<br>2 bed from: Lura $2,743, Jade $1,855 (waitlist plan), Ainsley $1,843.<br>Flatiron LV prices did not load for today’s check.<br>These are base rents. Lura’s website shows totals with $200 in mandatory monthly fees, Jade and Ainsley add their own monthly charges, and specials differ, so compare totals on the same lease term.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "reviews",
+    "q": "How are our reviews?",
+    "a": "4.8 stars from 125 Google reviews, 122 of them answered. Ainsley 4.6 (244), Jade 4.3 (229), Flatiron LV 4.2 (282). Spectra Paradise leads the map with 187 reviews. Every review request counts.",
+    "s": "Google map scan · Nov 20"
+   },
+   {
+    "k": "ai",
+    "q": "Is AI sending renters our way?",
+    "a": "AI assistants named Lura in 10 of 96 answers to renter questions.",
+    "s": "AI answer panel · Nov 20"
+   }
+  ],
+  "line": "Specials today: Ainsley up to 10 weeks free, Jade up to 8 weeks free.",
+  "briefSrc": "Websites checked 11/24 · Google scan Nov 20",
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24"
+ }
+}
