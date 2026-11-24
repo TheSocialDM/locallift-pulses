@@ -8,10 +8,10 @@ and grey, then sweeps any remaining teal or warm color into the Lura hue.
 Usage: python3 tools/build_lura.py [APPV]"""
 import re,subprocess,sys,os,colorsys,collections
 R=os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
-APPV=sys.argv[1] if len(sys.argv)>1 else '2026-11-24u1'
+APPV=sys.argv[1] if len(sys.argv)>1 else '2026-11-24u2'
 FOLDER='lura-x5r9'
 def gs(ref,p): return subprocess.run(['git','-C',R,'show',f'{ref}:{p}'],capture_output=True,text=True,check=True).stdout
-t=gs('HEAD','live/stillwater-k4p7/v3/index.html')
+t=open(os.path.join(R,'live/stillwater-k4p7/v3/index.html')).read()  # current Stillwater port (keeps its latest fixes)
 def sub(a,b,cnt=None):
     global t
     n=t.count(a)
@@ -159,6 +159,8 @@ os.makedirs(os.path.join(R,'live',FOLDER,'v3'),exist_ok=True)
 SP=os.path.join(R,'live',FOLDER,'v3','index.html')
 open(SP,'w').write(t)
 open(os.path.join(R,'live',FOLDER,'v3','version.txt'),'w').write(APPV+'\n')
+subprocess.run([sys.executable,os.path.join(R,'tools/app_ui_fix_nov24.py'),SP],check=True)
+t=open(SP).read()
 print('built',len(t),'APPV',APPV,'swept',sum(SW.values()))
 bad=re.findall(r'(?i)montage|tigard|oregon|stillwater|kissimmee|florida|orlando|cielo|jamison|mosaic|toho|belgrano|partin|\(689\)|689[ -]\d{3}|\(971\)',t)
 print('leftovers',collections.Counter(bad))

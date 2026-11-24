@@ -17,7 +17,7 @@ body{margin:0;background:var(--soft);color:var(--ink);font:16px/1.55 Inter,syste
 h1,h2,h3{font-family:Montserrat,Inter,system-ui,sans-serif;margin:0;line-height:1.12;letter-spacing:-.01em}
 a{color:inherit}
 .bar{background:var(--es);color:#cfdbe3;font-size:12.5px;padding:9px 16px;text-align:center}.bar b{color:#fff}
-.pf{max-width:480px;margin:0 auto;padding:0 0 130px;display:grid;gap:14px}
+.pf{max-width:480px;margin:0 auto;padding:0 0 112px;display:grid;gap:14px}
 .hero{position:relative;background:#12304a url("../../../live/lura-x5r9/hero.jpg") center/cover;min-height:300px;border-radius:0 0 26px 26px;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,16,24,.55),rgba(6,16,24,.1) 40%,rgba(6,16,24,.92))}
 .hero .logo{position:absolute;top:16px;left:16px;height:22px;z-index:1;filter:drop-shadow(0 1px 6px rgba(0,0,0,.8))}
@@ -34,9 +34,10 @@ a{color:inherit}
 .stack{display:grid;gap:8px;margin-top:12px}
 .sec{background:#fff;border-radius:20px;padding:20px;margin:0 14px}
 .sec h2{font-size:19px}.sub{color:var(--mute);font-size:14px;margin:4px 0 12px}
-.offer{background:var(--es);color:#fff;border-radius:20px;padding:20px;margin:0 14px}
+.offer{background:var(--es);color:#fff;border-radius:20px;padding:20px 20px 28px;margin:0 14px}
 .offer small{font:700 11px Montserrat,sans-serif;letter-spacing:.16em;color:#8fd0ec;text-transform:uppercase}
 .offer h2{font-size:28px;margin:6px 0 4px}.offer p{color:#cfdbe3;font-size:14px;margin:0 0 14px}
+@media(max-width:560px){.offer p,.offer h2{padding-right:70px}}
 .offer .btn{background:#fff;color:var(--ink);border-color:#fff}
 .plans{display:grid;gap:10px}
 .plan{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
@@ -48,7 +49,7 @@ a{color:inherit}
 .gal figure{margin:0;position:relative;border-radius:12px;overflow:hidden}
 .gal img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .gal figcaption{position:absolute;left:8px;bottom:8px;background:rgba(13,34,51,.6);color:#fff;font-size:12px;padding:3px 8px;border-radius:999px}
-.near{margin:0;padding:0;list-style:none;display:grid;gap:8px}.near li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding-bottom:8px;font-size:15px}.near li span{color:var(--mute);font-size:13px;white-space:nowrap}
+.near{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:8px}.near li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding-bottom:8px;font-size:15px}.near li span{color:var(--mute);font-size:13px;white-space:nowrap}
 .ft{text-align:center;font-size:12px;color:var(--mute);line-height:1.7;padding:6px 16px}
 .ft img{height:16px;margin-bottom:8px}
 .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 16px;border-radius:12px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s;max-width:92vw;text-align:center;z-index:9}.toast.show{opacity:1}
@@ -85,7 +86,7 @@ h1,h2,h3{font-family:Poppins,Inter,system-ui,sans-serif;font-weight:600;letter-s
   <section class="sec">
     <h2>Homes available now</h2>
     <p class="sub">1, 2 and 3 bedrooms and penthouse homes. See every available home with one tap.</p>
-    <div class="plans" id="plans"><div class="plan"><b>1 bedroom</b><div class="pr">$1,770<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>2 bedroom</b><div class="pr">$2,743<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>Penthouse</b><div class="pr">$3,195<i>starting at</i></div><span>Base rent</span></div></div>
+    <div class="plans" id="plans"><div class="plan"><b>1 bedroom</b><div class="pr">$1,770<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>2 bedroom</b><div class="pr">$2,743<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>Penthouse</b><div class="pr">$3,195<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>3 bedroom</b><div class="pr">$3,515<i>starting at</i></div><span>Base rent</span></div></div>
     <p class="asof" id="asof">Starting base rents from luravegas.com on Nov 24, 2026, and they change often. <a href="https://www.luravegas.com/floorplans" target="_blank" rel="noopener">See every home live</a></p>
   </section>
 
@@ -104,7 +105,6 @@ h1,h2,h3{font-family:Poppins,Inter,system-ui,sans-serif;font-weight:600;letter-s
     <h2>Nearby</h2>
     <ul class="near">
       <li>The Las Vegas Strip<span>walk over the Harmon Bridge</span></li>
-      <li>3240 W Harmon Ave<span>free gated garage parking</span></li>
     </ul>
   </section>
 
@@ -133,9 +133,9 @@ $('#share').addEventListener('click',function(){var d={title:'Lura in Las Vegas'
 // live prices and special from the morning refresh
 fetch('../../../live/lura-x5r9/data.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){var t=d&&d.talk,u=d&&d.compete&&d.compete.us;if(!t)return;
  var s=u&&u.specialShort||'';if(s&&!/no special/i.test(s)){$('#offH').textContent=s;$('#offP').textContent=/Look and Lease/.test(t.offer||'')?'Plus up to $2,000 in Look and Lease savings. Move in by Dec 28. The leasing team confirms which homes qualify.':'The leasing team confirms which homes qualify.'}else if(/no special/i.test(t.offer||'')){$('#offH').textContent='Ask about this month\'s specials';$('#offP').textContent='Specials change often. The leasing team will share what is available today.'}
- var m={'1 bedroom from':'1 bedroom','2 bedroom from':'2 bedroom','penthouse from':'Penthouse'},h='';(t.prices||[]).forEach(function(p){if(m[p[1]])h+='<div class="plan"><b>'+m[p[1]]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'});if(h)$('#plans').innerHTML=h;
+ var m={'1 bed base rent from':'1 bedroom','2 bed base rent from':'2 bedroom','penthouse base rent from':'Penthouse'},h='';(t.prices||[]).forEach(function(p){if(m[p[1]])h+='<div class="plan"><b>'+m[p[1]]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'});(t.more||[]).forEach(function(p){h+='<div class="plan"><b>'+p[1]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'});if(h)$('#plans').innerHTML=h;
  if(t.checked)$('#asof').firstChild.textContent='Starting base rents from luravegas.com on '+t.checked+', 2026, and they change often. '}).catch(function(){});
 })();
 </script>
-<script src="../../../guide/guide.js?v=3" data-captions="Hi, I'm Mia, your tour guide.|Welcome!|Everything you need is right here.|Book your tour,|see today's special,|or tap to call our leasing team.|I can't wait to show you around!" data-name="Mia" data-vw="0.42" data-video="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-v1/media__3/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-4c57d71d-db8c-4382-81e1-89c4093dbe6c.mp4?Expires=2110802013&amp;Key-Pair-Id=K2ZDLYDZI2R1DF&amp;Signature=JriNK2HLtVmmYLXN7L32nhC71ALCgOJKam~6CKTux-2hTXtPoN3CU8FZ4P1J4EJpzV6sWb9rfJYN83KQDblKOy0zGKKywZ9h0czVYRSxoOAHC0QhVhn5lJjyY9Sg5QJ9eUPkT-8Wq8V91ueF4tJ3UJ2BiaTi7AplQ55ipNYMPNyXyvaN9XlkfEyRqpOBoTd3p3Hc~ymWaURGH4wePNLN4mbx3cfRAgj-ASyPpizqyZjqytsQHBfoQKtHQtTHgG~7X0wfPiT1Ynfz-cBAOMhN4KNXQrlHOYO2QgNxrehIzEvLnHYx6OrwYi9kMg6J0zFU2U5yLj~bqnAIb~n~0qM3LQ__" data-face="../../../guide/mia-face.jpg" data-poster="../../../guide/mia-poster.jpg" data-property="Lura" data-pro="the leasing team" data-sub="AI guide. Calls and tours are handled by the Lura leasing team." data-l3="Call the leasing team" data-tour="https://www.luravegas.com/scheduletour" data-offer="https://www.luravegas.com/floorplans" data-l2="See current specials" data-call="tel:+17029356015" data-color="#00608a" defer></script>
+<script src="../../../guide/guide.js?v=4" data-captions="Hi, I'm Mia, your tour guide.|Welcome!|Everything you need is right here.|Book your tour,|see today's special,|or tap to call our leasing team.|I can't wait to show you around!" data-name="Mia" data-intro="Hi! I'm Mia. I'll get you to {pro}." data-role="your page assistant" data-tiphide="6" data-size="72" data-vw="0.42" data-video="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-v1/media__3/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-4c57d71d-db8c-4382-81e1-89c4093dbe6c.mp4?Expires=2110802013&amp;Key-Pair-Id=K2ZDLYDZI2R1DF&amp;Signature=JriNK2HLtVmmYLXN7L32nhC71ALCgOJKam~6CKTux-2hTXtPoN3CU8FZ4P1J4EJpzV6sWb9rfJYN83KQDblKOy0zGKKywZ9h0czVYRSxoOAHC0QhVhn5lJjyY9Sg5QJ9eUPkT-8Wq8V91ueF4tJ3UJ2BiaTi7AplQ55ipNYMPNyXyvaN9XlkfEyRqpOBoTd3p3Hc~ymWaURGH4wePNLN4mbx3cfRAgj-ASyPpizqyZjqytsQHBfoQKtHQtTHgG~7X0wfPiT1Ynfz-cBAOMhN4KNXQrlHOYO2QgNxrehIzEvLnHYx6OrwYi9kMg6J0zFU2U5yLj~bqnAIb~n~0qM3LQ__" data-face="../../../guide/mia-face.jpg" data-poster="../../../guide/mia-poster.jpg" data-property="Lura" data-pro="the leasing team" data-sub="AI guide. Calls and tours are handled by the Lura leasing team." data-l3="Call the leasing team" data-tour="https://www.luravegas.com/scheduletour" data-offer="https://www.luravegas.com/floorplans" data-l2="See current specials" data-call="tel:+17029356015" data-color="#00608a" defer></script>
 </body></html>

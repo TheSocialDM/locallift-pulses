@@ -24,12 +24,18 @@ var css='.llg{position:fixed;right:14px;bottom:14px;z-index:9999;font:15px/1.45 
 '.llg-a{display:grid;gap:6px;padding:8px 14px 14px}.llg-a a{display:block;text-align:center;text-decoration:none;font-weight:600;border-radius:999px;padding:10px;border:1px solid #e5e5e5;color:#111}'+
 '.llg-a a.m{background:'+C+';border-color:'+C+';color:#fff}'+
 '.llg-x{position:absolute;top:8px;right:8px;z-index:2;width:30px;height:30px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:16px;cursor:pointer}';
+var SZ=parseInt(d.size||0,10);if(SZ)css+='.llg-b{width:'+SZ+'px;height:'+SZ+'px}.llg-tip{right:'+(SZ+10)+'px;bottom:'+Math.round(SZ/2-16)+'px}.llg-p{bottom:'+(SZ+12)+'px}';
 var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+/* data-intro: the bubble's first line, e.g. "Hi! I'm Mia. I'll get you to {pro}." {pro} becomes the agent's name (window.llBy) or data-pro. */
+var PRO1=(window.llBy||PRO),INT=d.intro?d.intro.split('{pro}').join(PRO1):'';
+function esc0(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var TIP0=INT?esc0(INT).split(N).join('<b>'+N+'</b>'):'Hi! I\'m <b>'+N+'</b>, '+ROLE;
+var PREV=/[?&]src=preview\b/.test(location.search);
 var w=document.createElement('div');w.className='llg';
 var vid=V?'<video src="'+V+'" playsinline'+(POS?' poster="'+POS+'"':'')+'></video>':POS?'<img src="'+POS+'" alt="'+N+', your tour guide" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block">':'<div class="ph"><b>'+N.charAt(0)+'</b>Hi, I\'m '+N+', your AI tour guide'+(P?' for '+P:'')+'.</div>';
 var links='';if(d.tour)links+='<a class="m" href="'+d.tour+'" target="_blank" rel="noopener">'+(d.l1||'Book my tour')+'</a>';if(d.offer)links+='<a href="'+d.offer+'" target="_blank" rel="noopener">'+(d.l2||'Today\'s offer')+'</a>';if(d.call)links+='<a href="'+d.call+'">'+(d.l3||('Call '+PRO))+'</a>';
 w.innerHTML='<div class="llg-p" role="dialog" aria-label="'+N+', AI tour guide"><button class="llg-x" aria-label="Close">×</button><div class="llg-v">'+vid+'</div><div class="llg-h"><b>'+N+'</b>, '+ROLE+(P?' at '+P:'')+'<small>'+(SUB||('AI guide. Your leasing pro is '+PRO+'.'))+'</small></div><div class="llg-a">'+links+'</div></div>'+
-'<div class="llg-tip">Hi! I\'m <b>'+N+'</b>, '+ROLE+'</div>'+
+'<div class="llg-tip">'+TIP0+'</div>'+
 '<button class="llg-b" aria-label="Open '+N+', your AI tour guide"'+(FACE?' style="background-image:url(\''+FACE+'\');background-size:cover;background-position:center;'+(d.facecss||'')+'"':'')+'>'+(V?'<video src="'+V+'" muted playsinline autoplay loop'+(POS?' poster="'+POS+'"':'')+'></video>':(FACE?'':N.charAt(0)))+'</button>';
 document.body.appendChild(w);
 var pv=w.querySelector('.llg-v video');
@@ -44,11 +50,16 @@ function refit(){if(bvv)fit(bvv,bbx,1.02);if(pv)fit(pv,pbx,1.01)}
 [bvv,pv].forEach(function(x){if(x)x.addEventListener('loadedmetadata',refit)});addEventListener('resize',refit);w.querySelector('.llg-b').addEventListener('click',function(){setTimeout(refit,30)});refit()}
 var tip=w.querySelector('.llg-tip'),INTRO=tip.innerHTML,bv=w.querySelector('.llg-b video');
 var CAP=(d.captions||'').split('|').map(function(x){return x.trim()}).filter(Boolean);
+if(INT&&CAP.length)CAP[0]=INT;
+if(PREV)tip.style.display='none';
+/* data-tiphide: seconds before the speech bubble goes away for good, so it never sits over page text. data-size: bubble size in px. */
+var TH=parseFloat(d.tiphide||0),TIPOFF=false;if(TH>0)setTimeout(function(){TIPOFF=true;tip.style.display='none'},TH*1000);
+var scr=function(){if((window.scrollY||0)>60){tip.style.display='none';removeEventListener('scroll',scr)}};addEventListener('scroll',scr,{passive:true});
 function esc(t){return t.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function fmt(t){t=esc(t);return N?t.split(N).join('<b>'+N+'</b>'):t}
 var wts=CAP.map(function(c){return c.length+(/[.!?]$/.test(c)?10:/[,;:]$/.test(c)?4:1)}),tot=wts.reduce(function(a,b){return a+b},0),cur=-1;
 function capAt(t,dur){if(!CAP.length||!dur)return -1;var x=t/dur*tot,a=0;for(var i=0;i<CAP.length;i++){a+=wts[i];if(x<a)return i}return CAP.length-1}
-function show(i){if(i===cur)return;cur=i;tip.classList.add('fade');setTimeout(function(){tip.innerHTML=i<0?INTRO:fmt(CAP[i]);tip.classList.toggle('cap',i>=0);tip.classList.remove('fade')},180)}
+function show(i){if(TIPOFF||i===cur)return;cur=i;tip.classList.add('fade');setTimeout(function(){tip.innerHTML=i<0?INTRO:fmt(CAP[i]);tip.classList.toggle('cap',i>=0);tip.classList.remove('fade')},180)}
 if(bv&&CAP.length){bv.addEventListener('timeupdate',function(){if(!w.classList.contains('on'))show(capAt(bv.currentTime,bv.duration))})}
 else setTimeout(function(){if(!w.classList.contains('on'))tip.style.display='none'},9000);
 function mini(){if(bv){bv.currentTime=0;cur=-2;show(-1);var p=bv.play();if(p&&p.catch)p.catch(function(){})}}

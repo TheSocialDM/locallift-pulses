@@ -36,7 +36,7 @@ css=recolor(css)
 css+="h1,h2,h3{font-family:Poppins,Inter,system-ui,sans-serif;font-weight:600;letter-spacing:-.01em}.plan b,.plan .pr,.offer small{font-family:Poppins,Inter,system-ui,sans-serif}.hero .logo{height:58px;width:auto}.me img{width:70%;height:auto}.ft img{height:64px;width:auto}\n"
 sp=U.get('specialShort') or T['offer']
 offer_p='Plus up to $2,000 in Look and Lease savings. Move in by Dec 28. The leasing team confirms which homes qualify.' if 'Look and Lease' in T['offer'] else 'The leasing team confirms which homes qualify.'
-plans=[('1 bedroom',pr.get('1 bedroom from')),('2 bedroom',pr.get('2 bedroom from')),('Penthouse',pr.get('penthouse from'))]
+plans=[('1 bedroom',pr.get('1 bed base rent from')),('2 bedroom',pr.get('2 bed base rent from')),('Penthouse',pr.get('penthouse base rent from'))]+[(m[1],m[0]) for m in T.get('more',[])]
 plan_html=''.join(f'<div class="plan"><b>{n}</b><div class="pr">{v}<i>starting at</i></div><span>Base rent</span></div>' for n,v in plans if v)
 show=U['showoff']
 page=f'''<!DOCTYPE html>
@@ -101,7 +101,6 @@ page=f'''<!DOCTYPE html>
     <h2>Nearby</h2>
     <ul class="near">
       <li>The Las Vegas Strip<span>walk over the Harmon Bridge</span></li>
-      <li>3240 W Harmon Ave<span>free gated garage parking</span></li>
     </ul>
   </section>
 
@@ -130,7 +129,7 @@ $('#share').addEventListener('click',function(){{var d={{title:'Lura in Las Vega
 // live prices and special from the morning refresh
 fetch('../../../live/lura-x5r9/data.json',{{cache:'no-store'}}).then(function(r){{return r.json()}}).then(function(d){{var t=d&&d.talk,u=d&&d.compete&&d.compete.us;if(!t)return;
  var s=u&&u.specialShort||'';if(s&&!/no special/i.test(s)){{$('#offH').textContent=s;$('#offP').textContent=/Look and Lease/.test(t.offer||'')?'Plus up to $2,000 in Look and Lease savings. Move in by Dec 28. The leasing team confirms which homes qualify.':'The leasing team confirms which homes qualify.'}}else if(/no special/i.test(t.offer||'')){{$('#offH').textContent='Ask about this month\\'s specials';$('#offP').textContent='Specials change often. The leasing team will share what is available today.'}}
- var m={{'1 bedroom from':'1 bedroom','2 bedroom from':'2 bedroom','penthouse from':'Penthouse'}},h='';(t.prices||[]).forEach(function(p){{if(m[p[1]])h+='<div class="plan"><b>'+m[p[1]]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'}});if(h)$('#plans').innerHTML=h;
+ var m={{'1 bed base rent from':'1 bedroom','2 bed base rent from':'2 bedroom','penthouse base rent from':'Penthouse'}},h='';(t.prices||[]).forEach(function(p){{if(m[p[1]])h+='<div class="plan"><b>'+m[p[1]]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'}});(t.more||[]).forEach(function(p){{h+='<div class="plan"><b>'+p[1]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'}});if(h)$('#plans').innerHTML=h;
  if(t.checked)$('#asof').firstChild.textContent='Starting base rents from luravegas.com on '+t.checked+', 2026, and they change often. '}}).catch(function(){{}});
 }})();
 </script>
@@ -146,11 +145,11 @@ open(os.path.join(DST,'qr.svg'),'w').write(qsvg)
 # ---------- card sample
 c=open(os.path.join(SRC,'card/index.html')).read()
 c=re.sub(r'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41".*?</svg>',qsvg,c,flags=re.S)
-c=c.replace('live/montage-r8x2','live/lura-x5r9').replace('shots/lobby.jpg','shots/lounge.jpg')
+c=c.replace('meet/montage/','meet/lura/').replace('live/montage-r8x2','live/lura-x5r9').replace('shots/lobby.jpg','shots/lounge.jpg')
 c=c.replace('<title>Montage Leasing · QR business card (sample)</title>','<title>Lura Leasing · QR business card (sample)</title>')
 c=c.replace('Montage leasing card (sample)','Lura leasing card (sample)')
-c=c.replace('open the live Montage profile with Mia','open the live Lura profile with Mia')
-c=c.replace('<b>Montage Leasing Team</b><span>Montage in Tigard</span>','<b>Lura Leasing Team</b><span>Lura in Las Vegas</span>')
+c=c.replace('open the live Montage profile for your leasing consultant','open the live Lura profile for your leasing consultant')
+c=c.replace('<b id="cn">Montage Leasing Team</b><span>Montage in Tigard</span>','<b id="cn">Lura Leasing Team</b><span>Lura in Las Vegas</span>')
 c=c.replace('<span class="ph">(971) 397-7861</span><span>13155 SW 68th Parkway, Tigard</span>',f'<span class="ph">{PH}</span><span>3240 W Harmon Ave, Las Vegas</span>')
 c=c.replace('<b>Your home near Washington Square</b><span>Sky lounge · Pool and spa · Golf simulator · Coworking</span>','<b>Your home by the Strip</b><span>Sky Lounge · Pool · Free garage parking · Coworking</span>')
 c=c.replace('Open the live Montage profile','Open the live Lura profile').replace('alt="Montage"','alt="Lura"')

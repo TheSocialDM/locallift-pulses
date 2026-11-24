@@ -14,7 +14,7 @@
    "date": "Nov 24",
    "tone": "good",
    "title": "Today's offer: 2 months free",
-   "body": "luravegas.com shows 2 months free rent on a 12 month lease plus up to $2,000 in Look and Lease savings. Move in by Dec 28. It lists one bedrooms from $1,558 a month in effective rent with the offer.",
+   "body": "luravegas.com shows 2 months free rent on a 12 month lease plus up to $2,000 in Look and Lease savings. Move in by Dec 28. It lists one bedroom homes from $1,558 a month in effective rent with the offer: that is the A1 plan (base rent $1,870, homes from Jan 8, 2027). The lowest 1 bedroom base rent today is $1,770 on the A3 plan.",
    "action": "Lead with the move in date. Ask when they want to move, then show the homes that fit before Dec 28."
   },
   {
@@ -167,15 +167,22 @@
   "prices": [
    [
     "$1,770",
-    "1 bedroom from"
+    "1 bed base rent from"
    ],
    [
     "$2,743",
-    "2 bedroom from"
+    "2 bed base rent from"
    ],
    [
     "$3,195",
-    "penthouse from"
+    "penthouse base rent from"
+   ]
+  ],
+  "more": [
+   [
+    "$3,515",
+    "3 bedroom",
+    "base rent from, homes from Feb 25, 2027"
    ]
   ]
  },
