@@ -25,8 +25,15 @@ if 'id="llnavbg"' not in s:
 # renters see: hint sits under the page view, never over it
 s=s.replace('.mchint{position:absolute;right:118px;bottom:40px;','.mchint{position:static;align-self:center;margin:16px auto calc(16px + env(safe-area-inset-bottom));')
 s=s.replace('.mcifw{flex:1;position:relative;min-height:0;display:flex}','.mcifw{flex:1;position:relative;min-height:0;display:flex;flex-direction:column}')
+# Meet Mia hero mockup: speech bubble under the mini card, never over its buttons; same words as the card
+s=re.sub(r'(\.mcah\{position:relative;)height:210px;',r'\1height:240px;',s)
+s=re.sub(r'\.mcsay\{position:absolute;right:100px;bottom:62px;max-width:52%;','.mcsay{position:absolute;left:16px;right:auto;bottom:16px;max-width:calc(100% - 136px);',s)
+s=s.replace("<div class=\"mcsay\">Hi, I'm Mia! Want to book a tour with ${esc(me||'us')}?</div>","<div class=\"mcsay\">Hi, I'm Mia! I'll get you to ${esc(me||'your leasing team')}.</div>")
+# Today hero: a little room between the logo row and the date line
+if 'id="lltopgap"' not in s:
+    s=s.replace('</head>','<style id="lltopgap">.top .trow{margin-bottom:8px}</style></head>',1)
 if len(sys.argv)>2:
     s=re.sub(r"const APPV='[^']*'",f"const APPV='{sys.argv[2]}'",s)
     open(p.replace('index.html','version.txt'),'w').write(sys.argv[2]+'\n')
-checks={'nav97':'.97)' in s,'pad178':'178px' in s,'you':'background:#fff;color:#1c1c1e' in s,'chev':'<em>›</em></section>`' not in s,'bullet':'She points every lead to you' not in s,'hint':'.mchint{position:static' in s,'navbg':'id="llnavbg"' in s}
+checks={'nav97':'.97)' in s,'pad178':'178px' in s,'you':'background:#fff;color:#1c1c1e' in s,'chev':'<em>›</em></section>`' not in s,'bullet':'She points every lead to you' not in s,'hint':'.mchint{position:static' in s,'navbg':'id="llnavbg"' in s,'mcsay':'left:16px;right:auto;bottom:16px' in s and "I'll get you to ${esc(me" in s,'topgap':'lltopgap' in s}
 open(p,'w').write(s);print(p,'changed' if s!=n0 else 'unchanged',checks)
