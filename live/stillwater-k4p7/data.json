@@ -730,5 +730,235 @@
   ],
   "act": "tour",
   "cta": "Open Tour mode ›"
+ },
+ "market": {
+  "rvh": [
+   "Community",
+   "1 bed from",
+   "2 bed from"
+  ],
+  "rv": [
+   [
+    "Stillwater Lakes",
+    "$1,552",
+    "$1,902"
+   ],
+   [
+    "Cielo View",
+    "$1,549",
+    "$1,874"
+   ],
+   [
+    "The Jamison",
+    "$1,524",
+    "$1,849"
+   ],
+   [
+    "Mosaic at Lake Toho",
+    "$1,443",
+    "$1,689"
+   ]
+  ],
+  "srh": [
+   "Source",
+   "Visits",
+   "Leads"
+  ],
+  "sr": [],
+  "pts": [
+   "Our special: 2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2. No end date is posted.",
+   "3 rivals list lower starting base rents on 1 and 2 bedrooms. The Jamison adds mandatory monthly costs and Mosaic posts an 18 month lease, so ask what total and term they were quoted.",
+   "Our deposit is $350 vs $500 at The Jamison and Mosaic, and our pet rent and pet fee are lower than The Jamison."
+  ],
+  "cards": [
+   {
+    "lab": "WHERE WE STAND OUT",
+    "p": [
+     "new",
+     "New"
+    ],
+    "h": "Use these on every tour",
+    "b": "Resort style pool, Grand clubhouse and fireplace lounge, Game room and club room, Café with free coffee, Fitness center, Coworking hub and private offices, Two dog parks and pet wash, Pond and walking path, Courtyard with grills, Package lockers, EV charging, Garages for rent.",
+    "src": "Stillwater Lakes and rival websites · checked 11/24",
+    "cmp": {
+     "cols": [
+      "Stillwater",
+      "Jamison",
+      "Mosaic"
+     ],
+     "rows": [
+      [
+       "Deposit",
+       "$350",
+       "$500",
+       "$500"
+      ],
+      [
+       "Pet rent",
+       "$20/mo",
+       "$25/mo",
+       "Not posted"
+      ],
+      [
+       "Pet fee",
+       "$200",
+       "$350",
+       "Not posted"
+      ]
+     ]
+    },
+    "chips": [
+     "Resort style pool",
+     "Grand clubhouse and fireplace lounge",
+     "Game room and club room",
+     "Café with free coffee",
+     "Fitness center",
+     "Coworking hub and private offices",
+     "Two dog parks and pet wash",
+     "Pond and walking path"
+    ],
+    "note": "Studios from $1,486 and townhomes too. Cielo View has 1 and 2 bedrooms only and does not post a deposit."
+   },
+   {
+    "lab": "SPECIALS WATCH",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "2 of 3 rivals post a special too",
+    "b": "Stillwater Lakes: 2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2. Cielo View: two months free for a limited time. Mosaic at Lake Toho: up to 8 weeks free, conditions apply. The Jamison: no special posted.",
+    "src": "Each community’s website · checked 11/24",
+    "list": [
+     [
+      "Stillwater Lakes",
+      "2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2, no end date posted",
+      "me"
+     ],
+     [
+      "Cielo View",
+      "Two months free for a limited time",
+      ""
+     ],
+     [
+      "Mosaic at Lake Toho",
+      "Up to 8 weeks free, conditions apply",
+      ""
+     ],
+     [
+      "The Jamison",
+      "No special posted",
+      ""
+     ]
+    ]
+   },
+   {
+    "lab": "PRICE CHECK",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "3 rivals list lower starting rents",
+    "t": "rivals",
+    "src": "Each community’s website · checked 11/24",
+    "more": "Base rents. The Jamison adds mandatory monthly costs on top, and Mosaic posts an 18 month lease, so ask what total and term they were quoted."
+   },
+   {
+    "lab": "GOOGLE REVIEWS",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Cielo View has 75 reviews to our 19",
+    "b": "Our rating is 4.2 from 19 Google reviews.",
+    "src": "Google map scan · Nov 20",
+    "stats": [
+     [
+      "4.2",
+      "Our Google rating"
+     ],
+     [
+      "19",
+      "Our reviews"
+     ],
+     [
+      "75",
+      "Cielo View reviews"
+     ]
+    ],
+    "note": "Every review we ask for moves our average more than theirs."
+   },
+   {
+    "lab": "AI ANSWERS",
+    "p": [
+     "s",
+     "Signal"
+    ],
+    "h": "AI assistants name Stillwater Lakes",
+    "b": "Named in 22 of 96 answers to renter questions.",
+    "src": "AI answer panel · Nov 20",
+    "stats": [
+     [
+      "22",
+      "of 96 AI answers name you"
+     ]
+    ]
+   }
+  ],
+  "ex": [
+   {
+    "k": "edge",
+    "q": "Where do we stand out against rivals?",
+    "a": "From the Stillwater Lakes website: resort style pool, grand clubhouse and fireplace lounge, game room and club room, café with free coffee, fitness center, coworking hub and private offices, two dog parks and pet wash, pond and walking path, courtyard with grills, package lockers, EV charging, garages for rent.<ul><li>Deposit: $350 vs $500 at The Jamison and $500 at Mosaic at Lake Toho.</li><li>Pets: $20 a month and a $200 pet fee, vs $25 a month and a $350 pet fee at The Jamison.</li><li>Studios from $1,486 and townhomes. Cielo View has 1 and 2 bedrooms only.</li></ul>",
+    "s": "Stillwater Lakes and rival websites · checked 11/24"
+   },
+   {
+    "k": "ops",
+    "q": "Who showed the tour? Pending service requests?",
+    "a": "Tour agents and service requests live in your property management system, which is not connected to this app. Tours you log in Tour mode are on your desk list.",
+    "s": "LocalLift Live"
+   },
+   {
+    "k": "why",
+    "q": "Why are tours not signing?",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>All 3 rivals list lower starting base rents. 1 beds: Mosaic at Lake Toho $1,443, The Jamison $1,524, Cielo View $1,549, ours $1,552.</li><li>Cielo View also posts two months free, and Mosaic up to 8 weeks free.</li><li>Cielo View has 75 Google reviews to our 19.</li></ul>What wins them back: 2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2, the $350 deposit, studios and townhomes, and a total cost check (The Jamison adds monthly fees, Mosaic posts an 18 month lease).",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "specials",
+    "q": "What specials are rivals running?",
+    "a": "Cielo View: two months free for a limited time. Mosaic at Lake Toho: up to 8 weeks free, conditions apply. The Jamison: no special posted. Stillwater Lakes: 2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "rivals",
+    "q": "Who are we up against?",
+    "a": "Cielo View (1 beds from $1,549, two months free for a limited time), The Jamison (from $1,524, no special posted, monthly fees added) and Mosaic at Lake Toho (from $1,443, up to 8 weeks free, conditions apply). Stillwater Lakes 1 beds start at $1,552.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "price",
+    "q": "Are we priced right?",
+    "a": "1 bed from: Stillwater Lakes $1,552, Cielo View $1,549, The Jamison $1,524, Mosaic at Lake Toho $1,443.<br>2 bed from: Stillwater Lakes $1,902, Cielo View $1,874, The Jamison $1,849, Mosaic at Lake Toho $1,689.<br>Studios from: Stillwater Lakes $1,486, The Jamison $1,640, Mosaic at Lake Toho $1,299. Cielo View has no studios.<br>These are base rents. The Jamison adds mandatory monthly costs, Mosaic posts an 18 month lease and ours is on a 15 month lease, so confirm the term before quoting a difference.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "reviews",
+    "q": "How are our reviews?",
+    "a": "4.2 stars from 19 Google reviews. Cielo View 4.9 (75), Mosaic at Lake Toho 4.5 (184), The Jamison 4.2 (255). Every review request counts.",
+    "s": "Google map scan · Nov 20"
+   },
+   {
+    "k": "ai",
+    "q": "Is AI sending renters our way?",
+    "a": "AI assistants named Stillwater Lakes in 22 of 96 answers to renter questions.",
+    "s": "AI answer panel · Nov 20"
+   }
+  ],
+  "line": "Specials today: Cielo View two months free for a limited time, Mosaic up to 8 weeks free, conditions apply.",
+  "briefSrc": "Websites checked 11/24 · Google scan Nov 20",
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24"
  }
 }
