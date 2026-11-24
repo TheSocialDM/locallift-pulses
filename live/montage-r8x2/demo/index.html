@@ -376,6 +376,16 @@ nav{background:rgba(28,28,30,.96)!important;border:.5px solid rgba(255,255,255,.
 @media print{nav,.dock,#dock,.fab,.mcbar,#sch,.dsk,.akmore2,header .pv,.pv{display:none!important}body{background:#fff!important}.w,.ak{box-shadow:none!important;break-inside:avoid;border:1px solid #ddd}.akbody.clip>*{display:block!important}}
 .akblue .akl span:first-child{color:#1a73e8!important}.akblue .akl .akp{background:#1a73e8!important;color:#fff!important}.akblue h4{color:#0b4cc0!important}
 @media (prefers-color-scheme:dark){.akblue .akl span:first-child{color:#7fb0ff!important}.akblue .akl .akp{background:#2f6fe0!important}.akblue h4{color:#a9c8ff!important}}
+
+/* ===== See what renters see, glowing button (Nov 24 2026) ===== */
+.mcsee{display:flex!important;width:100%;justify-content:center;align-items:center;gap:8px!important;margin-top:12px!important;padding:13px 16px;min-height:50px;border-radius:14px;
+ background:linear-gradient(135deg,#1a73e8,#4c8df6)!important;color:#fff!important;font-size:16.5px!important;font-weight:800!important;letter-spacing:-.01em;
+ box-shadow:0 0 0 0 rgba(26,115,232,.55),0 6px 18px rgba(26,115,232,.35);animation:mcglow 2.4s ease-in-out infinite;cursor:pointer}
+.mcsee .mci2,.mcsee svg{width:20px!important;height:20px!important;stroke:#fff!important;color:#fff!important}
+@keyframes mcglow{0%,100%{box-shadow:0 0 0 0 rgba(26,115,232,.5),0 6px 18px rgba(26,115,232,.3)}50%{box-shadow:0 0 0 8px rgba(26,115,232,0),0 8px 26px rgba(26,115,232,.55)}}
+@media (max-width:360px){.mcsee{font-size:14px!important;padding:12px 6px;gap:5px!important;white-space:nowrap}.mcsee svg,.mcsee .mci2{width:17px!important;height:17px!important}}
+@media (prefers-reduced-motion:reduce){.mcsee{animation:none}}
+@media (prefers-color-scheme:dark){.mcsee{background:linear-gradient(135deg,#2f6fe0,#5b9bff)!important;color:#fff!important}}
 </style>
 <style>
 #gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#1c1712 url(../hero.jpg) center/cover;font-family:inherit}
@@ -720,7 +730,7 @@ ${n>1?`<div class="ra-more">${r.l.slice(1).map(x=>`<button data-goriv="${esc(x.r
 document.addEventListener('click',e=>{if(e.target.closest('#raOk')){sh.classList.remove('on','ra-on');show(cur);return}if(e.target.closest('[data-ra]'))sh.classList.remove('on','ra-on')},true);
 const gateUp=()=>{const g=document.getElementById('gate');return !!(g&&getComputedStyle(g).display!=='none'&&g.offsetParent)};
 const raTry=(n=0)=>{try{const r=RA();if(!r||r.day!==dkey(Date.now()))return;let k='';try{k=localStorage.getItem('lldemo-ralert')||''}catch(x){}if(k===r.day)return;if(document.visibilityState!=='visible'||sh.classList.contains('on')||gateUp()){clearTimeout(window.__raT);if(n<400)window.__raT=setTimeout(()=>raTry(n+1),1500);return}raShow(false)}catch(x){}};
-const APPV='2026-11-24b';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
+const APPV='2026-11-24c';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
 const verCheck=()=>fetch('no-version.txt?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.text():'').then(v=>{v=(v||'').trim();if(v&&v!==APPV&&!busy()){let t='';try{t=sessionStorage.getItem('lldemo-rl')||''}catch(x){}if(t===v)return false;try{sessionStorage.setItem('lldemo-rl',v)}catch(x){}location.reload();return true}return false}).catch(()=>false);
 const liveCheck=()=>{if(document.visibilityState!=='visible')return;verCheck().then(rl=>{if(rl)return;raTry();fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{if(!D||j.updated===D.updated)return;D=j;const ae=document.activeElement;if(!sh.classList.contains('on')&&!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))show(cur);raTry()}).catch(()=>{})})};
 document.addEventListener('visibilitychange',liveCheck);window.addEventListener('pageshow',e=>{if(e.persisted)liveCheck()});window.addEventListener('focus',liveCheck);setInterval(liveCheck,10*60*1000);
