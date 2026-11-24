@@ -5,6 +5,7 @@
 /stillwater    /stillwater-k4p7/v3/  301
 /stillwater-demo  /stillwater-k4p7/demo/  301
 /lura          /lura-x5r9/v3/  301
+/lura-demo  /lura-x5r9/demo/  301
 /view          /montage-r8x2/view/  301
 /meet/montage/:name  https://thesocialdm.github.io/locallift-pulses/team/montage/leasing/?by=:name&src=link  302
 /meet/stillwater/:name  https://thesocialdm.github.io/locallift-pulses/team/stillwater/leasing/?by=:name&src=link  302
