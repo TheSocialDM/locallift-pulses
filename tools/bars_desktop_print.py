@@ -17,9 +17,9 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-dsk]');if(
 """
 anchor="document.addEventListener('click',e=>{try{if(e.target.closest('#raOk'))"
 i=v.index(anchor); j=v.index('\n}\n</script>',i); v=v[:j]+'\n'+js+v[j:]
-# place card on More (top) and Market (after Ask)
-v=v.replace("more:()=>'<div class=\"lt\">More</div>'+helpSec()","more:()=>'<div class=\"lt\">More</div>'+deskCard()+helpSec()",1)
-assert 'deskCard()+helpSec()' in v
+# place card at the bottom of More (Help stays where it is) and on Market
+v=v.replace("V.score()+V.rivals(),","V.score()+V.rivals()+deskCard(),",1)
+assert 'V.rivals()+deskCard(),' in v
 v=v.replace("V.market=()=>`<div class=\"lt\">Market</div>`+askBox()+HX.cards.map(card).join('')+V.rivals();","V.market=()=>`<div class=\"lt\">Market<button class=\"prt\" data-dsk=\"print\" aria-label=\"Print or save as PDF\"><svg viewBox=\"0 0 24 24\"><path d=\"M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2\"/><rect x=\"7\" y=\"14\" width=\"10\" height=\"6\" rx=\"1\"/></svg>Print</button></div>`+askBox()+HX.cards.map(card).join('')+V.rivals()+deskCard();",1)
 assert 'class=\"prt\"' in v
 css='''
