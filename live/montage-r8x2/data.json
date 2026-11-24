@@ -684,5 +684,212 @@
   ],
   "act": "tour",
   "cta": "Try it in Tour mode"
+ },
+ "market": {
+  "rvh": [
+   "Community",
+   "1 bed from",
+   "2 bed from"
+  ],
+  "rv": [
+   [
+    "Montage",
+    "$1,795",
+    "$2,150"
+   ],
+   [
+    "The Overland",
+    "$1,467",
+    "$2,031"
+   ],
+   [
+    "The Steward",
+    "$1,699",
+    "$1,899"
+   ],
+   [
+    "Mercato Grove",
+    "$2,055",
+    "$3,345"
+   ]
+  ],
+  "srh": [
+   "Source",
+   "Visits",
+   "Leads"
+  ],
+  "sr": [
+   [
+    "Google search",
+    "725",
+    "24"
+   ],
+   [
+    "Direct (typed or saved)",
+    "381",
+    "13"
+   ],
+   [
+    "Google Ads",
+    "1,074",
+    "10"
+   ],
+   [
+    "Zillow",
+    "44",
+    "2"
+   ],
+   [
+    "ChatGPT",
+    "43",
+    "1"
+   ],
+   [
+    "Bing",
+    "46",
+    "0"
+   ],
+   [
+    "Facebook ads",
+    "280",
+    "0"
+   ]
+  ],
+  "pts": [
+   "Select 2 bedrooms get 2 months free plus a $1,000 Look and Lease bonus, and it ends Nov 30. Lead with it on 2 bed tours when a select unit fits.",
+   "The Overland and The Steward list lower starting rents on 1 and 2 bedrooms, and The Overland adds up to 6 weeks free on select homes.",
+   "Montage deposit is $400 (The Steward is also $400) and pet rent is $35 a month, both lower than The Overland and Mercato Grove."
+  ],
+  "cards": [
+   {
+    "lab": "WHERE WE STAND OUT",
+    "p": [
+     "new",
+     "New"
+    ],
+    "h": "Selling points to use on tours",
+    "b": "Pool and spa, sky lounge, golf simulator game room, dog park and indoor pet spa, guest suite, private garages with direct hallway access, and EV charging. Deposit is $400 vs $500 at The Overland and Mercato Grove. Pet rent is $35 a month vs $50 at The Overland and $55 at Mercato Grove, with no pet fee and up to 3 pets.",
+    "src": "Montage and rival websites · checked 11/23"
+   },
+   {
+    "lab": "SPECIALS WATCH",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Your 2 months free ends Nov 30",
+    "b": "Montage: select 2 bedrooms get 2 months free plus a $1,000 Look and Lease bonus. The Overland: up to 6 weeks free. The Steward: free rent, amount not posted. Mercato Grove: no special posted.",
+    "src": "Each community’s website · checked 11/23"
+   },
+   {
+    "lab": "WHERE LEADS COME FROM",
+    "p": [
+     "new",
+     "New"
+    ],
+    "h": "Google search brought the most leads: 24 in 4 weeks",
+    "t": "src",
+    "src": "Website visits and completed forms · Oct 26 to Nov 22",
+    "more": "Leads here are completed website forms. Calls and walk ins are not counted."
+   },
+   {
+    "lab": "PRICE CHECK",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "2 rivals list lower starting rents",
+    "t": "rivals",
+    "src": "Each community’s website · checked 11/23"
+   },
+   {
+    "lab": "GOOGLE LISTING LEADS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "552 direction requests, 479 website clicks, 59 call taps",
+    "b": "Renters saw your Google listing 4,239 times.",
+    "src": "Google listing · Oct 24 to Nov 20 (Google publishes about 5 days late)"
+   },
+   {
+    "lab": "AI ANSWERS",
+    "p": [
+     "s",
+     "Signal"
+    ],
+    "h": "AI assistants name Montage in 36 of 96 answers",
+    "b": "ChatGPT sent 43 website visits and 1 lead in 4 weeks.",
+    "src": "AI answer panel 11/20 · website visits Oct 26 to Nov 22"
+   }
+  ],
+  "ex": [
+   {
+    "k": "edge",
+    "q": "Where do we stand out against rivals?",
+    "a": "From the Montage website: pool and spa, sky lounge, golf simulator game room, dog park and indoor pet spa, guest suite, private garages with direct hallway access, and EV charging.<ul><li>Deposit: $400 vs $500 at The Overland and Mercato Grove (The Steward is also $400).</li><li>Pet rent: $35 a month vs $50 at The Overland and $55 at Mercato Grove, with no pet fee and up to 3 pets.</li><li>Google rating: 4.7, the highest of the 4.</li></ul>",
+    "s": "Montage and rival websites · checked 11/23, Google scan 11/20"
+   },
+   {
+    "k": "ops",
+    "q": "Who showed the tour? Pending service requests?",
+    "a": "Tour agents and service requests live in your property management system, which is not connected to this app. Tours you log in Tour mode are on your desk list.",
+    "s": "Preview"
+   },
+   {
+    "k": "why",
+    "q": "Why are tours not signing?",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>The Overland lists 1 beds from $1,467 and The Steward from $1,699. Montage 1 beds start at $1,795.</li><li>The Overland adds up to 6 weeks free on select homes. Your 2 months free is on select 2 bedrooms only.</li><li>The Steward lists 2 beds from $1,899 vs your $2,150.</li></ul>What wins them back: the 2 months free plus $1,000 Look and Lease on 2 beds (ends Nov 30), the $400 deposit, $35 pet rent and the 4.7 rating.",
+    "s": "Each community’s website · checked 11/23"
+   },
+   {
+    "k": "specials",
+    "q": "What specials are rivals running?",
+    "a": "The Overland: up to 6 weeks free. The Steward: free rent, amount not posted. Mercato Grove: no special posted. Montage: select 2 bedrooms get 2 months free plus a $1,000 Look and Lease bonus, ending Nov 30.",
+    "s": "Each community’s website · checked 11/23"
+   },
+   {
+    "k": "src",
+    "q": "Where do our leads come from?",
+    "a": "Completed website forms from these 7 sources in 4 weeks:<ul><li>Google search: 24 leads from 725 visits</li><li>Direct (typed or saved): 13 from 381</li><li>Google Ads: 10 from 1,074</li><li>Zillow: 2 from 44</li><li>ChatGPT: 1 from 43</li><li>Bing: 0 from 46</li><li>Facebook ads: 0 from 280</li></ul>Calls and walk ins are not counted here.",
+    "s": "Website visits and completed forms · Oct 26 to Nov 22"
+   },
+   {
+    "k": "rivals",
+    "q": "Who are we up against?",
+    "a": "The Overland (1 beds from $1,467, up to 6 weeks free), The Steward (from $1,699, free rent amount not posted) and Mercato Grove (from $2,055, no special posted). Montage 1 beds start at $1,795.",
+    "s": "Each community’s website · checked 11/23"
+   },
+   {
+    "k": "price",
+    "q": "Are we priced right?",
+    "a": "1 bed from: Montage $1,795, The Overland $1,467, The Steward $1,699, Mercato Grove $2,055.<br>2 bed from: Montage $2,150, The Overland $2,031, The Steward $1,899, Mercato Grove $3,345.<br>Your $400 deposit and $35 pet rent are both lower than The Overland and Mercato Grove. The Steward also asks a $400 deposit. Montage's lease term is not posted, so confirm the term with the office before quoting a difference.",
+    "s": "Each community’s website · checked 11/23"
+   },
+   {
+    "k": "gbp",
+    "q": "How is our Google listing doing?",
+    "a": "Renters saw the listing 4,239 times. It drove 552 direction requests, 479 website clicks and 59 call button taps.",
+    "s": "Google listing · Oct 24 to Nov 20"
+   },
+   {
+    "k": "reviews",
+    "q": "How are our reviews?",
+    "a": "4.7 stars from 34 Google reviews, the highest rating of the 4. The Steward 4.6 (35), Mercato Grove 4.4 (87), The Overland 4.0 (61). 1 new Montage review in the last 4 weeks, so every review request counts.",
+    "s": "Google listings · scan 11/20"
+   },
+   {
+    "k": "ai",
+    "q": "Is AI sending renters our way?",
+    "a": "AI assistants named Montage in 36 of 96 answers to renter questions. ChatGPT sent 43 website visits and 1 lead in 4 weeks. Bing search sent 46 visits.",
+    "s": "AI answer panel 11/20 · website visits Oct 26 to Nov 22"
+   }
+  ],
+  "line": "Leads in 4 weeks: Google search 24, direct 13, Google Ads 10.",
+  "briefSrc": "Websites checked 11/23 · leads Oct 26 to Nov 22",
+  "checked": "Nov 23",
+  "checkedIso": "2026-11-23"
  }
 }
