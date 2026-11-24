@@ -403,7 +403,7 @@ body.gated .app{visibility:hidden}
 </style>
 </head>
 <body class="gated">
-<div id="gate"><form id="gf" autocomplete="off"><img src="../logo-umber.png" alt="Montage"><h2>Welcome to LocalLift Live</h2><p id="gmsg">For the Montage team. Your manager has the team code.</p><label for="gn">Your first name</label><input id="gn" autocomplete="given-name" required><label for="gc">Team code</label><input id="gc" inputmode="numeric" autocomplete="one-time-code" required><div class="err" id="gerr"></div><button type="submit">Open</button><p class="sec">🔒 Private to your team. Your tour notes stay on this phone.</p></form></div>
+<div id="gate"><form id="gf" autocomplete="off"><img src="../logo-umber.png" alt="Montage"><h2>Welcome to LocalLift Live</h2><p id="gmsg">For the Montage team. Your code is in your welcome email.</p><label for="gn">Your first name</label><input id="gn" autocomplete="given-name" required><label for="gc">Your code</label><input id="gc" inputmode="text" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="one-time-code" required><div class="err" id="gerr"></div><button type="submit">Open</button><p class="sec">🔒 Private to your team. Your tour notes stay on this phone.</p></form></div>
 <script>
 (function(){
 const K='ll-team',WIPE=['ll-log','ll-curt','ll-deskmail','ll-pet','ll-me','ll-caps','ll-heard','ll-seenchg'];
@@ -766,7 +766,7 @@ ${n>1?`<div class="ra-more">${r.l.slice(1).map(x=>`<button data-goriv="${esc(x.r
 document.addEventListener('click',e=>{if(e.target.closest('#raOk')){sh.classList.remove('on','ra-on');show(cur);return}if(e.target.closest('[data-ra]'))sh.classList.remove('on','ra-on')},true);
 const gateUp=()=>{const g=document.getElementById('gate');return !!(g&&getComputedStyle(g).display!=='none'&&g.offsetParent)};
 const raTry=(n=0)=>{try{const r=RA();if(!r||r.day!==dkey(Date.now()))return;let k='';try{k=localStorage.getItem('ll-ralert')||''}catch(x){}if(k===r.day)return;if(document.visibilityState!=='visible'||sh.classList.contains('on')||gateUp()){clearTimeout(window.__raT);if(n<400)window.__raT=setTimeout(()=>raTry(n+1),1500);return}raShow(false)}catch(x){}};
-const APPV='2026-11-24g';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
+const APPV='2026-11-24h';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
 const verCheck=()=>fetch('version.txt?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.text():'').then(v=>{v=(v||'').trim();if(v&&v!==APPV&&!busy()){let t='';try{t=sessionStorage.getItem('ll-rl')||''}catch(x){}if(t===v)return false;try{sessionStorage.setItem('ll-rl',v)}catch(x){}location.reload();return true}return false}).catch(()=>false);
 const liveCheck=()=>{if(document.visibilityState!=='visible')return;verCheck().then(rl=>{if(rl)return;raTry();fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{if(!D||j.updated===D.updated)return;D=j;const ae=document.activeElement;if(!sh.classList.contains('on')&&!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))show(cur);raTry()}).catch(()=>{})})};
 document.addEventListener('visibilitychange',liveCheck);window.addEventListener('pageshow',e=>{if(e.persisted)liveCheck()});window.addEventListener('focus',liveCheck);setInterval(liveCheck,10*60*1000);
