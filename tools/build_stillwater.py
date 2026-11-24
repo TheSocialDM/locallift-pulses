@@ -8,7 +8,7 @@ colors), and a final sweep turns any remaining warm color into the Stillwater te
 Usage: python3 tools/build_stillwater.py [APPV]"""
 import re,subprocess,sys,os,json,colorsys,difflib,collections,tempfile
 R=os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
-APPV=sys.argv[1] if len(sys.argv)>1 else '2026-11-24s2'
+APPV=sys.argv[1] if len(sys.argv)>1 else '2026-11-24s3'
 def gs(ref,p): return subprocess.run(['git','-C',R,'show',f'{ref}:{p}'],capture_output=True,text=True,check=True).stdout
 MP='live/montage-r8x2/v3/index.html';SP='live/stillwater-k4p7/v3/index.html'
 base=gs('a558a38',MP);theirs=gs('a558a38',SP);ours=gs('989f262',MP)  # Montage APPV 2026-11-24e; later Montage gate and alert changes are applied below
@@ -145,11 +145,13 @@ t=re.sub(r'#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b(?![0-9a-fA-F])',hexsw,t)
 t=re.sub(r'(rgba?)\(([^)]*)\)',rgbsw,t)
 open(os.path.join(R,SP),'w').write(t)
 open(os.path.join(R,'live/stillwater-k4p7/v3/version.txt'),'w').write(APPV+'\n')
+subprocess.run([sys.executable,os.path.join(R,'tools/special_fallback.py'),os.path.join(R,SP)],check=True)
 subprocess.run([sys.executable,os.path.join(R,'tools/personal_codes.py'),os.path.join(R,'live/stillwater-k4p7'),'stillwater','llsw-'],check=True)
 t=open(os.path.join(R,SP)).read()
 # gate: personal codes are hex, so a text keyboard (Montage 8256c9e)
 t=t.replace('<label for="gc">Team code</label><input id="gc" inputmode="numeric" autocomplete="one-time-code" required>','<label for="gc">Your code</label><input id="gc" inputmode="text" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="one-time-code" required>')
 t=re.sub(r'(id="gmsg">For the Stillwater Lakes team\.)[^<]*<',r'\1 Your code is in your welcome email.<',t)
+t=t.replace('TheSocialDM','The SocialDM')  # brand is two words in copy
 open(os.path.join(R,SP),'w').write(t)
 print('built',len(t),'APPV',APPV);print('warm sweep',dict(SW))
 bad=re.findall(r'(?i)montage|tigard|oregon|overland|steward|mercato|washington square|portland|willamette|beaverton|lake oswego|\(971\)|971[ -]\d{3}',t)+re.findall(r', OR\b|America/Los_Angeles',t)
