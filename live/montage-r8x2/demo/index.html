@@ -307,6 +307,37 @@ nav{background:rgba(28,28,30,.96)!important;border:.5px solid rgba(255,255,255,.
 .ra-dir{font-size:12px;font-weight:800;color:#f6ead9;white-space:nowrap}.ra-note{display:block;margin-top:8px;font-size:12.5px;color:#cdb9a1}.ra-src{font-size:12.5px;color:#cdb9a1;text-align:center;margin:0}
 @media (max-width:350px){nav button{font-size:9.5px}nav svg{width:21px;height:21px}}
 .mcsee{display:inline-flex;align-items:center;gap:4px;margin-top:6px;font-size:13px;font-weight:700;color:#b46e26}.mcsee .mci2{width:15px;height:15px}@media (prefers-color-scheme:dark){.mcsee{color:#e0a463}}
+
+/* ===== rival card, Apple light (Nov 23 2026) ===== */
+.w.dark.chg{background:#fff!important;color:#1d1d1f;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06)!important;border:0}
+.chg .ci{border-top-color:#ececf0}.chg .ft2 span{color:#86868b!important}
+.w.dark.chg .wt b{color:#1d1d1f;font-size:18px;letter-spacing:-.02em}
+.w.dark.chg .wt b .thi,.w.dark.chg .wt b .mci2{color:#b46e26}
+.w.dark.chg .wt span{color:#86868b;font-size:13px;font-weight:600}
+.w.dark.chg .wt:after,.w.dark.chg .wt b:after{background:#b46e26}
+.chg .cr small{color:#86868b;letter-spacing:.04em;font-size:11px}
+.chg .pill.them,.chg .pill.us{background:#f5f5f7;border:0;color:#1d1d1f;font-weight:700}
+.chg .pill.us{background:#e8f6ee;color:#1a7f45}.chg .pill.us:before{background:#34c759}
+.chg .pill.them{background:#fdecea;color:#b3261e}.chg .pill.them:before{background:#ff3b30}
+.chg b.hl{color:#1d1d1f;font-size:19px;letter-spacing:-.02em;font-weight:700}
+.chg .ft2 s{color:#a1a1a6}.chg .ft2{color:#6e6e73}
+.chg .ft2 strong{color:#1d1d1f;font-size:22px;letter-spacing:-.02em}
+.chg p{color:#515154!important;font-size:14px;line-height:1.45}
+.chg .say3{background:#faf6f1;border-left:3px solid #b46e26;color:#1d1d1f;font-size:14.5px;line-height:1.45;padding:10px 12px;border-radius:12px}
+.chg .say3 b{color:#b46e26}
+.chg .bt .go3{background:#b46e26;color:#fff;border-radius:12px}
+.chg .bt .ok3{background:#f5f5f7;color:#1d1d1f;border-radius:12px}
+.chg .cmini{background:#f9f9fb;border:1px solid #ececf0;color:#1d1d1f;border-radius:14px}
+.chg .cmini small{color:#86868b}.chg .cmini b{color:#1d1d1f;font-weight:700}.chg .cmini em{color:#515154;font-weight:600}
+@media (prefers-color-scheme:dark){
+.w.dark.chg{background:#1c1c1e!important;color:#f5f5f7}
+.chg .ci{border-top-color:#2c2c2e}.chg .ft2 span{color:#98989d!important}.w.dark.chg .wt b,.chg b.hl,.chg .ft2 strong,.chg .cmini b{color:#f5f5f7}
+.w.dark.chg .wt span,.chg .cr small,.chg .cmini small{color:#98989d}
+.chg p,.chg .cmini em{color:#c7c7cc!important}.chg .ft2 s{color:#8e8e93}
+.chg .say3{background:#2c2c2e;color:#f5f5f7;border-left-color:#e0a463}.chg .say3 b{color:#e0a463}
+.chg .pill.us{background:rgba(52,199,89,.16);color:#5fd38a}.chg .pill.them{background:rgba(255,69,58,.16);color:#ff6961}
+.chg .bt .go3{background:#e0a463;color:#1d140d}.chg .bt .ok3{background:#2c2c2e;color:#f5f5f7}
+.chg .cmini{background:#2c2c2e;border-color:#3a3a3c}}
 </style>
 <style>
 #gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#1c1712 url(../hero.jpg) center/cover;font-family:inherit}
@@ -375,10 +406,10 @@ const rem=w=>((D&&D.reminders)||[]).map((r,i)=>[r,i]).filter(([r])=>r.where===w&
 const chk=t=>t.checkedIso===today?'Checked today':'Checked '+t.checked;
 let seenC={};try{seenC=JSON.parse(localStorage.getItem('lldemo-seenchg')||'{}')}catch(x){}
 const CHG=()=>((D&&D.compete&&D.compete.changes)||[]).filter(c=>remDays(c.verifiedIso)>=-7);
-const newC=()=>CHG().filter(c=>!seenC[c.id]).sort((a,b)=>(b.flip?1:0)-(a.flip?1:0));
+const newC=()=>{const s=new Set();return CHG().filter(c=>!seenC[c.id]).sort((a,b)=>String(b.verifiedIso||'').localeCompare(String(a.verifiedIso||''))).filter(c=>{const k=c.rival+'|'+c.row;if(s.has(k)){markSeen(c.id);return false}s.add(k);return true}).sort((a,b)=>(b.flip?1:0)-(a.flip?1:0))};
 const markSeen=id=>{seenC[id]=1;try{localStorage.setItem('lldemo-seenchg',JSON.stringify(seenC))}catch(x){}};
 const badge=()=>{const b=document.querySelector('nav [data-v=tourv]');if(!b)return;let s=b.querySelector('.bdg');const n=newC().length;if(n){if(!s){s=document.createElement('span');s.className='bdg';b.appendChild(s)}s.textContent=n;b.setAttribute('aria-label','Tour, '+n+' rival change'+(n>1?'s':''))}else{if(s)s.remove();b.removeAttribute('aria-label')}};
-const chgCard=()=>{const l=newC().slice(0,3);if(!l.length)return'';return `<section class="w dark chg"><div class="wt"><b>🎯 A rival just moved</b><span>${l.length} new</span></div>${l.map((c,i)=>i?`<button class="cmini" data-goriv="${esc(c.rival)}" data-cid="${esc(c.id)}"><span><small>Also</small><b>${esc(c.headline)}</b><em>${esc(c.fromLabel||'Was')} ${esc(c.from)} → ${esc(c.to)}</em></span><span class="pill ${c.flip?'them':'us'}">${c.flip?'They win now':'We still win'}</span></button>`:`<div class="ci"><div class="cr"><small>${esc(c.rival)} · ${esc(c.row)}</small><button type="button" class="pill ${c.flip?'them':'us'}" style="cursor:pointer;font-family:inherit" data-goriv="${esc(c.rival)}" data-cid="${esc(c.id)}">${c.flip?'They win this row now':'We still win'}</button></div><b class="hl">${esc(c.headline)}</b><div class="ft2"><span style="font-size:12.5px;color:#bfae9a">${esc(c.fromLabel||'Was')}</span><s>${esc(c.from)}</s><span>→</span><strong>${esc(c.to)}</strong></div><p>${esc(c.detail)} Verified ${esc(c.verified)} on ${esc(c.src)}.</p><div class="say3"><b>Say this</b>${esc(c.say)}</div><div class="bt"><button class="go3" data-goriv="${esc(c.rival)}" data-cid="${esc(c.id)}">Open head to head ›</button><button class="ok3" data-seen="${esc(c.id)}">Got it</button></div></div>`).join('')}</section>`};
+const chgCard=()=>{const l=newC().slice(0,3);if(!l.length)return'';return `<section class="w dark chg"><div class="wt"><b>🎯 A rival just moved</b><span>${l.length} new</span></div>${l.map((c,i)=>i?`<button class="cmini" data-goriv="${esc(c.rival)}" data-cid="${esc(c.id)}"><span><small>Also</small><b>${esc(String(c.headline).replace(/\b(\d) beds\b/g,'$1 bedrooms').replace(/\b1 bedrooms\b/g,'1 bedrooms'))}</b><em>${esc(c.fromLabel||'Was')} ${esc(c.from)} → ${esc(c.to)}</em></span><span class="pill ${c.flip?'them':'us'}">${c.flip?'They win now':'We still win'}</span></button>`:`<div class="ci"><div class="cr"><small>${esc(c.rival)} · ${esc(c.row)}</small><button type="button" class="pill ${c.flip?'them':'us'}" style="cursor:pointer;font-family:inherit" data-goriv="${esc(c.rival)}" data-cid="${esc(c.id)}">${c.flip?'They win this row now':'We still win'}</button></div><b class="hl">${esc(String(c.headline).replace(/\b(\d) beds\b/g,'$1 bedrooms').replace(/\b1 bedrooms\b/g,'1 bedrooms'))}</b><div class="ft2"><span style="font-size:12.5px;color:#bfae9a">${esc(c.fromLabel||'Was')}</span><s>${esc(c.from)}</s><span>→</span><strong>${esc(c.to)}</strong></div><p>${esc(c.detail)} Verified ${esc(c.verified)} on ${esc(c.src)}.</p><div class="say3"><b>Say this</b>${esc(c.say)}</div><div class="bt"><button class="go3" data-goriv="${esc(c.rival)}" data-cid="${esc(c.id)}">Open head to head ›</button><button class="ok3" data-seen="${esc(c.id)}">Got it</button></div></div>`).join('')}</section>`};
 const MOMS={movein:['Move in','c1','<path d="M3 11l9-7 9 7v9H3z"/><path d="M10 21v-6h4v6"/>','welcome home to Montage! Would you take 30 seconds to tell Google how your move in went? Just tap the link below.'],renew:['Renewal','c2','<path d="M20 12a8 8 0 1 1-3-6.2"/><path d="M20 4v5h-5"/>','thank you for staying with us! Would you take 30 seconds to tell Google how living here has been? Just tap the link below.'],work:['Work order','c3','<path d="M14 6a4 4 0 0 0-5 5l-6 6 2 2 6-6a4 4 0 0 0 5-5l-2 2-2-2z"/>','your service request is all set! Would you take 30 seconds to tell Google how we did? Just tap the link below.'],event:['Event','c4','<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>','thanks for joining our resident event! Would you take 30 seconds to tell Google what living at Montage is like? Just tap the link below.'],any:['Get a review','c1','','thank you for being part of Montage! Would you take 30 seconds to tell Google how we are doing? Just tap the link below.']};
 const ring=(v,max,col)=>{const r=40,c=2*Math.PI*r,p=Math.min(v/max,1);return `<svg viewBox="0 0 96 96"><circle cx="48" cy="48" r="${r}" stroke="#efe5d8" stroke-width="10" fill="none"/><circle cx="48" cy="48" r="${r}" stroke="${col}" stroke-width="10" fill="none" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p)}"/></svg>`};
 const mineCard=()=>{const T=D&&D.team,lc=s=>String(s).toLowerCase(),row=T&&me?T.rows.find(r=>lc(r[0])===lc(me)):null,sh=T&&me?(T.shoutouts||[]).filter(x=>lc(x.name)===lc(me)):[];
@@ -623,7 +654,7 @@ ${n>1?`<div class="ra-more">${r.l.slice(1).map(x=>`<button data-goriv="${esc(x.r
 document.addEventListener('click',e=>{if(e.target.closest('#raOk')){sh.classList.remove('on','ra-on');show(cur);return}if(e.target.closest('[data-ra]'))sh.classList.remove('on','ra-on')},true);
 const gateUp=()=>{const g=document.getElementById('gate');return !!(g&&getComputedStyle(g).display!=='none'&&g.offsetParent)};
 const raTry=(n=0)=>{try{const r=RA();if(!r||r.day!==dkey(Date.now()))return;let k='';try{k=localStorage.getItem('lldemo-ralert')||''}catch(x){}if(k===r.day)return;if(document.visibilityState!=='visible'||sh.classList.contains('on')||gateUp()){clearTimeout(window.__raT);if(n<400)window.__raT=setTimeout(()=>raTry(n+1),1500);return}raShow(false)}catch(x){}};
-const APPV='2026-11-23j';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
+const APPV='2026-11-23k';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
 const verCheck=()=>fetch('no-version.txt?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.text():'').then(v=>{v=(v||'').trim();if(v&&v!==APPV&&!busy()){let t='';try{t=sessionStorage.getItem('lldemo-rl')||''}catch(x){}if(t===v)return false;try{sessionStorage.setItem('lldemo-rl',v)}catch(x){}location.reload();return true}return false}).catch(()=>false);
 const liveCheck=()=>{if(document.visibilityState!=='visible')return;verCheck().then(rl=>{if(rl)return;raTry();fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{if(!D||j.updated===D.updated)return;D=j;const ae=document.activeElement;if(!sh.classList.contains('on')&&!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))show(cur);raTry()}).catch(()=>{})})};
 document.addEventListener('visibilitychange',liveCheck);window.addEventListener('pageshow',e=>{if(e.persisted)liveCheck()});window.addEventListener('focus',liveCheck);setInterval(liveCheck,10*60*1000);
