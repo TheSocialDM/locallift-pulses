@@ -8,7 +8,7 @@ colors), and a final sweep turns any remaining warm color into the Stillwater te
 Usage: python3 tools/build_stillwater.py [APPV]"""
 import re,subprocess,sys,os,json,colorsys,difflib,collections,tempfile
 R=os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
-APPV=sys.argv[1] if len(sys.argv)>1 else '2026-11-24s3'
+APPV=sys.argv[1] if len(sys.argv)>1 else '2026-11-24s4'
 def gs(ref,p): return subprocess.run(['git','-C',R,'show',f'{ref}:{p}'],capture_output=True,text=True,check=True).stdout
 MP='live/montage-r8x2/v3/index.html';SP='live/stillwater-k4p7/v3/index.html'
 base=gs('a558a38',MP);theirs=gs('a558a38',SP);ours=gs('989f262',MP)  # Montage APPV 2026-11-24e; later Montage gate and alert changes are applied below
@@ -156,3 +156,6 @@ open(os.path.join(R,SP),'w').write(t)
 print('built',len(t),'APPV',APPV);print('warm sweep',dict(SW))
 bad=re.findall(r'(?i)montage|tigard|oregon|overland|steward|mercato|washington square|portland|willamette|beaverton|lake oswego|\(971\)|971[ -]\d{3}',t)+re.findall(r', OR\b|America/Los_Angeles',t)
 print('leftovers',collections.Counter(bad))
+
+import subprocess as _sp
+_sp.run(['python3',os.path.join(R,'tools/sheet_scroll_fix.py'),os.path.join(R,'live/stillwater-k4p7/v3/index.html')])
