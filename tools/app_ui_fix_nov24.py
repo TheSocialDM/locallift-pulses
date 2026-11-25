@@ -53,8 +53,15 @@ if "${mcStats()?'<p class=\"mcd\">" not in s: s=s.replace('<p class="mcd">Counts
 s=s.replace('<div class="mine" style="grid-template-columns:1fr"><div><b>${row?row[1]:0}</b><span>residents opened Google from your code this month</span></div></div>',"${row&&+row[1]>0?`<div class=\"mine\" style=\"grid-template-columns:1fr\"><div><b>${row[1]}</b><span>residents opened Google from your code this month</span></div></div>`:''}")
 if 'id="llscrollpad"' not in s:
     s=s.replace('</head>','<style id="llscrollpad">html{scroll-padding-bottom:140px}</style></head>',1)
+
+# Editor Nov 24 final pass: star row drawn from the rating (half star for .3 to .7), and text-wrap:pretty on body text so phones avoid one word last lines
+s=re.sub(r'(<div class="stars" aria-label="\$\{esc\(\(D&&D\.rv&&D\.rv\.rating\)\|\|\'\'\)\} stars">)★★★★★(</div>)',r"\1${llStars((D&&D.rv&&D.rv.rating)||'')}\2",s)
+if 'id="llstars"' not in s:
+    s=s.replace('</head>','<style id="llstars">.llst{display:inline-block;position:relative}.llst .e{opacity:.28}.llst .f{position:absolute;left:0;top:0;width:50%;overflow:hidden;white-space:nowrap}</style><script id="llstarsjs">window.llStars=function(r){r=parseFloat(r);if(!(r>=0))return"★★★★★";var n=Math.floor(r),d=r-n,h=0;if(d>=.3&&d<=.7)h=1;else if(d>.7)n+=1;n=Math.min(n,5);var o="";for(var i=0;i<n;i++)o+="★";if(h&&n<5)o+=\'<span class="llst"><span class="e">★</span><span class="f">★</span></span>\';for(var j=n+(h&&n<5?1:0);j<5;j++)o+=\'<span class="llst"><span class="e">★</span></span>\';return o}</script></head>',1)
+if 'id="llpretty"' not in s:
+    s=s.replace('</head>','<style id="llpretty">p,li,small,.mcd,.vs,.cen,.sub,.hint,.body,figcaption{text-wrap:pretty}</style></head>',1)
 if len(sys.argv)>2:
     s=re.sub(r"const APPV='[^']*'",f"const APPV='{sys.argv[2]}'",s)
     open(p.replace('index.html','version.txt'),'w').write(sys.argv[2]+'\n')
-checks={'nav97':'.97)' in s,'pad178':'178px' in s,'you':'background:#fff;color:#1c1c1e' in s,'chev':'<em>›</em></section>`' not in s,'bullet':'She points every lead to you' not in s,'hint':'.mchint{position:static' in s,'navbg':'id="llnavbg"' in s,'mcsay':'left:16px;right:auto;bottom:16px' in s and "I'll get you to ${esc(me" in s,'topgap':'lltopgap' in s,'plural':'practice review asks</div>' not in s,'zerotiles':'${mcN(/^Sent/)}</b>' not in s,'scrollpad':'llscrollpad' in s}
+checks={'nav97':'.97)' in s,'pad178':'178px' in s,'you':'background:#fff;color:#1c1c1e' in s,'chev':'<em>›</em></section>`' not in s,'bullet':'She points every lead to you' not in s,'hint':'.mchint{position:static' in s,'navbg':'id="llnavbg"' in s,'mcsay':'left:16px;right:auto;bottom:16px' in s and "I'll get you to ${esc(me" in s,'topgap':'lltopgap' in s,'plural':'practice review asks</div>' not in s,'zerotiles':'${mcN(/^Sent/)}</b>' not in s,'scrollpad':'llscrollpad' in s,'stars':'★★★★★</div>' not in s and 'llStars' in s,'pretty':'llpretty' in s}
 open(p,'w').write(s);print(p,'changed' if s!=n0 else 'unchanged',checks)

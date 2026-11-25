@@ -7,6 +7,7 @@ app=pathlib.Path(sys.argv[1]); s=(app/'v3/index.html').read_text()
 PRE=re.search(r"const K='([a-z]+)-team'",s).group(1)   # ll (Montage) or llsw (Stillwater)
 DPRE={'ll':'lldemo'}.get(PRE,PRE+'demo')   # separate demo storage per property
 HINTBG='rgba(28,20,14,.92)' if PRE=='ll' else 'rgba(10,29,34,.92)'
+HINTBG={'coya-3zep':'rgba(46,29,30,.92)','fora-50r1':'rgba(31,31,32,.92)'}.get(app.name,HINTBG)   # property tint for the swipe hint
 def must(old,new,count=1):
     global s
     assert old in s, 'missing: '+old[:70]; s=s.replace(old,new,count)
