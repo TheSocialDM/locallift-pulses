@@ -36,6 +36,13 @@ if 'id="lltopgap"' not in s:
 # shut() still shows it (inline display:flex) if the code turns out to be wrong or removed.
 if 'id="llnoflash"' not in s:
     s=s.replace('</head>','<script id="llnoflash">try{var q=new URLSearchParams(location.search),on=q.get("p")||q.get("invite");for(var i=0;!on&&i<localStorage.length;i++){var k=localStorage.key(i);if(/-invited$/.test(k)&&localStorage.getItem(k))on=1}if(on)document.write("<style id=llnoflashcss>#gate{display:none}</style>")}catch(e){}</script></head>',1)
+# name from a personal link always wins (so Michael's n=Greyson link renames his phone); and a visible
+# "Not <name>? Change name" link on My card, not only at the bottom of Reviews
+s=re.sub(r"if\(nm&&!get\('([a-z]+)-me'\)\)",r"if(nm)",s)
+if 'id="bMe" data-where="card"' not in s:
+    mcol=re.search(r'<button class="gl" id="bMe" style="[^"]*color:(#[0-9a-fA-F]{3,6})',s)
+    col=mcol.group(1) if mcol else '#0b4a6b'
+    s=s.replace("${me?'':'<div class=\"mcnm\">","${me?'<button class=\"gl\" id=\"bMe\" data-where=\"card\" style=\"display:block;margin:4px auto 6px;border:0;background:none;padding:6px 10px;font:inherit;font-size:14px;font-weight:700;color:"+col+";cursor:pointer\">Not '+esc(me)+'? Change name</button>':'<div class=\"mcnm\">",1)
 if len(sys.argv)>2:
     s=re.sub(r"const APPV='[^']*'",f"const APPV='{sys.argv[2]}'",s)
     open(p.replace('index.html','version.txt'),'w').write(sys.argv[2]+'\n')
