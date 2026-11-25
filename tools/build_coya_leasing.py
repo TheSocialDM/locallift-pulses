@@ -33,7 +33,7 @@ css=re.search(r'<style>(.*?)</style>',head,re.S).group(1)
 css=re.sub(r'\.opt[^{]*\{[^}]*\}\n?','',css)  # opt in styles not needed
 css=css.replace('live/montage-r8x2/hero.jpg','live/coya-3zep/hero.jpg')
 css=recolor(css)
-css+="h1,h2,h3{font-family:Montserrat,Inter,system-ui,sans-serif;font-weight:600;letter-spacing:-.01em}.plan b,.plan .pr,.offer small{font-family:Montserrat,Inter,system-ui,sans-serif}.hero .logo{height:50px;width:auto}.me img{width:78%;height:auto}.ft img{height:52px;width:auto}\n"
+css+="h1,h2,h3{font-family:Montserrat,Inter,system-ui,sans-serif;font-weight:600;letter-spacing:-.01em}.plan b,.plan .pr,.offer small{font-family:Montserrat,Inter,system-ui,sans-serif}.hero .logo{height:50px;width:auto}.me img{width:78%;height:auto}.ft img{height:52px;width:auto}.near li{align-items:baseline}\n"
 sp=U.get('specialShort') or T['offer']
 offer_p='First Responder or Preferred Employer savings stack on top. The leasing team confirms which homes qualify.' if 'Look and Lease' in T['offer'] else 'The leasing team confirms which homes qualify.'
 plans=[('1 bedroom',pr.get('1 bed base rent from')),('2 bedroom',pr.get('2 bed base rent from')),('3 bedroom',pr.get('3 bed base rent from'))]+[(m[1],m[0]) for m in T.get('more',[])]
@@ -81,7 +81,7 @@ page=f'''<!DOCTYPE html>
 
   <section class="sec">
     <h2>Homes available now</h2>
-    <p class="sub">1, 2 and 3 bedroom homes, and every 2 bedroom has two baths. See every available home with one tap.</p>
+    <p class="sub">Studio, 1, 2 and 3 bedroom homes, and every 2 bedroom has two baths. See every available home with one tap.</p>
     <div class="plans" id="plans">{plan_html}</div>
     <p class="asof" id="asof">Starting base rents from coyaliving.com on {chk}, 2026, and they change often. <a href="{SITE}/floorplans" target="_blank" rel="noopener">See every home live</a></p>
   </section>

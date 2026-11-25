@@ -30,7 +30,7 @@ KIT=r"""const KIT=[
 ['Can you do any better?','The best offer we have today is {sp}. Are you a first responder, or do you work for one of our partner employers? Those savings stack on top.','Confirm who qualifies with your manager.'],
 ['The deposit is too high.','Let me pull up your full move in cost so you see the exact number. Some communities add admin and cleaning fees on top, so it’s worth comparing the total.','Use the website pricing for the exact number. Never quote from memory.']],'o'],
 ['⚔️','Comparing',[
-['Ainsley has 10 weeks free.','They do run a big special. Ask what total monthly price they quoted, since they add a $300 admin fee and a $250 cleaning fee at move in. Here you get {sp}, a $0 pet fee and the Sky Lounge with Strip views.','Agree first, then compare totals on the same lease term.'],
+['Ainsley has 10 weeks free.','They do run a big special. Ask what total monthly price they quoted, since they add a $300 admin fee and a $250 cleaning fee at move in, plus about $162 a month in required charges and a $65 membership fee. Here you get {sp}, a $0 pet fee and the Sky Lounge with Strip views.','Agree first, then compare totals on the same lease term.'],
 ['Jade is cheaper.','Their 1 bedrooms do start lower on base rent, at {ja1}, and their monthly charges are added on top. Let’s compare totals side by side. Here you get {sp}, plus a pet spa and dog park.','Agree first, then compare. Never knock them.'],
 ['I’m also looking at Green Leaf Lotus.','Great to compare, they’re right around the corner. Ask what total monthly price and lease term they quoted. Right now we have {sp}.','If they mention a special there, ask what they were quoted.'],
 ['I want to shop around.','Of course. Can I email you today’s offer and the homes you liked so you can compare side by side?','Get their email before they leave.']],'o'],
@@ -130,6 +130,25 @@ def rgbsw(m):
     return k
 t=re.sub(r'#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b(?![0-9a-fA-F])',hexsw,t)
 t=re.sub(r'(rgba?)\(([^)]*)\)',rgbsw,t)
+# ---- Editor fixes (Nov 24): no zero count tiles; COYA plum and rose instead of blue on the renters button, Print pill, desk card and notes
+sub("const mcStats=()=>`<div class=\"mcst\"><div><b>${mcN(/^Card opened/)}</b><span>Card opens</span></div><div><b>${mcN(/^QR shown|^Card opened/)}</b><span>QR shown</span></div><div><b>${mcN(/^Sent/)}</b><span>Cards sent</span></div></div>`;",
+ "const mcStats=()=>{const t=[[mcN(/^Card opened/),'Card opens'],[mcN(/^QR shown|^Card opened/),'QR shown'],[mcN(/^Sent/),'Cards sent']].filter(x=>x[0]>0);return t.length?`<div class=\"mcst\" style=\"grid-template-columns:repeat(${t.length},1fr)\">${t.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div>`:`<p class=\"mcst0\" style=\"margin:12px 0 0;font-size:14px;color:#6c6a66\">Show or send your card and your counts show up here.</p>`};",1)
+sub('<div class="mine" style="grid-template-columns:1fr"><div><b>${row?row[1]:0}</b><span>residents opened Google from your code this month</span></div></div>',
+ '${row&&+row[1]>0?`<div class="mine" style="grid-template-columns:1fr"><div><b>${row[1]}</b><span>residents opened Google from your code this month</span></div></div>`:\'\'}',1)
+for a,b in [('background:linear-gradient(135deg,#1a73e8,#4c8df6)!important','background:linear-gradient(135deg,#633f40,#a06a6c)!important'),
+ ('background:linear-gradient(135deg,#2f6fe0,#5b9bff)!important','background:linear-gradient(135deg,#7a5152,#b8888a)!important'),
+ ('rgba(26,115,232,.55),0 6px 18px rgba(26,115,232,.35)','rgba(160,106,108,.55),0 6px 18px rgba(99,63,64,.35)'),
+ ('rgba(26,115,232,.5),0 6px 18px rgba(26,115,232,.3)}50%{box-shadow:0 0 0 8px rgba(26,115,232,0),0 8px 26px rgba(26,115,232,.55)','rgba(160,106,108,.5),0 6px 18px rgba(99,63,64,.3)}50%{box-shadow:0 0 0 8px rgba(160,106,108,0),0 8px 26px rgba(99,63,64,.55)'),
+ ('background:#eef4fe;color:#1a5fd0;font:700 14px','background:#efe6e4;color:#633f40;font:700 14px'),
+ ('.lt .prt{background:#22324d;color:#a9c8ff}','.lt .prt{background:#3f2728;color:#dcbfc0}'),
+ ('.dskh svg{flex:none;width:30px;height:30px;stroke:#1a73e8','.dskh svg{flex:none;width:30px;height:30px;stroke:#633f40'),
+ ('background:#eef4fe;color:#1a5fd0;cursor:pointer','background:#efe6e4;color:#633f40;cursor:pointer'),
+ ('.dskb button:first-child{grid-column:1/-1;background:#1a73e8;color:#fff}','.dskb button:first-child{grid-column:1/-1;background:#633f40;color:#fff}'),
+ ('.dskb button{background:#22324d;color:#a9c8ff}','.dskb button{background:#3f2728;color:#dcbfc0}'),
+ ('text-transform:uppercase;color:#1a73e8}#llnote h3','text-transform:uppercase;color:#633f40}#llnote h3'),
+ ('#llnote button{width:100%;min-height:48px;border:0;border-radius:14px;background:#1a73e8','#llnote button{width:100%;min-height:48px;border:0;border-radius:14px;background:#633f40')]:
+    sub(a,b)
+t=t.replace('Numbers update every morning','Prices and specials update every morning')
 os.makedirs(os.path.join(R,'live',FOLDER,'v3'),exist_ok=True)
 SP=os.path.join(R,'live',FOLDER,'v3','index.html')
 open(SP,'w').write(t)
