@@ -73,7 +73,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--cu);outline-offset:
     <h1 id="who">Montage Leasing Team</h1>
     <div class="role" id="role">Your leasing contacts at <b>Montage in Tigard</b></div>
     <div class="btns">
-      <a href="tel:+19713977861"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+      <a href="tel:+19713993242"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
       <a href="https://www.montagetigard.com/scheduletour" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Tour</a>
       <a href="https://www.google.com/maps/search/?api=1&amp;query=Montage+Apartments+13155+SW+68th+Parkway+Tigard+OR+97223" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Directions</a>
       <a href="https://www.montagetigard.com/floorplans" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg>Homes</a>
@@ -140,11 +140,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--cu);outline-offset:
     <p class="sub">Keep this page. Your next steps are all here.</p>
     <div class="stack">
       <a class="btn cu" href="https://www.montagetigard.com/floorplans" target="_blank" rel="noopener">Pick my home and apply</a>
-      <a class="btn" href="tel:+19713977861">Call with a question</a>
+      <a class="btn" href="tel:+19713993242">Call with a question</a>
     </div>
   </section>
 
-  <div class="ft"><img src="../../../live/montage-r8x2/logo-umber.png" alt="Montage"><br>Montage · 13155 SW 68th Parkway, Tigard, OR 97223<br>(971) 397-7861 · Equal Housing Opportunity<br>Powered by LocalLift</div>
+  <div class="ft"><img src="../../../live/montage-r8x2/logo-umber.png" alt="Montage"><br>Montage · 13155 SW 68th Parkway, Tigard, OR 97223<br>(971) 399-3242 · Equal Housing Opportunity<br>Powered by LocalLift</div>
 </main>
 <div class="toast" id="toast" role="status"></div>
 <script>
@@ -155,7 +155,7 @@ document.getElementById('who').textContent=n+' at Montage';document.getElementBy
 var $=function(s){return document.querySelector(s)};
 var toast=function(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('show')},3200)};
 var url=location.href.split('#')[0];
-var v='BEGIN:VCARD\r\nVERSION:3.0\r\nFN:'+(window.llBy?window.llBy+', Montage Leasing (Tigard)':'Montage Leasing Team (Tigard)')+'\r\nORG:Montage\r\nTITLE:Leasing\r\nTEL;TYPE=WORK:+19713977861\r\nADR;TYPE=WORK:;;13155 SW 68th Parkway;Tigard;OR;97223;USA\r\nURL:'+url+'\r\nEND:VCARD\r\n';
+var v='BEGIN:VCARD\r\nVERSION:3.0\r\nFN:'+(window.llBy?window.llBy+', Montage Leasing (Tigard)':'Montage Leasing Team (Tigard)')+'\r\nORG:Montage\r\nTITLE:Leasing\r\nTEL;TYPE=WORK:+19713993242\r\nADR;TYPE=WORK:;;13155 SW 68th Parkway;Tigard;OR;97223;USA\r\nURL:'+url+'\r\nEND:VCARD\r\n';
 var o=$('#offer'),end=new Date(o.dataset.end+'T23:59:59-08:00');if(Date.now()>end){o.querySelector('h2').textContent='Ask about this month\'s specials';o.querySelector('p').textContent='Specials change often. The leasing team will share what is available today.'}
 $('#vcf').href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v);
 $('#share').addEventListener('click',function(){var d={title:'Montage in Tigard',text:'Take a look at Montage with me.',url:url};if(navigator.share){navigator.share(d).catch(function(){})}else{navigator.clipboard.writeText(url).then(function(){toast('Link copied. Paste it in a text.')},function(){toast(url)})}});
@@ -176,5 +176,5 @@ var f=new URLSearchParams({email:v,agent:by,property:'Montage',ua:navigator.user
 fetch(HOOK,{method:'POST',mode:'no-cors',body:f}).then(function(){box.classList.add('ok')},function(){b.disabled=false;b.textContent='Send me specials';var t=document.getElementById('toast');t.textContent='That did not go through. Try again in a moment.';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},3200)})});
 })();
 </script>
-<script src="../../../guide/guide.js?v=4" data-captions="Hi, I'm Mia, your tour guide.|Welcome!|Everything you need is right here.|Book your tour,|see today's special,|or tap to call our leasing team.|I can't wait to show you around!" data-name="Mia" data-intro="Hi! I'm Mia. I'll get you to {pro}." data-role="your page assistant" data-tiphide="6" data-size="72" data-vw="0.42" data-video="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-v1/media__3/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-4c57d71d-db8c-4382-81e1-89c4093dbe6c.mp4?Expires=2110802013&amp;Key-Pair-Id=K2ZDLYDZI2R1DF&amp;Signature=JriNK2HLtVmmYLXN7L32nhC71ALCgOJKam~6CKTux-2hTXtPoN3CU8FZ4P1J4EJpzV6sWb9rfJYN83KQDblKOy0zGKKywZ9h0czVYRSxoOAHC0QhVhn5lJjyY9Sg5QJ9eUPkT-8Wq8V91ueF4tJ3UJ2BiaTi7AplQ55ipNYMPNyXyvaN9XlkfEyRqpOBoTd3p3Hc~ymWaURGH4wePNLN4mbx3cfRAgj-ASyPpizqyZjqytsQHBfoQKtHQtTHgG~7X0wfPiT1Ynfz-cBAOMhN4KNXQrlHOYO2QgNxrehIzEvLnHYx6OrwYi9kMg6J0zFU2U5yLj~bqnAIb~n~0qM3LQ__" data-face="../../../guide/mia-face.jpg" data-poster="../../../guide/mia-poster.jpg" data-property="Montage" data-pro="the leasing team" data-sub="AI guide. Calls and tours are handled by the Montage leasing team." data-l3="Call the leasing team" data-tour="https://www.montagetigard.com/scheduletour" data-offer="https://www.montagetigard.com/floorplans" data-l2="See current specials" data-call="tel:+19713977861" data-color="#b46e26" defer></script>
+<script src="../../../guide/guide.js?v=4" data-captions="Hi, I'm Mia, your tour guide.|Welcome!|Everything you need is right here.|Book your tour,|see today's special,|or tap to call our leasing team.|I can't wait to show you around!" data-name="Mia" data-intro="Hi! I'm Mia. I'll get you to {pro}." data-role="your page assistant" data-tiphide="6" data-size="72" data-vw="0.42" data-video="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-v1/media__3/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-4c57d71d-db8c-4382-81e1-89c4093dbe6c.mp4?Expires=2110802013&amp;Key-Pair-Id=K2ZDLYDZI2R1DF&amp;Signature=JriNK2HLtVmmYLXN7L32nhC71ALCgOJKam~6CKTux-2hTXtPoN3CU8FZ4P1J4EJpzV6sWb9rfJYN83KQDblKOy0zGKKywZ9h0czVYRSxoOAHC0QhVhn5lJjyY9Sg5QJ9eUPkT-8Wq8V91ueF4tJ3UJ2BiaTi7AplQ55ipNYMPNyXyvaN9XlkfEyRqpOBoTd3p3Hc~ymWaURGH4wePNLN4mbx3cfRAgj-ASyPpizqyZjqytsQHBfoQKtHQtTHgG~7X0wfPiT1Ynfz-cBAOMhN4KNXQrlHOYO2QgNxrehIzEvLnHYx6OrwYi9kMg6J0zFU2U5yLj~bqnAIb~n~0qM3LQ__" data-face="../../../guide/mia-face.jpg" data-poster="../../../guide/mia-poster.jpg" data-property="Montage" data-pro="the leasing team" data-sub="AI guide. Calls and tours are handled by the Montage leasing team." data-l3="Call the leasing team" data-tour="https://www.montagetigard.com/scheduletour" data-offer="https://www.montagetigard.com/floorplans" data-l2="See current specials" data-call="tel:+19713993242" data-color="#b46e26" defer></script>
 </body></html>

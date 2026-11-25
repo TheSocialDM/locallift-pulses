@@ -23,7 +23,7 @@ def mia(t,up):
     t=re.sub(r'data-property="[^"]*"','data-property="COYA"',t)
     t=t.replace('the Montage leasing team','the COYA leasing team')
     t=t.replace('https://www.montagetigard.com/scheduletour',SITE+'/scheduletour').replace('https://www.montagetigard.com/floorplans',SITE+'/floorplans')
-    t=t.replace('tel:+19713977861','tel:'+TEL).replace('data-color="#b46e26"','data-color="#633f40"')
+    t=t.replace('tel:+19713993242','tel:'+TEL).replace('data-color="#b46e26"','data-color="#633f40"')
     return t
 # ---------- agent page
 t=open(os.path.join(SRC,'index.html')).read()
@@ -151,7 +151,7 @@ c=c.replace('<title>Montage Leasing · QR business card (sample)</title>','<titl
 c=c.replace('Montage leasing card (sample)','COYA leasing card (sample)')
 c=c.replace('open the live Montage profile for your leasing consultant','open the live COYA profile for your leasing consultant')
 c=c.replace('<b id="cn">Montage Leasing Team</b><span>Montage in Tigard</span>','<b id="cn">COYA Leasing Team</b><span>COYA in Las Vegas</span>')
-c=c.replace('<span class="ph">(971) 397-7861</span><span>13155 SW 68th Parkway, Tigard</span>',f'<span class="ph">{PH}</span><span>3475 W Desert Inn Rd, Las Vegas</span>')
+c=c.replace('<span class="ph">(971) 399-3242</span><span>13155 SW 68th Parkway, Tigard</span>',f'<span class="ph">{PH}</span><span>3475 W Desert Inn Rd, Las Vegas</span>')
 c=c.replace('<b>Your home near Washington Square</b><span>Sky lounge · Pool and spa · Golf simulator · Coworking</span>','<b>Your home in Chinatown</b><span>Sky Lounge · Pool · Pet spa · Co working</span>')
 c=c.replace('Open the live Montage profile','Open the live COYA profile').replace('alt="Montage"','alt="COYA"')
 c=c.replace('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">',FONT)

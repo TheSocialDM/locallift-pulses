@@ -85,7 +85,7 @@ sub("const intel=()=>{const cs=HX.cards;","const intel=()=>{const cs=HX.cards;if
 sub("Ask about Montage",'Ask about Stillwater Lakes',2)
 # My card
 sub("team/montage/leasing/","team/stillwater/leasing/")
-sub("const MC_PHONE='(971) 397-7861';","const MC_PHONE='(689) 314-6918';")
+sub("const MC_PHONE='(971) 399-3242';","const MC_PHONE='(689) 314-6918';")
 sub("${MC_PHONE} · Tigard, OR","${MC_PHONE} · Kissimmee, FL")
 sub("const mcUrl=src=>MC_LIVE+'?by='+encodeURIComponent(me||'team')+'&src='+src;","const mcUrl=src=>src==='qr'?'https://live.thesocialdm.com/meet/stillwater/'+mcSlug():MC_LIVE+'?by='+encodeURIComponent(me||'team')+'&src='+src;")
 sub("live.thesocialdm.com/meet/montage/","live.thesocialdm.com/meet/stillwater/")
