@@ -15,7 +15,7 @@
    "tone": "good",
    "title": "Today's offer: up to $2,000 Look and Lease",
    "body": "coyaliving.com shows Falling Rents plus up to $2,000 in Look and Lease savings, and First Responder or Preferred Employer savings stack on top. Lowest listed base rents today: 1 bedroom from $1,520 (A7), 2 bedroom from $1,945 (B3), 3 bedroom from $2,785 (C2). Totals with the required monthly fees start at $1,724, $2,149 and $2,989. The banner also says 1 bedroom from $1,460, a price no plan lists today.",
-   "action": "Lead with the Look and Lease savings, then ask if they are a first responder or work for a partner employer."
+   "action": "Lead with the Look and Lease savings, then ask if they are a first responder or work for a partner employer."
   },
   {
    "src": "Rival watch · their own sites",
@@ -23,7 +23,7 @@
    "tone": "info",
    "title": "Rivals are running bigger free rent offers",
    "body": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15. Jade: up to 8 weeks free on base rent. Green Leaf Lotus: not read today. Ask what they quoted.",
-   "action": "Ask what total monthly price and lease term they were quoted, then compare it with ours on the same terms."
+   "action": "Ask what total monthly price and lease term they were quoted, then compare it with ours on the same terms."
   },
   {
    "src": "Weekly Pulse · Google Maps",
@@ -236,9 +236,9 @@
    {
     "name": "Green Leaf Lotus",
     "where": "Procyon St, in Chinatown",
-    "special": "Not read today. Ask what they were quoted",
+    "special": "Not read today. Ask what they were quoted",
     "from": [],
-    "fees": "We could not find a site of their own with prices for today's check. Ask what total monthly price and lease term they were quoted.",
+    "fees": "We could not find a site of their own with prices for today's check. Ask what total monthly price and lease term they were quoted.",
     "tip": "They are right around the corner and carry more reviews. Our 4.9 rating is higher than their 4.6. Lead with the Sky Lounge Strip views, the pet spa and dog park, and Look and Lease savings.",
     "vs": [
      [
@@ -273,10 +273,10 @@
    {
     "name": "Jade",
     "where": "W Twain Ave, near Valley View",
-    "special": "Up to 8 weeks free on base rent, restrictions apply",
+    "special": "Up to 8 weeks free on base rent, restrictions apply",
     "from": [],
-    "fees": "Prices not confirmed today, because their site loads prices by script. Ask what total monthly price they were quoted. Deposit and pet fees not read.",
-    "tip": "They lead with up to 8 weeks free. Ask what total monthly price and lease term they were quoted. Our total with required fees starts at $1,724 for a 1 bed, plus the Sky Lounge, pet spa and dog park.",
+    "fees": "Prices not confirmed today, because their site loads prices by script. Ask what total monthly price they were quoted. Deposit and pet fees not read.",
+    "tip": "They lead with up to 8 weeks free. Ask what total monthly price and lease term they were quoted. Our total with required fees starts at $1,724 for a 1 bed, plus the Sky Lounge, pet spa and dog park.",
     "vs": [
      [
       "Special",
@@ -316,7 +316,7 @@
    {
     "name": "Ainsley at The Collective",
     "where": "Paradise Rd, east of the Strip",
-    "special": "Up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply",
+    "special": "Up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply",
     "from": [
      [
       "$1,326",
@@ -505,7 +505,7 @@
   "sr": [],
   "pts": [
    "Our offer: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top.",
-   "Ainsley lists lower starting base rents and adds charges on top. Jade prices were not confirmed today. Ask what total and term they were quoted.",
+   "Ainsley lists lower starting base rents and adds charges on top. Jade prices were not confirmed today. Ask what total and term they were quoted.",
    "Our 4.9 Google rating is the highest of the rivals here. Lead with the Sky Lounge Strip views, the pet spa and a $0 pet fee."
   ],
   "cards": [
@@ -564,7 +564,7 @@
      "Measured"
     ],
     "h": "Ainsley and Jade lead with free weeks",
-    "b": "COYA: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top. Ainsley: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Green Leaf Lotus: not read today.",
+    "b": "COYA: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top. Ainsley: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Green Leaf Lotus: not read today.",
     "src": "COYA and Ainsley websites checked 11/24 · Jade special confirmed, prices not confirmed today",
     "list": [
      [
@@ -574,17 +574,17 @@
      ],
      [
       "Ainsley at The Collective",
-      "Up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply",
+      "Up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply",
       ""
      ],
      [
       "Jade",
-      "Up to 8 weeks free on base rent, restrictions apply",
+      "Up to 8 weeks free on base rent, restrictions apply",
       ""
      ],
      [
       "Green Leaf Lotus",
-      "Not read today. Ask what they were quoted",
+      "Not read today. Ask what they were quoted",
       ""
      ]
     ]
@@ -599,7 +599,7 @@
     "h": "Ainsley lists lower starting base rents",
     "t": "rivals",
     "src": "COYA and Ainsley websites checked 11/24 · Jade special confirmed, prices not confirmed today",
-    "more": "Base rents. Ainsley adds about $162 a month in required charges plus a $300 admin fee, a $250 cleaning fee and a $65 membership fee, so ask what total and term they were quoted. Jade prices were not confirmed today, and Green Leaf Lotus prices were not read today."
+    "more": "Base rents. Ainsley adds about $162 a month in required charges plus a $300 admin fee, a $250 cleaning fee and a $65 membership fee, so ask what total and term they were quoted. Jade prices were not confirmed today, and Green Leaf Lotus prices were not read today."
    },
    {
     "lab": "GOOGLE REVIEWS",
@@ -665,7 +665,7 @@
    {
     "k": "specials",
     "q": "What specials are rivals running?",
-    "a": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Green Leaf Lotus: not read today. COYA: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top.",
+    "a": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Green Leaf Lotus: not read today. COYA: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top.",
     "s": "COYA and Ainsley websites checked 11/24 · Jade special confirmed, prices not confirmed today"
    },
    {
