@@ -149,6 +149,8 @@ for a,b in [('background:linear-gradient(135deg,#1a73e8,#4c8df6)!important','bac
  ('#llnote button{width:100%;min-height:48px;border:0;border-radius:14px;background:#1a73e8','#llnote button{width:100%;min-height:48px;border:0;border-radius:14px;background:#633f40')]:
     sub(a,b)
 t=t.replace('Numbers update every morning','Prices and specials update every morning')
+if 'id="llcosheet"' not in t:
+    t=t.replace('</head>','<style id="llcosheet">.sheet{position:fixed;inset:0;height:100vh;height:100dvh;scrollbar-width:none}.sheet::-webkit-scrollbar,.sheet .box::-webkit-scrollbar{display:none}.sheet .box{scrollbar-width:none}html:has(.sheet.on),body:has(.sheet.on){overflow:hidden}@media (prefers-color-scheme:dark){#mcBtn{border:1px solid rgba(255,255,255,.12)}}</style></head>',1)
 os.makedirs(os.path.join(R,'live',FOLDER,'v3'),exist_ok=True)
 SP=os.path.join(R,'live',FOLDER,'v3','index.html')
 open(SP,'w').write(t)
