@@ -25,7 +25,7 @@ t=re.sub(r"const APPV='[^']*'",f"const APPV='{APPV}'",t)
 # ---- fonts: Montserrat headings, Inter text (as on the Huxley page for Melanie)
 sub('family=Montserrat:wght@500;600;700;800&family=Questrial','family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600',1)
 # ---- events (official pages only)
-rsub(r"const EV=\[.*?\]\];",r"""const EV=[['Nov 27 to Dec 30','Holiday Lights at the Railroad Park','McCormick-Stillman Railroad Park, 5:30 to 9:30 pm, closed Dec 24 and 25',0,484,'https://therailroadpark.com/event/holiday-lights/']];""")
+rsub(r"const EV=\[.*?\]\];",r"""const EV=[['Dec 12','Family Holiday Festival','The Scottsdale Resort and Spa',0,492,'https://www.experiencescottsdale.com/event/family-holiday-festival-at-the-scottsdale-resort-%26-spa/374900/'],['Saturdays, Dec 5 to 19','Winter at the Waterfront','Old Town Scottsdale, 7447 E. Indian School Rd., 6 to 9 pm',0,499,'https://www.experiencescottsdale.com/event/winter-at-the-waterfront/374951/'],['Nov 20 to Dec 24','Photos with Santa at Scottsdale Quarter','15279 N. Scottsdale Rd., hours vary by day',0,504,'https://www.experiencescottsdale.com/event/photos-with-santa/375002/'],['Nov 27 to Dec 30','Holiday Lights at the Railroad Park','McCormick-Stillman Railroad Park, 5:30 to 9:30 pm, closed Dec 24 and 25',0,510,'https://therailroadpark.com/event/holiday-lights/']];""")  # 5th field = END date key (month+1)*40+day, Jan to Sep +12; the event drops off after it
 # ---- objections and answers (Huxley, Arizona; prices fill in live from data.json)
 KIT=r"""const KIT=[
 [LI('money'),'Price',[
