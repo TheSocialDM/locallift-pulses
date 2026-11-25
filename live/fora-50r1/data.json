@@ -1,8 +1,8 @@
 {
  "property": "Fora",
  "city": "Las Vegas, Nevada",
- "updated": "2026-11-24T17:30:00-07:00",
- "updatedLabel": "Nov 24, 5:30 pm Phoenix time",
+ "updated": "2026-11-25T05:58:00-07:00",
+ "updatedLabel": "Nov 25, 5:58 am Phoenix time",
  "rv": {
   "rating": "4.5",
   "count": "135",
@@ -11,7 +11,7 @@
  "feed": [
   {
    "src": "Fora website · checked today",
-   "date": "Nov 24",
+   "date": "Nov 25",
    "tone": "good",
    "title": "Today's offer: $0 rent until 2027",
    "body": "foravegas.com shows \"Move In Now and Pay $0 Rent Until 2027\" and \"Move In 2027 for 1 Month FREE Rent\". Base rents start at $1,568 for a 1 bedroom (A1, $1,738 a month total with required monthly fees; select 1 beds are already reduced and do not get the extra month free) and $1,987 for a 2 bedroom (B1, $2,157 total). The C1 three bedroom is $3,338 base rent.",
@@ -19,10 +19,10 @@
   },
   {
    "src": "Rival watch · their own sites",
-   "date": "Nov 24",
+   "date": "Nov 25",
    "tone": "info",
-   "title": "Two rivals post big specials too",
-   "body": "The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms. Marlowe South Las Vegas: no special read on their site today.",
+   "title": "Two rivals post big specials",
+   "body": "The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms. Marlowe South Las Vegas: no special posted on their listing today.",
    "action": "Ask what total monthly price, home size and lease term they were quoted, then compare it with ours on the same terms."
   },
   {
@@ -158,12 +158,12 @@
  "asks": {
   "sent": 0,
   "opened": 0,
-  "through": "Nov 24"
+  "through": "Nov 25"
  },
  "shortLink": "moveinlocal.com/review/fora",
  "talk": {
-  "checked": "Nov 24",
-  "checkedIso": "2026-11-24",
+  "checked": "Nov 25",
+  "checkedIso": "2026-11-25",
   "offer": "Black Friday Flash Sale: move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent. Select 1 beds are already reduced and do not get the extra month free.",
   "prices": [
    [
@@ -224,8 +224,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 24",
-  "checkedIso": "2026-11-24",
+  "checked": "Nov 25",
+  "checkedIso": "2026-11-25",
   "items": [
    {
     "name": "The Pearl at St. Rose",
@@ -296,8 +296,8 @@
     "basis": "Their prices: lowest base rent on rentthepearl.com today. Google rating: Nov 20 map scan.",
     "url": "https://www.rentthepearl.com/floorplans",
     "feesChecked": "Nov 24",
-    "checked": "Nov 24",
-    "checkedIso": "2026-11-24"
+    "checked": "Nov 25",
+    "checkedIso": "2026-11-25"
    },
    {
     "name": "Positano",
@@ -309,7 +309,7 @@
       "1 bed"
      ],
      [
-      "$1,438",
+      "$1,465",
       "2 bed"
      ]
     ],
@@ -330,7 +330,7 @@
      ],
      [
       "2 bed from",
-      "$1,438",
+      "$1,465",
       "$1,987",
       "them"
      ],
@@ -362,34 +362,43 @@
     "basis": "Their prices: lowest base rent on ovationco.com today. Their total monthly price adds $106 in mandatory charges. Google rating: Nov 20 map scan.",
     "url": "https://ovationco.com/property/positano/apartments/",
     "feesChecked": "Nov 24",
-    "checked": "Nov 24",
-    "checkedIso": "2026-11-24"
+    "checked": "Nov 25",
+    "checkedIso": "2026-11-25"
    },
    {
     "name": "Marlowe South Las Vegas",
     "where": "S Las Vegas Blvd",
-    "special": "Not read on their site today",
-    "from": [],
-    "fees": "Prices did not load on their site for today's check. Their site lists covered parking at $25 a month. Ask what they were quoted.",
-    "tip": "They carry a higher rating on fewer reviews. Our covered parking is free, theirs is $25 a month on their site. Ask what total monthly price and lease term they were quoted.",
+    "special": "No special posted on their listing today",
+    "from": [
+     [
+      "$1,540",
+      "1 bed"
+     ],
+     [
+      "$1,895",
+      "2 bed"
+     ]
+    ],
+    "fees": "Their site lists covered parking at $25 a month. Deposit and pet fees not reread today.",
+    "tip": "Their base rents start lower (1 bed A1 $1,540, 2 bed B1 $1,895) and no special is posted on their listing today. Lead with our $0 rent until 2027, free covered parking (theirs is $25 a month) and ask what total and term they were quoted.",
     "vs": [
      [
       "Special",
-      "Ask",
+      "Nothing posted",
       "$0 rent until 2027",
-      "ask"
+      "us"
      ],
      [
       "1 bed from",
-      "Ask",
+      "$1,540",
       "$1,568",
-      "ask"
+      "them"
      ],
      [
       "2 bed from",
-      "Ask",
+      "$1,895",
       "$1,987",
-      "ask"
+      "them"
      ],
      [
       "Covered parking",
@@ -404,11 +413,11 @@
       "them"
      ]
     ],
-    "basis": "Their parking: greystar.com today. Their floor plan prices and special did not load for our check. Google rating: Nov 20 map scan.",
+    "basis": "Their prices: lowest base rent on greystar.com today. Google rating: Nov 20 map scan.",
     "url": "https://www.greystar.com/properties/las-vegas-nv/marlowe-south-las-vegas/floorplans",
     "feesChecked": "Nov 24",
-    "checked": "Nov 24",
-    "checkedIso": "2026-11-24"
+    "checked": "Nov 25",
+    "checkedIso": "2026-11-25"
    }
   ],
   "us": {
@@ -444,7 +453,38 @@
    "ends": "2026 move in",
    "basis": "Our offer depends on the move in date, and lease terms differ by community, so confirm the term before quoting a difference."
   },
-  "changes": []
+  "changes": [
+   {
+    "id": "2026-11-25-marlowe-1bed",
+    "rival": "Marlowe South Las Vegas",
+    "row": "1 bed from",
+    "from": "Not read",
+    "to": "$1,540",
+    "fromLabel": "Was",
+    "flip": true,
+    "verified": "Nov 25",
+    "verifiedIso": "2026-11-25",
+    "src": "greystar.com",
+    "headline": "Marlowe 1 bedrooms start at $1,540",
+    "detail": "First full read of their floor plans: A1 1 bed from $1,540 base rent, 2 bed B1 from $1,895. No special posted on their listing.",
+    "say": "Ask what total and term they were quoted. We have $0 rent until 2027 and free covered parking."
+   },
+   {
+    "id": "2026-11-25-positano-2bed",
+    "rival": "Positano",
+    "row": "2 bed from",
+    "from": "$1,438",
+    "to": "$1,465",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "verified": "Nov 25",
+    "verifiedIso": "2026-11-25",
+    "src": "ovationco.com",
+    "headline": "Positano 2 bedrooms now start at $1,465",
+    "detail": "Up from $1,438. Their homes are smaller (995 sq ft to our 1,150).",
+    "say": "Compare size and total on the same lease term. Our 2 bedroom is 1,150 sq ft with $0 rent until 2027."
+   }
+  ]
  },
  "uploadUrl": "https://www.dropbox.com/request/xhrap16moe8t20bwch8f",
  "dbxFolder": "Fora Apartments",
@@ -538,12 +578,12 @@
    [
     "Positano",
     "$1,580",
-    "$1,438"
+    "$1,465"
    ],
    [
     "Marlowe South Las Vegas",
-    "Ask",
-    "Ask"
+    "$1,540",
+    "$1,895"
    ]
   ],
   "srh": [
@@ -566,7 +606,7 @@
     ],
     "h": "Use these on every tour",
     "b": "Speakeasy style lounge, Sky Lounge with mountain views, free covered parking, resort style pool, premium gym with spin and yoga, coworking studios, resident media room, BBQ stations and firepit lounge, dog park and pet spa, four EV chargers, smart home with keyless entry, full size washer and gas dryer, 9 foot ceilings, walk in closets.",
-    "src": "Fora and rival websites · checked 11/24",
+    "src": "Fora and rival websites · checked 11/25",
     "cmp": {
      "cols": [
       "Fora",
@@ -613,8 +653,8 @@
      "Measured"
     ],
     "h": "The Pearl matches our offer",
-    "b": "Fora: Black Friday Flash Sale, move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent (select 1 beds already reduced, no extra month), plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager. The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply, minimum lease requirements. Marlowe South Las Vegas: not read on their site today.",
-    "src": "Each community’s website · checked 11/24",
+    "b": "Fora: Black Friday Flash Sale, move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent (select 1 beds already reduced, no extra month), plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager. The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply, minimum lease requirements. Marlowe South Las Vegas: no special posted on their listing today.",
+    "src": "Each community’s website · checked 11/25",
     "list": [
      [
       "Fora",
@@ -633,7 +673,7 @@
      ],
      [
       "Marlowe South Las Vegas",
-      "Not read on their site today",
+      "No special posted on their listing today",
       ""
      ]
     ]
@@ -647,8 +687,8 @@
     ],
     "h": "The Pearl and Positano list lower starting rents",
     "t": "rivals",
-    "src": "Each community’s website · checked 11/24",
-    "more": "Base rents on smaller homes: their 1 and 2 bedrooms are 54 to 185 square feet smaller than ours. Positano adds mandatory monthly charges on top. Marlowe prices did not load for today’s check."
+    "src": "Each community’s website · checked 11/25",
+    "more": "Base rents on smaller homes: their 1 and 2 bedrooms are 54 to 185 square feet smaller than ours. Positano adds mandatory monthly charges on top. Marlowe lists 1 beds from $1,540 and 2 beds from $1,895."
    },
    {
     "lab": "GOOGLE REVIEWS",
@@ -697,7 +737,7 @@
     "k": "edge",
     "q": "Where do we stand out against rivals?",
     "a": "From the Fora website: Speakeasy style lounge, Sky Lounge with mountain views, free covered parking, resort style pool, premium gym with spin and yoga, coworking studios, resident media room, BBQ stations and firepit lounge, dog park and pet spa, four EV chargers, smart home with keyless entry, full size washer and gas dryer, 9 foot ceilings, walk in closets.<ul><li>Google rating: 4.5 on 135 reviews, above The Pearl at St. Rose and Positano.</li><li>Bigger homes: our 1 bed is 805 sq ft and our B1 2 bed is 1,150 sq ft, against 708 and 965 at The Pearl and 751 and 995 at Positano.</li><li>Free covered parking. Marlowe lists covered parking at $25 a month.</li><li>Pets: $50 a month and a $500 pet fee, no weight limits, up to 3 pets.</li></ul>",
-    "s": "Fora and rival websites · checked 11/24"
+    "s": "Fora and rival websites · checked 11/25"
    },
    {
     "k": "ops",
@@ -708,26 +748,26 @@
    {
     "k": "why",
     "q": "Why are tours not signing?",
-    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>The Pearl lists lower starting base rents; Positano is lower on 2 beds only. 1 bedroom from: The Pearl $1,299, Fora $1,568, Positano $1,580.</li><li>The Pearl runs a similar no rent until 2027 offer, and Positano posts six weeks free on select 2 bedrooms.</li></ul>What wins them back: our offer (Black Friday Flash Sale, $0 rent through Dec 31, 2026 or 1 month free on a 2027 move in), bigger homes, free covered parking, the speakeasy lounge, our 4.5 rating and a total cost check on the same size and term. Confirm which homes qualify with your manager.",
-    "s": "Each community’s website · checked 11/24"
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>The Pearl and Marlowe list lower starting base rents; Positano is lower on 2 beds only. 1 bedroom from: The Pearl $1,299, Fora $1,568, Positano $1,580.</li><li>The Pearl runs a similar no rent until 2027 offer, and Positano posts six weeks free on select 2 bedrooms.</li></ul>What wins them back: our offer (Black Friday Flash Sale, $0 rent through Dec 31, 2026 or 1 month free on a 2027 move in), bigger homes, free covered parking, the speakeasy lounge, our 4.5 rating and a total cost check on the same size and term. Confirm which homes qualify with your manager.",
+    "s": "Each community’s website · checked 11/25"
    },
    {
     "k": "specials",
     "q": "What specials are rivals running?",
-    "a": "The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply, minimum lease requirements. Marlowe South Las Vegas: not read on their site today. Fora: Black Friday Flash Sale, move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent (select 1 beds already reduced, no extra month), plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager.",
-    "s": "Each community’s website · checked 11/24"
+    "a": "The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply, minimum lease requirements. Marlowe South Las Vegas: no special posted on their listing today. Fora: Black Friday Flash Sale, move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent (select 1 beds already reduced, no extra month), plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager.",
+    "s": "Each community’s website · checked 11/25"
    },
    {
     "k": "rivals",
     "q": "Who are we up against?",
-    "a": "The Pearl at St. Rose, 0.35 miles away (1 bed homes from $1,299, no rent until 2027), Positano down Jeffreys St (1 bed homes from $1,580, six weeks free on select 2 bedrooms) and Marlowe South Las Vegas on S Las Vegas Blvd (prices did not load today). Fora 1 bed homes start at $1,568.",
-    "s": "Each community’s website · checked 11/24"
+    "a": "The Pearl at St. Rose, 0.35 miles away (1 bed homes from $1,299, no rent until 2027), Positano down Jeffreys St (1 bed homes from $1,580, six weeks free on select 2 bedrooms) and Marlowe South Las Vegas on S Las Vegas Blvd (1 bed from $1,540, no special posted). Fora 1 bed homes start at $1,568.",
+    "s": "Each community’s website · checked 11/25"
    },
    {
     "k": "price",
     "q": "Are we priced right?",
-    "a": "1 bedroom from: Fora $1,568, The Pearl $1,299, Positano $1,580.<br>2 bedroom from: Fora $1,987, The Pearl $1,388, Positano $1,438.<br>Marlowe prices did not load for today’s check.<br>These are base rents, and our homes are larger. Fora’s website shows totals with $170 in required monthly fees, Positano adds its own mandatory charges, and specials differ, so compare totals on the same size and lease term.",
-    "s": "Each community’s website · checked 11/24"
+    "a": "1 bedroom from: Fora $1,568, The Pearl $1,299, Positano $1,580.<br>2 bedroom from: Fora $1,987, The Pearl $1,388, Positano $1,465.<br>Marlowe: 1 bedroom from $1,540, 2 bedroom from $1,895.<br>These are base rents, and our homes are larger. Fora’s website shows totals with $170 in required monthly fees, Positano adds its own mandatory charges, and specials differ, so compare totals on the same size and lease term.",
+    "s": "Each community’s website · checked 11/25"
    },
    {
     "k": "reviews",
@@ -743,8 +783,8 @@
    }
   ],
   "line": "Specials today: The Pearl no rent until 2027, Positano six weeks free on select 2 bedrooms.",
-  "briefSrc": "Websites checked 11/24 · Google scan Nov 20",
-  "checked": "Nov 24",
-  "checkedIso": "2026-11-24"
+  "briefSrc": "Websites checked 11/25 · Google scan Nov 20",
+  "checked": "Nov 25",
+  "checkedIso": "2026-11-25"
  }
 }
