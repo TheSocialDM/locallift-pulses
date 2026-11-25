@@ -55,7 +55,7 @@ a{color:inherit}
 .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 16px;border-radius:12px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s;max-width:92vw;text-align:center;z-index:9}.toast.show{opacity:1}
 a:focus-visible,button:focus-visible{outline:3px solid var(--cu);outline-offset:2px}
 body{font-family:Inter,system-ui,sans-serif}h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;font-weight:600;letter-spacing:-.01em}.plan b,.plan .pr,.offer small{font-family:Montserrat,system-ui,sans-serif}.hero .logo{height:22px;width:auto}.me{background:#1c1c1e!important}.me img{width:84%;height:auto}.ft img{height:34px;width:auto}
-</style></head><body>
+.near li span{white-space:normal!important;text-align:right;max-width:55%}</style></head><body>
 <main class="pf">
   <div class="hero"><img class="logo" src="../../../live/huxley-h7k2/logo-white.png" alt="Huxley"></div>
   <section class="card">
@@ -125,7 +125,7 @@ $('#vcf').href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v);
 $('#share').addEventListener('click',function(){var d={title:'Huxley Scottsdale',text:'Take a look at Huxley with me.',url:url};if(navigator.share){navigator.share(d).catch(function(){})}else{navigator.clipboard.writeText(url).then(function(){toast('Link copied. Paste it in a text.')},function(){toast(url)})}});
 // live prices and special from the morning refresh
 fetch('../../../live/huxley-h7k2/data.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){var t=d&&d.talk,u=d&&d.compete&&d.compete.us;if(!t)return;
- var s=u&&u.specialShort||'';if(s&&!/no special/i.test(s)){$('#offH').textContent=s.replace(/move in/g,'move in');$('#offP').textContent='Limited time, on select lease terms. The leasing team confirms which homes qualify.'}else if(/no special/i.test(t.offer||'')){$('#offH').textContent='Ask about this month\'s specials';$('#offP').textContent='Specials change often. The leasing team will share what is available today.'}
+ var s=(u&&u.specialShort||'').replace(/ on select lease terms/,'');s=s.charAt(0).toUpperCase()+s.slice(1);if(s&&!/no special/i.test(s)){$('#offH').textContent=s.replace(/move in/g,'move in');$('#offP').textContent='Limited time, on select lease terms. The leasing team confirms which homes qualify.'}else if(/no special/i.test(t.offer||'')){$('#offH').textContent='Ask about this month\'s specials';$('#offP').textContent='Specials change often. The leasing team will share what is available today.'}
  var m={'1 bed from':'1 bedroom','2 bed from':'2 bedroom'},h='';(t.prices||[]).forEach(function(p){if(m[p[1]])h+='<div class="plan"><b>'+m[p[1]]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Rent</span></div>'});(t.more||[]).forEach(function(p){h+='<div class="plan"><b>'+p[1]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Rent</span></div>'});if(h)$('#plans').innerHTML=h;
  if(t.checked)$('#asof').firstChild.textContent='Starting rents from huxleyscottsdale.com on '+t.checked+', 2026, and they change often. '}).catch(function(){});
 })();

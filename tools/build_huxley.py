@@ -29,7 +29,7 @@ rsub(r"const EV=\[.*?\]\];",r"""const EV=[['Nov 27 to Dec 30','Holiday Lights at
 # ---- objections and answers (Huxley, Arizona; prices fill in live from data.json)
 KIT=r"""const KIT=[
 [LI('money'),'Price',[
-['It’s over my budget.','Totally fair. Let’s look at what you’d really pay. Right now we have {sp} on select lease terms. Want me to pull up your exact monthly total?','Run the numbers together. Never guess.'],
+['It’s over my budget.','Totally fair. Let’s look at what you’d really pay. Right now we have {sp}. Want me to pull up your exact monthly total?','Run the numbers together. Never guess.'],
 ['Can you do any better?','The best offer we have today is {sp}. Which home would you like to look at first?',''],
 ['The move in costs are too high.','Let me pull up the full move in cost for the home you like so you see the exact number before you decide.','Use the website or your manager for the exact number. Never quote a fee from memory.']],'o'],
 [LI('swap'),'Comparing',[
@@ -104,6 +104,20 @@ t=t.replace('Las Vegas, NV','Scottsdale, AZ').replace('Las Vegas','Scottsdale')
 t=t.replace('id="forafx"','id="hxfx0"')
 # ---- no Weekly Pulse yet for Huxley: hide the score block until one exists
 sub('score:()=>D?','score:()=>D&&D.score?',1)
+
+# ---- Editor fixes, Nov 25 (independent audit FAIL 13, then fixed)
+# 1 rival plan rows compare averages to averages (us.avg in data.json)
+sub("const rvCard=(c)=>{const us=(D&&D.compete&&D.compete.us)||{};const usFrom={};(us.from||[]).forEach(f=>usFrom[f[1]]=f[0]);","const rvCard=(c)=>{const us=(D&&D.compete&&D.compete.us)||{};const usFrom={};(us.from||[]).forEach(f=>usFrom[f[1]]=f[0]);(us.avg||[]).forEach(f=>usFrom[f[1]]=f[0]);",1)
+# 3 rival data source is market data, not their websites
+sub("${c.checkedIso?`${esc(c.name)} checked ${chkD(c.checkedIso,c.checked)} on ${esc((c.url||'').replace(/^https?:\\/\\/(www\\.)?/,'').split('/')[0])}.`:''}","${c.checkedIso?`${esc(c.name)} from market data, ${esc(c.checked)}.`:''}",1)
+rsub(r"const chkLine=C=>\{.*?\};","const chkLine=C=>'Huxley from its website '+((D.talk&&D.talk.checked)||'')+'. Rivals from market data '+(C.checked||'')+'.';")
+# 4 no "checked today" in Help
+sub("Specials and prices, checked today","Specials and prices, with the date each was checked")
+# 5 no map reach line without map scan data
+sub("(r[4]>=25?'strong on the area map':r[4]>=10?'some area map reach':'little area map reach')","(r[4]>=25?'strong on the area map':r[4]>=10?'some area map reach':r[4]>0?'little area map reach':esc(r[2])+' reviews')")
+# 9 dark mode red text contrast
+HXFX="""<style id="hxfx">@media (prefers-color-scheme:dark){.o1,span.o1,.akl,.mctap,.lt .prt{color:#ff7a6e!important}.akp.new{color:#fff!important}}.ktag{display:inline-block}</style>"""
+i=t.rfind('</body>');t=t[:i]+HXFX+t[i:]
 # ---- colors: Fora clay and sand to Pillar red, charcoal and warm stone
 CM={'#7c453d':'#c8241d','#7a4038':'#c8241d','#5e322b':'#9a1b16','#5e2f2a':'#9a1b16','#6a3a33':'#a81f19','#e2b8a8':'#f2a49f',
  '#f1e4de':'#fbe9e7','#f3e5de':'#fbe9e7','#f6f2ef':'#f6f5f3','#f6ece7':'#fbefed','#4a4645':'#48484a','#6b6663':'#6b6b6b','#2f2f30':'#2c2c2e',

@@ -43,6 +43,8 @@ gal=''.join(f'<figure><img src="../../../live/huxley-h7k2/shots/{a}.jpg" alt="{b
 t=re.sub(r'<div class="gal">.*?</div>','<div class="gal">'+gal+'</div>',t,count=1,flags=re.S)
 t=re.sub(r'<ul class="near">.*?</ul>','<ul class="near"><li>Scottsdale Quarter<span>shopping and dining, minutes by car</span></li><li>Kierland Commons<span>shopping and dining, minutes by car</span></li><li>Loop 101<span>minutes away</span></li></ul>',t,count=1,flags=re.S)
 t=t.replace('.me img{width:78%;height:auto}','.me img{width:84%;height:auto}').replace('.hero .logo{height:22px;width:auto}','.hero .logo{height:22px;width:auto}')
+t=t.replace('</style>','.near li span{white-space:normal!important;text-align:right;max-width:55%}</style>',1)
+t=t.replace("var s=u&&u.specialShort||'';","var s=(u&&u.specialShort||'').replace(/ on select lease terms/,'');s=s.charAt(0).toUpperCase()+s.slice(1);")
 open(os.path.join(DST,'index.html'),'w').write(t)
 QURL='https://thesocialdm.github.io/locallift-pulses/team/huxley/leasing/?src=qr'
 q=segno.make(QURL,error='m');b=io.BytesIO();q.save(b,kind='svg',dark='#1c1c1e',light='#fff',border=2,xmldecl=False,svgns=True,svgclass='segno',lineclass='qrline',omitsize=True);qsvg=b.getvalue().decode()

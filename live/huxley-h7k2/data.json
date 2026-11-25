@@ -31,7 +31,7 @@
    "date": "Nov 20",
    "tone": "warn",
    "title": "Rivals reward a fast decision",
-   "body": "Broadstone Scottsdale Quarter: up to 3 months free when you lease within 48 hours of touring. Modera Kierland: up to 12 weeks free on a move in by Dec 15. The Core Scottsdale: 50% off the first 3 months. Residences Kierland: up to 8 weeks free.",
+   "body": "Broadstone Scottsdale Quarter: up to 3 months free when you lease within 48 hours of touring. Modera Kierland: up to 12 weeks free on a move in by Dec 15. The Core Scottsdale: 50% off the first 3 months. Residences Kierland: up to 8 weeks free.",
    "action": "Ask what total monthly price and lease term they were quoted, then compare on the same terms."
   },
   {
@@ -161,7 +161,7 @@
    [
     "Billiards room glow",
     "Lamps on, a ball mid table. A slow pan makes a great reel.",
-    "Cozy"
+    "Amenity"
    ],
    [
     "Work from home lounge",
@@ -172,6 +172,11 @@
     "Pet spa",
     "A happy pup, with the owner's OK. Faces of people out of frame.",
     "Amenity"
+   ],
+   [
+    "Kierland Commons, holiday shopping",
+    "Storefronts and lights a few minutes away. Shoot the walk, not the shoppers' faces.",
+    "Local spot"
    ],
    [
     "Holiday Lights at the Railroad Park",
@@ -199,7 +204,7 @@
      ]
     ],
     "fees": "Move in cost $300 (application plus admin) in market data.",
-    "tip": "They are leasing fastest, 5.0 a week, and reward a quick decision. Their 1 bed average asks less than ours, on a bigger home. Compare totals on the same term. Lead with our 4.5 rating (theirs 2.9), the work from home lounge and the rooftop deck.",
+    "tip": "They are leasing fastest, 5.0 a week, and reward a quick decision. Their 1 bed average asks less than ours,. Compare totals on the same term. Lead with our 4.5 rating (theirs 2.9), the work from home lounge and the rooftop deck.",
     "vs": [
      [
       "Special",
@@ -392,7 +397,17 @@
    ],
    "specialShort": "up to 11 weeks free on select lease terms",
    "ends": "limited time",
-   "basis": "Lease terms differ by community, so confirm the term before quoting a difference."
+   "basis": "Rival rents are averages in the market data (Oct 22 to Nov 20), compared with Huxley's average. Lease terms differ by community, so confirm the term before quoting a difference.",
+   "avg": [
+    [
+     "$2,027",
+     "1 bed avg"
+    ],
+    [
+     "$2,644",
+     "2 bed avg"
+    ]
+   ]
   },
   "changes": []
  },
@@ -433,7 +448,7 @@
   "pts": [
    "Our offer: up to 11 weeks free on select lease terms. Confirm which homes qualify with your manager.",
    "Broadstone Scottsdale Quarter and The Core Scottsdale ask less per square foot than we do; compare totals on the same lease term.",
-   "Our 4.5 Google rating beats all three top rivals. Lead with the work from home lounge, rooftop deck and pet spa."
+   "Our 4.5 Google rating beats Residences Kierland, Broadstone and The Core. Lead with the work from home lounge, rooftop deck and pet spa."
   ],
   "cards": [
    {
@@ -517,7 +532,7 @@
      ],
      [
       "Modera Kierland",
-      "Up to 12 weeks free on a move in by Dec 15",
+      "Up to 12 weeks free on a move in by Dec 15",
       ""
      ]
     ]
@@ -530,7 +545,7 @@
     ],
     "h": "We lease 3.4 a week, rivals average 2.7",
     "t": "rivals",
-    "src": "Market Survey · leases 10/18 to 11/21",
+    "src": "Market Survey · leases 10/18 to 11/21 · rents market data 10/22 to 11/20",
     "more": "Broadstone Scottsdale Quarter (5.0 a week) and The Core Scottsdale (4.4) sign the most leases. Huxley is 92.7% leased against a 91.8% rival average."
    },
    {
@@ -539,7 +554,7 @@
      "m",
      "Measured"
     ],
-    "h": "Our 4.5 beats every top rival",
+    "h": "Our 4.5 beats Residences Kierland, Broadstone and The Core",
     "b": "4.5 from 29 Google reviews. Residences Kierland 4.0 (95), Broadstone 2.9 (77), The Core 2.7 (56).",
     "src": "Google today · rivals market data 11/20",
     "stats": [
@@ -605,7 +620,7 @@
    {
     "k": "specials",
     "q": "What specials are rivals running?",
-    "a": "Broadstone Scottsdale Quarter: up to 3 months free when you lease within 48 hours of touring. Modera Kierland: up to 12 weeks free on a move in by Dec 15. The Core Scottsdale: 50% off the first 3 months. Residences Kierland: up to 8 weeks free. Ours: up to 11 weeks free on select lease terms.",
+    "a": "Broadstone Scottsdale Quarter: up to 3 months free when you lease within 48 hours of touring. Modera Kierland: up to 12 weeks free on a move in by Dec 15. The Core Scottsdale: 50% off the first 3 months. Residences Kierland: up to 8 weeks free. Ours: up to 11 weeks free on select lease terms.",
     "s": "Market data 11/20 · Huxley website 11/22"
    },
    {
@@ -633,7 +648,7 @@
     "s": "LocalLift Live"
    }
   ],
-  "line": "Specials: Broadstone up to 3 months free with a 48 hour look and lease, Modera Kierland up to 12 weeks free.",
+  "line": "Specials (market data Nov 20): Broadstone up to 3 months free with a 48 hour look and lease, Modera Kierland up to 12 weeks free.",
   "briefSrc": "Market data 11/20 · Huxley website 11/22 · Google Nov 25",
   "checked": "Nov 22",
   "checkedIso": "2026-11-22"
