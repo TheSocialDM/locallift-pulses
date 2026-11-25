@@ -156,6 +156,7 @@ c=c.replace('<b>Your home near Washington Square</b><span>Sky lounge · Pool and
 c=c.replace('Open the live Montage profile','Open the live COYA profile').replace('alt="Montage"','alt="COYA"')
 c=c.replace('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">',FONT)
 c=recolor(c);c=mia(c,4)
+c=c.replace("window.llBy=n;document.getElementById('cn')","window.llBy=n;var g=document.querySelector('a.go');if(g)g.href='../?by='+encodeURIComponent(n)+'&src=card';document.getElementById('cn')",1)
 c=c.replace('.front .logo{height:8%;position:absolute;top:10%;left:7%}','.front .logo{height:16%;position:absolute;top:9%;left:6%}')
 c=c.replace('h1{font:700 20px Montserrat,sans-serif;margin:0}','h1{font:600 21px Montserrat,Inter,sans-serif;margin:0}')
 open(os.path.join(DST,'card/index.html'),'w').write(c)

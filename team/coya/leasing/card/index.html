@@ -52,7 +52,7 @@ a.go{display:block;text-align:center;background:#633f40;color:#fff;text-decorati
 </div>
 <script src="../../../../live/coya-3zep/qr.js"></script>
 <script>
-(function(){try{var n=(new URLSearchParams(location.search).get('by')||'').replace(/[^A-Za-z .'-]/g,'').trim();if(!n||/^team$/i.test(n))return;n=n.replace(/\b\w/g,function(c){return c.toUpperCase()}).slice(0,30);window.llBy=n;document.getElementById('cn').textContent=n;
+(function(){try{var n=(new URLSearchParams(location.search).get('by')||'').replace(/[^A-Za-z .'-]/g,'').trim();if(!n||/^team$/i.test(n))return;n=n.replace(/\b\w/g,function(c){return c.toUpperCase()}).slice(0,30);window.llBy=n;var g=document.querySelector('a.go');if(g)g.href='../?by='+encodeURIComponent(n)+'&src=card';document.getElementById('cn').textContent=n;
 var u='https://live.thesocialdm.com/meet/coya/'+n.toLowerCase().replace(/[^a-z]/g,''),q=qrcode(0,'M');q.addData(u);q.make();document.getElementById('cq').innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true})}catch(x){}})();
 (function(){var f=document.getElementById('flip');function t(){f.classList.toggle('on')}f.addEventListener('click',t);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}})})();
 </script>

@@ -57,5 +57,7 @@ must("fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).t
 s=s.replace("fetch('version.txt?t='","fetch('no-version.txt?t='")
 s=re.sub(r"const (SNAPHOOK|VIDHOOK)='[^']*';",r"const \1='';",s)
 assert 'hook.us2.make.com' not in s and 'fetch(SNAPHOOK' not in s and 'fetch(VIDHOOK' not in s
+# live "Or send from my own phone" opens Messages; the demo keeps the practice message (nothing sends)
+s=s.replace("/*llsendlive*/location.href='sms:?&body='+encodeURIComponent(txt());box.innerHTML='<h3>Opening Messages</h3><p>Your text is filled in. Tap Send in Messages.</p>","box.innerHTML='<h3>Ready to send</h3><p>In the live app this opens your phone\\'s Messages with the text filled in, and you tap Send. This preview does not open Messages.</p>")
 (app/'demo/index.html').write_text(s)
 print('demo built', len(s))

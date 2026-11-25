@@ -60,10 +60,23 @@ if 'id="llstars"' not in s:
     s=s.replace('</head>','<style id="llstars">.llst{display:inline-block;position:relative}.llst .e{opacity:.28}.llst .f{position:absolute;left:0;top:0;width:50%;overflow:hidden;white-space:nowrap}</style><script id="llstarsjs">window.llStars=function(r){r=parseFloat(r);if(!(r>=0))return"★★★★★";var n=Math.floor(r),d=r-n,h=0;if(d>=.3&&d<=.7)h=1;else if(d>.7)n+=1;n=Math.min(n,5);var o="";for(var i=0;i<n;i++)o+="★";if(h&&n<5)o+=\'<span class="llst"><span class="e">★</span><span class="f">★</span></span>\';for(var j=n+(h&&n<5?1:0);j<5;j++)o+=\'<span class="llst"><span class="e">★</span></span>\';return o}</script></head>',1)
 if 'id="llpretty"' not in s:
     s=s.replace('</head>','<style id="llpretty">p,li,small,.mcd,.vs,.cen,.sub,.hint,.body,figcaption{text-wrap:pretty}</style></head>',1)
+# QA Nov 24 COYA (idempotent): Change name works from My card, no gate flash after a team code sign in, pet card fully tappable,
+# "Or send from my own phone" opens Messages in the live app (build_demo.py restores the practice text), property phone in card texts
+_bm=re.search(r"if\(t\.id==='bMe'\)open\((`<h3>Your first name</h3>.*?`)\);",s,re.S)
+if _bm and "if(id==='bMe'){e.stopPropagation();open(" not in s:
+    s=s.replace("box.addEventListener('click',e=>{const id=e.target.id;","box.addEventListener('click',e=>{const id=e.target.id;\n if(id==='bMe'){e.stopPropagation();open("+_bm.group(1)+");return}",1)
+s=s.replace('if(/-invited$/.test(k)&&localStorage.getItem(k))on=1','if(/-(invited|team)$/.test(k)&&localStorage.getItem(k))on=1')
+if 'id="llpetfix"' not in s:
+    s=s.replace('</head>','<style id="llpetfix">.pet:before,.pet:after{pointer-events:none}.pet>*{position:relative;z-index:1}.pet .k2{white-space:normal}@media (max-width:360px){.pet .k2{font-size:10px;letter-spacing:.06em}}</style></head>',1)
+_pv="box.innerHTML='<h3>Ready to send</h3><p>In the live app this opens your phone\\'s Messages with the text filled in, and you tap Send. This preview does not open Messages.</p>"
+if _pv in s:
+    s=s.replace("if(id==='send'){asks++;logAsk('Text from my phone');"+_pv,"if(id==='send'){asks++;logAsk('Text from my phone');/*llsendlive*/location.href='sms:?&body='+encodeURIComponent(txt());box.innerHTML='<h3>Opening Messages</h3><p>Your text is filled in. Tap Send in Messages.</p>",1)
+s=re.sub(r"\\n\\nText me back with any questions\. \$\{me\|\|'Your name'\}, ",r"\\n\\nQuestions? Text or call me at ${MC_PHONE}.\\n${me||'Your name'}, ",s)
+s=s.replace('\\n\\nText or call me with any questions.\\n\\n"+(who','\\n\\nQuestions? Text or call me at "+MC_PHONE+".\\n\\n"+(who')
 # lead tracking standard (tools/lead_track.py): one GA4 app_action event per staff lead tap
 import os;sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)));import lead_track;s=lead_track.app(s)
 if len(sys.argv)>2:
     s=re.sub(r"const APPV='[^']*'",f"const APPV='{sys.argv[2]}'",s)
     open(p.replace('index.html','version.txt'),'w').write(sys.argv[2]+'\n')
-checks={'nav97':'.97)' in s,'pad178':'178px' in s,'you':'background:#fff;color:#1c1c1e' in s,'chev':'<em>›</em></section>`' not in s,'bullet':'She points every lead to you' not in s,'hint':'.mchint{position:static' in s,'navbg':'id="llnavbg"' in s,'mcsay':'left:16px;right:auto;bottom:16px' in s and "I'll get you to ${esc(me" in s,'topgap':'lltopgap' in s,'plural':'practice review asks</div>' not in s,'zerotiles':'${mcN(/^Sent/)}</b>' not in s,'scrollpad':'llscrollpad' in s,'stars':'★★★★★</div>' not in s and 'llStars' in s,'pretty':'llpretty' in s}
+checks={'nav97':'.97)' in s,'pad178':'178px' in s,'you':'background:#fff;color:#1c1c1e' in s,'chev':'<em>›</em></section>`' not in s,'bullet':'She points every lead to you' not in s,'hint':'.mchint{position:static' in s,'navbg':'id="llnavbg"' in s,'mcsay':'left:16px;right:auto;bottom:16px' in s and "I'll get you to ${esc(me" in s,'topgap':'lltopgap' in s,'plural':'practice review asks</div>' not in s,'zerotiles':'${mcN(/^Sent/)}</b>' not in s,'scrollpad':'llscrollpad' in s,'stars':'★★★★★</div>' not in s and 'llStars' in s,'pretty':'llpretty' in s,'bme':"if(id==='bMe'){e.stopPropagation();open(" in s,'noflash':'-(invited|team)$' in s,'pet':'llpetfix' in s,'phone':'Text or call me at' in s}
 open(p,'w').write(s);print(p,'changed' if s!=n0 else 'unchanged',checks)
