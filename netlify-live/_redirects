@@ -10,4 +10,7 @@
 /meet/montage/:name  https://thesocialdm.github.io/locallift-pulses/team/montage/leasing/?by=:name&src=link  302
 /meet/stillwater/:name  https://thesocialdm.github.io/locallift-pulses/team/stillwater/leasing/?by=:name&src=link  302
 /meet/lura/:name  https://thesocialdm.github.io/locallift-pulses/team/lura/leasing/?by=:name&src=link  302
+/fora          /fora-50r1/v3/  301
+/fora-demo  /fora-50r1/demo/  301
+/meet/fora/:name  https://thesocialdm.github.io/locallift-pulses/team/fora/leasing/?by=:name&src=link  302
 /*             https://thesocialdm.github.io/locallift-pulses/live/:splat  200

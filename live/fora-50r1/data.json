@@ -1,0 +1,744 @@
+{
+ "property": "Fora",
+ "city": "Las Vegas, Nevada",
+ "updated": "2026-11-24T17:30:00-07:00",
+ "updatedLabel": "Nov 24, 5:30 pm Phoenix time",
+ "rv": {
+  "rating": "4.5",
+  "count": "135",
+  "vs": "The Pearl at St. Rose has 266. Every ask closes the gap."
+ },
+ "feed": [
+  {
+   "src": "Fora website · checked today",
+   "date": "Nov 24",
+   "tone": "good",
+   "title": "Today's offer: $0 rent until 2027",
+   "body": "foravegas.com shows \"Move In Now and Pay $0 Rent Until 2027\" and \"Move In 2027 for 1 Month FREE Rent\". Base rents start at $1,718 for a 1 bedroom (A1, $1,888 a month total with required monthly fees) and $1,987 for a 2 bedroom (B1, $2,157 total). The C1 three bedroom is $3,338 with only 1 left. The banner also says 1 bedrooms from $1,568, a price no listed plan shows today, and select homes already reduced do not get the extra free month.",
+   "action": "Ask the move in date first. Now means $0 rent until 2027, a 2027 move in means 1 month free. Confirm which homes qualify with your manager."
+  },
+  {
+   "src": "Rival watch · their own sites",
+   "date": "Nov 24",
+   "tone": "info",
+   "title": "Two rivals post big specials too",
+   "body": "The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms. Marlowe South Las Vegas: no special read on their site today.",
+   "action": "Ask what total monthly price, home size and lease term they were quoted, then compare it with ours on the same terms."
+  },
+  {
+   "src": "Weekly Pulse · Google Maps",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "1st at your front door",
+   "body": "On \"apartments for rent las vegas\" you are 1st at your door for the fifth scan running, and inside the top 20 at 6 of 49 map points."
+  },
+  {
+   "src": "Weekly Pulse · AI answers",
+   "date": "Nov 20",
+   "tone": "info",
+   "title": "AI answers name you in 11 of 96",
+   "body": "Three assistants were asked 96 renter questions. 8 of the answers recommend you, and all three name you first for apartments with a speakeasy lounge in Las Vegas."
+  },
+  {
+   "src": "Google reviews",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "4.5 stars on 135 reviews",
+   "body": "Three new five star reviews since the Nov 13 read, each with a reply. 128 of 135 reviews have a reply.",
+   "link": "https://www.google.com/maps/place/?q=place_id:ChIJa427DwDPyIARV2rfo5ncJ4c",
+   "linkLabel": "Open Fora reviews on Google"
+  }
+ ],
+ "score": {
+  "index": 61,
+  "prev": 60,
+  "date": "Nov 20 Weekly Pulse",
+  "parts": [
+   [
+    "Reputation",
+    93
+   ],
+   [
+    "Search",
+    61
+   ],
+   [
+    "Map",
+    21
+   ],
+   [
+    "Website",
+    91
+   ],
+   [
+    "AI answers",
+    41
+   ]
+  ]
+ },
+ "tiles": [
+  [
+   "4.5",
+   "Google rating",
+   "135 reviews, read Nov 20"
+  ],
+  [
+   "1st",
+   "At your front door",
+   "Google Maps, Nov 20"
+  ],
+  [
+   "11 of 96",
+   "AI answers name you",
+   "Panel of Nov 20"
+  ],
+  [
+   "6 of 49",
+   "Map points in top 20",
+   "Scan of Nov 20"
+  ]
+ ],
+ "rivals": {
+  "date": "Nov 20 map scan",
+  "rows": [
+   [
+    "The Pearl at St. Rose",
+    "4.1",
+    266,
+    16,
+    41
+   ],
+   [
+    "Arista",
+    "4.5",
+    61,
+    12,
+    30
+   ],
+   [
+    "Desert Sky",
+    "4.4",
+    151,
+    9,
+    40
+   ],
+   [
+    "Evolve",
+    "4.4",
+    539,
+    8,
+    28
+   ],
+   [
+    "Fora (you)",
+    "4.5",
+    135,
+    4,
+    6
+   ]
+  ],
+  "note": "Review counts and ranks as the Nov 20 map scan read them."
+ },
+ "ask": {
+  "title": "This week: ask for one review",
+  "moments": [
+   "At every move in",
+   "At every renewal",
+   "When a work order is closed"
+  ],
+  "points": [
+   "The Pearl at St. Rose has 266 Google reviews to our 135. Our 4.5 rating is higher, so every new review widens the lead.",
+   "Ask in person, then send the link the same day.",
+   "One a week is the target."
+  ]
+ },
+ "teamCodeHash": "7ac42485f62be93ba663cc2d09667857e37211635dea7d129c7c18bfeb29921f",
+ "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJa427DwDPyIARV2rfo5ncJ4c",
+ "trackBase": "https://moveinlocal.com/review/fora/",
+ "asks": {
+  "sent": 0,
+  "opened": 0,
+  "through": "Nov 24"
+ },
+ "shortLink": "moveinlocal.com/review/fora",
+ "talk": {
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24",
+  "offer": "Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent.",
+  "prices": [
+   [
+    "$1,718",
+    "1 bed base rent from"
+   ],
+   [
+    "$1,987",
+    "2 bed base rent from"
+   ],
+   [
+    "$3,338",
+    "3 bed base rent from"
+   ]
+  ],
+  "more": []
+ },
+ "followups": [],
+ "occupancy": null,
+ "snapIdeas": {
+  "month": "November",
+  "items": [
+   [
+    "Sky Lounge at dusk",
+    "Mountain views in the windows as the light drops. Shoot from the back of the room.",
+    "Amenity"
+   ],
+   [
+    "Speakeasy lounge glow",
+    "Overhead lights low, lamps on. A slow pan across the seating makes a great reel.",
+    "Amenity"
+   ],
+   [
+    "Pool deck, golden hour",
+    "Last light on the water and loungers. Keep residents out of the frame.",
+    "Amenity"
+   ],
+   [
+    "Coworking studios",
+    "Laptop open and a coffee beside it. Hands only is perfect.",
+    "Amenity"
+   ],
+   [
+    "Dog park and pet spa",
+    "A happy pup, with the owner's OK. Faces of people out of frame.",
+    "Amenity"
+   ],
+   [
+    "Henderson WinterFest",
+    "Dec 3 and 4, details on the City of Henderson page.",
+    "Event"
+   ],
+   [
+    "National Finals Rodeo",
+    "Dec 3 to 12 at the Thomas and Mack Center.",
+    "Event"
+   ]
+  ]
+ },
+ "compete": {
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24",
+  "items": [
+   {
+    "name": "The Pearl at St. Rose",
+    "where": "Spencer St, 0.35 miles away",
+    "special": "No rent until 2027, restrictions apply, offers vary by floor plan",
+    "from": [
+     [
+      "$1,299",
+      "1 bed"
+     ],
+     [
+      "$1,388",
+      "2 bed"
+     ]
+    ],
+    "fees": "Their floor plans page lists base rent only: 1 bed (708 sq ft) from $1,299, 2 bed (965 sq ft) from $1,388, 3 bed (1,072 sq ft) from $1,567. Deposit and pet fees not posted there.",
+    "tip": "Their offer matches ours, and their base rents start lower on smaller homes: a 708 sq ft 1 bed against our 805, a 965 sq ft 2 bed against our 1,150. Compare size and total. Fora has the speakeasy lounge, Sky Lounge with mountain views, coworking studios and free covered parking.",
+    "vs": [
+     [
+      "Special",
+      "No rent until 2027",
+      "$0 rent until 2027",
+      "even"
+     ],
+     [
+      "1 bed from",
+      "$1,299",
+      "$1,718",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,388",
+      "$1,987",
+      "them"
+     ],
+     [
+      "1 bed size",
+      "708 sq ft",
+      "805 sq ft",
+      "us"
+     ],
+     [
+      "2 bed size",
+      "965 sq ft",
+      "1,150 sq ft",
+      "us"
+     ],
+     [
+      "Google rating",
+      "4.1 (266)",
+      "4.5 (135)",
+      "us"
+     ],
+     [
+      "Deposit",
+      "Not posted",
+      "$500",
+      "ask"
+     ],
+     [
+      "Pet rent",
+      "Not posted",
+      "$50/mo",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest base rent on rentthepearl.com today.",
+    "url": "https://www.rentthepearl.com/floorplans",
+    "feesChecked": "Nov 24",
+    "checked": "Nov 24",
+    "checkedIso": "2026-11-24"
+   },
+   {
+    "name": "Positano",
+    "where": "Jeffreys St, down the street",
+    "special": "Six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply",
+    "from": [
+     [
+      "$1,240",
+      "1 bed"
+     ],
+     [
+      "$1,469",
+      "2 bed"
+     ]
+    ],
+    "fees": "Their site also shows a total monthly price with mandatory charges: 1 bed (735 sq ft) from $1,346, 2 bed (995 sq ft) from $1,575. Deposit and pet fees not posted.",
+    "tip": "Their base rents start lower on smaller homes: a 735 sq ft 1 bed against our 805, a 995 sq ft 2 bed against our 1,150. Ask which homes their six weeks covers and the lease term. Fora has the speakeasy lounge, coworking studios and free covered parking.",
+    "vs": [
+     [
+      "Special",
+      "6 weeks free, select 2 beds",
+      "$0 rent until 2027",
+      "ask"
+     ],
+     [
+      "1 bed from",
+      "$1,240",
+      "$1,718",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,469",
+      "$1,987",
+      "them"
+     ],
+     [
+      "2 bed size",
+      "995 sq ft",
+      "1,150 sq ft",
+      "us"
+     ],
+     [
+      "Google rating",
+      "4.3 (161)",
+      "4.5 (135)",
+      "us"
+     ],
+     [
+      "Deposit",
+      "Not posted",
+      "$500",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest base rent on ovationco.com today. Their total monthly price adds mandatory charges.",
+    "url": "https://ovationco.com/property/positano/apartments/",
+    "feesChecked": "Nov 24",
+    "checked": "Nov 24",
+    "checkedIso": "2026-11-24"
+   },
+   {
+    "name": "Marlowe South Las Vegas",
+    "where": "S Las Vegas Blvd",
+    "special": "Not read on their site today",
+    "from": [],
+    "fees": "Prices did not load on their site for today's check. Their site lists covered parking at $25 a month. Ask what they were quoted.",
+    "tip": "They carry a higher rating on fewer reviews. Our covered parking is free, theirs is $25 a month on their site. Ask what total monthly price and lease term they were quoted.",
+    "vs": [
+     [
+      "Special",
+      "Ask",
+      "$0 rent until 2027",
+      "ask"
+     ],
+     [
+      "1 bed from",
+      "Ask",
+      "$1,718",
+      "ask"
+     ],
+     [
+      "2 bed from",
+      "Ask",
+      "$1,987",
+      "ask"
+     ],
+     [
+      "Covered parking",
+      "$25/mo",
+      "Free",
+      "us"
+     ],
+     [
+      "Google rating",
+      "4.9 (74)",
+      "4.5 (135)",
+      "them"
+     ]
+    ],
+    "basis": "Their parking: greystar.com today. Their floor plan prices and special did not load for our check.",
+    "url": "https://www.greystar.com/properties/las-vegas-nv/marlowe-south-las-vegas/floorplans",
+    "feesChecked": "Nov 24",
+    "checked": "Nov 24",
+    "checkedIso": "2026-11-24"
+   }
+  ],
+  "us": {
+   "special": "Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent",
+   "from": [
+    [
+     "$1,718",
+     "1 bed"
+    ],
+    [
+     "$1,987",
+     "2 bed"
+    ]
+   ],
+   "pets": "$50 a month pet rent per pet, $500 pet fee per pet, up to 3 pets, no weight limits, some breed restrictions, PetScreening profile required",
+   "showoff": [
+    "Speakeasy style lounge",
+    "Sky Lounge with mountain views",
+    "Free covered parking",
+    "Resort style pool",
+    "Premium gym with spin and yoga",
+    "Coworking studios",
+    "Resident media room",
+    "BBQ stations and firepit lounge",
+    "Dog park and pet spa",
+    "Four EV chargers",
+    "Smart home with keyless entry",
+    "Full size washer and gas dryer",
+    "9 foot ceilings",
+    "Walk in closets"
+   ],
+   "specialShort": "$0 rent until 2027 when you move in now",
+   "ends": "2026 move in",
+   "basis": "Our offer depends on the move in date, and lease terms differ by community, so confirm the term before quoting a difference."
+  },
+  "changes": []
+ },
+ "uploadUrl": "https://www.dropbox.com/request/xhrap16moe8t20bwch8f",
+ "dbxFolder": "Fora Apartments",
+ "reminders": [
+  {
+   "where": "events",
+   "emoji": "🎄",
+   "fx": "spark",
+   "title": "Henderson WinterFest is Thursday, Dec 3",
+   "body": "Dec 3 and 4, per the City of Henderson. Mention it on tours.",
+   "iso": "2026-12-03",
+   "cta": "See the city page ›",
+   "url": "https://www.cityofhenderson.com/residents/special-interest/winterfest/"
+  }
+ ],
+ "shots": [
+  {
+   "img": "outside",
+   "title": "The Fora sign, blue sky",
+   "tag": "Amenity",
+   "tip": "Midday sun behind you. Stand across the drive so the whole sign and building fit.",
+   "wide": true
+  },
+  {
+   "img": "pool",
+   "title": "Resort style pool",
+   "tag": "Amenity",
+   "tip": "Late afternoon light. Shoot low across the loungers and keep residents out of the frame."
+  },
+  {
+   "img": "lounge",
+   "title": "Sky Lounge with a view",
+   "tag": "Amenity",
+   "tip": "Get low across the chairs and keep the mountain view in the windows."
+  },
+  {
+   "img": "speakeasy",
+   "title": "Speakeasy glow",
+   "tag": "Cozy",
+   "tip": "Overhead lights off, lamps on. A drink on the table adds life."
+  },
+  {
+   "img": "gym",
+   "title": "Morning workout",
+   "tag": "Amenity",
+   "tip": "Early light, equipment in focus. A 5 second slow pan makes a great reel."
+  },
+  {
+   "img": "living",
+   "title": "Model home, holiday ready",
+   "tag": "Home",
+   "tip": "Throw blanket, a flameless candle, a small tree. Stand in the doorway, phone at chest height."
+  },
+  {
+   "img": "kitchen",
+   "title": "Kitchen details",
+   "tag": "Home",
+   "tip": "Close ups sell: quartz counters, the island, a bowl of fruit."
+  }
+ ],
+ "notice": {
+  "id": "2026-11-24-welcome",
+  "until": "2026-12-01",
+  "emoji": "👋",
+  "title": "Welcome to LocalLift Live",
+  "points": [
+   "Today's talk track, rival prices and objections and answers update every morning.",
+   "Start a tour from the Tour tab and tap what you show. It all lands on Send my day to my desk.",
+   "Ask for a Google review at every move in, renewal and closed work order. Show the QR code, it takes under 30 seconds."
+  ],
+  "act": "tour",
+  "cta": "Open Tour mode ›"
+ },
+ "market": {
+  "rvh": [
+   "Community",
+   "1 bed from",
+   "2 bed from"
+  ],
+  "rv": [
+   [
+    "Fora",
+    "$1,718",
+    "$1,987"
+   ],
+   [
+    "The Pearl at St. Rose",
+    "$1,299",
+    "$1,388"
+   ],
+   [
+    "Positano",
+    "$1,240",
+    "$1,469"
+   ],
+   [
+    "Marlowe South Las Vegas",
+    "Ask",
+    "Ask"
+   ]
+  ],
+  "srh": [
+   "Source",
+   "Visits",
+   "Leads"
+  ],
+  "sr": [],
+  "pts": [
+   "Our offer: Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent.",
+   "The Pearl and Positano list lower starting base rents on smaller homes, so compare size and total on the same lease term.",
+   "Our 4.5 Google rating is above The Pearl and Positano. Lead with the speakeasy lounge, bigger homes and free covered parking."
+  ],
+  "cards": [
+   {
+    "lab": "WHERE WE STAND OUT",
+    "p": [
+     "new",
+     "New"
+    ],
+    "h": "Use these on every tour",
+    "b": "Speakeasy style lounge, Sky Lounge with mountain views, free covered parking, resort style pool, premium gym with spin and yoga, coworking studios, resident media room, BBQ stations and firepit lounge, dog park and pet spa, four EV chargers, smart home with keyless entry, full size washer and gas dryer, 9 foot ceilings, walk in closets.",
+    "src": "Fora and rival websites · checked 11/24",
+    "cmp": {
+     "cols": [
+      "Fora",
+      "Pearl",
+      "Positano"
+     ],
+     "rows": [
+      [
+       "Google rating",
+       "4.5 (135)",
+       "4.1 (266)",
+       "4.3 (161)"
+      ],
+      [
+       "1 bed size",
+       "805 sq ft",
+       "708 sq ft",
+       "735 sq ft"
+      ],
+      [
+       "2 bed size",
+       "1,150 sq ft",
+       "965 sq ft",
+       "995 sq ft"
+      ]
+     ]
+    },
+    "chips": [
+     "Speakeasy style lounge",
+     "Sky Lounge with mountain views",
+     "Free covered parking",
+     "Resort style pool",
+     "Premium gym with spin and yoga",
+     "Coworking studios",
+     "Resident media room",
+     "BBQ stations and firepit lounge"
+    ],
+    "note": "Fora homes are larger than The Pearl and Positano plan for plan, and covered parking is free. Marlowe lists covered parking at $25 a month."
+   },
+   {
+    "lab": "SPECIALS WATCH",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "The Pearl matches our offer",
+    "b": "Fora: Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent. The Pearl at St. Rose: no rent until 2027, restrictions apply, offers vary by floor plan. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply. Marlowe South Las Vegas: not read on their site today.",
+    "src": "Each community’s website · checked 11/24",
+    "list": [
+     [
+      "Fora",
+      "Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent",
+      "me"
+     ],
+     [
+      "The Pearl at St. Rose",
+      "No rent until 2027, restrictions apply, offers vary by floor plan",
+      ""
+     ],
+     [
+      "Positano",
+      "Six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply",
+      ""
+     ],
+     [
+      "Marlowe South Las Vegas",
+      "Not read on their site today",
+      ""
+     ]
+    ]
+   },
+   {
+    "lab": "PRICE CHECK",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "The Pearl and Positano list lower starting rents",
+    "t": "rivals",
+    "src": "Each community’s website · checked 11/24",
+    "more": "Base rents on smaller homes: their 1 and 2 bedrooms are 70 to 185 square feet smaller than ours. Positano adds mandatory monthly charges on top. Marlowe prices did not load for today’s check."
+   },
+   {
+    "lab": "GOOGLE REVIEWS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Our 4.5 beats The Pearl and Positano",
+    "b": "Our rating is 4.5 from 135 Google reviews. The Pearl at St. Rose is at 4.1 (266), Positano 4.3 (161) and Marlowe South Las Vegas 4.9 (74).",
+    "src": "Google map scan · Nov 20",
+    "stats": [
+     [
+      "4.5",
+      "Our Google rating"
+     ],
+     [
+      "135",
+      "Our reviews"
+     ],
+     [
+      "266",
+      "The Pearl reviews"
+     ]
+    ],
+    "note": "The Pearl has more reviews and holds the top three at more map points. Every review we ask for closes the count gap."
+   },
+   {
+    "lab": "AI ANSWERS",
+    "p": [
+     "s",
+     "Signal"
+    ],
+    "h": "AI assistants name Fora",
+    "b": "Named in 11 of 96 answers to renter questions.",
+    "src": "AI answer panel · Nov 20",
+    "stats": [
+     [
+      "11",
+      "of 96 AI answers name you"
+     ]
+    ]
+   }
+  ],
+  "ex": [
+   {
+    "k": "edge",
+    "q": "Where do we stand out against rivals?",
+    "a": "From the Fora website: Speakeasy style lounge, Sky Lounge with mountain views, free covered parking, resort style pool, premium gym with spin and yoga, coworking studios, resident media room, BBQ stations and firepit lounge, dog park and pet spa, four EV chargers, smart home with keyless entry, full size washer and gas dryer, 9 foot ceilings, walk in closets.<ul><li>Google rating: 4.5 on 135 reviews, above The Pearl at St. Rose and Positano.</li><li>Bigger homes: our 1 bed is 805 sq ft and our B1 2 bed is 1,150 sq ft, against 708 and 965 at The Pearl.</li><li>Free covered parking. Marlowe lists covered parking at $25 a month.</li><li>Pets: $50 a month and a $500 pet fee, no weight limits, up to 3 pets.</li></ul>",
+    "s": "Fora and rival websites · checked 11/24"
+   },
+   {
+    "k": "ops",
+    "q": "Who showed the tour? Pending service requests?",
+    "a": "Tour agents and service requests live in your property management system, which is not connected to this app. Tours you log in Tour mode are on your desk list.",
+    "s": "LocalLift Live"
+   },
+   {
+    "k": "why",
+    "q": "Why are tours not signing?",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>The Pearl and Positano list lower starting base rents. 1 beds: The Pearl $1,299, Positano $1,240, ours $1,718.</li><li>The Pearl runs a similar no rent until 2027 offer, and Positano posts six weeks free on select 2 bedrooms.</li></ul>What wins them back: Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent, bigger homes, free covered parking, the speakeasy lounge, our 4.5 rating and a total cost check on the same size and term.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "specials",
+    "q": "What specials are rivals running?",
+    "a": "The Pearl at St. Rose: no rent until 2027, restrictions apply, offers vary by floor plan. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply. Marlowe South Las Vegas: not read on their site today. Fora: Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "rivals",
+    "q": "Who are we up against?",
+    "a": "The Pearl at St. Rose, 0.35 miles away (1 beds from $1,299, no rent until 2027), Positano down Jeffreys St (1 beds from $1,240, six weeks free on select 2 bedrooms) and Marlowe South Las Vegas on S Las Vegas Blvd (prices did not load today). Fora 1 beds start at $1,718.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "price",
+    "q": "Are we priced right?",
+    "a": "1 bed from: Fora $1,718, The Pearl $1,299, Positano $1,240.<br>2 bed from: Fora $1,987, The Pearl $1,388, Positano $1,469.<br>Marlowe prices did not load for today’s check.<br>These are base rents, and our homes are larger. Fora’s website shows totals with $170 in required monthly fees, Positano adds its own mandatory charges, and specials differ, so compare totals on the same size and lease term.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "reviews",
+    "q": "How are our reviews?",
+    "a": "4.5 stars from 135 Google reviews, 128 of them answered. The Pearl at St. Rose 4.1 (266), Positano 4.3 (161), Marlowe South Las Vegas 4.9 (74). The Pearl holds the top three at the most map points near us. Every review request counts.",
+    "s": "Google map scan · Nov 20"
+   },
+   {
+    "k": "ai",
+    "q": "Is AI sending renters our way?",
+    "a": "AI assistants named Fora in 11 of 96 answers to renter questions, and all three name Fora first for apartments with a speakeasy lounge in Las Vegas.",
+    "s": "AI answer panel · Nov 20"
+   }
+  ],
+  "line": "Specials today: The Pearl no rent until 2027, Positano six weeks free on select 2 bedrooms.",
+  "briefSrc": "Websites checked 11/24 · Google scan Nov 20",
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24"
+ }
+}
