@@ -61,7 +61,7 @@ KIT=r"""const KIT=[
 ['I don’t love this view.','Let me check which open homes face the mountains or the Strip, or sit on a higher floor.','']],'o'],
 [LI('chat'),'First hello',[
 ['Just looking around.','Perfect, looking is the best way to start. I can show you a model and the speakeasy lounge in about ten minutes, no pressure. What brought you by today?','Ask one question before you show anything.'],
-['On the phone: what’s your cheapest?','Our 1 bedrooms start at {b1} base rent and 2 bedrooms at {b2}. Right now we have {sp}. When are you hoping to move?','Always end with a question.'],
+['On the phone: what’s your cheapest?','Our 1 bedroom homes start at {b1} base rent and 2 bedroom homes at {b2}. Right now we have {sp}. When are you hoping to move?','Always end with a question.'],
 ['I only have a few minutes.','No problem, I’ll show you the one home that fits you best. How many bedrooms are you looking for?','']],'q'],
 [LI('card'),'Fees and specials',[
 ['What are the fees?','Our website shows the total monthly price with the required fees for every home, so let’s pull up yours together. No surprises.','Never quote a fee from memory.'],
@@ -94,6 +94,7 @@ t=t[:i]+KIT+'\n'+t[j:]
 sub(".replace(/{ja1}/g,f('Jade','1 bed from')).replace(/{ai1}/g,f('Ainsley at The Collective','1 bed from'))",".replace(/{pe1}/g,f('The Pearl at St. Rose','1 bed from')).replace(/{po1}/g,f('Positano','1 bed from'))",1)
 sub("|jade|ainsley|collective|flatiron|","|pearl|positano|marlowe|",1)
 sub('Numbers update every morning.','Prices and specials update every morning.',1)
+t=t.replace(".replace(/\\b1 bedrooms\\b/g,'1 bedrooms')",".replace(/\\b1 bedrooms\\b/g,'1 bedroom')")
 # ---- phone (number on foravegas.com), place
 t=t.replace("(702) 935-6015","(725) 209-4665").replace('+17029356015','+17252094665').replace('7029356015','7252094665')
 # ---- names, paths, keys, salt
@@ -152,7 +153,9 @@ FX="""<style id="forafx">
 @keyframes foglow{0%,100%{box-shadow:0 0 0 0 rgba(122,64,56,.5),0 6px 18px rgba(122,64,56,.3)}50%{box-shadow:0 0 0 8px rgba(122,64,56,0),0 6px 22px rgba(122,64,56,.45)}}
 #llnote button{background:linear-gradient(135deg,#7a4038,#5e2f2a)!important}#llnote .nk{color:#7a4038!important}
 .akx span:not(.l){white-space:nowrap}
-@media (prefers-color-scheme:dark){.prt,.lt .prt,.dskb button{background:#f3e5de!important;color:#7a4038!important}.dskb button:first-child,.mcsee{background:linear-gradient(135deg,#7a4038,#5e2f2a)!important;color:#fff!important}.dskh svg{stroke:#e2b8a8!important}#llnote .nk{color:#e2b8a8!important}}
+.akp.s{color:#7c453d!important;background:#f3e5de!important}
+.flyb a:not(:first-child),.flyb button{background:#f3e5de!important;color:#7a4038!important}
+@media (prefers-color-scheme:dark){.prt,.lt .prt,.dskb button{background:#f3e5de!important;color:#7a4038!important}.dskb button:first-child,.mcsee{background:linear-gradient(135deg,#7a4038,#5e2f2a)!important;color:#fff!important}.dskh svg{stroke:#e2b8a8!important}#llnote .nk{color:#e2b8a8!important}.akp.s{background:rgba(124,69,61,.35)!important;color:#e2b8a8!important}.flyb a:not(:first-child),.flyb button{background:rgba(124,69,61,.35)!important;color:#f3e5de!important}}
 @media (prefers-reduced-motion:reduce){.mcsee{animation:none!important}}
 </style>"""
 t=open(SP).read()
