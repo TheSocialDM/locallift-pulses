@@ -14,7 +14,7 @@
    "date": "Nov 24",
    "tone": "good",
    "title": "Today's offer: $0 rent until 2027",
-   "body": "foravegas.com shows \"Move In Now and Pay $0 Rent Until 2027\" and \"Move In 2027 for 1 Month FREE Rent\". Base rents start at $1,718 for a 1 bedroom (A1, $1,888 a month total with required monthly fees) and $1,987 for a 2 bedroom (B1, $2,157 total). The C1 three bedroom is $3,338 base rent. The banner also says 1 bedroom from $1,568 base rent, but no listed plan shows that price today. Select homes already reduced do not get the extra free month.",
+   "body": "foravegas.com shows \"Move In Now and Pay $0 Rent Until 2027\" and \"Move In 2027 for 1 Month FREE Rent\". Base rents start at $1,568 for a 1 bedroom (A1, $1,738 a month total with required monthly fees; select 1 beds are already reduced and do not get the extra month free) and $1,987 for a 2 bedroom (B1, $2,157 total). The C1 three bedroom is $3,338 base rent.",
    "action": "Ask the move in date first. Now means $0 rent until 2027, a 2027 move in means 1 month free. Confirm which homes qualify with your manager."
   },
   {
@@ -164,10 +164,10 @@
  "talk": {
   "checked": "Nov 24",
   "checkedIso": "2026-11-24",
-  "offer": "Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent.",
+  "offer": "Black Friday Flash Sale: move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent. Select 1 beds are already reduced and do not get the extra month free.",
   "prices": [
    [
-    "$1,718",
+    "$1,568",
     "1 bed base rent from"
    ],
    [
@@ -253,7 +253,7 @@
      [
       "1 bed from",
       "$1,299",
-      "$1,718",
+      "$1,568",
       "them"
      ],
      [
@@ -325,8 +325,8 @@
      [
       "1 bed from",
       "$1,580",
-      "$1,718",
-      "them"
+      "$1,568",
+      "us"
      ],
      [
       "2 bed from",
@@ -382,7 +382,7 @@
      [
       "1 bed from",
       "Ask",
-      "$1,718",
+      "$1,568",
       "ask"
      ],
      [
@@ -412,10 +412,10 @@
    }
   ],
   "us": {
-   "special": "Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent, plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager",
+   "special": "Black Friday Flash Sale: move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent (select 1 beds already reduced, no extra month), plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager",
    "from": [
     [
-     "$1,718",
+     "$1,568",
      "1 bed"
     ],
     [
@@ -527,7 +527,7 @@
   "rv": [
    [
     "Fora",
-    "$1,718",
+    "$1,568",
     "$1,987"
    ],
    [
@@ -553,8 +553,8 @@
   ],
   "sr": [],
   "pts": [
-   "Our offer: Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent, plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager.",
-   "The Pearl and Positano list lower starting base rents on smaller homes, so compare size and total on the same lease term.",
+   "Our offer: Black Friday Flash Sale, move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent (select 1 beds already reduced, no extra month), plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager.",
+   "The Pearl lists a lower starting 1 bed base rent, and both list lower 2 bed rents, on smaller homes, so compare size and total on the same lease term.",
    "Our 4.5 Google rating is above The Pearl and Positano. Lead with the speakeasy lounge, bigger homes and free covered parking."
   ],
   "cards": [
@@ -613,12 +613,12 @@
      "Measured"
     ],
     "h": "The Pearl matches our offer",
-    "b": "Fora: Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent, plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager. The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply, minimum lease requirements. Marlowe South Las Vegas: not read on their site today.",
+    "b": "Fora: Black Friday Flash Sale, move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent (select 1 beds already reduced, no extra month), plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager. The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply, minimum lease requirements. Marlowe South Las Vegas: not read on their site today.",
     "src": "Each community’s website · checked 11/24",
     "list": [
      [
       "Fora",
-      "Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent, plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager",
+      "Black Friday Flash Sale: move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent (select 1 beds already reduced, no extra month), plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager",
       "me"
      ],
      [
@@ -708,25 +708,25 @@
    {
     "k": "why",
     "q": "Why are tours not signing?",
-    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>The Pearl and Positano list lower starting base rents. 1 bedroom from: The Pearl $1,299, Positano $1,580, Fora $1,718.</li><li>The Pearl runs a similar no rent until 2027 offer, and Positano posts six weeks free on select 2 bedrooms.</li></ul>What wins them back: our offer (move in now and pay $0 rent until 2027, or 1 month free on a 2027 move in), bigger homes, free covered parking, the speakeasy lounge, our 4.5 rating and a total cost check on the same size and term. Confirm which homes qualify with your manager.",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>The Pearl lists lower starting base rents; Positano is lower on 2 beds only. 1 bedroom from: The Pearl $1,299, Fora $1,568, Positano $1,580.</li><li>The Pearl runs a similar no rent until 2027 offer, and Positano posts six weeks free on select 2 bedrooms.</li></ul>What wins them back: our offer (Black Friday Flash Sale, $0 rent through Dec 31, 2026 or 1 month free on a 2027 move in), bigger homes, free covered parking, the speakeasy lounge, our 4.5 rating and a total cost check on the same size and term. Confirm which homes qualify with your manager.",
     "s": "Each community’s website · checked 11/24"
    },
    {
     "k": "specials",
     "q": "What specials are rivals running?",
-    "a": "The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply, minimum lease requirements. Marlowe South Las Vegas: not read on their site today. Fora: Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free rent, plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager.",
+    "a": "The Pearl at St. Rose: no rent until 2027, restrictions apply. Positano: six weeks free plus a $250 look and lease bonus on select 2 bedrooms, restrictions apply, minimum lease requirements. Marlowe South Las Vegas: not read on their site today. Fora: Black Friday Flash Sale, move in now and pay $0 rent through Dec 31, 2026, or move in during 2027 for 1 month free rent (select 1 beds already reduced, no extra month), plus extra savings for Preferred Employers and First Responders. Confirm which homes qualify with your manager.",
     "s": "Each community’s website · checked 11/24"
    },
    {
     "k": "rivals",
     "q": "Who are we up against?",
-    "a": "The Pearl at St. Rose, 0.35 miles away (1 bed homes from $1,299, no rent until 2027), Positano down Jeffreys St (1 bed homes from $1,580, six weeks free on select 2 bedrooms) and Marlowe South Las Vegas on S Las Vegas Blvd (prices did not load today). Fora 1 bed homes start at $1,718.",
+    "a": "The Pearl at St. Rose, 0.35 miles away (1 bed homes from $1,299, no rent until 2027), Positano down Jeffreys St (1 bed homes from $1,580, six weeks free on select 2 bedrooms) and Marlowe South Las Vegas on S Las Vegas Blvd (prices did not load today). Fora 1 bed homes start at $1,568.",
     "s": "Each community’s website · checked 11/24"
    },
    {
     "k": "price",
     "q": "Are we priced right?",
-    "a": "1 bedroom from: Fora $1,718, The Pearl $1,299, Positano $1,580.<br>2 bedroom from: Fora $1,987, The Pearl $1,388, Positano $1,438.<br>Marlowe prices did not load for today’s check.<br>These are base rents, and our homes are larger. Fora’s website shows totals with $170 in required monthly fees, Positano adds its own mandatory charges, and specials differ, so compare totals on the same size and lease term.",
+    "a": "1 bedroom from: Fora $1,568, The Pearl $1,299, Positano $1,580.<br>2 bedroom from: Fora $1,987, The Pearl $1,388, Positano $1,438.<br>Marlowe prices did not load for today’s check.<br>These are base rents, and our homes are larger. Fora’s website shows totals with $170 in required monthly fees, Positano adds its own mandatory charges, and specials differ, so compare totals on the same size and lease term.",
     "s": "Each community’s website · checked 11/24"
    },
    {
