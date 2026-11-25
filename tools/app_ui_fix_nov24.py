@@ -60,6 +60,8 @@ if 'id="llstars"' not in s:
     s=s.replace('</head>','<style id="llstars">.llst{display:inline-block;position:relative}.llst .e{opacity:.28}.llst .f{position:absolute;left:0;top:0;width:50%;overflow:hidden;white-space:nowrap}</style><script id="llstarsjs">window.llStars=function(r){r=parseFloat(r);if(!(r>=0))return"★★★★★";var n=Math.floor(r),d=r-n,h=0;if(d>=.3&&d<=.7)h=1;else if(d>.7)n+=1;n=Math.min(n,5);var o="";for(var i=0;i<n;i++)o+="★";if(h&&n<5)o+=\'<span class="llst"><span class="e">★</span><span class="f">★</span></span>\';for(var j=n+(h&&n<5?1:0);j<5;j++)o+=\'<span class="llst"><span class="e">★</span></span>\';return o}</script></head>',1)
 if 'id="llpretty"' not in s:
     s=s.replace('</head>','<style id="llpretty">p,li,small,.mcd,.vs,.cen,.sub,.hint,.body,figcaption{text-wrap:pretty}</style></head>',1)
+# lead tracking standard (tools/lead_track.py): one GA4 app_action event per staff lead tap
+import os;sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)));import lead_track;s=lead_track.app(s)
 if len(sys.argv)>2:
     s=re.sub(r"const APPV='[^']*'",f"const APPV='{sys.argv[2]}'",s)
     open(p.replace('index.html','version.txt'),'w').write(sys.argv[2]+'\n')

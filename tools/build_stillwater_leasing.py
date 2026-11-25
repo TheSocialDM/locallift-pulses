@@ -158,6 +158,9 @@ c=c.replace('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wgh
 c=recolor(c);c=mia(c,4)
 c=c.replace('h1{font:700 20px Montserrat,sans-serif;margin:0}','h1{font:400 22px Belgrano,Georgia,serif;margin:0}')
 open(os.path.join(DST,'card/index.html'),'w').write(c)
+# lead tracking standard: lltrack.js on the agent page and card (tools/lead_track.py)
+import sys;sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)));import lead_track
+for f in ['index.html','card/index.html']: lead_track.agent_file(os.path.join(DST,f),'stillwater')
 for f in ['index.html','card/index.html']:
     s=open(os.path.join(DST,f)).read()
     bad=re.findall(r'(?i)montage|tigard|oregon|washington square|971|overland|steward|mercato|#b46e26|#2a1d14|#21170f|hook\.us2|Specials by email',s)

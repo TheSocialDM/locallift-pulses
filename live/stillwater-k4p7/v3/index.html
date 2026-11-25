@@ -404,7 +404,32 @@ nav{background:rgba(28,28,30,.97)!important;border:.5px solid rgba(255,255,255,.
 #gate .err{color:#a3321f;font-size:14px;font-weight:700;margin-top:10px;text-align:center;min-height:1em}#gate .sec{font-size:12.5px;color:#4f5c5f;margin-top:12px}
 body.gated .app{visibility:hidden}
 </style>
-<style id="ll-scrollfix">.box{max-height:min(92dvh,calc(100dvh - env(safe-area-inset-top) - 24px))!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y}.mcs1[data-side="b"]{height:auto!important;min-height:350px}.mcs1.mcbig[data-side="b"]{min-height:420px}.mcs1[data-side="b"] .mcbk{height:auto;min-height:inherit}</style><style id="llnavbg">body::after{content:"";position:fixed;left:0;right:0;bottom:0;height:calc(92px + env(safe-area-inset-bottom));background:linear-gradient(to bottom,transparent,var(--bg) 26%);pointer-events:none;z-index:4}</style><style id="lltopgap">.top .trow{margin-bottom:8px}</style><script id="llnoflash">try{var q=new URLSearchParams(location.search),on=q.get("p")||q.get("invite");for(var i=0;!on&&i<localStorage.length;i++){var k=localStorage.key(i);if(/-invited$/.test(k)&&localStorage.getItem(k))on=1}if(on)document.write("<style id=llnoflashcss>#gate{display:none}</style>")}catch(e){}</script></head>
+<style id="ll-scrollfix">.box{max-height:min(92dvh,calc(100dvh - env(safe-area-inset-top) - 24px))!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y}.mcs1[data-side="b"]{height:auto!important;min-height:350px}.mcs1.mcbig[data-side="b"]{min-height:420px}.mcs1[data-side="b"] .mcbk{height:auto;min-height:inherit}</style><style id="llnavbg">body::after{content:"";position:fixed;left:0;right:0;bottom:0;height:calc(92px + env(safe-area-inset-bottom));background:linear-gradient(to bottom,transparent,var(--bg) 26%);pointer-events:none;z-index:4}</style><style id="lltopgap">.top .trow{margin-bottom:8px}</style><script id="llnoflash">try{var q=new URLSearchParams(location.search),on=q.get("p")||q.get("invite");for(var i=0;!on&&i<localStorage.length;i++){var k=localStorage.key(i);if(/-invited$/.test(k)&&localStorage.getItem(k))on=1}if(on)document.write("<style id=llnoflashcss>#gate{display:none}</style>")}catch(e){}</script><script id="llappact">
+/* LocalLift lead tracking standard: one app_action event per staff lead tap (property, staff, action, detail).
+   No resident or prospect details are sent. Events use transport beacon so they survive the jump to Messages or Mail. */
+(function(){if(window.__llAA)return;window.__llAA=1;var P='stillwater',ME='llsw-me',mom='';
+if(/\/demo\//.test(location.pathname))return;
+var who=function(){var n='';try{n=localStorage.getItem(ME)||''}catch(e){}n=n.replace(/[^A-Za-z .'-]/g,'').trim().split(' ')[0].slice(0,20);return n||'unknown'};
+var A=function(a,d){try{if(typeof gtag==='function')gtag('event','app_action',{property:P,staff:who(),action:a,detail:d||'',transport_type:'beacon'})}catch(x){}};
+window.llAppAction=A;
+var ID={bTour:['tour_start','button'],bTour2:['tour_start','today'],mcTour:['tour_start','dock'],tFin:['tour_finish',''],mcBtn:['card_open','dock'],
+ dSend:['send_day','email'],dCopy:['send_day','copy'],dShare:['send_day','share'],bCap:['snap_open','']};
+document.addEventListener('click',function(e){try{var t=e.target;if(!t||!t.closest)return;
+ var m=t.closest('[data-mc]');if(m){var k=m.getAttribute('data-mc');
+  if(k==='sent'){var kk=m.getAttribute('data-k')||'';if(kk==='text'||kk==='email'||kk==='share')A(kk,'my_card');return}
+  if(k==='page'){A('my_page','my_card');return}
+  if(k==='open'&&!t.closest('#box')){A('card_open','card');return}
+  return}
+ var r=t.closest('button[data-m]');if(r){mom=r.getAttribute('data-m')||'any';A('review_ask',mom);return}
+ var a=t.closest('a[href]');if(a){var hh=(a.getAttribute('href')||'').toLowerCase();
+  if(/^tel:/.test(hh)){A('call','link');return}if(/^sms:/.test(hh)){A('text','link');return}}
+ var b=t.closest('[id]');if(!b)return;var id=b.id;
+ if(id==='qr'){A('review_qr',mom||'any');return}
+ if(id==='snapSend'||id==='snapVid'){if(!b.disabled)A('snap_upload',id==='snapVid'?'video':'photo');return}
+ if(ID[id])A(ID[id][0],ID[id][1]);
+}catch(x){}},true);
+})();
+</script></head>
 <body class="gated">
 <div id="gate"><form id="gf" autocomplete="off"><img src="../logo-umber.png" alt="Stillwater Lakes"><h2>Welcome to LocalLift Live</h2><p id="gmsg">For the Stillwater Lakes team. Your code is in your welcome email.</p><label for="gn">Your first name</label><input id="gn" autocomplete="given-name" required><label for="gc">Your code</label><input id="gc" inputmode="text" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="one-time-code" required><div class="err" id="gerr"></div><button type="submit">Open</button><p class="sec">🔒 Private to your team. Your tour notes stay on this phone.</p></form></div>
 <script>
@@ -771,7 +796,7 @@ ${n>1?`<div class="ra-more">${r.l.slice(1).map(x=>`<button data-goriv="${esc(x.r
 document.addEventListener('click',e=>{if(e.target.closest('#raOk')){sh.classList.remove('on','ra-on');show(cur);return}if(e.target.closest('[data-ra]'))sh.classList.remove('on','ra-on')},true);
 const gateUp=()=>{const g=document.getElementById('gate');return !!(g&&getComputedStyle(g).display!=='none'&&g.offsetParent)};
 const raTry=(n=0)=>{try{const r=RA();if(!r||r.day!==dkey(Date.now()))return;let k='';try{k=localStorage.getItem('llsw-ralert')||''}catch(x){}if(k===r.day)return;if(document.visibilityState!=='visible'||sh.classList.contains('on')||gateUp()){clearTimeout(window.__raT);if(n<400)window.__raT=setTimeout(()=>raTry(n+1),1500);return}raShow(false)}catch(x){}};
-const APPV='2026-11-24s9';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
+const APPV='2026-11-24lt1';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
 const verCheck=()=>fetch('version.txt?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.text():'').then(v=>{v=(v||'').trim();if(v&&v!==APPV&&!busy()){let t='';try{t=sessionStorage.getItem('llsw-rl')||''}catch(x){}if(t===v)return false;try{sessionStorage.setItem('llsw-rl',v)}catch(x){}location.reload();return true}return false}).catch(()=>false);
 const liveCheck=()=>{if(document.visibilityState!=='visible')return;verCheck().then(rl=>{if(rl)return;raTry();fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{if(!D||j.updated===D.updated)return;D=j;const ae=document.activeElement;if(!sh.classList.contains('on')&&!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))show(cur);raTry()}).catch(()=>{})})};
 document.addEventListener('visibilitychange',liveCheck);window.addEventListener('pageshow',e=>{if(e.persisted)liveCheck()});window.addEventListener('focus',liveCheck);setInterval(liveCheck,10*60*1000);
