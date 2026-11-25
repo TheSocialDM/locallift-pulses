@@ -1,0 +1,714 @@
+{
+ "property": "COYA",
+ "city": "Las Vegas, Nevada",
+ "updated": "2026-11-24T17:30:00-07:00",
+ "updatedLabel": "Nov 24, 5:30 pm Phoenix time",
+ "rv": {
+  "rating": "4.9",
+  "count": "59",
+  "vs": "Ainsley at The Collective has 244. Every ask closes the gap."
+ },
+ "feed": [
+  {
+   "src": "COYA website · checked today",
+   "date": "Nov 24",
+   "tone": "good",
+   "title": "Today's offer: up to $2,000 Look and Lease",
+   "body": "coyaliving.com shows Falling Rents plus up to $2,000 in Look and Lease savings, and First Responder or Preferred Employer savings stack on top. Lowest listed base rents today: 1 bedrooms from $1,520 (A7), 2 bedrooms from $1,945 (B3), 3 bedrooms from $2,785 (C2). Totals with the required monthly fees start at $1,724, $2,149 and $2,989. The banner also says 1 bedrooms from $1,460, a price no plan lists today.",
+   "action": "Lead with the Look and Lease savings, then ask if they are a first responder or work for a partner employer."
+  },
+  {
+   "src": "Rival watch · their own sites",
+   "date": "Nov 24",
+   "tone": "info",
+   "title": "Rivals are running bigger free rent offers",
+   "body": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15. Jade: up to 8 weeks free on base rent. Green Leaf Lotus: not read today, ask what they quoted.",
+   "action": "Ask what total monthly price and lease term they were quoted, then compare it with ours on the same terms."
+  },
+  {
+   "src": "Weekly Pulse · Google Maps",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "1st at your front door",
+   "body": "On \"apartments for rent las vegas\" you are 1st at your door, 5th one mile east toward the Strip and 20th one mile south. Inside the top 20 at 3 of 49 map points."
+  },
+  {
+   "src": "Weekly Pulse · AI answers",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "AI answers name you in 15 of 96",
+   "body": "Up from 10 a week earlier. Perplexity 8, Gemini 5 and ChatGPT 2. 8 of them recommend you, and you are listed first in 3, including best apartments near Chinatown Las Vegas."
+  },
+  {
+   "src": "Google reviews",
+   "date": "Nov 20",
+   "tone": "good",
+   "title": "4.9 stars on 59 reviews",
+   "body": "The highest rating on our rival chart, and every review has a reply. Seven arrived in the last 30 days. Count is the gap: Ainsley at The Collective has 244.",
+   "link": "https://www.google.com/maps/place/?q=place_id:ChIJOZZh_l_FyIARsbADxMoG6wI",
+   "linkLabel": "Open COYA reviews on Google"
+  }
+ ],
+ "score": {
+  "index": 67,
+  "prev": 65,
+  "date": "Nov 20 Weekly Pulse",
+  "parts": [
+   [
+    "Reputation",
+    96
+   ],
+   [
+    "Search",
+    79
+   ],
+   [
+    "Map",
+    50
+   ],
+   [
+    "Website",
+    81
+   ],
+   [
+    "AI answers",
+    28
+   ]
+  ]
+ },
+ "tiles": [
+  [
+   "4.9",
+   "Google rating",
+   "59 reviews, read Nov 20"
+  ],
+  [
+   "1st",
+   "At your front door",
+   "Google Maps, Nov 20"
+  ],
+  [
+   "15 of 96",
+   "AI answers name you",
+   "Panel of Nov 20"
+  ],
+  [
+   "3 of 49",
+   "Map points in top 20",
+   "Scan of Nov 20"
+  ]
+ ],
+ "rivals": {
+  "date": "Nov 20 map scan",
+  "rows": [
+   [
+    "Green Leaf Lotus",
+    "4.6",
+    251,
+    1,
+    7
+   ],
+   [
+    "Ainsley at The Collective",
+    "4.6",
+    244,
+    1,
+    11
+   ],
+   [
+    "Jade",
+    "4.3",
+    229,
+    2,
+    12
+   ],
+   [
+    "Hidden Cove",
+    "4.3",
+    220,
+    6,
+    33
+   ],
+   [
+    "Spectra Paradise",
+    "4.5",
+    187,
+    9,
+    16
+   ],
+   [
+    "COYA (you)",
+    "4.9",
+    59,
+    1,
+    3
+   ]
+  ],
+  "note": "Review counts and ranks as the Nov 20 map scan read them."
+ },
+ "ask": {
+  "title": "This week: ask for one review",
+  "moments": [
+   "At every move in",
+   "When a work order is closed"
+  ],
+  "points": [
+   "Ainsley at The Collective has 244 Google reviews to our 59. Our 4.9 rating is the highest around, so every new review counts.",
+   "Ask in person, then send the link the same day.",
+   "One a week is the target."
+  ]
+ },
+ "teamCodeHash": "2c10c23a1e40f21bbb3c0d21f64d38272a9e259693ef8d75066d311637693566",
+ "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJOZZh_l_FyIARsbADxMoG6wI",
+ "trackBase": "https://moveinlocal.com/review/coya/",
+ "asks": {
+  "sent": 0,
+  "opened": 0,
+  "through": "Nov 24"
+ },
+ "shortLink": "moveinlocal.com/review/coya",
+ "talk": {
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24",
+  "offer": "Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top.",
+  "prices": [
+   [
+    "$1,520",
+    "1 bed base rent from"
+   ],
+   [
+    "$1,945",
+    "2 bed base rent from"
+   ],
+   [
+    "$2,785",
+    "3 bed base rent from"
+   ]
+  ],
+  "more": []
+ },
+ "followups": [],
+ "occupancy": null,
+ "snapIdeas": {
+  "month": "November",
+  "items": [
+   [
+    "Sky Lounge at dusk",
+    "The Strip lights coming on behind the windows. Shoot from the back of the room.",
+    "Amenity"
+   ],
+   [
+    "Pool deck, golden hour",
+    "Last light on the water and loungers. Keep residents out of the frame.",
+    "Amenity"
+   ],
+   [
+    "Firepit lounge night",
+    "Fire on, a slow pan for a reel.",
+    "Amenity"
+   ],
+   [
+    "Pet spa in action",
+    "A happy dog after a bath. Ask the owner first.",
+    "Pets"
+   ],
+   [
+    "Chinatown eats",
+    "A favorite plate from a spot on Spring Mountain Road, minutes away.",
+    "Local"
+   ],
+   [
+    "National Finals Rodeo",
+    "Dec 3 to 12 at the Thomas and Mack Center.",
+    "Event"
+   ],
+   [
+    "City holiday tree lighting",
+    "Dec 4 at the Las Vegas Civic Center, 5 pm, tree lit at 6:10 pm.",
+    "Event"
+   ]
+  ]
+ },
+ "compete": {
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24",
+  "items": [
+   {
+    "name": "Green Leaf Lotus",
+    "where": "Procyon St, in Chinatown",
+    "special": "Not read today. Ask what they were quoted",
+    "from": [],
+    "fees": "We could not find a site of their own with prices for today's check. Ask what total monthly price and lease term they were quoted.",
+    "tip": "They are right around the corner and carry more reviews. Our 4.9 rating is higher than their 4.6. Lead with the Sky Lounge Strip views, the pet spa and dog park, and Look and Lease savings.",
+    "vs": [
+     [
+      "Special",
+      "Ask",
+      "Up to $2,000 Look and Lease",
+      "ask"
+     ],
+     [
+      "1 bed from",
+      "Ask",
+      "$1,520",
+      "ask"
+     ],
+     [
+      "2 bed from",
+      "Ask",
+      "$1,945",
+      "ask"
+     ],
+     [
+      "Google rating",
+      "4.6 (251)",
+      "4.9 (59)",
+      "us"
+     ]
+    ],
+    "basis": "Their rating: Google map scan of Nov 20. Their prices and special were not read today.",
+    "url": "https://www.google.com/maps/search/?api=1&query=Green+Leaf+Lotus+Las+Vegas",
+    "feesChecked": "Nov 24",
+    "checked": "Nov 24",
+    "checkedIso": "2026-11-24"
+   },
+   {
+    "name": "Jade",
+    "where": "W Twain Ave, near Valley View",
+    "special": "Up to 8 weeks free on base rent, restrictions apply",
+    "from": [
+     [
+      "$1,480",
+      "1 bed"
+     ],
+     [
+      "$1,855",
+      "2 bed"
+     ]
+    ],
+    "fees": "Monthly charges are added on top of base rent: their own fee list shows a 1 bed at $1,480 to $1,510 reaching $1,854 to $1,884 a month. Deposit and pet fees not read.",
+    "tip": "Their base rent starts lower, but their monthly charges add about $375 on a 1 bed. Ask what total they were quoted. Our total with required fees starts at $1,724 for a 1 bed, plus the Sky Lounge, pet spa and dog park.",
+    "vs": [
+     [
+      "Special",
+      "Up to 8 weeks free",
+      "Up to $2,000 Look and Lease",
+      "them"
+     ],
+     [
+      "1 bed from",
+      "$1,480",
+      "$1,520",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,855",
+      "$1,945",
+      "them"
+     ],
+     [
+      "Google rating",
+      "4.3 (229)",
+      "4.9 (59)",
+      "us"
+     ],
+     [
+      "Pet rent",
+      "Not posted",
+      "$50/mo",
+      "ask"
+     ]
+    ],
+    "basis": "Their prices: lowest base rent on mark-taylor.com. The 2 bed price is a listed plan with a waitlist. Monthly charges are added on top.",
+    "url": "https://www.mark-taylor.com/apartments/nv/las-vegas/jade-apartments/floor-plans",
+    "feesChecked": "Nov 24",
+    "checked": "Nov 24",
+    "checkedIso": "2026-11-24"
+   },
+   {
+    "name": "Ainsley at The Collective",
+    "where": "Paradise Rd, east of the Strip",
+    "special": "Up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply",
+    "from": [
+     [
+      "$1,326",
+      "1 bed"
+     ],
+     [
+      "$1,843",
+      "2 bed"
+     ]
+    ],
+    "fees": "Studios from $1,251 base rent. $250 deposit plus a $250 refundable security deposit, $60 application, $300 admin fee, $250 cleaning fee. Pets $50 a month plus a $300 pet fee.",
+    "tip": "Their rents start lower and their special is bigger, but they add a $300 admin fee and a $250 cleaning fee at move in. Ask for their total and lease term. Our pet fee is $0, and our 4.9 rating beats their 4.6.",
+    "vs": [
+     [
+      "Special",
+      "Up to 10 weeks free + $1,000 gift card",
+      "Up to $2,000 Look and Lease",
+      "them"
+     ],
+     [
+      "1 bed from",
+      "$1,326",
+      "$1,520",
+      "them"
+     ],
+     [
+      "2 bed from",
+      "$1,843",
+      "$1,945",
+      "them"
+     ],
+     [
+      "Google rating",
+      "4.6 (244)",
+      "4.9 (59)",
+      "us"
+     ],
+     [
+      "Pet rent",
+      "$50/mo",
+      "$50/mo",
+      "even"
+     ],
+     [
+      "Pet fee",
+      "$300",
+      "$0",
+      "us"
+     ]
+    ],
+    "basis": "Their prices: lowest base rent on elysianliving.com, read today. Fees from their own floor plan page.",
+    "url": "https://www.elysianliving.com/property/ainsley-at-the-collective/floor-plans",
+    "feesChecked": "Nov 24",
+    "checked": "Nov 24",
+    "checkedIso": "2026-11-24"
+   }
+  ],
+  "us": {
+   "special": "Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top",
+   "from": [
+    [
+     "$1,520",
+     "1 bed"
+    ],
+    [
+     "$1,945",
+     "2 bed"
+    ]
+   ],
+   "pets": "$50 a month pet rent per pet, $300 refundable pet deposit per pet, $0 pet fee, up to 3 pets, no weight limits, some breed restrictions, PetScreening profile required",
+   "showoff": [
+    "Sky Lounge with panoramic Strip views",
+    "Resort style pool",
+    "BBQ grills and firepit lounge",
+    "24 hour fitness center",
+    "Co working space",
+    "Club Room",
+    "Pet spa and dog park",
+    "Reserved covered parking",
+    "Gated, access controlled",
+    "EV charging",
+    "Smart package lockers",
+    "10 foot ceilings",
+    "Full size washer and dryer",
+    "Smart thermostat and doorbell camera"
+   ],
+   "specialShort": "Up to $2,000 in Look and Lease savings",
+   "ends": "",
+   "basis": "Our prices are base rents on a 12 month lease. Totals with required monthly fees start $204 higher. Lease terms differ by community, so confirm the term before quoting a difference."
+  },
+  "changes": []
+ },
+ "uploadUrl": "https://www.dropbox.com/request/g9wuyzsz9is4olc5ebsk",
+ "dbxFolder": "Coya Apartments",
+ "reminders": [
+  {
+   "where": "events",
+   "emoji": "🤠",
+   "fx": "spark",
+   "title": "National Finals Rodeo starts Thursday, Dec 3",
+   "body": "Dec 3 to 12 at the Thomas and Mack Center. Expect busy evenings in town. Mention it on tours.",
+   "iso": "2026-12-03",
+   "cta": "See the event page ›",
+   "url": "https://travelnevada.com/events/32227/national-finals-rodeo-las-vegas"
+  }
+ ],
+ "shots": [
+  {
+   "img": "view",
+   "title": "Strip views from the lounge",
+   "tag": "Amenity",
+   "tip": "Late afternoon light. Shoot from the back of the room so the windows and skyline fill the frame.",
+   "wide": true
+  },
+  {
+   "img": "lounge",
+   "title": "Sky Lounge with a view",
+   "tag": "Amenity",
+   "tip": "Get low across the sofas and keep the windows in the shot."
+  },
+  {
+   "img": "club",
+   "title": "Club Room glow",
+   "tag": "Cozy",
+   "tip": "Overhead lights off, lamps on. The lit screens make a great backdrop."
+  },
+  {
+   "img": "gym",
+   "title": "Morning workout",
+   "tag": "Amenity",
+   "tip": "Early light, equipment in focus. A 5 second slow pan makes a great reel."
+  },
+  {
+   "img": "kitchen",
+   "title": "Kitchen details",
+   "tag": "Home",
+   "tip": "Close ups sell: quartz counters, the gas range, a bowl of fruit."
+  }
+ ],
+ "notice": {
+  "id": "2026-11-24-welcome",
+  "until": "2026-12-01",
+  "emoji": "👋",
+  "title": "Welcome to LocalLift Live",
+  "points": [
+   "Today's talk track, rival prices and objections and answers update every morning.",
+   "Start a tour from the Tour tab and tap what you show. It all lands on Send my day to my desk.",
+   "Ask for a Google review at every move in and closed work order. Show the QR code, it takes under 30 seconds."
+  ],
+  "act": "tour",
+  "cta": "Open Tour mode ›"
+ },
+ "market": {
+  "rvh": [
+   "Community",
+   "1 bed from",
+   "2 bed from"
+  ],
+  "rv": [
+   [
+    "COYA",
+    "$1,520",
+    "$1,945"
+   ],
+   [
+    "Jade",
+    "$1,480",
+    "$1,855"
+   ],
+   [
+    "Ainsley at The Collective",
+    "$1,326",
+    "$1,843"
+   ],
+   [
+    "Green Leaf Lotus",
+    "Ask",
+    "Ask"
+   ]
+  ],
+  "srh": [
+   "Source",
+   "Visits",
+   "Leads"
+  ],
+  "sr": [],
+  "pts": [
+   "Our offer: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top.",
+   "Jade and Ainsley list lower starting base rents, and both add charges on top, so ask what total and term they were quoted.",
+   "Our 4.9 Google rating is the highest of the rivals here. Lead with the Sky Lounge Strip views, the pet spa and a $0 pet fee."
+  ],
+  "cards": [
+   {
+    "lab": "WHERE WE STAND OUT",
+    "p": [
+     "new",
+     "New"
+    ],
+    "h": "Use these on every tour",
+    "b": "Sky Lounge with panoramic Strip views, Resort style pool, BBQ grills and firepit lounge, 24 hour fitness center, Co working space, Club Room, Pet spa and dog park, Reserved covered parking.",
+    "src": "COYA and rival websites · checked 11/24",
+    "cmp": {
+     "cols": [
+      "COYA",
+      "Jade",
+      "Ainsley"
+     ],
+     "rows": [
+      [
+       "Google rating",
+       "4.9 (59)",
+       "4.3 (229)",
+       "4.6 (244)"
+      ],
+      [
+       "Pet fee",
+       "$0",
+       "Not posted",
+       "$300"
+      ],
+      [
+       "Pet rent",
+       "$50/mo",
+       "Not posted",
+       "$50/mo"
+      ]
+     ]
+    },
+    "chips": [
+     "Sky Lounge with panoramic Strip views",
+     "Resort style pool",
+     "BBQ grills and firepit lounge",
+     "24 hour fitness center",
+     "Co working space",
+     "Club Room",
+     "Pet spa and dog park",
+     "Reserved covered parking"
+    ],
+    "note": "COYA has the Sky Lounge with Strip views, a pet spa and dog park, and a $0 pet fee. Ask rivals what they charge at move in."
+   },
+   {
+    "lab": "SPECIALS WATCH",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Ainsley and Jade lead with free weeks",
+    "b": "COYA: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top. Ainsley: up to 10 weeks free plus a $1,000 gift card, move in by dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Green Leaf Lotus: not read today.",
+    "src": "Each community’s website · checked 11/24",
+    "list": [
+     [
+      "COYA",
+      "Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top",
+      "me"
+     ],
+     [
+      "Ainsley at The Collective",
+      "Up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply",
+      ""
+     ],
+     [
+      "Jade",
+      "Up to 8 weeks free on base rent, restrictions apply",
+      ""
+     ],
+     [
+      "Green Leaf Lotus",
+      "Not read today. Ask what they were quoted",
+      ""
+     ]
+    ]
+   },
+   {
+    "lab": "PRICE CHECK",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Jade and Ainsley list lower starting rents",
+    "t": "rivals",
+    "src": "Each community’s website · checked 11/24",
+    "more": "Base rents. Jade adds about $375 in monthly charges on a 1 bed, and Ainsley adds a $300 admin fee and a $250 cleaning fee at move in, so ask what total and term they were quoted. Green Leaf Lotus prices were not read today."
+   },
+   {
+    "lab": "GOOGLE REVIEWS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Our 4.9 beats every rival on this page",
+    "b": "Our rating is 4.9 from 59 Google reviews. Green Leaf Lotus is at 4.6 (251), Ainsley 4.6 (244) and Jade 4.3 (229).",
+    "src": "Google map scan · Nov 20",
+    "stats": [
+     [
+      "4.9",
+      "Our Google rating"
+     ],
+     [
+      "59",
+      "Our reviews"
+     ],
+     [
+      "244",
+      "Ainsley reviews"
+     ]
+    ],
+    "note": "Rivals have more reviews. Every review we ask for keeps our lead and closes the count gap."
+   },
+   {
+    "lab": "AI ANSWERS",
+    "p": [
+     "s",
+     "Signal"
+    ],
+    "h": "AI assistants name COYA",
+    "b": "Named in 15 of 96 answers to renter questions, up from 10 a week earlier.",
+    "src": "AI answer panel · Nov 20",
+    "stats": [
+     [
+      "15",
+      "of 96 AI answers name you"
+     ]
+    ]
+   }
+  ],
+  "ex": [
+   {
+    "k": "edge",
+    "q": "Where do we stand out against rivals?",
+    "a": "From the COYA website: Sky Lounge with panoramic Strip views, Resort style pool, BBQ grills and firepit lounge, 24 hour fitness center, Co working space, Club Room, Pet spa and dog park, Reserved covered parking, gated, access controlled, EV charging, Smart package lockers, 10 foot ceilings, Full size washer and dryer, Smart thermostat and doorbell camera.<ul><li>Google rating: 4.9 on 59 reviews, the highest of the communities on this page.</li><li>Pets: $50 a month, a $300 refundable pet deposit and no pet fee, no weight limits, up to 3 pets.</li><li>Every 2 bedroom has two baths.</li></ul>",
+    "s": "COYA and rival websites · checked 11/24"
+   },
+   {
+    "k": "ops",
+    "q": "Who showed the tour? Pending service requests?",
+    "a": "Tour agents and service requests live in your property management system, which is not connected to this app. Tours you log in Tour mode are on your desk list.",
+    "s": "LocalLift Live"
+   },
+   {
+    "k": "why",
+    "q": "Why are tours not signing?",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Jade and Ainsley list lower starting base rents. 1 beds: Ainsley $1,326, Jade $1,480, ours $1,520.</li><li>Ainsley posts up to 10 weeks free plus a $1,000 gift card, and Jade up to 8 weeks free.</li></ul>What wins them back: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top, the Sky Lounge with Strip views, our 4.9 rating and a total cost check (both add charges on top of base rent).",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "specials",
+    "q": "What specials are rivals running?",
+    "a": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Green Leaf Lotus: not read today. COYA: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "rivals",
+    "q": "Who are we up against?",
+    "a": "Green Leaf Lotus around the corner on Procyon St, Jade on W Twain Ave (1 beds from $1,480, up to 8 weeks free) and Ainsley at The Collective on Paradise Rd (1 beds from $1,326, up to 10 weeks free plus a gift card). COYA 1 beds start at $1,520.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "price",
+    "q": "Are we priced right?",
+    "a": "1 bed from: COYA $1,520, Jade $1,480, Ainsley $1,326.<br>2 bed from: COYA $1,945, Jade $1,855 (waitlist plan), Ainsley $1,843.<br>Green Leaf Lotus prices were not read today.<br>These are base rents. COYA’s website shows totals with $204 in required monthly fees, Jade and Ainsley add their own charges, and specials differ, so compare totals on the same lease term.",
+    "s": "Each community’s website · checked 11/24"
+   },
+   {
+    "k": "reviews",
+    "q": "How are our reviews?",
+    "a": "4.9 stars from 59 Google reviews, every one answered. Green Leaf Lotus 4.6 (251), Ainsley 4.6 (244), Jade 4.3 (229). Every review request counts.",
+    "s": "Google map scan · Nov 20"
+   },
+   {
+    "k": "ai",
+    "q": "Is AI sending renters our way?",
+    "a": "AI assistants named COYA in 15 of 96 answers to renter questions, including first pick on Gemini for best apartments near Chinatown Las Vegas.",
+    "s": "AI answer panel · Nov 20"
+   }
+  ],
+  "line": "Specials today: Ainsley up to 10 weeks free, Jade up to 8 weeks free.",
+  "briefSrc": "Websites checked 11/24 · Google scan Nov 20",
+  "checked": "Nov 24",
+  "checkedIso": "2026-11-24"
+ }
+}

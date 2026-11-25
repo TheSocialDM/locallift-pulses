@@ -1,0 +1,10 @@
+{
+ "about": "LocalLift Live COYA access. staff = active personal code hashes. Remove a hash to lock that phone. staffOnly true retires the shared team link. notes = one time messages, to all or to listed hashes.",
+ "staffOnly": false,
+ "staff": [
+  "0d67916b935d79c16d6b4d8b22ed12239c1f5a95667a6541d80d7b50f67043ee",
+  "9bc2fd7b2d94789d56484c60a19e4278211f912e4863f2fc29b5c8616241d5b7",
+  "1a4738e6721f95d0021e9d2af2c0009fedf3eef423ed828179f08e6a7674b23a"
+ ],
+ "notes": []
+}
