@@ -31,7 +31,7 @@ KIT=r"""const KIT=[
 ['The deposit is too high.','Let me pull up your full move in cost so you see the exact number. Some communities add admin and cleaning fees on top, so it’s worth comparing the total.','Use the website pricing for the exact number. Never quote from memory.']],'o'],
 ['⚔️','Comparing',[
 ['Ainsley has 10 weeks free.','They do run a big special. Ask what total monthly price they quoted, since they add a $300 admin fee and a $250 cleaning fee at move in, plus about $162 a month in required charges and a $65 membership fee. Here you get {sp}, a $0 pet fee and the Sky Lounge with Strip views.','Agree first, then compare totals on the same lease term.'],
-['Jade is cheaper.','Their 1 bedrooms do start lower on base rent, at {ja1}, and their monthly charges are added on top. Let’s compare totals side by side. Here you get {sp}, plus a pet spa and dog park.','Agree first, then compare. Never knock them.'],
+['Jade is cheaper.','They may quote a lower base rent, and their monthly charges are added on top. Let’s compare totals side by side. Here you get {sp}, plus a pet spa and dog park.','Agree first, then compare. Ask what they quoted. Never knock them.'],
 ['I’m also looking at Green Leaf Lotus.','Great to compare, they’re right around the corner. Ask what total monthly price and lease term they quoted. Right now we have {sp}.','If they mention a special there, ask what they were quoted.'],
 ['I want to shop around.','Of course. Can I email you today’s offer and the homes you liked so you can compare side by side?','Get their email before they leave.']],'o'],
 ['📏','Size and fit',[
@@ -150,7 +150,7 @@ for a,b in [('background:linear-gradient(135deg,#1a73e8,#4c8df6)!important','bac
     sub(a,b)
 t=t.replace('Numbers update every morning','Prices and specials update every morning')
 if 'id="llcosheet"' not in t:
-    t=t.replace('</head>','<style id="llcosheet">.sheet{position:fixed;inset:0;height:100vh;height:100dvh;scrollbar-width:none}.sheet::-webkit-scrollbar,.sheet .box::-webkit-scrollbar{display:none}.sheet .box{scrollbar-width:none}html:has(.sheet.on),body:has(.sheet.on){overflow:hidden}@media (prefers-color-scheme:dark){#mcBtn{border:1px solid rgba(255,255,255,.12)}}</style></head>',1)
+    t=t.replace('</head>','<style id="llcosheet">.sheet{position:fixed;inset:0;height:100vh;height:100dvh;scrollbar-width:none}.sheet::-webkit-scrollbar,.sheet .box::-webkit-scrollbar{display:none}.sheet .box{scrollbar-width:none}#view b,#view h2,#view h3,#view h4,#view .wt b,.sheet h3,.sheet h4{text-wrap:balance}html:has(.sheet.on),body:has(.sheet.on){overflow:hidden}@media (prefers-color-scheme:dark){#mcBtn{border:1px solid rgba(255,255,255,.16)!important}}</style></head>',1)
 os.makedirs(os.path.join(R,'live',FOLDER,'v3'),exist_ok=True)
 SP=os.path.join(R,'live',FOLDER,'v3','index.html')
 open(SP,'w').write(t)

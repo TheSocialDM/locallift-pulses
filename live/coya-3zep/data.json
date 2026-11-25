@@ -13,7 +13,7 @@
    "src": "COYA website · checked today",
    "date": "Nov 24",
    "tone": "good",
-   "title": "Today's offer: up to $2,000 Look and Lease",
+   "title": "Today's offer: up to $2,000 Look and Lease",
    "body": "coyaliving.com shows Falling Rents plus up to $2,000 in Look and Lease savings, and First Responder or Preferred Employer savings stack on top. Lowest listed base rents today: 1 bedroom from $1,520 (A7), 2 bedroom from $1,945 (B3), 3 bedroom from $2,785 (C2). Totals with the required monthly fees start at $1,724, $2,149 and $2,989. The banner also says 1 bedroom from $1,460, a price no plan lists today.",
    "action": "Lead with the Look and Lease savings, then ask if they are a first responder or work for a partner employer."
   },
@@ -274,18 +274,9 @@
     "name": "Jade",
     "where": "W Twain Ave, near Valley View",
     "special": "Up to 8 weeks free on base rent, restrictions apply",
-    "from": [
-     [
-      "$1,480",
-      "1 bed"
-     ],
-     [
-      "$1,855",
-      "2 bed"
-     ]
-    ],
-    "fees": "Price not confirmed today. Their fee list has shown monthly charges on top of base rent, taking a 1 bed at $1,480 to $1,510 to $1,854 to $1,884 a month. Deposit and pet fees not read.",
-    "tip": "Their base rent starts lower, but their monthly charges add about $375 on a 1 bed. Ask what total they were quoted. Our total with required fees starts at $1,724 for a 1 bed, plus the Sky Lounge, pet spa and dog park.",
+    "from": [],
+    "fees": "Prices not confirmed today, because their site loads prices by script. Ask what total monthly price they were quoted. Deposit and pet fees not read.",
+    "tip": "They lead with up to 8 weeks free. Ask what total monthly price and lease term they were quoted. Our total with required fees starts at $1,724 for a 1 bed, plus the Sky Lounge, pet spa and dog park.",
     "vs": [
      [
       "Special",
@@ -295,15 +286,15 @@
      ],
      [
       "1 bed from",
-      "$1,480",
+      "Ask",
       "$1,520",
-      "them"
+      "ask"
      ],
      [
       "2 bed from",
-      "$1,855",
+      "Ask",
       "$1,945",
-      "them"
+      "ask"
      ],
      [
       "Google rating",
@@ -318,7 +309,7 @@
       "ask"
      ]
     ],
-    "basis": "Their prices: lowest base rent listed on mark-taylor.com, price not confirmed today because their site loads prices by script. The 2 bed price is a listed plan with a waitlist. Monthly charges are added on top. Their up to 8 weeks free special is confirmed.",
+    "basis": "Their prices were not confirmed today because their site loads prices by script. Their up to 8 weeks free special is confirmed on mark-taylor.com.",
     "url": "https://www.mark-taylor.com/apartments/nv/las-vegas/jade-apartments/floor-plans",
     "checked": "special Nov 24, prices not confirmed today"
    },
@@ -491,9 +482,9 @@
     "$1,945"
    ],
    [
-    "Jade (not confirmed today)",
-    "$1,480",
-    "$1,855"
+    "Jade",
+    "Ask",
+    "Ask"
    ],
    [
     "Ainsley at The Collective",
@@ -514,7 +505,7 @@
   "sr": [],
   "pts": [
    "Our offer: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top.",
-   "Jade and Ainsley list lower starting base rents, and both add charges on top, so ask what total and term they were quoted.",
+   "Ainsley lists lower starting base rents and adds charges on top. Jade prices were not confirmed today. Ask what total and term they were quoted.",
    "Our 4.9 Google rating is the highest of the rivals here. Lead with the Sky Lounge Strip views, the pet spa and a $0 pet fee."
   ],
   "cards": [
@@ -605,10 +596,10 @@
      "m",
      "Measured"
     ],
-    "h": "Jade and Ainsley list lower starting base rents",
+    "h": "Ainsley lists lower starting base rents",
     "t": "rivals",
     "src": "COYA and Ainsley websites checked 11/24 · Jade special confirmed, prices not confirmed today",
-    "more": "Base rents. Jade adds about $375 in monthly charges on a 1 bed, and Ainsley adds about $162 a month in required charges plus a $300 admin fee, a $250 cleaning fee and a $65 membership fee, so ask what total and term they were quoted. Jade prices are as last listed and not confirmed today. Green Leaf Lotus prices were not read today."
+    "more": "Base rents. Ainsley adds about $162 a month in required charges plus a $300 admin fee, a $250 cleaning fee and a $65 membership fee, so ask what total and term they were quoted. Jade prices were not confirmed today, and Green Leaf Lotus prices were not read today."
    },
    {
     "lab": "GOOGLE REVIEWS",
@@ -668,7 +659,7 @@
    {
     "k": "why",
     "q": "Why are tours not signing?",
-    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Jade and Ainsley list lower starting base rents. 1 bedroom from: Ainsley $1,326, Jade $1,480, ours $1,520.</li><li>Ainsley posts up to 10 weeks free plus a $1,000 gift card, and Jade up to 8 weeks free.</li></ul>What wins them back: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top, the Sky Lounge with Strip views, our 4.9 rating and a total cost check (both add charges on top of base rent).",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Ainsley lists lower starting base rents: 1 bedroom from $1,326, ours $1,520. Jade prices were not confirmed today.</li><li>Ainsley posts up to 10 weeks free plus a $1,000 gift card, and Jade up to 8 weeks free.</li></ul>What wins them back: Up to $2,000 in Look and Lease savings, plus First Responder or Preferred Employer savings that stack on top, the Sky Lounge with Strip views, our 4.9 rating and a total cost check (both add charges on top of base rent).",
     "s": "COYA and Ainsley websites checked 11/24 · Jade special confirmed, prices not confirmed today"
    },
    {
@@ -680,13 +671,13 @@
    {
     "k": "rivals",
     "q": "Who are we up against?",
-    "a": "Green Leaf Lotus around the corner on Procyon St, Jade on W Twain Ave (1 bedroom from $1,480, up to 8 weeks free) and Ainsley at The Collective on Paradise Rd (1 bedroom from $1,326, up to 10 weeks free plus a gift card). COYA’s 1 bedroom starts at $1,520.",
+    "a": "Green Leaf Lotus around the corner on Procyon St, Jade on W Twain Ave (up to 8 weeks free, prices not confirmed today) and Ainsley at The Collective on Paradise Rd (1 bedroom from $1,326, up to 10 weeks free plus a gift card). COYA’s 1 bedroom starts at $1,520.",
     "s": "COYA and Ainsley websites checked 11/24 · Jade special confirmed, prices not confirmed today"
    },
    {
     "k": "price",
     "q": "Are we priced right?",
-    "a": "1 bed from: COYA $1,520, Jade $1,480, Ainsley $1,326.<br>2 bed from: COYA $1,945, Jade $1,855 (waitlist plan), Ainsley $1,843.<br>Jade prices are as last listed and not confirmed today. Green Leaf Lotus prices were not read today.<br>These are base rents. COYA’s website shows totals with $204 in required monthly fees, Jade and Ainsley add their own charges, and specials differ, so compare totals on the same lease term.",
+    "a": "1 bed from: COYA $1,520, Ainsley $1,326.<br>2 bed from: COYA $1,945, Ainsley $1,843.<br>Jade prices were not confirmed today, so they are left out. Green Leaf Lotus prices were not read today.<br>These are base rents. COYA’s website shows totals with $204 in required monthly fees, Jade and Ainsley add their own charges, and specials differ, so compare totals on the same lease term.",
     "s": "COYA and Ainsley websites checked 11/24 · Jade special confirmed, prices not confirmed today"
    },
    {
