@@ -78,7 +78,7 @@ body{font-family:Questrial,system-ui,sans-serif}h1,h2,h3{font-family:Montserrat,
 
   <section class="offer" id="offer">
     <small>Current specials</small>
-    <h2 id="offH">$0 rent until 2027 when you move in now</h2>
+    <h2 id="offH">$0 rent until 2027 when you move&nbsp;in now</h2>
     <p id="offP">Moving in during 2027? Get 1 month free rent. The leasing team confirms which homes qualify.</p>
     <a class="btn" href="https://www.foravegas.com/floorplans" target="_blank" rel="noopener">See available homes</a>
   </section>
@@ -133,7 +133,7 @@ $('#vcf').href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v);
 $('#share').addEventListener('click',function(){var d={title:'Fora in Las Vegas',text:'Take a look at Fora with me.',url:url};if(navigator.share){navigator.share(d).catch(function(){})}else{navigator.clipboard.writeText(url).then(function(){toast('Link copied. Paste it in a text.')},function(){toast(url)})}});
 // live prices and special from the morning refresh
 fetch('../../../live/fora-50r1/data.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){var t=d&&d.talk,u=d&&d.compete&&d.compete.us;if(!t)return;
- var s=u&&u.specialShort||'';if(s&&!/no special/i.test(s)){$('#offH').textContent=s;$('#offP').textContent=/2027/.test(t.offer||'')?'Moving in during 2027? Get 1 month free rent. The leasing team confirms which homes qualify.':'The leasing team confirms which homes qualify.'}else if(/no special/i.test(t.offer||'')){$('#offH').textContent='Ask about this month\'s specials';$('#offP').textContent='Specials change often. The leasing team will share what is available today.'}
+ var s=u&&u.specialShort||'';if(s&&!/no special/i.test(s)){$('#offH').textContent=s.replace(/move in/g,'move in');$('#offP').textContent=/2027/.test(t.offer||'')?'Moving in during 2027? Get 1 month free rent. The leasing team confirms which homes qualify.':'The leasing team confirms which homes qualify.'}else if(/no special/i.test(t.offer||'')){$('#offH').textContent='Ask about this month\'s specials';$('#offP').textContent='Specials change often. The leasing team will share what is available today.'}
  var m={'1 bed base rent from':'1 bedroom','2 bed base rent from':'2 bedroom','3 bed base rent from':'3 bedroom'},h='';(t.prices||[]).forEach(function(p){if(m[p[1]])h+='<div class="plan"><b>'+m[p[1]]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'});(t.more||[]).forEach(function(p){h+='<div class="plan"><b>'+p[1]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'});if(h)$('#plans').innerHTML=h;
  if(t.checked)$('#asof').firstChild.textContent='Starting base rents from foravegas.com on '+t.checked+', 2026, and they change often. '}).catch(function(){});
 })();

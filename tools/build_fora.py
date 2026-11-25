@@ -68,7 +68,7 @@ KIT=r"""const KIT=[
 ['Is the special still going?','Yes. Move in now and pay $0 rent until 2027, or move in during 2027 for 1 month free. Want to see which homes qualify?','Select homes already have a reduced rent and do not get the extra free month. Check with your manager.'],
 ['Is internet included?','Every home is Cox internet and cable ready. Let me show you the exact monthly cost for the home you like.','Never promise internet is included.'],
 ['Do you have furnished homes?','Yes, we have furnished home options. Let me check which homes and what they cost.','Confirm the price with your manager.'],
-['Do you work with employers?','Let me check with my manager what savings we have for your employer or for first responders.','Never promise a discount. Confirm it first.']],'q'],
+['Do you work with employers?','Yes. Fora advertises extra savings for Preferred Employers and First Responders. Let me check what applies to you.','Confirm which homes qualify with your manager.']],'q'],
 [LI('cal'),'Holds and move in',[
 ['Can you hold a home for me?','Let me check what holding options we have today.','Never promise a hold. Check with your manager.'],
 ['When can I move in?','Let me check the exact move in date for the home you like.','Check the move in date for that home before you say it.']],'q'],
@@ -93,6 +93,7 @@ i=t.find('const KIT=[');j=t.find("let kitTab='o';",i);assert i>0 and j>i
 t=t[:i]+KIT+'\n'+t[j:]
 sub(".replace(/{ja1}/g,f('Jade','1 bed from')).replace(/{ai1}/g,f('Ainsley at The Collective','1 bed from'))",".replace(/{pe1}/g,f('The Pearl at St. Rose','1 bed from')).replace(/{po1}/g,f('Positano','1 bed from'))",1)
 sub("|jade|ainsley|collective|flatiron|","|pearl|positano|marlowe|",1)
+sub('Numbers update every morning.','Prices and specials update every morning.',1)
 # ---- phone (number on foravegas.com), place
 t=t.replace("(702) 935-6015","(725) 209-4665").replace('+17029356015','+17252094665').replace('7029356015','7252094665')
 # ---- names, paths, keys, salt
@@ -140,6 +141,24 @@ SP=os.path.join(R,'live',FOLDER,'v3','index.html')
 open(SP,'w').write(t)
 open(os.path.join(R,'live',FOLDER,'v3','version.txt'),'w').write(APPV+'\n')
 subprocess.run([sys.executable,os.path.join(R,'tools/app_ui_fix_nov24.py'),SP],check=True)
+
+# ---- Fora Editor fixes (Nov 24): no leftover blue on buttons and pills; clay primary, sand secondary, light and dark
+FX="""<style id="forafx">
+.prt,.lt .prt{background:#f3e5de!important;color:#7a4038!important}
+.dskh svg{stroke:#7a4038!important}
+.dskb button{background:#f3e5de!important;color:#7a4038!important}
+.dskb button:first-child{background:linear-gradient(135deg,#7a4038,#5e2f2a)!important;color:#fff!important}
+.mcsee{background:linear-gradient(135deg,#7a4038,#5e2f2a)!important;color:#fff!important;animation-name:foglow!important}
+@keyframes foglow{0%,100%{box-shadow:0 0 0 0 rgba(122,64,56,.5),0 6px 18px rgba(122,64,56,.3)}50%{box-shadow:0 0 0 8px rgba(122,64,56,0),0 6px 22px rgba(122,64,56,.45)}}
+#llnote button{background:linear-gradient(135deg,#7a4038,#5e2f2a)!important}#llnote .nk{color:#7a4038!important}
+.akx span:not(.l){white-space:nowrap}
+@media (prefers-color-scheme:dark){.prt,.lt .prt,.dskb button{background:#f3e5de!important;color:#7a4038!important}.dskb button:first-child,.mcsee{background:linear-gradient(135deg,#7a4038,#5e2f2a)!important;color:#fff!important}.dskh svg{stroke:#e2b8a8!important}#llnote .nk{color:#e2b8a8!important}}
+@media (prefers-reduced-motion:reduce){.mcsee{animation:none!important}}
+</style>"""
+t=open(SP).read()
+if 'id="forafx"' not in t:
+    i=t.rfind('</body>');t=t[:i]+FX+t[i:]
+open(SP,'w').write(t)
 t=open(SP).read()
 print('built',len(t),'APPV',APPV,'swept',sum(SW.values()))
 bad=re.findall(r'(?i)montage|tigard|oregon|stillwater|kissimmee|florida|lura|coya|harmon|the hive|jade|ainsley|flatiron|poppins|\(702\)|702[ -]\d{3}|lllu|x5r9',t)

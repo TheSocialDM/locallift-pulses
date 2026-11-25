@@ -43,8 +43,18 @@ if 'id="bMe" data-where="card"' not in s:
     mcol=re.search(r'<button class="gl" id="bMe" style="[^"]*color:(#[0-9a-fA-F]{3,6})',s)
     col=mcol.group(1) if mcol else '#0b4a6b'
     s=s.replace("${me?'':'<div class=\"mcnm\">","${me?'<button class=\"gl\" id=\"bMe\" data-where=\"card\" style=\"display:block;margin:4px auto 6px;border:0;background:none;padding:6px 10px;font:inherit;font-size:14px;font-weight:700;color:"+col+";cursor:pointer\">Not '+esc(me)+'? Change name</button>':'<div class=\"mcnm\">",1)
+
+# Editor Nov 24 (Fora and COYA): plural aware review ask label, hide stat tiles that read 0, scroll padding above the floating buttons
+s=s.replace('<div class="cen">practice review asks</div>',"<div class=\"cen\">practice review ask${asks===1?'':'s'}</div>")
+_ms=re.search(r"const mcStats=\(\)=>`<div class=\"mcst\"><div><b>\$\{mcN\(/\^Card opened/\)\}</b><span>Card opens</span></div><div><b>\$\{mcN\(/\^QR shown\|\^Card opened/\)\}</b><span>QR shown</span></div><div><b>\$\{mcN\(/\^Sent/\)\}</b><span>Cards sent</span></div></div>`;",s)
+if _ms:
+    s=s.replace(_ms.group(0),"const mcStats=()=>{const a=[[mcN(/^Card opened/),'Card opens'],[mcN(/^QR shown|^Card opened/),'QR shown'],[mcN(/^Sent/),'Cards sent']].filter(x=>x[0]>0);return a.length?`<div class=\"mcst\" style=\"grid-template-columns:repeat(${a.length},1fr)\">${a.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div>`:''};")
+s=s.replace('<p class="mcd">Counts from this phone for the last 7 days.</p>',"${mcStats()?'<p class=\"mcd\">Counts from this phone for the last 7 days.</p>':''}")
+s=s.replace('<div class="mine" style="grid-template-columns:1fr"><div><b>${row?row[1]:0}</b><span>residents opened Google from your code this month</span></div></div>',"${row&&+row[1]>0?`<div class=\"mine\" style=\"grid-template-columns:1fr\"><div><b>${row[1]}</b><span>residents opened Google from your code this month</span></div></div>`:''}")
+if 'id="llscrollpad"' not in s:
+    s=s.replace('</head>','<style id="llscrollpad">html{scroll-padding-bottom:140px}</style></head>',1)
 if len(sys.argv)>2:
     s=re.sub(r"const APPV='[^']*'",f"const APPV='{sys.argv[2]}'",s)
     open(p.replace('index.html','version.txt'),'w').write(sys.argv[2]+'\n')
-checks={'nav97':'.97)' in s,'pad178':'178px' in s,'you':'background:#fff;color:#1c1c1e' in s,'chev':'<em>›</em></section>`' not in s,'bullet':'She points every lead to you' not in s,'hint':'.mchint{position:static' in s,'navbg':'id="llnavbg"' in s,'mcsay':'left:16px;right:auto;bottom:16px' in s and "I'll get you to ${esc(me" in s,'topgap':'lltopgap' in s}
+checks={'nav97':'.97)' in s,'pad178':'178px' in s,'you':'background:#fff;color:#1c1c1e' in s,'chev':'<em>›</em></section>`' not in s,'bullet':'She points every lead to you' not in s,'hint':'.mchint{position:static' in s,'navbg':'id="llnavbg"' in s,'mcsay':'left:16px;right:auto;bottom:16px' in s and "I'll get you to ${esc(me" in s,'topgap':'lltopgap' in s,'plural':'practice review asks</div>' not in s,'zerotiles':'${mcN(/^Sent/)}</b>' not in s,'scrollpad':'llscrollpad' in s}
 open(p,'w').write(s);print(p,'changed' if s!=n0 else 'unchanged',checks)
