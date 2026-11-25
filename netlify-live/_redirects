@@ -16,4 +16,7 @@
 /coya          /coya-3zep/v3/  301
 /coya-demo  /coya-3zep/demo/  301
 /meet/coya/:name  https://thesocialdm.github.io/locallift-pulses/team/coya/leasing/?by=:name&src=link  302
+/huxley        /huxley-h7k2/v3/  301
+/huxley-demo  /huxley-h7k2/demo/  301
+/meet/huxley/:name  https://thesocialdm.github.io/locallift-pulses/team/huxley/leasing/?by=:name&src=link  302
 /*             https://thesocialdm.github.io/locallift-pulses/live/:splat  200

@@ -1,0 +1,749 @@
+{
+ "property": "Huxley Scottsdale",
+ "city": "Scottsdale, Arizona",
+ "updated": "2026-11-25T07:30:00-07:00",
+ "updatedLabel": "Nov 25, 7:30 am Phoenix time",
+ "rv": {
+  "rating": "4.5",
+  "count": "29",
+  "vs": "Residences Kierland shows 95 reviews in market data. Every ask closes the gap."
+ },
+ "feed": [
+  {
+   "src": "Google reviews · read today",
+   "date": "Nov 25",
+   "tone": "good",
+   "title": "4.5 stars on 29 reviews",
+   "body": "The five newest reviews are all 5 stars and every one has a reply. The newest, Oct 26, came from a prospect after a tour: \"Incredibly friendly staff and explained the application process.\"",
+   "link": "https://www.google.com/maps/place/?q=place_id:ChIJE-RKHf51K4cRseSoOrVwr_I",
+   "linkLabel": "Open Huxley reviews on Google"
+  },
+  {
+   "src": "Huxley website",
+   "date": "Nov 22",
+   "tone": "info",
+   "title": "Our offer: up to 11 weeks free",
+   "body": "huxleyscottsdale.com shows up to 11 weeks free, limited time, on select lease terms. 1 bedroom homes from $1,758 (A8) and 2 bedroom homes from $2,500 (B2).",
+   "action": "Ask the move in date and lease term first, then confirm which homes qualify with your manager."
+  },
+  {
+   "src": "Rival watch · market data",
+   "date": "Nov 20",
+   "tone": "warn",
+   "title": "Rivals reward a fast decision",
+   "body": "Broadstone Scottsdale Quarter: up to 3 months free when you lease within 48 hours of touring. Modera Kierland: up to 12 weeks free on a move in by Dec 15. The Core Scottsdale: 50% off the first 3 months. Residences Kierland: up to 8 weeks free.",
+   "action": "Ask what total monthly price and lease term they were quoted, then compare on the same terms."
+  },
+  {
+   "src": "Market Survey",
+   "date": "Nov 22",
+   "tone": "good",
+   "title": "Leasing faster than rivals",
+   "body": "Huxley signs 3.4 leases a week against a 2.7 rival average, and is 92.7% leased (rivals 91.8%). Leases counted Oct 18 to Nov 21."
+  },
+  {
+   "src": "Google listing",
+   "date": "Nov 19",
+   "tone": "info",
+   "title": "519 website clicks from Google",
+   "body": "From Oct 23 to Nov 19 the Google listing was seen 3,598 times and drove 519 website clicks, 352 direction requests and 135 call taps."
+  }
+ ],
+ "tiles": [
+  [
+   "4.5",
+   "Google rating",
+   "29 reviews, read Nov 25"
+  ],
+  [
+   "3.4",
+   "Leases a week",
+   "Rivals 2.7, Market Survey Nov 22"
+  ],
+  [
+   "92.7%",
+   "Leased",
+   "Rivals 91.8%, Market Survey Nov 22"
+  ],
+  [
+   "519",
+   "Website clicks from Google",
+   "Oct 23 to Nov 19"
+  ]
+ ],
+ "rivals": {
+  "date": "Nov 20 market data",
+  "rows": [
+   [
+    "Residences Kierland",
+    "4.0",
+    95,
+    0,
+    0
+   ],
+   [
+    "Broadstone Scottsdale Quarter",
+    "2.9",
+    77,
+    0,
+    0
+   ],
+   [
+    "The Core Scottsdale",
+    "2.7",
+    56,
+    0,
+    0
+   ],
+   [
+    "Huxley Scottsdale (you)",
+    "4.5",
+    29,
+    0,
+    0
+   ]
+  ],
+  "note": "Rival ratings and counts from the Nov 20 market data. Huxley read on Google today."
+ },
+ "ask": {
+  "title": "This week: ask for one review",
+  "moments": [
+   "At every move in",
+   "At every renewal",
+   "When a work order is closed"
+  ],
+  "points": [
+   "Our 4.5 rating is the highest of our top rivals, but we have 29 reviews. Residences Kierland shows 95.",
+   "Ask in person, then send the link the same day.",
+   "One a week is the target."
+  ]
+ },
+ "teamCodeHash": "92f1d3b80795f92050ae08994b4c9f8c477c4308f5d05b55987201cf018a64a5",
+ "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJE-RKHf51K4cRseSoOrVwr_I",
+ "trackBase": "https://moveinlocal.com/review/huxley/",
+ "shortLink": "moveinlocal.com/review/huxley",
+ "asks": {
+  "sent": 0,
+  "opened": 0,
+  "through": "Nov 25"
+ },
+ "talk": {
+  "checked": "Nov 22",
+  "checkedIso": "2026-11-22",
+  "offer": "Up to 11 weeks free, limited time, on select lease terms. Ask your manager which homes qualify.",
+  "prices": [
+   [
+    "$1,758",
+    "1 bed from"
+   ],
+   [
+    "$2,500",
+    "2 bed from"
+   ]
+  ],
+  "more": []
+ },
+ "followups": [],
+ "occupancy": null,
+ "snapIdeas": {
+  "month": "November",
+  "items": [
+   [
+    "Rooftop at sunset",
+    "Fire on, grills in frame, sky going orange. Shoot from the corner of the deck.",
+    "Amenity"
+   ],
+   [
+    "Pool and spa, golden hour",
+    "Last light on the water. Keep residents out of the frame.",
+    "Amenity"
+   ],
+   [
+    "Billiards room glow",
+    "Lamps on, a ball mid table. A slow pan makes a great reel.",
+    "Cozy"
+   ],
+   [
+    "Work from home lounge",
+    "Laptop open, a coffee beside it. Hands only is perfect.",
+    "Amenity"
+   ],
+   [
+    "Pet spa",
+    "A happy pup, with the owner's OK. Faces of people out of frame.",
+    "Amenity"
+   ],
+   [
+    "Holiday Lights at the Railroad Park",
+    "Nov 27 to Dec 30 at McCormick-Stillman Railroad Park, 5:30 to 9:30 pm.",
+    "Event"
+   ]
+  ]
+ },
+ "compete": {
+  "checked": "Nov 20",
+  "checkedIso": "2026-11-20",
+  "items": [
+   {
+    "name": "Broadstone Scottsdale Quarter",
+    "where": "1.6 miles, near Scottsdale Quarter",
+    "special": "Up to 3 months free on select homes when you lease within 48 hours of touring",
+    "from": [
+     [
+      "$1,899",
+      "1 bed avg"
+     ],
+     [
+      "$2,856",
+      "2 bed avg"
+     ]
+    ],
+    "fees": "Move in cost $300 (application plus admin) in market data.",
+    "tip": "They are leasing fastest, 5.0 a week, and reward a quick decision. Their 1 bed average asks less than ours, on a bigger home. Compare totals on the same term. Lead with our 4.5 rating (theirs 2.9), the work from home lounge and the rooftop deck.",
+    "vs": [
+     [
+      "Special",
+      "Up to 3 months free, lease within 48 hrs",
+      "Up to 11 weeks free",
+      "them"
+     ],
+     [
+      "1 bed average",
+      "$1,899",
+      "$2,027",
+      "them"
+     ],
+     [
+      "2 bed average",
+      "$2,856",
+      "$2,644",
+      "us"
+     ],
+     [
+      "Move in cost",
+      "$300",
+      "$325",
+      "them"
+     ],
+     [
+      "Google rating",
+      "2.9 (77)",
+      "4.5 (29)",
+      "us"
+     ],
+     [
+      "Leases a week",
+      "5.0",
+      "3.4",
+      "them"
+     ]
+    ],
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Huxley offer from its website Nov 22. Ratings: market data Nov 20, Huxley read on Google Nov 25.",
+    "url": "https://www.broadstonescottsdalequarter.com/",
+    "feesChecked": "Nov 20",
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
+   },
+   {
+    "name": "The Core Scottsdale",
+    "where": "0.5 miles away",
+    "special": "Reduced 2 bedroom rates plus 50% off the first 3 months",
+    "from": [
+     [
+      "$1,784",
+      "1 bed avg"
+     ],
+     [
+      "$2,064",
+      "2 bed avg"
+     ]
+    ],
+    "fees": "Move in cost $300 (application plus admin) in market data.",
+    "tip": "Their average rents are lower on similar size homes. Our edge: a 4.5 Google rating to their 2.7, plus the rooftop deck, billiards room, pet spa and gated garage parking.",
+    "vs": [
+     [
+      "Special",
+      "50% off first 3 months",
+      "Up to 11 weeks free",
+      "us"
+     ],
+     [
+      "1 bed average",
+      "$1,784",
+      "$2,027",
+      "them"
+     ],
+     [
+      "2 bed average",
+      "$2,064",
+      "$2,644",
+      "them"
+     ],
+     [
+      "Move in cost",
+      "$300",
+      "$325",
+      "them"
+     ],
+     [
+      "Google rating",
+      "2.7 (56)",
+      "4.5 (29)",
+      "us"
+     ],
+     [
+      "Leases a week",
+      "4.4",
+      "3.4",
+      "them"
+     ]
+    ],
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Huxley offer from its website Nov 22. Ratings: market data Nov 20, Huxley read on Google Nov 25.",
+    "url": "https://www.corescottsdaleapartments.com/",
+    "feesChecked": "Nov 20",
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
+   },
+   {
+    "name": "Residences Kierland",
+    "where": "2.0 miles, Kierland",
+    "special": "Up to 8 weeks free, limited time",
+    "from": [
+     [
+      "$2,610",
+      "1 bed avg"
+     ],
+     [
+      "$4,061",
+      "2 bed avg"
+     ]
+    ],
+    "fees": "Move in cost $325 (application plus admin) in market data.",
+    "tip": "Their average rents run higher than ours. Our 11 weeks free beats their 8. Compare totals on the same term.",
+    "vs": [
+     [
+      "Special",
+      "Up to 8 weeks free",
+      "Up to 11 weeks free",
+      "us"
+     ],
+     [
+      "1 bed average",
+      "$2,610",
+      "$2,027",
+      "us"
+     ],
+     [
+      "2 bed average",
+      "$4,061",
+      "$2,644",
+      "us"
+     ],
+     [
+      "Move in cost",
+      "$325",
+      "$325",
+      "even"
+     ],
+     [
+      "Google rating",
+      "4.0 (95)",
+      "4.5 (29)",
+      "us"
+     ],
+     [
+      "Leases a week",
+      "3.8",
+      "3.4",
+      "them"
+     ]
+    ],
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Huxley offer from its website Nov 22. Ratings: market data Nov 20, Huxley read on Google Nov 25.",
+    "url": "https://www.residenceskierland.com/",
+    "feesChecked": "Nov 20",
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
+   }
+  ],
+  "us": {
+   "special": "Up to 11 weeks free, limited time, on select lease terms. Ask your manager which homes qualify",
+   "from": [
+    [
+     "$1,758",
+     "1 bed"
+    ],
+    [
+     "$2,500",
+     "2 bed"
+    ]
+   ],
+   "pets": "Pet friendly with a pet spa and grooming station and a dog park. Get the current pet fees and policy from the office",
+   "showoff": [
+    "Work from home lounge with personal offices",
+    "Conference room with a Miele coffee bar",
+    "Rooftop deck with fireplace and grills",
+    "Billiards room",
+    "Resort style pool and spa",
+    "Pet spa and grooming station",
+    "Dog park",
+    "Gated garage parking",
+    "Fitness center",
+    "Quartz kitchens"
+   ],
+   "specialShort": "up to 11 weeks free on select lease terms",
+   "ends": "limited time",
+   "basis": "Lease terms differ by community, so confirm the term before quoting a difference."
+  },
+  "changes": []
+ },
+ "market": {
+  "rvh": [
+   "Community",
+   "1 bed average",
+   "2 bed average"
+  ],
+  "rv": [
+   [
+    "Huxley Scottsdale",
+    "$2,027",
+    "$2,644"
+   ],
+   [
+    "Broadstone Scottsdale Quarter",
+    "$1,899",
+    "$2,856"
+   ],
+   [
+    "The Core Scottsdale",
+    "$1,784",
+    "$2,064"
+   ],
+   [
+    "Residences Kierland",
+    "$2,610",
+    "$4,061"
+   ]
+  ],
+  "srh": [
+   "Source",
+   "Visits",
+   "Leads"
+  ],
+  "sr": [],
+  "pts": [
+   "Our offer: up to 11 weeks free on select lease terms. Confirm which homes qualify with your manager.",
+   "Broadstone Scottsdale Quarter and The Core Scottsdale ask less per square foot than we do; compare totals on the same lease term.",
+   "Our 4.5 Google rating beats all three top rivals. Lead with the work from home lounge, rooftop deck and pet spa."
+  ],
+  "cards": [
+   {
+    "lab": "WHERE WE STAND OUT",
+    "p": [
+     "new",
+     "New"
+    ],
+    "h": "Use these on every tour",
+    "b": "Work from home lounge with personal offices, conference room with a Miele coffee bar, billiards room, rooftop deck with grills, pet spa and grooming, dog park, gated garage parking, resort style pool and spa.",
+    "src": "Huxley website 11/22 · market data 11/20",
+    "cmp": {
+     "cols": [
+      "Huxley",
+      "Broadstone",
+      "The Core"
+     ],
+     "rows": [
+      [
+       "Google rating",
+       "4.5 (29)",
+       "2.9 (77)",
+       "2.7 (56)"
+      ],
+      [
+       "Leases a week",
+       "3.4",
+       "5.0",
+       "4.4"
+      ],
+      [
+       "Move in cost",
+       "$325",
+       "$300",
+       "$300"
+      ]
+     ]
+    },
+    "chips": [
+     "Work from home lounge",
+     "Miele coffee bar",
+     "Rooftop deck",
+     "Billiards room",
+     "Pool and spa",
+     "Pet spa",
+     "Dog park",
+     "Gated garage"
+    ],
+    "note": "Broadstone Scottsdale Quarter, the fastest leasing rival, does not list a coworking space or game room in the market data."
+   },
+   {
+    "lab": "SPECIALS WATCH",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Our 11 weeks free is up against 3 months free nearby",
+    "b": "Broadstone Scottsdale Quarter gives up to 3 months free when you lease within 48 hours of touring.",
+    "src": "Market data 11/20 · Huxley website 11/22",
+    "list": [
+     [
+      "Huxley Scottsdale",
+      "Up to 11 weeks free on select lease terms",
+      "me"
+     ],
+     [
+      "Broadstone Scottsdale Quarter",
+      "Up to 3 months free, lease within 48 hours of touring",
+      ""
+     ],
+     [
+      "The Core Scottsdale",
+      "Reduced 2 bedroom rates plus 50% off the first 3 months",
+      ""
+     ],
+     [
+      "Residences Kierland",
+      "Up to 8 weeks free",
+      ""
+     ],
+     [
+      "Modera Kierland",
+      "Up to 12 weeks free on a move in by Dec 15",
+      ""
+     ]
+    ]
+   },
+   {
+    "lab": "WHO IS TAKING THE RENTERS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "We lease 3.4 a week, rivals average 2.7",
+    "t": "rivals",
+    "src": "Market Survey · leases 10/18 to 11/21",
+    "more": "Broadstone Scottsdale Quarter (5.0 a week) and The Core Scottsdale (4.4) sign the most leases. Huxley is 92.7% leased against a 91.8% rival average."
+   },
+   {
+    "lab": "GOOGLE REVIEWS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Our 4.5 beats every top rival",
+    "b": "4.5 from 29 Google reviews. Residences Kierland 4.0 (95), Broadstone 2.9 (77), The Core 2.7 (56).",
+    "src": "Google today · rivals market data 11/20",
+    "stats": [
+     [
+      "4.5",
+      "Our Google rating"
+     ],
+     [
+      "29",
+      "Our reviews"
+     ],
+     [
+      "95",
+      "Residences Kierland reviews"
+     ]
+    ],
+    "note": "We have fewer reviews than the rivals. Every review we ask for closes the count gap."
+   },
+   {
+    "lab": "GOOGLE LISTING LEADS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "519 website clicks, 352 direction requests, 135 call taps",
+    "b": "Renters saw your Google listing 3,598 times.",
+    "src": "Google listing · Oct 23 to Nov 19",
+    "stats": [
+     [
+      "519",
+      "Website clicks"
+     ],
+     [
+      "352",
+      "Directions"
+     ],
+     [
+      "135",
+      "Call taps"
+     ]
+    ]
+   }
+  ],
+  "ex": [
+   {
+    "k": "edge",
+    "q": "Where do we stand out against rivals?",
+    "a": "From the Huxley website: work from home lounge with personal offices, conference room with a Miele coffee bar, billiards room, rooftop deck with grills, pet spa and grooming, dog park, gated garage parking and a resort style pool and spa.<ul><li>Google rating: 4.5, above Residences Kierland (4.0), Broadstone Scottsdale Quarter (2.9) and The Core Scottsdale (2.7).</li><li>Broadstone does not list a coworking space or game room in the market data.</li></ul>",
+    "s": "Huxley website 11/22 · market data 11/20"
+   },
+   {
+    "k": "ops",
+    "q": "Who showed the tour? Pending service requests?",
+    "a": "Tour agents and service requests live in your property management system, which is not connected to this app. Tours you log in Tour mode are on your desk list.",
+    "s": "LocalLift Live"
+   },
+   {
+    "k": "why",
+    "q": "Why are tours not signing?",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Broadstone Scottsdale Quarter gives up to 3 months free if they lease within 48 hours of touring.</li><li>The Core Scottsdale and Broadstone ask less per square foot.</li><li>Move in cost is $325 against $300 at both.</li></ul>What wins them back: our 4.5 rating, the work from home lounge, rooftop deck and pet spa, and up to 11 weeks free.",
+    "s": "Market Survey 11/22 · market data 11/20"
+   },
+   {
+    "k": "specials",
+    "q": "What specials are rivals running?",
+    "a": "Broadstone Scottsdale Quarter: up to 3 months free when you lease within 48 hours of touring. Modera Kierland: up to 12 weeks free on a move in by Dec 15. The Core Scottsdale: 50% off the first 3 months. Residences Kierland: up to 8 weeks free. Ours: up to 11 weeks free on select lease terms.",
+    "s": "Market data 11/20 · Huxley website 11/22"
+   },
+   {
+    "k": "rivals",
+    "q": "Who is taking our renters?",
+    "a": "The rivals leasing fastest: Broadstone Scottsdale Quarter (5.0 a week), The Core Scottsdale (4.4), Residences Kierland (3.8), Modera Kierland (3.6) and Azur (3.4). Huxley signs 3.4 a week, above the 2.7 rival average.",
+    "s": "Market Survey · leases 10/18 to 11/21"
+   },
+   {
+    "k": "price",
+    "q": "Are we priced right?",
+    "a": "Our 1 bedroom average asking rent is $2,027 and 2 bedroom $2,644. Broadstone and The Core ask less per square foot in every bedroom type both offer. Residences Kierland asks more.",
+    "s": "Market data · rents 10/22 to 11/20"
+   },
+   {
+    "k": "reviews",
+    "q": "How are our reviews?",
+    "a": "4.5 stars from 29 Google reviews. The five newest are all 5 stars and every one has a reply.",
+    "s": "Google · read Nov 25"
+   },
+   {
+    "k": "ai",
+    "q": "Is AI sending renters our way?",
+    "a": "AI answer tracking for Huxley is not in the app yet. It arrives with the Weekly Pulse.",
+    "s": "LocalLift Live"
+   }
+  ],
+  "line": "Specials: Broadstone up to 3 months free with a 48 hour look and lease, Modera Kierland up to 12 weeks free.",
+  "briefSrc": "Market data 11/20 · Huxley website 11/22 · Google Nov 25",
+  "checked": "Nov 22",
+  "checkedIso": "2026-11-22"
+ },
+ "uploadUrl": "https://www.dropbox.com/request/ckdrfcixo8nz461rql5h",
+ "dbxFolder": "Huxley Scottsdale",
+ "reminders": [
+  {
+   "where": "events",
+   "emoji": "🎄",
+   "fx": "spark",
+   "title": "Holiday Lights at the Railroad Park start Friday, Nov 27",
+   "body": "Nov 27 to Dec 30, 5:30 to 9:30 pm, closed Dec 24 and 25. Mention it on tours.",
+   "iso": "2026-11-27",
+   "cta": "See the park page ›",
+   "url": "https://therailroadpark.com/event/holiday-lights/"
+  }
+ ],
+ "shots": [
+  {
+   "img": "outside",
+   "title": "Palms at sunset",
+   "tag": "Amenity",
+   "tip": "Stand across the drive so the palms and building fit.",
+   "wide": true
+  },
+  {
+   "img": "pool",
+   "title": "Pool and spa at sunset",
+   "tag": "Amenity",
+   "tip": "Shoot low across the water and keep residents out of the frame."
+  },
+  {
+   "img": "rooftop",
+   "title": "Rooftop fire at dusk",
+   "tag": "Amenity",
+   "tip": "Fire on, sky in frame. Shoot from the deck corner."
+  },
+  {
+   "img": "billiards",
+   "title": "Billiards glow",
+   "tag": "Cozy",
+   "tip": "Lamps on, overhead lights low."
+  },
+  {
+   "img": "work",
+   "title": "Work from home lounge",
+   "tag": "Amenity",
+   "tip": "Laptop and coffee on the long table. Hands only."
+  },
+  {
+   "img": "gym",
+   "title": "Morning workout",
+   "tag": "Amenity",
+   "tip": "Early light, equipment in focus."
+  },
+  {
+   "img": "living",
+   "title": "Model home, holiday ready",
+   "tag": "Home",
+   "tip": "Stand in the doorway, phone at chest height."
+  },
+  {
+   "img": "kitchen",
+   "title": "Kitchen details",
+   "tag": "Home",
+   "tip": "Close ups sell: counters, the range, a bowl of fruit."
+  },
+  {
+   "img": "petspa",
+   "title": "Pet spa",
+   "tag": "Amenity",
+   "tip": "A happy pup with the owner's OK."
+  }
+ ],
+ "notice": {
+  "id": "2026-11-25-welcome",
+  "until": "2026-12-05",
+  "emoji": "👋",
+  "title": "Welcome to LocalLift Live",
+  "points": [
+   "Today's talk track, rival prices and objections and answers live here.",
+   "Start a tour from the Tour tab and tap what you show. It all lands on Send my day to my desk.",
+   "Ask for a Google review at every move in, renewal and closed work order. Show the QR code, it takes under 30 seconds."
+  ],
+  "act": "tour",
+  "cta": "Open Tour mode ›"
+ },
+ "team": {
+  "month": "November",
+  "updated": "Nov 25",
+  "rows": [],
+  "total": 0,
+  "shoutouts": [
+   {
+    "name": "Sara",
+    "who": "Jalen R.",
+    "stars": 5,
+    "date": "Apr 16",
+    "quote": "Sara and Dustin being super attentive",
+    "link": "https://www.google.com/maps/place/?q=place_id:ChIJE-RKHf51K4cRseSoOrVwr_I"
+   },
+   {
+    "name": "Dustin",
+    "who": "Alex V.",
+    "stars": 5,
+    "date": "Apr 16",
+    "quote": "SARA and DUSTIN ... a team of total Rock Stars",
+    "link": "https://www.google.com/maps/place/?q=place_id:ChIJE-RKHf51K4cRseSoOrVwr_I"
+   }
+  ]
+ }
+}
