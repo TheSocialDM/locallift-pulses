@@ -1,0 +1,746 @@
+{
+ "property": "Elevation SanTan",
+ "city": "Gilbert, Arizona",
+ "updated": "2026-11-25T17:30:00-07:00",
+ "updatedLabel": "Nov 25, 5:30 pm Phoenix time",
+ "rv": {
+  "rating": "4.4",
+  "count": "120",
+  "vs": "The Flats At SanTan shows 232 reviews in market data. Every ask closes the gap."
+ },
+ "feed": [
+  {
+   "src": "Google reviews · read today",
+   "date": "Nov 25",
+   "tone": "good",
+   "title": "4.4 stars on 120 reviews",
+   "body": "The newest review, Nov 6, is 5 stars and praises the sunset views, floor to ceiling windows and prompt maintenance. Every one of the six newest has a reply.",
+   "link": "https://www.google.com/maps/place/?q=place_id:ChIJy6RcQwerK4cREMsjY-w7B3c",
+   "linkLabel": "Open Elevation SanTan reviews on Google"
+  },
+  {
+   "src": "Elevation SanTan website",
+   "date": "Nov 25",
+   "tone": "info",
+   "title": "Our offer: up to 10 weeks free",
+   "body": "elevationsantan.com shows up to 10 weeks free on select homes. Studios from $1,465 (S1), 1 bedroom homes from $1,530 (A3) and 2 bedroom homes from $1,875 (B2).",
+   "action": "Ask the move in date and lease term first, then confirm which homes qualify with your manager."
+  },
+  {
+   "src": "Rival watch · market data",
+   "date": "Nov 20",
+   "tone": "warn",
+   "title": "Rivals pair specials with extras",
+   "body": "The Flats At SanTan: up to 8 weeks free plus fees waived on a same day lease. SanTan by Baron: 8 weeks free plus 6 months free garage. Town Commons: up to 10 weeks free. Luma Rise: up to 10 weeks free plus a $1,000 gift card.",
+   "action": "Ask what total monthly price and lease term they were quoted, then compare on the same terms."
+  },
+  {
+   "src": "Market Survey",
+   "date": "Nov 22",
+   "tone": "good",
+   "title": "96.6% leased, above rivals",
+   "body": "Elevation SanTan is 96.6% leased against a 95.6% rival average, so fewer leases a week (1.4) is expected. Leases counted Oct 18 to Nov 21."
+  },
+  {
+   "src": "Google listing",
+   "date": "Nov 22",
+   "tone": "info",
+   "title": "436 website clicks from Google",
+   "body": "From Oct 26 to Nov 22 the Google listing was seen 4,040 times and drove 436 website clicks, 398 direction requests and 53 call taps."
+  }
+ ],
+ "tiles": [
+  [
+   "4.4",
+   "Google rating",
+   "120 reviews, read Nov 25"
+  ],
+  [
+   "96.6%",
+   "Leased",
+   "Rivals 95.6%, Market Survey Nov 22"
+  ],
+  [
+   "$285",
+   "Move in cost",
+   "Rivals $189 avg, Market Survey Nov 22"
+  ],
+  [
+   "436",
+   "Website clicks from Google",
+   "Oct 26 to Nov 22"
+  ]
+ ],
+ "rivals": {
+  "date": "Nov 20 market data",
+  "rows": [
+   [
+    "The Flats At SanTan",
+    "4.7",
+    232,
+    0,
+    0
+   ],
+   [
+    "Redstone at SanTan Village",
+    "2.3",
+    95,
+    0,
+    0
+   ],
+   [
+    "Elevation SanTan (you)",
+    "4.4",
+    120,
+    0,
+    0
+   ]
+  ],
+  "note": "Rival ratings and counts from the Nov 20 market data. Elevation SanTan read on Google today."
+ },
+ "ask": {
+  "title": "This week: ask for one review",
+  "moments": [
+   "At every move in",
+   "At every renewal",
+   "When a work order is closed"
+  ],
+  "points": [
+   "Our 4.4 rating is strong. The Flats next door shows 232 reviews to our 120.",
+   "Ask in person, then send the link the same day.",
+   "One a week is the target."
+  ]
+ },
+ "teamCodeHash": "fafdfcd172c654a562b939fe662002aef8f5f5242779c571a847c7f3cdeef7b2",
+ "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJy6RcQwerK4cREMsjY-w7B3c",
+ "trackBase": "https://moveinlocal.com/review/elevation-santan/",
+ "shortLink": "moveinlocal.com/review/elevation-santan",
+ "asks": {
+  "sent": 0,
+  "opened": 0,
+  "through": "Nov 25"
+ },
+ "talk": {
+  "checked": "Nov 25",
+  "checkedIso": "2026-11-25",
+  "offer": "Up to 10 weeks free on select homes and lease terms, while supplies last. Ask your manager which homes qualify.",
+  "prices": [
+   [
+    "$1,465",
+    "Studio from"
+   ],
+   [
+    "$1,530",
+    "1 bed from"
+   ],
+   [
+    "$1,875",
+    "2 bed from"
+   ]
+  ],
+  "more": []
+ },
+ "followups": [],
+ "occupancy": null,
+ "snapIdeas": {
+  "month": "November",
+  "items": [
+   [
+    "Sky lounge at sunset",
+    "Fourth floor view, lights low. Shoot toward the window.",
+    "Amenity"
+   ],
+   [
+    "Pool and cabanas",
+    "Golden hour, keep residents out of the frame.",
+    "Amenity"
+   ],
+   [
+    "Two level fitness center",
+    "Shoot up the stairs to show both levels.",
+    "Amenity"
+   ],
+   [
+    "Dog park and pet wash",
+    "A happy pup, with the owner's OK.",
+    "Amenity"
+   ],
+   [
+    "SanTan Village, holiday shopping",
+    "A short walk away. Shoot the storefronts and lights, not faces.",
+    "Local spot"
+   ],
+   [
+    "Riparian After Dark",
+    "Dec 11 to 22 at the Riparian Preserve, 5:30 to 9 pm.",
+    "Event"
+   ]
+  ]
+ },
+ "compete": {
+  "checked": "Nov 20",
+  "checkedIso": "2026-11-20",
+  "items": [
+   {
+    "name": "The Flats At SanTan",
+    "where": "0.2 miles away",
+    "special": "Up to 8 weeks free on select homes, app and admin fees waived when you tour and lease the same day",
+    "from": [
+     [
+      "$1,514",
+      "1 bed avg"
+     ],
+     [
+      "$2,039",
+      "2 bed avg"
+     ]
+    ],
+    "fees": "Move in cost $75 (application, admin waived) in market data.",
+    "tip": "Right next door, 3.6 leases a week, 4.7 stars. Their averages ask less on larger homes. Compare totals on the same term, then lead with our 10 weeks free, the sky lounge and gated access.",
+    "vs": [
+     [
+      "Special",
+      "Up to 8 weeks free, fees waived on look and lease",
+      "Up to 10 weeks free",
+      "us"
+     ],
+     [
+      "1 bed average",
+      "$1,514",
+      "$1,680",
+      "them"
+     ],
+     [
+      "2 bed average",
+      "$2,039",
+      "$2,205",
+      "them"
+     ],
+     [
+      "Move in cost",
+      "$75",
+      "$285",
+      "them"
+     ],
+     [
+      "Google rating",
+      "4.7 (232)",
+      "4.4 (120)",
+      "them"
+     ]
+    ],
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials, fees and ratings: market data Nov 20. Elevation SanTan offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "url": "https://www.flatsatsantan.com/",
+    "feesChecked": "Nov 20",
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
+   },
+   {
+    "name": "SanTan by Baron",
+    "where": "0.4 miles away",
+    "special": "8 weeks free plus 6 months free garage",
+    "from": [
+     [
+      "$1,452",
+      "1 bed avg"
+     ],
+     [
+      "$1,908",
+      "2 bed avg"
+     ]
+    ],
+    "fees": "Move in cost $107 (application plus admin) in market data.",
+    "tip": "They lease 3.8 a week and pair 8 weeks free with a free garage. Our 10 weeks free beats their 8. Compare totals on the same term, then show the sky lounge and two level fitness center.",
+    "vs": [
+     [
+      "Special",
+      "8 weeks free plus 6 months free garage",
+      "Up to 10 weeks free",
+      "ask"
+     ],
+     [
+      "1 bed average",
+      "$1,452",
+      "$1,680",
+      "them"
+     ],
+     [
+      "2 bed average",
+      "$1,908",
+      "$2,205",
+      "them"
+     ],
+     [
+      "Move in cost",
+      "$107",
+      "$285",
+      "them"
+     ],
+     [
+      "Google rating",
+      "Not in data",
+      "4.4 (120)",
+      "ask"
+     ]
+    ],
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials, fees and ratings: market data Nov 20. Elevation SanTan offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "url": "https://www.santanbybaron.com/",
+    "feesChecked": "Nov 20",
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
+   },
+   {
+    "name": "Redstone at SanTan Village",
+    "where": "1.0 miles away",
+    "special": "Up to 8 weeks free on select homes on 14 to 18 month leases",
+    "from": [
+     [
+      "$1,449",
+      "1 bed avg"
+     ],
+     [
+      "$1,681",
+      "2 bed avg"
+     ]
+    ],
+    "fees": "Move in cost $55 (application) in market data.",
+    "tip": "They lease 4.0 a week at lower averages, with their best special tied to 14 to 18 month leases. Our rating is far higher (4.4 to their 2.3). Compare totals on the same term.",
+    "vs": [
+     [
+      "Special",
+      "Up to 8 weeks free, 14 to 18 month leases",
+      "Up to 10 weeks free",
+      "us"
+     ],
+     [
+      "1 bed average",
+      "$1,449",
+      "$1,680",
+      "them"
+     ],
+     [
+      "2 bed average",
+      "$1,681",
+      "$2,205",
+      "them"
+     ],
+     [
+      "Move in cost",
+      "$55",
+      "$285",
+      "them"
+     ],
+     [
+      "Google rating",
+      "2.3 (95)",
+      "4.4 (120)",
+      "us"
+     ]
+    ],
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials, fees and ratings: market data Nov 20. Elevation SanTan offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "url": "https://www.olympusproperty.com/apartments/az/gilbert/redstone-at-santan-village/",
+    "feesChecked": "Nov 20",
+    "checked": "Nov 20",
+    "checkedIso": "2026-11-20"
+   }
+  ],
+  "us": {
+   "special": "Up to 10 weeks free on select homes and lease terms, while supplies last. Ask your manager which homes qualify",
+   "from": [
+    [
+     "$1,530",
+     "1 bed"
+    ],
+    [
+     "$1,875",
+     "2 bed"
+    ],
+    [
+     "$1,465",
+     "Studio"
+    ]
+   ],
+   "pets": "Up to 2 pets per home. Two gated dog parks and a pet wash and grooming room. Get current pet fees and policy from the office",
+   "showoff": [
+    "Fourth floor sky lounge",
+    "Resort style pool and spa with cabanas",
+    "Two level fitness center",
+    "Lounge with built in workstations",
+    "Resident conference center",
+    "Social lounge with cafe and library",
+    "Two gated dog parks",
+    "Pet wash and grooming room",
+    "Single and double car garages on select homes",
+    "Gated community, climate controlled corridors"
+   ],
+   "specialShort": "up to 10 weeks free on select homes",
+   "ends": "while supplies last",
+   "basis": "Rival rents are averages in the market data (Oct 22 to Nov 20), compared with Elevation SanTan's average. Lease terms differ by community, so confirm the term before quoting a difference.",
+   "avg": [
+    [
+     "$1,680",
+     "1 bed avg"
+    ],
+    [
+     "$2,205",
+     "2 bed avg"
+    ]
+   ]
+  },
+  "changes": []
+ },
+ "market": {
+  "rvh": [
+   "Community",
+   "1 bed average",
+   "2 bed average"
+  ],
+  "rv": [
+   [
+    "Elevation SanTan",
+    "$1,680",
+    "$2,205"
+   ],
+   [
+    "The Flats At SanTan",
+    "$1,514",
+    "$2,039"
+   ],
+   [
+    "SanTan by Baron",
+    "$1,452",
+    "$1,908"
+   ],
+   [
+    "Redstone at SanTan Village",
+    "$1,449",
+    "$1,681"
+   ]
+  ],
+  "srh": [
+   "Source",
+   "Visits",
+   "Leads"
+  ],
+  "sr": [],
+  "pts": [
+   "Our offer: up to 10 weeks free on select homes. Confirm which homes qualify with your manager.",
+   "Size adjusted, the five fastest leasing rivals ask less per square foot. B3 and B4 read above market for their size.",
+   "Our 4.4 rating beats Redstone (2.3). Lead with the sky lounge, two level fitness center, gated access and garages on select homes."
+  ],
+  "cards": [
+   {
+    "lab": "WHERE WE STAND OUT",
+    "p": [
+     "new",
+     "New"
+    ],
+    "h": "Use these on every tour",
+    "b": "Fourth floor sky lounge, resort style pool and spa with cabanas, two level fitness center, lounge with built in workstations, two gated dog parks, pet wash, garages on select homes, gated access. Walk to SanTan Village.",
+    "src": "Elevation SanTan website 11/25 · market data 11/20",
+    "cmp": {
+     "cols": [
+      "Elevation SanTan",
+      "The Flats",
+      "Redstone"
+     ],
+     "rows": [
+      [
+       "Google rating",
+       "4.4 (120)",
+       "4.7 (232)",
+       "2.3 (95)"
+      ],
+      [
+       "Move in cost",
+       "$285",
+       "$75",
+       "$55"
+      ],
+      [
+       "1 bed average",
+       "$1,680",
+       "$1,514",
+       "$1,449"
+      ]
+     ]
+    },
+    "chips": [
+     "Sky lounge",
+     "Pool and spa",
+     "Cabanas",
+     "Two level gym",
+     "Workstations",
+     "Dog parks",
+     "Pet wash",
+     "Garages"
+    ]
+   },
+   {
+    "lab": "SPECIALS WATCH",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Our 10 weeks free leads most rivals nearby",
+    "b": "Most nearby rivals advertise up to 8 weeks free. Town Commons and Luma Rise match 10 weeks.",
+    "src": "Market data 11/20 · Elevation SanTan website 11/25",
+    "list": [
+     [
+      "Elevation SanTan",
+      "Up to 10 weeks free on select homes",
+      "me"
+     ],
+     [
+      "The Flats At SanTan",
+      "Up to 8 weeks free, fees waived on a same day lease",
+      ""
+     ],
+     [
+      "SanTan by Baron",
+      "8 weeks free plus 6 months free garage",
+      ""
+     ],
+     [
+      "Redstone at SanTan Village",
+      "Up to 8 weeks free on 14 to 18 month leases",
+      ""
+     ],
+     [
+      "Town Commons",
+      "Up to 10 weeks free on select homes",
+      ""
+     ],
+     [
+      "Luma Rise",
+      "Up to 10 weeks free plus a $1,000 gift card",
+      ""
+     ]
+    ]
+   },
+   {
+    "lab": "WHO IS TAKING THE RENTERS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "We lease 1.4 a week at 96.6% leased",
+    "t": "rivals",
+    "src": "Market Survey · leases 10/18 to 11/21 · rents market data 10/22 to 11/20",
+    "more": "Rivals average 2.7 a week and 95.6% leased. With fewer homes open, a lower lease count is expected. Town Commons and Zaterra (5.6 a week each) sign the most."
+   },
+   {
+    "lab": "GOOGLE REVIEWS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "4.4 stars on 120 reviews",
+    "b": "The six newest reviews all have replies. Recent 5 star reviews name Kristina and Chris.",
+    "src": "Google today · rivals market data 11/20",
+    "stats": [
+     [
+      "4.4",
+      "Our Google rating"
+     ],
+     [
+      "120",
+      "Our reviews"
+     ],
+     [
+      "232",
+      "The Flats reviews"
+     ]
+    ],
+    "note": "Every review we ask for closes the count gap with The Flats next door."
+   },
+   {
+    "lab": "GOOGLE LISTING LEADS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "436 website clicks, 398 direction requests, 53 call taps",
+    "b": "Renters saw your Google listing 4,040 times.",
+    "src": "Google listing · Oct 26 to Nov 22",
+    "stats": [
+     [
+      "436",
+      "Website clicks"
+     ],
+     [
+      "398",
+      "Directions"
+     ],
+     [
+      "53",
+      "Call taps"
+     ]
+    ]
+   }
+  ],
+  "ex": [
+   {
+    "k": "edge",
+    "q": "Where do we stand out against rivals?",
+    "a": "From the Elevation SanTan website: a fourth floor sky lounge, resort style pool and spa with cabanas, a two level fitness center, a lounge with built in workstations, a resident conference center, two gated dog parks, a pet wash, garages on select homes and gated access, a walk from SanTan Village.",
+    "s": "Elevation SanTan website 11/25"
+   },
+   {
+    "k": "ops",
+    "q": "Who showed the tour? Pending service requests?",
+    "a": "Tour agents and service requests live in your property management system, which is not connected to this app. Tours you log in Tour mode are on your desk list.",
+    "s": "LocalLift Live"
+   },
+   {
+    "k": "why",
+    "q": "Why are tours not signing?",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>The Flats At SanTan next door waives app and admin fees on a same day lease.</li><li>Move in cost is $285 against a $189 rival average.</li><li>Size adjusted, the fastest rivals ask less per square foot.</li></ul>What wins them back: up to 10 weeks free, the sky lounge, gated access and garages on select homes.",
+    "s": "Market Survey 11/22 · market data 11/20"
+   },
+   {
+    "k": "specials",
+    "q": "What specials are rivals running?",
+    "a": "The Flats At SanTan: up to 8 weeks free, fees waived on a same day lease. SanTan by Baron: 8 weeks free plus 6 months free garage. Redstone: up to 8 weeks free on 14 to 18 month leases. Town Commons: up to 10 weeks free. Luma Rise: up to 10 weeks free plus a $1,000 gift card. Ours: up to 10 weeks free on select homes.",
+    "s": "Market data 11/20 · Elevation SanTan website 11/25"
+   },
+   {
+    "k": "rivals",
+    "q": "Who is taking our renters?",
+    "a": "The rivals leasing fastest: Town Commons and Zaterra (5.6 a week each), Redstone at SanTan Village (4.0), SanTan by Baron (3.8) and The Flats At SanTan (3.6). Elevation SanTan signs 1.4 a week at 96.6% leased.",
+    "s": "Market Survey · leases 10/18 to 11/21"
+   },
+   {
+    "k": "price",
+    "q": "Are we priced right?",
+    "a": "Our 1 bedroom average asking rent is $1,680 and 2 bedroom $2,205. B4 reads about 19% above market for its size and B3 about 5%. S2 and S1 are listed longest, so feature them first.",
+    "s": "Market Survey 11/22"
+   },
+   {
+    "k": "reviews",
+    "q": "How are our reviews?",
+    "a": "4.4 stars from 120 Google reviews. The six newest all have replies.",
+    "s": "Google · read Nov 25"
+   },
+   {
+    "k": "ai",
+    "q": "Is AI sending renters our way?",
+    "a": "AI answer tracking for Elevation SanTan is not in the app yet. It arrives with the Weekly Pulse.",
+    "s": "LocalLift Live"
+   }
+  ],
+  "line": "Specials (market data Nov 20): The Flats up to 8 weeks free plus fees waived, SanTan by Baron 8 weeks plus 6 months free garage.",
+  "briefSrc": "Market data 11/20 · Elevation SanTan website 11/25 · Google Nov 25",
+  "checked": "Nov 25",
+  "checkedIso": "2026-11-25"
+ },
+ "uploadUrl": "https://www.dropbox.com/request/tarrxzwgs7sfi06vmdc0",
+ "dbxFolder": "Elevation SanTan",
+ "reminders": [
+  {
+   "where": "events",
+   "emoji": "🎄",
+   "fx": "spark",
+   "title": "Tumbleweed Tree Lighting, Saturday, Dec 5",
+   "body": "Downtown Chandler, 4:30 to 9 pm, free, with the Parade of Lights. Mention it on tours.",
+   "iso": "2026-12-05",
+   "cta": "See the city page ›",
+   "url": "https://www.chandleraz.gov/explore/special-events/tumbleweed-tree-lighting-ceremony"
+  }
+ ],
+ "shots": [
+  {
+   "img": "outside",
+   "title": "Entry sign at golden hour",
+   "tag": "Amenity",
+   "tip": "Stand across the drive so the sign and building fit.",
+   "wide": true
+  },
+  {
+   "img": "lounge",
+   "title": "Clubhouse lounge",
+   "tag": "Cozy",
+   "tip": "Lamps on, overhead lights low."
+  },
+  {
+   "img": "lobby",
+   "title": "Lobby lounge",
+   "tag": "Amenity",
+   "tip": "Shoot from the entry, phone level."
+  },
+  {
+   "img": "gym",
+   "title": "Morning workout",
+   "tag": "Amenity",
+   "tip": "Early light, equipment in focus."
+  },
+  {
+   "img": "petspa",
+   "title": "Pet wash",
+   "tag": "Amenity",
+   "tip": "A happy pup with the owner's OK."
+  },
+  {
+   "img": "living",
+   "title": "Model living room",
+   "tag": "Home",
+   "tip": "Stand in the doorway, phone at chest height."
+  },
+  {
+   "img": "kitchen",
+   "title": "Kitchen details",
+   "tag": "Home",
+   "tip": "Close ups sell: quartz, the cabinets."
+  },
+  {
+   "img": "pendant",
+   "title": "Pendant lights",
+   "tag": "Home",
+   "tip": "Shoot up into the lights at dusk."
+  },
+  {
+   "img": "nook",
+   "title": "Work from home nook",
+   "tag": "Home",
+   "tip": "Laptop and coffee. Hands only."
+  }
+ ],
+ "notice": {
+  "id": "2026-11-25-welcome",
+  "until": "2026-12-05",
+  "emoji": "👋",
+  "title": "Welcome to LocalLift Live",
+  "points": [
+   "Today's talk track, rival prices and objections and answers live here.",
+   "Start a tour from the Tour tab and tap what you show. It all lands on Send my day to my desk.",
+   "Ask for a Google review at every move in, renewal and closed work order. Show the QR code, it takes under 30 seconds."
+  ],
+  "act": "tour",
+  "cta": "Open Tour mode ›"
+ },
+ "team": {
+  "month": "November",
+  "updated": "Nov 25",
+  "rows": [],
+  "total": 0,
+  "shoutouts": [
+   {
+    "name": "Kristina",
+    "who": "Nick G.",
+    "stars": 5,
+    "date": "Oct 6",
+    "quote": "Thank you to Kristina and the front office staff",
+    "link": "https://www.google.com/maps/place/?q=place_id:ChIJy6RcQwerK4cREMsjY-w7B3c"
+   },
+   {
+    "name": "Chris",
+    "who": "Rayna J.",
+    "stars": 5,
+    "date": "Oct 4",
+    "quote": "Chris was super helpful and quick",
+    "link": "https://www.google.com/maps/place/?q=place_id:ChIJy6RcQwerK4cREMsjY-w7B3c"
+   }
+  ]
+ }
+}

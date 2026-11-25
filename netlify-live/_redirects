@@ -19,4 +19,10 @@
 /huxley        /huxley-h7k2/v3/  301
 /huxley-demo  /huxley-h7k2/demo/  301
 /meet/huxley/:name  https://thesocialdm.github.io/locallift-pulses/team/huxley/leasing/?by=:name&src=link  302
+/cuvee         /cuvee-c6v2/v3/  301
+/cuvee-demo  /cuvee-c6v2/demo/  301
+/meet/cuvee/:name  https://thesocialdm.github.io/locallift-pulses/team/cuvee/leasing/?by=:name&src=link  302
+/elevation-santan  /elevation-santan-e3t8/v3/  301
+/elevation-santan-demo  /elevation-santan-e3t8/demo/  301
+/meet/elevation-santan/:name  https://thesocialdm.github.io/locallift-pulses/team/elevation-santan/leasing/?by=:name&src=link  302
 /*             https://thesocialdm.github.io/locallift-pulses/live/:splat  200

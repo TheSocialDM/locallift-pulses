@@ -1,0 +1,725 @@
+{
+ "property": "Cuvee",
+ "city": "Glendale, Arizona",
+ "updated": "2026-11-25T17:30:00-07:00",
+ "updatedLabel": "Nov 25, 5:30 pm Phoenix time",
+ "rv": {
+  "rating": "3.4",
+  "count": "106",
+  "vs": "Glen 91 shows 218 reviews in market data. Every ask closes the gap."
+ },
+ "feed": [
+  {
+   "src": "Google reviews · read today",
+   "date": "Nov 25",
+   "tone": "warn",
+   "title": "New 1 star review today, no reply yet",
+   "body": "Posted today. It mentions trouble with access codes and keys, the hot tub not working, and the coffee station out of cups. Cuvee is at 3.4 stars on 106 reviews.",
+   "link": "https://www.google.com/maps/place/?q=place_id:ChIJWW93lKNBK4cRWrru46ZzwgU",
+   "linkLabel": "Open Cuvee reviews on Google",
+   "action": "Ask your manager about a reply today. Keep it kind and invite them to the office."
+  },
+  {
+   "src": "Cuvee website",
+   "date": "Nov 25",
+   "tone": "info",
+   "title": "Our offer: up to 11 weeks free plus 6 months free parking",
+   "body": "livecuvee.com shows up to 11 weeks free plus 6 months free parking, limited time. 1 bedroom homes from $1,294 (Petit Verdot A6) and 2 bedroom homes from $1,650 (Malbec B2).",
+   "action": "Ask the move in date and lease term first, then confirm which homes qualify with your manager."
+  },
+  {
+   "src": "Rival watch · market data",
+   "date": "Nov 21",
+   "tone": "warn",
+   "title": "Rivals nearby offer up to 12 weeks free",
+   "body": "Broadstone Westgate: up to 12 weeks free plus up to $1,000 off move in by Nov 30. Glen 91: 12 weeks free on 1 bedrooms, fees waived on a look and lease. Prose Desert River: up to 12 weeks free base rent.",
+   "action": "Ask what total monthly price and lease term they were quoted, then compare on the same terms."
+  },
+  {
+   "src": "Google listing",
+   "date": "Nov 22",
+   "tone": "info",
+   "title": "314 website clicks from Google",
+   "body": "From Oct 26 to Nov 22 the Google listing was seen 1,187 times and drove 314 website clicks, 341 direction requests and 86 call taps."
+  }
+ ],
+ "tiles": [
+  [
+   "3.4",
+   "Google rating",
+   "106 reviews, read Nov 25"
+  ],
+  [
+   "90.6%",
+   "Leased",
+   "Rivals 93.4%, Market Survey Nov 22"
+  ],
+  [
+   "$325",
+   "Move in cost",
+   "Highest of 11, Market Survey Nov 22"
+  ],
+  [
+   "314",
+   "Website clicks from Google",
+   "Oct 26 to Nov 22"
+  ]
+ ],
+ "rivals": {
+  "date": "Nov 21 market data",
+  "rows": [
+   [
+    "Glen 91",
+    "3.4",
+    218,
+    0,
+    0
+   ],
+   [
+    "Broadstone Westgate",
+    "4.5",
+    72,
+    0,
+    0
+   ],
+   [
+    "Prose Desert River",
+    "2.6",
+    57,
+    0,
+    0
+   ],
+   [
+    "Cuvee (you)",
+    "3.4",
+    106,
+    0,
+    0
+   ]
+  ],
+  "note": "Rival ratings and counts from the Nov 21 market data. Cuvee read on Google today."
+ },
+ "ask": {
+  "title": "This week: ask for one review",
+  "moments": [
+   "At every move in",
+   "At every renewal",
+   "When a work order is closed"
+  ],
+  "points": [
+   "We are at 3.4 stars. Recent 5 star reviews praise the front desk and maintenance.",
+   "Ask in person, then send the link the same day.",
+   "One a week is the target."
+  ]
+ },
+ "teamCodeHash": "05a1ff1fd0a6e231fcf6c1b05035b3c75065bc3bd0375ecbaaeb268e57889f38",
+ "reviewLink": "https://search.google.com/local/writereview?placeid=ChIJWW93lKNBK4cRWrru46ZzwgU",
+ "trackBase": "https://moveinlocal.com/review/cuvee/",
+ "shortLink": "moveinlocal.com/review/cuvee",
+ "asks": {
+  "sent": 0,
+  "opened": 0,
+  "through": "Nov 25"
+ },
+ "talk": {
+  "checked": "Nov 25",
+  "checkedIso": "2026-11-25",
+  "offer": "Up to 11 weeks free plus 6 months free parking, limited time. Ask your manager which homes and lease terms qualify.",
+  "prices": [
+   [
+    "$1,294",
+    "1 bed from"
+   ],
+   [
+    "$1,650",
+    "2 bed from"
+   ]
+  ],
+  "more": []
+ },
+ "followups": [
+  {
+   "title": "Reply to today’s 1 star review",
+   "body": "It mentions access codes and keys, the hot tub and the coffee station. Ask your manager about a kind reply today.",
+   "iso": "2026-11-25",
+   "link": "https://www.google.com/maps/place/?q=place_id:ChIJWW93lKNBK4cRWrru46ZzwgU"
+  }
+ ],
+ "occupancy": null,
+ "snapIdeas": {
+  "month": "November",
+  "items": [
+   [
+    "Rooftop terrace at sunset",
+    "Westgate and the stadium in the background, firepit on. Shoot from the corner.",
+    "Amenity"
+   ],
+   [
+    "Pools at dusk",
+    "Lights on, cabanas in frame. Keep residents out of the shot.",
+    "Amenity"
+   ],
+   [
+    "Game room",
+    "Air hockey or shuffleboard mid game. Hands only is perfect.",
+    "Amenity"
+   ],
+   [
+    "Yoga and spin room",
+    "Morning light, mats out.",
+    "Amenity"
+   ],
+   [
+    "Pet spa",
+    "A happy pup, with the owner's OK.",
+    "Amenity"
+   ],
+   [
+    "Glendale Glitters",
+    "Nov 27 to Jan 1 in Historic Downtown Glendale, nightly 5 to 10 pm. Shoot the lights, not faces.",
+    "Event"
+   ]
+  ]
+ },
+ "compete": {
+  "checked": "Nov 21",
+  "checkedIso": "2026-11-21",
+  "items": [
+   {
+    "name": "Broadstone Westgate",
+    "where": "0.3 miles away",
+    "special": "Up to 12 weeks free plus up to $1,000 off move in, when you move in by Nov 30",
+    "from": [
+     [
+      "$1,458",
+      "1 bed avg"
+     ],
+     [
+      "$1,860",
+      "2 bed avg"
+     ]
+    ],
+    "fees": "Move in cost $200 (application plus admin) in market data.",
+    "tip": "They lease fast, 4.6 a week, and push a move in by Nov 30. Their averages ask a little more than ours. Compare totals on the same term, then show the rooftop terrace and the two pools.",
+    "vs": [
+     [
+      "Special",
+      "Up to 12 weeks free, move in by Nov 30",
+      "Up to 11 weeks free plus 6 months free parking",
+      "ask"
+     ],
+     [
+      "1 bed average",
+      "$1,458",
+      "$1,449",
+      "us"
+     ],
+     [
+      "2 bed average",
+      "$1,860",
+      "$1,725",
+      "us"
+     ],
+     [
+      "Move in cost",
+      "$200",
+      "$325",
+      "them"
+     ],
+     [
+      "Google rating",
+      "4.5 (72)",
+      "3.4 (106)",
+      "them"
+     ]
+    ],
+    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials, fees and ratings: market data Nov 21. Cuvee offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "url": "https://www.broadstonewestgate.com/",
+    "feesChecked": "Nov 21",
+    "checked": "Nov 21",
+    "checkedIso": "2026-11-21"
+   },
+   {
+    "name": "Glen 91",
+    "where": "0.3 miles away",
+    "special": "12 weeks free on 1 bedrooms or 10 weeks free on 2 bedrooms, app and admin fees waived on a look and lease",
+    "from": [
+     [
+      "$1,339",
+      "1 bed avg"
+     ],
+     [
+      "$1,680",
+      "2 bed avg"
+     ]
+    ],
+    "fees": "Move in cost $300 in market data, waived on a look and lease.",
+    "tip": "Their averages ask less, and they waive fees on a same day lease. Agree, compare totals on the same term, then lead with the two story fitness center, game lawn and pet spa.",
+    "vs": [
+     [
+      "Special",
+      "12 weeks free on 1 bedrooms, fees waived on look and lease",
+      "Up to 11 weeks free plus 6 months free parking",
+      "ask"
+     ],
+     [
+      "1 bed average",
+      "$1,339",
+      "$1,449",
+      "them"
+     ],
+     [
+      "2 bed average",
+      "$1,680",
+      "$1,725",
+      "them"
+     ],
+     [
+      "Move in cost",
+      "$300",
+      "$325",
+      "them"
+     ],
+     [
+      "Google rating",
+      "3.4 (218)",
+      "3.4 (106)",
+      "even"
+     ]
+    ],
+    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials, fees and ratings: market data Nov 21. Cuvee offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "url": "https://www.glen91.com/",
+    "feesChecked": "Nov 21",
+    "checked": "Nov 21",
+    "checkedIso": "2026-11-21"
+   },
+   {
+    "name": "Prose Desert River",
+    "where": "1.2 miles away",
+    "special": "Up to 12 weeks free base rent",
+    "from": [
+     [
+      "$1,363",
+      "1 bed avg"
+     ],
+     [
+      "$1,686",
+      "2 bed avg"
+     ]
+    ],
+    "fees": "Move in cost $200 (application plus admin) in market data.",
+    "tip": "They lease 4.4 a week with up to 12 weeks free. Their averages ask less. Our rating is higher (3.4 to their 2.6). Compare totals on the same term.",
+    "vs": [
+     [
+      "Special",
+      "Up to 12 weeks free base rent",
+      "Up to 11 weeks free plus 6 months free parking",
+      "ask"
+     ],
+     [
+      "1 bed average",
+      "$1,363",
+      "$1,449",
+      "them"
+     ],
+     [
+      "2 bed average",
+      "$1,686",
+      "$1,725",
+      "them"
+     ],
+     [
+      "Move in cost",
+      "$200",
+      "$325",
+      "them"
+     ],
+     [
+      "Google rating",
+      "2.6 (57)",
+      "3.4 (106)",
+      "us"
+     ]
+    ],
+    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials, fees and ratings: market data Nov 21. Cuvee offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "url": "https://www.prosedesertriver.com/",
+    "feesChecked": "Nov 21",
+    "checked": "Nov 21",
+    "checkedIso": "2026-11-21"
+   }
+  ],
+  "us": {
+   "special": "Up to 11 weeks free plus 6 months free parking, limited time. Ask your manager which homes and lease terms qualify",
+   "from": [
+    [
+     "$1,294",
+     "1 bed"
+    ],
+    [
+     "$1,650",
+     "2 bed"
+    ]
+   ],
+   "pets": "Up to 2 pets per home, 60 pound limit per pet, breed restrictions apply. Dog park with areas for large and small dogs and a pet spa. Get current pet fees from the office",
+   "showoff": [
+    "Rooftop terrace over Westgate and State Farm Stadium",
+    "Two resort style pools with firepits and cabanas",
+    "Two story fitness center with yoga room and spin",
+    "Game room with air hockey, darts and shuffleboard",
+    "Game lawn with a putting green",
+    "Dog park for large and small dogs",
+    "Pet spa and grooming station",
+    "Package lockers",
+    "Covered and garage parking",
+    "Quartz kitchens with stainless appliances"
+   ],
+   "specialShort": "up to 11 weeks free plus 6 months free parking",
+   "ends": "limited time",
+   "basis": "Rival rents are averages in the market data (Oct 23 to Nov 21), compared with Cuvee's average. Lease terms differ by community, so confirm the term before quoting a difference.",
+   "avg": [
+    [
+     "$1,449",
+     "1 bed avg"
+    ],
+    [
+     "$1,725",
+     "2 bed avg"
+    ]
+   ]
+  },
+  "changes": []
+ },
+ "market": {
+  "rvh": [
+   "Community",
+   "1 bed average",
+   "2 bed average"
+  ],
+  "rv": [
+   [
+    "Cuvee",
+    "$1,449",
+    "$1,725"
+   ],
+   [
+    "Broadstone Westgate",
+    "$1,458",
+    "$1,860"
+   ],
+   [
+    "Glen 91",
+    "$1,339",
+    "$1,680"
+   ],
+   [
+    "Prose Desert River",
+    "$1,363",
+    "$1,686"
+   ]
+  ],
+  "srh": [
+   "Source",
+   "Visits",
+   "Leads"
+  ],
+  "sr": [],
+  "pts": [
+   "Our offer: up to 11 weeks free plus 6 months free parking. Confirm which homes qualify with your manager.",
+   "Move in cost is $325 ($75 application plus $250 admin), the highest of 11 communities. Glen 91 and Alexan Park West waive fees on a look and lease.",
+   "Lead with the rooftop terrace over Westgate, two pools with firepits, the game room and the pet spa."
+  ],
+  "cards": [
+   {
+    "lab": "WHERE WE STAND OUT",
+    "p": [
+     "new",
+     "New"
+    ],
+    "h": "Use these on every tour",
+    "b": "Rooftop terrace over Westgate and State Farm Stadium, two resort style pools with firepits and cabanas, two story fitness center with yoga and spin, game room, game lawn with a putting green, dog park and pet spa.",
+    "src": "Cuvee website 11/25 · market data 11/21",
+    "cmp": {
+     "cols": [
+      "Cuvee",
+      "Broadstone",
+      "Glen 91"
+     ],
+     "rows": [
+      [
+       "Google rating",
+       "3.4 (106)",
+       "4.5 (72)",
+       "3.4 (218)"
+      ],
+      [
+       "Move in cost",
+       "$325",
+       "$200",
+       "$300"
+      ],
+      [
+       "1 bed average",
+       "$1,449",
+       "$1,458",
+       "$1,339"
+      ]
+     ]
+    },
+    "chips": [
+     "Rooftop terrace",
+     "Two pools",
+     "Firepits",
+     "Yoga and spin",
+     "Game room",
+     "Putting green",
+     "Dog park",
+     "Pet spa"
+    ]
+   },
+   {
+    "lab": "SPECIALS WATCH",
+    "c": "warn",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "Our 11 weeks free is up against 12 weeks nearby",
+    "b": "Broadstone Westgate, Glen 91 and Prose Desert River all advertise up to 12 weeks free.",
+    "src": "Market data 11/21 · Cuvee website 11/25",
+    "list": [
+     [
+      "Cuvee",
+      "Up to 11 weeks free plus 6 months free parking",
+      "me"
+     ],
+     [
+      "Broadstone Westgate",
+      "Up to 12 weeks free plus up to $1,000 off, move in by Nov 30",
+      ""
+     ],
+     [
+      "Glen 91",
+      "12 weeks free on 1 bedrooms, 10 on 2 bedrooms, fees waived on look and lease",
+      ""
+     ],
+     [
+      "Prose Desert River",
+      "Up to 12 weeks free base rent",
+      ""
+     ],
+     [
+      "Copper Falls",
+      "10 to 12 weeks free on select homes",
+      ""
+     ]
+    ]
+   },
+   {
+    "lab": "WHO IS TAKING THE RENTERS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "We count 4.8 leases a week, rivals average 2.9",
+    "t": "rivals",
+    "src": "Market Survey · leases 10/19 to 11/22 · rents market data 10/23 to 11/21",
+    "more": "17 of our 24 leases were counted on one day (Nov 3), so check this pace with your in house numbers. Broadstone Westgate (4.6 a week) and Prose Desert River (4.4) sign the most. Cuvee is 90.6% leased against a 93.4% rival average."
+   },
+   {
+    "lab": "GOOGLE REVIEWS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "3.4 stars on 106 reviews",
+    "b": "A new 1 star review came in today with no reply yet. Recent 5 star reviews praise the front desk and maintenance.",
+    "src": "Google today · rivals market data 11/21",
+    "stats": [
+     [
+      "3.4",
+      "Our Google rating"
+     ],
+     [
+      "106",
+      "Our reviews"
+     ],
+     [
+      "218",
+      "Glen 91 reviews"
+     ]
+    ],
+    "note": "Every review we ask for helps the rating. Ask at every move in, renewal and closed work order."
+   },
+   {
+    "lab": "GOOGLE LISTING LEADS",
+    "p": [
+     "m",
+     "Measured"
+    ],
+    "h": "314 website clicks, 341 direction requests, 86 call taps",
+    "b": "Renters saw your Google listing 1,187 times.",
+    "src": "Google listing · Oct 26 to Nov 22",
+    "stats": [
+     [
+      "314",
+      "Website clicks"
+     ],
+     [
+      "341",
+      "Directions"
+     ],
+     [
+      "86",
+      "Call taps"
+     ]
+    ]
+   }
+  ],
+  "ex": [
+   {
+    "k": "edge",
+    "q": "Where do we stand out against rivals?",
+    "a": "From the Cuvee website: a rooftop terrace over Westgate and State Farm Stadium, two resort style pools with firepits and cabanas, a two story fitness center with yoga and spin, a game room, a game lawn with a putting green, a dog park and a pet spa.",
+    "s": "Cuvee website 11/25"
+   },
+   {
+    "k": "ops",
+    "q": "Who showed the tour? Pending service requests?",
+    "a": "Tour agents and service requests live in your property management system, which is not connected to this app. Tours you log in Tour mode are on your desk list.",
+    "s": "LocalLift Live"
+   },
+   {
+    "k": "why",
+    "q": "Why are tours not signing?",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Broadstone Westgate, Glen 91 and Prose Desert River advertise up to 12 weeks free.</li><li>Move in cost is $325, the highest of 11 communities.</li><li>Glen 91 waives app and admin fees on a look and lease.</li></ul>What wins them back: the rooftop terrace, two pools, game room and pet spa, plus 6 months free parking.",
+    "s": "Market Survey 11/22 · market data 11/21"
+   },
+   {
+    "k": "specials",
+    "q": "What specials are rivals running?",
+    "a": "Broadstone Westgate: up to 12 weeks free plus up to $1,000 off, move in by Nov 30. Glen 91: 12 weeks free on 1 bedrooms, 10 on 2 bedrooms, fees waived on look and lease. Prose Desert River: up to 12 weeks free base rent. Ours: up to 11 weeks free plus 6 months free parking.",
+    "s": "Market data 11/21 · Cuvee website 11/25"
+   },
+   {
+    "k": "rivals",
+    "q": "Who is taking our renters?",
+    "a": "The rivals leasing fastest: Broadstone Westgate (4.6 a week), Prose Desert River (4.4), Springs At Westgate (3.6), Copper Falls (3.4) and Glen 91 (3.2). Cuvee counted 4.8 a week, but 17 of its 24 leases landed on one day, Nov 3.",
+    "s": "Market Survey · leases 10/19 to 11/22"
+   },
+   {
+    "k": "price",
+    "q": "Are we priced right?",
+    "a": "Our 1 bedroom average asking rent is $1,449 and 2 bedroom $1,725. The plans furthest above market for their size are Champagne A3 and Rose A3.1. Petit Verdot A6 and Malbec B2 are at market and listed longest, so feature them first.",
+    "s": "Market Survey 11/22"
+   },
+   {
+    "k": "reviews",
+    "q": "How are our reviews?",
+    "a": "3.4 stars from 106 Google reviews. A new 1 star review came in today with no reply yet.",
+    "s": "Google · read Nov 25"
+   },
+   {
+    "k": "ai",
+    "q": "Is AI sending renters our way?",
+    "a": "AI answer tracking for Cuvee is not in the app yet. It arrives with the Weekly Pulse.",
+    "s": "LocalLift Live"
+   }
+  ],
+  "line": "Specials (market data Nov 21): Broadstone Westgate, Glen 91 and Prose Desert River up to 12 weeks free.",
+  "briefSrc": "Market data 11/21 · Cuvee website 11/25 · Google Nov 25",
+  "checked": "Nov 25",
+  "checkedIso": "2026-11-25"
+ },
+ "uploadUrl": "https://www.dropbox.com/request/dzhv3fp88ixy27w82n54",
+ "dbxFolder": "Cuvee",
+ "reminders": [
+  {
+   "where": "events",
+   "emoji": "🎄",
+   "fx": "spark",
+   "title": "Glendale Glitters starts Friday, Nov 27",
+   "body": "Holiday lights in Historic Downtown Glendale, nightly 5 to 10 pm through Jan 1, free. Kickoff weekend Nov 27 and 28. Mention it on tours.",
+   "iso": "2026-11-27",
+   "until": "2026-11-28",
+   "cta": "See the city page ›",
+   "url": "https://www.glendaleaz.gov/Explore/Special-Events/Glendale-Glitters"
+  }
+ ],
+ "shots": [
+  {
+   "img": "pool",
+   "title": "Pool and spa at sunset",
+   "tag": "Amenity",
+   "tip": "Shoot low across the water and keep residents out of the frame.",
+   "wide": true
+  },
+  {
+   "img": "rooftop",
+   "title": "Rooftop fire at sunset",
+   "tag": "Amenity",
+   "tip": "Fire on, sky and Westgate in frame."
+  },
+  {
+   "img": "pooldusk",
+   "title": "Pool at dusk",
+   "tag": "Amenity",
+   "tip": "Lights on, cabanas in frame."
+  },
+  {
+   "img": "yoga",
+   "title": "Yoga and spin room",
+   "tag": "Amenity",
+   "tip": "Early light, equipment in focus."
+  },
+  {
+   "img": "gym",
+   "title": "Two story fitness center",
+   "tag": "Amenity",
+   "tip": "Shoot up the stairs to show both levels."
+  },
+  {
+   "img": "living",
+   "title": "Model living room",
+   "tag": "Home",
+   "tip": "Stand in the doorway, phone at chest height."
+  },
+  {
+   "img": "kitchen",
+   "title": "Kitchen details",
+   "tag": "Home",
+   "tip": "Close ups sell: quartz, the pendant lights."
+  },
+  {
+   "img": "balcony",
+   "title": "Balcony moment",
+   "tag": "Home",
+   "tip": "Golden hour, a coffee on the table."
+  },
+  {
+   "img": "outside",
+   "title": "Building at golden hour",
+   "tag": "Amenity",
+   "tip": "Stand across the drive so the whole building fits."
+  }
+ ],
+ "notice": {
+  "id": "2026-11-25-welcome",
+  "until": "2026-12-05",
+  "emoji": "👋",
+  "title": "Welcome to LocalLift Live",
+  "points": [
+   "Today's talk track, rival prices and objections and answers live here.",
+   "Start a tour from the Tour tab and tap what you show. It all lands on Send my day to my desk.",
+   "Ask for a Google review at every move in, renewal and closed work order. Show the QR code, it takes under 30 seconds."
+  ],
+  "act": "tour",
+  "cta": "Open Tour mode ›"
+ },
+ "team": {
+  "month": "November",
+  "updated": "Nov 25",
+  "rows": [],
+  "total": 0,
+  "shoutouts": []
+ }
+}
