@@ -76,7 +76,7 @@ h1,h2,h3{font-family:Poppins,Inter,system-ui,sans-serif;font-weight:600;letter-s
     </div>
   </section>
 
-  <section class="offer" id="offer">
+  <section class="offer" id="offer" data-end="2026-12-28">
     <small>Current specials</small>
     <h2 id="offH">2 months free on a 12 month lease</h2>
     <p id="offP">Plus up to $2,000 in Look and Lease savings. Move in by Dec 28. The leasing team confirms which homes qualify.</p>
@@ -86,7 +86,7 @@ h1,h2,h3{font-family:Poppins,Inter,system-ui,sans-serif;font-weight:600;letter-s
   <section class="sec">
     <h2>Homes available now</h2>
     <p class="sub">1, 2 and 3 bedrooms and penthouse homes. See every available home with one tap.</p>
-    <div class="plans" id="plans"><div class="plan"><b>1 bedroom</b><div class="pr">$1,770<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>2 bedroom</b><div class="pr">$2,743<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>Penthouse</b><div class="pr">$3,195<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>3 bedroom</b><div class="pr">$3,515<i>starting at</i></div><span>Base rent</span></div></div>
+    <div class="plans" id="plans"><div class="plan"><b>1 bedroom</b><div class="pr">$1,770<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>2 bedroom</b><div class="pr">$2,743<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>Penthouse</b><div class="pr">$3,195<i>starting at</i></div><span>Base rent</span></div><div class="plan"><b>3 bedroom</b><div class="pr">$3,515<i>starting at</i></div><span>Base rent · available Feb 25, 2027</span></div></div>
     <p class="asof" id="asof">Starting base rents from luravegas.com on Nov 24, 2026, and they change often. <a href="https://www.luravegas.com/floorplans" target="_blank" rel="noopener">See every home live</a></p>
   </section>
 
@@ -130,11 +130,12 @@ var url=location.href.split('#')[0];
 var v='BEGIN:VCARD\r\nVERSION:3.0\r\nFN:'+(window.llBy?window.llBy+', Lura Leasing (Las Vegas)':'Lura Leasing Team (Las Vegas)')+'\r\nORG:Lura\r\nTITLE:Leasing\r\nTEL;TYPE=WORK:+17029356015\r\nADR;TYPE=WORK:;;3240 W Harmon Ave;Las Vegas;NV;89103;USA\r\nURL:'+url+'\r\nEND:VCARD\r\n';
 $('#vcf').href='data:text/vcard;charset=utf-8,'+encodeURIComponent(v);
 $('#share').addEventListener('click',function(){var d={title:'Lura in Las Vegas',text:'Take a look at Lura with me.',url:url};if(navigator.share){navigator.share(d).catch(function(){})}else{navigator.clipboard.writeText(url).then(function(){toast('Link copied. Paste it in a text.')},function(){toast(url)})}});
+var offEnd=function(){var o=$('#offer'),end=new Date(o.dataset.end+'T23:59:59-08:00');if(Date.now()>end){$('#offH').textContent='Ask about this month\'s specials';$('#offP').textContent='Specials change often. The leasing team will share what is available today.'}};offEnd();
 // live prices and special from the morning refresh
 fetch('../../../live/lura-x5r9/data.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){var t=d&&d.talk,u=d&&d.compete&&d.compete.us;if(!t)return;
  var s=u&&u.specialShort||'';if(s&&!/no special/i.test(s)){$('#offH').textContent=s;$('#offP').textContent=/Look and Lease/.test(t.offer||'')?'Plus up to $2,000 in Look and Lease savings. Move in by Dec 28. The leasing team confirms which homes qualify.':'The leasing team confirms which homes qualify.'}else if(/no special/i.test(t.offer||'')){$('#offH').textContent='Ask about this month\'s specials';$('#offP').textContent='Specials change often. The leasing team will share what is available today.'}
- var m={'1 bed base rent from':'1 bedroom','2 bed base rent from':'2 bedroom','penthouse base rent from':'Penthouse'},h='';(t.prices||[]).forEach(function(p){if(m[p[1]])h+='<div class="plan"><b>'+m[p[1]]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'});(t.more||[]).forEach(function(p){h+='<div class="plan"><b>'+p[1]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'});if(h)$('#plans').innerHTML=h;
- if(t.checked)$('#asof').firstChild.textContent='Starting base rents from luravegas.com on '+t.checked+', 2026, and they change often. '}).catch(function(){});
+ var m={'1 bed base rent from':'1 bedroom','2 bed base rent from':'2 bedroom','penthouse base rent from':'Penthouse'},h='';(t.prices||[]).forEach(function(p){if(m[p[1]])h+='<div class="plan"><b>'+m[p[1]]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent</span></div>'});(t.more||[]).forEach(function(p){var a=/from ([A-Z][a-z]{2} \d{1,2}, \d{4})/.exec(p[2]||'');h+='<div class="plan"><b>'+p[1]+'</b><div class="pr">'+p[0]+'<i>starting at</i></div><span>Base rent'+(a?' · available '+a[1]:'')+'</span></div>'});if(h)$('#plans').innerHTML=h;
+ if(t.checked)$('#asof').firstChild.textContent='Starting base rents from luravegas.com on '+t.checked+', 2026, and they change often. ';offEnd()}).catch(function(){});
 })();
 </script>
 <script src="../../../guide/guide.js?v=4" data-captions="Hi, I'm Mia, your tour guide.|Welcome!|Everything you need is right here.|Book your tour,|see today's special,|or tap to call our leasing team.|I can't wait to show you around!" data-name="Mia" data-intro="Hi! I'm Mia. I'll get you to {pro}." data-role="your page assistant" data-tiphide="6" data-size="72" data-vw="0.42" data-video="https://cms-toolkit-artifacts.artlist.io/content/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-v1/media__3/-e-x-t-e-r-n-a-l_-i-m-a-g-e_-t-o_-v-i-d-e-o-4c57d71d-db8c-4382-81e1-89c4093dbe6c.mp4?Expires=2110802013&amp;Key-Pair-Id=K2ZDLYDZI2R1DF&amp;Signature=JriNK2HLtVmmYLXN7L32nhC71ALCgOJKam~6CKTux-2hTXtPoN3CU8FZ4P1J4EJpzV6sWb9rfJYN83KQDblKOy0zGKKywZ9h0czVYRSxoOAHC0QhVhn5lJjyY9Sg5QJ9eUPkT-8Wq8V91ueF4tJ3UJ2BiaTi7AplQ55ipNYMPNyXyvaN9XlkfEyRqpOBoTd3p3Hc~ymWaURGH4wePNLN4mbx3cfRAgj-ASyPpizqyZjqytsQHBfoQKtHQtTHgG~7X0wfPiT1Ynfz-cBAOMhN4KNXQrlHOYO2QgNxrehIzEvLnHYx6OrwYi9kMg6J0zFU2U5yLj~bqnAIb~n~0qM3LQ__" data-face="../../../guide/mia-face.jpg" data-poster="../../../guide/mia-poster.jpg" data-property="Lura" data-pro="the leasing team" data-sub="AI guide. Calls and tours are handled by the Lura leasing team." data-l3="Call the leasing team" data-tour="https://www.luravegas.com/scheduletour" data-offer="https://www.luravegas.com/floorplans" data-l2="See current specials" data-call="tel:+17029356015" data-color="#00608a" defer></script>

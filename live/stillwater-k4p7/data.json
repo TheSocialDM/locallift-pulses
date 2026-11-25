@@ -309,10 +309,6 @@
     "special": "No special posted on their listing",
     "from": [
      [
-      "$1,640",
-      "studio"
-     ],
-     [
       "$1,524",
       "1 bed"
      ],
@@ -328,12 +324,6 @@
       "Special",
       "Nothing posted",
       "2 mo free + $1,200 Bldgs 1, 2",
-      "us"
-     ],
-     [
-      "Studio from",
-      "$1,640",
-      "$1,486",
       "us"
      ],
      [
@@ -940,7 +930,7 @@
    {
     "k": "price",
     "q": "Are we priced right?",
-    "a": "1 bed from: Stillwater Lakes $1,552, Cielo View $1,549, The Jamison $1,524, Mosaic at Lake Toho $1,443.<br>2 bed from: Stillwater Lakes $1,902, Cielo View $1,874, The Jamison $1,849, Mosaic at Lake Toho $1,689.<br>Studios from: Stillwater Lakes $1,486, The Jamison $1,640, Mosaic at Lake Toho $1,299. Cielo View has no studios.<br>These are base rents. The Jamison adds mandatory monthly costs, Mosaic posts an 18 month lease and ours is on a 15 month lease, so confirm the term before quoting a difference.",
+    "a": "1 bed from: Stillwater Lakes $1,552, Cielo View $1,549, The Jamison $1,524, Mosaic at Lake Toho $1,443.<br>2 bed from: Stillwater Lakes $1,902, Cielo View $1,874, The Jamison $1,849, Mosaic at Lake Toho $1,689.<br>Studios from: Stillwater Lakes $1,486, Mosaic at Lake Toho $1,299. Cielo View has no studios.<br>These are base rents. The Jamison adds mandatory monthly costs, Mosaic posts an 18 month lease and ours is on a 15 month lease, so confirm the term before quoting a difference.",
     "s": "Each community’s website · checked 11/24"
    },
    {
