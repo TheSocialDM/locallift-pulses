@@ -28,7 +28,7 @@ KIT_CUVEE=r"""const KIT=[
 ['I’m worried about getting approved.','I understand. Our manager can walk you through our written screening criteria so you know exactly what to expect before you apply.','Never guess if someone will qualify. Share the written criteria.'],
 ['I want a shorter lease.','Let me check what lease terms we have for the home you like.','Confirm lease terms and prices with your manager.']],'o'],
 [LI('sound'),'The spot',[
-['Is it noisy on game nights?','We’re close to Westgate and the stadium, which a lot of residents love. Let me show you homes on different sides of the building so you can pick what fits you.','Never promise it will be quiet.'],
+['Is it noisy on game nights?','We’re close to Westgate and State Farm Stadium. Let me show you homes on different sides of the building so you can pick what fits you.','Never promise it will be quiet.'],
 ['I don’t love this view.','Let me check which open homes sit on a different side or a higher floor.','']],'o'],
 [LI('chat'),'First hello',[
 ['Just looking around.','Perfect, looking is the best way to start. I can show you a model and the rooftop terrace in about ten minutes, no pressure. What brought you by today?','Ask one question before you show anything.'],
@@ -65,8 +65,8 @@ KIT_ES=r"""const KIT=[
 ['The move in costs are too high.','Let me pull up the full move in cost for the home you like so you see the exact number before you decide.','Use the Lease Cost Calculator on the website or ask your manager. Never quote a fee from memory.']],'o'],
 [LI('swap'),'Comparing',[
 ['The Flats is right across the way.','They are close by, and they advertise up to 8 weeks free on select homes. Let’s compare the total you’d pay on the same lease term and size. Here you get {sp}, a fourth floor sky lounge and a two level fitness center.','Agree first, then compare totals on the same lease term. Never knock them.'],
-['Redstone is cheaper.','Their average 1 bedroom asks less, at {r2}. Let’s compare what you get side by side: gated access, the sky lounge, two gated dog parks and garages on select homes.','Agree first, then compare. Never knock them.'],
-['SanTan by Baron gives free garage.','They do advertise a garage offer with their special. Ask what total they were quoted. Here you have {sp}, and single and double car garages on select homes.','If they mention a special there, ask what they were quoted.'],
+['Redstone is cheaper.','Their average 1 bedroom asks less, at {r2}. Let’s compare what you get side by side: the sky lounge, two gated dog parks and garages on select homes.','Agree first, then compare. Never knock them.'],
+['SanTan by Baron gives a free garage.','They do advertise a garage offer with their special. Ask what total they were quoted. Here you have {sp}, and single and double car garages on select homes.','If they mention a special there, ask what they were quoted.'],
 ['I want to shop around.','Of course. Can I send you today’s offer and the homes you liked so you can compare side by side?','Get their email or number before they leave.']],'o'],
 [LI('ruler'),'Size and fit',[
 ['Will my furniture fit?','Let’s find out together. I can pull the exact room sizes from the floor plan, and you’re welcome to measure. What’s the biggest piece you’re bringing?','Never guess a measurement. Use the floor plan.'],
@@ -101,7 +101,7 @@ KIT_ES=r"""const KIT=[
 ['What’s around here?','You can walk to SanTan Village for shopping, restaurants and entertainment.',''],
 ['What do residents do for fun?','The fourth floor sky lounge, the resort style pool and spa with cabanas, and the fire pit and grills.','']],'q'],
 [LI('shield'),'Careful questions',[
-['Is this a safe area?','Safety means different things to everyone, so I’d encourage you to look at local resources and visit at different times. I’m happy to show you the community and its features, like our gated access.','Fair housing: never describe how safe a neighborhood is.'],
+['Is this a safe area?','Safety means different things to everyone, so I’d encourage you to look at local resources and visit at different times. I’m happy to show you the community and its features.','Fair housing: never describe how safe a neighborhood is.'],
 ['What kind of people live here?','Everyone is welcome here. I’m happy to tell you about our amenities and community spaces.','Fair housing: never describe who lives here.'],
 ['How are the schools?','The school district’s website has the most current information, so that is the best place to check.','Fair housing: don’t rate schools.'],
 ['Is this a good place for kids?','Every home here is open to everyone. I’m happy to show you the homes and spaces that fit what you need.','Fair housing: never steer families toward or away from any home or floor.'],
@@ -122,7 +122,7 @@ CFG={
    phone=('(480) 605-0338','+14806050338','4806050338'),city='Gilbert, AZ',city2='Gilbert',
    kit=KIT_ES,r1=('The Flats At SanTan','1 bed average'),r2=('Redstone at SanTan Village','1 bed average'),
    syn='|flats|the flats|redstone|baron|santan by baron|town commons|zaterra|',
-   ev="""const EV=[['Sat, Dec 5','Tumbleweed Tree Lighting and Parade of Lights','Downtown Chandler, 4:30 to 9 pm, free',0,525,'https://www.chandleraz.gov/explore/special-events/tumbleweed-tree-lighting-ceremony'],['Dec 11 to 22','Riparian After Dark holiday lights','Riparian Preserve at Water Ranch, 5:30 to 9 pm, $5 tickets online',0,542,'https://www.gilbertaz.gov/departments/parks-and-recreation/special-events-and-permits/riparian-after-dark']];""",
+   ev="""const EV=[['Sat, Dec 5','Tumbleweed Tree Lighting and Parade of Lights','Downtown Chandler, from 4:30 pm, parade 6:45 pm, tree lighting about 8 pm, free',0,525,'https://www.chandleraz.gov/explore/special-events/tumbleweed-tree-lighting-ceremony'],['Dec 11 to 22','Riparian After Dark holiday lights','Riparian Preserve at Water Ranch, 5:30 to 9 pm, $5 tickets online',0,542,'https://www.gilbertaz.gov/departments/parks-and-recreation/special-events-and-permits/riparian-after-dark']];""",
    cm={'#c8241d':'#2b5f87','#9a1b16':'#1d4361','#a81f19':'#245273','#7a1712':'#132f45','#f2a49f':'#9cc3e0','#fbe9e7':'#e8f1f8','#fbefed':'#eef5fa'},
    rgba='rgba(43,95,135,',dark='#8cc4ef'),
 }
@@ -171,6 +171,14 @@ def sweep(m):
     if s<0.08 or s>0.52 or not (hh<0.12 or hh>0.93): return h
     r,g,b=colorsys.hls_to_rgb(PH,l,min(s*1.1,0.55));return '#%02x%02x%02x'%(round(r*255),round(g*255),round(b*255))
 t=re.sub(r'#[0-9a-fA-F]{6}\b',sweep,t)
+# ---- Editor fixes Nov 25 (gate FAIL, then fixed)
+t,n=re.subn(r'<section class="w"><div class="wt"><b>🖨️ Print and place</b>.*?</section>','',t,count=1,flags=re.S)
+if not os.path.isdir(os.path.join(R,'live',C['folder'],'print')): assert n==1,'print section'
+sub("n.textContent=\"Prices come from each community's own website and can change daily. Lowest listed base rent; confirm lease terms before quoting.\"","n.textContent=\"Rival rents are average asking rents in the market data. Confirm lease terms before quoting.\"",1)
+sub('<b>Google reviews</b><span>${esc(D.rivals.date)}</span>','<b>Review site ratings</b><span>${esc(D.rivals.date)}</span>',1)
+sub('.o1,span.o1,.akl,.mctap,.lt .prt{','.o1,span.o1,.akl,.mctap{',1)
+t=t.replace('</body>','<style>@media (max-width:360px){.akx span.h{white-space:normal!important;hyphens:manual;overflow-wrap:break-word}}</style></body>',1)
+sub('.mcflip{background:#1c1c1e}','.mcflip{background:#1c1c1e;color:'+C['cm']['#f2a49f']+';border-color:'+C['cm']['#f2a49f']+'}',1)
 os.makedirs(os.path.join(R,'live',C['folder'],'v3'),exist_ok=True)
 open(os.path.join(R,'live',C['folder'],'v3','index.html'),'w').write(t)
 open(os.path.join(R,'live',C['folder'],'v3','version.txt'),'w').write(APPV+'\n')

@@ -6,7 +6,7 @@
  "rv": {
   "rating": "4.4",
   "count": "120",
-  "vs": "The Flats At SanTan shows 232 reviews in market data. Every ask closes the gap."
+  "vs": "Rival scores come from review sites, not Google. Every ask grows our Google count."
  },
  "feed": [
   {
@@ -90,13 +90,13 @@
    ],
    [
     "Elevation SanTan (you)",
-    "4.4",
-    120,
+    "4.5",
+    69,
     0,
     0
    ]
   ],
-  "note": "Rival ratings and counts from the Nov 20 market data. Elevation SanTan read on Google today."
+  "note": "All ratings here are review site averages from the Nov 20 market data, not Google. Our Google rating is 4.4 (120)."
  },
  "ask": {
   "title": "This week: ask for one review",
@@ -106,7 +106,7 @@
    "When a work order is closed"
   ],
   "points": [
-   "Our 4.4 rating is strong. The Flats next door shows 232 reviews to our 120.",
+   "Our 4.4 Google rating is strong. Recent 5 star reviews name Kristina and Chris.",
    "Ask in person, then send the link the same day.",
    "One a week is the target."
   ]
@@ -196,7 +196,7 @@
      ]
     ],
     "fees": "Move in cost $75 (application, admin waived) in market data.",
-    "tip": "Right next door, 3.6 leases a week, 4.7 stars. Their averages ask less on larger homes. Compare totals on the same term, then lead with our 10 weeks free, the sky lounge and gated access.",
+    "tip": "Right next door, 3.6 leases a week. Their 1 and 2 bedroom averages ask less, and their average homes are larger. Compare totals on the same term, then lead with our 10 weeks free, the fourth floor sky lounge and the two level fitness center.",
     "vs": [
      [
       "Special",
@@ -223,13 +223,13 @@
       "them"
      ],
      [
-      "Google rating",
+      "Review site rating",
       "4.7 (232)",
-      "4.4 (120)",
+      "4.5 (69)",
       "them"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials, fees and ratings: market data Nov 20. Elevation SanTan offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Ratings for all communities: review site averages in the market data Nov 20. Elevation SanTan offer and fees from its website Nov 25.",
     "url": "https://www.flatsatsantan.com/",
     "feesChecked": "Nov 20",
     "checked": "Nov 20",
@@ -250,7 +250,7 @@
      ]
     ],
     "fees": "Move in cost $107 (application plus admin) in market data.",
-    "tip": "They lease 3.8 a week and pair 8 weeks free with a free garage. Our 10 weeks free beats their 8. Compare totals on the same term, then show the sky lounge and two level fitness center.",
+    "tip": "They lease 3.8 a week and pair 8 weeks free with 6 months of free garage. We offer up to 10 weeks free. Compare totals on the same term, garage included, then show the sky lounge and two level fitness center.",
     "vs": [
      [
       "Special",
@@ -277,13 +277,13 @@
       "them"
      ],
      [
-      "Google rating",
+      "Review site rating",
       "Not in data",
-      "4.4 (120)",
+      "4.5 (69)",
       "ask"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials, fees and ratings: market data Nov 20. Elevation SanTan offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Ratings for all communities: review site averages in the market data Nov 20. Elevation SanTan offer and fees from its website Nov 25.",
     "url": "https://www.santanbybaron.com/",
     "feesChecked": "Nov 20",
     "checked": "Nov 20",
@@ -304,7 +304,7 @@
      ]
     ],
     "fees": "Move in cost $55 (application) in market data.",
-    "tip": "They lease 4.0 a week at lower averages, with their best special tied to 14 to 18 month leases. Our rating is far higher (4.4 to their 2.3). Compare totals on the same term.",
+    "tip": "They lease 4.0 a week at lower averages, with their best special tied to 14 to 18 month leases. On review sites our score is far higher (4.5 to their 2.3). Compare totals on the same term.",
     "vs": [
      [
       "Special",
@@ -331,13 +331,13 @@
       "them"
      ],
      [
-      "Google rating",
+      "Review site rating",
       "2.3 (95)",
-      "4.4 (120)",
+      "4.5 (69)",
       "us"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials, fees and ratings: market data Nov 20. Elevation SanTan offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Ratings for all communities: review site averages in the market data Nov 20. Elevation SanTan offer and fees from its website Nov 25.",
     "url": "https://www.olympusproperty.com/apartments/az/gilbert/redstone-at-santan-village/",
     "feesChecked": "Nov 20",
     "checked": "Nov 20",
@@ -345,7 +345,7 @@
    }
   ],
   "us": {
-   "special": "Up to 10 weeks free on select homes and lease terms, while supplies last. Ask your manager which homes qualify",
+   "special": "Up to 10 weeks free on select homes and lease terms, while supplies last. Ask your manager which homes qualify.",
    "from": [
     [
      "$1,530",
@@ -360,7 +360,7 @@
      "Studio"
     ]
    ],
-   "pets": "Up to 2 pets per home. Two gated dog parks and a pet wash and grooming room. Get current pet fees and policy from the office",
+   "pets": "Up to 2 pets per home. Two gated dog parks and a pet wash and grooming room. Get current pet fees and policy from the office.",
    "showoff": [
     "Fourth floor sky lounge",
     "Resort style pool and spa with cabanas",
@@ -426,7 +426,7 @@
   "pts": [
    "Our offer: up to 10 weeks free on select homes. Confirm which homes qualify with your manager.",
    "Size adjusted, the five fastest leasing rivals ask less per square foot. B3 and B4 read above market for their size.",
-   "Our 4.4 rating beats Redstone (2.3). Lead with the sky lounge, two level fitness center, gated access and garages on select homes."
+   "On review sites our score beats Redstone (4.5 to 2.3). Lead with the sky lounge, two level fitness center, gated access and garages on select homes."
   ],
   "cards": [
    {
@@ -440,16 +440,16 @@
     "src": "Elevation SanTan website 11/25 · market data 11/20",
     "cmp": {
      "cols": [
-      "Elevation SanTan",
+      "Us",
       "The Flats",
       "Redstone"
      ],
      "rows": [
       [
-       "Google rating",
-       "4.4 (120)",
-       "4.7 (232)",
-       "2.3 (95)"
+       "Review sites",
+       "4.5",
+       "4.7",
+       "2.3"
       ],
       [
        "Move in cost",
@@ -538,7 +538,7 @@
     ],
     "h": "4.4 stars on 120 reviews",
     "b": "The six newest reviews all have replies. Recent 5 star reviews name Kristina and Chris.",
-    "src": "Google today · rivals market data 11/20",
+    "src": "Google today",
     "stats": [
      [
       "4.4",
@@ -546,14 +546,14 @@
      ],
      [
       "120",
-      "Our reviews"
+      "Our Google reviews"
      ],
      [
-      "232",
-      "The Flats reviews"
+      "6 of 6",
+      "Newest with replies"
      ]
     ],
-    "note": "Every review we ask for closes the count gap with The Flats next door."
+    "note": "Every review we ask for grows our Google count."
    },
    {
     "lab": "GOOGLE LISTING LEADS",
@@ -643,7 +643,7 @@
    "emoji": "🎄",
    "fx": "spark",
    "title": "Tumbleweed Tree Lighting, Saturday, Dec 5",
-   "body": "Downtown Chandler, 4:30 to 9 pm, free, with the Parade of Lights. Mention it on tours.",
+   "body": "Downtown Chandler, festivities from 4:30 pm, Parade of Lights 6:45 pm, tree lighting about 8 pm, free. Mention it on tours.",
    "iso": "2026-12-05",
    "cta": "See the city page ›",
    "url": "https://www.chandleraz.gov/explore/special-events/tumbleweed-tree-lighting-ceremony"

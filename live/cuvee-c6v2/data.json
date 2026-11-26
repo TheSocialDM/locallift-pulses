@@ -6,7 +6,7 @@
  "rv": {
   "rating": "3.4",
   "count": "106",
-  "vs": "Glen 91 shows 218 reviews in market data. Every ask closes the gap."
+  "vs": "Rival scores come from review sites, not Google. Every ask grows our Google count."
  },
  "feed": [
   {
@@ -91,13 +91,13 @@
    ],
    [
     "Cuvee (you)",
-    "3.4",
-    106,
+    "2.9",
+    38,
     0,
     0
    ]
   ],
-  "note": "Rival ratings and counts from the Nov 21 market data. Cuvee read on Google today."
+  "note": "All ratings here are review site averages from the Nov 21 market data, not Google. Our Google rating is 3.4 (106)."
  },
  "ask": {
   "title": "This week: ask for one review",
@@ -140,6 +140,7 @@
  "followups": [
   {
    "title": "Reply to today’s 1 star review",
+   "due": "Nov 25",
    "body": "It mentions access codes and keys, the hot tub and the coffee station. Ask your manager about a kind reply today.",
    "iso": "2026-11-25",
    "link": "https://www.google.com/maps/place/?q=place_id:ChIJWW93lKNBK4cRWrru46ZzwgU"
@@ -227,13 +228,13 @@
       "them"
      ],
      [
-      "Google rating",
+      "Review site rating",
       "4.5 (72)",
-      "3.4 (106)",
+      "2.9 (38)",
       "them"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials, fees and ratings: market data Nov 21. Cuvee offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials and fees: market data Nov 21. Ratings for all communities: review site averages in the market data Nov 21. Cuvee offer and fees from its website Nov 25.",
     "url": "https://www.broadstonewestgate.com/",
     "feesChecked": "Nov 21",
     "checked": "Nov 21",
@@ -281,13 +282,13 @@
       "them"
      ],
      [
-      "Google rating",
+      "Review site rating",
       "3.4 (218)",
-      "3.4 (106)",
-      "even"
+      "2.9 (38)",
+      "them"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials, fees and ratings: market data Nov 21. Cuvee offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials and fees: market data Nov 21. Ratings for all communities: review site averages in the market data Nov 21. Cuvee offer and fees from its website Nov 25.",
     "url": "https://www.glen91.com/",
     "feesChecked": "Nov 21",
     "checked": "Nov 21",
@@ -308,7 +309,7 @@
      ]
     ],
     "fees": "Move in cost $200 (application plus admin) in market data.",
-    "tip": "They lease 4.4 a week with up to 12 weeks free. Their averages ask less. Our rating is higher (3.4 to their 2.6). Compare totals on the same term.",
+    "tip": "They lease 4.4 a week with up to 12 weeks free. Their averages ask less. On review sites our score is higher (2.9 to their 2.6). Compare totals on the same term.",
     "vs": [
      [
       "Special",
@@ -335,13 +336,13 @@
       "them"
      ],
      [
-      "Google rating",
+      "Review site rating",
       "2.6 (57)",
-      "3.4 (106)",
+      "2.9 (38)",
       "us"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials, fees and ratings: market data Nov 21. Cuvee offer and fees from its website Nov 25, rating from Google Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials and fees: market data Nov 21. Ratings for all communities: review site averages in the market data Nov 21. Cuvee offer and fees from its website Nov 25.",
     "url": "https://www.prosedesertriver.com/",
     "feesChecked": "Nov 21",
     "checked": "Nov 21",
@@ -349,7 +350,7 @@
    }
   ],
   "us": {
-   "special": "Up to 11 weeks free plus 6 months free parking, limited time. Ask your manager which homes and lease terms qualify",
+   "special": "Up to 11 weeks free plus 6 months free parking, limited time. Ask your manager which homes and lease terms qualify.",
    "from": [
     [
      "$1,294",
@@ -360,7 +361,7 @@
      "2 bed"
     ]
    ],
-   "pets": "Up to 2 pets per home, 60 pound limit per pet, breed restrictions apply. Dog park with areas for large and small dogs and a pet spa. Get current pet fees from the office",
+   "pets": "Up to 2 pets per home, 60 pound limit per pet, breed restrictions apply. Dog park with areas for large and small dogs and a pet spa. Get current pet fees from the office.",
    "showoff": [
     "Rooftop terrace over Westgate and State Farm Stadium",
     "Two resort style pools with firepits and cabanas",
@@ -441,15 +442,15 @@
     "cmp": {
      "cols": [
       "Cuvee",
-      "Broadstone",
+      "Broad­stone",
       "Glen 91"
      ],
      "rows": [
       [
-       "Google rating",
-       "3.4 (106)",
-       "4.5 (72)",
-       "3.4 (218)"
+       "Review sites",
+       "2.9",
+       "4.5",
+       "3.4"
       ],
       [
        "Move in cost",
@@ -533,7 +534,7 @@
     ],
     "h": "3.4 stars on 106 reviews",
     "b": "A new 1 star review came in today with no reply yet. Recent 5 star reviews praise the front desk and maintenance.",
-    "src": "Google today · rivals market data 11/21",
+    "src": "Google today",
     "stats": [
      [
       "3.4",
@@ -541,11 +542,11 @@
      ],
      [
       "106",
-      "Our reviews"
+      "Our Google reviews"
      ],
      [
-      "218",
-      "Glen 91 reviews"
+      "1",
+      "New today, no reply"
      ]
     ],
     "note": "Every review we ask for helps the rating. Ask at every move in, renewal and closed work order."
