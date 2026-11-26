@@ -747,8 +747,8 @@ document.addEventListener('click',e=>{const b=e.target.closest('#hdots button');
 const show=k=>{cur=k;document.body.dataset.v=k;document.querySelectorAll('nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===k));$('view').innerHTML=V[k]();holdRun();railGo();badge();if(k!=='today')scrollTo({top:document.querySelector('.top').offsetHeight-10})};
 document.querySelector('nav').addEventListener('click',e=>{const b=e.target.closest('button');if(b)show(b.dataset.v)});
 const sh=$('sh'),box=$('box');
-const SNAPHOOK='https://hook.us2.make.com/seqkhkibj2qjpqt5mrvq1m7s5mdix8xv';
-const VIDHOOK='https://hook.us2.make.com/kano60wsrbnwssabjecihkpftrr3h8lm';
+const SNAPHOOK='https://live.thesocialdm.com/api/r/snap';
+const VIDHOOK='https://live.thesocialdm.com/api/r/vid';
 const STAGS=['Amenity','Local spot','Event','Home','Pet','Other'];
 let snapTag='',snapFiles=[];
 const isPhone=()=>{try{return matchMedia('(pointer:coarse)').matches}catch(x){return false}};
@@ -798,7 +798,7 @@ ${n>1?`<div class="ra-more">${r.l.slice(1).map(x=>`<button data-goriv="${esc(x.r
 document.addEventListener('click',e=>{if(e.target.closest('#raOk')){sh.classList.remove('on','ra-on');show(cur);return}if(e.target.closest('[data-ra]'))sh.classList.remove('on','ra-on')},true);
 const gateUp=()=>{const g=document.getElementById('gate');return !!(g&&getComputedStyle(g).display!=='none'&&g.offsetParent)};
 const raTry=(n=0)=>{try{const r=RA();if(!r||r.day!==dkey(Date.now()))return;let k='';try{k=localStorage.getItem('llco-ralert')||''}catch(x){}if(k===r.day)return;if(document.visibilityState!=='visible'||sh.classList.contains('on')||gateUp()){clearTimeout(window.__raT);if(n<400)window.__raT=setTimeout(()=>raTry(n+1),1500);return}raShow(false)}catch(x){}};
-const APPV='2026-11-24c6';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
+const APPV='2026-11-26s1';const busy=()=>{const ae=document.activeElement;return sh.classList.contains('on')||!!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName))};
 const verCheck=()=>fetch('version.txt?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.text():'').then(v=>{v=(v||'').trim();if(v&&v!==APPV&&!busy()){let t='';try{t=sessionStorage.getItem('llco-rl')||''}catch(x){}if(t===v)return false;try{sessionStorage.setItem('llco-rl',v)}catch(x){}location.reload();return true}return false}).catch(()=>false);
 const liveCheck=()=>{if(document.visibilityState!=='visible')return;verCheck().then(rl=>{if(rl)return;raTry();fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{if(!D||j.updated===D.updated)return;D=j;const ae=document.activeElement;if(!sh.classList.contains('on')&&!(ae&&/INPUT|TEXTAREA|SELECT/.test(ae.tagName)))show(cur);raTry()}).catch(()=>{})})};
 document.addEventListener('visibilitychange',liveCheck);window.addEventListener('pageshow',e=>{if(e.persisted)liveCheck()});window.addEventListener('focus',liveCheck);setInterval(liveCheck,10*60*1000);
@@ -1228,7 +1228,7 @@ window.addEventListener('resize',check);
 </html>
 <script>
 (function(){
-const HOOK='https://hook.us2.make.com/484kbydspt3pewlyjq42utapf29y50mx';
+const HOOK='https://live.thesocialdm.com/api/r/ping';
 const g=k=>{try{return localStorage.getItem(k)}catch(e){return null}};
 const u=navigator.userAgent||'',dev=/iPhone/.test(u)?'iPhone':/iPad/.test(u)?'iPad':/Android/.test(u)?'Android phone':/Macintosh/.test(u)?'Mac':/Windows/.test(u)?'Windows PC':'Other';
 const sa=(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
