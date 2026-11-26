@@ -568,7 +568,7 @@ document.addEventListener("click",async e=>{
   try{await navigator.clipboard.writeText(el.textContent);toast("Copied")}catch(err){const rg=document.createRange();rg.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(rg);toast("Selected. Tap Copy.")}}});
 
 drawRems();drawFeed();
-{const HOOK="https://hook.us2.make.com/5xxmpb7yrvezcpa4x44oggu1hlfbn0lp";
+{const HOOK="https://live.thesocialdm.com/api/r/rep";
  const qs=new URLSearchParams(location.search);if(qs.get("me")==="michael")store.set("rephq_me","michael");
  const REP=store.get("rephq_me")==="michael"?"Michael test":"Shelby";
  const SID=Math.random().toString(36).slice(2,9),T0=Date.now();

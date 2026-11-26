@@ -41,7 +41,7 @@ const start=()=>{['sh','box','view'].forEach(id=>{const el=document.getElementBy
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();window.addEventListener('resize',check)})();
 </script>'''
 n0=len(s)
-s=re.sub(r"<script>\s*\(function\(\)\{\s*const HOOK='https://hook\.us2\.make\.com/484kbydspt3pewlyjq42utapf29y50mx'.*?</script>",lambda m:hint,s,count=1,flags=re.S)
+s=re.sub(r"<script>\s*\(function\(\)\{\s*const HOOK='https://(?:hook\.us2\.make\.com/484kbydspt3pewlyjq42utapf29y50mx|live\.thesocialdm\.com/api/r/ping)'.*?</script>",lambda m:hint,s,count=1,flags=re.S)
 assert '484kbydspt3pewlyjq42utapf29y50mx' not in s
 # demo data: hide resident names and review cards, plus deep links
 dl=r'''const DL=h=>{if(!h)return;try{close()}catch(e){};const nav=v=>{const b=document.querySelector('nav button[data-v='+v+']');if(b)b.click()};const clk=q=>{const b=document.querySelector(q);if(b)b.click()};const later=f=>setTimeout(f,150);
@@ -57,6 +57,7 @@ must("fetch('../data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).t
 s=s.replace("fetch('version.txt?t='","fetch('no-version.txt?t='")
 s=re.sub(r"const (SNAPHOOK|VIDHOOK)='[^']*';",r"const \1='';",s)
 assert 'hook.us2.make.com' not in s and 'fetch(SNAPHOOK' not in s and 'fetch(VIDHOOK' not in s
+assert 'api/r/' not in s, 'demo must never send through the relay'
 # live "Or send from my own phone" opens Messages; the demo keeps the practice message (nothing sends)
 s=s.replace("/*llsendlive*/location.href='sms:?&body='+encodeURIComponent(txt());box.innerHTML='<h3>Opening Messages</h3><p>Your text is filled in. Tap Send in Messages.</p>","box.innerHTML='<h3>Ready to send</h3><p>In the live app this opens your phone\\'s Messages with the text filled in, and you tap Send. This preview does not open Messages.</p>")
 (app/'demo/index.html').write_text(s)
