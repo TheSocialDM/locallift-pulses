@@ -1,8 +1,8 @@
 {
  "property": "Cuvee",
  "city": "Glendale, Arizona",
- "updated": "2026-11-25T17:30:00-07:00",
- "updatedLabel": "Nov 25, 5:30 pm Phoenix time",
+ "updated": "2026-11-26T05:55:00-07:00",
+ "updatedLabel": "Nov 26, 5:55 am Phoenix time",
  "rv": {
   "rating": "3.4",
   "count": "106",
@@ -13,23 +13,23 @@
    "src": "Google reviews · read today",
    "date": "Nov 25",
    "tone": "warn",
-   "title": "New 1 star review today, no reply yet",
-   "body": "Posted today. It mentions trouble with access codes and keys, the hot tub not working, and the coffee station out of cups. Cuvee is at 3.4 stars on 106 reviews.",
+   "title": "New 1 star review, no reply yet",
+   "body": "Posted Nov 25, still no reply this morning. It mentions trouble with access codes and keys, the hot tub not working, and the coffee station out of cups. Cuvee is at 3.4 stars on 106 reviews.",
    "link": "https://www.google.com/maps/place/?q=place_id:ChIJWW93lKNBK4cRWrru46ZzwgU",
    "linkLabel": "Open Cuvee reviews on Google",
    "action": "Ask your manager about a reply today. Keep it kind and invite them to the office."
   },
   {
-   "src": "Cuvee website",
-   "date": "Nov 25",
+   "src": "Cuvee website · checked today",
+   "date": "Nov 26",
    "tone": "info",
    "title": "Our offer: up to 11 weeks free plus 6 months free parking",
    "body": "livecuvee.com shows up to 11 weeks free plus 6 months free parking, limited time. 1 bedroom homes from $1,294 (Petit Verdot A6) and 2 bedroom homes from $1,650 (Malbec B2).",
    "action": "Ask the move in date and lease term first, then confirm which homes qualify with your manager."
   },
   {
-   "src": "Rival watch · market data",
-   "date": "Nov 21",
+   "src": "Rival watch · their own sites",
+   "date": "Nov 26",
    "tone": "warn",
    "title": "Rivals nearby offer up to 12 weeks free",
    "body": "Broadstone Westgate: up to 12 weeks free plus up to $1,000 off move in by Nov 30. Glen 91: 12 weeks free on 1 bedrooms, fees waived on a look and lease. Prose Desert River: up to 12 weeks free base rent.",
@@ -47,7 +47,7 @@
   [
    "3.4",
    "Google rating",
-   "106 reviews, read Nov 25"
+   "106 reviews, read Nov 26"
   ],
   [
    "90.6%",
@@ -119,11 +119,11 @@
  "asks": {
   "sent": 0,
   "opened": 0,
-  "through": "Nov 25"
+  "through": "Nov 26"
  },
  "talk": {
-  "checked": "Nov 25",
-  "checkedIso": "2026-11-25",
+  "checked": "Nov 26",
+  "checkedIso": "2026-11-26",
   "offer": "Up to 11 weeks free plus 6 months free parking, limited time. Ask your manager which homes and lease terms qualify.",
   "prices": [
    [
@@ -139,10 +139,10 @@
  },
  "followups": [
   {
-   "title": "Reply to today’s 1 star review",
-   "due": "Nov 25",
-   "body": "It mentions access codes and keys, the hot tub and the coffee station. Ask your manager about a kind reply today.",
-   "iso": "2026-11-25",
+   "title": "Reply to the Nov 25 1 star review",
+   "due": "Nov 26",
+   "body": "Still no reply on Google. It mentions access codes and keys, the hot tub and the coffee station. Ask your manager about a kind reply today.",
+   "iso": "2026-11-26",
    "link": "https://www.google.com/maps/place/?q=place_id:ChIJWW93lKNBK4cRWrru46ZzwgU"
   }
  ],
@@ -183,8 +183,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 21",
-  "checkedIso": "2026-11-21",
+  "checked": "Nov 26",
+  "checkedIso": "2026-11-26",
   "items": [
    {
     "name": "Broadstone Westgate",
@@ -234,11 +234,11 @@
       "them"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials and fees: market data Nov 21. Ratings for all communities: review site averages in the market data Nov 21. Cuvee offer and fees from its website Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Special read on their own site Nov 26. Fees: market data Nov 21. Ratings for all communities: review site averages in the market data Nov 21. Cuvee offer and fees from its website Nov 26.",
     "url": "https://www.broadstonewestgate.com/",
     "feesChecked": "Nov 21",
-    "checked": "Nov 21",
-    "checkedIso": "2026-11-21"
+    "checked": "Nov 26",
+    "checkedIso": "2026-11-26"
    },
    {
     "name": "Glen 91",
@@ -288,11 +288,11 @@
       "them"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials and fees: market data Nov 21. Ratings for all communities: review site averages in the market data Nov 21. Cuvee offer and fees from its website Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Special read on their own site Nov 26. Fees: market data Nov 21. Ratings for all communities: review site averages in the market data Nov 21. Cuvee offer and fees from its website Nov 26.",
     "url": "https://www.glen91.com/",
     "feesChecked": "Nov 21",
-    "checked": "Nov 21",
-    "checkedIso": "2026-11-21"
+    "checked": "Nov 26",
+    "checkedIso": "2026-11-26"
    },
    {
     "name": "Prose Desert River",
@@ -342,11 +342,11 @@
       "us"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Specials and fees: market data Nov 21. Ratings for all communities: review site averages in the market data Nov 21. Cuvee offer and fees from its website Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 23 to Nov 21. Special read on their own site Nov 26. Fees: market data Nov 21. Ratings for all communities: review site averages in the market data Nov 21. Cuvee offer and fees from its website Nov 26.",
     "url": "https://www.prosedesertriver.com/",
     "feesChecked": "Nov 21",
-    "checked": "Nov 21",
-    "checkedIso": "2026-11-21"
+    "checked": "Nov 26",
+    "checkedIso": "2026-11-26"
    }
   ],
   "us": {
@@ -438,7 +438,7 @@
     ],
     "h": "Use these on every tour",
     "b": "Rooftop terrace over Westgate and State Farm Stadium, two resort style pools with firepits and cabanas, two story fitness center with yoga and spin, game room, game lawn with a putting green, dog park and pet spa.",
-    "src": "Cuvee website 11/25 · market data 11/21",
+    "src": "Cuvee website 11/26 · market data 11/21",
     "cmp": {
      "cols": [
       "Cuvee",
@@ -486,7 +486,7 @@
     ],
     "h": "Our 11 weeks free is up against 12 weeks nearby",
     "b": "Broadstone Westgate, Glen 91 and Prose Desert River all advertise up to 12 weeks free.",
-    "src": "Market data 11/21 · Cuvee website 11/25",
+    "src": "Rival websites 11/26 · market data 11/21 · Cuvee website 11/26",
     "list": [
      [
       "Cuvee",
@@ -581,7 +581,7 @@
     "k": "edge",
     "q": "Where do we stand out against rivals?",
     "a": "From the Cuvee website: a rooftop terrace over Westgate and State Farm Stadium, two resort style pools with firepits and cabanas, a two story fitness center with yoga and spin, a game room, a game lawn with a putting green, a dog park and a pet spa.",
-    "s": "Cuvee website 11/25"
+    "s": "Cuvee website 11/26"
    },
    {
     "k": "ops",
@@ -599,7 +599,7 @@
     "k": "specials",
     "q": "What specials are rivals running?",
     "a": "Broadstone Westgate: up to 12 weeks free plus up to $1,000 off, move in by Nov 30. Glen 91: 12 weeks free on 1 bedrooms, 10 on 2 bedrooms, fees waived on look and lease. Prose Desert River: up to 12 weeks free base rent. Ours: up to 11 weeks free plus 6 months free parking.",
-    "s": "Market data 11/21 · Cuvee website 11/25"
+    "s": "Rival websites 11/26 · market data 11/21 · Cuvee website 11/26"
    },
    {
     "k": "rivals",
@@ -617,7 +617,7 @@
     "k": "reviews",
     "q": "How are our reviews?",
     "a": "3.4 stars from 106 Google reviews. A new 1 star review came in today with no reply yet.",
-    "s": "Google · read Nov 25"
+    "s": "Google · read Nov 26"
    },
    {
     "k": "ai",
@@ -627,9 +627,9 @@
    }
   ],
   "line": "Specials (market data Nov 21): Broadstone Westgate, Glen 91 and Prose Desert River up to 12 weeks free.",
-  "briefSrc": "Market data 11/21 · Cuvee website 11/25 · Google Nov 25",
-  "checked": "Nov 25",
-  "checkedIso": "2026-11-25"
+  "briefSrc": "Rival websites 11/26 · market data 11/21 · Cuvee website 11/26 · Google Nov 26",
+  "checked": "Nov 26",
+  "checkedIso": "2026-11-26"
  },
  "uploadUrl": "https://www.dropbox.com/request/dzhv3fp88ixy27w82n54",
  "dbxFolder": "Cuvee",

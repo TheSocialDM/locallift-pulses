@@ -1,8 +1,8 @@
 {
  "property": "Huxley Scottsdale",
  "city": "Scottsdale, Arizona",
- "updated": "2026-11-25T07:30:00-07:00",
- "updatedLabel": "Nov 25, 7:30 am Phoenix time",
+ "updated": "2026-11-26T05:55:00-07:00",
+ "updatedLabel": "Nov 26, 5:55 am Phoenix time",
  "rv": {
   "rating": "4.5",
   "count": "29",
@@ -11,7 +11,7 @@
  "feed": [
   {
    "src": "Google reviews · read today",
-   "date": "Nov 25",
+   "date": "Nov 26",
    "tone": "good",
    "title": "4.5 stars on 29 reviews",
    "body": "The five newest reviews are all 5 stars and every one has a reply. The newest, Oct 26, came from a prospect after a tour: \"Incredibly friendly staff and explained the application process.\"",
@@ -19,19 +19,19 @@
    "linkLabel": "Open Huxley reviews on Google"
   },
   {
-   "src": "Huxley website",
-   "date": "Nov 22",
+   "src": "Huxley website · checked today",
+   "date": "Nov 26",
    "tone": "info",
    "title": "Our offer: up to 11 weeks free",
-   "body": "huxleyscottsdale.com shows up to 11 weeks free, limited time, on select lease terms. 1 bedroom homes from $1,758 (A8) and 2 bedroom homes from $2,500 (B2).",
+   "body": "huxleyscottsdale.com shows up to 11 weeks free, limited time, on select lease terms. 1 bedroom homes from $1,719 (A3) and 2 bedroom homes from $2,500 (B2).",
    "action": "Ask the move in date and lease term first, then confirm which homes qualify with your manager."
   },
   {
-   "src": "Rival watch · market data",
-   "date": "Nov 20",
-   "tone": "warn",
-   "title": "Rivals reward a fast decision",
-   "body": "Broadstone Scottsdale Quarter: up to 3 months free when you lease within 48 hours of touring. Modera Kierland: up to 12 weeks free on a move in by Dec 15. The Core Scottsdale: 50% off the first 3 months. Residences Kierland: up to 8 weeks free.",
+   "src": "Rival watch · their own sites",
+   "date": "Nov 26",
+   "tone": "info",
+   "title": "Rival specials read today",
+   "body": "Broadstone Scottsdale Quarter: up to 8 weeks free on select apartments (was 3 months free for a 48 hour lease). The Core Scottsdale: reduced 2 bedroom rates plus 50% off the first 3 months. Residences Kierland: up to 8 weeks free. Ours: up to 11 weeks free on select lease terms.",
    "action": "Ask what total monthly price and lease term they were quoted, then compare on the same terms."
   },
   {
@@ -53,7 +53,7 @@
   [
    "4.5",
    "Google rating",
-   "29 reviews, read Nov 25"
+   "29 reviews, read Nov 26"
   ],
   [
    "3.4",
@@ -125,15 +125,15 @@
  "asks": {
   "sent": 0,
   "opened": 0,
-  "through": "Nov 25"
+  "through": "Nov 26"
  },
  "talk": {
-  "checked": "Nov 22",
-  "checkedIso": "2026-11-22",
+  "checked": "Nov 26",
+  "checkedIso": "2026-11-26",
   "offer": "Up to 11 weeks free, limited time, on select lease terms. Ask your manager which homes qualify.",
   "prices": [
    [
-    "$1,758",
+    "$1,719",
     "1 bed from"
    ],
    [
@@ -186,13 +186,13 @@
   ]
  },
  "compete": {
-  "checked": "Nov 20",
-  "checkedIso": "2026-11-20",
+  "checked": "Nov 26",
+  "checkedIso": "2026-11-26",
   "items": [
    {
     "name": "Broadstone Scottsdale Quarter",
     "where": "1.6 miles, near Scottsdale Quarter",
-    "special": "Up to 3 months free on select homes when you lease within 48 hours of touring",
+    "special": "Up to 8 weeks free rent on select apartments",
     "from": [
      [
       "$1,899",
@@ -204,13 +204,13 @@
      ]
     ],
     "fees": "Move in cost $300 (application plus admin) in market data.",
-    "tip": "They are leasing fastest, 5.0 a week, and reward a quick decision. Their 1 bed average asks less than ours,. Compare totals on the same term. Lead with our 4.5 rating (theirs 2.9), the work from home lounge and the rooftop deck.",
+    "tip": "They are leasing fastest, 5.0 a week. Their 1 bed average asks less than ours, so compare totals on the same term. Our up to 11 weeks free beats their posted 8 weeks. Lead with our 4.5 rating (theirs 2.9), the work from home lounge and the rooftop deck.",
     "vs": [
      [
       "Special",
-      "Up to 3 months free, lease within 48 hrs",
+      "Up to 8 weeks free",
       "Up to 11 weeks free",
-      "them"
+      "us"
      ],
      [
       "1 bed average",
@@ -243,11 +243,11 @@
       "them"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Huxley offer from its website Nov 22. Ratings: market data Nov 20, Huxley read on Google Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Special read on their own site Nov 26. Fees: market data Nov 20. Huxley offer from its website Nov 26. Ratings: market data Nov 20, Huxley read on Google Nov 26.",
     "url": "https://www.broadstonescottsdalequarter.com/",
     "feesChecked": "Nov 20",
-    "checked": "Nov 20",
-    "checkedIso": "2026-11-20"
+    "checked": "Nov 26",
+    "checkedIso": "2026-11-26"
    },
    {
     "name": "The Core Scottsdale",
@@ -303,11 +303,11 @@
       "them"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Huxley offer from its website Nov 22. Ratings: market data Nov 20, Huxley read on Google Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Special read on their own site Nov 26. Fees: market data Nov 20. Huxley offer from its website Nov 26. Ratings: market data Nov 20, Huxley read on Google Nov 26.",
     "url": "https://www.corescottsdaleapartments.com/",
     "feesChecked": "Nov 20",
-    "checked": "Nov 20",
-    "checkedIso": "2026-11-20"
+    "checked": "Nov 26",
+    "checkedIso": "2026-11-26"
    },
    {
     "name": "Residences Kierland",
@@ -363,18 +363,18 @@
       "them"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Huxley offer from its website Nov 22. Ratings: market data Nov 20, Huxley read on Google Nov 25.",
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Special read on their own site Nov 26. Fees: market data Nov 20. Huxley offer from its website Nov 26. Ratings: market data Nov 20, Huxley read on Google Nov 26.",
     "url": "https://www.residenceskierland.com/",
     "feesChecked": "Nov 20",
-    "checked": "Nov 20",
-    "checkedIso": "2026-11-20"
+    "checked": "Nov 26",
+    "checkedIso": "2026-11-26"
    }
   ],
   "us": {
    "special": "Up to 11 weeks free, limited time, on select lease terms. Ask your manager which homes qualify",
    "from": [
     [
-     "$1,758",
+     "$1,719",
      "1 bed"
     ],
     [
@@ -409,7 +409,23 @@
     ]
    ]
   },
-  "changes": []
+  "changes": [
+   {
+    "id": "2026-11-26-broadstone-special",
+    "rival": "Broadstone Scottsdale Quarter",
+    "row": "Special",
+    "from": "Up to 3 months free, lease within 48 hrs",
+    "to": "Up to 8 weeks free",
+    "fromLabel": "Was",
+    "flip": true,
+    "src": "broadstonescottsdalequarter.com",
+    "headline": "Broadstone Scottsdale Quarter now posts up to 8 weeks free",
+    "detail": "Their homepage now shows up to 8 weeks free rent on select apartments. The 3 months free for a 48 hour lease is not posted today.",
+    "say": "Ours is up to 11 weeks free on select lease terms. Ask which homes and term they were quoted.",
+    "verified": "Nov 26",
+    "verifiedIso": "2026-11-26"
+   }
+  ]
  },
  "market": {
   "rvh": [
@@ -459,7 +475,7 @@
     ],
     "h": "Use these on every tour",
     "b": "Work from home lounge with personal offices, conference room with a Miele coffee bar, billiards room, rooftop deck with grills, pet spa and grooming, dog park, gated garage parking, resort style pool and spa.",
-    "src": "Huxley website 11/22 · market data 11/20",
+    "src": "Huxley website 11/26 · market data 11/20",
     "cmp": {
      "cols": [
       "Huxley",
@@ -501,14 +517,14 @@
    },
    {
     "lab": "SPECIALS WATCH",
-    "c": "warn",
+    "c": "good",
     "p": [
      "m",
      "Measured"
     ],
-    "h": "Our 11 weeks free is up against 3 months free nearby",
-    "b": "Broadstone Scottsdale Quarter gives up to 3 months free when you lease within 48 hours of touring.",
-    "src": "Market data 11/20 · Huxley website 11/22",
+    "h": "Our 11 weeks free leads the specials nearby",
+    "b": "Broadstone Scottsdale Quarter now posts up to 8 weeks free on select apartments, and Residences Kierland up to 8 weeks. The Core Scottsdale pairs reduced 2 bedroom rates with 50% off the first 3 months.",
+    "src": "Rival websites 11/26 · Huxley website 11/26",
     "list": [
      [
       "Huxley Scottsdale",
@@ -517,7 +533,7 @@
      ],
      [
       "Broadstone Scottsdale Quarter",
-      "Up to 3 months free, lease within 48 hours of touring",
+      "Up to 8 weeks free on select apartments",
       ""
      ],
      [
@@ -528,11 +544,6 @@
      [
       "Residences Kierland",
       "Up to 8 weeks free",
-      ""
-     ],
-     [
-      "Modera Kierland",
-      "Up to 12 weeks free on a move in by Dec 15",
       ""
      ]
     ]
@@ -603,7 +614,7 @@
     "k": "edge",
     "q": "Where do we stand out against rivals?",
     "a": "From the Huxley website: work from home lounge with personal offices, conference room with a Miele coffee bar, billiards room, rooftop deck with grills, pet spa and grooming, dog park, gated garage parking and a resort style pool and spa.<ul><li>Google rating: 4.5, above Residences Kierland (4.0), Broadstone Scottsdale Quarter (2.9) and The Core Scottsdale (2.7).</li><li>Broadstone does not list a coworking space or game room in the market data.</li></ul>",
-    "s": "Huxley website 11/22 · market data 11/20"
+    "s": "Huxley website 11/26 · market data 11/20"
    },
    {
     "k": "ops",
@@ -614,14 +625,14 @@
    {
     "k": "why",
     "q": "Why are tours not signing?",
-    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Broadstone Scottsdale Quarter gives up to 3 months free if they lease within 48 hours of touring.</li><li>The Core Scottsdale and Broadstone ask less per square foot.</li><li>Move in cost is $325 against $300 at both.</li></ul>What wins them back: our 4.5 rating, the work from home lounge, rooftop deck and pet spa, and up to 11 weeks free.",
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Broadstone Scottsdale Quarter has a lower 1 bed average ($1,899 against our $2,027).</li><li>The Core Scottsdale and Broadstone ask less per square foot.</li><li>Move in cost is $325 against $300 at both.</li></ul>What wins them back: our 4.5 rating, the work from home lounge, rooftop deck and pet spa, and up to 11 weeks free.",
     "s": "Market Survey 11/22 · market data 11/20"
    },
    {
     "k": "specials",
     "q": "What specials are rivals running?",
-    "a": "Broadstone Scottsdale Quarter: up to 3 months free when you lease within 48 hours of touring. Modera Kierland: up to 12 weeks free on a move in by Dec 15. The Core Scottsdale: 50% off the first 3 months. Residences Kierland: up to 8 weeks free. Ours: up to 11 weeks free on select lease terms.",
-    "s": "Market data 11/20 · Huxley website 11/22"
+    "a": "Broadstone Scottsdale Quarter: up to 8 weeks free on select apartments. The Core Scottsdale: reduced 2 bedroom rates plus 50% off the first 3 months. Residences Kierland: up to 8 weeks free. Ours: up to 11 weeks free on select lease terms.",
+    "s": "Rival websites 11/26 · Huxley website 11/26"
    },
    {
     "k": "rivals",
@@ -639,7 +650,7 @@
     "k": "reviews",
     "q": "How are our reviews?",
     "a": "4.5 stars from 29 Google reviews. The five newest are all 5 stars and every one has a reply.",
-    "s": "Google · read Nov 25"
+    "s": "Google · read Nov 26"
    },
    {
     "k": "ai",
@@ -648,10 +659,10 @@
     "s": "LocalLift Live"
    }
   ],
-  "line": "Specials (market data Nov 20): Broadstone up to 3 months free with a 48 hour look and lease, Modera Kierland up to 12 weeks free.",
-  "briefSrc": "Market data 11/20 · Huxley website 11/22 · Google Nov 25",
-  "checked": "Nov 22",
-  "checkedIso": "2026-11-22"
+  "line": "Specials (their own sites Nov 26): Broadstone up to 8 weeks free on select apartments, Residences Kierland up to 8 weeks free, The Core 50% off the first 3 months.",
+  "briefSrc": "Market data 11/20 · Huxley website 11/26 · Google Nov 26",
+  "checked": "Nov 26",
+  "checkedIso": "2026-11-26"
  },
  "uploadUrl": "https://www.dropbox.com/request/ckdrfcixo8nz461rql5h",
  "dbxFolder": "Huxley Scottsdale",

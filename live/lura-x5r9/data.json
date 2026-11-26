@@ -1,8 +1,8 @@
 {
  "property": "Lura",
  "city": "Las Vegas, Nevada",
- "updated": "2026-11-25T05:58:00-07:00",
- "updatedLabel": "Nov 25, 5:58 am Phoenix time",
+ "updated": "2026-11-26T05:55:00-07:00",
+ "updatedLabel": "Nov 26, 5:55 am Phoenix time",
  "rv": {
   "rating": "4.8",
   "count": "127",
@@ -11,18 +11,18 @@
  "feed": [
   {
    "src": "Lura website · checked today",
-   "date": "Nov 25",
+   "date": "Nov 26",
    "tone": "good",
    "title": "Today's offer: 2 months free",
-   "body": "luravegas.com shows 2 months free rent on a 12 month lease plus up to $2,000 in Look and Lease savings. Move in by Dec 28. It lists one bedroom homes from $1,558 a month in effective rent with the offer: that is the A1 plan (base rent $1,870, homes from Jan 8, 2027). The lowest 1 bedroom base rent today is $1,770 on the A3 plan.",
+   "body": "luravegas.com shows 2 months free rent on a 12 month lease plus up to $2,000 in Look and Lease savings. Move in by Dec 28. It lists one bedroom homes from $1,558 a month in effective rent with the offer: that is the A1 plan (base rent $1,870, homes from Jan 8, 2027). The lowest 1 bedroom base rent today is $1,770 on the A3 plan. The B1 two bedroom now starts at $2,650 base rent (was $2,743).",
    "action": "Lead with the move in date. Ask when they want to move, then show the homes that fit before Dec 28."
   },
   {
    "src": "Rival watch · their own sites",
-   "date": "Nov 25",
+   "date": "Nov 26",
    "tone": "info",
    "title": "Rivals are running big specials too",
-   "body": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15. Jade: up to 8 weeks free on base rent. Flatiron LV: 1 month free on select move in ready homes.",
+   "body": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15. Jade: up to 8 weeks free on base rent, 1 beds now from $1,298. Flatiron LV: 1 month free on select move in ready homes.",
    "action": "Ask what total monthly price and lease term they were quoted, then compare it with ours on the same terms."
   },
   {
@@ -158,12 +158,12 @@
  "asks": {
   "sent": 0,
   "opened": 0,
-  "through": "Nov 25"
+  "through": "Nov 26"
  },
  "shortLink": "moveinlocal.com/review/lura",
  "talk": {
-  "checked": "Nov 25",
-  "checkedIso": "2026-11-25",
+  "checked": "Nov 26",
+  "checkedIso": "2026-11-26",
   "offer": "2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28.",
   "prices": [
    [
@@ -171,7 +171,7 @@
     "1 bed base rent from"
    ],
    [
-    "$2,743",
+    "$2,650",
     "2 bed base rent from"
    ],
    [
@@ -230,8 +230,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 25",
-  "checkedIso": "2026-11-25",
+  "checked": "Nov 26",
+  "checkedIso": "2026-11-26",
   "items": [
    {
     "name": "Jade",
@@ -239,7 +239,7 @@
     "special": "Up to 8 weeks free on base rent, restrictions apply",
     "from": [
      [
-      "$1,480",
+      "$1,298",
       "1 bed"
      ],
      [
@@ -247,7 +247,7 @@
       "2 bed"
      ]
     ],
-    "fees": "Monthly charges are added on top of base rent: their own fee list shows a 1 bed at $1,480 to $1,510 reaching $1,854 to $1,884 a month. Deposit and pet fees not read.",
+    "fees": "Their own fee list adds monthly charges on top of base rent. Deposit and pet fees not read.",
     "tip": "Their 1 bed base rent starts lower, but their monthly charges add about $375. Ask what total they were quoted. Lura has the Sky Lounge with Strip views, free gated garage parking and a walk to the Strip over the Harmon Bridge.",
     "vs": [
      [
@@ -258,14 +258,14 @@
      ],
      [
       "1 bed from",
-      "$1,480",
+      "$1,298",
       "$1,770",
       "them"
      ],
      [
       "2 bed from",
       "$1,855",
-      "$2,743",
+      "$2,650",
       "them"
      ],
      [
@@ -296,8 +296,8 @@
     "basis": "Their prices: lowest base rent on mark-taylor.com. The 2 bed price is a listed plan with a waitlist. Monthly charges are added on top.",
     "url": "https://www.mark-taylor.com/apartments/nv/las-vegas/jade-apartments/floor-plans",
     "feesChecked": "Nov 24",
-    "checked": "Nov 25",
-    "checkedIso": "2026-11-25"
+    "checked": "Nov 26",
+    "checkedIso": "2026-11-26"
    },
    {
     "name": "Ainsley at The Collective",
@@ -331,7 +331,7 @@
      [
       "2 bed from",
       "$1,843",
-      "$2,743",
+      "$2,650",
       "them"
      ],
      [
@@ -362,8 +362,8 @@
     "basis": "Their prices: lowest base rent on elysianliving.com. Their all in monthly price adds utilities and fees.",
     "url": "https://www.elysianliving.com/property/ainsley-at-the-collective/floor-plans",
     "feesChecked": "Nov 24",
-    "checked": "Nov 25",
-    "checkedIso": "2026-11-25"
+    "checked": "Nov 26",
+    "checkedIso": "2026-11-26"
    },
    {
     "name": "Flatiron LV",
@@ -388,7 +388,7 @@
      [
       "2 bed from",
       "Ask",
-      "$2,743",
+      "$2,650",
       "ask"
      ],
      [
@@ -401,8 +401,8 @@
     "basis": "Their special: read on flatironlv.com today. Their floor plan prices did not load for our check.",
     "url": "https://www.flatironlv.com/",
     "feesChecked": "Nov 24",
-    "checked": "Nov 25",
-    "checkedIso": "2026-11-25"
+    "checked": "Nov 26",
+    "checkedIso": "2026-11-26"
    }
   ],
   "us": {
@@ -413,7 +413,7 @@
      "1 bed"
     ],
     [
-     "$2,743",
+     "$2,650",
      "2 bed"
     ]
    ],
@@ -436,7 +436,23 @@
    "ends": "Dec 28 move in",
    "basis": "Our offer is on a 12 month lease. Lease terms differ by community, so confirm the term before quoting a difference."
   },
-  "changes": []
+  "changes": [
+   {
+    "id": "2026-11-26-jade-1bed",
+    "rival": "Jade",
+    "row": "1 bed from",
+    "from": "$1,480",
+    "to": "$1,298",
+    "fromLabel": "Lowest was",
+    "flip": false,
+    "src": "mark-taylor.com",
+    "headline": "Jade 1 bedrooms now start at $1,298",
+    "detail": "A1 base rent now $1,298 with their special, down from $1,480. Their monthly charges come on top.",
+    "say": "Ask what total and term they were quoted. Ours is 2 months free on a 12 month lease plus up to $2,000 Look and Lease, move in by Dec 28.",
+    "verified": "Nov 26",
+    "verifiedIso": "2026-11-26"
+   }
+  ]
  },
  "uploadUrl": "https://www.dropbox.com/request/gqd6ulyc7cx2btz3lhxj",
  "dbxFolder": "Lura Apartments",
@@ -520,11 +536,11 @@
    [
     "Lura",
     "$1,770",
-    "$2,743"
+    "$2,650"
    ],
    [
     "Jade",
-    "$1,480",
+    "$1,298",
     "$1,855"
    ],
    [
@@ -558,7 +574,7 @@
     ],
     "h": "Use these on every tour",
     "b": "Walk to the Strip over the Harmon Bridge, Sky Lounge with Strip views, free gated garage parking, resort style pool, firepit lounge and BBQ grills, 24/7 athletic center, The Hive coworking, clubhouse and TV lounge, EV charging, 24/7 package lockers, 10 foot ceilings, full size washer and dryer.",
-    "src": "Lura and rival websites · checked 11/25",
+    "src": "Lura and rival websites · checked 11/26",
     "cmp": {
      "cols": [
       "Lura",
@@ -606,7 +622,7 @@
     ],
     "h": "All 3 rivals post a special too",
     "b": "Lura: 2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28. Ainsley: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Flatiron LV: 1 month free on select move in ready homes, restrictions apply.",
-    "src": "Each community’s website · checked 11/25",
+    "src": "Each community’s website · checked 11/26",
     "list": [
      [
       "Lura",
@@ -639,7 +655,7 @@
     ],
     "h": "Jade and Ainsley list lower starting rents",
     "t": "rivals",
-    "src": "Each community’s website · checked 11/25",
+    "src": "Each community’s website · checked 11/26",
     "more": "Base rents. Jade adds about $375 in monthly charges on a 1 bed, and Ainsley adds utilities and set charges plus admin and cleaning fees, so ask what total and term they were quoted. Flatiron LV prices did not load for today’s check."
    },
    {
@@ -689,7 +705,7 @@
     "k": "edge",
     "q": "Where do we stand out against rivals?",
     "a": "From the Lura website: Walk to the Strip over the Harmon Bridge, Sky Lounge with Strip views, free gated garage parking, resort style pool, firepit lounge and BBQ grills, 24/7 athletic center, The Hive coworking, clubhouse and TV lounge, EV charging, 24/7 package lockers, 10 foot ceilings, full size washer and dryer.<ul><li>Google rating: 4.8 on 127 reviews, the highest of the communities on this page.</li><li>Free gated garage parking and a walk to the Strip over the Harmon Bridge.</li><li>Pets: $50 a month and a $500 pet fee, no weight limits, up to 3 pets.</li></ul>",
-    "s": "Lura and rival websites · checked 11/25"
+    "s": "Lura and rival websites · checked 11/26"
    },
    {
     "k": "ops",
@@ -700,26 +716,26 @@
    {
     "k": "why",
     "q": "Why are tours not signing?",
-    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Jade and Ainsley list lower starting base rents. 1 beds: Ainsley $1,326, Jade $1,480, ours $1,770.</li><li>Ainsley posts up to 10 weeks free plus a $1,000 gift card, and Jade up to 8 weeks free.</li></ul>What wins them back: 2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28, the walk to the Strip, free garage parking, our 4.8 rating and a total cost check (both add monthly charges on top of base rent).",
-    "s": "Each community’s website · checked 11/25"
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>Jade and Ainsley list lower starting base rents. 1 beds: Ainsley $1,326, Jade $1,298, ours $1,770.</li><li>Ainsley posts up to 10 weeks free plus a $1,000 gift card, and Jade up to 8 weeks free.</li></ul>What wins them back: 2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28, the walk to the Strip, free garage parking, our 4.8 rating and a total cost check (both add monthly charges on top of base rent).",
+    "s": "Each community’s website · checked 11/26"
    },
    {
     "k": "specials",
     "q": "What specials are rivals running?",
     "a": "Ainsley at The Collective: up to 10 weeks free plus a $1,000 gift card, move in by Dec 15, restrictions apply. Jade: up to 8 weeks free on base rent, restrictions apply. Flatiron LV: 1 month free on select move in ready homes, restrictions apply. Lura: 2 months free on a 12 month lease, plus up to $2,000 in Look and Lease savings. Move in by Dec 28.",
-    "s": "Each community’s website · checked 11/25"
+    "s": "Each community’s website · checked 11/26"
    },
    {
     "k": "rivals",
     "q": "Who are we up against?",
-    "a": "Jade on W Twain Ave (1 beds from $1,480, up to 8 weeks free), Ainsley at The Collective on Paradise Rd (1 beds from $1,326, up to 10 weeks free plus a gift card) and Flatiron LV by the Palms (1 month free on select homes). Lura 1 beds start at $1,770.",
-    "s": "Each community’s website · checked 11/25"
+    "a": "Jade on W Twain Ave (1 beds from $1,298, up to 8 weeks free), Ainsley at The Collective on Paradise Rd (1 beds from $1,326, up to 10 weeks free plus a gift card) and Flatiron LV by the Palms (1 month free on select homes). Lura 1 beds start at $1,770.",
+    "s": "Each community’s website · checked 11/26"
    },
    {
     "k": "price",
     "q": "Are we priced right?",
-    "a": "1 bed from: Lura $1,770, Jade $1,480, Ainsley $1,326.<br>2 bed from: Lura $2,743, Jade $1,855 (waitlist plan), Ainsley $1,843.<br>Flatiron LV prices did not load for today’s check.<br>These are base rents. Lura’s website shows totals with $200 in mandatory monthly fees, Jade and Ainsley add their own monthly charges, and specials differ, so compare totals on the same lease term.",
-    "s": "Each community’s website · checked 11/25"
+    "a": "1 bed from: Lura $1,770, Jade $1,298, Ainsley $1,326.<br>2 bed from: Lura $2,650, Jade $1,855 (waitlist plan), Ainsley $1,843.<br>Flatiron LV prices did not load for today’s check.<br>These are base rents. Lura’s website shows totals with $200 in mandatory monthly fees, Jade and Ainsley add their own monthly charges, and specials differ, so compare totals on the same lease term.",
+    "s": "Each community’s website · checked 11/26"
    },
    {
     "k": "reviews",
@@ -735,8 +751,8 @@
    }
   ],
   "line": "Specials today: Ainsley up to 10 weeks free, Jade up to 8 weeks free.",
-  "briefSrc": "Websites checked 11/25 · Google scan Nov 20",
-  "checked": "Nov 25",
-  "checkedIso": "2026-11-25"
+  "briefSrc": "Websites checked 11/26 · Google scan Nov 20",
+  "checked": "Nov 26",
+  "checkedIso": "2026-11-26"
  }
 }
