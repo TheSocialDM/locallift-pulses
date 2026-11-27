@@ -1,0 +1,184 @@
+{
+ "rivals": {
+  "Calm at Eastern": {
+   "site": "https://www.calmateastern.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Recieve up to 2 months free on 1 & 2 bedroom vacant ready apartment homes with a 15 month lease",
+   "page_text": "Up to 2 months free on 1 and 2 bedroom homes ready now, 15 month lease",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Bria Symphony Park": {
+   "site": "https://brialasvegas.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Pay half rent for up to four months. Additional look and lease specials available",
+   "page_text": "Half rent for up to 4 months, plus Look & Lease specials",
+   "unreachable": false,
+   "reason": ""
+  },
+  "High Line at Hughes Center Apartments": {
+   "site": "https://livebh.com/apartments/high-line-hughes-center-apartments/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Enjoy up to eight weeks free on select units",
+   "page_text": "Up to 8 weeks free on select homes",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Ainsley at the Collective": {
+   "site": "https://www.elysianliving.com/property/ainsley-at-the-collective",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Receive up to 10 weeks free + $1,000 gift card. Look & Lease to win an extra gift",
+   "page_text": "Up to 10 weeks free plus a $1,000 gift card, and a Look & Lease gift",
+   "unreachable": false,
+   "reason": ""
+  },
+  "The Myles": {
+   "site": "https://livethemyles.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "10 weeks free!",
+   "page_text": "10 weeks free",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Gemma": {
+   "site": "https://gemmalasvegas.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Up to 2\u00bd months rent free",
+   "page_text": "Up to 2.5 months free",
+   "unreachable": false,
+   "reason": ""
+  },
+  "The Apex @Meadows": {
+   "site": "https://www.apexatmeadows.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Enjoy up to 8 weeks free base rent! Plus, get 2 more weeks free base rent when you lease during your tour",
+   "page_text": "Up to 8 weeks free, plus 2 more weeks when you lease on your tour",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Jade Apartments": {
+   "site": "https://jadevegas.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Up to 8 weeks free on base rent! Restrictions apply",
+   "page_text": "Up to 8 weeks free",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Flatiron LV": {
+   "site": "https://www.flatironlv.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Enjoy 1 month free on your new apartment at Flatiron LV",
+   "page_text": "1 month free",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Auric Symphony Park": {
+   "site": "https://auricvegasapartments.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Enjoy up to 8 weeks free with luxury living starting at just $1,515/month. Restrictions apply",
+   "page_text": "Up to 8 weeks free",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Parc Haven": {
+   "site": "https://parchavendtlv.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Holiday lease special! Get up to 10 weeks free base rent! Plus, the first 10 applicants will receive an extra $500 off move in costs",
+   "page_text": "Up to 10 weeks free, plus $500 off move in costs for the first 10 applicants",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Lotus": {
+   "site": "https://www.greenleaflotus.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Up to 4 weeks free on select homes! Must apply within 48 hours of first tour to qualify for Look & Lease",
+   "page_text": "Up to 4 weeks free on select homes, with Look & Lease within 48 hours of a first tour",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Capella at Symphony Park": {
+   "site": "https://capellalasvegas.com/",
+   "read": "2026-11-27",
+   "offer_on_site": false,
+   "offer": "",
+   "page_text": null,
+   "unreachable": false,
+   "reason": ""
+  },
+  "Birchway Tropicana": {
+   "site": "https://birchwaytropicana.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Move in before the holidays and live rent free until 2027! Enjoy up to 10 free base rent when you move in before the holidays",
+   "page_text": "Up to 10 weeks free for moves before the holidays",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Landing 36": {
+   "site": "https://www.landing36.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Live up to 10 weeks free. Restrictions apply",
+   "page_text": "Up to 10 weeks free",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Nola Sky": {
+   "site": "https://www.nolaskylasvegas.com/",
+   "read": "2026-11-27",
+   "offer_on_site": false,
+   "offer": "",
+   "page_text": null,
+   "unreachable": true,
+   "reason": "Site would not load on 11/27: its security certificate is not trusted"
+  },
+  "Elysian at Rainbow": {
+   "site": "https://www.elysianliving.com/property/elysian-at-rainbow/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Receive up to 10 weeks free rent",
+   "page_text": "Up to 10 weeks free",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Prosper 150": {
+   "site": "https://www.prosper150.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Limited time Look & Lease special, new lower rents! $750 off your first full month's rent. Apply within 48 hours of your tour and move in by December 20, 2026",
+   "page_text": "$750 off the first full month with Look & Lease, move in by 12/20",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Lura Vegas": {
+   "site": "https://www.luravegas.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "Black Friday Flash Savings at LURA with 2 months free plus Look & Lease savings up to $2,000",
+   "page_text": "2 months free plus up to $2,000 Look & Lease",
+   "unreachable": false,
+   "reason": ""
+  },
+  "Aspire at Redwood": {
+   "site": "https://www.aspireatredwood.com/",
+   "read": "2026-11-27",
+   "offer_on_site": true,
+   "offer": "8 Weeks Free + $1,000 Look & Lease on select 1BR, move in by 12/31; 1 Month Free on select Studio & 2BR. Restrictions apply",
+   "page_text": "8 weeks free plus $1,000 Look & Lease on select one bedrooms, move in by 12/31; 1 month free on select studios and two bedrooms",
+   "unreachable": false,
+   "reason": ""
+  }
+ }
+}
