@@ -1,8 +1,8 @@
 {
  "property": "Elevation SanTan",
  "city": "Gilbert, Arizona",
- "updated": "2026-11-26T05:55:00-07:00",
- "updatedLabel": "Nov 26, 5:55 am Phoenix time",
+ "updated": "2026-11-27T06:20:00-07:00",
+ "updatedLabel": "Nov 27, 6:20 am Phoenix time",
  "rv": {
   "rating": "4.4",
   "count": "120",
@@ -11,16 +11,16 @@
  "feed": [
   {
    "src": "Google reviews · read today",
-   "date": "Nov 26",
+   "date": "Nov 27",
    "tone": "good",
    "title": "4.4 stars on 120 reviews",
-   "body": "The newest review, Nov 6, is 5 stars and praises the sunset views, floor to ceiling windows and prompt maintenance. Every one of the six newest has a reply.",
+   "body": "The newest review, Nov 6, is 5 stars and praises the sunset views, floor to ceiling windows and prompt maintenance. The three newest each have a reply.",
    "link": "https://www.google.com/maps/place/?q=place_id:ChIJy6RcQwerK4cREMsjY-w7B3c",
    "linkLabel": "Open Elevation SanTan reviews on Google"
   },
   {
    "src": "Elevation SanTan website · checked today",
-   "date": "Nov 26",
+   "date": "Nov 27",
    "tone": "info",
    "title": "Our offer: up to 10 weeks free",
    "body": "elevationsantan.com shows up to 10 weeks free on select homes. Studios from $1,465 (S1), 1 bedroom homes from $1,530 (A3) and 2 bedroom homes from $1,875 (B2).",
@@ -28,10 +28,10 @@
   },
   {
    "src": "Rival watch · their own sites",
-   "date": "Nov 26",
+   "date": "Nov 27",
    "tone": "info",
    "title": "Rival specials read today",
-   "body": "The Flats At SanTan: up to 8 weeks free on select homes, fees waived on a same day lease. SanTan by Baron: up to 8 weeks free (no garage offer shown today). Redstone at SanTan Village: their page did not load today, last read Nov 20 (up to 8 weeks free on 14 to 18 month leases). Ours: up to 10 weeks free on select homes.",
+   "body": "The Flats At SanTan: up to 8 weeks free on select homes, fees waived on a same day lease. SanTan by Baron: up to 8 weeks free (no garage offer shown today). Redstone at SanTan Village: their page shows Coming Soon today, last read Nov 20 (up to 8 weeks free on 14 to 18 month leases). Ours: up to 10 weeks free on select homes.",
    "action": "Ask what total monthly price and lease term they were quoted, then compare on the same terms."
   },
   {
@@ -53,7 +53,7 @@
   [
    "4.4",
    "Google rating",
-   "120 reviews, read Nov 26"
+   "120 reviews, read Nov 27"
   ],
   [
    "96.6%",
@@ -118,11 +118,11 @@
  "asks": {
   "sent": 0,
   "opened": 0,
-  "through": "Nov 26"
+  "through": "Nov 27"
  },
  "talk": {
-  "checked": "Nov 26",
-  "checkedIso": "2026-11-26",
+  "checked": "Nov 27",
+  "checkedIso": "2026-11-27",
   "offer": "Up to 10 weeks free on select homes and lease terms, while supplies last. Ask your manager which homes qualify.",
   "prices": [
    [
@@ -229,11 +229,11 @@
       "them"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Special read on their own site Nov 26. Fees: market data Nov 20. Ratings for all communities: review site averages in the market data Nov 20. Elevation SanTan offer and fees from its website Nov 26.",
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Special read on their own site Nov 27. Fees: market data Nov 20. Ratings for all communities: review site averages in the market data Nov 20. Elevation SanTan offer and fees from its website Nov 27.",
     "url": "https://www.flatsatsantan.com/",
     "feesChecked": "Nov 20",
-    "checked": "Nov 26",
-    "checkedIso": "2026-11-26"
+    "checked": "Nov 27",
+    "checkedIso": "2026-11-27"
    },
    {
     "name": "SanTan by Baron",
@@ -283,11 +283,11 @@
       "ask"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Special read on their own site Nov 26. Fees: market data Nov 20. Ratings for all communities: review site averages in the market data Nov 20. Elevation SanTan offer and fees from its website Nov 26.",
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Special read on their own site Nov 27. Fees: market data Nov 20. Ratings for all communities: review site averages in the market data Nov 20. Elevation SanTan offer and fees from its website Nov 27.",
     "url": "https://www.santanbybaron.com/",
     "feesChecked": "Nov 20",
-    "checked": "Nov 26",
-    "checkedIso": "2026-11-26"
+    "checked": "Nov 27",
+    "checkedIso": "2026-11-27"
    },
    {
     "name": "Redstone at SanTan Village",
@@ -337,7 +337,7 @@
       "us"
      ]
     ],
-    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Ratings for all communities: review site averages in the market data Nov 20. Elevation SanTan offer and fees from its website Nov 26 (Redstone not read today).",
+    "basis": "Rents: average asking rent in the market data, Oct 22 to Nov 20. Specials and fees: market data Nov 20. Ratings for all communities: review site averages in the market data Nov 20. Elevation SanTan offer and fees from its website Nov 27 (Redstone not read today).",
     "url": "https://www.olympusproperty.com/apartments/az/gilbert/redstone-at-santan-village/",
     "feesChecked": "Nov 20",
     "checked": "Nov 20",
@@ -453,7 +453,7 @@
     ],
     "h": "Use these on every tour",
     "b": "Fourth floor sky lounge, resort style pool and spa with cabanas, two level fitness center, lounge with built in workstations, two gated dog parks, pet wash, garages on select homes, gated access. Walk to SanTan Village.",
-    "src": "Elevation SanTan website 11/26 · market data 11/20",
+    "src": "Elevation SanTan website 11/27 · market data 11/20",
     "cmp": {
      "cols": [
       "Us",
@@ -501,7 +501,7 @@
     ],
     "h": "Our 10 weeks free leads most rivals nearby",
     "b": "Most nearby rivals advertise up to 8 weeks free. Town Commons and Luma Rise match 10 weeks.",
-    "src": "Rival websites 11/26 · market data 11/20 · Elevation SanTan website 11/26",
+    "src": "Rival websites 11/27 · market data 11/20 · Elevation SanTan website 11/27",
     "list": [
      [
       "Elevation SanTan",
@@ -601,7 +601,7 @@
     "k": "edge",
     "q": "Where do we stand out against rivals?",
     "a": "From the Elevation SanTan website: a fourth floor sky lounge, resort style pool and spa with cabanas, a two level fitness center, a lounge with built in workstations, a resident conference center, two gated dog parks, a pet wash, garages on select homes and gated access, a walk from SanTan Village.",
-    "s": "Elevation SanTan website 11/26"
+    "s": "Elevation SanTan website 11/27"
    },
    {
     "k": "ops",
@@ -619,7 +619,7 @@
     "k": "specials",
     "q": "What specials are rivals running?",
     "a": "The Flats At SanTan: up to 8 weeks free, fees waived on a same day lease. SanTan by Baron: up to 8 weeks free. Redstone: up to 8 weeks free on 14 to 18 month leases. Town Commons: up to 10 weeks free. Luma Rise: up to 10 weeks free plus a $1,000 gift card. Ours: up to 10 weeks free on select homes.",
-    "s": "Rival websites 11/26 · market data 11/20 · Elevation SanTan website 11/26"
+    "s": "Rival websites 11/27 · market data 11/20 · Elevation SanTan website 11/27"
    },
    {
     "k": "rivals",
@@ -637,7 +637,7 @@
     "k": "reviews",
     "q": "How are our reviews?",
     "a": "4.4 stars from 120 Google reviews. The six newest all have replies.",
-    "s": "Google · read Nov 26"
+    "s": "Google · read Nov 27"
    },
    {
     "k": "ai",
@@ -646,10 +646,10 @@
     "s": "LocalLift Live"
    }
   ],
-  "line": "Specials (their own sites Nov 26): The Flats up to 8 weeks free plus fees waived on a same day lease, SanTan by Baron up to 8 weeks free.",
-  "briefSrc": "Rival websites 11/26 · market data 11/20 · Elevation SanTan website 11/26 · Google Nov 26",
-  "checked": "Nov 26",
-  "checkedIso": "2026-11-26"
+  "line": "Specials (their own sites Nov 27): The Flats up to 8 weeks free plus fees waived on a same day lease, SanTan by Baron up to 8 weeks free.",
+  "briefSrc": "Rival websites 11/27 · market data 11/20 · Elevation SanTan website 11/27 · Google Nov 27",
+  "checked": "Nov 27",
+  "checkedIso": "2026-11-27"
  },
  "uploadUrl": "https://www.dropbox.com/request/tarrxzwgs7sfi06vmdc0",
  "dbxFolder": "Elevation SanTan",

@@ -1,8 +1,8 @@
 {
  "property": "Stillwater Lakes",
  "city": "Kissimmee, Florida",
- "updated": "2026-11-26T05:55:00-07:00",
- "updatedLabel": "Nov 26, 5:55 am Phoenix time",
+ "updated": "2026-11-27T06:20:00-07:00",
+ "updatedLabel": "Nov 27, 6:20 am Phoenix time",
  "rv": {
   "rating": "4.2",
   "count": "19",
@@ -11,18 +11,18 @@
  "feed": [
   {
    "src": "Rival watch · their own sites",
-   "date": "Nov 26",
+   "date": "Nov 27",
    "tone": "info",
    "title": "Rival prices read today",
-   "body": "Read today on their own sites: Cielo View 1 beds from $1,549 and 2 beds from $1,874 base rent, still two months free. Mosaic at Lake Toho now lists 1 beds from $1,439 and 2 beds from $1,679 (was $1,444 and $1,685), up to 8 weeks free. The Jamison is unchanged ($1,524 and $1,849, no special posted).",
+   "body": "Read today on their own sites: Cielo View 1 beds from $1,549 and 2 beds from $1,874 base rent, still two months free. Mosaic at Lake Toho now lists 1 beds from $1,442 and 2 beds from $1,673 (was $1,439 and $1,679), up to 8 weeks free. The Jamison is unchanged ($1,524 and $1,849, no special posted).",
    "action": "When Cielo View comes up on a 1 bedroom, the base rents are nearly the same: lead with our $350 deposit, studios and the extra $1,200 off in Buildings 1 and 2."
   },
   {
    "src": "MoveInLocal guide · last 7 days",
-   "date": "Nov 20 to 26",
+   "date": "Nov 21 to 26",
    "tone": "info",
    "title": "No visits to your guide this week",
-   "body": "No visits to your guide from Nov 20 to 26, and no Call, Tour or Apply taps."
+   "body": "No visits to your guide from Nov 21 to 26, and no Call, Tour or Apply taps."
   },
   {
    "src": "Weekly Pulse · Google Maps",
@@ -164,12 +164,12 @@
  "asks": {
   "sent": 0,
   "opened": 0,
-  "through": "Nov 26"
+  "through": "Nov 27"
  },
  "shortLink": "moveinlocal.com/review/stillwater-lakes",
  "talk": {
-  "checked": "Nov 26",
-  "checkedIso": "2026-11-26",
+  "checked": "Nov 27",
+  "checkedIso": "2026-11-27",
   "offer": "2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2.",
   "prices": [
    [
@@ -234,8 +234,8 @@
   ]
  },
  "compete": {
-  "checked": "Nov 26",
-  "checkedIso": "2026-11-26",
+  "checked": "Nov 27",
+  "checkedIso": "2026-11-27",
   "items": [
    {
     "name": "Cielo View",
@@ -300,8 +300,8 @@
     "basis": "Their prices: lowest base rent on their own site. Lease term not shown. Ask what term they were quoted.",
     "url": "https://cieloviewapts.com/floorplans/",
     "feesChecked": "Nov 19",
-    "checked": "Nov 26",
-    "checkedIso": "2026-11-26"
+    "checked": "Nov 27",
+    "checkedIso": "2026-11-27"
    },
    {
     "name": "The Jamison",
@@ -360,8 +360,8 @@
     "basis": "Their prices: lowest base rent on greystar.com. Mandatory monthly costs are added on top.",
     "url": "https://www.greystar.com/the-jamison-kissimmee-fl/p_16895",
     "feesChecked": "Nov 23",
-    "checked": "Nov 26",
-    "checkedIso": "2026-11-26"
+    "checked": "Nov 27",
+    "checkedIso": "2026-11-27"
    },
    {
     "name": "Mosaic at Lake Toho",
@@ -373,11 +373,11 @@
       "studio"
      ],
      [
-      "$1,439",
+      "$1,442",
       "1 bed"
      ],
      [
-      "$1,679",
+      "$1,673",
       "2 bed"
      ]
     ],
@@ -398,13 +398,13 @@
      ],
      [
       "1 bed from",
-      "$1,439",
+      "$1,442",
       "$1,552",
       "them"
      ],
      [
       "2 bed from",
-      "$1,679",
+      "$1,673",
       "$1,902",
       "them"
      ],
@@ -430,8 +430,8 @@
     "basis": "Their prices: lowest posted rent on their own site. The lease term is not shown today, so ask what term they were quoted.",
     "url": "https://www.advenirliving.com/laketoho/kissimmee/mosaic-at-lake-toho/conventional/",
     "feesChecked": "Nov 19",
-    "checked": "Nov 26",
-    "checkedIso": "2026-11-26"
+    "checked": "Nov 27",
+    "checkedIso": "2026-11-27"
    }
   ],
   "us": {
@@ -471,64 +471,34 @@
   },
   "changes": [
    {
-    "id": "2026-11-26-mosaic-2bed",
+    "id": "2026-11-27-mosaic-2bed",
     "rival": "Mosaic at Lake Toho",
     "row": "2 bed from",
-    "from": "$1,685",
-    "to": "$1,679",
+    "from": "$1,679",
+    "to": "$1,673",
     "fromLabel": "Lowest was",
     "flip": false,
     "src": "advenirliving.com",
-    "headline": "Mosaic 2 bedrooms now start at $1,679",
-    "detail": "Down from $1,685. Lease term not shown today.",
-    "say": "Ask what term they were quoted. Ours comes with 2 months free plus $1,200 off move in in Buildings 1 and 2.",
-    "verified": "Nov 26",
-    "verifiedIso": "2026-11-26"
+    "headline": "Mosaic 2 bedrooms now start at $1,673",
+    "detail": "Down from $1,679. Lease term not shown on their site.",
+    "say": "Their site doesn't show the lease term, so ask what term they were quoted. Ours is 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2.",
+    "verified": "Nov 27",
+    "verifiedIso": "2026-11-27"
    },
    {
-    "id": "2026-11-26-mosaic-1bed",
+    "id": "2026-11-27-mosaic-1bed",
     "rival": "Mosaic at Lake Toho",
     "row": "1 bed from",
-    "from": "$1,444",
-    "to": "$1,439",
+    "from": "$1,439",
+    "to": "$1,442",
     "fromLabel": "Lowest was",
     "flip": false,
     "src": "advenirliving.com",
-    "headline": "Mosaic 1 bedrooms now start at $1,439",
-    "detail": "Down from $1,444. Lease term not shown today.",
-    "say": "Ask what term they were quoted. Ours comes with 2 months free plus $1,200 off move in in Buildings 1 and 2.",
-    "verified": "Nov 26",
-    "verifiedIso": "2026-11-26"
-   },
-   {
-    "id": "2026-11-25-mosaic-1bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "1 bed from",
-    "from": "$1,443",
-    "to": "$1,444",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 25",
-    "verifiedIso": "2026-11-25",
-    "src": "advenirliving.com",
-    "headline": "Mosaic 1 bedrooms now start at $1,444",
-    "detail": "Up $1 from $1,443. Lease term not shown today.",
-    "say": "Ask what term they were quoted. Ours comes with 2 months free plus $1,200 off move in in Buildings 1 and 2."
-   },
-   {
-    "id": "2026-11-25-mosaic-2bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "2 bed from",
-    "from": "$1,689",
-    "to": "$1,685",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 25",
-    "verifiedIso": "2026-11-25",
-    "src": "advenirliving.com",
-    "headline": "Mosaic 2 bedrooms now start at $1,685",
-    "detail": "Down $4 from $1,689. Lease term not shown today.",
-    "say": "Ask what term they were quoted. Ours comes with 2 months free plus $1,200 off move in in Buildings 1 and 2."
+    "headline": "Mosaic 1 bedrooms now start at $1,442",
+    "detail": "Up $3 from $1,439. Lease term not shown on their site.",
+    "say": "Their site doesn't show the lease term, so ask what term they were quoted. Ours is 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2.",
+    "verified": "Nov 27",
+    "verifiedIso": "2026-11-27"
    },
    {
     "id": "2026-11-24-cielo-1bed",
@@ -544,156 +514,6 @@
     "headline": "Cielo View's 1 beds now start at $1,549",
     "detail": "A1, 746 sq ft, base rent ($1,678 with WiFi and mandatory fees). Was $1,499. Now just $3 under our $1,552.",
     "say": "Their 1 bedroom base rent is nearly the same as ours now. Ours comes with 2 months free on a 15 month lease, a $350 deposit and $1,200 off move in in Buildings 1 and 2."
-   },
-   {
-    "id": "2026-11-24-mosaic-2bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "2 bed from",
-    "from": "$1,693",
-    "to": "$1,689",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 24",
-    "verifiedIso": "2026-11-24",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 2 beds now start at $1,689",
-    "detail": "966 sq ft, 18 month lease. Was $1,693. Still under our $1,902.",
-    "say": "Their posted prices are on an 18 month lease, so ask what term they were quoted. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
-   },
-   {
-    "id": "2026-11-24-mosaic-1bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "1 bed from",
-    "from": "$1,442",
-    "to": "$1,443",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 24",
-    "verifiedIso": "2026-11-24",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 1 beds now start at $1,443",
-    "detail": "668 sq ft, 18 month lease. Was $1,442. Still under our $1,552.",
-    "say": "Their posted prices are on an 18 month lease, so ask what term they were quoted. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
-   },
-   {
-    "id": "2026-11-23-mosaic-2bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "2 bed from",
-    "from": "$1,696",
-    "to": "$1,693",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 23",
-    "verifiedIso": "2026-11-23",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 2 beds now start at $1,693",
-    "detail": "Beaumont (B1), 966 sq ft, 18 month lease. Was $1,696. Still under our $1,902.",
-    "say": "Their posted prices are on an 18 month lease, so ask what term they were quoted. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
-   },
-   {
-    "id": "2026-11-23-mosaic-1bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "1 bed from",
-    "from": "$1,443",
-    "to": "$1,442",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 23",
-    "verifiedIso": "2026-11-23",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 1 beds now start at $1,442",
-    "detail": "Broadway (A1), 668 sq ft, 18 month lease. Was $1,443. Still under our $1,552.",
-    "say": "Their posted prices are on an 18 month lease, so ask what term they were quoted. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
-   },
-   {
-    "id": "2026-11-22-mosaic-2bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "2 bed from",
-    "from": "$1,700",
-    "to": "$1,696",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 22",
-    "verifiedIso": "2026-11-22",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 2 beds now start at $1,696",
-    "detail": "Lowest posted 2 bedroom price on their site. Was $1,700. Still under our $1,902.",
-    "say": "Their site doesn't show the lease term today, so ask what term they were quoted. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
-   },
-   {
-    "id": "2026-11-22-mosaic-1bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "1 bed from",
-    "from": "$1,445",
-    "to": "$1,443",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 22",
-    "verifiedIso": "2026-11-22",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 1 beds now start at $1,443",
-    "detail": "Lowest posted 1 bedroom price on their site. Was $1,445. Still under our $1,552.",
-    "say": "Their site doesn't show the lease term today, so ask what term they were quoted. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
-   },
-   {
-    "id": "2026-11-21-mosaic-2bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "2 bed from",
-    "from": "$1,704",
-    "to": "$1,700",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 21",
-    "verifiedIso": "2026-11-21",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 2 beds now start at $1,700",
-    "detail": "Beaumont (B1), 966 sq ft, on an 18 month lease. Was $1,704. Still under our $1,902.",
-    "say": "Their posted prices are on an 18 month lease. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
-   },
-   {
-    "id": "2026-11-21-mosaic-1bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "1 bed from",
-    "from": "$1,443",
-    "to": "$1,445",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 21",
-    "verifiedIso": "2026-11-21",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 1 beds now start at $1,445",
-    "detail": "Broadway (A1), 668 sq ft, on an 18 month lease. Was $1,443. Still under our $1,552.",
-    "say": "Their posted prices are on an 18 month lease. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
-   },
-   {
-    "id": "2026-11-20-mosaic-1bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "1 bed from",
-    "from": "$1,448",
-    "to": "$1,443",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 20",
-    "verifiedIso": "2026-11-20",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 1 beds now start at $1,443",
-    "detail": "Broadway (A1), 668 sq ft, on an 18 month lease. Was $1,448. Still under our $1,552.",
-    "say": "Their posted prices are on an 18 month lease. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
-   },
-   {
-    "id": "2026-11-20-mosaic-2bed",
-    "rival": "Mosaic at Lake Toho",
-    "row": "2 bed from",
-    "from": "$1,710",
-    "to": "$1,704",
-    "fromLabel": "Lowest was",
-    "flip": false,
-    "verified": "Nov 20",
-    "verifiedIso": "2026-11-20",
-    "src": "advenirliving.com",
-    "headline": "Mosaic's 2 beds now start at $1,704",
-    "detail": "Beaumont (B1), 966 sq ft, on an 18 month lease. Was $1,710. Still under our $1,902.",
-    "say": "Their posted prices are on an 18 month lease. Ours come with 2 months free on a 15 month lease, plus $1,200 off move in in Buildings 1 and 2, and a $350 deposit."
    }
   ]
  },
@@ -768,19 +588,7 @@
    "tip": "Only our own photos from above. On the ground, shoot the pond and buildings at golden hour."
   }
  ],
- "notice": {
-  "id": "2026-11-19-welcome",
-  "until": "2026-11-26",
-  "emoji": "👋",
-  "title": "Welcome to LocalLift Live",
-  "points": [
-   "Today's talk track, rival prices and objections and answers update every morning.",
-   "Start a tour from the Tour tab and tap what you show. It all lands on Send my day to my desk.",
-   "Ask for a Google review at every move in and closed work order. Show the QR code, it takes under 30 seconds."
-  ],
-  "act": "tour",
-  "cta": "Open Tour mode ›"
- },
+ "notice": null,
  "market": {
   "rvh": [
    "Community",
@@ -805,8 +613,8 @@
    ],
    [
     "Mosaic at Lake Toho",
-    "$1,439",
-    "$1,679"
+    "$1,442",
+    "$1,673"
    ]
   ],
   "srh": [
@@ -829,7 +637,7 @@
     ],
     "h": "Use these on every tour",
     "b": "Resort style pool, Grand clubhouse and fireplace lounge, Game room and club room, Café with free coffee, Fitness center, Coworking hub and private offices, Two dog parks and pet wash, Pond and walking path, Courtyard with grills, Package lockers, EV charging, Garages for rent.",
-    "src": "Stillwater Lakes and rival websites · checked 11/26",
+    "src": "Stillwater Lakes and rival websites · checked 11/27",
     "cmp": {
      "cols": [
       "Stillwater",
@@ -877,7 +685,7 @@
     ],
     "h": "2 of 3 rivals post a special too",
     "b": "Stillwater Lakes: 2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2. Cielo View: two months free for a limited time. Mosaic at Lake Toho: up to 8 weeks free, conditions apply. The Jamison: no special posted.",
-    "src": "Each community’s website · checked 11/26",
+    "src": "Each community’s website · checked 11/27",
     "list": [
      [
       "Stillwater Lakes",
@@ -910,7 +718,7 @@
     ],
     "h": "3 rivals list lower starting rents",
     "t": "rivals",
-    "src": "Each community’s website · checked 11/26",
+    "src": "Each community’s website · checked 11/27",
     "more": "Base rents. The Jamison adds mandatory monthly costs on top, and Mosaic does not show its lease term today, so ask what total and term they were quoted."
    },
    {
@@ -961,7 +769,7 @@
     "k": "edge",
     "q": "Where do we stand out against rivals?",
     "a": "From the Stillwater Lakes website: resort style pool, grand clubhouse and fireplace lounge, game room and club room, café with free coffee, fitness center, coworking hub and private offices, two dog parks and pet wash, pond and walking path, courtyard with grills, package lockers, EV charging, garages for rent.<ul><li>Deposit: $350 vs $500 at The Jamison and $500 at Mosaic at Lake Toho.</li><li>Pets: $20 a month and a $200 pet fee, vs $25 a month and a $350 pet fee at The Jamison.</li><li>Studios from $1,486 and townhomes. Cielo View has 1 and 2 bedrooms only.</li></ul>",
-    "s": "Stillwater Lakes and rival websites · checked 11/26"
+    "s": "Stillwater Lakes and rival websites · checked 11/27"
    },
    {
     "k": "ops",
@@ -972,26 +780,26 @@
    {
     "k": "why",
     "q": "Why are tours not signing?",
-    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>All 3 rivals list lower starting base rents. 1 beds: Mosaic at Lake Toho $1,439, The Jamison $1,524, Cielo View $1,549, ours $1,552.</li><li>Cielo View also posts two months free, and Mosaic up to 8 weeks free.</li><li>Cielo View has 75 Google reviews to our 19.</li></ul>What wins them back: 2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2, the $350 deposit, studios and townhomes, and a total cost check (The Jamison adds monthly fees, Mosaic does not show its lease term today).",
-    "s": "Each community’s website · checked 11/26"
+    "a": "We cannot see each person’s reason, but here is what they see when they compare you:<ul><li>All 3 rivals list lower starting base rents. 1 beds: Mosaic at Lake Toho $1,442, The Jamison $1,524, Cielo View $1,549, ours $1,552.</li><li>Cielo View also posts two months free, and Mosaic up to 8 weeks free.</li><li>Cielo View has 75 Google reviews to our 19.</li></ul>What wins them back: 2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2, the $350 deposit, studios and townhomes, and a total cost check (The Jamison adds monthly fees, Mosaic does not show its lease term today).",
+    "s": "Each community’s website · checked 11/27"
    },
    {
     "k": "specials",
     "q": "What specials are rivals running?",
     "a": "Cielo View: two months free for a limited time. Mosaic at Lake Toho: up to 8 weeks free, conditions apply. The Jamison: no special posted. Stillwater Lakes: 2 months free (50% off 4 months on a 15 month lease), plus $1,200 off move in in Buildings 1 and 2.",
-    "s": "Each community’s website · checked 11/26"
+    "s": "Each community’s website · checked 11/27"
    },
    {
     "k": "rivals",
     "q": "Who are we up against?",
-    "a": "Cielo View (1 beds from $1,549, two months free for a limited time), The Jamison (from $1,524, no special posted, monthly fees added) and Mosaic at Lake Toho (from $1,439, up to 8 weeks free, conditions apply). Stillwater Lakes 1 beds start at $1,552.",
-    "s": "Each community’s website · checked 11/26"
+    "a": "Cielo View (1 beds from $1,549, two months free for a limited time), The Jamison (from $1,524, no special posted, monthly fees added) and Mosaic at Lake Toho (from $1,442, up to 8 weeks free, conditions apply). Stillwater Lakes 1 beds start at $1,552.",
+    "s": "Each community’s website · checked 11/27"
    },
    {
     "k": "price",
     "q": "Are we priced right?",
-    "a": "1 bed from: Stillwater Lakes $1,552, Cielo View $1,549, The Jamison $1,524, Mosaic at Lake Toho $1,439.<br>2 bed from: Stillwater Lakes $1,902, Cielo View $1,874, The Jamison $1,849, Mosaic at Lake Toho $1,679.<br>Studios from: Stillwater Lakes $1,486, Mosaic at Lake Toho $1,299. Cielo View has no studios.<br>These are base rents. The Jamison adds mandatory monthly costs, Mosaic does not show its term today and ours is on a 15 month lease, so confirm the term before quoting a difference.",
-    "s": "Each community’s website · checked 11/26"
+    "a": "1 bed from: Stillwater Lakes $1,552, Cielo View $1,549, The Jamison $1,524, Mosaic at Lake Toho $1,442.<br>2 bed from: Stillwater Lakes $1,902, Cielo View $1,874, The Jamison $1,849, Mosaic at Lake Toho $1,673.<br>Studios from: Stillwater Lakes $1,486, Mosaic at Lake Toho $1,299. Cielo View has no studios.<br>These are base rents. The Jamison adds mandatory monthly costs, Mosaic does not show its term today and ours is on a 15 month lease, so confirm the term before quoting a difference.",
+    "s": "Each community’s website · checked 11/27"
    },
    {
     "k": "reviews",
@@ -1007,8 +815,8 @@
    }
   ],
   "line": "Specials today: Cielo View two months free for a limited time, Mosaic up to 8 weeks free, conditions apply.",
-  "briefSrc": "Websites checked 11/26 · Google scan Nov 20",
-  "checked": "Nov 26",
-  "checkedIso": "2026-11-26"
+  "briefSrc": "Websites checked 11/27 · Google scan Nov 20",
+  "checked": "Nov 27",
+  "checkedIso": "2026-11-27"
  }
 }
