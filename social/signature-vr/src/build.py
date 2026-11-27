@@ -119,6 +119,14 @@ POSTS = {
  '2026-12-04': (B, dict(img=6054110, pos='center', nourl=1, eb='Begins tonight at sundown', fs=150, h='Happy<br><i>Hanukkah.</i>', p='Eight nights of light, good food and good company.')),
  '2026-12-05': (C, dict(img=4402584, pos='center', eb='LocalLift Signature<br>$199 a month', fs=112, top=800, h='Your January posts,<br><i>handled.</i>', p='12 local topics a month, made for Instagram, Facebook, LinkedIn and Google Business Profile.')),
  '2026-12-06': (A, dict(img=5618068, pos='60%', ph=700, eb='Sunday', fs=104, h='Flour on the counter.<br><i>Nothing to sign.</i>', p='Bake the one recipe you only make once a year.')),
+ '2026-12-07': (D, dict(img=5698415, eb='AI search', fs=116, ph=600, pos='center 55%', h='Ask AI the questions<br><i>your buyers ask.</i>',
+     card="<div class=p style='color:#2a2725;margin-top:34px;max-width:880px'>Then notice which sources the answer leans on. Is any of it yours?</div>")),
+ '2026-12-08': (B, dict(img=7641868, pos='center', eb='December showings', fs=100, h='Fewer buyers.<br><i>Often more serious ones.</i>', p='Confirm the day before, and ask sellers to leave a few lamps on.')),
+ '2026-12-09': (C, dict(img=4692171, pos='15% center', eb='Google Business<br>Profile', fs=124, top=800, h='One photo.<br><i>Three sentences.</i>', p='A weekly post about something new in the neighborhoods you serve.')),
+ '2026-12-10': (B, dict(img=30706600, pos='center 40%', eb='Year in review', fs=100, h='Three deals<br><i>that taught you the most.</i>', p='Write them down before December gets any busier.')),
+ '2026-12-11': (D, dict(img=6918481, eb='Title reps', fs=112, ph=600, pos='center 55%', h='Remember the closing,<br><i>not just the name.</i>',
+     card="<div class=p style='color:#2a2725;margin-top:34px;max-width:880px'>A handwritten note that names one specific moment from a file you closed together.</div>")),
+ '2026-12-12': (A, dict(img=9333842, pos='65%', ph=700, eb='Saturday', fs=120, h='Go see<br><i>the lights.</i>', p='Every neighborhood has that one street. Where is yours?')),
 }
 
 async def main(only=None):
